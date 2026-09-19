@@ -50,13 +50,17 @@ async function issueSession(reply: FastifyReply, user: AuthUser & { name?: strin
   return accessToken;
 }
 
+/** Request-scoped translator — see plugins/i18n.ts. */
+export type Translate = (key: string, fallback?: string) => string;
+
 export const authService = {
   async register(
     body: { name: string; phone: string; password: string },
-    reply: FastifyReply
+    reply: FastifyReply,
+    t: Translate
   ) {
     const exists = await prisma.user.findUnique({ where: { phone: body.phone }, select: { id: true } });
-    if (exists) throw errors.conflict("این شماره موبایل قبلاً ثبت شده است", "PHONE_TAKEN");
+    if (exists) throw errors.conflict(t("auth.phoneTaken", "این شماره موبایل قبلاً ثبت شده است"), "PHONE_TAKEN");
 
     const user = await prisma.user.create({
       data: {
@@ -71,10 +75,10 @@ export const authService = {
     return { accessToken, user: publicUser, businesses: await withBusinesses(publicUser) };
   },
 
-  async login(body: { phone: string; password: string }, reply: FastifyReply) {
+  async login(body: { phone: string; password: string }, reply: FastifyReply, t: Translate) {
     const user = await prisma.user.findUnique({ where: { phone: body.phone } });
     if (!user || !(await verifyPassword(body.password, user.passwordHash))) {
-      throw errors.unauthorized("شماره موبایل یا رمز عبور اشتباه است");
+      throw errors.unauthorized(t("auth.invalidCredentials", "شماره موبایل یا رمز عبور اشتباه است"));
     }
 
     const publicUser = toPublicUser(user);

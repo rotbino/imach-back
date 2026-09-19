@@ -12,7 +12,7 @@ export async function registerAuthRoutes(app: FastifyInstance): Promise<void> {
       schema: { body: RegisterBody },
     },
     async (request, reply) => {
-      const out = await authService.register(request.body as RegisterBodyT, reply);
+      const out = await authService.register(request.body as RegisterBodyT, reply, request.t);
       return reply.code(201).send(out);
     }
   );
@@ -24,7 +24,7 @@ export async function registerAuthRoutes(app: FastifyInstance): Promise<void> {
       schema: { body: LoginBody },
     },
     async (request, reply) => {
-      return authService.login(request.body as LoginBodyT, reply);
+      return authService.login(request.body as LoginBodyT, reply, request.t);
     }
   );
 

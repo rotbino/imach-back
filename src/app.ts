@@ -10,6 +10,7 @@ import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
 import { env, isProd } from "./config/env.js";
 import { authPlugin } from "./plugins/auth.js";
+import { i18nPlugin } from "./plugins/i18n.js";
 import { registerAuthRoutes } from "./modules/auth/auth.routes.js";
 import { registerGoodsRoutes } from "./modules/goods/goods.routes.js";
 import { registerBusinessesRoutes } from "./modules/businesses/businesses.routes.js";
@@ -49,6 +50,7 @@ export async function buildApp(): Promise<FastifyInstance> {
   await app.register(cookie);
   await app.register(fastifyJwt, { secret: env.JWT_SECRET });
   await app.register(authPlugin);
+  await app.register(i18nPlugin);
 
   // ── OpenAPI docs (disabled in production) ────────────────────────────────
   if (env.SWAGGER_ENABLED) {
