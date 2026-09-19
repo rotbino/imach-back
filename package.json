@@ -1,0 +1,47 @@
+{
+  "name": "imach-back",
+  "version": "1.0.0",
+  "description": "iMach — B2B wholesale marketplace API (Fastify 5 + Prisma + MongoDB)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "db:push": "prisma db push",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "seed": "tsx prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.0",
+    "@fastify/cors": "^11.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/jwt": "^9.0.0",
+    "@fastify/rate-limit": "^10.0.0",
+    "@fastify/sensible": "^6.0.0",
+    "@fastify/swagger": "^9.0.0",
+    "@fastify/swagger-ui": "^6.0.0",
+    "@fastify/type-provider-typebox": "^5.0.0",
+    "@prisma/client": "^6.11.1",
+    "@sinclair/typebox": "^0.34.0",
+    "bcryptjs": "^3.0.2",
+    "fastify": "^5.0.0",
+    "fastify-plugin": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.0.0",
+    "pino-pretty": "^13.0.0",
+    "prisma": "^6.11.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
