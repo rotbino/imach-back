@@ -16,3 +16,6 @@ prisma/*.db
 # Logs & OS
 *.log
 .DS_Store
+
+# IDE
+.idea/
