@@ -8,8 +8,8 @@
 //   All interactions (Inquiry / Offer / Follow / PriceLog) hang off Listing,
 //   so future "specialized markets" can be added as a pure curation overlay
 //   (Market + MarketGoodRule) without touching the core tables.
-// • Seller and buyer are the same entity (Business) — a business can be
-//   SELL / BUY / BOTH per good (TradeMode).
+// • Seller and buyer are the same entity (Business) — a business owns a
+//   sell arm and/or a buy arm (sells/buys) and per-good TradeMode.
 // • Built for millions of rows:
 //     - cursor pagination on _id (monotonic with ObjectId)
 //     - compound indexes matching every hot query path
@@ -73,7 +73,8 @@ model Business {
   id         String     @id @default(auto()) @map("_id") @db.ObjectId
   slug       String     @unique // drives the public arm links: /sell/{slug} /buy/{slug}
   name       String
-  role       String // RETAILER | WHOLESALER | PRODUCER | MARKETER
+  sells      Boolean    @default(false) // فروش عمده دارد → sell arm exists
+  buys       Boolean    @default(false) // خرید عمده دارد → buy arm exists
   city       String
   phone      String?
   isVerified Boolean    @default(false)

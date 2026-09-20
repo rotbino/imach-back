@@ -65,7 +65,8 @@ export class BusinessesController {
         id: true,
         slug: true,
         name: true,
-        role: true,
+        sells: true,
+        buys: true,
         city: true,
         isVerified: true,
         _count: { select: { listings: true } },
@@ -82,14 +83,21 @@ export class BusinessesController {
     @CurrentUser() user: AuthUser,
     @CurrentLocale() locale: Locale
   ) {
+    if (!body.sells && !body.buys) {
+      throw AppError.badRequest(
+        t(locale, "business.roleRequired", "حداقل یکی از گزینه‌های خرید یا فروش عمده را انتخاب کنید"),
+        "ROLE_REQUIRED"
+      );
+    }
     const slug = await uniqueSlug(this.prisma, makeSlug(body.name), locale);
     const business = await this.prisma.business.create({
       data: {
         slug,
         name: body.name.trim(),
-        role: body.role,
+        sells: body.sells,
+        buys: body.buys,
         city: body.city.trim(),
-        phone: body.phone?.trim() || null,
+        phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
         ownerId: user.id,
       },
     });
@@ -110,7 +118,8 @@ export class BusinessesController {
             id: true,
             slug: true,
             name: true,
-            role: true,
+            sells: true,
+            buys: true,
             city: true,
             phone: true,
             isVerified: true,
@@ -143,9 +152,9 @@ export class BusinessesController {
       where: { id: business.id },
       data: {
         ...(body.name ? { name: body.name.trim() } : {}),
-        ...(body.role ? { role: body.role } : {}),
         ...(body.city ? { city: body.city.trim() } : {}),
-        ...(body.phone !== undefined ? { phone: body.phone?.trim() || null } : {}),
+        ...(body.sells !== undefined ? { sells: body.sells } : {}),
+        ...(body.buys !== undefined ? { buys: body.buys } : {}),
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data

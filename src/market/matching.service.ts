@@ -13,7 +13,8 @@ export interface SupplierMatch {
   sellerId: string;
   sellerName: string;
   sellerSlug: string;
-  sellerRole: string;
+  sellerSells: boolean;
+  sellerBuys: boolean;
   sellerCity: string;
   sellerVerified: boolean;
   listingId: string;
@@ -27,7 +28,8 @@ export interface BuyerMatch {
   buyerId: string;
   buyerName: string;
   buyerSlug: string;
-  buyerRole: string;
+  buyerSells: boolean;
+  buyerBuys: boolean;
   buyerCity: string;
   buyerVerified: boolean;
   buyListingId: string;
@@ -43,7 +45,7 @@ const SELLER_SELECT = {
   id: true,
   price: true,
   minOrder: true,
-  business: { select: { id: true, slug: true, name: true, role: true, city: true, isVerified: true } },
+  business: { select: { id: true, slug: true, name: true, sells: true, buys: true, city: true, isVerified: true } },
 } as const;
 
 @Injectable()
@@ -80,7 +82,8 @@ export class MatchingService {
           sellerId: b.id,
           sellerName: b.name,
           sellerSlug: b.slug,
-          sellerRole: b.role,
+          sellerSells: b.sells,
+          sellerBuys: b.buys,
           sellerCity: b.city,
           sellerVerified: b.isVerified,
           listingId: row.id,
@@ -117,7 +120,7 @@ export class MatchingService {
         volume: true,
         frequency: true,
         good: { select: { id: true, name: true, unit: true } },
-        business: { select: { id: true, slug: true, name: true, role: true, city: true, isVerified: true } },
+        business: { select: { id: true, slug: true, name: true, sells: true, buys: true, city: true, isVerified: true } },
       },
       orderBy: { updatedAt: "desc" },
       take: 80,
@@ -131,7 +134,8 @@ export class MatchingService {
           buyerId: b.id,
           buyerName: b.name,
           buyerSlug: b.slug,
-          buyerRole: b.role,
+          buyerSells: b.sells,
+          buyerBuys: b.buys,
           buyerCity: b.city,
           buyerVerified: b.isVerified,
           buyListingId: row.id,

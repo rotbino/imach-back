@@ -39,7 +39,8 @@ type DemoListing = { good: string; mode: "SELL" | "BUY" | "BOTH"; sell?: SellSpe
 interface DemoBusiness {
   slug: string;
   name: string;
-  role: "RETAILER" | "WHOLESALER" | "PRODUCER" | "MARKETER";
+  sells: boolean; // فروش عمده دارد
+  buys: boolean; // خرید عمده دارد
   city: string;
   phone: string;
   listings: DemoListing[];
@@ -49,7 +50,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "khorshid-market",
     name: "خورشید مارکت",
-    role: "RETAILER",
+    sells: true,
+    buys: true,
     city: "تهران",
     phone: "09120000001",
     listings: [
@@ -64,7 +66,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "tabiat-daneh",
     name: "طبیعت‌دانه پخش",
-    role: "WHOLESALER",
+    sells: true,
+    buys: true,
     city: "تهران",
     phone: "09120000002",
     listings: [
@@ -78,7 +81,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "berenj-gilan",
     name: "برنج‌سرای گیلان",
-    role: "WHOLESALER",
+    sells: true,
+    buys: false,
     city: "رشت",
     phone: "09120000003",
     listings: [
@@ -89,7 +93,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "pakhsh-gostar",
     name: "پخش گستر البرز",
-    role: "WHOLESALER",
+    sells: true,
+    buys: false,
     city: "کرج",
     phone: "09120000004",
     listings: [
@@ -102,7 +107,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "shirin-asal",
     name: "شیرین‌عسل اردبیل",
-    role: "PRODUCER",
+    sells: true,
+    buys: true,
     city: "اردبیل",
     phone: "09120000005",
     listings: [
@@ -114,7 +120,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "asyab-pars",
     name: "آسیاب پارس مشهد",
-    role: "PRODUCER",
+    sells: true,
+    buys: true,
     city: "مشهد",
     phone: "09120000006",
     listings: [
@@ -126,7 +133,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "omid-trading",
     name: "تجارت‌سرای امید",
-    role: "MARKETER",
+    sells: true,
+    buys: false,
     city: "تهران",
     phone: "09120000007",
     listings: [
@@ -139,7 +147,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "hyper-mehrban",
     name: "هایپر مهربان",
-    role: "RETAILER",
+    sells: false,
+    buys: true,
     city: "تهران",
     phone: "09120000008",
     listings: [
@@ -151,7 +160,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "nikavar",
     name: "پخش نیک‌آور",
-    role: "WHOLESALER",
+    sells: false,
+    buys: true,
     city: "قم",
     phone: "09120000009",
     listings: [
@@ -163,7 +173,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "rahat-bakery",
     name: "نان‌وری رحمت",
-    role: "PRODUCER",
+    sells: false,
+    buys: true,
     city: "کرج",
     phone: "09120000010",
     listings: [
@@ -174,7 +185,8 @@ const BUSINESSES: DemoBusiness[] = [
   {
     slug: "zeytoun",
     name: "فروشگاه زیتون",
-    role: "RETAILER",
+    sells: false,
+    buys: true,
     city: "شیراز",
     phone: "09120000011",
     listings: [
@@ -227,14 +239,15 @@ async function main(): Promise<void> {
       create: {
         slug: b.slug,
         name: b.name,
-        role: b.role,
+        sells: b.sells,
+        buys: b.buys,
         city: b.city,
         phone: b.phone,
         isDemo: true,
         isVerified: true,
         ownerId: user.id,
       },
-      update: { ownerId: user.id, isDemo: true, isVerified: true },
+      update: { ownerId: user.id, isDemo: true, isVerified: true, sells: b.sells, buys: b.buys },
     });
     bizIds.set(b.slug, biz.id);
 

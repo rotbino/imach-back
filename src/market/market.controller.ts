@@ -41,7 +41,7 @@ const OFFER_INCLUDE = {
       good: { select: { id: true, name: true, category: true, unit: true } },
     },
   },
-  seller: { select: { id: true, slug: true, name: true, role: true, city: true, isVerified: true } },
+  seller: { select: { id: true, slug: true, name: true, sells: true, buys: true, city: true, isVerified: true } },
 } as const;
 
 const INQUIRY_INCLUDE = {
@@ -52,7 +52,7 @@ const INQUIRY_INCLUDE = {
       good: { select: { id: true, name: true, category: true, unit: true } },
     },
   },
-  buyer: { select: { id: true, slug: true, name: true, role: true, city: true, isVerified: true } },
+  buyer: { select: { id: true, slug: true, name: true, sells: true, buys: true, city: true, isVerified: true } },
 } as const;
 
 /** The whole market module is authenticated — buyers and sellers only. */
@@ -252,7 +252,7 @@ export class MarketController {
       select: {
         supplierId: true,
         createdAt: true,
-        supplier: { select: { slug: true, name: true, role: true, city: true, isVerified: true } },
+        supplier: { select: { slug: true, name: true, sells: true, buys: true, city: true, isVerified: true } },
       },
       orderBy: { createdAt: "desc" },
     });
@@ -333,7 +333,7 @@ export class MarketController {
             minOrder: true,
             updatedAt: true,
             good: { select: { id: true, name: true, category: true, unit: true } },
-            business: { select: { id: true, slug: true, name: true, role: true, city: true, isVerified: true } },
+            business: { select: { id: true, slug: true, name: true, sells: true, buys: true, city: true, isVerified: true } },
             priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldPrice: true, newPrice: true, createdAt: true } },
           },
           orderBy: { updatedAt: "desc" },

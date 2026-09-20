@@ -1,4 +1,4 @@
-import { IsOptional, IsString, Matches, MaxLength, MinLength } from "class-validator";
+import { IsBoolean, IsOptional, IsString, MaxLength, MinLength } from "class-validator";
 
 export class CreateBusinessDto {
   @IsString()
@@ -7,18 +7,16 @@ export class CreateBusinessDto {
   name: string;
 
   @IsString()
-  @Matches(/^(RETAILER|WHOLESALER|PRODUCER|MARKETER)$/)
-  role: string;
-
-  @IsString()
   @MinLength(2)
   @MaxLength(30)
   city: string;
 
-  @IsOptional()
-  @IsString()
-  @MaxLength(14)
-  phone?: string;
+  /** نقش در بازار عمده — هر کدام را خواست تیک می‌زند (حداقل یکی) */
+  @IsBoolean()
+  sells: boolean;
+
+  @IsBoolean()
+  buys: boolean;
 }
 
 export class EditBusinessDto {
@@ -30,17 +28,16 @@ export class EditBusinessDto {
 
   @IsOptional()
   @IsString()
-  @Matches(/^(RETAILER|WHOLESALER|PRODUCER|MARKETER)$/)
-  role?: string;
-
-  @IsOptional()
-  @IsString()
   @MinLength(2)
   @MaxLength(30)
   city?: string;
 
+  /** فعال‌سازی/غیرفعال‌سازی بازوها در هر لحظه از پنل */
   @IsOptional()
-  @IsString()
-  @MaxLength(14)
-  phone?: string;
+  @IsBoolean()
+  sells?: boolean;
+
+  @IsOptional()
+  @IsBoolean()
+  buys?: boolean;
 }

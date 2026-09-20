@@ -14,7 +14,7 @@ export class RegisterUserDto {
   phone: string;
 
   @IsString()
-  @MinLength(8)
+  @MinLength(6)
   @MaxLength(72)
   password: string;
 }
