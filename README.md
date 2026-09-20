@@ -20,12 +20,16 @@ modular NestJS architecture and Fastify for raw speed.
 
 ```bash
 cp .env.example .env    # fill real values
-npm install
-npm run db:generate     # prisma client
+yarn install            # or: npm install — auto-generates the Prisma client (postinstall)
 npm run db:push         # sync schema to MongoDB (indexes included)
 npm run seed            # optional demo dataset
 npm run start:dev       # http://localhost:4000/api/v1
 ```
+
+> The repo is locked with `yarn.lock`. If you must use npm, expect minor
+> dependency drift. If TypeScript ever floods you with implicit-any errors
+> (TS7006) in Prisma-heavy files, the generated client is missing — run
+> `npm run db:generate`.
 
 ## Endpoints — action naming
 
