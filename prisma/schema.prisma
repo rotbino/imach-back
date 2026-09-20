@@ -14,6 +14,8 @@
 //     - cursor pagination on _id (monotonic with ObjectId)
 //     - compound indexes matching every hot query path
 //     - Offer.score is persisted (historical results survive algorithm changes)
+// • MongoDB connector has no native enums → validated as strings at the API
+//   boundary (class-validator DTOs) so the data layer stays schema-agnostic.
 // ─────────────────────────────────────────────────────────────────────────────
 
 generator client {
@@ -22,63 +24,21 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")
-}
-
-// ─── Enums ───────────────────────────────────────────────────────────────────
-
-enum Unit {
-  KILOGRAM
-  TON
-  CARTON
-  SACK
-  PIECE
-  LITER
-  BRANCH
-}
-
-enum BusinessRole {
-  RETAILER
-  WHOLESALER
-  PRODUCER
-  MARKETER
-}
-
-enum TradeMode {
-  SELL
-  BUY
-  BOTH
-}
-
-enum Frequency {
-  WEEKLY
-  MONTHLY
-  OCCASIONAL
-}
-
-enum InquiryStatus {
-  NEW
-  ANSWERED
-  ARCHIVED
-}
-
-enum UserRole {
-  MEMBER
-  ADMIN
+  url      = env("MONGO_URL")
 }
 
 // ─── Auth ────────────────────────────────────────────────────────────────────
 
 model User {
-  id           String         @id @default(auto()) @map("_id") @db.ObjectId
-  phone        String         @unique // identity: Iranian mobile number
-  name         String
-  passwordHash String
-  role         UserRole       @default(MEMBER)
-  businesses   Business[]
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  phone         String         @unique // identity: Iranian mobile number
+  name          String
+  passwordHash  String
+  role          String         @default("MEMBER") // MEMBER | ADMIN
+  businesses    Business[]
   refreshTokens RefreshToken[]
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
 }
 
 /// Rotating refresh tokens — only the SHA-256 hash is stored, so a DB leak
@@ -101,7 +61,7 @@ model Good {
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
   name     String    @unique
   category String
-  unit     Unit
+  unit     String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH
   listings Listing[]
 
   @@index([category])
@@ -110,26 +70,26 @@ model Good {
 // ─── Business (seller AND buyer identity) ────────────────────────────────────
 
 model Business {
-  id         String       @id @default(auto()) @map("_id") @db.ObjectId
-  slug       String       @unique // drives the public arm links: /sell/{slug} /buy/{slug}
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  slug       String     @unique // drives the public arm links: /sell/{slug} /buy/{slug}
   name       String
-  role       BusinessRole
+  role       String // RETAILER | WHOLESALER | PRODUCER | MARKETER
   city       String
   phone      String?
-  isVerified Boolean      @default(false)
-  isDemo     Boolean      @default(false)
-  ownerId    String?      @db.ObjectId
-  owner      User?        @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+  isVerified Boolean    @default(false)
+  isDemo     Boolean    @default(false)
+  ownerId    String?    @db.ObjectId
+  owner      User?      @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 
-  listings      Listing[]
-  inquiriesIn   Inquiry[]  @relation("seller")
-  inquiriesOut  Inquiry[]  @relation("buyer")
-  offersSent    Offer[]    @relation("seller")
-  offersRecv    Offer[]    @relation("buyer")
-  following     Follow[]   @relation("buyer")
-  followers     Follow[]   @relation("supplier")
-  createdAt     DateTime   @default(now())
-  updatedAt     DateTime   @updatedAt
+  listings     Listing[]  @relation("listings")
+  inquiriesIn  Inquiry[]  @relation("seller")
+  inquiriesOut Inquiry[]  @relation("buyer")
+  offersSent   Offer[]    @relation("seller")
+  offersRecv   Offer[]    @relation("buyer")
+  following    Follow[]   @relation("buyer")
+  followers    Follow[]   @relation("supplier")
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
 
   @@index([city])
   @@index([ownerId])
@@ -138,10 +98,10 @@ model Business {
 // ─── Listing (the atomic tradable unit) ──────────────────────────────────────
 
 model Listing {
-  id         String    @id @default(auto()) @map("_id") @db.ObjectId
-  businessId String    @db.ObjectId
-  goodId     String    @db.ObjectId
-  mode       TradeMode
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  businessId String   @db.ObjectId
+  goodId     String   @db.ObjectId
+  mode       String // SELL | BUY | BOTH
 
   // ── sell side ──
   price    Float?
@@ -150,15 +110,15 @@ model Listing {
 
   // ── buy side ──
   volume    Float?
-  frequency Frequency?
+  frequency String? // WEEKLY | MONTHLY | OCCASIONAL
 
-  business Business   @relation(fields: [businessId], references: [id], onDelete: Cascade)
-  good     Good       @relation(fields: [goodId], references: [id])
+  business  Business   @relation("listings", fields: [businessId], references: [id], onDelete: Cascade)
+  good      Good       @relation(fields: [goodId], references: [id])
   inquiries Inquiry[]
   offers    Offer[]
   priceLogs PriceLog[]
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
 
   @@unique([businessId, goodId])
   @@index([goodId, mode])
@@ -169,15 +129,15 @@ model Listing {
 
 /// Buyer asked for a price on a seller's catalog listing.
 model Inquiry {
-  id        String        @id @default(auto()) @map("_id") @db.ObjectId
-  buyerId   String        @db.ObjectId
-  sellerId  String        @db.ObjectId
-  listingId String        @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId   String   @db.ObjectId
+  sellerId  String   @db.ObjectId
+  listingId String   @db.ObjectId
   volume    Float
   note      String?
-  status    InquiryStatus @default(NEW)
-  isRead    Boolean       @default(false)
-  createdAt DateTime      @default(now())
+  status    String   @default("NEW") // NEW | ANSWERED | ARCHIVED
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
 
   buyer   Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)
   seller  Business @relation("seller", fields: [sellerId], references: [id], onDelete: Cascade)
@@ -240,19 +200,13 @@ model PriceLog {
 // Markets are fed FROM listings via per-market rules on reference goods.
 // Deliberately kept in the schema now so no migration is needed later.
 
-enum MarketMembershipStatus {
-  PENDING
-  APPROVED
-  REJECTED
-}
-
 model Market {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  slug        String  @unique
+  id          String             @id @default(auto()) @map("_id") @db.ObjectId
+  slug        String             @unique
   title       String // e.g. "بازار پخش سوپرمارکتی همدان"
   description String?
   city        String? // optional geographic scope
-  isActive    Boolean @default(false)
+  isActive    Boolean            @default(false)
   rules       MarketGoodRule[]
   members     MarketMembership[]
 
@@ -277,13 +231,13 @@ model MarketGoodRule {
 
 /// Vetting: specialized markets can require approved membership per business.
 model MarketMembership {
-  id        String                @id @default(auto()) @map("_id") @db.ObjectId
-  marketId  String                @db.ObjectId
-  businessId String               @db.ObjectId
-  status    MarketMembershipStatus @default(PENDING)
-  createdAt DateTime              @default(now())
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  marketId   String   @db.ObjectId
+  businessId String   @db.ObjectId
+  status     String   @default("PENDING") // PENDING | APPROVED | REJECTED
+  createdAt  DateTime @default(now())
 
-  market   Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
+  market Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
 
   @@unique([marketId, businessId])
 }

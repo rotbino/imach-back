@@ -1,21 +1,18 @@
-# Dependencies
+# dependencies
 node_modules/
 
-# Build output
+# build
 dist/
-*.tsbuildinfo
 
-# Environment — never commit secrets
+# environment — real keys live ONLY here, never in git
 .env
 .env.local
 .env.*.local
 
-# Prisma
-prisma/*.db
-
-# Logs & OS
-*.log
-.DS_Store
-
 # IDE
 .idea/
+.vscode/
+
+# logs & OS
+*.log
+.DS_Store

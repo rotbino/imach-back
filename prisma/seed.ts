@@ -1,10 +1,11 @@
 /**
- * iMach seed — ports the validated prototype demo data into MongoDB.
- * Idempotent: safe to run repeatedly (upserts everywhere).
+ * iMach seed — demo dataset (idempotent: safe to run repeatedly).
  *
  * Demo accounts: phone 0912000000N / password "ImachDemo1234" (N = 1..11)
+ * Run: npm run seed
  */
 import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
 
@@ -197,31 +198,27 @@ const FOLLOWS: { buyerSlug: string; supplierSlug: string }[] = [
 ];
 
 async function main(): Promise<void> {
-  console.log("🌱 Seeding iMach …");
+  console.log("Seeding iMach …");
 
   // 1) Goods
   const goodIds = new Map<string, string>();
   for (const g of GOODS) {
     const row = await prisma.good.upsert({
       where: { name: g.name },
-      create: { name: g.name, category: g.category, unit: g.unit as never },
-      update: { category: g.category, unit: g.unit as never },
+      create: { name: g.name, category: g.category, unit: g.unit },
+      update: { category: g.category, unit: g.unit },
     });
     goodIds.set(g.name, row.id);
   }
-  console.log(`  ✓ ${GOODS.length} reference goods`);
+  console.log(`  ok ${GOODS.length} reference goods`);
 
   // 2) Businesses + owner users + listings
   const bizIds = new Map<string, string>();
-  let n = 1;
   for (const b of BUSINESSES) {
+    const passwordHash = await bcrypt.hash(DEMO_PASSWORD, 10);
     const user = await prisma.user.upsert({
       where: { phone: b.phone },
-      create: {
-        name: `مدیر ${b.name}`,
-        phone: b.phone,
-        passwordHash: await (await import("bcryptjs")).hash(DEMO_PASSWORD, 10),
-      },
+      create: { name: `مدیر ${b.name}`, phone: b.phone, passwordHash },
       update: {},
     });
 
@@ -230,7 +227,7 @@ async function main(): Promise<void> {
       create: {
         slug: b.slug,
         name: b.name,
-        role: b.role as never,
+        role: b.role,
         city: b.city,
         phone: b.phone,
         isDemo: true,
@@ -245,12 +242,12 @@ async function main(): Promise<void> {
       const goodId = goodIds.get(l.good);
       if (!goodId) throw new Error(`Unknown good: ${l.good}`);
       const data = {
-        mode: l.mode as never,
+        mode: l.mode,
         ...(l.mode !== "BUY" && l.sell
           ? { price: l.sell.price, stock: l.sell.stock, minOrder: l.sell.minOrder }
           : { price: null, stock: null, minOrder: null }),
         ...(l.mode !== "SELL" && l.buy
-          ? { volume: l.buy.volume, frequency: l.buy.frequency as never }
+          ? { volume: l.buy.volume, frequency: l.buy.frequency }
           : { volume: null, frequency: null }),
       };
       await prisma.listing.upsert({
@@ -259,9 +256,8 @@ async function main(): Promise<void> {
         update: data,
       });
     }
-    n++;
   }
-  console.log(`  ✓ ${BUSINESSES.length} demo businesses with listings (password: ${DEMO_PASSWORD})`);
+  console.log(`  ok ${BUSINESSES.length} demo businesses with listings (password: ${DEMO_PASSWORD})`);
 
   // 3) Follows
   for (const f of FOLLOWS) {
@@ -274,7 +270,7 @@ async function main(): Promise<void> {
       update: {},
     });
   }
-  console.log(`  ✓ ${FOLLOWS.length} follows`);
+  console.log(`  ok ${FOLLOWS.length} follows`);
 
   // 4) Price history for a few listings (trends on the live board)
   const riceTabiat = await prisma.listing.findFirst({
@@ -289,7 +285,7 @@ async function main(): Promise<void> {
       ],
     });
   }
-  console.log("  ✓ price history");
+  console.log("  ok price history");
 
   // 5) A few real inquiries (seller-side demo content)
   const inquiryCount = await prisma.inquiry.count();
@@ -312,15 +308,15 @@ async function main(): Promise<void> {
         data: { buyerId, sellerId, listingId: sellListing.id, volume: d.volume, note: d.note ?? null },
       });
     }
-    console.log("  ✓ demo inquiries");
+    console.log("  ok demo inquiries");
   }
 
-  console.log("✅ Seed complete.");
+  console.log("Seed complete.");
 }
 
 main()
   .catch((e) => {
-    console.error("❌ Seed failed:", e);
+    console.error("Seed failed:", e);
     process.exit(1);
   })
   .finally(() => prisma.$disconnect());
