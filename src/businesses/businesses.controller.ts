@@ -96,7 +96,11 @@ export class BusinessesController {
     return business;
   }
 
-  /** Public profile by slug — heavily re-read (every arm visit) → cached. */
+  /**
+   * Public profile by slug — heavily re-read (every catalog visit) → cached.
+   * Phone is deliberately NOT here: contact is the registration gate of the
+   * viral loop (see getContact) — strangers must sign up to call.
+   */
   @Get("getBusiness/:slug")
   async getBusiness(@Param("slug") slug: string, @Res({ passthrough: true }) reply: FastifyReply) {
     const { value, hit } = await this.cache.wrap(
@@ -111,9 +115,9 @@ export class BusinessesController {
             name: true,
             activityType: true,
             city: true,
-            phone: true,
             isVerified: true,
             isDemo: true,
+            _count: { select: { followers: true } },
             listings: {
               select: LISTING_SELECT,
               orderBy: { updatedAt: "desc" },
@@ -127,6 +131,25 @@ export class BusinessesController {
     if (!value) throw AppError.notFound("Business not found");
     reply.header("x-cache", hit ? "HIT" : "MISS");
     return value;
+  }
+
+  /**
+   * The viral gate: only an authenticated user may reveal the phone number
+   * behind a catalog / buy-list. Reading the number = being a member.
+   */
+  @Get("getContact/:slug")
+  @UseGuards(JwtAuthGuard)
+  async getContact(
+    @Param("slug") slug: string,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await this.prisma.business.findUnique({
+      where: { slug },
+      select: { id: true, name: true, phone: true },
+    });
+    if (!business) throw AppError.notFound("Business not found");
+    return { phone: business.phone, name: business.name };
   }
 
   @Patch("editBusiness/:id")
