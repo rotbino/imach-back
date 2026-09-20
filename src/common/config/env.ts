@@ -41,7 +41,7 @@ export const env = Object.freeze({
   PORT: num("PORT", process.env.PORT, 4000),
   HOST: process.env.HOST || "0.0.0.0",
   NODE_ENV: process.env.NODE_ENV || "development",
-  MONGO_URL: required("MONGO_URL", process.env.MONGO_URL),
+  DATABASE_URL: required("DATABASE_URL", process.env.DATABASE_URL),
   JWT_SECRET: required("JWT_SECRET", process.env.JWT_SECRET, 16),
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || "15m",
   REFRESH_TOKEN_TTL_DAYS: num("REFRESH_TOKEN_TTL_DAYS", process.env.REFRESH_TOKEN_TTL_DAYS, 30),

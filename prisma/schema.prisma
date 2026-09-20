@@ -24,7 +24,7 @@ generator client {
 
 datasource db {
   provider = "mongodb"
-  url      = env("MONGO_URL")
+  url      = env("DATABASE_URL")
 }
 
 // ─── Auth ────────────────────────────────────────────────────────────────────
