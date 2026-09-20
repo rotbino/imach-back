@@ -8,8 +8,8 @@
 //   All interactions (Inquiry / Offer / Follow / PriceLog) hang off Listing,
 //   so future "specialized markets" can be added as a pure curation overlay
 //   (Market + MarketGoodRule) without touching the core tables.
-// • Seller and buyer are the same entity (Business) — a business owns a
-//   sell arm and/or a buy arm (sells/buys) and per-good TradeMode.
+// • Seller and buyer are the same entity (Business) — every business owns
+//   BOTH arms (sell + buy); what is traded per good lives on Listing.mode.
 // • Built for millions of rows:
 //     - cursor pagination on _id (monotonic with ObjectId)
 //     - compound indexes matching every hot query path
@@ -69,18 +69,22 @@ model Good {
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────
 
+// The 10 allowed activity types — validated at the API boundary
+// (class-validator @IsIn), stored as a plain string:
+// PRODUCER | WHOLESALER | RETAILER | DISTRIBUTOR | MERCHANT |
+// SALES_AGENT | MARKETER | SERVICE_PROVIDER | CONTRACTOR | BUSINESS_CONSUMER
+
 model Business {
-  id         String     @id @default(auto()) @map("_id") @db.ObjectId
-  slug       String     @unique // drives the public arm links: /sell/{slug} /buy/{slug}
-  name       String
-  sells      Boolean    @default(false) // فروش عمده دارد → sell arm exists
-  buys       Boolean    @default(false) // خرید عمده دارد → buy arm exists
-  city       String
-  phone      String?
-  isVerified Boolean    @default(false)
-  isDemo     Boolean    @default(false)
-  ownerId    String?    @db.ObjectId
-  owner      User?      @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  slug         String     @unique // drives the public arm links: /sell/{slug} /buy/{slug}
+  name         String
+  activityType String? // optional self-description, chosen later from the panel
+  city         String
+  phone        String?
+  isVerified   Boolean    @default(false)
+  isDemo       Boolean    @default(false)
+  ownerId      String?    @db.ObjectId
+  owner        User?      @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 
   listings     Listing[]  @relation("listings")
   inquiriesIn  Inquiry[]  @relation("seller")

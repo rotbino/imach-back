@@ -14,7 +14,7 @@ import { CacheService } from "../common/cache/cache.module";
 import { CurrentLocale, CurrentUser, makeSlug, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import { assertBusinessOwner, uniqueSlug } from "../common/guards";
-import { t, type Locale } from "../common/i18n/i18n";
+import type { Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { CreateBusinessDto, EditBusinessDto } from "./dto/business.dto";
@@ -65,8 +65,7 @@ export class BusinessesController {
         id: true,
         slug: true,
         name: true,
-        sells: true,
-        buys: true,
+        activityType: true,
         city: true,
         isVerified: true,
         _count: { select: { listings: true } },
@@ -83,19 +82,11 @@ export class BusinessesController {
     @CurrentUser() user: AuthUser,
     @CurrentLocale() locale: Locale
   ) {
-    if (!body.sells && !body.buys) {
-      throw AppError.badRequest(
-        t(locale, "business.roleRequired", "حداقل یکی از گزینه‌های خرید یا فروش عمده را انتخاب کنید"),
-        "ROLE_REQUIRED"
-      );
-    }
     const slug = await uniqueSlug(this.prisma, makeSlug(body.name), locale);
     const business = await this.prisma.business.create({
       data: {
         slug,
         name: body.name.trim(),
-        sells: body.sells,
-        buys: body.buys,
         city: body.city.trim(),
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
         ownerId: user.id,
@@ -118,8 +109,7 @@ export class BusinessesController {
             id: true,
             slug: true,
             name: true,
-            sells: true,
-            buys: true,
+            activityType: true,
             city: true,
             phone: true,
             isVerified: true,
@@ -153,8 +143,7 @@ export class BusinessesController {
       data: {
         ...(body.name ? { name: body.name.trim() } : {}),
         ...(body.city ? { city: body.city.trim() } : {}),
-        ...(body.sells !== undefined ? { sells: body.sells } : {}),
-        ...(body.buys !== undefined ? { buys: body.buys } : {}),
+        ...(body.activityType !== undefined ? { activityType: body.activityType } : {}),
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data

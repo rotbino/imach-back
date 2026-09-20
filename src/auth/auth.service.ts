@@ -15,8 +15,7 @@ const BUSINESS_SUMMARY_SELECT = {
   id: true,
   slug: true,
   name: true,
-  sells: true,
-  buys: true,
+  activityType: true,
   city: true,
   isVerified: true,
 } as const;

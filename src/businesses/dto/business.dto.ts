@@ -1,4 +1,21 @@
-import { IsBoolean, IsOptional, IsString, MaxLength, MinLength } from "class-validator";
+import { IsIn, IsOptional, IsString, MaxLength, MinLength } from "class-validator";
+
+/**
+ * نوع فعالیت کسب‌وکار — ۱۰ مقدار دقیق.
+ * در ثبت‌نام پرسیده نمی‌شود؛ کاربر هر وقت خواست از پنل انتخاب می‌کند.
+ */
+export const ACTIVITY_TYPES = [
+  "PRODUCER", // تولیدکننده
+  "WHOLESALER", // عمده‌فروش
+  "RETAILER", // خرده‌فروش
+  "DISTRIBUTOR", // پخش‌کننده
+  "MERCHANT", // بازرگان
+  "SALES_AGENT", // نماینده فروش
+  "MARKETER", // بازاریاب
+  "SERVICE_PROVIDER", // ارائه‌دهنده خدمات
+  "CONTRACTOR", // پیمانکار
+  "BUSINESS_CONSUMER", // مصرف‌کننده تجاری
+] as const;
 
 export class CreateBusinessDto {
   @IsString()
@@ -10,13 +27,6 @@ export class CreateBusinessDto {
   @MinLength(2)
   @MaxLength(30)
   city: string;
-
-  /** نقش در بازار عمده — هر کدام را خواست تیک می‌زند (حداقل یکی) */
-  @IsBoolean()
-  sells: boolean;
-
-  @IsBoolean()
-  buys: boolean;
 }
 
 export class EditBusinessDto {
@@ -32,12 +42,7 @@ export class EditBusinessDto {
   @MaxLength(30)
   city?: string;
 
-  /** فعال‌سازی/غیرفعال‌سازی بازوها در هر لحظه از پنل */
   @IsOptional()
-  @IsBoolean()
-  sells?: boolean;
-
-  @IsOptional()
-  @IsBoolean()
-  buys?: boolean;
+  @IsIn(ACTIVITY_TYPES)
+  activityType?: string | null;
 }
