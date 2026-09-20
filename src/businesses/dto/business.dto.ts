@@ -46,3 +46,15 @@ export class EditBusinessDto {
   @IsIn(ACTIVITY_TYPES)
   activityType?: string | null;
 }
+
+/** اکسپلور — سمت بازار (فروش/خرید) و شهرِ ترجیحی برای چیدمان */
+export class ExploreQueryDto {
+  @IsOptional()
+  @IsIn(["SELL", "BUY"])
+  mode?: "SELL" | "BUY";
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(30)
+  city?: string;
+}

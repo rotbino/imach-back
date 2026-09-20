@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
   Res,
   UseGuards,
 } from "@nestjs/common";
@@ -17,7 +18,7 @@ import { assertBusinessOwner, uniqueSlug } from "../common/guards";
 import type { Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
-import { CreateBusinessDto, EditBusinessDto } from "./dto/business.dto";
+import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto } from "./dto/business.dto";
 
 const LISTING_SELECT = {
   id: true,
@@ -171,5 +172,60 @@ export class BusinessesController {
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data
     return updated;
+  }
+
+  /**
+   * اکسپلور — کالاهای خرید و فروشِ همه کسب‌وکارها.
+   * الگوریتم v۰ (عمدا ساده؛ بعدا با نوع کالاها و حجم کاربر کامل می‌شود):
+   *   ۱) شهرِ کسب‌وکار جاری کاربر اول
+   *   ۲) سمت خرید: حجمِ بزرگ‌تر اول — سمت فروش: تازه‌ترین قیمت
+   * عمومی است (مثل کاتالوگ‌ها) تا مهمان‌ها هم بازار را ببینند و عضو شوند.
+   */
+  @Get("getExplore")
+  async getExplore(@Query() query: ExploreQueryDto) {
+    const sellSide = query.mode !== "BUY";
+    const rows = await this.prisma.listing.findMany({
+      where: sellSide
+        ? { mode: { in: ["SELL", "BOTH"] }, price: { not: null } }
+        : { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
+      select: {
+        id: true,
+        mode: true,
+        price: true,
+        stock: true,
+        minOrder: true,
+        volume: true,
+        frequency: true,
+        updatedAt: true,
+        good: { select: { id: true, name: true, category: true, unit: true } },
+        business: {
+          select: {
+            id: true,
+            slug: true,
+            name: true,
+            city: true,
+            isVerified: true,
+            activityType: true,
+            _count: { select: { followers: true } },
+          },
+        },
+      },
+      orderBy: { updatedAt: "desc" },
+      take: 300,
+    });
+
+    const city = query.city?.trim();
+    rows.sort((a, b) => {
+      if (city) {
+        const da = a.business.city === city ? 0 : 1;
+        const db = b.business.city === city ? 0 : 1;
+        if (da !== db) return da - db;
+      }
+      const va = a.volume ?? 0;
+      const vb = b.volume ?? 0;
+      if (va !== vb) return vb - va;
+      return b.updatedAt.getTime() - a.updatedAt.getTime();
+    });
+    return rows.slice(0, 100);
   }
 }
