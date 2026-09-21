@@ -35,8 +35,9 @@
   "devDependencies": {
     "@nestjs/cli": "^12.0.1",
     "@types/node": "^24.5.2",
+    "mongodb": "^7.6.0",
     "prisma": "^6.19.3",
-    "tsx": "^4.20.5",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.2"
   },
   "allowScripts": {

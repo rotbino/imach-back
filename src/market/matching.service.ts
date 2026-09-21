@@ -23,21 +23,6 @@ export interface SupplierMatch {
   isSpecial: boolean;
 }
 
-export interface BuyerMatch {
-  buyerId: string;
-  buyerName: string;
-  buyerSlug: string;
-  buyerCity: string;
-  buyerVerified: boolean;
-  buyListingId: string;
-  goodId: string;
-  goodName: string;
-  unit: string;
-  volume: number;
-  frequency: string;
-  score: number;
-}
-
 export interface SupplierSuggestion {
   supplierId: string;
   supplierName: string;
@@ -54,7 +39,7 @@ export interface SupplierSuggestion {
   score: number;
 }
 
-/** A ranked listing row for the personalized market lists. */
+/** A ranked listing row for the personalized sell-side demand list. */
 export interface RankedRow {
   id: string;
   mode: string;
@@ -73,7 +58,6 @@ export interface RankedRow {
     city: string;
     isVerified: boolean;
     activityType: string | null;
-    _count: { followers: number };
   };
   score: number;
 }
@@ -113,7 +97,6 @@ const RANK_SELECT = {
       city: true,
       isVerified: true,
       activityType: true,
-      _count: { select: { followers: true } },
     },
   },
 } as const;
@@ -136,16 +119,6 @@ function volumeFit(minOrder: number, stock: number, volume: number): number {
   if (minOrder > 0 && volume < minOrder) return 4; // smaller than the seller's minimum
   if (stock > 0 && volume > stock * 2) return 2; // far beyond the seller's capacity
   return 30; // inside the working band
-}
-
-/**
- * Capacity fit of a supplier band [minOrder..stock] for `volume`.
- * 0–28 — the dominant factor of the sell-offers list.
- */
-function capacityFit(minOrder: number, stock: number, volume: number): number {
-  if (minOrder > 0 && volume < minOrder) return 4; // seller won't sell that small
-  if (stock > 0 && volume > stock * 2) return 2; // supplier can't cover the need
-  return 28; // band covers the need
 }
 
 /** Proximity points for the ranked lists. */
@@ -217,64 +190,6 @@ export class MatchingService {
         };
       })
       .sort((a, b) => b.score - a.score || a.priceMinor - b.priceMinor)
-      .slice(0, limit);
-  }
-
-  /** Buyers looking for goods I sell — the buy-tab strip. */
-  async buyersForSeller(sellerBusinessId: string, sellerCity: string, limit = 12): Promise<BuyerMatch[]> {
-    const mySellListings = await this.prisma.listing.findMany({
-      where: { businessId: sellerBusinessId, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } },
-      select: { goodId: true, minOrder: true, stock: true },
-    });
-    if (mySellListings.length === 0) return [];
-
-    const goodIds = [...new Set(mySellListings.map((l) => l.goodId))];
-    const capByGood = new Map(mySellListings.map((l) => [l.goodId, { min: l.minOrder ?? 0, cap: l.stock ?? 0 }]));
-
-    const buyRows = await this.prisma.listing.findMany({
-      where: {
-        goodId: { in: goodIds },
-        businessId: { not: sellerBusinessId },
-        mode: { in: ["BUY", "BOTH"] },
-        volume: { not: null },
-      },
-      select: {
-        id: true,
-        volume: true,
-        frequency: true,
-        updatedAt: true,
-        good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
-        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
-      },
-      orderBy: { updatedAt: "desc" },
-      take: 120,
-    });
-
-    return buyRows
-      .map((row) => {
-        const b = row.business;
-        const volume = row.volume as number;
-        const cap = capByGood.get(row.good.id) ?? { min: 0, cap: 0 };
-        let score = matchScore(b.city, sellerCity, volume, cap.min);
-        // a buyer far beyond my capacity is not my match
-        if (cap.cap > 0 && volume > cap.cap * 3) score -= 12;
-        score += Math.round(recencyScore(row.updatedAt) / 2);
-        return {
-          buyerId: b.id,
-          buyerName: b.name,
-          buyerSlug: b.slug,
-          buyerCity: b.city,
-          buyerVerified: b.isVerified,
-          buyListingId: row.id,
-          goodId: row.good.id,
-          goodName: row.good.nameFa,
-          unit: row.good.unit,
-          volume,
-          frequency: row.frequency as string,
-          score: Math.max(42, Math.min(98, Math.round(score))),
-        };
-      })
-      .sort((a, b) => b.score - a.score)
       .slice(0, limit);
   }
 
@@ -413,74 +328,6 @@ export class MatchingService {
       ranked = rows.map((r) => ({
         ...r,
         score: proxPoints(city, r.business.city, 20, 12, 4) + recencyScore(r.updatedAt),
-      }));
-    }
-
-    return ranked.sort((a, b) => b.score - a.score).slice(0, limit);
-  }
-
-  /**
-   * Sell-offers list for the current user:
-   *   buyer  → offers of the goods I need (capacity fit > price > proximity > recency)
-   *   seller → offers of the goods I sell — competitor prices (proximity > price > recency)
-   *   empty  → the whole market
-   */
-  async sellOffersFor(businessId: string, city: string, limit = 60): Promise<RankedRow[]> {
-    const [myBuy, mySell, rows] = await Promise.all([
-      this.prisma.listing.findMany({
-        where: { businessId, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
-        select: { goodId: true, volume: true },
-      }),
-      this.prisma.listing.findMany({
-        where: { businessId, mode: { in: ["SELL", "BOTH"] } },
-        select: { goodId: true },
-      }),
-      this.prisma.listing.findMany({
-        where: {
-          mode: { in: ["SELL", "BOTH"] },
-          priceMinor: { not: null },
-          businessId: { not: businessId },
-        },
-        select: RANK_SELECT,
-        orderBy: { updatedAt: "desc" },
-        take: 300,
-      }),
-    ]);
-
-    const pricePts = priceRanks(rows.map((r) => ({ id: r.id, priceMinor: r.priceMinor, goodId: r.good.id })));
-    let ranked: RankedRow[];
-
-    if (myBuy.length > 0) {
-      const needByGood = new Map(myBuy.map((l) => [l.goodId, l.volume as number]));
-      const goodIds = new Set(needByGood.keys());
-      ranked = rows
-        .filter((r) => goodIds.has(r.good.id))
-        .map((r) => {
-          const myV = needByGood.get(r.good.id) as number;
-          return {
-            ...r,
-            score:
-              capacityFit(r.minOrder ?? 0, r.stock ?? 0, myV) +
-              (pricePts.get(r.id) ?? 0) +
-              proxPoints(city, r.business.city, 14, 9, 3) +
-              recencyScore(r.updatedAt),
-          };
-        });
-    } else if (mySell.length > 0) {
-      const goodIds = new Set(mySell.map((l) => l.goodId));
-      ranked = rows
-        .filter((r) => goodIds.has(r.good.id))
-        .map((r) => ({
-          ...r,
-          score:
-            proxPoints(city, r.business.city, 14, 9, 3) +
-            (pricePts.get(r.id) ?? 0) +
-            recencyScore(r.updatedAt),
-        }));
-    } else {
-      ranked = rows.map((r) => ({
-        ...r,
-        score: proxPoints(city, r.business.city, 14, 9, 3) + recencyScore(r.updatedAt),
       }));
     }
 

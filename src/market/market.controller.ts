@@ -18,11 +18,11 @@ import { assertBusinessOwner } from "../common/guards";
 import { cursorBefore, decodeCursor, toPage } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { ensurePage } from "../common/pages";
 import { MatchingService } from "./matching.service";
 import {
   BusinessIdQueryDto,
   FollowSupplierDto,
-  HomeFeedQueryDto,
   InquiriesQueryDto,
   OffersQueryDto,
   RequestQuoteDto,
@@ -74,39 +74,6 @@ const INQUIRY_INCLUDE = {
   buyer: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
 } as const;
 
-/** Home-feed rows — same shape as the public explore rows. */
-const HOME_FEED_SELECT = {
-  id: true,
-  mode: true,
-  priceMinor: true,
-  currency: true,
-  stock: true,
-  minOrder: true,
-  volume: true,
-  frequency: true,
-  updatedAt: true,
-  good: {
-    select: {
-      id: true,
-      nameFa: true,
-      nameEn: true,
-      unit: true,
-      category: { select: { slug: true, nameFa: true, nameEn: true } },
-    },
-  },
-  business: {
-    select: {
-      id: true,
-      slug: true,
-      name: true,
-      city: true,
-      isVerified: true,
-      activityType: true,
-      _count: { select: { followers: true } },
-    },
-  },
-} as const;
-
 /** The whole market module is authenticated — buyers and sellers only. */
 @Controller("market")
 @UseGuards(JwtAuthGuard)
@@ -119,11 +86,8 @@ export class MarketController {
 
   private invalidateBuyerSide(businessId: string): void {
     this.cache.invalidateTag(`market:board:${businessId}`);
-    this.cache.invalidateTag(`market:sugg:${businessId}`);
     this.cache.invalidateTag(`market:ssugg:${businessId}`);
-    this.cache.invalidateTag(`market:home:${businessId}`);
     this.cache.invalidateTag(`market:buyreq:${businessId}`);
-    this.cache.invalidateTag(`market:selloff:${businessId}`);
   }
 
   /**
@@ -298,6 +262,7 @@ export class MarketController {
     return { ok: true };
   }
 
+  /** The supplier catalogs my BUY page tracks (price-tracking subscriptions). */
   @Get("getFollows")
   async getFollows(
     @Query() query: BusinessIdQueryDto,
@@ -305,15 +270,27 @@ export class MarketController {
     @CurrentLocale() locale: Locale
   ) {
     await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    return this.prisma.follow.findMany({
-      where: { buyerId: query.businessId },
+    const pageId = await ensurePage(this.prisma, query.businessId, "BUY");
+    const rows = await this.prisma.follow.findMany({
+      where: { followerPageId: pageId },
       select: {
-        supplierId: true,
         createdAt: true,
-        supplier: { select: { slug: true, name: true, city: true, isVerified: true } },
+        supplierPage: {
+          select: { business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } } },
+        },
       },
       orderBy: { createdAt: "desc" },
     });
+    return rows.map((r) => ({
+      supplierId: r.supplierPage.business.id,
+      createdAt: r.createdAt,
+      supplier: {
+        slug: r.supplierPage.business.slug,
+        name: r.supplierPage.business.name,
+        city: r.supplierPage.business.city,
+        isVerified: r.supplierPage.business.isVerified,
+      },
+    }));
   }
 
   @Post("followSupplier")
@@ -332,9 +309,11 @@ export class MarketController {
     });
     if (!supplier) throw AppError.notFound("Supplier not found");
 
+    const followerPageId = await ensurePage(this.prisma, business.id, "BUY");
+    const supplierPageId = await ensurePage(this.prisma, body.supplierId, "SELL");
     await this.prisma.follow.upsert({
-      where: { buyerId_supplierId: { buyerId: business.id, supplierId: body.supplierId } },
-      create: { buyerId: business.id, supplierId: body.supplierId },
+      where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
+      create: { followerPageId, supplierPageId },
       update: {},
     });
     this.invalidateBuyerSide(business.id);
@@ -350,7 +329,10 @@ export class MarketController {
   ) {
     const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
     await this.prisma.follow.deleteMany({
-      where: { buyerId: business.id, supplierId },
+      where: {
+        followerPage: { businessId: business.id, type: "BUY" },
+        supplierPage: { businessId: supplierId },
+      },
     });
     this.invalidateBuyerSide(business.id);
     return { ok: true };
@@ -372,15 +354,17 @@ export class MarketController {
       `market:board:${query.businessId}`,
       { ttlMs: TTL.SHORT, tags: [`market:board:${query.businessId}`] },
       async () => {
+        const pageId = await ensurePage(this.prisma, query.businessId, "BUY");
         const follows = await this.prisma.follow.findMany({
-          where: { buyerId: query.businessId },
-          select: { supplierId: true },
+          where: { followerPageId: pageId },
+          select: { supplierPage: { select: { businessId: true } } },
         });
-        if (follows.length === 0) return [];
+        const supplierIds = follows.map((f) => f.supplierPage.businessId);
+        if (supplierIds.length === 0) return [];
 
         return this.prisma.listing.findMany({
           where: {
-            businessId: { in: follows.map((f) => f.supplierId) },
+            businessId: { in: supplierIds },
             mode: { in: ["SELL", "BOTH"] },
             priceMinor: { not: null },
           },
@@ -413,25 +397,6 @@ export class MarketController {
     return value;
   }
 
-  /** Suggested buyers for my sell catalog (sell-arm widget). */
-  @Get("getSuggestions")
-  async getSuggestions(
-    @Query() query: BusinessIdQueryDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale,
-    @Res({ passthrough: true }) reply: FastifyReply
-  ) {
-    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const { value, hit } = await this.cache.wrap(
-      `market:sugg:${query.businessId}`,
-      { ttlMs: TTL.MINUTE, tags: [`market:sugg:${query.businessId}`] },
-      () => this.matching.buyersForSeller(business.id, business.city)
-    );
-
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
-  }
-
   /** Suggested suppliers for my buy needs — the buy-side follow engine. */
   @Get("getSupplierSuggestions")
   async getSupplierSuggestions(
@@ -451,48 +416,7 @@ export class MarketController {
     return value;
   }
 
-  /**
-   * Home feed — the newest listings of the businesses my business follows.
-   * Split by arm (SELL = their catalog, BUY = their needs) at the query level.
-   */
-  @Get("getHomeFeed")
-  async getHomeFeed(
-    @Query() query: HomeFeedQueryDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale,
-    @Res({ passthrough: true }) reply: FastifyReply
-  ) {
-    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const { value, hit } = await this.cache.wrap(
-      `market:home:${query.businessId}:${query.mode ?? "SELL"}`,
-      { ttlMs: TTL.SHORT, tags: [`market:home:${query.businessId}`] },
-      async () => {
-        const follows = await this.prisma.follow.findMany({
-          where: { buyerId: query.businessId },
-          select: { supplierId: true },
-        });
-        if (follows.length === 0) return [];
-
-        const sellSide = query.mode !== "BUY";
-        return this.prisma.listing.findMany({
-          where: {
-            businessId: { in: follows.map((f) => f.supplierId) },
-            ...(sellSide
-              ? { mode: { in: ["SELL", "BOTH"] }, price: { not: null } }
-              : { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } }),
-          },
-          select: HOME_FEED_SELECT,
-          orderBy: { updatedAt: "desc" },
-          take: 100,
-        });
-      }
-    );
-
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
-  }
-
-  /** Buyers who follow my business — my personal buyers. */
+  /** Buyers who track my catalog — my personal buyers (owner-private stat). */
   @Get("getFollowers")
   async getFollowers(
     @Query() query: BusinessIdQueryDto,
@@ -500,15 +424,27 @@ export class MarketController {
     @CurrentLocale() locale: Locale
   ) {
     await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    return this.prisma.follow.findMany({
-      where: { supplierId: query.businessId },
+    const pageId = await ensurePage(this.prisma, query.businessId, "SELL");
+    const rows = await this.prisma.follow.findMany({
+      where: { supplierPageId: pageId },
       select: {
         createdAt: true,
-        buyer: { select: { slug: true, name: true, city: true, isVerified: true } },
+        followerPage: {
+          select: { business: { select: { slug: true, name: true, city: true, isVerified: true } } },
+        },
       },
       orderBy: { createdAt: "desc" },
       take: 200,
     });
+    return rows.map((r) => ({
+      createdAt: r.createdAt,
+      buyer: {
+        slug: r.followerPage.business.slug,
+        name: r.followerPage.business.name,
+        city: r.followerPage.business.city,
+        isVerified: r.followerPage.business.isVerified,
+      },
+    }));
   }
 
   /**
@@ -528,24 +464,6 @@ export class MarketController {
       `market:buyreq:${query.businessId}`,
       { ttlMs: TTL.MINUTE, tags: [`market:buyreq:${query.businessId}`] },
       () => this.matching.buyRequestsFor(business.id, business.city)
-    );
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
-  }
-
-  /** Sell-offers list — the most RELEVANT offers for the current user. */
-  @Get("getSellOffers")
-  async getSellOffers(
-    @Query() query: BusinessIdQueryDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale,
-    @Res({ passthrough: true }) reply: FastifyReply
-  ) {
-    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const { value, hit } = await this.cache.wrap(
-      `market:selloff:${query.businessId}`,
-      { ttlMs: TTL.MINUTE, tags: [`market:selloff:${query.businessId}`] },
-      () => this.matching.sellOffersFor(business.id, business.city)
     );
     reply.header("x-cache", hit ? "HIT" : "MISS");
     return value;

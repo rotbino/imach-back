@@ -154,8 +154,7 @@ model Business {
   inquiriesOut Inquiry[]  @relation("buyer")
   offersSent   Offer[]    @relation("seller")
   offersRecv   Offer[]    @relation("buyer")
-  following    Follow[]   @relation("buyer")
-  followers    Follow[]   @relation("supplier")
+  pages        Page[]
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 
@@ -247,18 +246,43 @@ model Offer {
   @@index([sellerId, createdAt])
 }
 
-/// Buyer follows a supplier → the followed prices appear on the live board.
-model Follow {
+// ─── Pages (isolated business contexts) ───────────────────────────────────
+
+/// A Page is an independent business context of a Business: SELL = the
+/// catalog (تابلوی قیمت من), BUY = the purchase desk (میز خرید). The account
+/// is the person; pages are the contexts. MVP caps one page of each type per
+/// business (unique index) but the model is multi-page from day one.
+model Page {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  buyerId    String   @db.ObjectId
-  supplierId String   @db.ObjectId
-  createdAt  DateTime @default(now())
+  type       String   // SELL | BUY
+  businessId String   @db.ObjectId
+  business   Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
 
-  buyer    Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)
-  supplier Business @relation("supplier", fields: [supplierId], references: [id], onDelete: Cascade)
+  /// Follow edges where this page is the follower (BUY pages in practice)
+  followerEdges Follow[] @relation("pageFollower")
+  /// Follow edges where this page is the followed one (SELL pages)
+  supplierEdges Follow[] @relation("pageSupplier")
 
-  @@unique([buyerId, supplierId])
-  @@index([supplierId])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([businessId, type])
+  @@index([businessId])
+}
+
+/// Price tracking — the BUY page of a business follows the SELL page of a
+/// supplier. A private subscription to price changes; no social layer.
+model Follow {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  followerPageId String   @db.ObjectId // BUY page of the follower
+  supplierPageId String   @db.ObjectId // SELL page of the followed supplier
+  createdAt      DateTime @default(now())
+
+  followerPage Page @relation("pageFollower", fields: [followerPageId], references: [id], onDelete: Cascade)
+  supplierPage Page @relation("pageSupplier", fields: [supplierPageId], references: [id], onDelete: Cascade)
+
+  @@unique([followerPageId, supplierPageId])
+  @@index([supplierPageId])
 }
 
 /// Price history per listing → powers trends and "recently updated" badges.

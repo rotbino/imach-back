@@ -68,11 +68,8 @@ function invalidateBusiness(cache: CacheService, businessId: string, slug?: stri
   cache.invalidateTag(`business:${businessId}`);
   if (slug) cache.invalidateTag(`business:slug:${slug}`);
   cache.invalidateTag(`market:board:${businessId}`);
-  cache.invalidateTag(`market:sugg:${businessId}`);
   cache.invalidateTag(`market:ssugg:${businessId}`);
-  cache.invalidateTag(`market:home:${businessId}`);
   cache.invalidateTag(`market:buyreq:${businessId}`);
-  cache.invalidateTag(`market:selloff:${businessId}`);
 }
 
 /** Business = the seller AND buyer identity of a user. */
@@ -128,6 +125,8 @@ export class BusinessesController {
         currency: currencyOfCountry(country),
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
         ownerId: user.id,
+        // هر کسب‌وکار با دو محیط خود متولد می‌شود: کاتالوگ فروش + میز خرید
+        pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
       },
     });
     invalidateBusiness(this.cache, business.id, business.slug);
@@ -157,7 +156,6 @@ export class BusinessesController {
             currency: true,
             isVerified: true,
             isDemo: true,
-            _count: { select: { followers: true, following: true } },
             listings: {
               select: LISTING_SELECT,
               orderBy: { updatedAt: "desc" },
@@ -214,61 +212,6 @@ export class BusinessesController {
   }
 
   /**
-   * Public social proof — the buyers following this business.
-   * Feeds the follower/following lists on the arm views (like Instagram).
-   */
-  @Get("getFollowers/:slug")
-  async getFollowersBySlug(@Param("slug") slug: string, @Res({ passthrough: true }) reply: FastifyReply) {
-    const { value, hit } = await this.cache.wrap(
-      `business:followers:${slug}`,
-      { ttlMs: 60_000, tags: [`business:slug:${slug}`] },
-      async () => {
-        const biz = await this.prisma.business.findUnique({ where: { slug }, select: { id: true } });
-        if (!biz) return null;
-        const rows = await this.prisma.follow.findMany({
-          where: { supplierId: biz.id },
-          select: {
-            createdAt: true,
-            buyer: { select: { slug: true, name: true, city: true, isVerified: true } },
-          },
-          orderBy: { createdAt: "desc" },
-          take: 100,
-        });
-        return rows.map((r) => ({ ...r.buyer, since: r.createdAt }));
-      }
-    );
-    if (!value) throw AppError.notFound("Business not found");
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
-  }
-
-  /** Public — the businesses this business follows (its suppliers). */
-  @Get("getFollowing/:slug")
-  async getFollowingBySlug(@Param("slug") slug: string, @Res({ passthrough: true }) reply: FastifyReply) {
-    const { value, hit } = await this.cache.wrap(
-      `business:following:${slug}`,
-      { ttlMs: 60_000, tags: [`business:slug:${slug}`] },
-      async () => {
-        const biz = await this.prisma.business.findUnique({ where: { slug }, select: { id: true } });
-        if (!biz) return null;
-        const rows = await this.prisma.follow.findMany({
-          where: { buyerId: biz.id },
-          select: {
-            createdAt: true,
-            supplier: { select: { slug: true, name: true, city: true, isVerified: true } },
-          },
-          orderBy: { createdAt: "desc" },
-          take: 100,
-        });
-        return rows.map((r) => ({ ...r.supplier, since: r.createdAt }));
-      }
-    );
-    if (!value) throw AppError.notFound("Business not found");
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
-  }
-
-  /**
    * اکسپلور — کالاهای خرید و فروشِ همه کسب‌وکارها.
    * الگوریتم v۰ (عمدا ساده؛ بعدا با نوع کالاها و حجم کاربر کامل می‌شود):
    *   ۱) شهرِ کسب‌وکار جاری کاربر اول
@@ -309,7 +252,6 @@ export class BusinessesController {
             city: true,
             isVerified: true,
             activityType: true,
-            _count: { select: { followers: true } },
           },
         },
       },

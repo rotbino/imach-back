@@ -522,6 +522,7 @@ async function main(): Promise<void> {
         country: "IR",
         currency: "IRR",
         ownerId: user.id,
+        pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
       },
       update: { ownerId: user.id, isDemo: true, isVerified: true, activityType: b.activityType, currency: "IRR" },
     });
@@ -555,14 +556,24 @@ async function main(): Promise<void> {
   }
   console.log(`  ok ${BUSINESSES.length} demo businesses with listings (password: ${DEMO_PASSWORD})`);
 
-  // 5) Follows
+  // 5) Follows — typed graph: the buyer's BUY page tracks the supplier's SELL page
+  const followPage = async (businessId: string, type: "SELL" | "BUY"): Promise<string> => {
+    const page = await prisma.page.findUnique({
+      where: { businessId_type: { businessId, type } },
+      select: { id: true },
+    });
+    if (page) return page.id;
+    return (await prisma.page.create({ data: { businessId, type }, select: { id: true } })).id;
+  };
   for (const f of FOLLOWS) {
     const buyerId = bizIds.get(f.buyerSlug);
     const supplierId = bizIds.get(f.supplierSlug);
     if (!buyerId || !supplierId) continue;
+    const followerPageId = await followPage(buyerId, "BUY");
+    const supplierPageId = await followPage(supplierId, "SELL");
     await prisma.follow.upsert({
-      where: { buyerId_supplierId: { buyerId, supplierId } },
-      create: { buyerId, supplierId },
+      where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
+      create: { followerPageId, supplierPageId },
       update: {},
     });
   }
