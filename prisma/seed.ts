@@ -417,6 +417,7 @@ const BUSINESSES: DemoBusiness[] = [
 ];
 
 const DEMO_PASSWORD = "ImachDemo1234";
+const ADMIN_PHONE = "09120000000"; // role=ADMIN — opens /admin on the site
 
 const FOLLOWS: { buyerSlug: string; supplierSlug: string }[] = [
   { buyerSlug: "khorshid-market", supplierSlug: "tabiat-daneh" },
@@ -605,6 +606,15 @@ async function main(): Promise<void> {
     }
     console.log("  ok demo inquiries");
   }
+
+  // 8) Platform admin — any user with role=ADMIN can open /admin on the site
+  const adminHash = await bcrypt.hash(DEMO_PASSWORD, 10);
+  await prisma.user.upsert({
+    where: { phone: ADMIN_PHONE },
+    create: { name: "مدیر iMach", phone: ADMIN_PHONE, passwordHash: adminHash, role: "ADMIN", country: "IR" },
+    update: { role: "ADMIN" },
+  });
+  console.log(`  ok admin user (${ADMIN_PHONE} / ${DEMO_PASSWORD})`);
 
   console.log("Seed complete.");
 }

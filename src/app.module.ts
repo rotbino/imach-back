@@ -7,6 +7,7 @@ import { GoodsModule } from "./goods/goods.module";
 import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
 import { MarketModule } from "./market/market.module";
+import { AdminModule } from "./admin/admin.module";
 
 /**
  * iMach API root — feature modules only; cross-cutting infra lives in
@@ -22,6 +23,7 @@ import { MarketModule } from "./market/market.module";
     BusinessesModule,
     ListingsModule,
     MarketModule,
+    AdminModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })
