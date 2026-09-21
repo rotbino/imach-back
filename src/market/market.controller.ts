@@ -95,6 +95,8 @@ export class MarketController {
     this.cache.invalidateTag(`market:sugg:${businessId}`);
     this.cache.invalidateTag(`market:ssugg:${businessId}`);
     this.cache.invalidateTag(`market:home:${businessId}`);
+    this.cache.invalidateTag(`market:buyreq:${businessId}`);
+    this.cache.invalidateTag(`market:selloff:${businessId}`);
   }
 
   /**
@@ -469,5 +471,45 @@ export class MarketController {
       orderBy: { createdAt: "desc" },
       take: 200,
     });
+  }
+
+  /**
+   * Buy-requests list — the most RELEVANT requests for the current user
+   * (goods they sell with volume fit, or goods they buy from same-level
+   * peers). The ranking lives in the matching engine — the API just serves it.
+   */
+  @Get("getBuyRequests")
+  async getBuyRequests(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const { value, hit } = await this.cache.wrap(
+      `market:buyreq:${query.businessId}`,
+      { ttlMs: TTL.MINUTE, tags: [`market:buyreq:${query.businessId}`] },
+      () => this.matching.buyRequestsFor(business.id, business.city)
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  /** Sell-offers list — the most RELEVANT offers for the current user. */
+  @Get("getSellOffers")
+  async getSellOffers(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const { value, hit } = await this.cache.wrap(
+      `market:selloff:${query.businessId}`,
+      { ttlMs: TTL.MINUTE, tags: [`market:selloff:${query.businessId}`] },
+      () => this.matching.sellOffersFor(business.id, business.city)
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
   }
 }

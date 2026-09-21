@@ -11,6 +11,17 @@ import { PrismaService } from "../common/prisma/prisma.module";
 const REFRESH_COOKIE = "imach_rt";
 const sha256 = (v: string) => createHash("sha256").update(v).digest("hex");
 
+/** Normalize any dialled format to the canonical 09xxxxxxxxx. */
+export function normalizePhone(raw: string): string {
+  let p = raw.replace(/[\s\-()]/g, "").replace(/^\+/, "");
+  if (p.startsWith("0098")) p = `0${p.slice(4)}`;
+  else if (p.startsWith("98") && p.length === 12) p = `0${p.slice(2)}`;
+  else if (p.length === 10 && p.startsWith("9")) p = `0${p}`;
+  return p;
+}
+
+const isCanonicalPhone = (p: string): boolean => /^09\d{9}$/.test(p);
+
 const BUSINESS_SUMMARY_SELECT = {
   id: true,
   slug: true,
@@ -73,7 +84,14 @@ export class AuthService {
     reply: FastifyReply,
     locale: Locale
   ) {
-    const exists = await this.prisma.user.findUnique({ where: { phone: body.phone }, select: { id: true } });
+    const phone = normalizePhone(body.phone);
+    if (!isCanonicalPhone(phone)) {
+      throw AppError.badRequest(
+        t(locale, "auth.invalidPhone", "شماره موبایل معتبر نیست"),
+        "INVALID_PHONE"
+      );
+    }
+    const exists = await this.prisma.user.findUnique({ where: { phone }, select: { id: true } });
     if (exists) {
       throw AppError.conflict(t(locale, "auth.phoneTaken", "این شماره موبایل قبلاً ثبت شده است"), "PHONE_TAKEN");
     }
@@ -82,7 +100,7 @@ export class AuthService {
     const user = await this.prisma.user.create({
       data: {
         name: body.name.trim(),
-        phone: body.phone,
+        phone,
         passwordHash: await bcrypt.hash(body.password, 10),
       },
     });
@@ -97,7 +115,8 @@ export class AuthService {
   }
 
   async loginUser(body: { phone: string; password: string }, reply: FastifyReply, locale: Locale) {
-    const user = await this.prisma.user.findUnique({ where: { phone: body.phone } });
+    const phone = normalizePhone(body.phone);
+    const user = await this.prisma.user.findUnique({ where: { phone } });
     if (!user) {
       throw AppError.unauthorized(t(locale, "auth.invalidCredentials", "شماره موبایل یا رمز عبور اشتباه است"));
     }

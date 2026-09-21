@@ -1,7 +1,11 @@
 import { IsString, Matches, MaxLength, MinLength } from "class-validator";
 
-/** Iranian mobile number: 09xxxxxxxxx */
-export const PHONE_REGEX = /^09\d{9}$/;
+/**
+ * Mobile number as dialled — several formats accepted here
+ * (09…, 9…, +989…, 00989…, 989…) and normalized to 09xxxxxxxxx
+ * in the service. The UI shows the +98 country code explicitly.
+ */
+export const PHONE_DIALLED = /^\+?\d{10,14}$/;
 
 export class RegisterUserDto {
   @IsString()
@@ -10,7 +14,7 @@ export class RegisterUserDto {
   name: string;
 
   @IsString()
-  @Matches(PHONE_REGEX)
+  @Matches(PHONE_DIALLED)
   phone: string;
 
   @IsString()
@@ -21,7 +25,7 @@ export class RegisterUserDto {
 
 export class LoginUserDto {
   @IsString()
-  @Matches(PHONE_REGEX)
+  @Matches(PHONE_DIALLED)
   phone: string;
 
   @IsString()

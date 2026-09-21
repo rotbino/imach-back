@@ -80,6 +80,8 @@ model Business {
   name         String
   activityType String? // optional self-description, chosen later from the panel
   city         String
+  province     String? // derived from city at write time (matching granularity)
+  country      String     @default("IR") // country code of the business
   phone        String?
   isVerified   Boolean    @default(false)
   isDemo       Boolean    @default(false)

@@ -15,6 +15,7 @@ import { CacheService } from "../common/cache/cache.module";
 import { CurrentLocale, CurrentUser, makeSlug, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import { assertBusinessOwner, uniqueSlug } from "../common/guards";
+import { provinceOf } from "../common/geo/cities";
 import type { Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
@@ -49,6 +50,8 @@ function invalidateBusiness(cache: CacheService, businessId: string, slug?: stri
   cache.invalidateTag(`market:sugg:${businessId}`);
   cache.invalidateTag(`market:ssugg:${businessId}`);
   cache.invalidateTag(`market:home:${businessId}`);
+  cache.invalidateTag(`market:buyreq:${businessId}`);
+  cache.invalidateTag(`market:selloff:${businessId}`);
 }
 
 /** Business = the seller AND buyer identity of a user. */
@@ -91,6 +94,8 @@ export class BusinessesController {
         slug,
         name: body.name.trim(),
         city: body.city.trim(),
+        province: provinceOf(body.city.trim()),
+        country: "IR",
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
         ownerId: user.id,
       },
@@ -168,7 +173,7 @@ export class BusinessesController {
       where: { id: business.id },
       data: {
         ...(body.name ? { name: body.name.trim() } : {}),
-        ...(body.city ? { city: body.city.trim() } : {}),
+        ...(body.city ? { city: body.city.trim(), province: provinceOf(body.city.trim()) } : {}),
         ...(body.activityType !== undefined ? { activityType: body.activityType } : {}),
       },
     });

@@ -27,6 +27,8 @@ export class ListingsController {
     this.cache.invalidateTag(`market:sugg:${businessId}`);
     this.cache.invalidateTag(`market:ssugg:${businessId}`);
     this.cache.invalidateTag(`market:home:${businessId}`);
+    this.cache.invalidateTag(`market:buyreq:${businessId}`);
+    this.cache.invalidateTag(`market:selloff:${businessId}`);
   }
 
   @Get("getMyListings")
