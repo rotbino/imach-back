@@ -24,10 +24,15 @@ export const GOOD_UNITS = [
   "SERVICE",
 ] as const;
 
-export const GOOD_SOURCES = ["SEED", "USER"] as const;
 export const GOOD_STATUSES = ["ACTIVE", "PROVISIONAL"] as const;
 
-/** GET /admin/getGoods — gardening list (never cached: admin sees live data). */
+/**
+ * Who registered the row — the admin filter is a single `creator` param:
+ * the three real roles, plus SYSTEM for legacy seed rows (no creator).
+ */
+export const CREATORS = ["USER", "ADMIN", "BRAND_OWNER", "SYSTEM"] as const;
+
+/** GET /admin/goods/list — gardening list (never cached: admin sees live data). */
 export class AdminGoodsQueryDto {
   @IsOptional()
   @IsString()
@@ -39,8 +44,8 @@ export class AdminGoodsQueryDto {
   status?: string;
 
   @IsOptional()
-  @IsIn(GOOD_SOURCES)
-  source?: string;
+  @IsIn(CREATORS)
+  creator?: string;
 
   @IsOptional()
   @IsString()
@@ -60,7 +65,7 @@ export class AdminGoodsQueryDto {
   limit?: number;
 }
 
-/** POST /admin/createGood — admin-seeded reference good. */
+/** POST /admin/goods/create — admin-curated reference good (lands ACTIVE). */
 export class AdminCreateGoodDto {
   @IsString()
   @MinLength(2)
@@ -87,7 +92,7 @@ export class AdminCreateGoodDto {
   categoryId!: string;
 }
 
-/** PATCH /admin/editGood/:id — every field optional; only sent keys change. */
+/** PATCH /admin/goods/edit/:id — every field optional; only sent keys change. */
 export class AdminEditGoodDto {
   @IsOptional()
   @IsString()
@@ -121,29 +126,9 @@ export class AdminEditGoodDto {
   status?: string;
 }
 
-/** POST /admin/mergeGood/:id — move listings onto the target, delete source. */
+/** POST /admin/goods/merge/:id — move listings onto the target, delete source. */
 export class AdminMergeDto {
   @IsString()
   @MaxLength(40)
   targetId!: string;
-}
-
-/** GET /admin/getBrands — gardening list for auto-resolved brands. */
-export class AdminBrandsQueryDto {
-  @IsOptional()
-  @IsString()
-  @MaxLength(60)
-  q?: string;
-
-  @IsOptional()
-  @IsString()
-  @MaxLength(120)
-  cursor?: string;
-
-  @IsOptional()
-  @Type(() => Number)
-  @IsInt()
-  @Min(1)
-  @Max(100)
-  limit?: number;
 }

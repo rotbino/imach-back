@@ -161,7 +161,7 @@ export class GoodsController {
   @UseGuards(JwtAuthGuard)
   async createGood(
     @Body() body: CreateGoodDto,
-    @CurrentUser() _user: AuthUser,
+    @CurrentUser() user: AuthUser,
     @CurrentLocale() locale: Locale
   ) {
     const category = await this.prisma.category.findUnique({
@@ -185,6 +185,9 @@ export class GoodsController {
     });
     if (existing) return existing;
 
+    // Creator trail + gardening queue: admin additions land trusted, ordinary
+    // users land PROVISIONAL — yet every row stays usable the moment it exists.
+    const isAdmin = user.role === "ADMIN";
     const created = await this.prisma.good.create({
       data: {
         categoryId: body.categoryId,
@@ -194,7 +197,9 @@ export class GoodsController {
         searchText,
         unit: body.unit,
         source: "USER",
-        status: "ACTIVE", // demo phase: live immediately; gardening queue comes later
+        status: isAdmin ? "ACTIVE" : "PROVISIONAL",
+        creatorRole: isAdmin ? "ADMIN" : "USER",
+        createdById: user.id,
       },
       select: GOOD_SELECT,
     });

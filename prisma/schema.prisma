@@ -38,6 +38,10 @@ model User {
   country       String         @default("IR") // chosen at signup → default business currency
   businesses    Business[]
   refreshTokens RefreshToken[]
+  /// Basic-data rows this user registered (goods, brands) — the audit trail of
+  /// who grew the catalog. Null creator = system/seed row.
+  createdGoods  Good[]         @relation("GoodCreator")
+  createdBrands Brand[]        @relation("BrandCreator")
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 }
@@ -89,8 +93,14 @@ model Good {
   /// Normalized (fa-agnostic) concatenation of names + aliases — powers search
   searchText String
   unit       String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH | METER | GRAM | SERVICE
-  source     String    @default("SEED") // SEED | USER
-  status     String    @default("ACTIVE") // ACTIVE | PROVISIONAL (gardening queue)
+  source     String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
+  status     String    @default("ACTIVE") // ACTIVE | PROVISIONAL (pending review)
+  /// Who registered this row: USER (ordinary member) | ADMIN | BRAND_OWNER.
+  /// Null = system/seed. Rows stay usable for everyone while PROVISIONAL —
+  /// the state only drives the admin gardening queue (approve / merge / delete).
+  creatorRole String?
+  createdById String?   @db.ObjectId
+  createdBy   User?     @relation("GoodCreator", fields: [createdById], references: [id], onUpdate: NoAction)
   listings   Listing[]
 
   @@index([categoryId])
@@ -101,11 +111,18 @@ model Good {
 /// Lives on the listing (not the reference) because the same class is sold
 /// under many brands — and most B2B trade is brand-agnostic by default.
 model Brand {
-  id         String    @id @default(auto()) @map("_id") @db.ObjectId
-  name       String // as entered
-  searchText String    @unique // normalized — natural dedup
-  source     String    @default("SEED") // SEED | USER
-  listings   Listing[]
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String // as entered
+  searchText  String    @unique // normalized — natural dedup
+  source      String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
+  /// ACTIVE | PROVISIONAL — same gardening contract as Good: pending brands
+  /// keep working everywhere, they just wait in the admin queue.
+  status      String    @default("ACTIVE")
+  /// Who registered it: USER | ADMIN | BRAND_OWNER (null = system/seed).
+  creatorRole String?
+  createdById String?   @db.ObjectId
+  createdBy   User?     @relation("BrandCreator", fields: [createdById], references: [id], onUpdate: NoAction)
+  listings    Listing[]
 }
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────

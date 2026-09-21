@@ -45,14 +45,26 @@ export class ListingsController {
     this.cache.invalidateTag(`market:selloff:${businessId}`);
   }
 
-  /** resolve free-text brand → deduped Brand row (created on the fly); empty → detached */
-  private async resolveBrandId(brandName: string | undefined): Promise<string | null> {
+  /**
+   * resolve free-text brand → deduped Brand row (created on the fly); empty → detached.
+   * New rows carry the creator trail: non-admin listings leave the brand
+   * PROVISIONAL for the admin queue — but it stays usable right away.
+   */
+  private async resolveBrandId(brandName: string | undefined, user: AuthUser): Promise<string | null> {
     const name = brandName?.trim();
     if (!name) return null;
     const searchText = goodSearchText({ nameFa: name });
+    const isAdmin = user.role === "ADMIN";
     const brand = await this.prisma.brand.upsert({
       where: { searchText },
-      create: { name, searchText, source: "USER" },
+      create: {
+        name,
+        searchText,
+        source: "USER",
+        status: isAdmin ? "ACTIVE" : "PROVISIONAL",
+        creatorRole: isAdmin ? "ADMIN" : "USER",
+        createdById: user.id,
+      },
       update: {},
       select: { id: true },
     });
@@ -119,7 +131,7 @@ export class ListingsController {
       );
     }
 
-    const brandId = await this.resolveBrandId(body.brandName);
+    const brandId = await this.resolveBrandId(body.brandName, user);
     const attrs = sanitizeAttrs(body.attrs);
 
     const data = {

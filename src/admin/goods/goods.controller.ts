@@ -1,35 +1,32 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, UseGuards } from "@nestjs/common";
-import { goodSearchText, normalizeFa } from "../common/catalog/catalog";
-import { CacheService } from "../common/cache/cache.module";
-import { CurrentLocale } from "../common/decorators/auth.decorators";
-import { AppError } from "../common/errors/app-error";
-import { t, type Locale } from "../common/i18n/i18n";
-import { cursorBefore, decodeCursor, toPage, type Page } from "../common/pagination/cursor";
-import { PrismaService } from "../common/prisma/prisma.module";
-import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { goodSearchText, normalizeFa } from "../../common/catalog/catalog";
+import { CacheService } from "../../common/cache/cache.module";
+import { CurrentLocale, CurrentUser, type AuthUser } from "../../common/decorators/auth.decorators";
+import { AppError } from "../../common/errors/app-error";
+import { t, type Locale } from "../../common/i18n/i18n";
+import { cursorBefore, decodeCursor, toPage, type Page } from "../../common/pagination/cursor";
+import { PrismaService } from "../../common/prisma/prisma.module";
+import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
 import {
-  AdminBrandsQueryDto,
   AdminCreateGoodDto,
   AdminEditGoodDto,
   AdminGoodsQueryDto,
   AdminMergeDto,
-} from "./dto/admin.dto";
-import { AdminGuard } from "./admin.guard";
+} from "./dto";
+import { AdminGuard } from "../admin.guard";
 
 /**
- * ─── Admin surface ──────────────────────────────────────────────────────────
- * Physically separated folder (src/admin/**) so that one day it can be lifted
- * into its own deployable without touching feature modules. Everything here
- * sits behind [JwtAuthGuard + AdminGuard]: any user whose role is ADMIN can
- * use the panel — no separate app, no separate login.
+ * ─── Admin · reference goods ────────────────────────────────────────────────
+ * One controller per entity inside src/admin/<entity>/ — the admin surface
+ * grows entity by entity, each folder moves (or splits into its own service)
+ * without touching its neighbours.
  *
- * Scope v1: catalog gardening for reference goods + brands
- *   • stats      — a handful of counters for the overview page
- *   • goods      — search/browse the catalog with live listing counts
- *   • edit/approve/rename/re-unit/re-home a good (PROVISIONAL → ACTIVE)
- *   • merge      — converge duplicates: listings move, names become aliases
- *   • delete     — only empty goods; anything with listings must merge first
- *   • brands     — same gardening for auto-resolved brands
+ * Gardening for the reference-good catalog:
+ *   • list    — search/browse with live listing counts + creator trail
+ *   • create  — admin-curated good, lands ACTIVE with creatorRole=ADMIN
+ *   • edit    — rename / re-unit / re-home / approve (PROVISIONAL → ACTIVE)
+ *   • merge   — converge duplicates: listings move, names become aliases
+ *   • delete  — only empty goods; anything with listings must merge first
  *
  * Every mutation invalidates the "goods" cache tag so the public catalog and
  * the listing form reflect the garden the moment it is pruned.
@@ -43,6 +40,8 @@ const ADMIN_GOOD_SELECT = {
   unit: true,
   source: true,
   status: true,
+  creatorRole: true,
+  createdBy: { select: { id: true, name: true } },
   category: { select: { id: true, slug: true, nameFa: true, nameEn: true } },
   _count: { select: { listings: true } },
 } as const;
@@ -55,49 +54,54 @@ type AdminGoodRow = {
   unit: string;
   source: string;
   status: string;
+  creatorRole: string | null;
+  createdBy: { id: string; name: string } | null;
   category: { id: string; slug: string; nameFa: string; nameEn: string };
   _count: { listings: number };
 };
 
-@Controller("admin")
+@Controller("admin/goods")
 @UseGuards(JwtAuthGuard, AdminGuard)
-export class AdminController {
+export class AdminGoodsController {
   constructor(
     private readonly prisma: PrismaService,
     private readonly cache: CacheService
   ) {}
 
-  // ── Overview ──────────────────────────────────────────────────────────────
-
-  @Get("getStats")
-  async getStats() {
-    const [goods, provisional, userGoods, listings, businesses, users, brands, buyListings] =
-      await Promise.all([
-        this.prisma.good.count(),
-        this.prisma.good.count({ where: { status: "PROVISIONAL" } }),
-        this.prisma.good.count({ where: { source: "USER" } }),
-        this.prisma.listing.count(),
-        this.prisma.business.count(),
-        this.prisma.user.count(),
-        this.prisma.brand.count(),
-        this.prisma.listing.count({ where: { mode: "BUY" } }),
-      ]);
-    return { goods, provisional, userGoods, listings, buyListings, businesses, users, brands };
-  }
-
-  // ── Reference goods gardening ────────────────────────────────────────────
-
-  @Get("getGoods")
-  async getGoods(@Query() q: AdminGoodsQueryDto): Promise<Page<AdminGoodRow>> {
+  @Get("list")
+  async list(@Query() q: AdminGoodsQueryDto): Promise<Page<AdminGoodRow>> {
     const limit = Math.min(Math.max(q.limit ?? 30, 1), 100);
     const text = q.q?.trim();
+
+    // A category filter means the whole subtree: tapping «کشاورزی» in the tree
+    // must surface everything beneath it, not just goods attached to the root.
+    let categoryIds: string[] | undefined;
+    if (q.categoryId) {
+      const cats = await this.prisma.category.findMany({ select: { id: true, parentId: true } });
+      const kidsOf = new Map<string, string[]>();
+      for (const c of cats) {
+        if (!c.parentId) continue;
+        const arr = kidsOf.get(c.parentId);
+        if (arr) arr.push(c.id);
+        else kidsOf.set(c.parentId, [c.id]);
+      }
+      categoryIds = [q.categoryId];
+      const stack = [q.categoryId];
+      while (stack.length) {
+        const cur = stack.pop() as string;
+        for (const kid of kidsOf.get(cur) ?? []) {
+          categoryIds.push(kid);
+          stack.push(kid);
+        }
+      }
+    }
 
     const rows = await this.prisma.good.findMany({
       where: {
         ...(text ? { searchText: { contains: normalizeFa(text) } } : {}),
         ...(q.status ? { status: q.status } : {}),
-        ...(q.source ? { source: q.source } : {}),
-        ...(!text && q.categoryId ? { categoryId: q.categoryId } : {}),
+        ...(q.creator === "SYSTEM" ? { creatorRole: null } : q.creator ? { creatorRole: q.creator } : {}),
+        ...(categoryIds ? { categoryId: { in: categoryIds } } : {}),
         ...cursorBefore(decodeCursor(q.cursor)),
       },
       select: ADMIN_GOOD_SELECT,
@@ -107,8 +111,12 @@ export class AdminController {
     return toPage(rows, limit);
   }
 
-  @Post("createGood")
-  async createGood(@Body() body: AdminCreateGoodDto, @CurrentLocale() locale: Locale) {
+  @Post("create")
+  async create(
+    @Body() body: AdminCreateGoodDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
     const category = await this.prisma.category.findUnique({
       where: { id: body.categoryId },
       select: { id: true },
@@ -128,8 +136,9 @@ export class AdminController {
         aliases,
         searchText,
         unit: body.unit,
-        source: "SEED",
-        status: "ACTIVE",
+        status: "ACTIVE", // admin-curated = trusted from birth
+        creatorRole: "ADMIN",
+        createdById: user.id,
       },
       select: ADMIN_GOOD_SELECT,
     });
@@ -137,8 +146,8 @@ export class AdminController {
     return created;
   }
 
-  @Patch("editGood/:id")
-  async editGood(
+  @Patch("edit/:id")
+  async edit(
     @Param("id") id: string,
     @Body() body: AdminEditGoodDto,
     @CurrentLocale() locale: Locale
@@ -185,8 +194,8 @@ export class AdminController {
    * names survive as aliases on the target (so old searches keep hitting),
    * and the empty source row is deleted. One round of gardening, zero data loss.
    */
-  @Post("mergeGood/:id")
-  async mergeGood(
+  @Post("merge/:id")
+  async merge(
     @Param("id") id: string,
     @Body() body: AdminMergeDto,
     @CurrentLocale() locale: Locale
@@ -227,8 +236,8 @@ export class AdminController {
     return { ok: true, movedTo: target.id };
   }
 
-  @Delete("deleteGood/:id")
-  async deleteGood(@Param("id") id: string, @CurrentLocale() locale: Locale) {
+  @Delete("delete/:id")
+  async remove(@Param("id") id: string, @CurrentLocale() locale: Locale) {
     const count = await this.prisma.listing.count({ where: { goodId: id } });
     if (count > 0) {
       throw AppError.conflict(
@@ -237,60 +246,6 @@ export class AdminController {
       );
     }
     await this.prisma.good.delete({ where: { id } });
-    this.cache.invalidateTag("goods");
-    return { ok: true };
-  }
-
-  // ── Brand gardening ───────────────────────────────────────────────────────
-
-  @Get("getBrands")
-  async getBrands(@Query() q: AdminBrandsQueryDto): Promise<
-    Page<{ id: string; name: string; source: string; _count: { listings: number } }>
-  > {
-    const limit = Math.min(Math.max(q.limit ?? 30, 1), 100);
-    const text = q.q?.trim();
-    const rows = await this.prisma.brand.findMany({
-      where: {
-        ...(text ? { searchText: { contains: normalizeFa(text) } } : {}),
-        ...cursorBefore(decodeCursor(q.cursor)),
-      },
-      select: { id: true, name: true, source: true, _count: { select: { listings: true } } },
-      orderBy: { id: "desc" }, // newest first — gardening candidates surface on top
-      take: limit + 1,
-    });
-    return toPage(rows, limit);
-  }
-
-  @Post("mergeBrand/:id")
-  async mergeBrand(
-    @Param("id") id: string,
-    @Body() body: AdminMergeDto,
-    @CurrentLocale() locale: Locale
-  ) {
-    if (id === body.targetId) {
-      throw AppError.badRequest(t(locale, "admin.mergeSelf", "ادغام برند با خودش ممکن نیست"), "MERGE_SELF");
-    }
-    const [source, target] = await Promise.all([
-      this.prisma.brand.findUnique({ where: { id }, select: { id: true } }),
-      this.prisma.brand.findUnique({ where: { id: body.targetId }, select: { id: true } }),
-    ]);
-    if (!source || !target) throw AppError.notFound(t(locale, "admin.brandNotFound", "برند یافت نشد"));
-
-    await this.prisma.$transaction([
-      this.prisma.listing.updateMany({ where: { brandId: source.id }, data: { brandId: target.id } }),
-      this.prisma.brand.delete({ where: { id: source.id } }),
-    ]);
-    this.cache.invalidateTag("goods");
-    return { ok: true, movedTo: target.id };
-  }
-
-  @Delete("deleteBrand/:id")
-  async deleteBrand(@Param("id") id: string, @CurrentLocale() locale: Locale) {
-    const count = await this.prisma.listing.count({ where: { brandId: id } });
-    if (count > 0) {
-      throw AppError.conflict(t(locale, "admin.brandInUse", "این برند روی آگهی استفاده شده — اول ادغامش کنید"), "BRAND_IN_USE");
-    }
-    await this.prisma.brand.delete({ where: { id } });
     this.cache.invalidateTag("goods");
     return { ok: true };
   }
