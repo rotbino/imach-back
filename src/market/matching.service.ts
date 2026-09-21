@@ -37,6 +37,21 @@ export interface BuyerMatch {
   score: number;
 }
 
+export interface SupplierSuggestion {
+  supplierId: string;
+  supplierName: string;
+  supplierSlug: string;
+  supplierCity: string;
+  supplierVerified: boolean;
+  listingId: string;
+  goodId: string;
+  goodName: string;
+  unit: string;
+  price: number;
+  minOrder: number;
+  score: number;
+}
+
 const SELLER_SELECT = {
   id: true,
   price: true,
@@ -140,6 +155,72 @@ export class MatchingService {
         };
       })
       .sort((a, b) => b.score - a.score)
+      .slice(0, limit);
+  }
+
+  /** Suppliers selling goods I need, ranked by score — the buy-side engine. */
+  async suppliersForBuyer(
+    buyerBusinessId: string,
+    buyerCity: string,
+    limit = 6
+  ): Promise<SupplierSuggestion[]> {
+    const myBuyListings = await this.prisma.listing.findMany({
+      where: {
+        businessId: buyerBusinessId,
+        mode: { in: ["BUY", "BOTH"] },
+        volume: { not: null },
+      },
+      select: { goodId: true, volume: true },
+    });
+    if (myBuyListings.length === 0) return [];
+
+    const goodIds = [...new Set(myBuyListings.map((l) => l.goodId))];
+    const volumeByGood = new Map(
+      myBuyListings.map((l) => [l.goodId, l.volume as number])
+    );
+
+    const sellRows = await this.prisma.listing.findMany({
+      where: {
+        goodId: { in: goodIds },
+        businessId: { not: buyerBusinessId },
+        mode: { in: ["SELL", "BOTH"] },
+        price: { not: null },
+      },
+      select: {
+        id: true,
+        price: true,
+        minOrder: true,
+        good: { select: { id: true, name: true, unit: true } },
+        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
+      },
+      orderBy: { updatedAt: "desc" },
+      take: 120,
+    });
+
+    return sellRows
+      .map((row) => {
+        const b = row.business;
+        return {
+          supplierId: b.id,
+          supplierName: b.name,
+          supplierSlug: b.slug,
+          supplierCity: b.city,
+          supplierVerified: b.isVerified,
+          listingId: row.id,
+          goodId: row.good.id,
+          goodName: row.good.name,
+          unit: row.good.unit,
+          price: row.price as number,
+          minOrder: row.minOrder ?? 0,
+          score: matchScore(
+            buyerCity,
+            b.city,
+            volumeByGood.get(row.good.id) ?? 0,
+            row.minOrder ?? 0
+          ),
+        };
+      })
+      .sort((a, b) => b.score - a.score || a.price - b.price)
       .slice(0, limit);
   }
 }

@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsInt, IsNumber, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
+import { IsIn, IsInt, IsNumber, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
 
 /** GET /market/getOffers | getInquiries | getFollows | getPriceBoard | getSuggestions */
 export class BusinessIdQueryDto {
@@ -33,6 +33,13 @@ export class InquiriesQueryDto extends BusinessIdQueryDto {
   @Min(1)
   @Max(100)
   limit?: number;
+}
+
+/** GET /market/getHomeFeed — listings of the businesses I follow */
+export class HomeFeedQueryDto extends BusinessIdQueryDto {
+  @IsOptional()
+  @IsIn(["SELL", "BUY"])
+  mode?: "SELL" | "BUY";
 }
 
 /** POST /market/requestQuote/:listingId */

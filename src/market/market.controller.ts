@@ -22,6 +22,7 @@ import { MatchingService } from "./matching.service";
 import {
   BusinessIdQueryDto,
   FollowSupplierDto,
+  HomeFeedQueryDto,
   InquiriesQueryDto,
   OffersQueryDto,
   RequestQuoteDto,
@@ -55,6 +56,30 @@ const INQUIRY_INCLUDE = {
   buyer: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
 } as const;
 
+/** Home-feed rows — same shape as the public explore rows. */
+const HOME_FEED_SELECT = {
+  id: true,
+  mode: true,
+  price: true,
+  stock: true,
+  minOrder: true,
+  volume: true,
+  frequency: true,
+  updatedAt: true,
+  good: { select: { id: true, name: true, category: true, unit: true } },
+  business: {
+    select: {
+      id: true,
+      slug: true,
+      name: true,
+      city: true,
+      isVerified: true,
+      activityType: true,
+      _count: { select: { followers: true } },
+    },
+  },
+} as const;
+
 /** The whole market module is authenticated — buyers and sellers only. */
 @Controller("market")
 @UseGuards(JwtAuthGuard)
@@ -68,6 +93,8 @@ export class MarketController {
   private invalidateBuyerSide(businessId: string): void {
     this.cache.invalidateTag(`market:board:${businessId}`);
     this.cache.invalidateTag(`market:sugg:${businessId}`);
+    this.cache.invalidateTag(`market:ssugg:${businessId}`);
+    this.cache.invalidateTag(`market:home:${businessId}`);
   }
 
   /**
@@ -363,5 +390,84 @@ export class MarketController {
 
     reply.header("x-cache", hit ? "HIT" : "MISS");
     return value;
+  }
+
+  /** Suggested suppliers for my buy needs — the buy-side follow engine. */
+  @Get("getSupplierSuggestions")
+  async getSupplierSuggestions(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const { value, hit } = await this.cache.wrap(
+      `market:ssugg:${query.businessId}`,
+      { ttlMs: TTL.MINUTE, tags: [`market:ssugg:${query.businessId}`] },
+      () => this.matching.suppliersForBuyer(business.id, business.city)
+    );
+
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  /**
+   * Home feed — the newest listings of the businesses my business follows.
+   * Split by arm (SELL = their catalog, BUY = their needs) at the query level.
+   */
+  @Get("getHomeFeed")
+  async getHomeFeed(
+    @Query() query: HomeFeedQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const { value, hit } = await this.cache.wrap(
+      `market:home:${query.businessId}:${query.mode ?? "SELL"}`,
+      { ttlMs: TTL.SHORT, tags: [`market:home:${query.businessId}`] },
+      async () => {
+        const follows = await this.prisma.follow.findMany({
+          where: { buyerId: query.businessId },
+          select: { supplierId: true },
+        });
+        if (follows.length === 0) return [];
+
+        const sellSide = query.mode !== "BUY";
+        return this.prisma.listing.findMany({
+          where: {
+            businessId: { in: follows.map((f) => f.supplierId) },
+            ...(sellSide
+              ? { mode: { in: ["SELL", "BOTH"] }, price: { not: null } }
+              : { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } }),
+          },
+          select: HOME_FEED_SELECT,
+          orderBy: { updatedAt: "desc" },
+          take: 100,
+        });
+      }
+    );
+
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  /** Buyers who follow my business — my personal buyers. */
+  @Get("getFollowers")
+  async getFollowers(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    return this.prisma.follow.findMany({
+      where: { supplierId: query.businessId },
+      select: {
+        createdAt: true,
+        buyer: { select: { slug: true, name: true, city: true, isVerified: true } },
+      },
+      orderBy: { createdAt: "desc" },
+      take: 200,
+    });
   }
 }
