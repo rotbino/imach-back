@@ -35,6 +35,7 @@ model User {
   name          String
   passwordHash  String
   role          String         @default("MEMBER") // MEMBER | ADMIN
+  country       String         @default("IR") // chosen at signup → default business currency
   businesses    Business[]
   refreshTokens RefreshToken[]
   createdAt     DateTime       @default(now())
@@ -55,16 +56,56 @@ model RefreshToken {
   @@index([userId])
 }
 
-// ─── Catalog (reference goods) ───────────────────────────────────────────────
+// ─── Catalog (category tree + reference goods) ─────────────────────────────
 
+/// Category tree (3–4 levels). Seed comes from trade standards (GS1 GPC / HS
+/// skeleton + local B2B naming); user-created goods always attach to a leaf.
+model Category {
+  id       String     @id @default(auto()) @map("_id") @db.ObjectId
+  parentId String?    @db.ObjectId
+  parent   Category?  @relation("catTree", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children Category[] @relation("catTree")
+  slug     String     @unique // stable identifier — names are localizable
+  nameFa   String
+  nameEn   String
+  /// Attribute schema for goods under this category:
+  /// [{key, fa, en, type: "enum"|"text", options?: [{v, fa, en}]}]
+  attrs    Json?
+  goods    Good[]
+
+  @@index([parentId])
+}
+
+/// The reference good — a tradeable CLASS ("خرمای خازویی"), NOT a brand×size SKU.
+/// Weight/packaging live on Category attrs, brand lives on Listing — so the
+/// catalog stays demand-driven and match-friendly across languages.
 model Good {
-  id       String    @id @default(auto()) @map("_id") @db.ObjectId
-  name     String    @unique
-  category String
-  unit     String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH
-  listings Listing[]
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  categoryId String    @db.ObjectId
+  category   Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  nameFa     String // canonical Persian name (or the name the user typed)
+  nameEn     String?
+  aliases    String[]  // extra search terms in any language
+  /// Normalized (fa-agnostic) concatenation of names + aliases — powers search
+  searchText String
+  unit       String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH | METER | GRAM | SERVICE
+  source     String    @default("SEED") // SEED | USER
+  status     String    @default("ACTIVE") // ACTIVE | PROVISIONAL (gardening queue)
+  listings   Listing[]
 
-  @@index([category])
+  @@index([categoryId])
+  @@index([searchText])
+}
+
+/// Brand — optional, resolved/created on the fly when a listing saves.
+/// Lives on the listing (not the reference) because the same class is sold
+/// under many brands — and most B2B trade is brand-agnostic by default.
+model Brand {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  name       String // as entered
+  searchText String    @unique // normalized — natural dedup
+  source     String    @default("SEED") // SEED | USER
+  listings   Listing[]
 }
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────
@@ -82,6 +123,9 @@ model Business {
   city         String
   province     String? // derived from city at write time (matching granularity)
   country      String     @default("IR") // country code of the business
+  /// Currency of the catalog (sell arm). Set at business creation from the
+  /// owner's signup country; every listing inherits it at write time.
+  currency     String     @default("IRR") // ISO 4217
   phone        String?
   isVerified   Boolean    @default(false)
   isDemo       Boolean    @default(false)
@@ -110,10 +154,19 @@ model Listing {
   goodId     String   @db.ObjectId
   mode       String // SELL | BUY | BOTH
 
+  /// Optional brand of THIS offer (the reference class stays brand-free)
+  brandId String?    @db.ObjectId
+  brand   Brand?     @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
   // ── sell side ──
-  price    Float?
-  stock    Int?
-  minOrder Int?
+  /// Price in the SMALLEST currency unit (rial / cent …) — always an integer.
+  /// Currency is inherited from the business at write time.
+  priceMinor Int?
+  currency   String? // ISO 4217 (IRR, USD, …)
+  stock      Int?
+  minOrder   Int?
+  /// Category attribute values: {attrKey: value} (weight, packaging …)
+  attrs Json?
 
   // ── buy side ──
   volume    Float?
@@ -161,7 +214,8 @@ model Offer {
   buyerId   String   @db.ObjectId
   sellerId  String   @db.ObjectId
   listingId String   @db.ObjectId
-  price     Float
+  priceMinor Int // smallest currency unit — integer, exact
+  currency   String // ISO 4217 — snapshotted from the listing
   minOrder  Int
   score     Int // persisted matching score (0–100)
   isSpecial Boolean  @default(false)
@@ -191,11 +245,12 @@ model Follow {
 }
 
 /// Price history per listing → powers trends and "recently updated" badges.
+/// Minor-unit integers — same precision as the listing itself.
 model PriceLog {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   listingId String   @db.ObjectId
-  oldPrice  Float
-  newPrice  Float
+  oldMinor  Int
+  newMinor  Int
   createdAt DateTime @default(now())
 
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)

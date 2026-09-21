@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsIn, IsInt, IsNumber, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
+import { IsIn, IsInt, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
 
 /** GET /market/getOffers | getInquiries | getFollows | getPriceBoard | getSuggestions */
 export class BusinessIdQueryDto {
@@ -50,15 +50,15 @@ export class RequestQuoteDto {
   note?: string;
 }
 
-/** POST /market/sendOffer */
+/** POST /market/sendOffer — price in the smallest currency unit (integer). */
 export class SendOfferDto {
   @IsString()
   inquiryId: string;
 
-  @IsNumber()
+  @IsInt()
   @Min(1)
   @Max(1e12)
-  price: number;
+  priceMinor: number;
 
   @IsOptional()
   @IsString()

@@ -3,6 +3,7 @@ import { JwtService } from "@nestjs/jwt";
 import { createHash, randomBytes } from "node:crypto";
 import type { FastifyReply, FastifyRequest } from "fastify";
 import { env, isProd, jwtExpiresInSeconds } from "../common/config/env";
+import { isSupportedCountry } from "../common/catalog/catalog";
 import type { AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
@@ -28,6 +29,8 @@ const BUSINESS_SUMMARY_SELECT = {
   name: true,
   activityType: true,
   city: true,
+  country: true,
+  currency: true,
   isVerified: true,
 } as const;
 
@@ -36,9 +39,16 @@ export interface PublicUser {
   name: string;
   phone: string;
   role: string;
+  country: string;
 }
 
-const toPublicUser = (u: { id: string; name: string; phone: string; role: string }): PublicUser => u;
+const toPublicUser = (u: {
+  id: string;
+  name: string;
+  phone: string;
+  role: string;
+  country: string;
+}): PublicUser => u;
 
 @Injectable()
 export class AuthService {
@@ -80,7 +90,7 @@ export class AuthService {
   }
 
   async registerUser(
-    body: { name: string; phone: string; password: string },
+    body: { name: string; phone: string; password: string; country?: string },
     reply: FastifyReply,
     locale: Locale
   ) {
@@ -96,12 +106,16 @@ export class AuthService {
       throw AppError.conflict(t(locale, "auth.phoneTaken", "این شماره موبایل قبلاً ثبت شده است"), "PHONE_TAKEN");
     }
 
+    // signup country drives the default catalog currency of future businesses
+    const country = body.country && isSupportedCountry(body.country) ? body.country : "IR";
+
     const bcrypt = await import("bcryptjs");
     const user = await this.prisma.user.create({
       data: {
         name: body.name.trim(),
         phone,
         passwordHash: await bcrypt.hash(body.password, 10),
+        country,
       },
     });
 

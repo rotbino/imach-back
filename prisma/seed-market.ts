@@ -18,16 +18,26 @@ const prisma = new PrismaClient();
 
 const PASSWORD = "123456";
 
-// ─── Reference goods ─────────────────────────────────────────────────────────
+// ─── Reference goods — ensured under catalog categories (slug) ───────────────
 const GOODS = [
-  { name: "کیک یزدی", category: "کیک و کلوچه", unit: "CARTON" },
-  { name: "کیک شطرنجی", category: "کیک و کلوچه", unit: "CARTON" },
-  { name: "کیک هویج", category: "کیک و کلوچه", unit: "CARTON" },
-  { name: "کیک پرتقالی", category: "کیک و کلوچه", unit: "CARTON" },
-  { name: "کلوچه کشمشی", category: "کیک و کلوچه", unit: "CARTON" },
-  { name: "پودر کاکائو", category: "مواد اولیه تولید", unit: "KILOGRAM" },
-  { name: "شیر پاستوریزه", category: "مواد اولیه تولید", unit: "LITER" },
+  { name: "کیک یزدی", en: "Yazdi cake", cat: "bakery-snacks", unit: "CARTON" },
+  { name: "کیک شطرنجی", en: "Checkerboard cake", cat: "bakery-snacks", unit: "CARTON" },
+  { name: "کیک هویج", en: "Carrot cake", cat: "bakery-snacks", unit: "CARTON" },
+  { name: "کیک پرتقالی", en: "Orange cake", cat: "bakery-snacks", unit: "CARTON" },
+  { name: "کلوچه کشمشی", en: "Raisin cookies", cat: "bakery-snacks", unit: "CARTON" },
+  { name: "پودر کاکائو", en: "Cocoa powder", cat: "chemicals", unit: "KILOGRAM" },
+  { name: "شیر پاستوریزه", en: "Pasteurized milk", cat: "dairy", unit: "LITER" },
 ];
+
+const normalize = (s: string): string =>
+  s
+    .trim()
+    .replace(/[\u064A\u0649]/g, "\u06CC")
+    .replace(/\u0643/g, "\u06A9")
+    .replace(/[\u064B-\u0652\u0670\u0640]/g, "")
+    .replace(/\u200C/g, " ")
+    .replace(/\s+/g, " ")
+    .toLowerCase();
 
 const CAKES = ["کیک یزدی", "کیک شطرنجی", "کیک هویج", "کیک پرتقالی", "کلوچه کشمشی"];
 
@@ -190,19 +200,28 @@ const B: SeedBusiness[] = [
 ];
 
 async function main() {
-  // ── goods (new ones upserted; existing ones like آرد/شکر fetched) ──
+  // ── goods (ensured under catalog categories; آرد/شکر/… come from the main seed) ──
   const goodId = new Map<string, string>();
   for (const g of GOODS) {
-    const row = await prisma.good.upsert({
-      where: { name: g.name },
-      create: g,
-      update: { category: g.category, unit: g.unit },
-    });
+    const cat = await prisma.category.findUnique({ where: { slug: g.cat }, select: { id: true } });
+    if (!cat) throw new Error(`Category «${g.cat}» missing — run the main seed first (npm run seed)`);
+    const searchText = normalize([g.name, g.en].filter(Boolean).join(" "));
+    const data = {
+      categoryId: cat.id,
+      nameFa: g.name,
+      nameEn: g.en ?? null,
+      searchText,
+      unit: g.unit,
+      source: "SEED",
+      status: "ACTIVE",
+    };
+    const existing = await prisma.good.findFirst({ where: { searchText } });
+    const row = existing ? await prisma.good.update({ where: { id: existing.id }, data }) : await prisma.good.create({ data });
     goodId.set(g.name, row.id);
   }
   const existingNames = [...new Set(B.flatMap((b) => b.rows.map((r) => r.good)))].filter((n) => !goodId.has(n));
   for (const name of existingNames) {
-    const row = await prisma.good.findUnique({ where: { name } });
+    const row = await prisma.good.findFirst({ where: { nameFa: name } });
     if (!row) throw new Error(`Good «${name}» is missing from the catalog — run the main seed first`);
     goodId.set(name, row.id);
   }
@@ -226,22 +245,26 @@ async function main() {
         city: b.city,
         province: provinceOf(b.city),
         country: "IR",
+        currency: "IRR",
         phone: b.phone,
         ownerId: user.id,
       },
-      update: { city: b.city, province: provinceOf(b.city), ownerId: user.id },
+      update: { city: b.city, province: provinceOf(b.city), ownerId: user.id, currency: "IRR" },
     });
 
     for (const row of b.rows) {
       const gid = goodId.get(row.good) as string;
+      // demo numbers were Toman → RIAL = ×10 (smallest unit of IRR)
+      const x10 = (v: number) => v * 10;
       const data =
         row.mode === "SELL"
-          ? { mode: "SELL", price: row.sell!.price, stock: row.sell!.stock, minOrder: row.sell!.minOrder, volume: null, frequency: null }
+          ? { mode: "SELL", priceMinor: x10(row.sell!.price), currency: "IRR", stock: row.sell!.stock, minOrder: row.sell!.minOrder, volume: null, frequency: null }
           : row.mode === "BUY"
-            ? { mode: "BUY", price: null, stock: null, minOrder: null, volume: row.buy!.volume, frequency: row.buy!.frequency }
+            ? { mode: "BUY", priceMinor: null, currency: null, stock: null, minOrder: null, volume: row.buy!.volume, frequency: row.buy!.frequency }
             : {
                 mode: "BOTH",
-                price: row.sell!.price,
+                priceMinor: x10(row.sell!.price),
+                currency: "IRR",
                 stock: row.sell!.stock,
                 minOrder: row.sell!.minOrder,
                 volume: row.buy!.volume,

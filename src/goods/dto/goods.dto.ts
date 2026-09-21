@@ -1,20 +1,35 @@
 import { Type } from "class-transformer";
-import { IsIn, IsInt, IsNumber, IsOptional, IsString, Matches, Max, MaxLength, Min, MinLength } from "class-validator";
+import {
+  ArrayMaxSize,
+  IsArray,
+  IsIn,
+  IsInt,
+  IsNumber,
+  IsObject,
+  IsOptional,
+  IsString,
+  Max,
+  MaxLength,
+  Min,
+  MinLength,
+} from "class-validator";
 
 export const TRADE_MODES = ["SELL", "BUY", "BOTH"] as const;
 export const FREQUENCIES = ["WEEKLY", "MONTHLY", "OCCASIONAL"] as const;
 
 /** GET /goods/getGoods — reference catalog query (cached, cursor-paginated). */
 export class GetGoodsQueryDto {
+  /** free-text search across Persian/English names + aliases (normalized) */
   @IsOptional()
   @IsString()
   @MaxLength(60)
   q?: string;
 
+  /** browse by category node (leaf or mid-level) */
   @IsOptional()
   @IsString()
   @MaxLength(40)
-  category?: string;
+  categoryId?: string;
 
   @IsOptional()
   @IsString()
@@ -29,11 +44,49 @@ export class GetGoodsQueryDto {
   limit?: number;
 }
 
+/** POST /goods/createGood — user-created reference good (hidden catalog growth). */
+export class CreateGoodDto {
+  /** the name the user types — any language, becomes nameFa + searchText */
+  @IsString()
+  @MinLength(2)
+  @MaxLength(80)
+  name: string;
+
+  @IsString()
+  @MaxLength(40)
+  categoryId: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(80)
+  nameEn?: string;
+
+  @IsOptional()
+  @IsArray()
+  @ArrayMaxSize(6)
+  @IsString({ each: true })
+  @MaxLength(40, { each: true })
+  aliases?: string[];
+
+  @IsString()
+  @IsIn(["KILOGRAM", "TON", "CARTON", "SACK", "PIECE", "LITER", "BRANCH", "METER", "GRAM", "SERVICE"])
+  unit: string;
+}
+
+/** GET /goods/getBrands — brand suggestions for the listing form. */
+export class GetBrandsQueryDto {
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  q?: string;
+}
+
+/** Sell-side spec — price in the SMALLEST currency unit (integer, exact). */
 export class SellSpecDto {
-  @IsNumber()
+  @IsInt()
   @Min(1)
   @Max(1e12)
-  price: number;
+  priceMinor: number;
 
   @IsInt()
   @Min(0)

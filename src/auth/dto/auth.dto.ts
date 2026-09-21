@@ -1,4 +1,4 @@
-import { IsString, Matches, MaxLength, MinLength } from "class-validator";
+import { IsOptional, IsString, Matches, MaxLength, MinLength } from "class-validator";
 
 /**
  * Mobile number as dialled — several formats accepted here
@@ -21,6 +21,12 @@ export class RegisterUserDto {
   @MinLength(6)
   @MaxLength(72)
   password: string;
+
+  /** country chosen at signup → default catalog currency (ISO 3166-1 alpha-2) */
+  @IsOptional()
+  @IsString()
+  @MaxLength(2)
+  country?: string;
 }
 
 export class LoginUserDto {

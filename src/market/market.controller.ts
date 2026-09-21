@@ -37,9 +37,18 @@ const OFFER_INCLUDE = {
   listing: {
     select: {
       id: true,
-      price: true,
+      priceMinor: true,
+      currency: true,
       minOrder: true,
-      good: { select: { id: true, name: true, category: true, unit: true } },
+      good: {
+        select: {
+          id: true,
+          nameFa: true,
+          nameEn: true,
+          unit: true,
+          category: { select: { slug: true, nameFa: true, nameEn: true } },
+        },
+      },
     },
   },
   seller: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
@@ -49,8 +58,17 @@ const INQUIRY_INCLUDE = {
   listing: {
     select: {
       id: true,
-      price: true,
-      good: { select: { id: true, name: true, category: true, unit: true } },
+      priceMinor: true,
+      currency: true,
+      good: {
+        select: {
+          id: true,
+          nameFa: true,
+          nameEn: true,
+          unit: true,
+          category: { select: { slug: true, nameFa: true, nameEn: true } },
+        },
+      },
     },
   },
   buyer: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
@@ -60,13 +78,22 @@ const INQUIRY_INCLUDE = {
 const HOME_FEED_SELECT = {
   id: true,
   mode: true,
-  price: true,
+  priceMinor: true,
+  currency: true,
   stock: true,
   minOrder: true,
   volume: true,
   frequency: true,
   updatedAt: true,
-  good: { select: { id: true, name: true, category: true, unit: true } },
+  good: {
+    select: {
+      id: true,
+      nameFa: true,
+      nameEn: true,
+      unit: true,
+      category: { select: { slug: true, nameFa: true, nameEn: true } },
+    },
+  },
   business: {
     select: {
       id: true,
@@ -156,7 +183,8 @@ export class MarketController {
               buyerId: business.id,
               sellerId: m.sellerId,
               listingId: m.listingId,
-              price: m.price,
+              priceMinor: m.priceMinor,
+              currency: m.currency ?? "IRR",
               minOrder: m.minOrder,
               score: m.score,
               isSpecial: m.isSpecial,
@@ -201,7 +229,7 @@ export class MarketController {
     if (!isObjectId(body.inquiryId)) throw AppError.notFound("Inquiry not found");
     const inquiry = await this.prisma.inquiry.findUnique({
       where: { id: body.inquiryId },
-      include: { listing: { select: { minOrder: true, price: true } } },
+      include: { listing: { select: { minOrder: true, priceMinor: true, currency: true } } },
     });
     if (!inquiry) throw AppError.notFound("Inquiry not found");
     await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
@@ -211,7 +239,8 @@ export class MarketController {
         buyerId: inquiry.buyerId,
         sellerId: inquiry.sellerId,
         listingId: inquiry.listingId,
-        price: body.price,
+        priceMinor: body.priceMinor,
+        currency: inquiry.listing.currency ?? "IRR",
         minOrder: inquiry.listing.minOrder ?? 0,
         score: 0, // manual answer — no engine score
         isSpecial: false,
@@ -353,17 +382,26 @@ export class MarketController {
           where: {
             businessId: { in: follows.map((f) => f.supplierId) },
             mode: { in: ["SELL", "BOTH"] },
-            price: { not: null },
+            priceMinor: { not: null },
           },
           select: {
             id: true,
-            price: true,
+            priceMinor: true,
+            currency: true,
             stock: true,
             minOrder: true,
             updatedAt: true,
-            good: { select: { id: true, name: true, category: true, unit: true } },
+            good: {
+              select: {
+                id: true,
+                nameFa: true,
+                nameEn: true,
+                unit: true,
+                category: { select: { slug: true, nameFa: true, nameEn: true } },
+              },
+            },
             business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
-            priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldPrice: true, newPrice: true, createdAt: true } },
+            priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldMinor: true, newMinor: true, createdAt: true } },
           },
           orderBy: { updatedAt: "desc" },
           take: 200,

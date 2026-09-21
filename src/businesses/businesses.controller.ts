@@ -20,27 +20,48 @@ import type { Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto } from "./dto/business.dto";
+import { currencyOfCountry } from "../common/catalog/catalog";
 
 const LISTING_SELECT = {
   id: true,
   mode: true,
-  price: true,
+  priceMinor: true,
+  currency: true,
+  attrs: true,
   stock: true,
   minOrder: true,
   volume: true,
   frequency: true,
-  good: { select: { id: true, name: true, category: true, unit: true } },
+  brand: { select: { id: true, name: true } },
+  good: {
+    select: {
+      id: true,
+      nameFa: true,
+      nameEn: true,
+      unit: true,
+      category: { select: { slug: true, nameFa: true, nameEn: true } },
+    },
+  },
 } as const;
 
 type ListingDtoT = {
   id: string;
   mode: string;
-  price: number | null;
+  priceMinor: number | null;
+  currency: string | null;
+  attrs: unknown;
   stock: number | null;
   minOrder: number | null;
   volume: number | null;
   frequency: string | null;
-  good: { id: string; name: string; category: string; unit: string };
+  brand: { id: string; name: string } | null;
+  good: {
+    id: string;
+    nameFa: string;
+    nameEn: string | null;
+    unit: string;
+    category: { slug: string; nameFa: string; nameEn: string };
+  };
 };
 
 function invalidateBusiness(cache: CacheService, businessId: string, slug?: string): void {
@@ -73,6 +94,8 @@ export class BusinessesController {
         name: true,
         activityType: true,
         city: true,
+        country: true,
+        currency: true,
         isVerified: true,
         _count: { select: { listings: true } },
       },
@@ -89,13 +112,20 @@ export class BusinessesController {
     @CurrentLocale() locale: Locale
   ) {
     const slug = await uniqueSlug(this.prisma, makeSlug(body.name), locale);
+    // catalog currency = the country the owner chose at signup
+    const owner = await this.prisma.user.findUnique({
+      where: { id: user.id },
+      select: { country: true },
+    });
+    const country = owner?.country ?? "IR";
     const business = await this.prisma.business.create({
       data: {
         slug,
         name: body.name.trim(),
         city: body.city.trim(),
         province: provinceOf(body.city.trim()),
-        country: "IR",
+        country,
+        currency: currencyOfCountry(country),
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
         ownerId: user.id,
       },
@@ -123,6 +153,8 @@ export class BusinessesController {
             name: true,
             activityType: true,
             city: true,
+            country: true,
+            currency: true,
             isVerified: true,
             isDemo: true,
             _count: { select: { followers: true, following: true } },
@@ -248,18 +280,27 @@ export class BusinessesController {
     const sellSide = query.mode !== "BUY";
     const rows = await this.prisma.listing.findMany({
       where: sellSide
-        ? { mode: { in: ["SELL", "BOTH"] }, price: { not: null } }
+        ? { mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } }
         : { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
       select: {
         id: true,
         mode: true,
-        price: true,
+        priceMinor: true,
+        currency: true,
         stock: true,
         minOrder: true,
         volume: true,
         frequency: true,
         updatedAt: true,
-        good: { select: { id: true, name: true, category: true, unit: true } },
+        good: {
+          select: {
+            id: true,
+            nameFa: true,
+            nameEn: true,
+            unit: true,
+            category: { select: { slug: true, nameFa: true, nameEn: true } },
+          },
+        },
         business: {
           select: {
             id: true,

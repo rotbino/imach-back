@@ -16,7 +16,8 @@ export interface SupplierMatch {
   sellerCity: string;
   sellerVerified: boolean;
   listingId: string;
-  price: number;
+  priceMinor: number;
+  currency: string | null;
   minOrder: number;
   score: number;
   isSpecial: boolean;
@@ -47,7 +48,8 @@ export interface SupplierSuggestion {
   goodId: string;
   goodName: string;
   unit: string;
-  price: number;
+  priceMinor: number;
+  currency: string | null;
   minOrder: number;
   score: number;
 }
@@ -56,13 +58,14 @@ export interface SupplierSuggestion {
 export interface RankedRow {
   id: string;
   mode: string;
-  price: number | null;
+  priceMinor: number | null;
+  currency: string | null;
   stock: number | null;
   minOrder: number | null;
   volume: number | null;
   frequency: string | null;
   updatedAt: Date;
-  good: { id: string; name: string; category: string; unit: string };
+  good: { id: string; nameFa: string; nameEn: string | null; unit: string; category: { nameFa: string; nameEn: string } };
   business: {
     id: string;
     slug: string;
@@ -77,7 +80,8 @@ export interface RankedRow {
 
 const SELLER_SELECT = {
   id: true,
-  price: true,
+  priceMinor: true,
+  currency: true,
   minOrder: true,
   business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
 } as const;
@@ -85,13 +89,22 @@ const SELLER_SELECT = {
 const RANK_SELECT = {
   id: true,
   mode: true,
-  price: true,
+  priceMinor: true,
+  currency: true,
   stock: true,
   minOrder: true,
   volume: true,
   frequency: true,
   updatedAt: true,
-  good: { select: { id: true, name: true, category: true, unit: true } },
+  good: {
+    select: {
+      id: true,
+      nameFa: true,
+      nameEn: true,
+      unit: true,
+      category: { select: { nameFa: true, nameEn: true } },
+    },
+  },
   business: {
     select: {
       id: true,
@@ -142,17 +155,17 @@ function proxPoints(a: string, b: string, same: number, near: number, far: numbe
 }
 
 /** Price-rank points (0–18) inside a same-good candidate group — cheaper is better. */
-function priceRanks(rows: { id: string; price: number | null; goodId: string }[]): Map<string, number> {
+function priceRanks(rows: { id: string; priceMinor: number | null; goodId: string }[]): Map<string, number> {
   const pts = new Map<string, number>();
-  const byGood = new Map<string, { id: string; price: number }[]>();
+  const byGood = new Map<string, { id: string; priceMinor: number }[]>();
   for (const r of rows) {
-    if (r.price === null) continue;
+    if (r.priceMinor === null) continue;
     const arr = byGood.get(r.goodId) ?? [];
-    arr.push({ id: r.id, price: r.price });
+    arr.push({ id: r.id, priceMinor: r.priceMinor });
     byGood.set(r.goodId, arr);
   }
   for (const group of byGood.values()) {
-    group.sort((a, b) => a.price - b.price);
+    group.sort((a, b) => a.priceMinor - b.priceMinor);
     const n = group.length;
     group.forEach((g, i) => pts.set(g.id, n === 1 ? 9 : Math.round(18 * (1 - i / (n - 1)))));
   }
@@ -176,7 +189,7 @@ export class MatchingService {
         goodId,
         businessId: { not: buyerBusinessId },
         mode: { in: ["SELL", "BOTH"] },
-        price: { not: null },
+        priceMinor: { not: null },
       },
       select: SELLER_SELECT,
       orderBy: { updatedAt: "desc" },
@@ -186,7 +199,7 @@ export class MatchingService {
     return rows
       .map((row) => {
         const b = row.business;
-        const price = row.price as number;
+        const priceMinor = row.priceMinor as number;
         const minOrder = row.minOrder ?? 0;
         const score = matchScore(buyerCity, b.city, volume, minOrder);
         return {
@@ -196,20 +209,21 @@ export class MatchingService {
           sellerCity: b.city,
           sellerVerified: b.isVerified,
           listingId: row.id,
-          price,
+          priceMinor,
+          currency: row.currency,
           minOrder,
           score,
           isSpecial: score >= 90,
         };
       })
-      .sort((a, b) => b.score - a.score || a.price - b.price)
+      .sort((a, b) => b.score - a.score || a.priceMinor - b.priceMinor)
       .slice(0, limit);
   }
 
   /** Buyers looking for goods I sell — the buy-tab strip. */
   async buyersForSeller(sellerBusinessId: string, sellerCity: string, limit = 12): Promise<BuyerMatch[]> {
     const mySellListings = await this.prisma.listing.findMany({
-      where: { businessId: sellerBusinessId, mode: { in: ["SELL", "BOTH"] }, price: { not: null } },
+      where: { businessId: sellerBusinessId, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } },
       select: { goodId: true, minOrder: true, stock: true },
     });
     if (mySellListings.length === 0) return [];
@@ -229,7 +243,7 @@ export class MatchingService {
         volume: true,
         frequency: true,
         updatedAt: true,
-        good: { select: { id: true, name: true, unit: true } },
+        good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
         business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
       },
       orderBy: { updatedAt: "desc" },
@@ -253,7 +267,7 @@ export class MatchingService {
           buyerVerified: b.isVerified,
           buyListingId: row.id,
           goodId: row.good.id,
-          goodName: row.good.name,
+          goodName: row.good.nameFa,
           unit: row.good.unit,
           volume,
           frequency: row.frequency as string,
@@ -288,15 +302,16 @@ export class MatchingService {
         goodId: { in: goodIds },
         businessId: { not: buyerBusinessId },
         mode: { in: ["SELL", "BOTH"] },
-        price: { not: null },
+        priceMinor: { not: null },
       },
       select: {
         id: true,
-        price: true,
+        priceMinor: true,
+        currency: true,
         minOrder: true,
         stock: true,
         updatedAt: true,
-        good: { select: { id: true, name: true, unit: true } },
+        good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
         business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
       },
       orderBy: { updatedAt: "desc" },
@@ -305,7 +320,7 @@ export class MatchingService {
 
     // price rank inside each same-good group (cheapest gets the boost)
     const pricePts = priceRanks(
-      sellRows.map((r) => ({ id: r.id, price: r.price, goodId: r.good.id }))
+      sellRows.map((r) => ({ id: r.id, priceMinor: r.priceMinor, goodId: r.good.id }))
     );
 
     return sellRows
@@ -323,14 +338,15 @@ export class MatchingService {
           supplierVerified: b.isVerified,
           listingId: row.id,
           goodId: row.good.id,
-          goodName: row.good.name,
+          goodName: row.good.nameFa,
           unit: row.good.unit,
-          price: row.price as number,
+          priceMinor: row.priceMinor as number,
+          currency: row.currency,
           minOrder: row.minOrder ?? 0,
           score: Math.max(42, Math.min(98, Math.round(score))),
         };
       })
-      .sort((a, b) => b.score - a.score || a.price - b.price)
+      .sort((a, b) => b.score - a.score || a.priceMinor - b.priceMinor)
       .slice(0, limit);
   }
 
@@ -422,7 +438,7 @@ export class MatchingService {
       this.prisma.listing.findMany({
         where: {
           mode: { in: ["SELL", "BOTH"] },
-          price: { not: null },
+          priceMinor: { not: null },
           businessId: { not: businessId },
         },
         select: RANK_SELECT,
@@ -431,7 +447,7 @@ export class MatchingService {
       }),
     ]);
 
-    const pricePts = priceRanks(rows.map((r) => ({ id: r.id, price: r.price, goodId: r.good.id })));
+    const pricePts = priceRanks(rows.map((r) => ({ id: r.id, priceMinor: r.priceMinor, goodId: r.good.id })));
     let ranked: RankedRow[];
 
     if (myBuy.length > 0) {
