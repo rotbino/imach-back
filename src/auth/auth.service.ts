@@ -3,7 +3,7 @@ import { JwtService } from "@nestjs/jwt";
 import { createHash, randomBytes } from "node:crypto";
 import type { FastifyReply, FastifyRequest } from "fastify";
 import { env, isProd, jwtExpiresInSeconds } from "../common/config/env";
-import { isSupportedCountry } from "../common/catalog/catalog";
+import { dialOfCountry, isSupportedCountry } from "../common/catalog/catalog";
 import type { AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
@@ -12,16 +12,24 @@ import { PrismaService } from "../common/prisma/prisma.module";
 const REFRESH_COOKIE = "imach_rt";
 const sha256 = (v: string) => createHash("sha256").update(v).digest("hex");
 
-/** Normalize any dialled format to the canonical 09xxxxxxxxx. */
-export function normalizePhone(raw: string): string {
-  let p = raw.replace(/[\s\-()]/g, "").replace(/^\+/, "");
-  if (p.startsWith("0098")) p = `0${p.slice(4)}`;
-  else if (p.startsWith("98") && p.length === 12) p = `0${p.slice(2)}`;
-  else if (p.length === 10 && p.startsWith("9")) p = `0${p}`;
-  return p;
+/**
+ * Normalize any dialled format to the canonical INTERNATIONAL mobile identity:
+ * dial code + national number, WITHOUT the leading trunk 0 — e.g. Iran
+ * 0912…, 912…, +98912…, 0098912… all become 98912….
+ * The dial comes from the country the user picked in the form (VPN users may
+ * override the guessed country), so the identity is unique world-wide.
+ * Returns null when the number cannot be rescued.
+ */
+export function normalizeIntlPhone(raw: string, country: string): string | null {
+  const dial = dialOfCountry(country);
+  let d = raw.replace(/\D/g, "");
+  if (d.startsWith("00")) d = d.slice(2); // international prefix
+  if (d.startsWith(dial)) d = d.slice(dial.length); // user pasted the full international number
+  while (d.startsWith("0")) d = d.slice(1); // national trunk prefix — never stored
+  const valid = country === "IR" ? /^9\d{9}$/.test(d) : /^\d{7,12}$/.test(d);
+  if (!valid) return null;
+  return dial + d;
 }
-
-const isCanonicalPhone = (p: string): boolean => /^09\d{9}$/.test(p);
 
 const BUSINESS_SUMMARY_SELECT = {
   id: true,
@@ -40,6 +48,7 @@ export interface PublicUser {
   phone: string;
   role: string;
   country: string;
+  language: string;
 }
 
 const toPublicUser = (u: {
@@ -48,6 +57,7 @@ const toPublicUser = (u: {
   phone: string;
   role: string;
   country: string;
+  language: string;
 }): PublicUser => u;
 
 @Injectable()
@@ -90,12 +100,14 @@ export class AuthService {
   }
 
   async registerUser(
-    body: { name: string; phone: string; password: string; country?: string; ref?: string },
+    body: { name: string; phone: string; password: string; country?: string; language?: string; ref?: string },
     reply: FastifyReply,
     locale: Locale
   ) {
-    const phone = normalizePhone(body.phone);
-    if (!isCanonicalPhone(phone)) {
+    // signup country drives the default catalog currency AND the phone dial code
+    const country = body.country && isSupportedCountry(body.country) ? body.country : "IR";
+    const phone = normalizeIntlPhone(body.phone, country);
+    if (!phone) {
       throw AppError.badRequest(
         t(locale, "auth.invalidPhone", "شماره موبایل معتبر نیست"),
         "INVALID_PHONE"
@@ -105,9 +117,8 @@ export class AuthService {
     if (exists) {
       throw AppError.conflict(t(locale, "auth.phoneTaken", "این شماره موبایل قبلاً ثبت شده است"), "PHONE_TAKEN");
     }
-
-    // signup country drives the default catalog currency of future businesses
-    const country = body.country && isSupportedCountry(body.country) ? body.country : "IR";
+    // user language is stored for future multilingual sessions (per-country default: fa)
+    const language = (body.language ?? "").trim().toLowerCase().slice(0, 8) || "fa";
 
     const bcrypt = await import("bcryptjs");
     const user = await this.prisma.user.create({
@@ -116,6 +127,7 @@ export class AuthService {
         phone,
         passwordHash: await bcrypt.hash(body.password, 10),
         country,
+        language,
       },
     });
 
@@ -180,8 +192,16 @@ export class AuthService {
     return { accessToken, user: publicUser, businesses: await this.withBusinesses(publicUser) };
   }
 
-  async loginUser(body: { phone: string; password: string }, reply: FastifyReply, locale: Locale) {
-    const phone = normalizePhone(body.phone);
+  async loginUser(
+    body: { phone: string; password: string; country?: string },
+    reply: FastifyReply,
+    locale: Locale
+  ) {
+    const country = body.country && isSupportedCountry(body.country) ? body.country : "IR";
+    const phone = normalizeIntlPhone(body.phone, country);
+    if (!phone) {
+      throw AppError.unauthorized(t(locale, "auth.invalidCredentials", "شماره موبایل یا رمز عبور اشتباه است"));
+    }
     const user = await this.prisma.user.findUnique({ where: { phone } });
     if (!user) {
       throw AppError.unauthorized(t(locale, "auth.invalidCredentials", "شماره موبایل یا رمز عبور اشتباه است"));

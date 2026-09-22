@@ -31,11 +31,18 @@ datasource db {
 
 model User {
   id            String         @id @default(auto()) @map("_id") @db.ObjectId
-  phone         String         @unique // identity: Iranian mobile number
+  /// Unique international mobile identity: dial code + national number
+  /// WITHOUT the leading trunk 0 — e.g. Iran 0912… → 98912….
+  /// The dial comes from the signup country, so two countries can never
+  /// collide on the same local number.
+  phone         String         @unique
   name          String
   passwordHash  String
   role          String         @default("MEMBER") // MEMBER | ADMIN
-  country       String         @default("IR") // chosen at signup → default business currency
+  country       String         @default("IR") // chosen at signup → default business currency + dial code
+  /// UI language chosen at signup (BCP-47 base: fa/en/ar/…) — restored on
+  /// future logins once the product goes multilingual.
+  language      String         @default("fa")
   businesses    Business[]
   refreshTokens RefreshToken[]
   /// Basic-data rows this user registered (goods, brands) — the audit trail of

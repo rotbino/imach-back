@@ -2,6 +2,7 @@ import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, UseGuards } f
 import { AppError } from "../common/errors/app-error";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { dialOfCountry } from "../common/catalog/catalog";
 import { PrismaService } from "../common/prisma/prisma.module";
 import type { Locale } from "../common/i18n/i18n";
 import { SyncContactsDto } from "./dto/contacts.dto";
@@ -10,16 +11,19 @@ import { SyncContactsDto } from "./dto/contacts.dto";
 const isObjectId = (v: string | undefined): v is string => /^[a-f\d]{24}$/i.test(v ?? "");
 
 /**
- * نرمال‌سازی موبایل ایرانی — همه‌ی صورت‌های رایج به 09xxxxxxxxx:
- * 09123456789 · 9123456789 · +989123456789 · 989123456789 · 00989123456789
+ * نرمال‌سازی موبایل مخاطب به شکل بین‌المللی ذخیره‌شده برای کاربران:
+ * کد کشور صاحب دفترچه + شماره بدون صفر اول (ایران: 0912… → 98912…).
+ * صفرهای نخست (ترانک) و پیشوند ۰۰/+ و کد کشور چسبیده برداشته می‌شوند؛
  * خروجی null یعنی قابل نجات نیست و سمت کلاینت نادیده گرفته می‌شود.
  */
-export function normalizeIrMobile(raw: string): string | null {
+export function normalizeContactPhone(raw: string, ownerCountry: string): string | null {
+  const dial = dialOfCountry(ownerCountry);
   let d = raw.replace(/\D/g, "");
-  if (d.startsWith("0098")) d = d.slice(4);
-  else if (d.startsWith("98") && d.length === 12) d = d.slice(2);
-  if (d.startsWith("9") && d.length === 10) d = `0${d}`;
-  return /^09\d{9}$/.test(d) ? d : null;
+  if (d.startsWith("00")) d = d.slice(2);
+  if (d.startsWith(dial)) d = d.slice(dial.length);
+  while (d.startsWith("0")) d = d.slice(1);
+  const valid = ownerCountry === "IR" ? /^9\d{9}$/.test(d) : /^\d{7,12}$/.test(d);
+  return valid ? dial + d : null;
 }
 
 /**
@@ -44,9 +48,16 @@ export class ContactsController {
   @Post("sync")
   @HttpCode(HttpStatus.OK)
   async sync(@Body() body: SyncContactsDto, @CurrentUser() user: AuthUser) {
+    // dial context = country of the OWNER (the device the contacts came from)
+    const owner = await this.prisma.user.findUnique({
+      where: { id: user.id },
+      select: { country: true },
+    });
+    const ownerCountry = owner?.country ?? "IR";
+
     const seen = new Map<string, string>();
     for (const item of body.contacts) {
-      const phone = normalizeIrMobile(item.phone ?? "");
+      const phone = normalizeContactPhone(item.phone ?? "", ownerCountry);
       if (!phone) continue;
       const name = (item.name ?? "").trim().slice(0, 80) || phone;
       if (!seen.has(phone)) seen.set(phone, name);
