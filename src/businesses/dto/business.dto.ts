@@ -1,4 +1,14 @@
-import { IsIn, IsOptional, IsString, MaxLength, MinLength } from "class-validator";
+import {
+  IsIn,
+  IsNumber,
+  IsOptional,
+  IsString,
+  MaxLength,
+  MinLength,
+  Max,
+  Min,
+} from "class-validator";
+import { Type } from "class-transformer";
 
 /**
  * نوع فعالیت کسب‌وکار — ۱۰ مقدار دقیق.
@@ -45,6 +55,22 @@ export class EditBusinessDto {
   @IsOptional()
   @IsIn(ACTIVITY_TYPES)
   activityType?: string | null;
+
+  /** لوکیشن دقیق — اختیاری و با رضایت کاربر؛ مبنای لایه‌ی فاصله‌ی تطابق.
+   *  null = پاک کردن؛ نبودِ فیلد = بدون تغییر. */
+  @IsOptional()
+  @Type(() => Number)
+  @IsNumber()
+  @Min(-90)
+  @Max(90)
+  lat?: number | null;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsNumber()
+  @Min(-180)
+  @Max(180)
+  lng?: number | null;
 }
 
 /** اکسپلور — سمت بازار (فروش/خرید) و شهرِ ترجیحی برای چیدمان */

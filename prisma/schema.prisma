@@ -222,6 +222,14 @@ model Business {
   phone        String?
   isVerified   Boolean @default(false)
   isDemo       Boolean @default(false)
+
+  /// Precise geo point of the business — user-consented, optional, set from
+  /// the catalog settings map (LocationPicker). Feeds the matcher's distance
+  /// tiering later (city → province → exact point). Never rendered publicly
+  /// as an exact pin; the public catalog shows only the city.
+  lat Float?
+  lng Float?
+
   ownerId      String? @db.ObjectId
   owner        User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 

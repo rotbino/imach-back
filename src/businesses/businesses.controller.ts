@@ -95,6 +95,9 @@ export class BusinessesController {
         country: true,
         currency: true,
         isVerified: true,
+        // لوکیشن دقیق فقط به صاحبش برمی‌گردد — endpoint عمومی هرگز
+        lat: true,
+        lng: true,
         _count: { select: { listings: true } },
       },
       orderBy: { createdAt: "asc" },
@@ -250,6 +253,9 @@ export class BusinessesController {
         ...(body.name ? { name: body.name.trim() } : {}),
         ...(body.city ? { city: body.city.trim(), province: provinceOf(body.city.trim()) } : {}),
         ...(body.activityType !== undefined ? { activityType: body.activityType } : {}),
+        // لوکیشن دقیق: null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر
+        ...(body.lat !== undefined ? { lat: body.lat } : {}),
+        ...(body.lng !== undefined ? { lng: body.lng } : {}),
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data
