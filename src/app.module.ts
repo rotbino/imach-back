@@ -7,6 +7,7 @@ import { GoodsModule } from "./goods/goods.module";
 import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
 import { MarketModule } from "./market/market.module";
+import { NotificationsModule } from "./notifications/notifications.module";
 import { ContactsModule } from "./contacts/contacts.module";
 import { AdminModule } from "./admin/admin.module";
 
@@ -24,6 +25,7 @@ import { AdminModule } from "./admin/admin.module";
     BusinessesModule,
     ListingsModule,
     MarketModule,
+    NotificationsModule,
     ContactsModule,
     AdminModule,
   ],

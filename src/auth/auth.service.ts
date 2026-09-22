@@ -148,6 +148,30 @@ export class AuthService {
     }
 
     const publicUser = toPublicUser(user);
+
+    // ── حلقه‌ی گیت مخاطبین بسته می‌شود: هر کسی که این شماره را در دفترچه‌اش
+    // سپرده بود، همین حالا می‌فهمد صاحبش عضو iMach شد — بازگشت به اپ بدون
+    // هیچ پیامکی. مستقیم با prisma (نه NotificationsService) تا چرخه‌ی
+    // ماژولی درست نشود؛ اعلان best-effort است و ثبت‌نام هرگز نمی‌شکند.
+    try {
+      const contactOwners = await this.prisma.contact.findMany({
+        where: { phone, userId: { not: user.id } },
+        select: { userId: true, name: true },
+      });
+      if (contactOwners.length > 0) {
+        await this.prisma.notification.createMany({
+          data: contactOwners.map((c) => ({
+            userId: c.userId,
+            type: "CONTACT_JOINED",
+            actorId: user.id,
+            actorName: body.name.trim() || c.name,
+          })),
+        });
+      }
+    } catch {
+      /* notification is best-effort — signup must never break */
+    }
+
     const accessToken = await this.issueSession(reply, {
       id: user.id,
       phone: user.phone,

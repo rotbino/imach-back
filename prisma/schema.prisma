@@ -56,6 +56,8 @@ model User {
   /// private network, stored for the growth engine (who is on iMach, who
   /// was invited, when).
   contacts      Contact[]
+  /// In-app notification feed (bell) — follow / offer / quote / contact-joined
+  notifications Notification[]
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 
@@ -79,6 +81,36 @@ model Contact {
 
   @@unique([userId, phone])
   @@index([phone])
+}
+
+/// In-app notification — one row per event, owned by the receiving user.
+/// Text is NOT stored: the client renders the fa sentence per `type`, so a
+/// row is just (type, actor, optional good) + read flag. Actors are
+/// denormalized (name/slug snapshot) so renaming a business never rewrites
+/// history. Writes go through NotificationsService — errors are swallowed:
+/// a notification must never break follow / offer / signup flows.
+/// Types (validated at the API boundary, MongoDB has no enums):
+///   FOLLOW_SUPPLIER — a buyer followed my SELL page (مشتری جدید)
+///   FOLLOW_BUYER    — a supplier followed my BUY page (تامین‌کننده آمد)
+///   OFFER           — a direct offer landed on my buy request
+///   QUOTE           — the matching engine routed a price inquiry to me
+///   CONTACT_JOINED  — a phone from my contacts gate just signed up
+model Notification {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  type      String
+  /// Actor business/user id — null for system-generated rows
+  actorId   String?  @db.ObjectId
+  actorName String?
+  actorSlug String?
+  /// Context label (good name for offer/quote rows)
+  good      String?
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([userId, read])
 }
 
 /// Rotating refresh tokens — only the SHA-256 hash is stored, so a DB leak

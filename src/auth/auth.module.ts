@@ -5,6 +5,10 @@ import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
 import { JwtAuthGuard } from "./jwt-auth.guard";
 
+// توجه: AuthModule عمداً NotificationsModule را import نمی‌کند —
+// NotificationsModule برای گاردش AuthModule را می‌خواهد و چرخه ممنوع.
+// اعلان «مخاطب عضو شد» در AuthService مستقیم با prisma ساخته می‌شود.
+
 @Module({
   imports: [
     JwtModule.register({

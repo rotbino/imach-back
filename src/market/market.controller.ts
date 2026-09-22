@@ -21,6 +21,7 @@ import { cursorBefore, decodeCursor, toPage } from "../common/pagination/cursor"
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
+import { NotificationsService } from "../notifications/notifications.service";
 import { MatchingService } from "./matching.service";
 import {
   BusinessIdQueryDto,
@@ -86,7 +87,8 @@ export class MarketController {
   constructor(
     private readonly prisma: PrismaService,
     private readonly cache: CacheService,
-    private readonly matching: MatchingService
+    private readonly matching: MatchingService,
+    private readonly notifications: NotificationsService
   ) {}
 
   private invalidateBuyerSide(businessId: string): void {
@@ -233,6 +235,24 @@ export class MarketController {
     });
 
     this.invalidateBuyerSide(business.id);
+
+    // استعلام به تامین‌کننده‌های منطبق رسید — هر مالک یک اعلان (dedupe با pushMany)
+    const sellerIds = [...new Set(matches.map((m) => m.sellerId))];
+    const sellers = await this.prisma.business.findMany({
+      where: { id: { in: sellerIds }, ownerId: { not: null } },
+      select: { id: true, ownerId: true },
+    });
+    await this.notifications.pushMany(
+      sellers.map((s) => ({
+        userId: s.ownerId as string,
+        type: "QUOTE" as const,
+        actorId: business.id,
+        actorName: business.name,
+        actorSlug: business.slug,
+        good: need.good.nameFa,
+      }))
+    );
+
     return { created: created.length, offers: created };
   }
 
@@ -255,17 +275,31 @@ export class MarketController {
     }
     const buyer = await this.prisma.business.findUnique({
       where: { id: body.buyerBusinessId },
-      select: { id: true },
+      select: { id: true, ownerId: true },
     });
     if (!buyer) throw AppError.notFound("Buyer not found");
 
     const followerPageId = await ensurePage(this.prisma, business.id, "SELL");
     const buyerPageId = await ensurePage(this.prisma, body.buyerBusinessId, "BUY");
+    const existed = await this.prisma.follow.findUnique({
+      where: { followerPageId_supplierPageId: { followerPageId, supplierPageId: buyerPageId } },
+      select: { id: true },
+    });
     await this.prisma.follow.upsert({
       where: { followerPageId_supplierPageId: { followerPageId, supplierPageId: buyerPageId } },
       create: { followerPageId, supplierPageId: buyerPageId },
       update: {},
     });
+    // فقط فالوی تازه اعلان دارد — تکرار ساکت می‌ماند
+    if (!existed && buyer.ownerId) {
+      await this.notifications.push({
+        userId: buyer.ownerId,
+        type: "FOLLOW_BUYER",
+        actorId: business.id,
+        actorName: business.name,
+        actorSlug: business.slug,
+      });
+    }
     this.invalidateBuyerSide(body.buyerBusinessId);
     return { ok: true };
   }
@@ -307,7 +341,14 @@ export class MarketController {
 
     const need = await this.prisma.listing.findUnique({
       where: { id: body.buyListingId },
-      select: { id: true, businessId: true, mode: true, volume: true, goodId: true },
+      select: {
+        id: true,
+        businessId: true,
+        mode: true,
+        volume: true,
+        goodId: true,
+        good: { select: { nameFa: true } },
+      },
     });
     if (!need || need.mode === "SELL" || need.volume === null) {
       throw AppError.badRequest("این یک درخواست خرید فعال نیست", "NOT_A_BUY_LISTING");
@@ -339,6 +380,22 @@ export class MarketController {
       },
       include: OFFER_INCLUDE,
     });
+
+    // خریدار باید بداند پیشنهاد تازه نشسته — فوراً، نه دفعه‌ی بعد که پنل را باز کرد
+    const buyerOwner = await this.prisma.business.findUnique({
+      where: { id: need.businessId },
+      select: { ownerId: true },
+    });
+    if (buyerOwner?.ownerId) {
+      await this.notifications.push({
+        userId: buyerOwner.ownerId,
+        type: "OFFER",
+        actorId: business.id,
+        actorName: business.name,
+        actorSlug: business.slug,
+        good: need.good.nameFa,
+      });
+    }
 
     this.invalidateBuyerSide(need.businessId);
     return offer;
@@ -372,7 +429,11 @@ export class MarketController {
     if (!isObjectId(body.inquiryId)) throw AppError.notFound("Inquiry not found");
     const inquiry = await this.prisma.inquiry.findUnique({
       where: { id: body.inquiryId },
-      include: { listing: { select: { minOrder: true, priceMinor: true, currency: true } } },
+      include: {
+        listing: {
+          select: { minOrder: true, priceMinor: true, currency: true, good: { select: { nameFa: true } } },
+        },
+      },
     });
     if (!inquiry) throw AppError.notFound("Inquiry not found");
     await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
@@ -396,6 +457,24 @@ export class MarketController {
       where: { id: inquiry.id },
       data: { status: "ANSWERED", isRead: true },
     });
+
+    // پاسخ قیمت تازه روی استعلام خریدار — اعلان فوری
+    const parties = await this.prisma.business.findMany({
+      where: { id: { in: [inquiry.buyerId, inquiry.sellerId] } },
+      select: { id: true, ownerId: true, name: true, slug: true },
+    });
+    const buyerBiz = parties.find((b) => b.id === inquiry.buyerId);
+    const sellerBiz = parties.find((b) => b.id === inquiry.sellerId);
+    if (buyerBiz?.ownerId) {
+      await this.notifications.push({
+        userId: buyerBiz.ownerId,
+        type: "OFFER",
+        actorId: sellerBiz?.id ?? inquiry.sellerId,
+        actorName: sellerBiz?.name ?? null,
+        actorSlug: sellerBiz?.slug ?? null,
+        good: inquiry.listing.good.nameFa,
+      });
+    }
 
     this.invalidateBuyerSide(inquiry.buyerId);
     this.cache.invalidateTag(`market:inq:${inquiry.sellerId}`);
@@ -530,17 +609,31 @@ export class MarketController {
     }
     const supplier = await this.prisma.business.findUnique({
       where: { id: body.supplierId },
-      select: { id: true },
+      select: { id: true, ownerId: true },
     });
     if (!supplier) throw AppError.notFound("Supplier not found");
 
     const followerPageId = await ensurePage(this.prisma, business.id, "BUY");
     const supplierPageId = await ensurePage(this.prisma, body.supplierId, "SELL");
+    const existed = await this.prisma.follow.findUnique({
+      where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
+      select: { id: true },
+    });
     await this.prisma.follow.upsert({
       where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
       create: { followerPageId, supplierPageId },
       update: {},
     });
+    // فالوی تازه = مشتری جدید — صاحب کاتالوگ باید همین حالا بداند
+    if (!existed && supplier.ownerId) {
+      await this.notifications.push({
+        userId: supplier.ownerId,
+        type: "FOLLOW_SUPPLIER",
+        actorId: business.id,
+        actorName: business.name,
+        actorSlug: business.slug,
+      });
+    }
     this.invalidateBuyerSide(business.id);
     return { ok: true };
   }
