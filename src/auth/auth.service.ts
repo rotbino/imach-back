@@ -8,6 +8,7 @@ import type { AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
+import { PushService } from "../notifications/push.service";
 
 const REFRESH_COOKIE = "imach_rt";
 const sha256 = (v: string) => createHash("sha256").update(v).digest("hex");
@@ -64,7 +65,8 @@ const toPublicUser = (u: {
 export class AuthService {
   constructor(
     private readonly prisma: PrismaService,
-    private readonly jwt: JwtService
+    private readonly jwt: JwtService,
+    private readonly pushService: PushService
   ) {}
 
   private async withBusinesses(user: PublicUser) {
@@ -179,6 +181,19 @@ export class AuthService {
             actorName: body.name.trim() || c.name,
           })),
         });
+        // پوشِ همان اعلان — بهترین‌تلاش؛ ثبت‌نام هرگز نمی‌شکند
+        const actorName = body.name.trim() || contactOwners[0].name;
+        await Promise.allSettled(
+          contactOwners.map((c) =>
+            this.pushService
+              .sendToUser(c.userId, {
+                title: "iMach",
+                body: `${actorName} عضو iMach شد`,
+                url: "/market",
+              })
+              .catch(() => {})
+          )
+        );
       }
     } catch {
       /* notification is best-effort — signup must never break */

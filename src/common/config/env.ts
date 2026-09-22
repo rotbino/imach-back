@@ -48,6 +48,13 @@ export const env = Object.freeze({
   CORS_ORIGINS: process.env.CORS_ORIGINS || "*",
   SWAGGER_ENABLED: bool("SWAGGER_ENABLED", process.env.SWAGGER_ENABLED, true),
   /**
+   * Web Push (VAPID) — استاندارد باز؛ بدون ثبت‌نام گوگل. خالی = پوش خاموش
+   * (بقیه‌ی اپ سالم می‌ماند؛ فقط sendToUser ناپ می‌شود).
+   */
+  VAPID_PUBLIC_KEY: process.env.VAPID_PUBLIC_KEY || "",
+  VAPID_PRIVATE_KEY: process.env.VAPID_PRIVATE_KEY || "",
+  VAPID_SUBJECT: process.env.VAPID_SUBJECT || "mailto:support@imach.ir",
+  /**
    * Growth gate — members a seller must bring via their catalog link before
    * buyer-follow and price-offer unlock in the buyers' bazaar. Nothing in
    * iMach is free of effort: the supplier pays with distribution (خواسته‌ی کاربر).

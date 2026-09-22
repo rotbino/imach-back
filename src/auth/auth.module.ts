@@ -4,10 +4,12 @@ import { env, jwtExpiresInSeconds } from "../common/config/env";
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
 import { JwtAuthGuard } from "./jwt-auth.guard";
+import { PushModule } from "../notifications/push.module";
 
 // توجه: AuthModule عمداً NotificationsModule را import نمی‌کند —
 // NotificationsModule برای گاردش AuthModule را می‌خواهد و چرخه ممنوع.
-// اعلان «مخاطب عضو شد» در AuthService مستقیم با prisma ساخته می‌شود.
+// PushModule برگِ سبک است (هیچ‌چیز را import نمی‌کند) — بدون چرخه وارد می‌شود
+// تا «مخاطب عضو شد» هم پوش بگیرد؛ خودِ ردیف اعلان همان‌طور مستقیم با prisma.
 
 @Module({
   imports: [
@@ -15,6 +17,7 @@ import { JwtAuthGuard } from "./jwt-auth.guard";
       secret: env.JWT_SECRET,
       signOptions: { expiresIn: jwtExpiresInSeconds() },
     }),
+    PushModule,
   ],
   controllers: [AuthController],
   providers: [AuthService, JwtAuthGuard],

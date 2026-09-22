@@ -229,6 +229,9 @@ model Business {
   /// as an exact pin; the public catalog shows only the city.
   lat Float?
   lng Float?
+  /// Textual address — prefilled from reverse-geocode of the pin, but always
+  /// user-editable. This one IS public (shown on the owner's pages).
+  address String?
 
   ownerId      String? @db.ObjectId
   owner        User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
@@ -244,6 +247,22 @@ model Business {
 
   @@index([city])
   @@index([ownerId])
+}
+
+// ─── PushSubscription (Web Push — VAPID) ─────────────────────────────────────
+
+/// Browser push subscription of a USER (not business) — one row per browser.
+/// endpoint is globally unique per subscription; re-subscribe overwrites.
+/// Delivery is best-effort: 404/410 from the push service removes the row.
+model PushSubscription {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  endpoint  String   @unique
+  p256dh    String
+  auth      String
+  createdAt DateTime @default(now())
+
+  @@index([userId])
 }
 
 // ─── Listing (the atomic tradable unit) ──────────────────────────────────────

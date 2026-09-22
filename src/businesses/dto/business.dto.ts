@@ -71,6 +71,13 @@ export class EditBusinessDto {
   @Min(-180)
   @Max(180)
   lng?: number | null;
+
+  /** آدرس متنی — از روی پین پیش‌پر می‌شود ولی همیشه قابل ویرایش است؛
+   *  برخلاف پین، این یکی علنی است. null = پاک کردن. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(300)
+  address?: string | null;
 }
 
 /** اکسپلور — سمت بازار (فروش/خرید) و شهرِ ترجیحی برای چیدمان */

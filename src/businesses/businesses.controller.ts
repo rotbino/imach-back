@@ -98,6 +98,7 @@ export class BusinessesController {
         // لوکیشن دقیق فقط به صاحبش برمی‌گردد — endpoint عمومی هرگز
         lat: true,
         lng: true,
+        address: true,
         _count: { select: { listings: true } },
       },
       orderBy: { createdAt: "asc" },
@@ -256,6 +257,10 @@ export class BusinessesController {
         // لوکیشن دقیق: null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر
         ...(body.lat !== undefined ? { lat: body.lat } : {}),
         ...(body.lng !== undefined ? { lng: body.lng } : {}),
+        // آدرس متنی قابل ویرایش — همراه پین ذخیره می‌شود
+        ...(body.address !== undefined
+          ? { address: body.address ? body.address.trim() : null }
+          : {}),
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data

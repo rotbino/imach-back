@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 import { AuthModule } from "../auth/auth.module";
 import { NotificationsController } from "./notifications.controller";
 import { NotificationsService } from "./notifications.service";
+import { PushModule } from "./push.module";
 
 /**
  * اعلان‌های درون‌برنامه‌ای — Prisma سراسری است؛ AuthModule برای JwtService
@@ -10,7 +11,7 @@ import { NotificationsService } from "./notifications.service";
  *   • AuthService.registerUser → مستقیم با prisma (تا چرخه‌ی ماژولی درست نشود)
  */
 @Module({
-  imports: [AuthModule],
+  imports: [AuthModule, PushModule],
   controllers: [NotificationsController],
   providers: [NotificationsService],
   exports: [NotificationsService],
