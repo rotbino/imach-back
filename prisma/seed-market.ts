@@ -271,7 +271,7 @@ async function main() {
                 frequency: row.buy!.frequency,
               };
       await prisma.listing.upsert({
-        where: { businessId_goodId: { businessId: business.id, goodId: gid } },
+        where: { businessId_goodId_variantKey: { businessId: business.id, goodId: gid, variantKey: "" } },
         create: { businessId: business.id, goodId: gid, ...data },
         update: data,
       });

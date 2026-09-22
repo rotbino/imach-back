@@ -136,7 +136,7 @@ export class MarketController {
     const [count, sellListings, buyerEdges, myOffers] = await Promise.all([
       this.referralCountOf(business.ownerId),
       this.prisma.listing.findMany({
-        where: { businessId: business.id, mode: { in: ["SELL", "BOTH"] } },
+        where: { businessId: business.id, isActive: true, mode: { in: ["SELL", "BOTH"] } },
         select: { goodId: true },
       }),
       this.prisma.follow.findMany({
@@ -187,7 +187,7 @@ export class MarketController {
     locale: Locale
   ) {
     const need = await this.prisma.listing.findUnique({ where: { id: listingId }, include: { good: true } });
-    if (!need) throw AppError.notFound("Listing not found");
+    if (!need || !need.isActive) throw AppError.notFound("Listing not found");
     const business = await assertBusinessOwner(this.prisma, user, need.businessId, locale);
 
     if (need.mode === "SELL" || need.volume === null) {
@@ -196,7 +196,7 @@ export class MarketController {
 
     const matches = await this.matching.suppliersForNeed(
       business.id,
-      business.city,
+      { city: business.city, province: business.province, country: business.country },
       need.goodId,
       need.volume
     );
@@ -347,10 +347,11 @@ export class MarketController {
         mode: true,
         volume: true,
         goodId: true,
+        isActive: true,
         good: { select: { nameFa: true } },
       },
     });
-    if (!need || need.mode === "SELL" || need.volume === null) {
+    if (!need || need.isActive === false || need.mode === "SELL" || need.volume === null) {
       throw AppError.badRequest("این یک درخواست خرید فعال نیست", "NOT_A_BUY_LISTING");
     }
     if (need.businessId === business.id) {
@@ -358,7 +359,7 @@ export class MarketController {
     }
 
     const myList = await this.prisma.listing.findFirst({
-      where: { businessId: business.id, goodId: need.goodId, mode: { in: ["SELL", "BOTH"] } },
+      where: { businessId: business.id, goodId: need.goodId, isActive: true, mode: { in: ["SELL", "BOTH"] } },
       orderBy: { updatedAt: "desc" },
       select: { id: true, currency: true, minOrder: true },
     });
@@ -683,6 +684,7 @@ export class MarketController {
         return this.prisma.listing.findMany({
           where: {
             businessId: { in: supplierIds },
+            isActive: true,
             mode: { in: ["SELL", "BOTH"] },
             priceMinor: { not: null },
           },
@@ -727,7 +729,7 @@ export class MarketController {
     const { value, hit } = await this.cache.wrap(
       `market:ssugg:${query.businessId}`,
       { ttlMs: TTL.MINUTE, tags: [`market:ssugg:${query.businessId}`] },
-      () => this.matching.suppliersForBuyer(business.id, business.city)
+      () => this.matching.suppliersForBuyer(business.id, { city: business.city, province: business.province, country: business.country })
     );
 
     reply.header("x-cache", hit ? "HIT" : "MISS");
@@ -764,7 +766,7 @@ export class MarketController {
                 city: true,
                 isVerified: true,
                 listings: {
-                  where: { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
+                  where: { isActive: true, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
                   orderBy: { updatedAt: "desc" },
                   take: 1,
                   select: {
@@ -842,7 +844,7 @@ export class MarketController {
     const { value, hit } = await this.cache.wrap(
       `market:buyreq:${query.businessId}`,
       { ttlMs: TTL.MINUTE, tags: [`market:buyreq:${query.businessId}`] },
-      () => this.matching.buyRequestsFor(business.id, business.city)
+      () => this.matching.buyRequestsFor(business.id, { city: business.city, province: business.province, country: business.country })
     );
     reply.header("x-cache", hit ? "HIT" : "MISS");
     return value;

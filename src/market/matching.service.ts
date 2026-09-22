@@ -1,12 +1,16 @@
 import { Injectable } from "@nestjs/common";
-import { matchScore, proximity } from "../common/geo/cities";
+import { matchScore, proximity, type GeoSpot, type Proximity } from "../common/geo/cities";
 import { PrismaService } from "../common/prisma/prisma.module";
 
 /**
  * Matching engine — a match requires the SAME reference good;
  * the score adds order-size fit, price rank, proximity (city >
- * province) and recency. Results are persisted on each Offer row
+ * province > country) and recency. Results are persisted on each Offer row
  * so the history stays meaningful even when the algorithm evolves.
+ *
+ * Scale contract: every scan filters isActive listings directly and carries
+ * the geo snapshot of the listing itself (falling back to the business for
+ * legacy rows) — no app-side business joins for the hot paths.
  */
 
 export interface SupplierMatch {
@@ -67,6 +71,9 @@ const SELLER_SELECT = {
   priceMinor: true,
   currency: true,
   minOrder: true,
+  city: true,
+  province: true,
+  country: true,
   business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
 } as const;
 
@@ -80,6 +87,9 @@ const RANK_SELECT = {
   volume: true,
   frequency: true,
   updatedAt: true,
+  city: true,
+  province: true,
+  country: true,
   good: {
     select: {
       id: true,
@@ -121,10 +131,19 @@ function volumeFit(minOrder: number, stock: number, volume: number): number {
   return 30; // inside the working band
 }
 
+/** GeoSpot of a listing row — the snapshot, with business fallback for legacy rows. */
+function spotOf(row: { city: string | null; province: string | null; country: string | null; business: { city: string } }): GeoSpot {
+  return {
+    city: row.city ?? row.business.city,
+    province: row.province,
+    country: row.country,
+  };
+}
+
 /** Proximity points for the ranked lists. */
-function proxPoints(a: string, b: string, same: number, near: number, far: number): number {
-  const p = proximity(a, b);
-  return p === "same" ? same : p === "near" ? near : far;
+function proxPoints(mine: GeoSpot, theirs: GeoSpot, same: number, near: number, far: number): number {
+  const p: Proximity = proximity(mine, theirs);
+  return p === "same-city" ? same : p === "same-province" ? near : far;
 }
 
 /** Price-rank points (0–18) inside a same-good candidate group — cheaper is better. */
@@ -152,7 +171,7 @@ export class MatchingService {
   /** Suppliers selling the SAME good, ranked by score (quote flow). */
   async suppliersForNeed(
     buyerBusinessId: string,
-    buyerCity: string,
+    buyerGeo: GeoSpot,
     goodId: string,
     volume: number,
     limit = 5
@@ -160,6 +179,7 @@ export class MatchingService {
     const rows = await this.prisma.listing.findMany({
       where: {
         goodId,
+        isActive: true,
         businessId: { not: buyerBusinessId },
         mode: { in: ["SELL", "BOTH"] },
         priceMinor: { not: null },
@@ -174,12 +194,12 @@ export class MatchingService {
         const b = row.business;
         const priceMinor = row.priceMinor as number;
         const minOrder = row.minOrder ?? 0;
-        const score = matchScore(buyerCity, b.city, volume, minOrder);
+        const score = matchScore(buyerGeo, spotOf(row), volume, minOrder);
         return {
           sellerId: b.id,
           sellerName: b.name,
           sellerSlug: b.slug,
-          sellerCity: b.city,
+          sellerCity: row.city ?? b.city,
           sellerVerified: b.isVerified,
           listingId: row.id,
           priceMinor,
@@ -196,12 +216,13 @@ export class MatchingService {
   /** Suppliers selling goods I need — the sell-tab strip. */
   async suppliersForBuyer(
     buyerBusinessId: string,
-    buyerCity: string,
+    buyerGeo: GeoSpot,
     limit = 12
   ): Promise<SupplierSuggestion[]> {
     const myBuyListings = await this.prisma.listing.findMany({
       where: {
         businessId: buyerBusinessId,
+        isActive: true,
         mode: { in: ["BUY", "BOTH"] },
         volume: { not: null },
       },
@@ -215,6 +236,7 @@ export class MatchingService {
     const sellRows = await this.prisma.listing.findMany({
       where: {
         goodId: { in: goodIds },
+        isActive: true,
         businessId: { not: buyerBusinessId },
         mode: { in: ["SELL", "BOTH"] },
         priceMinor: { not: null },
@@ -226,6 +248,9 @@ export class MatchingService {
         minOrder: true,
         stock: true,
         updatedAt: true,
+        city: true,
+        province: true,
+        country: true,
         good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
         business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
       },
@@ -241,7 +266,7 @@ export class MatchingService {
     return sellRows
       .map((row) => {
         const b = row.business;
-        let score = matchScore(buyerCity, b.city, volumeByGood.get(row.good.id) ?? 0, row.minOrder ?? 0);
+        let score = matchScore(buyerGeo, spotOf(row), volumeByGood.get(row.good.id) ?? 0, row.minOrder ?? 0);
         // a supplier whose capacity is far below my need is not my match
         if ((row.stock ?? 0) > 0 && (volumeByGood.get(row.good.id) ?? 0) > (row.stock as number) * 3) score -= 10;
         score += Math.round(recencyScore(row.updatedAt) / 2) + (pricePts.get(row.id) ?? 0) / 3;
@@ -249,7 +274,7 @@ export class MatchingService {
           supplierId: b.id,
           supplierName: b.name,
           supplierSlug: b.slug,
-          supplierCity: b.city,
+          supplierCity: row.city ?? b.city,
           supplierVerified: b.isVerified,
           listingId: row.id,
           goodId: row.good.id,
@@ -271,18 +296,19 @@ export class MatchingService {
    *   buyer  → requests of the goods I buy, same-level peers (similarity > proximity > recency)
    *   empty  → the whole market (proximity > recency)
    */
-  async buyRequestsFor(businessId: string, city: string, limit = 60): Promise<RankedRow[]> {
+  async buyRequestsFor(businessId: string, myGeo: GeoSpot, limit = 60): Promise<RankedRow[]> {
     const [mySell, myBuy, rows] = await Promise.all([
       this.prisma.listing.findMany({
-        where: { businessId, mode: { in: ["SELL", "BOTH"] } },
+        where: { businessId, isActive: true, mode: { in: ["SELL", "BOTH"] } },
         select: { goodId: true, minOrder: true, stock: true },
       }),
       this.prisma.listing.findMany({
-        where: { businessId, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
+        where: { businessId, isActive: true, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
         select: { goodId: true, volume: true },
       }),
       this.prisma.listing.findMany({
         where: {
+          isActive: true,
           mode: { in: ["BUY", "BOTH"] },
           volume: { not: null },
           businessId: { not: businessId },
@@ -306,7 +332,7 @@ export class MatchingService {
             ...r,
             score:
               volumeFit(cap.min, cap.cap, r.volume as number) +
-              proxPoints(city, r.business.city, 24, 14, 4) +
+              proxPoints(myGeo, spotOf(r), 24, 14, 4) +
               recencyScore(r.updatedAt),
           };
         });
@@ -321,13 +347,13 @@ export class MatchingService {
           const sim = v >= myV / 5 && v <= myV * 5 ? 30 : 0; // same-level buyer first
           return {
             ...r,
-            score: sim + proxPoints(city, r.business.city, 18, 11, 4) + recencyScore(r.updatedAt),
+            score: sim + proxPoints(myGeo, spotOf(r), 18, 11, 4) + recencyScore(r.updatedAt),
           };
         });
     } else {
       ranked = rows.map((r) => ({
         ...r,
-        score: proxPoints(city, r.business.city, 20, 12, 4) + recencyScore(r.updatedAt),
+        score: proxPoints(myGeo, spotOf(r), 20, 12, 4) + recencyScore(r.updatedAt),
       }));
     }
 

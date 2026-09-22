@@ -548,7 +548,7 @@ async function main(): Promise<void> {
           : { volume: null, frequency: null }),
       };
       await prisma.listing.upsert({
-        where: { businessId_goodId: { businessId: biz.id, goodId } },
+        where: { businessId_goodId_variantKey: { businessId: biz.id, goodId, variantKey: "" } },
         create: { businessId: biz.id, goodId, ...data },
         update: data,
       });
@@ -608,7 +608,7 @@ async function main(): Promise<void> {
       const goodId = goodIds.get(d.good);
       if (!buyerId || !sellerId || !goodId) continue;
       const sellListing = await prisma.listing.findUnique({
-        where: { businessId_goodId: { businessId: sellerId, goodId } },
+        where: { businessId_goodId_variantKey: { businessId: sellerId, goodId, variantKey: "" } },
       });
       if (!sellListing) continue;
       await prisma.inquiry.create({

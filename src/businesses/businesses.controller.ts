@@ -201,6 +201,7 @@ export class BusinessesController {
             isVerified: true,
             isDemo: true,
             listings: {
+              where: { isActive: true },
               select: LISTING_SELECT,
               orderBy: { updatedAt: "desc" },
             },
@@ -267,8 +268,8 @@ export class BusinessesController {
     const sellSide = query.mode !== "BUY";
     const rows = await this.prisma.listing.findMany({
       where: sellSide
-        ? { mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } }
-        : { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
+        ? { isActive: true, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } }
+        : { isActive: true, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
       select: {
         id: true,
         mode: true,

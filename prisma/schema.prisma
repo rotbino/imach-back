@@ -158,27 +158,29 @@ model Category {
 /// Weight/packaging live on Category attrs, brand lives on Listing — so the
 /// catalog stays demand-driven and match-friendly across languages.
 model Good {
-  id         String    @id @default(auto()) @map("_id") @db.ObjectId
-  categoryId String    @db.ObjectId
-  category   Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: NoAction)
-  nameFa     String // canonical Persian name (or the name the user typed)
-  nameEn     String?
-  aliases    String[]  // extra search terms in any language
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  categoryId  String    @db.ObjectId
+  category    Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  nameFa      String // canonical Persian name (or the name the user typed)
+  nameEn      String?
+  aliases     String[] // extra search terms in any language
   /// Normalized (fa-agnostic) concatenation of names + aliases — powers search
-  searchText String
-  unit       String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH | METER | GRAM | SERVICE
-  source     String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
-  status     String    @default("ACTIVE") // ACTIVE | PROVISIONAL (pending review)
+  searchText  String
+  unit        String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH | METER | GRAM | SERVICE
+  source      String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
+  status      String    @default("ACTIVE") // ACTIVE | PROVISIONAL (pending review)
   /// Who registered this row: USER (ordinary member) | ADMIN | BRAND_OWNER.
   /// Null = system/seed. Rows stay usable for everyone while PROVISIONAL —
   /// the state only drives the admin gardening queue (approve / merge / delete).
   creatorRole String?
   createdById String?   @db.ObjectId
   createdBy   User?     @relation("GoodCreator", fields: [createdById], references: [id], onUpdate: NoAction)
-  listings   Listing[]
+  listings    Listing[]
 
   @@index([categoryId])
   @@index([searchText])
+  /// browse-with-search at scale: leaf filter first, then text
+  @@index([categoryId, searchText])
 }
 
 /// Brand — optional, resolved/created on the fly when a listing saves.
@@ -207,30 +209,30 @@ model Brand {
 // SALES_AGENT | MARKETER | SERVICE_PROVIDER | CONTRACTOR | BUSINESS_CONSUMER
 
 model Business {
-  id           String     @id @default(auto()) @map("_id") @db.ObjectId
-  slug         String     @unique // drives the public arm links: /sell/{slug} /buy/{slug}
+  id           String  @id @default(auto()) @map("_id") @db.ObjectId
+  slug         String  @unique // drives the public arm links: /sell/{slug} /buy/{slug}
   name         String
   activityType String? // optional self-description, chosen later from the panel
   city         String
   province     String? // derived from city at write time (matching granularity)
-  country      String     @default("IR") // country code of the business
+  country      String  @default("IR") // country code of the business
   /// Currency of the catalog (sell arm). Set at business creation from the
   /// owner's signup country; every listing inherits it at write time.
-  currency     String     @default("IRR") // ISO 4217
+  currency     String  @default("IRR") // ISO 4217
   phone        String?
-  isVerified   Boolean    @default(false)
-  isDemo       Boolean    @default(false)
-  ownerId      String?    @db.ObjectId
-  owner        User?      @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+  isVerified   Boolean @default(false)
+  isDemo       Boolean @default(false)
+  ownerId      String? @db.ObjectId
+  owner        User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 
-  listings     Listing[]  @relation("listings")
-  inquiriesIn  Inquiry[]  @relation("seller")
-  inquiriesOut Inquiry[]  @relation("buyer")
-  offersSent   Offer[]    @relation("seller")
-  offersRecv   Offer[]    @relation("buyer")
+  listings     Listing[] @relation("listings")
+  inquiriesIn  Inquiry[] @relation("seller")
+  inquiriesOut Inquiry[] @relation("buyer")
+  offersSent   Offer[]   @relation("seller")
+  offersRecv   Offer[]   @relation("buyer")
   pages        Page[]
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 
   @@index([city])
   @@index([ownerId])
@@ -239,14 +241,23 @@ model Business {
 // ─── Listing (the atomic tradable unit) ──────────────────────────────────────
 
 model Listing {
-  id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  businessId String   @db.ObjectId
-  goodId     String   @db.ObjectId
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  businessId String @db.ObjectId
+  goodId     String @db.ObjectId
   mode       String // SELL | BUY | BOTH
 
+  /// Distinguishing spec of THIS row, derived from attrs at write time
+  /// ("weight=500g|packaging=carton"). "" = the plain, unvarianted offer.
+  /// One business keeps SEPARATE price/stock rows per variant of the same
+  /// reference good («نان آرتا» × بسته کوچک / بسته بزرگ) — without splitting
+  /// the good itself.
+  variantKey   String  @default("")
+  /// Human-readable variant snapshot for cards («۵۰۰ گرمی · کارتن»)
+  variantLabel String?
+
   /// Optional brand of THIS offer (the reference class stays brand-free)
-  brandId String?    @db.ObjectId
-  brand   Brand?     @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+  brandId String? @db.ObjectId
+  brand   Brand?  @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
 
   // ── sell side ──
   /// Price in the SMALLEST currency unit (rial / cent …) — always an integer.
@@ -256,11 +267,22 @@ model Listing {
   stock      Int?
   minOrder   Int?
   /// Category attribute values: {attrKey: value} (weight, packaging …)
-  attrs Json?
+  attrs      Json?
 
   // ── buy side ──
   volume    Float?
   frequency String? // WEEKLY | MONTHLY | OCCASIONAL
+
+  // ── geo snapshot (business location at write time) ──
+  // Mongo relation queries are app-side joins: at scale the matcher must
+  // filter listings directly, never through business lookups.
+  city     String?
+  province String?
+  country  String  @default("IR")
+
+  /// Soft delete — «حذف» فقط کاتالوگ را ترک می‌کند؛ Inquiry/Offer/PriceLog
+  /// (تاریخچه قیمت) می‌ماند. Upsert یک سطر حذف‌شده را دوباره زنده می‌کند.
+  isActive Boolean @default(true)
 
   business  Business   @relation("listings", fields: [businessId], references: [id], onDelete: Cascade)
   good      Good       @relation(fields: [goodId], references: [id])
@@ -270,8 +292,8 @@ model Listing {
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
 
-  @@unique([businessId, goodId])
-  @@index([goodId, mode])
+  @@unique([businessId, goodId, variantKey])
+  @@index([goodId, isActive, mode])
   @@index([businessId])
 }
 
@@ -300,17 +322,17 @@ model Inquiry {
 /// A price offer — either produced by the matching engine on quote-request,
 /// or sent manually by a seller answering an inquiry.
 model Offer {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  buyerId   String   @db.ObjectId
-  sellerId  String   @db.ObjectId
-  listingId String   @db.ObjectId
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId    String   @db.ObjectId
+  sellerId   String   @db.ObjectId
+  listingId  String   @db.ObjectId
   priceMinor Int // smallest currency unit — integer, exact
   currency   String // ISO 4217 — snapshotted from the listing
-  minOrder  Int
-  score     Int // persisted matching score (0–100)
-  isSpecial Boolean  @default(false)
-  note      String?
-  createdAt DateTime @default(now())
+  minOrder   Int
+  score      Int // persisted matching score (0–100)
+  isSpecial  Boolean  @default(false)
+  note       String?
+  createdAt  DateTime @default(now())
 
   buyer   Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)
   seller  Business @relation("seller", fields: [sellerId], references: [id], onDelete: Cascade)
@@ -328,7 +350,7 @@ model Offer {
 /// business (unique index) but the model is multi-page from day one.
 model Page {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  type       String   // SELL | BUY
+  type       String // SELL | BUY
   businessId String   @db.ObjectId
   business   Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
 
@@ -397,9 +419,9 @@ model Market {
 /// supply volume appear inside this market. Lives on the Market×Good relation
 /// so two markets can keep different rules for the same good.
 model MarketGoodRule {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  marketId  String  @db.ObjectId
-  goodId    String  @db.ObjectId
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  marketId  String @db.ObjectId
+  goodId    String @db.ObjectId
   minVolume Float? // minimum sell volume (or capacity) to enter the market
   minPrice  Float?
   maxPrice  Float?

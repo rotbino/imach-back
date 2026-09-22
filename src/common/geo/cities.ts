@@ -1,64 +1,39 @@
 /**
- * Geographic base for the matching engine:
+ * Geographic base for the matching engine — the user's three location
+ * factors (country / province / city) as a 4-tier proximity:
  *   same city > same province > same country > elsewhere
- * All seeded/demo cities are inside Iran; unknown cities fall back
- * to city-equality only. Country lives on Business ("IR" default).
+ *
+ * Iran's full city→province dataset is generated from the frontend's
+ * lacal-data/Iran-provice.ts (src/common/geo/iran.ts — do not hand-edit).
+ * Unknown cities (free-text, non-Iran) fall back to city-equality and the
+ * country factor. Province was derived at business-write time and stored;
+ * for legacy rows it is recomputed here on the fly.
  */
 
-export const CITIES = [
-  "تهران",
-  "کرج",
-  "قم",
-  "اصفهان",
-  "شیراز",
-  "مشهد",
-  "تبریز",
-  "اردبیل",
-  "رشت",
-  "همدان",
-  "کرمانشاه",
-  "ارومیه",
-  "قزوین",
-  "زنجان",
-  "سنندج",
-  "یزد",
-  "کرمان",
-  "اهواز",
-] as const;
+import { IRAN_CITY_PROVINCE } from "./iran";
 
-const CITY_PROVINCE: Record<string, string> = {
-  تهران: "تهران",
-  کرج: "البرز",
-  قم: "قم",
-  اصفهان: "اصفهان",
-  شیراز: "فارس",
-  مشهد: "خراسان رضوی",
-  تبریز: "آذربایجان شرقی",
-  اردبیل: "اردبیل",
-  رشت: "گیلان",
-  همدان: "همدان",
-  کرمانشاه: "کرمانشاه",
-  ارومیه: "آذربایجان غربی",
-  قزوین: "قزوین",
-  زنجان: "زنجان",
-  سنندج: "کردستان",
-  یزد: "یزد",
-  کرمان: "کرمان",
-  اهواز: "خوزستان",
-};
-
-/** Province of a city — null for cities outside the known map. */
+/** Province of a city — null outside the known Iran dataset. */
 export function provinceOf(city: string): string | null {
-  return CITY_PROVINCE[city] ?? null;
+  return IRAN_CITY_PROVINCE[city] ?? null;
 }
 
-export type Proximity = "same" | "near" | "far";
+export type Proximity = "same-city" | "same-province" | "same-country" | "far";
 
-/** same city > same province > elsewhere */
-export function proximity(a: string, b: string): Proximity {
-  if (a === b) return "same";
-  const pa = CITY_PROVINCE[a];
-  if (pa && pa === CITY_PROVINCE[b]) return "near";
+export interface GeoSpot {
+  city: string;
+  province?: string | null;
+  country?: string | null;
+}
+
+/** same city > same province > same country > far */
+export function proximity(a: GeoSpot, b: GeoSpot): Proximity {
+  if (a.city && a.city === b.city) return "same-city";
+  const pa = a.province ?? provinceOf(a.city);
+  const pb = b.province ?? provinceOf(b.city);
+  if (pa && pb && pa === pb) return "same-province";
+  const ca = a.country ?? "IR";
+  const cb = b.country ?? "IR";
+  if (ca === cb) return "same-country";
   return "far";
 }
 
@@ -67,13 +42,15 @@ export function proximity(a: string, b: string): Proximity {
  *   45 base (same good is a precondition) + proximity bonus + order-size fit.
  */
 export function matchScore(
-  myCity: string,
-  theirCity: string,
+  mine: GeoSpot,
+  theirs: GeoSpot,
   myVolume: number,
   theirMinOrder: number
 ): number {
-  const p = proximity(myCity, theirCity);
-  let s = 45 + (p === "same" ? 38 : p === "near" ? 22 : 6);
+  const p = proximity(mine, theirs);
+  const bonus =
+    p === "same-city" ? 38 : p === "same-province" ? 26 : p === "same-country" ? 12 : 4;
+  let s = 45 + bonus;
   if (theirMinOrder > 0 && myVolume >= theirMinOrder) s += 9;
   else if (theirMinOrder > myVolume * 2) s -= 7;
   return Math.max(42, Math.min(98, Math.round(s)));
