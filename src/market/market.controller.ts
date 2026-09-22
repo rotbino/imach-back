@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   HttpCode,
+  HttpStatus,
   Param,
   Post,
   Query,
@@ -11,6 +12,7 @@ import {
 } from "@nestjs/common";
 import type { FastifyReply } from "fastify";
 import { CacheService, TTL } from "../common/cache/cache.module";
+import { env } from "../common/config/env";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import type { Locale } from "../common/i18n/i18n";
@@ -22,9 +24,11 @@ import { ensurePage } from "../common/pages";
 import { MatchingService } from "./matching.service";
 import {
   BusinessIdQueryDto,
+  FollowBuyerDto,
   FollowSupplierDto,
   InquiriesQueryDto,
   OffersQueryDto,
+  OfferBuyRequestDto,
   RemoveFollowerDto,
   RequestQuoteDto,
   SendOfferDto,
@@ -89,6 +93,72 @@ export class MarketController {
     this.cache.invalidateTag(`market:board:${businessId}`);
     this.cache.invalidateTag(`market:ssugg:${businessId}`);
     this.cache.invalidateTag(`market:buyreq:${businessId}`);
+  }
+
+  /** Members this owner personally brought in via referral links — the growth currency. */
+  private referralCountOf(ownerId: string | null): Promise<number> {
+    return this.prisma.user.count({ where: { referredById: ownerId ?? "__none__" } });
+  }
+
+  /**
+   * The referral gate — buyer-follow and cold-offer stay locked until the
+   * seller has brought REFERRAL_TARGET members through their catalog link.
+   * 403 + REFERRAL_GATE; the UI renders the progress strip itself.
+   */
+  private async assertReferralUnlocked(
+    business: { ownerId: string | null },
+    locale: Locale
+  ): Promise<void> {
+    const count = await this.referralCountOf(business.ownerId);
+    if (count >= env.REFERRAL_TARGET) return;
+    throw new AppError(
+      "REFERRAL_GATE",
+      `برای فعال شدن این امکان، ${env.REFERRAL_TARGET} عضو با لینک کاتالوگتان بیاورید`,
+      HttpStatus.FORBIDDEN,
+      { count, required: env.REFERRAL_TARGET }
+    );
+  }
+
+  /**
+   * وضعیت گیت رشد برای بازار خریدارها (بازوی فروش) — یک فراخوان برای همه‌ی
+   * عناصر صفحه: شمارنده‌ی معرف، کالاهای فروشی (گیت کاتالوگ خالی)، و فالو/
+   * پیشنهادهای قبلی من روی خریدارها.
+   */
+  @Get("getMarketState")
+  async getMarketState(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const [count, sellListings, buyerEdges, myOffers] = await Promise.all([
+      this.referralCountOf(business.ownerId),
+      this.prisma.listing.findMany({
+        where: { businessId: business.id, mode: { in: ["SELL", "BOTH"] } },
+        select: { goodId: true },
+      }),
+      this.prisma.follow.findMany({
+        where: {
+          followerPage: { businessId: business.id, type: "SELL" },
+          supplierPage: { type: "BUY" },
+        },
+        select: { supplierPage: { select: { businessId: true } } },
+      }),
+      this.prisma.offer.findMany({
+        where: { sellerId: business.id },
+        select: { buyerId: true },
+        distinct: ["buyerId"],
+      }),
+    ]);
+    const required = env.REFERRAL_TARGET;
+    return {
+      referral: { count, required, unlocked: count >= required },
+      sellCount: sellListings.length,
+      sellGoodIds: [...new Set(sellListings.map((l) => l.goodId))],
+      followedBuyerIds: buyerEdges.map((e) => e.supplierPage.businessId),
+      offeredBuyerIds: myOffers.map((o) => o.buyerId),
+      currency: business.currency,
+    };
   }
 
   /**
@@ -164,6 +234,114 @@ export class MarketController {
 
     this.invalidateBuyerSide(business.id);
     return { created: created.length, offers: created };
+  }
+
+  /**
+   * فالو کردن یک خریدار از بازار خریدارها — «می‌خواهم تامین‌کننده‌اش باشم».
+   * قرینه‌ی followSupplier: صفحه‌ی SELL من صفحه‌ی BUY خریدار را دنبال می‌کند و
+   * در «تامین من» او با برچسب می‌نشیند. پشت گیت ۱۰ معرف (خواسته‌ی کاربر:
+   * هیچ‌چیز مفت به دست نمی‌آید — بهای دسترسی، توزیع کاتالوگ است).
+   */
+  @Post("followBuyer")
+  async followBuyer(
+    @Body() body: FollowBuyerDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    if (body.buyerBusinessId === business.id) {
+      throw AppError.badRequest("نمی‌توانید کسب‌وکار خودتان را فالو کنید", "SELF_FOLLOW");
+    }
+    const buyer = await this.prisma.business.findUnique({
+      where: { id: body.buyerBusinessId },
+      select: { id: true },
+    });
+    if (!buyer) throw AppError.notFound("Buyer not found");
+    await this.assertReferralUnlocked(business, locale);
+
+    const followerPageId = await ensurePage(this.prisma, business.id, "SELL");
+    const buyerPageId = await ensurePage(this.prisma, body.buyerBusinessId, "BUY");
+    await this.prisma.follow.upsert({
+      where: { followerPageId_supplierPageId: { followerPageId, supplierPageId: buyerPageId } },
+      create: { followerPageId, supplierPageId: buyerPageId },
+      update: {},
+    });
+    this.invalidateBuyerSide(body.buyerBusinessId);
+    return { ok: true };
+  }
+
+  /** برداشتن فالوی خریدار — ترک کردن همیشه آزاد است (گیت فقط برای ورود است). */
+  @Post("unfollowBuyer/:buyerId")
+  async unfollowBuyer(
+    @Param("buyerId") buyerId: string,
+    @Body() body: UnfollowSupplierDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    await this.prisma.follow.deleteMany({
+      where: {
+        followerPage: { businessId: business.id, type: "SELL" },
+        supplierPage: { businessId: buyerId, type: "BUY" },
+      },
+    });
+    this.invalidateBuyerSide(buyerId);
+    return { ok: true };
+  }
+
+  /**
+   * پیشنهاد قیمت مستقیم روی یک درخواست خرید (بازار خریدارها) — پشت گیت ۱۰
+   * معرف. پیشنهاد یک Offer واقعی روی لیستینگِ همان کالا در کاتالوگ فروش من
+   * است، پس در جریان «پیشنهادهای دریافتی» خریدار بدون هیچ جریان جدیدی می‌افتد.
+   */
+  @Post("offerBuyRequest")
+  @HttpCode(201)
+  async offerBuyRequest(
+    @Body() body: OfferBuyRequestDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(body.buyListingId)) throw AppError.notFound("Listing not found");
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    await this.assertReferralUnlocked(business, locale);
+
+    const need = await this.prisma.listing.findUnique({
+      where: { id: body.buyListingId },
+      select: { id: true, businessId: true, mode: true, volume: true, goodId: true },
+    });
+    if (!need || need.mode === "SELL" || need.volume === null) {
+      throw AppError.badRequest("این یک درخواست خرید فعال نیست", "NOT_A_BUY_LISTING");
+    }
+    if (need.businessId === business.id) {
+      throw AppError.badRequest("نمی‌توانید به درخواست خودتان پیشنهاد بدهید", "SELF_OFFER");
+    }
+
+    const myList = await this.prisma.listing.findFirst({
+      where: { businessId: business.id, goodId: need.goodId, mode: { in: ["SELL", "BOTH"] } },
+      orderBy: { updatedAt: "desc" },
+      select: { id: true, currency: true, minOrder: true },
+    });
+    if (!myList) {
+      throw AppError.badRequest("این کالا در کاتالوگ فروش شما نیست", "RELATED_LISTING_MISSING");
+    }
+
+    const offer = await this.prisma.offer.create({
+      data: {
+        buyerId: need.businessId,
+        sellerId: business.id,
+        listingId: myList.id,
+        priceMinor: body.priceMinor,
+        currency: myList.currency ?? business.currency ?? "IRR",
+        minOrder: myList.minOrder ?? 0,
+        score: 0, // پیشنهاد مستقیم — بدون امتیاز موتور
+        isSpecial: false,
+        note: body.note?.trim() || null,
+      },
+      include: OFFER_INCLUDE,
+    });
+
+    this.invalidateBuyerSide(need.businessId);
+    return offer;
   }
 
   /** Offers received by a buyer (per business), newest first, cursor-paginated. */
@@ -263,7 +441,13 @@ export class MarketController {
     return { ok: true };
   }
 
-  /** The supplier catalogs my BUY page tracks (price-tracking subscriptions). */
+  /**
+   * تامین من — دوطرفه (قرینه‌ی مشتریان من):
+   *   mine   → تامین‌کننده‌هایی که خودم انتخاب کرده‌ام (فالوی کاتالوگشان)
+   *   theirs → فروشنده‌هایی که از بازار خریدارها، میز خرید مرا فالو کرده‌اند
+   *            («خودش آمد») — تامین‌کننده‌های بالقوه‌ای که خودشان آمدند.
+   * یک کسب‌وکار در هر دو سمت باشد فقط یک‌بار با origin=mine می‌آید.
+   */
   @Get("getFollows")
   async getFollows(
     @Query() query: BusinessIdQueryDto,
@@ -272,21 +456,40 @@ export class MarketController {
   ) {
     await assertBusinessOwner(this.prisma, user, query.businessId, locale);
     const pageId = await ensurePage(this.prisma, query.businessId, "BUY");
-    const rows = await this.prisma.follow.findMany({
-      where: { followerPageId: pageId },
-      select: {
-        createdAt: true,
-        viaRef: true,
-        supplierPage: {
-          select: { business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } } },
+    const [mine, theirs] = await Promise.all([
+      this.prisma.follow.findMany({
+        where: { followerPageId: pageId },
+        select: {
+          createdAt: true,
+          viaRef: true,
+          supplierPage: {
+            select: { business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } } },
+          },
         },
-      },
-      orderBy: { createdAt: "desc" },
-    });
-    return rows.map((r) => ({
+        orderBy: { createdAt: "desc" },
+      }),
+      this.prisma.follow.findMany({
+        where: {
+          supplierPage: { businessId: query.businessId, type: "BUY" },
+          followerPage: { type: "SELL" },
+        },
+        select: {
+          createdAt: true,
+          viaRef: true,
+          followerPage: {
+            select: { business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } } },
+          },
+        },
+        orderBy: { createdAt: "desc" },
+        take: 200,
+      }),
+    ]);
+
+    const mineRows = mine.map((r) => ({
       supplierId: r.supplierPage.business.id,
       createdAt: r.createdAt,
       viaRef: r.viaRef,
+      origin: "mine" as const,
       supplier: {
         slug: r.supplierPage.business.slug,
         name: r.supplierPage.business.name,
@@ -294,6 +497,25 @@ export class MarketController {
         isVerified: r.supplierPage.business.isVerified,
       },
     }));
+    const seen = new Set(mineRows.map((r) => r.supplierId));
+    const theirsRows = theirs
+      .map((r) => ({
+        supplierId: r.followerPage.business.id,
+        createdAt: r.createdAt,
+        viaRef: r.viaRef,
+        origin: "theirs" as const,
+        supplier: {
+          slug: r.followerPage.business.slug,
+          name: r.followerPage.business.name,
+          city: r.followerPage.business.city,
+          isVerified: r.followerPage.business.isVerified,
+        },
+      }))
+      .filter((r) => !seen.has(r.supplierId));
+
+    return [...mineRows, ...theirsRows].sort(
+      (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
+    );
   }
 
   @Post("followSupplier")

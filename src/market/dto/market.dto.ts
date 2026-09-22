@@ -82,3 +82,38 @@ export class RemoveFollowerDto {
   @IsString()
   followerBusinessId: string;
 }
+
+/**
+ * POST /market/followBuyer — my SELL page follows a buyer's BUY desk:
+ * «می‌خواهم تامین‌کننده‌ی این خریدار باشم». Gated behind the referral target.
+ */
+export class FollowBuyerDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyerBusinessId: string;
+}
+
+/**
+ * POST /market/offerBuyRequest — a gated cold price offer on a buyer's
+ * purchase request. Backed by MY sell listing of the same good, so it lands
+ * in the buyer's existing «پیشنهادهای دریافتی» stream.
+ */
+export class OfferBuyRequestDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyListingId: string;
+
+  @IsInt()
+  @Min(1)
+  @Max(1e12)
+  priceMinor: number;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(300)
+  note?: string;
+}

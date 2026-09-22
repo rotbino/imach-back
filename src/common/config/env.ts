@@ -47,6 +47,12 @@ export const env = Object.freeze({
   REFRESH_TOKEN_TTL_DAYS: num("REFRESH_TOKEN_TTL_DAYS", process.env.REFRESH_TOKEN_TTL_DAYS, 30),
   CORS_ORIGINS: process.env.CORS_ORIGINS || "*",
   SWAGGER_ENABLED: bool("SWAGGER_ENABLED", process.env.SWAGGER_ENABLED, true),
+  /**
+   * Growth gate — members a seller must bring via their catalog link before
+   * buyer-follow and price-offer unlock in the buyers' bazaar. Nothing in
+   * iMach is free of effort: the supplier pays with distribution (خواسته‌ی کاربر).
+   */
+  REFERRAL_TARGET: num("REFERRAL_TARGET", process.env.REFERRAL_TARGET, 10),
 });
 
 export const isProd = env.NODE_ENV === "production";
