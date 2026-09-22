@@ -19,6 +19,7 @@ import { provinceOf } from "../common/geo/cities";
 import type { Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { ensurePage } from "../common/pages";
 import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto } from "./dto/business.dto";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
@@ -112,7 +113,7 @@ export class BusinessesController {
     // catalog currency = the country the owner chose at signup
     const owner = await this.prisma.user.findUnique({
       where: { id: user.id },
-      select: { country: true },
+      select: { country: true, referredById: true, refArm: true },
     });
     const country = owner?.country ?? "IR";
     const business = await this.prisma.business.create({
@@ -130,6 +131,49 @@ export class BusinessesController {
       },
     });
     invalidateBusiness(this.cache, business.id, business.slug);
+
+    // ── Referral auto-follow ───────────────────────────────────────────────
+    // The user signed up through someone's catalog / invite link; now that
+    // they finally own pages, the two-way relationship is born:
+    //   refArm SELL (catalog invite) → the referred becomes the referrer's
+    //   CUSTOMER (their BUY page follows the referrer's SELL page).
+    //   refArm BUY (purchase-desk invite) → the referred becomes the
+    //   referrer's SUPPLIER (the referrer's BUY page follows their SELL page).
+    if (owner?.referredById) {
+      try {
+        const refBiz = await this.prisma.business.findFirst({
+          where: { ownerId: owner.referredById },
+          select: { id: true },
+          orderBy: { createdAt: "asc" },
+        });
+        if (refBiz && refBiz.id !== business.id) {
+          if (owner.refArm === "BUY") {
+            const refBuyPageId = await ensurePage(this.prisma, refBiz.id, "BUY");
+            const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
+            await this.prisma.follow.upsert({
+              where: {
+                followerPageId_supplierPageId: { followerPageId: refBuyPageId, supplierPageId: mySellPageId },
+              },
+              create: { followerPageId: refBuyPageId, supplierPageId: mySellPageId, viaRef: true },
+              update: {},
+            });
+          } else {
+            const myBuyPageId = await ensurePage(this.prisma, business.id, "BUY");
+            const refSellPageId = await ensurePage(this.prisma, refBiz.id, "SELL");
+            await this.prisma.follow.upsert({
+              where: {
+                followerPageId_supplierPageId: { followerPageId: myBuyPageId, supplierPageId: refSellPageId },
+              },
+              create: { followerPageId: myBuyPageId, supplierPageId: refSellPageId, viaRef: true },
+              update: {},
+            });
+          }
+        }
+      } catch {
+        // attribution is best-effort — business creation must never fail for it
+      }
+    }
+
     return business;
   }
 

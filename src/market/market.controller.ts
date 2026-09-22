@@ -25,6 +25,7 @@ import {
   FollowSupplierDto,
   InquiriesQueryDto,
   OffersQueryDto,
+  RemoveFollowerDto,
   RequestQuoteDto,
   SendOfferDto,
   UnfollowSupplierDto,
@@ -275,6 +276,7 @@ export class MarketController {
       where: { followerPageId: pageId },
       select: {
         createdAt: true,
+        viaRef: true,
         supplierPage: {
           select: { business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } } },
         },
@@ -284,6 +286,7 @@ export class MarketController {
     return rows.map((r) => ({
       supplierId: r.supplierPage.business.id,
       createdAt: r.createdAt,
+      viaRef: r.viaRef,
       supplier: {
         slug: r.supplierPage.business.slug,
         name: r.supplierPage.business.name,
@@ -416,7 +419,13 @@ export class MarketController {
     return value;
   }
 
-  /** Buyers who track my catalog — my personal buyers (owner-private stat). */
+  /**
+   * مشتریان من — buyers who track my catalog, enriched for the customers
+   * page: each row carries the follower's identity, whether it arrived via
+   * the owner's referral link, and its latest active buy request. Customers
+   * with an active request bubble to the top (recency first), so a new
+   * request literally surfaces the customer at the top of the list.
+   */
   @Get("getFollowers")
   async getFollowers(
     @Query() query: BusinessIdQueryDto,
@@ -429,22 +438,77 @@ export class MarketController {
       where: { supplierPageId: pageId },
       select: {
         createdAt: true,
+        viaRef: true,
         followerPage: {
-          select: { business: { select: { slug: true, name: true, city: true, isVerified: true } } },
+          select: {
+            business: {
+              select: {
+                id: true,
+                slug: true,
+                name: true,
+                city: true,
+                isVerified: true,
+                listings: {
+                  where: { mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
+                  orderBy: { updatedAt: "desc" },
+                  take: 1,
+                  select: {
+                    volume: true,
+                    frequency: true,
+                    updatedAt: true,
+                    good: { select: { nameFa: true, nameEn: true, unit: true } },
+                  },
+                },
+              },
+            },
+          },
         },
       },
       orderBy: { createdAt: "desc" },
       take: 200,
     });
-    return rows.map((r) => ({
-      createdAt: r.createdAt,
-      buyer: {
-        slug: r.followerPage.business.slug,
-        name: r.followerPage.business.name,
-        city: r.followerPage.business.city,
-        isVerified: r.followerPage.business.isVerified,
-      },
+
+    const mapped = rows.map((r) => ({
+      id: r.followerPage.business.id,
+      slug: r.followerPage.business.slug,
+      name: r.followerPage.business.name,
+      city: r.followerPage.business.city,
+      isVerified: r.followerPage.business.isVerified,
+      followedAt: r.createdAt,
+      viaRef: r.viaRef,
+      latestRequest: r.followerPage.business.listings[0] ?? null,
     }));
+
+    // active-request customers first (newest request wins), then the rest
+    // in follow order
+    return mapped.sort((a, b) => {
+      const ra = a.latestRequest?.updatedAt?.getTime() ?? 0;
+      const rb = b.latestRequest?.updatedAt?.getTime() ?? 0;
+      if ((ra > 0) !== (rb > 0)) return rb > 0 ? 1 : -1;
+      if (ra && rb && ra !== rb) return rb - ra;
+      return b.followedAt.getTime() - a.followedAt.getTime();
+    });
+  }
+
+  /**
+   * حذف فالوور از لیست مشتریان — the catalog owner curates their customer
+   * list: valueless follows (competitors window-shopping prices, accidental
+   * signups) can be removed. The removed buyer may re-follow anytime.
+   */
+  @Post("removeFollower")
+  async removeFollower(
+    @Body() body: RemoveFollowerDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const removed = await this.prisma.follow.deleteMany({
+      where: {
+        supplierPage: { businessId: business.id, type: "SELL" },
+        followerPage: { businessId: body.followerBusinessId, type: "BUY" },
+      },
+    });
+    return { ok: true, removed: removed.count };
   }
 
   /**

@@ -27,6 +27,12 @@ export class RegisterUserDto {
   @IsString()
   @MaxLength(2)
   country?: string;
+
+  /** referral code = slug of the business whose catalog / invite link brought this user (?ref=) */
+  @IsOptional()
+  @IsString()
+  @MaxLength(80)
+  ref?: string;
 }
 
 export class LoginUserDto {

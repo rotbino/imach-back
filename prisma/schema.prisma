@@ -42,8 +42,20 @@ model User {
   /// who grew the catalog. Null creator = system/seed row.
   createdGoods  Good[]         @relation("GoodCreator")
   createdBrands Brand[]        @relation("BrandCreator")
+  /// Attribution: the owner of the catalog / invite link this user signed up
+  /// through (?ref={businessSlug}). The auto-follow fires later, when the
+  /// referred user finally gets a Business (and therefore a BUY page).
+  referredBy    User?          @relation("Referrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  referredById  String?        @db.ObjectId
+  referrals     User[]         @relation("Referrals")
+  /// Which page of the referrer the invite came from: SELL = catalog link
+  /// (referred becomes the referrer's CUSTOMER), BUY = purchase-desk link
+  /// (referred becomes the referrer's SUPPLIER). Null = legacy sell default.
+  refArm        String?
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
+
+  @@index([referredById])
 }
 
 /// Rotating refresh tokens — only the SHA-256 hash is stored, so a DB leak
@@ -276,6 +288,9 @@ model Follow {
   id             String   @id @default(auto()) @map("_id") @db.ObjectId
   followerPageId String   @db.ObjectId // BUY page of the follower
   supplierPageId String   @db.ObjectId // SELL page of the followed supplier
+  /// True when the edge was born from a referral signup (?ref= auto-follow) —
+  /// powers the «با لینک» badge and future reward attribution.
+  viaRef         Boolean  @default(false)
   createdAt      DateTime @default(now())
 
   followerPage Page @relation("pageFollower", fields: [followerPageId], references: [id], onDelete: Cascade)

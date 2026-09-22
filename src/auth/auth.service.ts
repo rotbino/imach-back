@@ -90,7 +90,7 @@ export class AuthService {
   }
 
   async registerUser(
-    body: { name: string; phone: string; password: string; country?: string },
+    body: { name: string; phone: string; password: string; country?: string; ref?: string },
     reply: FastifyReply,
     locale: Locale
   ) {
@@ -118,6 +118,34 @@ export class AuthService {
         country,
       },
     });
+
+    // ── Referral attribution ────────────────────────────────────────────────
+    // ?ref={businessSlug}        → invite via the referrer's CATALOG (SELL
+    //                              page): the referred becomes their CUSTOMER.
+    // ?ref=buy:{businessSlug}    → invite via the referrer's PURCHASE DESK
+    //                              (BUY page): the referred becomes their
+    //                              SUPPLIER.
+    // The auto-follow itself fires later, in createBusiness, when the
+    // referred user actually owns pages. Invalid / unknown codes are ignored
+    // silently — signup must never break.
+    let refArm: "SELL" | "BUY" = "SELL";
+    let refSlug = body.ref?.trim() ?? "";
+    if (refSlug.startsWith("buy:")) {
+      refArm = "BUY";
+      refSlug = refSlug.slice(4).trim();
+    }
+    if (refSlug) {
+      const refBiz = await this.prisma.business.findUnique({
+        where: { slug: refSlug },
+        select: { ownerId: true },
+      });
+      if (refBiz?.ownerId && refBiz.ownerId !== user.id) {
+        await this.prisma.user.update({
+          where: { id: user.id },
+          data: { referredById: refBiz.ownerId, refArm },
+        });
+      }
+    }
 
     const publicUser = toPublicUser(user);
     const accessToken = await this.issueSession(reply, {

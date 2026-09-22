@@ -73,3 +73,12 @@ export class UnfollowSupplierDto {
   @IsString()
   businessId: string;
 }
+
+/** POST /market/removeFollower — catalog owner removes a follower from «مشتریان من». */
+export class RemoveFollowerDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  followerBusinessId: string;
+}
