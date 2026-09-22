@@ -7,6 +7,7 @@ import { GoodsModule } from "./goods/goods.module";
 import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
 import { MarketModule } from "./market/market.module";
+import { ContactsModule } from "./contacts/contacts.module";
 import { AdminModule } from "./admin/admin.module";
 
 /**
@@ -23,6 +24,7 @@ import { AdminModule } from "./admin/admin.module";
     BusinessesModule,
     ListingsModule,
     MarketModule,
+    ContactsModule,
     AdminModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],

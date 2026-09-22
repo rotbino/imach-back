@@ -52,10 +52,33 @@ model User {
   /// (referred becomes the referrer's CUSTOMER), BUY = purchase-desk link
   /// (referred becomes the referrer's SUPPLIER). Null = legacy sell default.
   refArm        String?
+  /// Phone contacts this user shared via the contacts gate — the user's
+  /// private network, stored for the growth engine (who is on iMach, who
+  /// was invited, when).
+  contacts      Contact[]
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 
   @@index([referredById])
+}
+
+/// Phone contacts a user shared through the contacts gate — یک به چند با User.
+/// Raw rows are the user's private network. Membership is NOT stored here:
+/// read-time matching against User.phone keeps «عضو iMach» flags fresh as
+/// people join later. lastInvitedAt audits the invite loop.
+model Contact {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String    @db.ObjectId
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  /// Normalized Iranian mobile — 09xxxxxxxxx
+  phone         String
+  lastInvitedAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@unique([userId, phone])
+  @@index([phone])
 }
 
 /// Rotating refresh tokens — only the SHA-256 hash is stored, so a DB leak

@@ -239,8 +239,9 @@ export class MarketController {
   /**
    * فالو کردن یک خریدار از بازار خریدارها — «می‌خواهم تامین‌کننده‌اش باشم».
    * قرینه‌ی followSupplier: صفحه‌ی SELL من صفحه‌ی BUY خریدار را دنبال می‌کند و
-   * در «تامین من» او با برچسب می‌نشیند. پشت گیت ۱۰ معرف (خواسته‌ی کاربر:
-   * هیچ‌چیز مفت به دست نمی‌آید — بهای دسترسی، توزیع کاتالوگ است).
+   * در «تامین من» او با برچسب می‌نشیند.
+   * رایگان (خواسته‌ی کاربر): سمت تقاضا گیت ندارد — فالو و تماس آزاد؛
+   * گیت ۱۰ معرف فقط روی «ارسال پیشنهاد» مانده است.
    */
   @Post("followBuyer")
   async followBuyer(
@@ -257,7 +258,6 @@ export class MarketController {
       select: { id: true },
     });
     if (!buyer) throw AppError.notFound("Buyer not found");
-    await this.assertReferralUnlocked(business, locale);
 
     const followerPageId = await ensurePage(this.prisma, business.id, "SELL");
     const buyerPageId = await ensurePage(this.prisma, body.buyerBusinessId, "BUY");
