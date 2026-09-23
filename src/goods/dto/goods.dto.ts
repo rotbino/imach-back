@@ -44,7 +44,10 @@ export class GetGoodsQueryDto {
   limit?: number;
 }
 
-/** POST /goods/createGood — user-created reference good (hidden catalog growth). */
+/** POST /goods/createGood — user-created reference good (hidden catalog growth).
+ * categoryId اختیاری است — وقتی ندهند (فرم سرچ‌محور جدید)، کالا به‌صورت خودکار
+ * در سبد «سایر › جدید» با واحد عدد ثبت می‌شود و ادمین بعداً جای درستش را می‌دهد
+ * (admin edit/:id همین کار را می‌کند) — کاربر هرگز درگیر گروه/زیرگروه/واحد نیست. */
 export class CreateGoodDto {
   /** the name the user types — any language, becomes nameFa + searchText */
   @IsString()
@@ -52,9 +55,10 @@ export class CreateGoodDto {
   @MaxLength(80)
   name: string;
 
+  @IsOptional()
   @IsString()
   @MaxLength(40)
-  categoryId: string;
+  categoryId?: string;
 
   @IsOptional()
   @IsString()

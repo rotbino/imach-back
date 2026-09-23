@@ -171,6 +171,9 @@ export class GoodsController {
    * When the search finds nothing, the form creates the good here and the
    * catalog crystallizes from real demand. Duplicate names (normalized)
    * return the existing row, so repeated creations converge instead of polluting.
+   *
+   * categoryId اختیاری: فرم سرچ‌محور دسته نمی‌پرسد — کالای بدون دسته، خودکار
+   * در سبد «سایر › جدید» (واحد عدد) پارک می‌شود تا ادمین بعداً باغبانی کند.
    */
   @Post("createGood")
   @UseGuards(JwtAuthGuard)
@@ -179,8 +182,34 @@ export class GoodsController {
     @CurrentUser() user: AuthUser,
     @CurrentLocale() locale: Locale
   ) {
+    let categoryId = body.categoryId;
+
+    if (!categoryId) {
+      // سبد موقت انواع کاربری: ریشه‌ی «سایر» + برگ «جدید» — find-or-create idempotent
+      const root = await this.prisma.category.upsert({
+        where: { slug: "sayer" },
+        create: { slug: "sayer", nameFa: "سایر", nameEn: "Other", isActive: true, unit: null },
+        update: {},
+        select: { id: true },
+      });
+      const leaf = await this.prisma.category.upsert({
+        where: { slug: "jadid" },
+        create: {
+          slug: "jadid",
+          nameFa: "جدید",
+          nameEn: "New",
+          parentId: root.id,
+          unit: "PIECE",
+          isActive: true,
+        },
+        update: { parentId: root.id, isActive: true },
+        select: { id: true, unit: true },
+      });
+      categoryId = leaf.id;
+    }
+
     const category = await this.prisma.category.findUnique({
-      where: { id: body.categoryId },
+      where: { id: categoryId },
       select: { id: true, unit: true, isActive: true, _count: { select: { children: true } } },
     });
     if (!category || !category.isActive) {
@@ -213,7 +242,7 @@ export class GoodsController {
     const isAdmin = user.role === "ADMIN";
     const created = await this.prisma.good.create({
       data: {
-        categoryId: body.categoryId,
+        categoryId,
         nameFa: body.name.trim(),
         nameEn: body.nameEn?.trim() || null,
         aliases,
