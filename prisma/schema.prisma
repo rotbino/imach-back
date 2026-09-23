@@ -36,7 +36,15 @@ model User {
   /// The dial comes from the signup country, so two countries can never
   /// collide on the same local number.
   phone         String         @unique
+  /// Display full name — "firstName lastName". Kept in sync at write time so
+  /// every existing reader (chat, notifications, vitrine) keeps working.
   name          String
+  /// Person identity — stored SEPARATELY from the business name on purpose:
+  /// in wholesale, buyers want to know WHO they are dealing with (the catalog
+  /// header shows the owner's name; photo comes later). Legacy rows keep null
+  /// here — their combined `name` still renders everywhere.
+  firstName     String?
+  lastName      String?
   passwordHash  String
   role          String         @default("MEMBER") // MEMBER | ADMIN
   country       String         @default("IR") // chosen at signup → default business currency + dial code

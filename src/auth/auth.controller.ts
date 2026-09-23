@@ -4,7 +4,7 @@ import type { FastifyReply, FastifyRequest } from "fastify";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { JwtAuthGuard } from "./jwt-auth.guard";
 import { AuthService } from "./auth.service";
-import { LoginUserDto, RegisterUserDto } from "./dto/auth.dto";
+import { LoginUserDto, RegisterUserDto, CheckPhoneDto } from "./dto/auth.dto";
 
 /**
  * Auth endpoints — deliberately action-named for readability
@@ -24,6 +24,15 @@ export class AuthController {
     @CurrentLocale() locale: Parameters<typeof AuthService.prototype.registerUser>[2]
   ) {
     return this.authService.registerUser(body, reply, locale);
+  }
+
+  @Post("checkPhone")
+  @HttpCode(200)
+  checkPhone(
+    @Body() body: CheckPhoneDto,
+    @CurrentLocale() locale: Parameters<typeof AuthService.prototype.checkPhone>[1]
+  ) {
+    return this.authService.checkPhone(body, locale);
   }
 
   @Post("loginUser")

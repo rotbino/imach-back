@@ -204,6 +204,9 @@ export class BusinessesController {
             currency: true,
             isVerified: true,
             isDemo: true,
+            // ویترین اعتماد می‌سازد: نام شخصِ صاحب کاتالوگ (عکس بعداً) —
+            // در عمده‌فروشی طرف مقابل می‌خواهد بداند با چه کسی طرف است.
+            owner: { select: { name: true, firstName: true, lastName: true } },
             listings: {
               where: { isActive: true },
               select: LISTING_SELECT,

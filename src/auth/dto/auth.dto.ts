@@ -9,11 +9,26 @@ import { IsOptional, IsString, Matches, MaxLength, MinLength } from "class-valid
 export const PHONE_DIALLED = /^\+?\d{10,14}$/;
 
 export class RegisterUserDto {
-  /** business display name — doubles as the user name; a farmer may type their own name */
+  /**
+   * Person identity — canonical since the two-step signup. Stored on the USER
+   * and kept strictly separate from the BUSINESS name (a farmer may name their
+   * business «مزرعه احمد» while their person name stays احمد رضایی).
+   */
+  @IsOptional()
   @IsString()
-  @MinLength(2)
+  @MaxLength(40)
+  firstName?: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(40)
+  lastName?: string;
+
+  /** Legacy combined name — still accepted (deploy-window tolerance) and split server-side. */
+  @IsOptional()
+  @IsString()
   @MaxLength(60)
-  name: string;
+  name?: string;
 
   @IsString()
   @Matches(PHONE_DIALLED)
@@ -41,6 +56,18 @@ export class RegisterUserDto {
   @IsString()
   @MaxLength(80)
   ref?: string;
+}
+
+export class CheckPhoneDto {
+  @IsString()
+  @Matches(PHONE_DIALLED)
+  phone: string;
+
+  /** country of the dial code (drives phone normalization) */
+  @IsOptional()
+  @IsString()
+  @MaxLength(2)
+  country?: string;
 }
 
 export class LoginUserDto {

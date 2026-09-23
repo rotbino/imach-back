@@ -46,20 +46,35 @@ const BUSINESS_SUMMARY_SELECT = {
 export interface PublicUser {
   id: string;
   name: string;
+  firstName: string | null;
+  lastName: string | null;
   phone: string;
   role: string;
   country: string;
   language: string;
 }
 
+// Explicit projection — the raw Prisma row (passwordHash, referral fields, …)
+// must never ride on the response.
 const toPublicUser = (u: {
   id: string;
   name: string;
+  firstName: string | null;
+  lastName: string | null;
   phone: string;
   role: string;
   country: string;
   language: string;
-}): PublicUser => u;
+}): PublicUser => ({
+  id: u.id,
+  name: u.name,
+  firstName: u.firstName,
+  lastName: u.lastName,
+  phone: u.phone,
+  role: u.role,
+  country: u.country,
+  language: u.language,
+});
 
 @Injectable()
 export class AuthService {
@@ -101,8 +116,35 @@ export class AuthService {
     return accessToken;
   }
 
+  /**
+   * Step-1 «ادامه» of the signup — the ONE async check a client cannot do
+   * alone: is this mobile already registered? Public (pre-auth) by design;
+   * throttled like the rest of the controller and reveals only a boolean.
+   */
+  async checkPhone(body: { phone: string; country?: string }, locale: Locale) {
+    const country = body.country && isSupportedCountry(body.country) ? body.country : "IR";
+    const phone = normalizeIntlPhone(body.phone, country);
+    if (!phone) {
+      throw AppError.badRequest(
+        t(locale, "auth.invalidPhone", "شماره موبایل معتبر نیست"),
+        "INVALID_PHONE"
+      );
+    }
+    const exists = await this.prisma.user.findUnique({ where: { phone }, select: { id: true } });
+    return { available: !exists };
+  }
+
   async registerUser(
-    body: { name: string; phone: string; password: string; country?: string; language?: string; ref?: string },
+    body: {
+      firstName?: string;
+      lastName?: string;
+      name?: string;
+      phone: string;
+      password: string;
+      country?: string;
+      language?: string;
+      ref?: string;
+    },
     reply: FastifyReply,
     locale: Locale
   ) {
@@ -119,13 +161,29 @@ export class AuthService {
     if (exists) {
       throw AppError.conflict(t(locale, "auth.phoneTaken", "این شماره موبایل قبلاً ثبت شده است"), "PHONE_TAKEN");
     }
+    // ── Person identity — firstName/lastName are canonical; the legacy combined
+    // `name` is still accepted once more and split on the first space so an old
+    // client bundle during a deploy window never breaks signup. Both parts are
+    // REQUIRED: wholesale is face-to-face trade, the person name is trust.
+    const legacyParts = (body.name ?? "").trim().split(/\s+/).filter(Boolean);
+    const firstName = (body.firstName ?? legacyParts[0] ?? "").trim();
+    const lastName = (body.lastName ?? legacyParts.slice(1).join(" ")).trim();
+    if (firstName.length < 2 || lastName.length < 2) {
+      throw AppError.badRequest(
+        t(locale, "auth.nameRequired", "نام و نام خانوادگی را کامل بنویسید"),
+        "NAME_REQUIRED"
+      );
+    }
+    const fullName = `${firstName} ${lastName}`.trim();
     // user language is stored for future multilingual sessions (per-country default: fa)
     const language = (body.language ?? "").trim().toLowerCase().slice(0, 8) || "fa";
 
     const bcrypt = await import("bcryptjs");
     const user = await this.prisma.user.create({
       data: {
-        name: body.name.trim(),
+        firstName,
+        lastName,
+        name: fullName,
         phone,
         passwordHash: await bcrypt.hash(body.password, 10),
         country,
@@ -178,11 +236,11 @@ export class AuthService {
             userId: c.userId,
             type: "CONTACT_JOINED",
             actorId: user.id,
-            actorName: body.name.trim() || c.name,
+            actorName: fullName || c.name,
           })),
         });
         // پوشِ همان اعلان — بهترین‌تلاش؛ ثبت‌نام هرگز نمی‌شکند
-        const actorName = body.name.trim() || contactOwners[0].name;
+        const actorName = fullName || contactOwners[0].name;
         await Promise.allSettled(
           contactOwners.map((c) =>
             this.pushService
