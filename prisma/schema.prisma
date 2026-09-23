@@ -157,6 +157,12 @@ model Category {
   /// Attribute schema for goods under this category:
   /// [{key, fa, en, type: "enum"|"text", options?: [{v, fa, en}]}]
   attrs    Json?
+  /// Default wholesale unit prefilled when a reference good is created
+  /// under this leaf (KILOGRAM | TON | CARTON | …) — keys stay semantic.
+  unit     String?
+  /// Hidden subtree (e.g. services before their launch day) — excluded from
+  /// every user-facing read; flipping it back on needs no migration.
+  isActive Boolean @default(true)
   goods    Good[]
 
   @@index([parentId])
@@ -175,6 +181,9 @@ model Good {
   /// Normalized (fa-agnostic) concatenation of names + aliases — powers search
   searchText  String
   unit        String // KILOGRAM | TON | CARTON | SACK | PIECE | LITER | BRANCH | METER | GRAM | SERVICE
+  /// Optional external-classification metadata (customs HS 6–10 digits).
+  /// Empty today by design — tomorrow it powers export/import workflows.
+  hsCode      String?
   source      String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
   status      String    @default("ACTIVE") // ACTIVE | PROVISIONAL (pending review)
   /// Who registered this row: USER (ordinary member) | ADMIN | BRAND_OWNER.

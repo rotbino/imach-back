@@ -53,7 +53,19 @@ interface CategoryNode {
   nameFa: string;
   nameEn: string;
   attrs?: unknown;
+  /** default wholesale unit of the leaf — the form prefills it for new goods */
+  unit?: string;
+  isActive: boolean;
   children: CategoryNode[];
+}
+
+/** Hidden subtree (e.g. services) — pruned wholesale, node and descendants. */
+function pruneHidden(roots: CategoryNode[]): CategoryNode[] {
+  const keep = (n: CategoryNode): CategoryNode | null =>
+    n.isActive
+      ? { ...n, children: n.children.map(keep).filter(Boolean) as CategoryNode[] }
+      : null;
+  return roots.map(keep).filter(Boolean) as CategoryNode[];
 }
 
 @Controller("goods")
@@ -71,7 +83,7 @@ export class GoodsController {
       { ttlMs: 5 * 60_000, tags: ["goods"] },
       async (): Promise<CategoryNode[]> => {
         const rows = await this.prisma.category.findMany({
-          select: { id: true, slug: true, nameFa: true, nameEn: true, attrs: true, parentId: true },
+          select: { id: true, slug: true, nameFa: true, nameEn: true, attrs: true, unit: true, isActive: true, parentId: true },
           orderBy: { id: "asc" },
         });
         const byId = new Map<string, CategoryNode>();
@@ -82,6 +94,8 @@ export class GoodsController {
             nameFa: r.nameFa,
             nameEn: r.nameEn,
             attrs: r.attrs ?? undefined,
+            unit: r.unit ?? undefined,
+            isActive: r.isActive,
             children: [],
           });
         }
@@ -92,7 +106,7 @@ export class GoodsController {
           if (parent) parent.children.push(node);
           else roots.push(node);
         }
-        return roots;
+        return pruneHidden(roots);
       }
     );
 
@@ -112,6 +126,7 @@ export class GoodsController {
       async (): Promise<Page<GoodDtoT>> => {
         const rows: GoodRow[] = await this.prisma.good.findMany({
           where: {
+            category: { isActive: true },
             ...(q ? { searchText: { contains: normalizeFa(q) } } : {}),
             ...(q ? {} : query.categoryId ? { categoryId: query.categoryId } : {}),
             ...cursorBefore(decodeCursor(query.cursor)),
@@ -166,12 +181,20 @@ export class GoodsController {
   ) {
     const category = await this.prisma.category.findUnique({
       where: { id: body.categoryId },
-      select: { id: true },
+      select: { id: true, unit: true, isActive: true, _count: { select: { children: true } } },
     });
-    if (!category) {
+    if (!category || !category.isActive) {
       throw AppError.badRequest(
         t(locale, "catalog.categoryNotFound", "دسته‌بندی یافت نشد"),
         "CATEGORY_NOT_FOUND"
+      );
+    }
+    if (category._count.children > 0) {
+      // goods are catalog leaves — a mid-level node is a misclick, send the
+      // user one level deeper instead of silently parking the good too high
+      throw AppError.badRequest(
+        t(locale, "catalog.categoryNotLeaf", "یک زیرشاخه دقیق‌تر انتخاب کنید"),
+        "CATEGORY_NOT_LEAF"
       );
     }
 
@@ -195,7 +218,9 @@ export class GoodsController {
         nameEn: body.nameEn?.trim() || null,
         aliases,
         searchText,
-        unit: body.unit,
+        // the leaf's unit IS the unit — the form prefills it, the backend
+        // trusts the leaf over the client so every good under a leaf agrees
+        unit: category.unit ?? body.unit ?? "PIECE",
         source: "USER",
         status: isAdmin ? "ACTIVE" : "PROVISIONAL",
         creatorRole: isAdmin ? "ADMIN" : "USER",

@@ -73,6 +73,8 @@ const messages: Record<Locale, Record<string, string>> = {
     "auth.selfFollow": "نمی‌توانید کسب‌وکار خودتان را فالو کنید",
     "auth.slugExhausted": "نمی‌توان اسلاگ یکتا ساخت، دوباره تلاش کنید",
     "auth.rateLimited": "درخواست‌های شما زیاد است، کمی بعد تلاش کنید",
+    "catalog.categoryNotFound": "دسته‌بندی یافت نشد",
+    "catalog.categoryNotLeaf": "یک زیرشاخه دقیق‌تر انتخاب کنید",
   },
   ar: {
     "auth.phoneTaken": "رقم الهاتف مسجل مسبقاً",
@@ -84,6 +86,8 @@ const messages: Record<Locale, Record<string, string>> = {
     "auth.selfFollow": "لا يمكنك متابعة نشاطك التجاري",
     "auth.slugExhausted": "تعذر إنشاء معرف فريد، حاول مجدداً",
     "auth.rateLimited": "طلباتك كثيرة جداً، حاول بعد قليل",
+    "catalog.categoryNotFound": "التصنيف غير موجود",
+    "catalog.categoryNotLeaf": "اختر تصنيفاً فرعياً أدق",
   },
   en: {
     "auth.phoneTaken": "This phone number is already registered",
@@ -95,6 +99,8 @@ const messages: Record<Locale, Record<string, string>> = {
     "auth.selfFollow": "You cannot follow your own business",
     "auth.slugExhausted": "Could not create a unique slug, please retry",
     "auth.rateLimited": "Too many requests, please retry later",
+    "catalog.categoryNotFound": "Category not found",
+    "catalog.categoryNotLeaf": "Please pick a more specific subcategory",
   },
 };
 

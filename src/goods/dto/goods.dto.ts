@@ -68,9 +68,11 @@ export class CreateGoodDto {
   @MaxLength(40, { each: true })
   aliases?: string[];
 
+  /** legacy fallback — the leaf's own unit wins when present (auto-prefill contract) */
+  @IsOptional()
   @IsString()
   @IsIn(["KILOGRAM", "TON", "CARTON", "SACK", "PIECE", "LITER", "BRANCH", "METER", "GRAM", "SERVICE"])
-  unit: string;
+  unit?: string;
 }
 
 /** GET /goods/getBrands — brand suggestions for the listing form. */
