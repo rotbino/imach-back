@@ -73,6 +73,8 @@ model User {
   contacts      Contact[]
   /// In-app notification feed (bell) — follow / offer / quote / contact-joined
   notifications Notification[]
+  /// Files this user uploaded (avatar + anything else) — per-user usage rollup
+  files         File[]         @relation("FileOwner")
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
 
@@ -486,4 +488,58 @@ model MarketMembership {
   market Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
 
   @@unique([marketId, businessId])
+}
+
+// ─── Files ───────────────────────────────────────────────────────────────────
+
+/// User-uploaded files — one polymorphic table that decorates every entity
+/// needing images (User avatar, Business logo, Listing gallery, licenses, …).
+///
+/// Design (خواسته‌ی کاربر):
+/// • relatedModel + relatedId point at the owner entity (User | Business |
+///   Listing) — «یک به چند»: هر مدل می‌تواند بی‌نهایت فایل داشته باشد.
+/// • fieldKey is the client-chosen slot («avatar», «logo», «gallery»,
+///   «license», …) — همان کلیدی که هم هنگام آپلود و هم هنگام خواندن فرستاده
+///   می‌شود؛ یک مدل می‌تواند چند اسلات و در هر اسلات چند فایل داشته باشد.
+/// • Bytes live on the configured storage driver (Arvan S3 today; local disk
+///   or another cloud tomorrow) — storageKey/thumbStorageKey are the
+///   driver-level keys needed for deletes and provider switches.
+/// • url/thumbUrl are PUBLIC direct CDN links: clients load bytes straight
+///   from the cloud — the API never proxies file bodies (سرعت؛ بدون توکن).
+/// • relatedId null = staged (uploaded before its model exists) — the admin
+///   orphan cleaner reaps staged files after FILES_STAGING_TTL_DAYS.
+model File {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  ownerId         String   @db.ObjectId
+  owner           User     @relation("FileOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  /// "User" | "Business" | "Listing"
+  relatedModel    String
+  /// ObjectId of the decorated entity — null while staged
+  relatedId       String?  @db.ObjectId
+  /// client-chosen slot: avatar | logo | gallery | license | award | …
+  fieldKey        String
+  /// optional caption (خواسته‌ی کاربر — «فیلد توضیحات اختیاری»)
+  description     String?
+  /// original filename (display only)
+  name            String
+  /// normalized mime after processing (jpeg/png for images)
+  mimeType        String
+  /// bytes of the stored main file (after compression)
+  size            Int
+  /// public direct URL — no token, CDN-fast
+  url             String
+  thumbUrl        String?
+  /// storage key of the main file (delete/switch-provider handle)
+  storageKey      String
+  /// storage key of the 400px thumbnail (images only)
+  thumbStorageKey String?
+  /// provider-specific extras (original size, dimensions, …)
+  metadata        Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([relatedModel, relatedId, fieldKey])
+  @@index([ownerId])
+  @@index([relatedModel, relatedId])
+  @@index([createdAt])
 }

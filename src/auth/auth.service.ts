@@ -339,6 +339,16 @@ export class AuthService {
     const row = await this.prisma.user.findUnique({ where: { id: user.id } });
     if (!row) throw AppError.notFound("User not found");
     const publicUser = toPublicUser(row);
-    return { user: publicUser, businesses: await this.withBusinesses(publicUser) };
+    // عکس پروفایل — از جدول فایل‌ها با اسلات «avatar» (آخرین رکورد)
+    const avatar = await this.prisma.file.findFirst({
+      where: { relatedModel: "User", relatedId: user.id, fieldKey: "avatar" },
+      orderBy: { createdAt: "desc" },
+      select: { url: true, thumbUrl: true },
+    });
+    return {
+      user: publicUser,
+      businesses: await this.withBusinesses(publicUser),
+      avatar: avatar ? { url: avatar.url, thumbUrl: avatar.thumbUrl } : null,
+    };
   }
 }

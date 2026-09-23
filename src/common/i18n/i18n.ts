@@ -75,6 +75,11 @@ const messages: Record<Locale, Record<string, string>> = {
     "auth.rateLimited": "درخواست‌های شما زیاد است، کمی بعد تلاش کنید",
     "catalog.categoryNotFound": "دسته‌بندی یافت نشد",
     "catalog.categoryNotLeaf": "یک زیرشاخه دقیق‌تر انتخاب کنید",
+    "files.notFound": "فایل یافت نشد",
+    "files.tooLarge": "حجم فایل بیش از حد مجاز است",
+    "files.badType": "این نوع فایل پشتیبانی نمی‌شود",
+    "files.forbidden": "شما اجازه‌ی این کار را ندارید",
+    "files.notMultipart": "فایلی برای آپلود دریافت نشد",
   },
   ar: {
     "auth.phoneTaken": "رقم الهاتف مسجل مسبقاً",
@@ -88,6 +93,11 @@ const messages: Record<Locale, Record<string, string>> = {
     "auth.rateLimited": "طلباتك كثيرة جداً، حاول بعد قليل",
     "catalog.categoryNotFound": "التصنيف غير موجود",
     "catalog.categoryNotLeaf": "اختر تصنيفاً فرعياً أدق",
+    "files.notFound": "الملف غير موجود",
+    "files.tooLarge": "حجم الملف أكبر من الحد المسموح",
+    "files.badType": "نوع الملف غير مدعوم",
+    "files.forbidden": "لا تملك إذنًا لهذا الإجراء",
+    "files.notMultipart": "لم يتم استلام أي ملف للتحميل",
   },
   en: {
     "auth.phoneTaken": "This phone number is already registered",
@@ -101,6 +111,11 @@ const messages: Record<Locale, Record<string, string>> = {
     "auth.rateLimited": "Too many requests, please retry later",
     "catalog.categoryNotFound": "Category not found",
     "catalog.categoryNotLeaf": "Please pick a more specific subcategory",
+    "files.notFound": "File not found",
+    "files.tooLarge": "File is larger than the allowed size",
+    "files.badType": "This file type is not supported",
+    "files.forbidden": "You are not allowed to do this",
+    "files.notMultipart": "No file received for upload",
   },
 };
 

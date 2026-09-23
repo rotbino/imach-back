@@ -73,3 +73,25 @@ export function jwtExpiresInSeconds(spec = env.JWT_EXPIRES_IN): number {
   const mult = unit === "m" ? 60 : unit === "h" ? 3600 : unit === "d" ? 86_400 : 1;
   return value * mult;
 }
+
+// ─── Storage (files) ─────────────────────────────────────────────────────────
+// Uploaded bytes live on object storage — Arvan (S3-compatible) today, with a
+// local-disk driver kept for self-hosted / offline deployments so switching
+// later is an env change, not a rewrite (خواسته‌ی کاربر).
+export const storage = Object.freeze({
+  /** "arvan" (S3-compatible) | "local" (disk under UPLOAD_PATH) */
+  DRIVER: process.env.STORAGE_DRIVER || "arvan",
+  MAX_FILE_SIZE: num("MAX_FILE_SIZE", process.env.MAX_FILE_SIZE, 10 * 1024 * 1024),
+  /** local driver only */
+  UPLOAD_PATH: process.env.UPLOAD_PATH || "./uploads",
+  /** public origin the local driver serves from (e.g. https://api.imach.ir) */
+  PUBLIC_BASE_URL: process.env.PUBLIC_BASE_URL || "",
+  ARVAN_ENDPOINT: process.env.ARVAN_ENDPOINT || "",
+  ARVAN_REGION: process.env.ARVAN_REGION || "",
+  ARVAN_ACCESS_KEY: process.env.ARVAN_ACCESS_KEY || "",
+  ARVAN_SECRET_KEY: process.env.ARVAN_SECRET_KEY || "",
+  ARVAN_BUCKET_NAME: process.env.ARVAN_BUCKET_NAME || "",
+});
+
+/** Staged files (relatedId null) older than this are admin-reapable orphans. */
+export const FILES_STAGING_TTL_DAYS = num("FILES_STAGING_TTL_DAYS", process.env.FILES_STAGING_TTL_DAYS, 7);

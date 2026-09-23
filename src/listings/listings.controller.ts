@@ -8,6 +8,7 @@ import { assertBusinessOwner } from "../common/guards";
 import { t, type Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { FilesService } from "../files/files.service";
 import { SaveListingDto } from "./dto/listing.dto";
 
 /** shallow {key: value} sanity cap for category attributes */
@@ -67,7 +68,8 @@ function deriveVariantLabel(attrs: Record<string, string> | null, defs: AttrDef[
 export class ListingsController {
   constructor(
     private readonly prisma: PrismaService,
-    private readonly cache: CacheService
+    private readonly cache: CacheService,
+    private readonly files: FilesService
   ) {}
 
   private invalidateFor(businessId: string): void {
@@ -114,7 +116,7 @@ export class ListingsController {
   ) {
     if (!businessId) throw AppError.badRequest("businessId is required", "BUSINESS_ID_REQUIRED");
     await assertBusinessOwner(this.prisma, user, businessId, locale);
-    return this.prisma.listing.findMany({
+    const rows = await this.prisma.listing.findMany({
       where: { businessId, isActive: true },
       select: {
         id: true,
@@ -142,6 +144,9 @@ export class ListingsController {
       },
       orderBy: { updatedAt: "desc" },
     });
+    // پنل مالک هم عکس می‌بیند — یک کوئری «in» برای همه‌ی ردیف‌های صفحه
+    const galleries = await this.files.galleryMap(rows.map((r) => r.id));
+    return rows.map((r) => ({ ...r, gallery: galleries.get(r.id) ?? [] }));
   }
 
   @Put("saveListing")

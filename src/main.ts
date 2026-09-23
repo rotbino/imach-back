@@ -5,9 +5,12 @@ import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
 import helmet from "@fastify/helmet";
 import fastifyCookie from "@fastify/cookie";
+import fastifyMultipart from "@fastify/multipart";
+import fastifyStatic from "@fastify/static";
+import path from "node:path";
 import type { FastifyRequest } from "fastify";
 import { AppModule } from "./app.module";
-import { env, isProd } from "./common/config/env";
+import { env, isProd, storage } from "./common/config/env";
 import { DEFAULT_LOCALE, resolveLocale, type Locale } from "./common/i18n/i18n";
 import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
 
@@ -16,7 +19,8 @@ const API_PREFIX = "api/v1";
 async function bootstrap(): Promise<void> {
   const adapter = new FastifyAdapter({
     trustProxy: true, // behind Caddy / reverse proxy
-    bodyLimit: 512 * 1024,
+    // multipart uploads (file service) need headroom above MAX_FILE_SIZE
+    bodyLimit: Math.max(512 * 1024, storage.MAX_FILE_SIZE + 1024 * 1024),
     // request-level logging in dev only (tokens/cookies never logged)
     logger: isProd
       ? false
@@ -28,6 +32,14 @@ async function bootstrap(): Promise<void> {
   // ── Security & platform ────────────────────────────────────────────────────
   await app.register(helmet, { contentSecurityPolicy: false });
   await app.register(fastifyCookie);
+  await app.register(fastifyMultipart, {
+    limits: { fileSize: storage.MAX_FILE_SIZE, files: 1, fields: 10 },
+  });
+
+  // Local storage driver serves ./uploads directly (arvan driver ignores this)
+  if (storage.DRIVER === "local") {
+    await app.register(fastifyStatic, { root: path.resolve(storage.UPLOAD_PATH), prefix: "/uploads/" });
+  }
 
   app.enableCors({
     origin: env.CORS_ORIGINS === "*" ? true : env.CORS_ORIGINS.split(",").map((o) => o.trim()),

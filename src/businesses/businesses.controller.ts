@@ -21,6 +21,7 @@ import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
 import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto } from "./dto/business.dto";
+import { FilesService } from "../files/files.service";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
 const LISTING_SELECT = {
@@ -78,7 +79,8 @@ function invalidateBusiness(cache: CacheService, businessId: string, slug?: stri
 export class BusinessesController {
   constructor(
     private readonly prisma: PrismaService,
-    private readonly cache: CacheService
+    private readonly cache: CacheService,
+    private readonly files: FilesService
   ) {}
 
   @Get("getMyBusinesses")
@@ -214,7 +216,22 @@ export class BusinessesController {
             },
           },
         });
-        return business;
+        if (!business) return business;
+        // ویترین تصویری: لوگوی کسب‌وکار + تامبنیل گالری هر آگهی — داخل همان
+        // کش یک‌دقیقه‌ای؛ جابه‌جایی عکس با تگ business:{id} نامعتبر می‌شود.
+        const [logo] = await Promise.all([
+          this.prisma.file.findFirst({
+            where: { relatedModel: "Business", relatedId: business.id, fieldKey: "logo" },
+            orderBy: { createdAt: "desc" },
+            select: { url: true, thumbUrl: true },
+          }),
+        ]);
+        const galleries = await this.files.galleryMap(business.listings.map((l) => l.id));
+        return {
+          ...business,
+          logo: logo ?? null,
+          listings: business.listings.map((l) => ({ ...l, gallery: galleries.get(l.id) ?? [] })),
+        };
       }
     );
 

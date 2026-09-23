@@ -10,6 +10,7 @@ import { MarketModule } from "./market/market.module";
 import { NotificationsModule } from "./notifications/notifications.module";
 import { ContactsModule } from "./contacts/contacts.module";
 import { AdminModule } from "./admin/admin.module";
+import { FilesModule } from "./files/files.module";
 
 /**
  * iMach API root — feature modules only; cross-cutting infra lives in
@@ -27,6 +28,7 @@ import { AdminModule } from "./admin/admin.module";
     MarketModule,
     NotificationsModule,
     ContactsModule,
+    FilesModule,
     AdminModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
