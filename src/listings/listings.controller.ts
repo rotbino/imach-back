@@ -152,7 +152,7 @@ export class ListingsController {
       where: { id: body.goodId },
       select: { id: true, nameFa: true, category: { select: { attrs: true } } },
     });
-    if (!good) throw AppError.badRequest(t(locale, "catalog.goodNotFound", "گروه کالا یافت نشد"), "GOOD_NOT_FOUND");
+    if (!good) throw AppError.badRequest(t(locale, "catalog.goodNotFound", "گروه محصول یافت نشد"), "GOOD_NOT_FOUND");
 
     // Spec consistency: SELL/BOTH require sell spec, BUY/BOTH require buy spec
     if (body.mode !== "BUY" && !body.sell) {

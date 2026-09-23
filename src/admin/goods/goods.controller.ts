@@ -126,7 +126,7 @@ export class AdminGoodsController {
     const aliases = (body.aliases ?? []).map((a) => a.trim()).filter(Boolean);
     const searchText = goodSearchText({ nameFa: body.nameFa, nameEn: body.nameEn, aliases });
     const dup = await this.prisma.good.findFirst({ where: { searchText }, select: { id: true } });
-    if (dup) throw AppError.conflict(t(locale, "admin.goodExists", "گروه کالایی با همین نام وجود دارد"), "GOOD_EXISTS");
+    if (dup) throw AppError.conflict(t(locale, "admin.goodExists", "گروه محصولی با همین نام وجود دارد"), "GOOD_EXISTS");
 
     const created = await this.prisma.good.create({
       data: {
@@ -156,7 +156,7 @@ export class AdminGoodsController {
       where: { id },
       select: { id: true, nameFa: true, nameEn: true, aliases: true, categoryId: true },
     });
-    if (!row) throw AppError.notFound(t(locale, "admin.goodNotFound", "گروه کالا یافت نشد"));
+    if (!row) throw AppError.notFound(t(locale, "admin.goodNotFound", "گروه محصول یافت نشد"));
 
     if (body.categoryId && body.categoryId !== row.categoryId) {
       const cat = await this.prisma.category.findUnique({
@@ -211,7 +211,7 @@ export class AdminGoodsController {
       where: { id: body.targetId },
       select: { id: true, nameFa: true, nameEn: true, aliases: true },
     });
-    if (!source || !target) throw AppError.notFound(t(locale, "admin.goodNotFound", "گروه کالا یافت نشد"));
+    if (!source || !target) throw AppError.notFound(t(locale, "admin.goodNotFound", "گروه محصول یافت نشد"));
 
     const aliases = [...new Set([...target.aliases, source.nameFa, source.nameEn ?? "", ...source.aliases])]
       .map((a) => a.trim())
