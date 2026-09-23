@@ -23,6 +23,8 @@ export interface SupplierMatch {
   priceMinor: number;
   currency: string | null;
   minOrder: number;
+  /** the seller's capacity signal for this good — feeds volume-fit ranking (null = legacy row) */
+  stock: number | null;
   score: number;
   isSpecial: boolean;
 }
@@ -71,6 +73,7 @@ const SELLER_SELECT = {
   priceMinor: true,
   currency: true,
   minOrder: true,
+  stock: true,
   city: true,
   province: true,
   country: true,
@@ -129,6 +132,22 @@ function volumeFit(minOrder: number, stock: number, volume: number): number {
   if (minOrder > 0 && volume < minOrder) return 4; // smaller than the seller's minimum
   if (stock > 0 && volume > stock * 2) return 2; // far beyond the seller's capacity
   return 30; // inside the working band
+}
+
+/**
+ * Capacity adjustment for the QUOTE flow, calibrated to matchScore's 0–98
+ * scale (isSpecial ≥ 90 must keep its meaning). Rank modifier, never a
+ * filter — a seller who cannot fill the volume slides down, not out:
+ *   need far beyond stock (×2) → −12 · need stretches stock → −5 ·
+ *   comfortably in stock → +3 · unknown stock (legacy) → neutral.
+ * volumeFit stays exclusive to the buy-requests list, where fit is THE
+ * dominant factor — mixing the two scales would corrupt both.
+ */
+function capacityAdj(volume: number, stock: number | null): number {
+  if (!stock || stock <= 0) return 0;
+  if (volume > stock * 2) return -12;
+  if (volume > stock) return -5;
+  return 3;
 }
 
 /** GeoSpot of a listing row — the snapshot, with business fallback for legacy rows. */
@@ -194,7 +213,9 @@ export class MatchingService {
         const b = row.business;
         const priceMinor = row.priceMinor as number;
         const minOrder = row.minOrder ?? 0;
-        const score = matchScore(buyerGeo, spotOf(row), volume, minOrder);
+        // existing min-order rule + capacity reality — a 1-kg seller must not
+        // tie a 200-ton supplier for a 200-ton request, but neither vanishes
+        const score = matchScore(buyerGeo, spotOf(row), volume, minOrder) + capacityAdj(volume, row.stock);
         return {
           sellerId: b.id,
           sellerName: b.name,
@@ -205,6 +226,7 @@ export class MatchingService {
           priceMinor,
           currency: row.currency,
           minOrder,
+          stock: row.stock,
           score,
           isSpecial: score >= 90,
         };
