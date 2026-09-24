@@ -59,7 +59,7 @@ const B: SeedBusiness[] = [
   {
     slug: "nadari-hamedan",
     name: "نادری",
-    phone: "09151010001",
+    phone: "989151010001",
     ownerName: "حاج قربان نادری",
     activityType: "PRODUCER",
     city: "همدان",
@@ -79,7 +79,7 @@ const B: SeedBusiness[] = [
   {
     slug: "shirin-asal-tabriz",
     name: "شیرین عسل",
-    phone: "09151010002",
+    phone: "989151010002",
     ownerName: "بابک شیرین‌عسل",
     activityType: "PRODUCER",
     city: "تبریز",
@@ -99,7 +99,7 @@ const B: SeedBusiness[] = [
   {
     slug: "zagros-materials",
     name: "زاگرس مواد اولیه",
-    phone: "09151010003",
+    phone: "989151010003",
     ownerName: "کریم زاگرسی",
     activityType: "WHOLESALER",
     city: "همدان",
@@ -113,7 +113,7 @@ const B: SeedBusiness[] = [
   {
     slug: "azarbad-materials",
     name: "آذرباد مواد اولیه",
-    phone: "09151010004",
+    phone: "989151010004",
     ownerName: "صمد آذربادی",
     activityType: "WHOLESALER",
     city: "تبریز",
@@ -127,7 +127,7 @@ const B: SeedBusiness[] = [
   {
     slug: "kosar-milk-hamedan",
     name: "کوثر شیر همدان",
-    phone: "09151010005",
+    phone: "989151010005",
     ownerName: "مهدی کوثری",
     activityType: "PRODUCER",
     city: "همدان",
@@ -138,7 +138,7 @@ const B: SeedBusiness[] = [
   {
     slug: "kosar-milk-tabriz",
     name: "کوثر شیر تبریز",
-    phone: "09151010006",
+    phone: "989151010006",
     ownerName: "رسول کوثری‌نژاد",
     activityType: "PRODUCER",
     city: "تبریز",
@@ -149,7 +149,7 @@ const B: SeedBusiness[] = [
   {
     slug: "aria-pakhsh-hamedan",
     name: "پخش آریا",
-    phone: "09151010007",
+    phone: "989151010007",
     ownerName: "اکبر آریایی",
     activityType: "DISTRIBUTOR",
     city: "همدان",
@@ -166,7 +166,7 @@ const B: SeedBusiness[] = [
   {
     slug: "azaran-pakhsh-tabriz",
     name: "پخش آذران",
-    phone: "09151010008",
+    phone: "989151010008",
     ownerName: "یاشار آذری",
     activityType: "DISTRIBUTOR",
     city: "تبریز",
@@ -182,7 +182,7 @@ const B: SeedBusiness[] = [
   {
     slug: "super-nikroosh-hamedan",
     name: "سوپرمارکت نیک‌روش",
-    phone: "09151010009",
+    phone: "989151010009",
     ownerName: "علی نیک‌روش",
     activityType: "RETAILER",
     city: "همدان",
@@ -191,7 +191,7 @@ const B: SeedBusiness[] = [
   {
     slug: "super-arin-tabriz",
     name: "سوپرمارکت آرین",
-    phone: "09151010010",
+    phone: "989151010010",
     ownerName: "سامان آرینی",
     activityType: "RETAILER",
     city: "تبریز",

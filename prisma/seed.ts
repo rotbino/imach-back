@@ -8,7 +8,7 @@
  * 4) Demo businesses + listings — price in priceMinor (RIAL = smallest unit
  *    of IRR), currency inherited per business, brand/attrs on some rows
  *
- * Demo accounts: phone 0912000000N / password "ImachDemo1234" (N = 1..11)
+ * Demo accounts: phone 98912000000N (intl, no trunk 0) / password "ImachDemo1234" (N = 1..11)
  * Run: npm run seed
  */
 import { PrismaClient } from "@prisma/client";
@@ -280,7 +280,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "خورشید مارکت",
     activityType: "RETAILER",
     city: "تهران",
-    phone: "09120000001",
+    phone: "989120000001",
     listings: [
       { good: "برنج هاشمی", mode: "BOTH", sell: { price: 870000, stock: 600, minOrder: 5 }, buy: { volume: 2000, frequency: "MONTHLY" } },
       { good: "روغن نباتی", mode: "BOTH", sell: { price: 13800000, stock: 120, minOrder: 2, brand: "مهرام" }, buy: { volume: 300, frequency: "MONTHLY" } },
@@ -295,7 +295,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "طبیعت‌دانه پخش",
     activityType: "DISTRIBUTOR",
     city: "تهران",
-    phone: "09120000002",
+    phone: "989120000002",
     listings: [
       { good: "برنج هاشمی", mode: "SELL", sell: { price: 795000, stock: 18000, minOrder: 500 } },
       { good: "عدس", mode: "SELL", sell: { price: 685000, stock: 9000, minOrder: 300 } },
@@ -309,7 +309,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "برنج‌سرای گیلان",
     activityType: "WHOLESALER",
     city: "رشت",
-    phone: "09120000003",
+    phone: "989120000003",
     listings: [
       { good: "برنج هاشمی", mode: "SELL", sell: { price: 805000, stock: 12000, minOrder: 400 } },
       { good: "عدس", mode: "SELL", sell: { price: 670000, stock: 4000, minOrder: 200 } },
@@ -320,7 +320,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "پخش گستر البرز",
     activityType: "DISTRIBUTOR",
     city: "کرج",
-    phone: "09120000004",
+    phone: "989120000004",
     listings: [
       { good: "روغن نباتی", mode: "SELL", sell: { price: 13150000, stock: 2400, minOrder: 50 } },
       { good: "شکر", mode: "SELL", sell: { price: 20750000, stock: 1800, minOrder: 50 } },
@@ -333,7 +333,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "شیرین‌عسل اردبیل",
     activityType: "PRODUCER",
     city: "اردبیل",
-    phone: "09120000005",
+    phone: "989120000005",
     listings: [
       { good: "عسل طبیعی", mode: "SELL", sell: { price: 6450000, stock: 3200, minOrder: 10, brand: "طبیعت" } },
       { good: "کارتن بسته‌بندی", mode: "BUY", buy: { volume: 4000, frequency: "MONTHLY" } },
@@ -345,7 +345,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "آسیاب پارس مشهد",
     activityType: "PRODUCER",
     city: "مشهد",
-    phone: "09120000006",
+    phone: "989120000006",
     listings: [
       { good: "آرد گندم", mode: "SELL", sell: { price: 9650000, stock: 8000, minOrder: 100, brand: "شکوفه" } },
       { good: "گندم خام", mode: "BUY", buy: { volume: 120, frequency: "WEEKLY" } },
@@ -357,7 +357,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "تجارت‌سرای امید",
     activityType: "MERCHANT",
     city: "تهران",
-    phone: "09120000007",
+    phone: "989120000007",
     listings: [
       { good: "خرمای خازویی", mode: "SELL", sell: { price: 6800000, stock: 900, minOrder: 5, brand: "امید", attrs: { weight: "500g", packaging: "carton" } } },
       { good: "خرمای پیارم", mode: "SELL", sell: { price: 15500000, stock: 300, minOrder: 3, brand: "امید", attrs: { weight: "500g", packaging: "carton" } } },
@@ -372,7 +372,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "هایپر مهربان",
     activityType: "RETAILER",
     city: "تهران",
-    phone: "09120000008",
+    phone: "989120000008",
     listings: [
       { good: "روغن نباتی", mode: "BUY", buy: { volume: 40, frequency: "MONTHLY" } },
       { good: "برنج هاشمی", mode: "BUY", buy: { volume: 500, frequency: "MONTHLY" } },
@@ -384,7 +384,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "پخش نیک‌آور",
     activityType: "DISTRIBUTOR",
     city: "قم",
-    phone: "09120000009",
+    phone: "989120000009",
     listings: [
       { good: "چای سیاه", mode: "BUY", buy: { volume: 60, frequency: "MONTHLY" } },
       { good: "شکر", mode: "BUY", buy: { volume: 100, frequency: "MONTHLY" } },
@@ -396,7 +396,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "نان‌وری رحمت",
     activityType: "BUSINESS_CONSUMER",
     city: "کرج",
-    phone: "09120000010",
+    phone: "989120000010",
     listings: [
       { good: "آرد گندم", mode: "BUY", buy: { volume: 300, frequency: "WEEKLY" } },
       { good: "شکر", mode: "BUY", buy: { volume: 50, frequency: "WEEKLY" } },
@@ -407,7 +407,7 @@ const BUSINESSES: DemoBusiness[] = [
     name: "فروشگاه زیتون",
     activityType: "RETAILER",
     city: "شیراز",
-    phone: "09120000011",
+    phone: "989120000011",
     listings: [
       { good: "آب‌میوه", mode: "BUY", buy: { volume: 25, frequency: "MONTHLY" } },
       { good: "عسل طبیعی", mode: "BUY", buy: { volume: 20, frequency: "MONTHLY" } },
@@ -417,7 +417,7 @@ const BUSINESSES: DemoBusiness[] = [
 ];
 
 const DEMO_PASSWORD = "ImachDemo1234";
-const ADMIN_PHONE = "09120000000"; // role=ADMIN — opens /admin on the site
+const ADMIN_PHONE = "989120000000"; // role=ADMIN — opens /admin on the site
 
 const FOLLOWS: { buyerSlug: string; supplierSlug: string }[] = [
   { buyerSlug: "khorshid-market", supplierSlug: "tabiat-daneh" },
