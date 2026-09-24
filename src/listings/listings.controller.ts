@@ -72,8 +72,15 @@ export class ListingsController {
     private readonly files: FilesService
   ) {}
 
-  private invalidateFor(businessId: string): void {
+  /**
+   * Cache tags of everything a listing touches. The public vitrine
+   * (getBusiness/:slug) is keyed by slug, the rest by id — BOTH tags go so a
+   * save/delete reaches every cached view in the same tick (خواسته‌ی کاربر:
+   * عکس و کالای تازه باید همان لحظه در کاتالوگ دیده شود).
+   */
+  private invalidateFor(businessId: string, slug?: string): void {
     this.cache.invalidateTag(`business:${businessId}`);
+    if (slug) this.cache.invalidateTag(`business:slug:${slug}`);
     this.cache.invalidateTag(`market:board:${businessId}`);
     this.cache.invalidateTag(`market:sugg:${businessId}`);
     this.cache.invalidateTag(`market:ssugg:${businessId}`);
@@ -248,7 +255,7 @@ export class ListingsController {
       });
     }
 
-    this.invalidateFor(business.id);
+    this.invalidateFor(business.id, business.slug);
     return listing;
   }
 
@@ -259,12 +266,12 @@ export class ListingsController {
       select: { id: true, businessId: true, isActive: true },
     });
     if (!listing) throw AppError.notFound("Listing not found");
-    await assertBusinessOwner(this.prisma, user, listing.businessId, locale);
+    const owner = await assertBusinessOwner(this.prisma, user, listing.businessId, locale);
     // SOFT delete — the row leaves the catalog but Inquiry/Offer/PriceLog
     // history (the price-trend chart) stays intact. Re-saving the same spec
     // re-lists it.
     await this.prisma.listing.update({ where: { id: listing.id }, data: { isActive: false } });
-    this.invalidateFor(listing.businessId);
+    this.invalidateFor(listing.businessId, owner.slug);
     return { ok: true };
   }
 }

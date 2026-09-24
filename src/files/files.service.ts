@@ -393,18 +393,28 @@ export class FilesService {
 
   // ─── Cache coherence ───────────────────────────────────────────────────────
 
-  /** Logo/gallery/avatar swaps must reach the cached vitrine immediately. */
+  /**
+   * Logo/gallery/avatar swaps must reach the cached vitrine IMMEDIATELY
+   * (خواسته‌ی کاربر: «بلافاصله بعد از ثبت کالا عکس در کاتالوگ دیده بشه»).
+   * The public profile is keyed+tagged by slug, everything else by id — both
+   * go, plus the market boards that may carry the same picture.
+   */
   private async bustCaches(model: RelatedModel, modelId: string | null): Promise<void> {
     try {
-      if (model === "Business" && modelId) {
-        this.cache.invalidateTag(`business:${modelId}`);
-      } else if (model === "Listing" && modelId) {
-        const listing = await this.prisma.listing.findUnique({ where: { id: modelId }, select: { businessId: true } });
-        if (listing) {
-          this.cache.invalidateTag(`business:${listing.businessId}`);
-          this.cache.invalidateTag(`market:board:${listing.businessId}`);
-        }
-      }
+      const businessId =
+        model === "Business" && modelId
+          ? modelId
+          : model === "Listing" && modelId
+            ? (await this.prisma.listing.findUnique({ where: { id: modelId }, select: { businessId: true } }))?.businessId
+            : null;
+      if (!businessId) return;
+      const biz = await this.prisma.business.findUnique({ where: { id: businessId }, select: { slug: true } });
+      if (biz) this.cache.invalidateTag(`business:slug:${biz.slug}`);
+      this.cache.invalidateTag(`business:${businessId}`);
+      this.cache.invalidateTag(`market:board:${businessId}`);
+      this.cache.invalidateTag(`market:home:${businessId}`);
+      this.cache.invalidateTag(`market:sugg:${businessId}`);
+      this.cache.invalidateTag(`market:ssugg:${businessId}`);
     } catch {
       /* non-blocking */
     }
