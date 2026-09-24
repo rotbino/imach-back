@@ -16,3 +16,6 @@ dist/
 # logs & OS
 *.log
 .DS_Store
+
+# فایل‌های آپلودی محلی (درایور local) — در پروداکشن آروان است
+uploads/
