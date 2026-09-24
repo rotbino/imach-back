@@ -347,6 +347,11 @@ export class BusinessesController {
       if (va !== vb) return vb - va;
       return b.updatedAt.getTime() - a.updatedAt.getTime();
     });
-    return rows.slice(0, 100);
+
+    // گالری هر آگهی — اولین عکس روی کارت‌های بازار دیده می‌شود (خواسته‌ی کاربر:
+    // «اولین عکس باید در هر جایی که کارت کالا داریم نمایش داده بشه»)
+    const page = rows.slice(0, 100);
+    const galleries = await this.files.galleryMap(page.map((r) => r.id));
+    return page.map((r) => ({ ...r, gallery: galleries.get(r.id) ?? [] }));
   }
 }
