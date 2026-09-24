@@ -9,6 +9,8 @@ import { t, type Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { FilesService } from "../files/files.service";
+import { ProductsService } from "../products/products.service";
+import { BulkSaveDto } from "../products/dto/product.dto";
 import { SaveListingDto } from "./dto/listing.dto";
 
 /** shallow {key: value} sanity cap for category attributes */
@@ -69,7 +71,8 @@ export class ListingsController {
   constructor(
     private readonly prisma: PrismaService,
     private readonly cache: CacheService,
-    private readonly files: FilesService
+    private readonly files: FilesService,
+    private readonly products: ProductsService
   ) {}
 
   /**
@@ -130,6 +133,7 @@ export class ListingsController {
         mode: true,
         variantKey: true,
         variantLabel: true,
+        productId: true,
         priceMinor: true,
         currency: true,
         attrs: true,
@@ -185,12 +189,47 @@ export class ListingsController {
     const variantKey = deriveVariantKey(attrs);
     const variantLabel = deriveVariantLabel(attrs, (good.category?.attrs as AttrDef[] | null) ?? null);
 
+    // ── لایه‌ی مرجع محصول (لینک خاموش) — هیچ قدم و فیلد جدیدی برای کاربر ──
+    // اگر کلاینت productId آورد (انتخابگر)، همان اعتبارسنجی و وصل می‌شود؛
+    // وگرنه از دلِ برند+ویژگی‌هایی که همین حالا تایپ شده، find-or-create می‌شود.
+    // کالای ساده بدون برند/ویژگی (فله) بدون شناسه می‌ماند — همان مسیر امروز.
+    let productId: string | null = null;
+    let productIdentity: { label: string; searchText: string } | null = null;
+    if (body.productId) {
+      const p = await this.prisma.product.findUnique({
+        where: { id: body.productId },
+        select: { id: true, goodId: true, status: true, label: true, searchText: true },
+      });
+      if (!p || p.status === "MERGED") {
+        throw AppError.badRequest(t(locale, "products.notFound", "محصول مرجع یافت نشد"), "PRODUCT_NOT_FOUND");
+      }
+      if (p.goodId !== body.goodId) {
+        throw AppError.badRequest(t(locale, "products.goodMismatch", "محصول با گروه کالا هم‌خوان نیست"), "PRODUCT_GOOD_MISMATCH");
+      }
+      productId = p.id;
+      productIdentity = { label: p.label, searchText: p.searchText };
+    } else {
+      const linked = await this.products.findOrCreateForListing(user, {
+        goodId: body.goodId,
+        brandId,
+        brandName: body.brandName,
+        attrs,
+        locale,
+      });
+      productId = linked?.id ?? null;
+      productIdentity = linked ? { label: linked.label, searchText: linked.searchText } : null;
+    }
+
     const data = {
       mode: body.mode,
       brandId, // empty input explicitly detaches the brand
+      productId,
+      // آگهیِ متصل به محصولِ مشترک، کلید واریانتش را از خودِ محصول می‌گیرد —
+      // دو SKU از یک گود (مکنزی + باريلا) دو ردیف جدا می‌مانند و تکرارِ همان
+      // انتخاب توسط همان فروشنده، همان ردیف را به‌روز می‌کند (همگرا، نه دوبله)
+      ...(productIdentity ? { variantKey: productIdentity.searchText.slice(0, 60), variantLabel: productIdentity.label } : {}),
       ...(attrs ? { attrs } : {}),
-      variantKey,
-      variantLabel,
+      ...(productIdentity ? {} : { variantKey, variantLabel }),
       isActive: true, // saving a previously deleted variant re-lists it
       // geo snapshot — the matcher filters listings directly at scale
       city: business.city,
@@ -209,7 +248,7 @@ export class ListingsController {
         : { volume: null, frequency: null }),
     };
 
-    const unique = { businessId_goodId_variantKey: { businessId: business.id, goodId: body.goodId, variantKey } };
+    const unique = { businessId_goodId_variantKey: { businessId: business.id, goodId: body.goodId, variantKey: productIdentity ? productIdentity.searchText.slice(0, 60) : variantKey } };
     const existing = await this.prisma.listing.findUnique({
       where: unique,
       select: { id: true, priceMinor: true },
@@ -224,6 +263,7 @@ export class ListingsController {
         mode: true,
         variantKey: true,
         variantLabel: true,
+        productId: true,
         priceMinor: true,
         currency: true,
         attrs: true,
@@ -259,8 +299,89 @@ export class ListingsController {
     return listing;
   }
 
+  /**
+   * PUT /listings/bulkSave — one picker confirmation → N listings
+   * (خواسته‌ی کاربر: فروشنده‌ی پرقلم تیک می‌زند، قیمت‌ها را در یک جدول فشرده
+   * پر می‌کند، یک‌جا ثبت می‌کند). Same upsert contract as saveListing with
+   * variantKey="" — the plain offer of each picked Product.
+   * BUY rows MAY omit volume — the buy list forms gradually («تیک بزن،
+   * مقدارش را بعداً بده») and shows them with a «مقدار بعداً» badge.
+   */
+  @Put("bulkSave")
+  async bulkSave(@Body() body: BulkSaveDto, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    if (body.items.length === 0) return { saved: 0, failed: 0, items: [] };
+
+    // one shot — products of THIS batch only, MERGED ones fail per-item
+    const ids = [...new Set(body.items.map((i) => i.productId))];
+    const productRows = await this.prisma.product.findMany({
+      where: { id: { in: ids } },
+      select: { id: true, goodId: true, status: true, brandId: true, label: true, searchText: true },
+    });
+    const productMap = new Map(productRows.map((p) => [p.id, p]));
+
+    let saved = 0;
+    let failed = 0;
+    const savedRows: { productId: string; listingId: string }[] = [];
+
+    for (const item of body.items) {
+      const p = productMap.get(item.productId);
+      if (!p || p.status === "MERGED") {
+        failed++;
+        continue;
+      }
+      if (body.mode === "SELL" && !(item.priceMinor && item.priceMinor > 0)) {
+        failed++; // picker UI enforces price — this is the API safety net
+        continue;
+      }
+      const data = {
+        mode: body.mode,
+        brandId: p.brandId ?? null,
+        productId: p.id,
+        attrs: null,
+        // variantKey از هویت محصول — هر SKU پیک‌شده ردیف خودش را می‌گیرد
+        variantKey: p.searchText.slice(0, 60),
+        variantLabel: p.label,
+        isActive: true,
+        city: business.city,
+        province: business.province ?? provinceOf(business.city),
+        country: business.country,
+        ...(body.mode === "SELL"
+          ? {
+              priceMinor: item.priceMinor!,
+              currency: business.currency,
+              stock: item.stock ?? 0,
+              minOrder: item.minOrder ?? 1,
+              volume: null,
+              frequency: null,
+            }
+          : {
+              priceMinor: null,
+              currency: null,
+              stock: null,
+              minOrder: null,
+              volume: item.volume ?? null,
+              frequency: item.frequency ?? "MONTHLY",
+            }),
+      };
+      const unique = { businessId_goodId_variantKey: { businessId: business.id, goodId: p.goodId, variantKey: p.searchText.slice(0, 60) } };
+      const row = await this.prisma.listing.upsert({
+        where: unique,
+        create: { businessId: business.id, goodId: p.goodId, ...data },
+        update: data,
+        select: { id: true },
+      });
+      saved++;
+      savedRows.push({ productId: p.id, listingId: row.id });
+    }
+
+    if (saved > 0) this.invalidateFor(business.id, business.slug);
+    return { saved, failed, items: savedRows };
+  }
+
   @Delete("deleteListing/:id")
   async deleteListing(@Param("id") id: string, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
+    if (!/^[0-9a-fA-F]{24}$/.test(id)) throw AppError.notFound("Listing not found"); // bad id → 404, not a 500
     const listing = await this.prisma.listing.findUnique({
       where: { id },
       select: { id: true, businessId: true, isActive: true },

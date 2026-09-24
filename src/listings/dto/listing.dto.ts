@@ -26,6 +26,13 @@ export class SaveListingDto {
   @MaxLength(60)
   brandName?: string;
 
+  /** shared SKU (the picker's pick) — validated server-side against goodId;
+   * omitted → identity is derived silently from brandName+attrs */
+  @IsOptional()
+  @IsString()
+  @MaxLength(40)
+  productId?: string;
+
   /** category attribute values (weight, packaging …) — shallow string map */
   @IsOptional()
   @IsObject()

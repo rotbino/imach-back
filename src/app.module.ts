@@ -4,6 +4,7 @@ import { ThrottlerGuard, ThrottlerModule } from "@nestjs/throttler";
 import { CommonModule } from "./common/common.module";
 import { AuthModule } from "./auth/auth.module";
 import { GoodsModule } from "./goods/goods.module";
+import { ProductsModule } from "./products/products.module";
 import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
 import { MarketModule } from "./market/market.module";
@@ -23,6 +24,7 @@ import { FilesModule } from "./files/files.module";
     CommonModule,
     AuthModule,
     GoodsModule,
+    ProductsModule,
     BusinessesModule,
     ListingsModule,
     MarketModule,
