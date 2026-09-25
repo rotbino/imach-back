@@ -1,4 +1,4 @@
-import { IsIn, IsObject, IsOptional, IsString, MaxLength } from "class-validator";
+import { IsIn, IsObject, IsOptional, IsString, Matches, MaxLength } from "class-validator";
 import { BuySpecDto, SellSpecDto, TRADE_MODES } from "../../goods/dto/goods.dto";
 
 /**
@@ -32,6 +32,14 @@ export class SaveListingDto {
   @IsString()
   @MaxLength(40)
   productId?: string;
+
+  /** the exact row being edited — when present the save UPDATES this row in
+   * place (id, gallery and price history survive) instead of upserting by
+   * identity key. Without it, a legacy row would fork into an imageless twin. */
+  @IsOptional()
+  @IsString()
+  @Matches(/^[0-9a-fA-F]{24}$/)
+  listingId?: string;
 
   /** category attribute values (weight, packaging …) — shallow string map */
   @IsOptional()
