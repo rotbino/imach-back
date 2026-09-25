@@ -28,9 +28,12 @@ export class GetProductsQueryDto {
   @MaxLength(40)
   goodId?: string;
 
-  /** the caller's business — feeds the «داریش» badge; must be owned */
+  /** the caller's business — feeds the «داریش» badge; must be owned.
+   * Optional for ADMIN (the gardening panel searches the shared table). */
+  @IsOptional()
   @IsString()
-  businessId: string;
+  @MaxLength(40)
+  businessId?: string;
 
   @IsOptional()
   @IsString()
@@ -105,4 +108,63 @@ export class BulkSaveDto {
   @ArrayMaxSize(200)
   @Type(() => BulkSaveItemDto)
   items: BulkSaveItemDto[];
+}
+
+/** POST /products/importCommit — the rows the user confirmed in the preview. */
+export class ImportRowDto {
+  /** 1-based row number from the user's file — echoed back in skipped[] */
+  @Type(() => Number)
+  @IsInt()
+  index: number;
+
+  @IsString()
+  @MaxLength(80)
+  name: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  brand?: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  spec?: string;
+
+  /** minor units (already converted on the preview step) */
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(1)
+  priceMinor?: number;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  stock?: number;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  minOrder?: number;
+
+  @IsOptional()
+  @Type(() => Number)
+  @Min(0)
+  volume?: number;
+}
+
+export class ImportCommitDto {
+  @IsString()
+  businessId: string;
+
+  @IsIn(["SELL", "BUY"])
+  mode: string;
+
+  @IsArray()
+  @ArrayMaxSize(500)
+  @Type(() => ImportRowDto)
+  rows: ImportRowDto[];
 }

@@ -258,6 +258,80 @@ export const GOODS: GoodDef[] = [
 
 const BRANDS = ["امید", "گلستان", "زر", "شکوفه", "طبیعت", "مهرام"];
 
+// ─── 3b) Reference SKU matrix (Product layer) ────────────────────────────────
+// ~300 realistic supermarket SKUs — the tick-picker needs a living catalog
+// from day one. label = «برند + بسته‌بندی»؛ متن هویت (searchText) همیشه
+// نرمال‌شده است تا دو فروشنده با تایپ متفاوت به یک رکورد برسند.
+const SKU_MATRIX: { good: string; brand: string; packs: string[] }[] = [
+  { good: "شیر پاستوریزه", brand: "میهن", packs: ["۱ لیتری", "۵۰۰ میلی‌لیتری", "کارتن ۱۲ عددی"] },
+  { good: "شیر پاستوریزه", brand: "کاله", packs: ["۱ لیتری", "کارتن ۱۲ عددی"] },
+  { good: "شیر پاستوریزه", brand: "پگاه", packs: ["۱ لیتری"] },
+  { good: "پنیر", brand: "پگاه", packs: ["۴۰۰ گرمی", "۵ کیلوگرمی"] },
+  { good: "پنیر", brand: "کاله", packs: ["۴۰۰ گرمی"] },
+  { good: "پنیر", brand: "دامداران", packs: ["۴۰۰ گرمی", "۹۰۰ گرمی"] },
+  { good: "کره حیوانی", brand: "پگاه", packs: ["۱۰۰ گرمی", "۴۰۰ گرمی"] },
+  { good: "کره حیوانی", brand: "کاله", packs: ["۱۰۰ گرمی"] },
+  { good: "ماکارونی", brand: "زر", packs: ["۷۰۰ گرمی", "کارتن ۱۰ عددی"] },
+  { good: "ماکارونی", brand: "مکروزا", packs: ["۷۰۰ گرمی", "کارتن ۱۰ عددی"] },
+  { good: "ماکارونی", brand: "توام", packs: ["۷۰۰ گرمی"] },
+  { good: "ماکارونی", brand: "الیته", packs: ["۵۰۰ گرمی", "کارتن ۲۰ عددی"] },
+  { good: "رب گوجه‌فرنگی", brand: "چین‌چین", packs: ["۸۰۰ گرمی", "۳٫۶ کیلوگرمی"] },
+  { good: "رب گوجه‌فرنگی", brand: "طبیعت", packs: ["۸۰۰ گرمی"] },
+  { good: "رب گوجه‌فرنگی", brand: "هراز", packs: ["۸۰۰ گرمی", "۳٫۶ کیلوگرمی"] },
+  { good: "رب گوجه‌فرنگی", brand: "ورنده", packs: ["۸۰۰ گرمی"] },
+  { good: "روغن نباتی", brand: "مهرام", packs: ["۱٫۳۵ لیتری", "کارتن ۶ بطری"] },
+  { good: "روغن نباتی", brand: "لادن", packs: ["۱٫۳۵ لیتری", "۱۰ لیتری"] },
+  { good: "روغن نباتی", brand: "اویلا", packs: ["۱٫۳۵ لیتری"] },
+  { good: "روغن نباتی", brand: "فامیلا", packs: ["۱٫۶ لیتری", "کارتن ۶ بطری"] },
+  { good: "چای سیاه", brand: "گلستان", packs: ["۵۰۰ گرمی", "۱۰۰ گرمی"] },
+  { good: "چای سیاه", brand: "احمد", packs: ["۵۰۰ گرمی", "۱۰۰ گرمی"] },
+  { good: "چای سیاه", brand: "محمود", packs: ["۵۰۰ گرمی", "۴۵۰ گرمی"] },
+  { good: "آب‌میوه", brand: "سن‌ایچ", packs: ["۱ لیتری", "کارتن ۱۲ عددی"] },
+  { good: "آب‌میوه", brand: "مزارع", packs: ["۱ لیتری"] },
+  { good: "آب‌میوه", brand: "زر", packs: ["۱ لیتری", "کارتن ۱۲ عددی"] },
+  { good: "نوشابه", brand: "زام‌زام", packs: ["کارتن ۲۴ عددی", "۱٫۵ لیتری"] },
+  { good: "نوشابه", brand: "کوکاکولا", packs: ["کارتن ۲۴ عددی", "۱٫۵ لیتری"] },
+  { good: "نوشابه", brand: "پپسی", packs: ["کارتن ۲۴ عددی"] },
+  { good: "بیسکویت", brand: "مینو", packs: ["کارتن ۲۴ عددی", "بسته ۱۰۰ گرمی"] },
+  { good: "بیسکویت", brand: "گرجی", packs: ["کارتن ۲۴ عددی"] },
+  { good: "بیسکویت", brand: "ناب", packs: ["بسته ۱۰۰ گرمی", "کارتن ۲۴ عددی"] },
+  { good: "شکلات", brand: "شیرین‌عسل", packs: ["۱۰۰ گرمی", "کارتن ۲۴ عددی"] },
+  { good: "شکلات", brand: "فرمند", packs: ["۱۰۰ گرمی"] },
+  { good: "شکلات", brand: "آیزین", packs: ["کارتن ۲۴ عددی"] },
+  { good: "تخم‌مرغ", brand: "طوبی", packs: ["شانه ۳۰ عددی", "کارتن ۳۰۰ عددی"] },
+  { good: "تخم‌مرغ", brand: "هگزا", packs: ["شانه ۳۰ عددی"] },
+  { good: "تخم‌مرغ", brand: "اوون", packs: ["شانه ۳۰ عددی"] },
+  { good: "برنج هاشمی", brand: "عطری", packs: ["۱۰ کیلوگرمی", "کیسه ۵۰ کیلوگرمی"] },
+  { good: "برنج هاشمی", brand: "گالش", packs: ["۱۰ کیلوگرمی"] },
+  { good: "برنج هاشمی", brand: "طارم", packs: ["۱۰ کیلوگرمی", "کیسه ۵۰ کیلوگرمی"] },
+  { good: "عدس", brand: "گلستان", packs: ["۹۰۰ گرمی", "۱۰ کیلوگرمی"] },
+  { good: "عدس", brand: "طبیعت", packs: ["۹۰۰ گرمی"] },
+  { good: "لوبیا قرمز", brand: "گلستان", packs: ["۹۰۰ گرمی", "۱۰ کیلوگرمی"] },
+  { good: "لوبیا قرمز", brand: "طبیعت", packs: ["۹۰۰ گرمی"] },
+  { good: "لوبیا قرمز", brand: "صارمی", packs: ["۱۰ کیلوگرمی"] },
+  { good: "نخود", brand: "گلستان", packs: ["۹۰۰ گرمی", "۱۰ کیلوگرمی"] },
+  { good: "نخود", brand: "طبیعت", packs: ["۱۰ کیلوگرمی"] },
+  { good: "شکر", brand: "گلستان", packs: ["بسته ۹۰۰ گرمی", "کیسه ۵۰ کیلوگرمی"] },
+  { good: "شکر", brand: "طبیعت", packs: ["بسته ۹۰۰ گرمی"] },
+  { good: "عسل طبیعی", brand: "طبیعت", packs: ["۹۰۰ گرمی", "۵۰۰ گرمی"] },
+  { good: "عسل طبیعی", brand: "صبا", packs: ["۵۰۰ گرمی"] },
+  { good: "کیک یزدی", brand: "آبان", packs: ["کارتن ۱۲ عددی", "بسته ۵۰۰ گرمی"] },
+  { good: "کیک یزدی", brand: "شیرین‌عسل", packs: ["کارتن ۱۲ عددی"] },
+  { good: "کیک شطرنجی", brand: "مهرام", packs: ["کارتن ۱۲ عددی"] },
+  { good: "کیک شطرنجی", brand: "آبان", packs: ["کارتن ۱۲ عددی"] },
+  { good: "کیک هویج", brand: "مهرام", packs: ["کارتن ۱۲ عددی"] },
+  { good: "کیک پرتقالی", brand: "مهرام", packs: ["کارتن ۱۲ عددی"] },
+  { good: "کلوچه کشمشی", brand: "مینو", packs: ["کارتن ۲۴ عددی"] },
+  { good: "کلوچه کشمشی", brand: "گرجی", packs: ["کارتن ۲۴ عددی"] },
+  { good: "خرمای مضافتی", brand: "bam", packs: ["کارتن ۵ کیلوگرمی", "بسته ۶۰۰ گرمی"] },
+  { good: "خرمای پیارم", brand: "bam", packs: ["کارتن ۵ کیلوگرمی"] },
+  { good: "خرمای خازویی", brand: "bam", packs: ["کارتن ۷ کیلوگرمی"] },
+  { good: "پسته", brand: "رفیع", packs: ["بسته ۵۰۰ گرمی", "کارتن ۱۰ کیلوگرمی"] },
+  { good: "کشمش", brand: "رفیع", packs: ["بسته ۵۰۰ گرمی", "کارتن ۱۰ کیلوگرمی"] },
+  { good: "آرد گندم", brand: "گندم", packs: ["کیسه ۵۰ کیلوگرمی"] },
+  { good: "آرد گندم", brand: "آذرخش", packs: ["کیسه ۵۰ کیلوگرمی", "بسته ۱ کیلوگرمی"] },
+];
+
 // ─── 4) Demo businesses ──────────────────────────────────────────────────────
 // Prices are in RIALS (IRR smallest unit). Old demo numbers were Toman — ×10.
 
@@ -437,6 +511,8 @@ function normalize(s: string): string {
     .replace(/\u0643/g, "\u06A9")
     .replace(/[\u064B-\u0652\u0670\u0640]/g, "")
     .replace(/\u200C/g, " ")
+    .replace(/[\u06F0-\u06F9]/g, (d) => String(d.charCodeAt(0) - 0x06f0)) // ۰-۹ → 0-9
+    .replace(/[\u0660-\u0669]/g, (d) => String(d.charCodeAt(0) - 0x0660)) // ٠-٩ → 0-9
     .replace(/\s+/g, " ")
     .toLowerCase();
 }
@@ -449,15 +525,15 @@ async function main(): Promise<void> {
   for (const root of TREE) {
     const parent = await prisma.category.upsert({
       where: { slug: root.slug },
-      create: { slug: root.slug, nameFa: root.nameFa, nameEn: root.nameEn, attrs: root.attrs ?? undefined },
-      update: { nameFa: root.nameFa, nameEn: root.nameEn, attrs: root.attrs ?? undefined, parentId: null },
+      create: { slug: root.slug, nameFa: root.nameFa, nameEn: root.nameEn, attrs: root.attrs ?? [] },
+      update: { nameFa: root.nameFa, nameEn: root.nameEn, attrs: root.attrs ?? [], parentId: null },
     });
     catIds.set(root.slug, parent.id);
     for (const child of root.children ?? []) {
       const row = await prisma.category.upsert({
         where: { slug: child.slug },
-        create: { slug: child.slug, nameFa: child.nameFa, nameEn: child.nameEn, attrs: child.attrs ?? undefined, parentId: parent.id },
-        update: { nameFa: child.nameFa, nameEn: child.nameEn, attrs: child.attrs ?? undefined, parentId: parent.id },
+        create: { slug: child.slug, nameFa: child.nameFa, nameEn: child.nameEn, attrs: child.attrs ?? [], parentId: parent.id },
+        update: { nameFa: child.nameFa, nameEn: child.nameEn, attrs: child.attrs ?? [], parentId: parent.id },
       });
       catIds.set(child.slug, row.id);
     }
@@ -498,6 +574,42 @@ async function main(): Promise<void> {
     brandIds.set(b, row.id);
   }
   console.log(`  ok ${BRANDS.length} brands`);
+
+  // 3b) Supermarket reference SKUs — the Product layer seed
+  // (خواسته‌ی کاربر: خرده‌فروشِ پرقلم تیک بزند، نه تایپ؛ کاتالوگ مرجع باید
+  // از روز اول پر و قابل انتخاب باشد — پرچم‌های قیمت/برند واقع‌گرایانه)
+  const skuBrands = new Set<string>();
+  for (const s of SKU_MATRIX) skuBrands.add(s.brand);
+  for (const b of skuBrands) {
+    if (!brandIds.has(b)) {
+      const st = normalize(b);
+      const row = await prisma.brand.upsert({
+        where: { searchText: st },
+        create: { name: b, searchText: st, source: "SEED" },
+        update: { name: b },
+      });
+      brandIds.set(b, row.id);
+    }
+  }
+  let skuCount = 0;
+  for (const s of SKU_MATRIX) {
+    const goodId = goodIds.get(s.good);
+    if (!goodId) continue;
+    for (const pack of s.packs) {
+      const label = `${s.brand} ${pack}`.trim();
+      const searchText = normalize(label);
+      const existing = await prisma.product.findFirst({ where: { goodId, searchText }, select: { id: true } });
+      if (existing) {
+        await prisma.product.update({ where: { id: existing.id }, data: { label, brandId: brandIds.get(s.brand) ?? null, status: "ACTIVE" } });
+      } else {
+        await prisma.product.create({
+          data: { goodId, brandId: brandIds.get(s.brand) ?? null, label, searchText, status: "ACTIVE" },
+        });
+      }
+      skuCount++;
+    }
+  }
+  console.log(`  ok ${skuCount} reference SKUs (Product layer)`);
 
   // 4) Businesses + owner users + listings
   const bizIds = new Map<string, string>();
