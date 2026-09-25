@@ -602,4 +602,33 @@ export class AuthService {
       avatar: avatar ? { url: avatar.url, thumbUrl: avatar.thumbUrl } : null,
     };
   }
+
+  /**
+   * Edit profile — نام و نام خانوادگی مالک کسب‌وکار را به‌روزرسانی می‌کند.
+   * این فیلدها در ویترین کاتالوگ زیر عنوان نشان داده می‌شوند.
+   */
+  async editProfile(
+    user: AuthUser,
+    body: { firstName?: string; lastName?: string },
+    locale: Locale
+  ) {
+    const row = await this.prisma.user.findUnique({ where: { id: user.id }, select: { id: true, firstName: true, lastName: true } });
+    if (!row) throw AppError.notFound("User not found");
+
+    const firstName = (body.firstName ?? "").trim();
+    const lastName = (body.lastName ?? "").trim();
+    if (firstName.length < 2 || lastName.length < 2) {
+      throw AppError.badRequest(
+        t(locale, "auth.nameRequired", "نام و نام خانوادگی را کامل بنویسید"),
+        "NAME_REQUIRED"
+      );
+    }
+    const fullName = `${firstName} ${lastName}`.trim();
+    const updated = await this.prisma.user.update({
+      where: { id: row.id },
+      data: { firstName, lastName, name: fullName },
+    });
+    const publicUser = toPublicUser(updated);
+    return { user: publicUser };
+  }
 }

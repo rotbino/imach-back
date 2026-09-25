@@ -113,4 +113,18 @@ export class AuthController {
   getMe(@CurrentUser() user: AuthUser) {
     return this.authService.getMe(user);
   }
+
+  /**
+   * Edit profile — نام و نام خانوادگی مالک کسب‌وکار را به‌روزرسانی می‌کند.
+   * این فیلدها در ویترین کاتالوگ زیر عنوان نشان داده می‌شوند (خواسته‌ی کاربر).
+   */
+  @Post("editProfile")
+  @UseGuards(JwtAuthGuard)
+  editProfile(
+    @Body() body: { firstName?: string; lastName?: string },
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    return this.authService.editProfile(user, body, locale);
+  }
 }

@@ -210,9 +210,13 @@ export class BusinessesController {
             currency: true,
             isVerified: true,
             isDemo: true,
-            // ویترین اعتماد می‌سازد: نام شخصِ صاحب کاتالوگ (عکس بعداً) —
+            // لوکیشن دقیق و آدرس — فقط مالک در ویترین خودش می‌بیند (برای ویرایش)
+            lat: true,
+            lng: true,
+            address: true,
+            // ویترین اعتماد می‌سازد: نام شخصِ صاحب کاتالوگ + عکس پروفایلش —
             // در عمده‌فروشی طرف مقابل می‌خواهد بداند با چه کسی طرف است.
-            owner: { select: { name: true, firstName: true, lastName: true } },
+            owner: { select: { id: true, name: true, firstName: true, lastName: true } },
             listings: {
               where: { isActive: true },
               select: LISTING_SELECT,
@@ -223,16 +227,29 @@ export class BusinessesController {
         if (!business) return business;
         // ویترین تصویری: لوگوی کسب‌وکار + تامبنیل گالری هر آگهی — داخل همان
         // کش یک‌دقیقه‌ای؛ جابه‌جایی عکس با تگ business:{id} نامعتبر می‌شود.
-        const [logo] = await Promise.all([
+        const [logo, ownerAvatar] = await Promise.all([
           this.prisma.file.findFirst({
             where: { relatedModel: "Business", relatedId: business.id, fieldKey: "logo" },
             orderBy: { createdAt: "desc" },
             select: { url: true, thumbUrl: true },
           }),
+          business.owner
+            ? this.prisma.file.findFirst({
+                where: { relatedModel: "User", relatedId: business.owner.id, fieldKey: "avatar" },
+                orderBy: { createdAt: "desc" },
+                select: { url: true, thumbUrl: true },
+              })
+            : Promise.resolve(null),
         ]);
         const galleries = await this.files.galleryMap(business.listings.map((l) => l.id));
         return {
           ...business,
+          owner: business.owner
+            ? {
+                ...business.owner,
+                avatar: ownerAvatar ? { url: ownerAvatar.url, thumbUrl: ownerAvatar.thumbUrl } : null,
+              }
+            : business.owner,
           logo: logo ?? null,
           listings: business.listings.map((l) => ({ ...l, gallery: galleries.get(l.id) ?? [] })),
         };
