@@ -18,7 +18,7 @@
  * cloud, no token, no proxying through this API.
  */
 
-import { Injectable, HttpStatus } from "@nestjs/common";
+import { Injectable, HttpStatus, OnModuleDestroy, OnModuleInit } from "@nestjs/common";
 import type { FastifyRequest } from "fastify";
 import { randomBytes } from "node:crypto";
 import { CacheService } from "../common/cache/cache.module";
@@ -90,14 +90,64 @@ export interface FileDto {
 }
 
 @Injectable()
-export class FilesService {
+export class FilesService implements OnModuleInit, OnModuleDestroy {
   private readonly driver: StorageDriver;
+  private reaperTimer: NodeJS.Timeout | null = null;
 
   constructor(
     private readonly prisma: PrismaService,
     private readonly cache: CacheService
   ) {
     this.driver = buildStorage(); // fail fast at boot on missing credentials
+  }
+
+  /**
+   * ضدسیستم‌فایل‌کثیف (خواسته‌ی کاربر: «اصلا نباید فایل اضافی در سرور بمونه»):
+   * ردیف‌های staged (relatedId=null) که تا سقف TTL به مدلی نچسبیده‌اند — به
+   * همراه بایت‌های‌شان — خودکار حذف می‌شوند؛ یک بار دیرهنگامِ بعد از بوت و
+   * بعد هر ۶ ساعت. حذف idempotent است، پس چند اینستنس هم تداخل نمی‌کنند.
+   */
+  onModuleInit(): void {
+    const bootDelay = setTimeout(() => {
+      void this.reapStaged();
+    }, 45_000);
+    bootDelay.unref?.();
+    this.reaperTimer = setInterval(() => {
+      void this.reapStaged();
+    }, 6 * 60 * 60 * 1000);
+    this.reaperTimer.unref?.();
+  }
+
+  onModuleDestroy(): void {
+    if (this.reaperTimer) clearInterval(this.reaperTimer);
+  }
+
+  /** حذف کامل (بایت + ردیف) آپلودهای stagged رسوب‌کرده — خودکار و بی‌صدا. */
+  private async reapStaged(): Promise<void> {
+    try {
+      const cutoff = new Date(Date.now() - FILES_STAGING_TTL_DAYS * 86_400_000);
+      const rows = await this.prisma.file.findMany({
+        where: { relatedId: null, createdAt: { lt: cutoff } },
+        select: { id: true, storageKey: true, thumbStorageKey: true },
+        take: 500,
+      });
+      for (const f of rows) {
+        try {
+          await this.driver.delete(f.storageKey);
+          if (f.thumbStorageKey) await this.driver.delete(f.thumbStorageKey).catch(() => undefined);
+        } catch {
+          /* bytes best-effort — row removal is the contract */
+        }
+        await this.prisma.file.delete({ where: { id: f.id } }).catch(() => undefined);
+      }
+      if (rows.length > 0) {
+        // ثانیه‌ای بعد، دسته‌ی بعدی (تخلیه‌ی تدریجی انباشتگاه‌های بزرگ)
+        const next = setTimeout(() => void this.reapStaged(), 5_000);
+        next.unref?.();
+      }
+    } catch {
+      /* the reaper must never wake the users up */
+    }
   }
 
   // ─── Image pipeline (sharp) ────────────────────────────────────────────────
@@ -185,26 +235,53 @@ export class FilesService {
     return listing;
   }
 
-  /** Parse a multipart request into fields + file buffer (Fastify). */
+  /**
+   * Parse a multipart request into fields + file buffer (Fastify).
+   *
+   * ترتیب‌نسبیِ فیلدها نباید مهم باشد: مرورگرها FormData را به همان ترتیبِ
+   * append می‌فرستند و بعضی کلاینت‌ها فایل را اول می‌گذارند، بعضی آخر.
+   * req.file() فقط فیلدهای «قبل از فایل» را می‌دهد و بقیه را می‌باخت —
+   * ریشه‌ی باگِ «عکس آپلود می‌شود ولی هیچ‌وقت به کالا نمی‌چسبد» و
+   * «ویرایش، عکس قبلی را برای همیشه پاک می‌کرد» (replace گم می‌شد).
+   * اینجا کل استریم با req.parts() مصرف می‌شود تا modelId/replace/description
+   * از هر موقعیتی بیایند، گرفته شوند (خواسته‌ی کاربر: رکورد بی‌صاحب ممنوع).
+   */
   async readMultipart(req: FastifyRequest): Promise<{ fields: Record<string, string>; file: { buffer: Buffer; mimetype: string; filename: string } }> {
     const fastifyReq = req as FastifyRequest & {
-      file: () => Promise<PartLike | undefined>;
+      parts: (opts?: unknown) => AsyncIterable<MultipartPart>;
       isMultipart: () => boolean;
     };
     if (!fastifyReq.isMultipart()) {
       throw AppError.badRequest(t("fa", "files.notMultipart", "فایل ارسال نشده است"), "NOT_MULTIPART");
     }
-    const part = await fastifyReq.file();
-    if (!part) throw AppError.badRequest(t("fa", "files.notMultipart", "فایل ارسال نشده است"), "NOT_MULTIPART");
 
     const fields: Record<string, string> = {};
-    for (const [name, value] of Object.entries(part.fields)) {
-      const field = value as { type?: string; value?: unknown } | Array<{ type?: string; value?: unknown }>;
-      const first = Array.isArray(field) ? field[0] : field;
-      if (first && first.type === "field" && typeof first.value === "string") fields[name] = first.value;
+    let file: { buffer: Buffer; mimetype: string; filename: string } | null = null;
+    try {
+      for await (const part of fastifyReq.parts()) {
+        if (part.type === "file") {
+          if (file) {
+            // پلاگین files:1 است؛ محض احتیاط، فایل اضافه را هدر نده — ببلع
+            await part.toBuffer().catch(() => undefined);
+            continue;
+          }
+          const buffer = await part.toBuffer();
+          file = { buffer, mimetype: part.mimetype, filename: part.filename };
+        } else if (typeof part.value === "string") {
+          fields[part.fieldname] = part.value;
+        }
+      }
+    } catch {
+      // بدنه‌ی بریده (PrematureClose) = آپلود ناقص — رکورد نیم‌بند نساز
+      throw AppError.badRequest(
+        t("fa", "files.truncated", "آپلود ناقص بود — دوباره تلاش کنید"),
+        "MULTIPART_TRUNCATED"
+      );
     }
-    const buffer = await (part as { toBuffer: () => Promise<Buffer> }).toBuffer();
-    return { fields, file: { buffer, mimetype: part.mimetype, filename: part.filename } };
+    if (!file) {
+      throw AppError.badRequest(t("fa", "files.notMultipart", "فایل ارسال نشده است"), "NOT_MULTIPART");
+    }
+    return { fields, file };
   }
 
   async upload(
@@ -515,9 +592,12 @@ export class FilesService {
   }
 }
 
-interface PartLike {
-  mimetype: string;
-  filename: string;
-  fields: Record<string, unknown>;
+/** یک پارت multipart از @fastify/multipart — فیلد یا فایل (هر ترتیبی) */
+interface MultipartPart {
+  type?: "field" | "file";
+  fieldname?: string;
+  value?: unknown;
+  mimetype?: string;
+  filename?: string;
   toBuffer: () => Promise<Buffer>;
 }

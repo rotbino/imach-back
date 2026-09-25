@@ -30,7 +30,10 @@ async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, adapter, { logger: isProd ? ["error", "warn"] : undefined });
 
   // ── Security & platform ────────────────────────────────────────────────────
-  await app.register(helmet, { contentSecurityPolicy: false });
+  // CORP = cross-origin: عکس‌های عمومی (درایور local و همین‌طور آروان) از
+  // دامنه‌ی دیگری از صفحه سرو می‌شوند؛ same-origin پیش‌فرضِ helmet آن‌ها را
+  // در مرورگر بلاک می‌کند (عکس آپلودشده در کارت کالا «شکسته» دیده می‌شد)
+  await app.register(helmet, { contentSecurityPolicy: false, crossOriginResourcePolicy: { policy: "cross-origin" } });
   await app.register(fastifyCookie);
   await app.register(fastifyMultipart, {
     limits: { fileSize: storage.MAX_FILE_SIZE, files: 1, fields: 10 },

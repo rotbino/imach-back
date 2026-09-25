@@ -53,10 +53,11 @@ model User {
   language      String         @default("fa")
   businesses    Business[]
   refreshTokens RefreshToken[]
-  /// Basic-data rows this user registered (goods, brands) — the audit trail of
-  /// who grew the catalog. Null creator = system/seed row.
-  createdGoods  Good[]         @relation("GoodCreator")
-  createdBrands Brand[]        @relation("BrandCreator")
+  /// Basic-data rows this user registered (goods, brands, products) — the
+  /// audit trail of who grew the catalog. Null creator = system/seed row.
+  createdGoods    Good[]    @relation("GoodCreator")
+  createdBrands   Brand[]   @relation("BrandCreator")
+  createdProducts Product[] @relation("ProductCreator")
   /// Attribution: the owner of the catalog / invite link this user signed up
   /// through (?ref={businessSlug}). The auto-follow fires later, when the
   /// referred user finally gets a Business (and therefore a BUY page).
@@ -195,6 +196,8 @@ model Good {
   createdById String?   @db.ObjectId
   createdBy   User?     @relation("GoodCreator", fields: [createdById], references: [id], onUpdate: NoAction)
   listings    Listing[]
+  /// SKU-level identities (brand×size) under this class — see Product.
+  products    Product[]
 
   @@index([categoryId])
   @@index([searchText])
@@ -218,6 +221,54 @@ model Brand {
   createdById String?   @db.ObjectId
   createdBy   User?     @relation("BrandCreator", fields: [createdById], references: [id], onUpdate: NoAction)
   listings    Listing[]
+  products    Product[]
+}
+
+/// The shared SKU — the identity layer BETWEEN Good (class) and Listing
+/// (seller's offer), built for retailers with hundreds of items
+/// (خواسته‌ی کاربر: «سوپرمارکتی که ۲۰۰۰ قلم دارد چرا باید همان کالا را هزاران
+/// بار تایپ کند؟ این کالا بین هم‌فروشنده‌ها مشترک است؛ فقط قیمت/موجودی فرق دارد»).
+///
+/// Contracts it inherits verbatim from Good/Brand (نوع جدید = الگوی آشنا، نه
+/// مکانیزم تازه — خط قرمز پیچیدگی):
+///   • normalized searchText + find-or-create on save → duplicates converge
+///   • ACTIVE | PROVISIONAL gardening — provisional rows stay usable for
+///     everyone, they only wait in the admin merge queue
+///   • barcode (GTIN) optional: present → exact identity; absent → same fuzzy
+///     tolerance as Good. NOT @unique in the schema: Mongo unique indexes
+///     index nulls, and most Products (bulk goods) have no barcode —
+///     uniqueness is enforced service-side find-or-create; a partial unique
+///     index can be added by migration when volume justifies it.
+///   • NO structured attrs here — weight/packaging live inside label/searchText
+///     (هر فیلد ساختاریافته‌ی اضافه = مسئله‌ی «۲۵۰گرم/۰.۲۵کیلو» در لایه‌ی جدید);
+///     the only structured key is barcode. Per-seller data stays on Listing.
+///   • Matching NEVER reads Product — the score stays Good-level (خواسته‌ی
+///     کاربر: خریدارِ بی‌برند نباید فروشنده‌های مرتبط را از دست بدهد).
+model Product {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  goodId     String   @db.ObjectId
+  good       Good     @relation(fields: [goodId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  brandId    String?  @db.ObjectId
+  brand      Brand?   @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+  /// «تن ماهی مکنزی ۲۵۰ گرم» — the first text that created it (brand + specs)
+  label      String
+  /// normalized label — same normalizer as Good/Brand, powers find-or-create + picker search
+  searchText String
+  /// GTIN/EAN when known — exact identity for packaged branded goods
+  barcode    String?
+  /// ACTIVE | PROVISIONAL | MERGED (mergedIntoId points at the survivor)
+  status     String   @default("ACTIVE")
+  mergedIntoId String? @db.ObjectId
+  creatorRole String?
+  createdById String?  @db.ObjectId
+  createdBy  User?    @relation("ProductCreator", fields: [createdById], references: [id], onUpdate: NoAction)
+  listings   Listing[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([goodId, searchText])
+  @@index([barcode])
+  @@index([status])
 }
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────
@@ -304,6 +355,11 @@ model Listing {
   /// Optional brand of THIS offer (the reference class stays brand-free)
   brandId String? @db.ObjectId
   brand   Brand?  @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+
+  /// Shared SKU identity (see Product) — null for bulk goods and for rows
+  /// created before this layer; every picker-added row links here.
+  productId String?  @db.ObjectId
+  product   Product? @relation(fields: [productId], references: [id], onDelete: SetNull, onUpdate: NoAction)
 
   // ── sell side ──
   /// Price in the SMALLEST currency unit (rial / cent …) — always an integer.
