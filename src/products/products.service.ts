@@ -40,11 +40,35 @@ export interface ProductRowDto {
     unit: string;
     category: { id: string; slug: string; nameFa: string; nameEn: string };
   };
-  brand: { name: string } | null;
+  brand: { id: string; name: string } | null;
   /** distinct businesses actively SELLING this exact SKU — the trust badge */
   sellers: number;
   /** null = the caller has no listing on this SKU; else their mode on it */
   mineMode: string | null;
+}
+
+/** A brand chip in the picker's horizontal brand strip — name + count. */
+export interface BrandChipDto {
+  id: string;
+  name: string;
+  /** number of products under this brand in the CURRENT filter scope */
+  count: number;
+}
+
+/**
+ * Picker page — items + the brand strip + the category chips, all derived
+ * from the SAME filter scope (q, categoryId, goodId) EXCEPT brandId, so the
+ * brand strip stays stable as the user toggles a brand on/off.
+ */
+export interface PickerPageDto {
+  items: ProductRowDto[];
+  nextCursor: string | null;
+  /** brands present in the current scope (q + categoryId + goodId),
+   *  ranked by product count desc — powers the horizontal brand strip */
+  brands: BrandChipDto[];
+  /** leaf categories present in the current scope (q + brandId + goodId),
+   *  ranked by product count desc — powers the optional category filter */
+  categories: { id: string; nameFa: string; nameEn: string; count: number }[];
 }
 
 const PRODUCT_SELECT = {
@@ -53,6 +77,7 @@ const PRODUCT_SELECT = {
   barcode: true,
   status: true,
   goodId: true,
+  brandId: true,
   good: {
     select: {
       id: true,
@@ -62,7 +87,7 @@ const PRODUCT_SELECT = {
       category: { select: { id: true, slug: true, nameFa: true, nameEn: true } },
     },
   },
-  brand: { select: { name: true } },
+  brand: { select: { id: true, name: true } },
 } as const;
 
 /**
@@ -148,9 +173,60 @@ export class ProductsService {
   }
 
   /**
+   * Ensure every reference good has at least one Product row — the picker
+   * reads from Product, so a Good without one is invisible in the catalog
+   * (خواسته‌ی کاربر: «چرا هر چی توی کاتالوگ مرجع ثبت می کنم چیزی نمیاد»).
+   * A Good with no brand/spec → a single «plain» Product with brandId=null
+   * and searchText = the good's searchText. Idempotent — existing rows stay.
+   *
+   * Called lazily inside listForPicker so a freshly-seeded Good appears in
+   * the picker without a separate cron or admin action (قانون سرعت).
+   */
+  private async ensureDefaultProducts(q?: string): Promise<void> {
+    // فقط وقتی جست‌وجو خالی است یا کوتاه است این کار را بکنیم — روی q طولانی
+    // غیرضروری است و ممکن است هزینه بر باشد (با اینکه take=200 محدود است).
+    if (q && q.length > 3) return;
+    try {
+      // Goods با category فعال که هیچ Productی ندارند
+      const goodsWithoutProduct = await this.prisma.good.findMany({
+        where: {
+          status: "ACTIVE",
+          category: { isActive: true },
+          products: { none: {} },
+          ...(q ? { searchText: { contains: normalizeFa(q) } } : {}),
+        },
+        select: { id: true, nameFa: true, nameEn: true, searchText: true },
+        take: 50,
+      });
+      if (goodsWithoutProduct.length === 0) return;
+      // ساخت Product پیش‌فرض (بدون برند، با همان searchText گود) — سیستم
+      // هویت پیدا می‌کند چون searchText یکتاست؛ بعداً وقتی فروشنده‌ای با برند
+      // ثبت می‌کند، Product جدیدی برای آن برند ساخته می‌شود و این «plain»
+      // باقی می‌ماند برای کالای فله. کوئریِ «goods بدون product» تضمین می‌کند
+      // که برای همان گود دوبار نسازیم.
+      await this.prisma.product.createMany({
+        data: goodsWithoutProduct.map((g) => ({
+          goodId: g.id,
+          brandId: null,
+          label: g.nameFa,
+          searchText: g.searchText,
+          status: "ACTIVE",
+          creatorRole: "ADMIN",
+        })),
+      });
+    } catch {
+      /* non-blocking — picker must never fail because of this */
+    }
+  }
+
+  /**
    * Picker feed — browse/search the shared catalog. Every row carries the
    * two signals that make ticking feel safe: how many businesses already
    * sell it, and whether the caller already has it (داریش).
+   *
+   * Returns the page PLUS the brand strip + category strip — both derived
+   * from the SAME filter scope EXCEPT the dimension they sit on, so the
+   * strips stay stable as the user toggles a brand or category on/off.
    */
   async listForPicker(params: {
     q?: string;
@@ -163,7 +239,7 @@ export class ProductsService {
     businessId?: string;
     cursor?: string;
     limit?: number;
-  }): Promise<Page<ProductRowDto>> {
+  }): Promise<PickerPageDto> {
     const limit = Math.min(Math.max(params.limit ?? 40, 1), 100);
     const q = params.q?.trim();
 
@@ -174,8 +250,11 @@ export class ProductsService {
         select: PRODUCT_SELECT,
       });
       const items = hit ? await this.decoratePage([hit], params.businessId) : [];
-      return { items, nextCursor: null } as Page<ProductRowDto>;
+      return { items, nextCursor: null, brands: [], categories: [] };
     }
+
+    // Good‌های بدون Product را با Product پیش‌فرض پر کن — lazy و بی‌صدا
+    await this.ensureDefaultProducts(q);
 
     // فیلترهای پایه‌ی گروه کالا — داخل هر شاخه‌ی جست‌وجو می‌روند (فیلتر گودِ
     // سطح‌بالا + شاخه‌ی گودِ OR در یک کوئری، باگِ «$size must be an array»
@@ -206,9 +285,68 @@ export class ProductsService {
       orderBy: { id: "desc" },
       take: limit + 1,
     });
-    const page = toPage(rows as (ProductRowDto & { brand: { name: string } | null })[], limit);
+    const page = toPage(rows, limit);
     const decorated = await this.decoratePage(page.items, params.businessId);
-    return { ...page, items: decorated };
+
+    // ── نوار برند — برندِ همه‌ی محصول‌هایی که در scope فعلی هستن (بدون فیلتر برند).
+    // با انتخاب برند، نوار ثابت می‌ماند تا کاربر برند را بداند عوض کنه.
+    const brandScopeWhere: Record<string, unknown> = {
+      status: { not: "MERGED" },
+      ...(params.goodId ? { goodId: params.goodId } : {}),
+      ...(params.categoryId ? { good: { ...goodBase } } : {}),
+    };
+    if (q) {
+      brandScopeWhere.OR = [
+        { searchText: { contains: normalizeFa(q) }, good: goodBase },
+        { good: { ...goodBase, searchText: { contains: normalizeFa(q) } } },
+      ];
+    } else {
+      brandScopeWhere.good = goodBase;
+    }
+    const brandRows = await this.prisma.product.findMany({
+      where: brandScopeWhere,
+      select: { brandId: true, brand: { select: { id: true, name: true } } },
+      take: 500,
+    });
+    const brandCount = new Map<string, { id: string; name: string; count: number }>();
+    for (const r of brandRows) {
+      if (!r.brand) continue;
+      const cur = brandCount.get(r.brand.id);
+      if (cur) cur.count += 1;
+      else brandCount.set(r.brand.id, { id: r.brand.id, name: r.brand.name, count: 1 });
+    }
+    const brands = [...brandCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
+
+    // ── نوار دسته — از همان scope، با brandId اعمال شده (دسته بر اساس برند فعلی)
+    const catScopeWhere: Record<string, unknown> = {
+      status: { not: "MERGED" },
+      ...(params.brandId ? { brandId: params.brandId } : {}),
+      ...(params.goodId ? { goodId: params.goodId } : {}),
+    };
+    if (q) {
+      catScopeWhere.OR = [
+        { searchText: { contains: normalizeFa(q) } },
+        { good: { ...goodBase, searchText: { contains: normalizeFa(q) } } },
+      ];
+    } else {
+      catScopeWhere.good = goodBase;
+    }
+    const catRows = await this.prisma.product.findMany({
+      where: catScopeWhere,
+      select: { good: { select: { category: { select: { id: true, nameFa: true, nameEn: true } } } } },
+      take: 500,
+    });
+    const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
+    for (const r of catRows) {
+      const c = r.good?.category;
+      if (!c) continue;
+      const cur = catCount.get(c.id);
+      if (cur) cur.count += 1;
+      else catCount.set(c.id, { id: c.id, nameFa: c.nameFa, nameEn: c.nameEn, count: 1 });
+    }
+    const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 20);
+
+    return { ...page, items: decorated, brands, categories };
   }
 
   /** sellers-count + «داریش» for one page of product rows — two bounded aggregates */

@@ -46,6 +46,13 @@ model User {
   firstName     String?
   lastName      String?
   passwordHash  String
+  /// آیا کاربر پسورد واقعی تنظیم کرده؟ کاربران ثبت‌نام سریع (فقط موبایل) این
+  /// فیلد را false دارند تا دکمه‌ی چشمک‌زن «ثبت پسورد» در هدر دیده شود.
+  /// وقتی setPassword صدا زده شد، true می‌شود و دکمه ناپدید می‌گردد.
+  /// پیش‌فرض true: کاربران قدیمی (که همگی با registerUser ساخته شده‌اند) این
+  /// فیلد را نداشتند — برای آن‌ها true در نظر می‌گیریم. فقط quickRegister این
+  /// فیلد را صریحاً false می‌گذارد.
+  passwordSet   Boolean  @default(true)
   role          String         @default("MEMBER") // MEMBER | ADMIN
   country       String         @default("IR") // chosen at signup → default business currency + dial code
   /// UI language chosen at signup (BCP-47 base: fa/en/ar/…) — restored on

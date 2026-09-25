@@ -2,9 +2,10 @@ import { Body, Controller, Get, HttpCode, Post, Req, Res, UseGuards } from "@nes
 import { Throttle } from "@nestjs/throttler";
 import type { FastifyReply, FastifyRequest } from "fastify";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
+import type { Locale } from "../common/i18n/i18n";
 import { JwtAuthGuard } from "./jwt-auth.guard";
 import { AuthService } from "./auth.service";
-import { LoginUserDto, RegisterUserDto, CheckPhoneDto } from "./dto/auth.dto";
+import { ChangePhoneDto, LoginUserDto, QuickRegisterDto, RegisterUserDto, SetPasswordDto, CheckPhoneDto } from "./dto/auth.dto";
 
 /**
  * Auth endpoints — deliberately action-named for readability
@@ -43,6 +44,50 @@ export class AuthController {
     @CurrentLocale() locale: Parameters<typeof AuthService.prototype.loginUser>[2]
   ) {
     return this.authService.loginUser(body, reply, locale);
+  }
+
+  /**
+   * Quick register — only mobile, no password (خواسته‌ی کاربر: «ثبت‌نام را
+   * راحت کنم»). کاربر شماره را می‌زند، سشن می‌گیرد و مستقیم وارد کاتالوگش
+   * می‌شود؛ Business خودکار با نام «کاتالوگ شما» ساخته می‌شود. اگر شماره
+   * قبلاً با پسورد ثبت شده باشد، این endpoint رد می‌کند تا کاربر وارد شود.
+   */
+  @Post("quickRegister")
+  @HttpCode(201)
+  quickRegister(
+    @Body() body: QuickRegisterDto,
+    @Res({ passthrough: true }) reply: FastifyReply,
+    @CurrentLocale() locale: Parameters<typeof AuthService.prototype.quickRegisterUser>[2]
+  ) {
+    return this.authService.quickRegisterUser(body, reply, locale);
+  }
+
+  /**
+   * Set password — برای کاربرانی که ثبت‌نام سریع کرده‌اند (passwordSet=false)
+   * یا می‌خواهند پسوردشان را عوض کنند.
+   */
+  @Post("setPassword")
+  @UseGuards(JwtAuthGuard)
+  setPassword(
+    @Body() body: SetPasswordDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    return this.authService.setPassword(user, body, locale);
+  }
+
+  /**
+   * Change phone — برای کاربری که موقع ثبت‌نام سریع شماره‌اش را اشتباه زده
+   * و می‌خواهد عوض کند (قبل از ثبت پسورد).
+   */
+  @Post("changePhone")
+  @UseGuards(JwtAuthGuard)
+  changePhone(
+    @Body() body: ChangePhoneDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    return this.authService.changePhone(user, body, locale);
   }
 
   @Post("refreshSession")

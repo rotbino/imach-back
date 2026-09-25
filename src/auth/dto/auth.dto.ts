@@ -86,3 +86,60 @@ export class LoginUserDto {
   @MaxLength(2)
   country?: string;
 }
+
+/**
+ * Quick register — only mobile, no password, no name.
+ * The user enters their phone and gets an immediate session; their Business
+ * is auto-created with a placeholder name. They fill the rest from the
+ * catalog header later (خواسته‌ی کاربر: «ثبت‌نام را راحت کنم»).
+ *
+ * If the phone is already registered AND has a real password, this endpoint
+ * refuses — the user must login instead (security: nobody can hijack a
+ * password-protected account by «quick-registering» the same number).
+ */
+export class QuickRegisterDto {
+  @IsString()
+  @Matches(PHONE_DIALLED)
+  phone: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(2)
+  country?: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(80)
+  ref?: string;
+}
+
+/**
+ * Set password — for users who quick-registered without one, or who want
+ * to change theirs. Requires authentication (the session must already
+ * exist; this is NOT a forgot-password reset).
+ */
+export class SetPasswordDto {
+  /** for quick-registered users, current password is empty — so optional */
+  @IsOptional()
+  @IsString()
+  @MinLength(1)
+  @MaxLength(72)
+  currentPassword?: string;
+
+  @IsString()
+  @MinLength(6)
+  @MaxLength(72)
+  newPassword: string;
+}
+
+/** Change the phone number on the authenticated account (rare; risky). */
+export class ChangePhoneDto {
+  @IsString()
+  @Matches(PHONE_DIALLED)
+  phone: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(2)
+  country?: string;
+}

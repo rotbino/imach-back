@@ -11,12 +11,14 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import type { FastifyReply } from "fastify";
+import { normalizeFa } from "../common/catalog/catalog";
 import { CacheService } from "../common/cache/cache.module";
 import { CurrentLocale, CurrentUser, makeSlug, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import { assertBusinessOwner, uniqueSlug } from "../common/guards";
 import { provinceOf } from "../common/geo/cities";
 import type { Locale } from "../common/i18n/i18n";
+import { cursorBefore, decodeCursor } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
@@ -93,6 +95,7 @@ export class BusinessesController {
         slug: true,
         name: true,
         activityType: true,
+        trade: true,
         city: true,
         country: true,
         currency: true,
@@ -332,10 +335,14 @@ export class BusinessesController {
    * کپی از کاتالوگ هم‌صنف‌ها — گام ۲: قلم‌های فروشِ یک کاتالوگ، با تامبنیل،
    * برای تیک‌زدن. هر ردیف همان کلیدهای هویتیِ مشترک را می‌آورد (productId /
    * brand / attrs / variantKey) تا کپی «همان SKU» باشد، نه دوقلوی تازه.
+   *
+   * نوار برند هم همین‌جا ساخته می‌شود — از خودِ قلم‌های بازگشتی، برندها با
+   * شمارش استخراج می‌شوند تا کاربر روی نوار افقی کلیک کند و فقط همان برند
+   * را ببیند (خواسته‌ی کاربر).
    */
   @Get("getCatalogItems")
   @UseGuards(JwtAuthGuard)
-  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string }) {
+  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string; brandId?: string }) {
     if (!query.businessId) throw AppError.badRequest("businessId الزامی است", "BUSINESS_ID_REQUIRED");
     const limit = Math.min(Math.max(Number(query.limit ?? 40) || 40, 1), 100);
     const rows = await this.prisma.listing.findMany({
@@ -343,6 +350,7 @@ export class BusinessesController {
         businessId: query.businessId,
         isActive: true,
         mode: { in: ["SELL", "BOTH"] },
+        ...(query.brandId ? { brandId: query.brandId } : {}),
       },
       select: {
         id: true,
@@ -351,15 +359,16 @@ export class BusinessesController {
         currency: true,
         attrs: true,
         variantLabel: true,
-        brand: { select: { name: true } },
+        brandId: true,
         productId: true,
+        brand: { select: { id: true, name: true } },
         good: {
           select: {
             id: true,
             nameFa: true,
             nameEn: true,
             unit: true,
-            category: { select: { nameFa: true, nameEn: true } },
+            category: { select: { id: true, nameFa: true, nameEn: true } },
           },
         },
       },
@@ -370,6 +379,22 @@ export class BusinessesController {
     const hasMore = rows.length > limit;
     const items = hasMore ? rows.slice(0, limit) : rows;
     const galleries = await this.files.galleryMap(items.map((r) => r.id));
+
+    // ── نوار برند — از همه‌ی قلم‌های این کاتالوگ (بدون فیلتر برند)، شمارش هر برند
+    const allBrandRows = await this.prisma.listing.findMany({
+      where: { businessId: query.businessId, isActive: true, mode: { in: ["SELL", "BOTH"] }, brandId: { not: null } },
+      select: { brandId: true, brand: { select: { id: true, name: true } } },
+      take: 500,
+    });
+    const brandMap = new Map<string, { id: string; name: string; count: number }>();
+    for (const r of allBrandRows) {
+      if (!r.brand) continue;
+      const cur = brandMap.get(r.brand.id);
+      if (cur) cur.count += 1;
+      else brandMap.set(r.brand.id, { id: r.brand.id, name: r.brand.name, count: 1 });
+    }
+    const brands = [...brandMap.values()].sort((a, b) => b.count - a.count).slice(0, 30);
+
     return {
       items: items.map((r) => ({
         id: r.id,
@@ -378,12 +403,189 @@ export class BusinessesController {
         currency: r.currency,
         variantLabel: r.variantLabel,
         attrs: r.attrs,
+        brandId: r.brandId,
         brandName: r.brand?.name ?? null,
         productId: r.productId,
         good: r.good,
         thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl ?? galleries.get(r.id)?.[0]?.url ?? null,
       })),
       nextCursor: hasMore ? items[items.length - 1].id : null,
+      brands,
+    };
+  }
+
+  /**
+   * کاتالوگ تجمیعی هم‌صنف‌ها (خواسته‌ی کاربر: «به جای تک تک کاتالوگها،
+   * صنف را سرچ کن، سیستم ۱۰۰ سوپرمارکتِ آن شهر را پیدا کن و کالاهایشان را
+   * یونیک و قابل فیلتر با برند و دسته نشان بده»).
+   *
+   * تمام Listingهای فعال همه‌ی کاتالوگ‌های هم‌صنف در همان جغرافیا را می‌گیرد،
+   * بر اساس Product یونیک می‌کند (چون Product خودش SKU مشترک است)، برندها و
+   * دسته‌ها را با شمارش برمی‌گرداند.
+   *
+   * geo scope: اول شهر، اگر نتیجه کم بود استان، اگر کمتر بود کشور.
+   */
+  @Get("getAggregatedCatalog")
+  @UseGuards(JwtAuthGuard)
+  async getAggregatedCatalog(
+    @Query() query: {
+      trade?: string;
+      city?: string;
+      province?: string;
+      country?: string;
+      q?: string;
+      brandId?: string;
+      categoryId?: string;
+      cursor?: string;
+      limit?: string;
+      mineId?: string;
+    }
+  ) {
+    const trade = query.trade?.trim();
+    if (!trade) {
+      throw AppError.badRequest("صنف کسب‌وکار الزامی است", "TRADE_REQUIRED");
+    }
+    const limit = Math.min(Math.max(Number(query.limit ?? 40) || 40, 1), 100);
+    const country = query.country?.trim() || "IR";
+
+    // پیدا کردن کسب‌وکارهای هم‌صنف در همان جغرافیا
+    // اول شهر، اگر کمتر از ۳ تا بود، استان، اگر کمتر بود کشور
+    const whereTrade: Record<string, unknown> = {
+      trade: { contains: trade },
+      catalogCount: { gt: 0 },
+      country,
+      ...(query.mineId ? { id: { not: query.mineId } } : {}),
+    };
+
+    // مرحله ۱: کسب‌وکارهای هم‌صنف در همان شهر
+    let businesses = await this.prisma.business.findMany({
+      where: { ...whereTrade, ...(query.city ? { city: query.city } : {}) },
+      select: { id: true },
+      take: 200,
+    });
+
+    // اگر کمتر از ۳ کاتالوگ در شهر بود، استان را هم اضافه کن
+    if (businesses.length < 3 && query.province) {
+      const provinceBiz = await this.prisma.business.findMany({
+        where: { ...whereTrade, province: query.province },
+        select: { id: true },
+        take: 200,
+      });
+      const seen = new Set(businesses.map((b) => b.id));
+      businesses = [...businesses, ...provinceBiz.filter((b) => !seen.has(b.id))];
+    }
+
+    // اگر هنوز کم بود، کل کشور
+    if (businesses.length < 3) {
+      const countryBiz = await this.prisma.business.findMany({
+        where: whereTrade,
+        select: { id: true },
+        take: 500,
+      });
+      const seen = new Set(businesses.map((b) => b.id));
+      businesses = [...businesses, ...countryBiz.filter((b) => !seen.has(b.id))];
+    }
+
+    if (businesses.length === 0) {
+      return { items: [], nextCursor: null, brands: [], categories: [], foundBusinesses: 0 };
+    }
+
+    const bizIds = businesses.map((b) => b.id);
+
+    // مرحله ۲: لیستینگ‌های SELL/BOTH این کسب‌وکارها که productId دارند —
+    // چون productId یونیک است به طور خودکار SKU یونیک می‌دهد
+    const q = query.q?.trim();
+    const where: Record<string, unknown> = {
+      businessId: { in: bizIds },
+      isActive: true,
+      mode: { in: ["SELL", "BOTH"] },
+      productId: { not: null },
+      ...(query.brandId ? { brandId: query.brandId } : {}),
+      ...(query.categoryId ? { good: { categoryId: query.categoryId } } : {}),
+      ...cursorBefore(decodeCursor(query.cursor)),
+    };
+    if (q) {
+      // جست‌وجو روی product.label یا good.nameFa
+      where.OR = [
+        { product: { searchText: { contains: normalizeFa(q) } } },
+        { good: { searchText: { contains: normalizeFa(q) } } },
+      ];
+    }
+
+    // distinct روی productId تا SKU یونیک باشد
+    const rows = await this.prisma.listing.findMany({
+      where,
+      distinct: ["productId"],
+      select: {
+        id: true,
+        productId: true,
+        brandId: true,
+        brand: { select: { id: true, name: true } },
+        good: {
+          select: {
+            id: true,
+            nameFa: true,
+            nameEn: true,
+            unit: true,
+            category: { select: { id: true, nameFa: true, nameEn: true } },
+          },
+        },
+        product: { select: { id: true, label: true } },
+      },
+      orderBy: { id: "desc" },
+      take: limit + 1,
+    });
+    const hasMore = rows.length > limit;
+    const items = hasMore ? rows.slice(0, limit) : rows;
+
+    // گالری — اولین عکس هر قلم
+    const galleries = await this.files.galleryMap(items.map((r) => r.id));
+
+    // نوار برند — از همه‌ی لیستینگ‌های هم‌صنف (نه فقط صفحه فعلی)
+    const brandRows = await this.prisma.listing.findMany({
+      where: { businessId: { in: bizIds }, isActive: true, mode: { in: ["SELL", "BOTH"] }, brandId: { not: null } },
+      select: { brandId: true, brand: { select: { id: true, name: true } } },
+      take: 1000,
+    });
+    const brandMap = new Map<string, { id: string; name: string; count: number }>();
+    for (const r of brandRows) {
+      if (!r.brand) continue;
+      const cur = brandMap.get(r.brand.id);
+      if (cur) cur.count += 1;
+      else brandMap.set(r.brand.id, { id: r.brand.id, name: r.brand.name, count: 1 });
+    }
+    const brands = [...brandMap.values()].sort((a, b) => b.count - a.count).slice(0, 30);
+
+    // نوار دسته — از همه‌ی لیستینگ‌های هم‌صنف
+    const catRows = await this.prisma.listing.findMany({
+      where: { businessId: { in: bizIds }, isActive: true, mode: { in: ["SELL", "BOTH"] } },
+      select: { good: { select: { category: { select: { id: true, nameFa: true, nameEn: true } } } } },
+      take: 1000,
+    });
+    const catMap = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
+    for (const r of catRows) {
+      const c = r.good?.category;
+      if (!c) continue;
+      const cur = catMap.get(c.id);
+      if (cur) cur.count += 1;
+      else catMap.set(c.id, { id: c.id, nameFa: c.nameFa, nameEn: c.nameEn, count: 1 });
+    }
+    const categories = [...catMap.values()].sort((a, b) => b.count - a.count).slice(0, 20);
+
+    return {
+      items: items.map((r) => ({
+        id: r.id,
+        productId: r.productId,
+        brandId: r.brandId,
+        brandName: r.brand?.name ?? null,
+        variantLabel: r.product?.label ?? null,
+        good: r.good,
+        thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl ?? galleries.get(r.id)?.[0]?.url ?? null,
+      })),
+      nextCursor: hasMore ? items[items.length - 1].id : null,
+      brands,
+      categories,
+      foundBusinesses: businesses.length,
     };
   }
 
