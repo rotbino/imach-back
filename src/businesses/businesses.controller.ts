@@ -131,6 +131,7 @@ export class BusinessesController {
         country,
         currency: currencyOfCountry(country),
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
+        trade: body.trade?.trim() || null, // صنف — درگاه کپی از هم‌صنف‌ها
         ownerId: user.id,
         // هر کسب‌وکار با دو محیط خود متولد می‌شود: کاتالوگ فروش + میز خرید
         pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
@@ -274,6 +275,8 @@ export class BusinessesController {
         ...(body.name ? { name: body.name.trim() } : {}),
         ...(body.city ? { city: body.city.trim(), province: provinceOf(body.city.trim()) } : {}),
         ...(body.activityType !== undefined ? { activityType: body.activityType } : {}),
+        // صنف: null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر
+        ...(body.trade !== undefined ? { trade: body.trade ? body.trade.trim() : null } : {}),
         // لوکیشن دقیق: null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر
         ...(body.lat !== undefined ? { lat: body.lat } : {}),
         ...(body.lng !== undefined ? { lng: body.lng } : {}),
@@ -285,6 +288,103 @@ export class BusinessesController {
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data
     return updated;
+  }
+
+  /**
+   * کپی از کاتالوگ هم‌صنف‌ها — گام ۱: پیدا کردن کاتالوگ‌ها (خواسته‌ی کاربر:
+   * «به‌جای تایپ صدها کالا، اولین سوپرمارکت که کالاهاشو وارد کرد بقیه تیک بزنن»).
+   * جست‌وجو روی صنف و نام؛ مرتب‌سازی بر اساس ثروتِ کاتالوگ (catalogCount) تا
+   * پرترین کاتالوگِ هم‌صنف اول بیاید. سرعت: فقط ایندکس trade/contains + یک صفحه.
+   */
+  @Get("searchCatalogs")
+  @UseGuards(JwtAuthGuard)
+  async searchCatalogs(@Query() query: { q?: string; cursor?: string; limit?: string; mineId?: string }) {
+    const limit = Math.min(Math.max(Number(query.limit ?? 20) || 20, 1), 50);
+    const q = query.q?.trim();
+    const rows = await this.prisma.business.findMany({
+      where: {
+        // only catalogs that actually hold something — a copy flow must never
+        // open an empty shelf (قانون سرعت و قانون رضایت، هر دو)
+        catalogCount: { gt: 0 },
+        ...(query.mineId ? { id: { not: query.mineId } } : {}),
+        ...(q ? { OR: [{ trade: { contains: q } }, { name: { contains: q } }] } : {}),
+      },
+      select: {
+        id: true,
+        slug: true,
+        name: true,
+        city: true,
+        trade: true,
+        isVerified: true,
+        isDemo: true,
+        catalogCount: true,
+      },
+      orderBy: { catalogCount: "desc" },
+      ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
+      take: limit + 1,
+    });
+    const hasMore = rows.length > limit;
+    const items = hasMore ? rows.slice(0, limit) : rows;
+    return { items, nextCursor: hasMore ? items[items.length - 1].id : null };
+  }
+
+  /**
+   * کپی از کاتالوگ هم‌صنف‌ها — گام ۲: قلم‌های فروشِ یک کاتالوگ، با تامبنیل،
+   * برای تیک‌زدن. هر ردیف همان کلیدهای هویتیِ مشترک را می‌آورد (productId /
+   * brand / attrs / variantKey) تا کپی «همان SKU» باشد، نه دوقلوی تازه.
+   */
+  @Get("getCatalogItems")
+  @UseGuards(JwtAuthGuard)
+  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string }) {
+    if (!query.businessId) throw AppError.badRequest("businessId الزامی است", "BUSINESS_ID_REQUIRED");
+    const limit = Math.min(Math.max(Number(query.limit ?? 40) || 40, 1), 100);
+    const rows = await this.prisma.listing.findMany({
+      where: {
+        businessId: query.businessId,
+        isActive: true,
+        mode: { in: ["SELL", "BOTH"] },
+      },
+      select: {
+        id: true,
+        mode: true,
+        priceMinor: true,
+        currency: true,
+        attrs: true,
+        variantLabel: true,
+        brand: { select: { name: true } },
+        productId: true,
+        good: {
+          select: {
+            id: true,
+            nameFa: true,
+            nameEn: true,
+            unit: true,
+            category: { select: { nameFa: true, nameEn: true } },
+          },
+        },
+      },
+      orderBy: { id: "desc" },
+      ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
+      take: limit + 1,
+    });
+    const hasMore = rows.length > limit;
+    const items = hasMore ? rows.slice(0, limit) : rows;
+    const galleries = await this.files.galleryMap(items.map((r) => r.id));
+    return {
+      items: items.map((r) => ({
+        id: r.id,
+        mode: r.mode,
+        priceMinor: r.priceMinor,
+        currency: r.currency,
+        variantLabel: r.variantLabel,
+        attrs: r.attrs,
+        brandName: r.brand?.name ?? null,
+        productId: r.productId,
+        good: r.good,
+        thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl ?? galleries.get(r.id)?.[0]?.url ?? null,
+      })),
+      nextCursor: hasMore ? items[items.length - 1].id : null,
+    };
   }
 
   /**

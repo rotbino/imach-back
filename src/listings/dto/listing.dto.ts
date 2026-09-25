@@ -1,4 +1,4 @@
-import { IsIn, IsObject, IsOptional, IsString, Matches, MaxLength } from "class-validator";
+import { IsArray, IsIn, IsObject, IsOptional, IsString, Matches, MaxLength, ArrayMaxSize } from "class-validator";
 import { BuySpecDto, SellSpecDto, TRADE_MODES } from "../../goods/dto/goods.dto";
 
 /**
@@ -51,4 +51,24 @@ export class SaveListingDto {
 
   @IsOptional()
   buy?: BuySpecDto;
+}
+
+/**
+ * PUT /listings/copyFrom — «کپی از کاتالوگ هم‌صنف‌ها» (خواسته‌ی کاربر:
+ * «لیست کالاهای اونو بگیره… هر کدوم رو خواست تیک بزنه و اضافه کنه به
+ * کاتالوگ من»). Each source listing lands on MY catalog as a priceless
+ * SELL row (قیمت‌گذاری با خودم) carrying the same shared identity keys
+ * (productId / brandId / attrs / variantKey) — the same SKU, not a twin.
+ */
+export class CopyFromDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  sourceBusinessId: string;
+
+  @IsArray()
+  @ArrayMaxSize(200)
+  @IsString({ each: true })
+  sourceListingIds: string[];
 }

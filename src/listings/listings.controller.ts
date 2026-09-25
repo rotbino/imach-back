@@ -12,7 +12,8 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { FilesService } from "../files/files.service";
 import { ProductsService, productIdentityParts } from "../products/products.service";
 import { BulkSaveDto } from "../products/dto/product.dto";
-import { SaveListingDto } from "./dto/listing.dto";
+import { refreshCatalogCount } from "../common/catalog/catalog-count";
+import { SaveListingDto, CopyFromDto } from "./dto/listing.dto";
 
 /**
  * Same shape as getMyListings rows — every save path returns this so the
@@ -391,6 +392,8 @@ export class ListingsController {
    * variantKey="" — the plain offer of each picked Product.
    * BUY rows MAY omit volume — the buy list forms gradually («تیک بزن،
    * مقدارش را بعداً بده») and shows them with a «مقدار بعداً» badge.
+   * SELL rows MAY omit price too — the scanner loop lands SKU first,
+   * price later; they wait in the «نیاز به تکمیل قیمت» tray.
    */
   @Put("bulkSave")
   async bulkSave(@Body() body: BulkSaveDto, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
@@ -429,10 +432,6 @@ export class ListingsController {
         failed++;
         continue;
       }
-      if (body.mode === "SELL" && !(item.priceMinor && item.priceMinor > 0)) {
-        failed++; // picker UI enforces price — this is the API safety net
-        continue;
-      }
       const data = {
         mode: body.mode,
         brandId: p.brandId ?? null,
@@ -445,22 +444,24 @@ export class ListingsController {
         city: business.city,
         province: business.province ?? provinceOf(business.city),
         country: business.country,
-        ...(body.mode === "SELL"
+        ...(body.mode === "BUY"
           ? {
-              priceMinor: item.priceMinor!,
-              currency: business.currency,
-              stock: item.stock ?? 0,
-              minOrder: item.minOrder ?? 1,
-              volume: null,
-              frequency: null,
-            }
-          : {
               priceMinor: null,
               currency: null,
               stock: null,
               minOrder: null,
               volume: item.volume ?? null,
               frequency: item.frequency ?? "MONTHLY",
+            }
+          : {
+              // SELL و BOTH: قیمت اختیاری است (صف اسکنر — «اول اسکن، آخر قیمت»)؛
+              // BOTH حجم خرید را هم روی همان ردیف نگه می‌دارد
+              priceMinor: item.priceMinor ?? null,
+              currency: item.priceMinor ? business.currency : null,
+              stock: item.stock ?? 0,
+              minOrder: item.minOrder ?? (item.priceMinor ? 1 : null),
+              volume: body.mode === "BOTH" ? item.volume ?? null : null,
+              frequency: body.mode === "BOTH" ? item.frequency ?? "MONTHLY" : null,
             }),
       };
       const unique = { businessId_goodId_variantKey: { businessId: business.id, goodId: p.goodId, variantKey: p.searchText.slice(0, 60) } };
@@ -489,7 +490,10 @@ export class ListingsController {
       savedRows.push({ productId: p.id, listingId: row.id });
     }
 
-    if (saved > 0) this.invalidateFor(business.id, business.slug);
+    if (saved > 0) {
+      this.invalidateFor(business.id, business.slug);
+      void refreshCatalogCount(this.prisma, business.id);
+    }
     return { saved, failed, items: savedRows };
   }
 
@@ -507,6 +511,168 @@ export class ListingsController {
     // re-lists it.
     await this.prisma.listing.update({ where: { id: listing.id }, data: { isActive: false } });
     this.invalidateFor(listing.businessId, owner.slug);
+    void refreshCatalogCount(this.prisma, listing.businessId);
     return { ok: true };
+  }
+
+  /**
+   * PUT /listings/copyFrom — «اضافه کردن به کاتالوگ من» در جریان کپی از
+   * هم‌صنف‌ها. هر قلمِ تیک‌شده به کاتالوگ من می‌آید به‌عنوان ردیف فروشِ
+   * بی‌قیمت (قیمت‌گذاری بعداً) با همان کلیدهای هویتی مشترک؛ عکس‌ها به‌صورت
+   * اشتراکی کپی می‌شوند (ردیف تازه، همان بایت‌ها — metadata.copiedFrom
+   * نگهبان حذف دوتایی). قلمی که خودم از قبل دارم (همان goodId+variantKey)
+   * بی‌سروصدا رد می‌شود — کپی هرگز روی ردیف خودم رونویسی نمی‌کند.
+   */
+  @Put("copyFrom")
+  async copyFrom(@Body() body: CopyFromDto, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const ids = [...new Set(body.sourceListingIds)].filter((id) => /^[0-9a-fA-F]{24}$/.test(id));
+    if (ids.length === 0) return { copied: 0, already: 0, failed: 0 };
+
+    const sources = await this.prisma.listing.findMany({
+      where: { id: { in: ids }, businessId: body.sourceBusinessId, isActive: true },
+      select: {
+        id: true,
+        goodId: true,
+        productId: true,
+        brandId: true,
+        attrs: true,
+        variantKey: true,
+        variantLabel: true,
+        mode: true,
+      },
+    });
+    if (sources.length === 0) throw AppError.notFound("Source listings not found");
+
+    // پیوند هویتی برای منابعِ قبل از لایه‌ی محصول — اگر برای (گود، برند+attrs)
+    // منبع، Product مشترکی هست، کپی به همان SKU وصل می‌شود (نه دوقلوی بی‌هویت)
+    const brandsOfSources = await this.prisma.brand.findMany({
+      where: { id: { in: [...new Set(sources.map((s) => s.brandId).filter((v): v is string => !!v))] } },
+      select: { id: true, name: true },
+    });
+    const brandNameById = new Map(brandsOfSources.map((b) => [b.id, b.name]));
+    const attachKey = new Map<string, string>();
+    const missingProductIds = [...new Set(sources.filter((s) => !s.productId).map((s) => s.goodId))];
+    const candidates = missingProductIds.length
+      ? await this.prisma.product.findMany({
+          where: { goodId: { in: missingProductIds }, status: { not: "MERGED" } },
+          select: { id: true, goodId: true, searchText: true },
+        })
+      : [];
+    for (const s of sources) {
+      if (s.productId) continue;
+      const identity = productIdentityParts(brandNameById.get(s.brandId ?? "") ?? undefined, (s.attrs as Record<string, string> | null) ?? null);
+      if (!identity) continue;
+      const hit = candidates.find((c) => c.goodId === s.goodId && c.searchText === identity.searchText);
+      if (hit) attachKey.set(s.id, hit.id);
+    }
+
+    // کلیدهای هویتی موجود روی سمت من — کپی هرگز ردیف فعال من را رونویسی
+    // نمی‌کند؛ ردیفِ بازنشسته (حذف‌شده) با کپی تازه دوباره زنده می‌شود، چون
+    // کلید یکتا [businessId, goodId, variantKey] به isActive کاری ندارد
+    const mine = await this.prisma.listing.findMany({
+      where: { businessId: business.id, goodId: { in: [...new Set(sources.map((s) => s.goodId))] } },
+      select: { id: true, goodId: true, variantKey: true, isActive: true, priceMinor: true, volume: true, mode: true },
+    });
+    const mineByKey = new Map(mine.map((m) => [`${m.goodId}|${m.variantKey}`, m]));
+
+    let copied = 0;
+    let already = 0;
+    let failed = 0;
+    for (const s of sources) {
+      const key = `${s.goodId}|${s.variantKey}`;
+      const existing = mineByKey.get(key);
+      if (existing?.isActive) {
+        already++;
+        continue;
+      }
+      try {
+        const data = {
+          mode: "SELL", // قیمت‌گذاری با خودم — فعلاً بی‌قیمت در سینی «نیاز به تکمیل»
+          productId: s.productId ?? attachKey.get(s.id) ?? null,
+          brandId: s.brandId,
+          attrs: (s.attrs as Record<string, string> | null) ?? null,
+          variantLabel: s.variantLabel,
+          isActive: true,
+          priceMinor: null,
+          currency: null,
+          stock: null,
+          minOrder: null,
+          volume: null,
+          frequency: null,
+          city: business.city,
+          province: business.province ?? provinceOf(business.city),
+          country: business.country,
+        };
+        if (existing) {
+          // باززنده‌سازی — قیمت/حجم کهنه هم پاک می‌شوند تا کپی، تازه باشد
+          await this.prisma.listing.update({ where: { id: existing.id }, data });
+        } else {
+          await this.prisma.listing.create({
+            data: { businessId: business.id, goodId: s.goodId, variantKey: s.variantKey, ...data },
+            select: { id: true },
+          });
+        }
+        copied++;
+      } catch {
+        failed++;
+      }
+    }
+
+    // عکس‌ها — ردیف تازه با همان بایت‌ها؛ فقط برای قلم‌هایی که واقعاً ساخته شدند
+    if (copied > 0) {
+      // re-read MY fresh rows by identity — the copy loop may have collapsed
+      const freshRows = await this.prisma.listing.findMany({
+        where: {
+          businessId: business.id,
+          goodId: { in: [...new Set(sources.map((s) => s.goodId))] },
+          isActive: true,
+        },
+        select: { id: true, goodId: true, variantKey: true },
+      });
+      const freshByKey = new Map(freshRows.map((r) => [`${r.goodId}|${r.variantKey}`, r.id]));
+      const sourceFiles = await this.prisma.file.findMany({
+        where: { relatedModel: "Listing", relatedId: { in: sources.map((s) => s.id) }, fieldKey: "gallery" },
+        orderBy: { createdAt: "asc" },
+        take: 600,
+      });
+      const myFileKeys = new Set(
+        (
+          await this.prisma.file.findMany({
+            where: { relatedModel: "Listing", relatedId: { in: [...freshByKey.values()] }, fieldKey: "gallery" },
+            select: { relatedId: true, storageKey: true },
+          })
+        ).map((f) => `${f.relatedId}|${f.storageKey}`)
+      );
+      const sourceById = new Map(sources.map((s) => [s.id, s]));
+      for (const f of sourceFiles) {
+        const src = sourceById.get(f.relatedId!);
+        if (!src) continue;
+        const newId = freshByKey.get(`${src.goodId}|${src.variantKey}`);
+        if (!newId) continue;
+        if (myFileKeys.has(`${newId}|${f.storageKey}`)) continue; // already attached once
+        await this.prisma.file.create({
+          data: {
+            ownerId: user.id,
+            relatedModel: "Listing",
+            relatedId: newId,
+            fieldKey: "gallery",
+            description: f.description,
+            name: f.name,
+            mimeType: f.mimeType,
+            size: f.size,
+            url: f.url,
+            thumbUrl: f.thumbUrl,
+            storageKey: f.storageKey,
+            thumbStorageKey: f.thumbStorageKey,
+            metadata: { ...(f.metadata as object | null), copiedFrom: f.id },
+          },
+        });
+        myFileKeys.add(`${newId}|${f.storageKey}`);
+      }
+      this.invalidateFor(business.id, business.slug);
+      void refreshCatalogCount(this.prisma, business.id);
+    }
+    return { copied, already, failed };
   }
 }

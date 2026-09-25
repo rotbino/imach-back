@@ -37,6 +37,12 @@ export class CreateBusinessDto {
   @MinLength(2)
   @MaxLength(30)
   city: string;
+
+  /** صنف — free text («سوپرمارکت»)؛ درگاه «کپی از کاتالوگ هم‌صنف‌ها» */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  trade?: string;
 }
 
 export class EditBusinessDto {
@@ -55,6 +61,12 @@ export class EditBusinessDto {
   @IsOptional()
   @IsIn(ACTIVITY_TYPES)
   activityType?: string | null;
+
+  /** صنف — free text؛ null = پاک کردن؛ نبودِ فیلد = بدون تغییر */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  trade?: string | null;
 
   /** لوکیشن دقیق — اختیاری و با رضایت کاربر؛ مبنای لایه‌ی فاصله‌ی تطابق.
    *  null = پاک کردن؛ نبودِ فیلد = بدون تغییر. */

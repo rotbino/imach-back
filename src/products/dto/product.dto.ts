@@ -1,4 +1,4 @@
-import { ArrayMaxSize, IsArray, IsIn, IsInt, IsNumber, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
+import { ArrayMaxSize, IsArray, IsIn, IsInt, IsNumber, IsOptional, IsString, Matches, Max, MaxLength, Min } from "class-validator";
 import { Type } from "class-transformer";
 
 /**
@@ -27,6 +27,20 @@ export class GetProductsQueryDto {
   @IsString()
   @MaxLength(40)
   goodId?: string;
+
+  /** brand filter — the picker's «فقط این برند» (خواسته‌ی کاربر: فیلتر برند
+   * در کنار دسته، خودِ راه پیدا کردن لیستِ مناسب است) */
+  @IsOptional()
+  @IsString()
+  @Matches(/^[0-9a-fA-F]{24}$/)
+  brandId?: string;
+
+  /** exact barcode (GTIN/EAN) — the scanner's fast path; indexed lookup,
+   * returns the one matching SKU instantly even at millions scale */
+  @IsOptional()
+  @IsString()
+  @Matches(/^[0-9A-Za-z\-]{4,20}$/)
+  barcode?: string;
 
   /** the caller's business — feeds the «داریش» badge; must be owned.
    * Optional for ADMIN (the gardening panel searches the shared table). */
@@ -64,7 +78,9 @@ export class BulkSaveItemDto {
   @IsString()
   productId: string;
 
-  /** sell arm — minor units; required when mode=SELL (validated service-side) */
+  /** sell arm — minor units; OPTIONAL by design: scanner/import rows may
+   * land priceless first («همه رو اسکن کن، بعد قیمت‌ها رو بده») and the
+   * catalog shows them in the «نیاز به تکمیل قیمت» tray until priced. */
   @IsOptional()
   @Type(() => Number)
   @IsInt()
@@ -101,7 +117,8 @@ export class BulkSaveDto {
   @IsString()
   businessId: string;
 
-  @IsIn(["SELL", "BUY"])
+  /** BOTH = the scanner's «هم فروش و هم خرید» — one row carrying both arms */
+  @IsIn(["SELL", "BUY", "BOTH"])
   mode: string;
 
   @IsArray()
@@ -154,17 +171,28 @@ export class ImportRowDto {
   @Type(() => Number)
   @Min(0)
   volume?: number;
+
+  /** «لینک عکس» column — a direct image URL the server fetches once on
+   * commit and runs through the same gallery pipeline (خواسته‌ی کاربر:
+   * «ای کاش می‌شد از اکسل تصاویر رو هم وارد کرد»). Failure never fails the
+   * row — the listing saves imageless and the user adds the photo later. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(500)
+  imageUrl?: string;
 }
 
 export class ImportCommitDto {
   @IsString()
   businessId: string;
 
+  /** the arm the user opened the sheet from — per-row arms still win: a row
+   * with sell price AND buy volume becomes a single BOTH row */
   @IsIn(["SELL", "BUY"])
   mode: string;
 
   @IsArray()
-  @ArrayMaxSize(500)
+  @ArrayMaxSize(2000)
   @Type(() => ImportRowDto)
   rows: ImportRowDto[];
 }

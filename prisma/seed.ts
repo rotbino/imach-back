@@ -343,6 +343,8 @@ interface DemoBusiness {
   slug: string;
   name: string;
   activityType: string;
+  /** صنف — the copy-from-similar-catalogs search key */
+  trade: string;
   city: string;
   phone: string;
   listings: DemoListing[];
@@ -353,6 +355,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "khorshid-market",
     name: "خورشید مارکت",
     activityType: "RETAILER",
+    trade: "سوپرمارکت",
     city: "تهران",
     phone: "989120000001",
     listings: [
@@ -368,6 +371,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "tabiat-daneh",
     name: "طبیعت‌دانه پخش",
     activityType: "DISTRIBUTOR",
+    trade: "پخش مواد غذایی",
     city: "تهران",
     phone: "989120000002",
     listings: [
@@ -382,6 +386,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "berenj-gilan",
     name: "برنج‌سرای گیلان",
     activityType: "WHOLESALER",
+    trade: "برنج و حبوبات",
     city: "رشت",
     phone: "989120000003",
     listings: [
@@ -393,6 +398,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "pakhsh-gostar",
     name: "پخش گستر البرز",
     activityType: "DISTRIBUTOR",
+    trade: "پخش مواد غذایی",
     city: "کرج",
     phone: "989120000004",
     listings: [
@@ -406,6 +412,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "shirin-asal",
     name: "شیرین‌عسل اردبیل",
     activityType: "PRODUCER",
+    trade: "تولید عسل",
     city: "اردبیل",
     phone: "989120000005",
     listings: [
@@ -418,6 +425,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "asyab-pars",
     name: "آسیاب پارس مشهد",
     activityType: "PRODUCER",
+    trade: "آرد و غلات",
     city: "مشهد",
     phone: "989120000006",
     listings: [
@@ -430,6 +438,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "omid-trading",
     name: "تجارت‌سرای امید",
     activityType: "MERCHANT",
+    trade: "خرما و صادرات",
     city: "تهران",
     phone: "989120000007",
     listings: [
@@ -445,6 +454,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "hyper-mehrban",
     name: "هایپر مهربان",
     activityType: "RETAILER",
+    trade: "سوپرمارکت",
     city: "تهران",
     phone: "989120000008",
     listings: [
@@ -457,6 +467,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "nikavar",
     name: "پخش نیک‌آور",
     activityType: "DISTRIBUTOR",
+    trade: "پخش مواد غذایی",
     city: "قم",
     phone: "989120000009",
     listings: [
@@ -469,6 +480,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "rahat-bakery",
     name: "نان‌وری رحمت",
     activityType: "BUSINESS_CONSUMER",
+    trade: "نان‌وری",
     city: "کرج",
     phone: "989120000010",
     listings: [
@@ -480,6 +492,7 @@ const BUSINESSES: DemoBusiness[] = [
     slug: "zeytoun",
     name: "فروشگاه زیتون",
     activityType: "RETAILER",
+    trade: "سوپرمارکت",
     city: "شیراز",
     phone: "989120000011",
     listings: [
@@ -592,24 +605,32 @@ async function main(): Promise<void> {
     }
   }
   let skuCount = 0;
+  // بارکد واقع‌گرایانه با پیشوند GS1 ایران (626) و رقم کنترلی درست —
+  // جریان اسکنر از روز اول کالای بارکد‌دار واقعی دارد
+  const ean13 = (body12: string): string => {
+    const digits = body12.split("").map(Number);
+    const sum = digits.reduce((acc, d, i) => acc + d * (i % 2 === 0 ? 1 : 3), 0);
+    return body12 + String((10 - (sum % 10)) % 10);
+  };
   for (const s of SKU_MATRIX) {
     const goodId = goodIds.get(s.good);
     if (!goodId) continue;
     for (const pack of s.packs) {
       const label = `${s.brand} ${pack}`.trim();
       const searchText = normalize(label);
+      const barcode = ean13(`626${String(1_000_000 + skuCount).slice(-9)}`);
       const existing = await prisma.product.findFirst({ where: { goodId, searchText }, select: { id: true } });
       if (existing) {
-        await prisma.product.update({ where: { id: existing.id }, data: { label, brandId: brandIds.get(s.brand) ?? null, status: "ACTIVE" } });
+        await prisma.product.update({ where: { id: existing.id }, data: { label, brandId: brandIds.get(s.brand) ?? null, status: "ACTIVE", barcode } });
       } else {
         await prisma.product.create({
-          data: { goodId, brandId: brandIds.get(s.brand) ?? null, label, searchText, status: "ACTIVE" },
+          data: { goodId, brandId: brandIds.get(s.brand) ?? null, label, searchText, status: "ACTIVE", barcode },
         });
       }
       skuCount++;
     }
   }
-  console.log(`  ok ${skuCount} reference SKUs (Product layer)`);
+  console.log(`  ok ${skuCount} reference SKUs (Product layer, barcoded 626…)`);
 
   // 4) Businesses + owner users + listings
   const bizIds = new Map<string, string>();
@@ -627,6 +648,7 @@ async function main(): Promise<void> {
         slug: b.slug,
         name: b.name,
         activityType: b.activityType,
+        trade: b.trade,
         city: b.city,
         phone: b.phone,
         isDemo: true,
@@ -636,7 +658,7 @@ async function main(): Promise<void> {
         ownerId: user.id,
         pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
       },
-      update: { ownerId: user.id, isDemo: true, isVerified: true, activityType: b.activityType, currency: "IRR" },
+      update: { ownerId: user.id, isDemo: true, isVerified: true, activityType: b.activityType, trade: b.trade, currency: "IRR" },
     });
     bizIds.set(b.slug, biz.id);
 
@@ -664,9 +686,32 @@ async function main(): Promise<void> {
         create: { businessId: biz.id, goodId, ...data },
         update: data,
       });
+
+      // پیوند هویتی قلم‌های برنددار دمو — کپی از هم‌صنف‌ها و نشان «فروشنده»
+      // روی انتخابگر از همین اتصال تغذیه می‌کنند
+      if (l.mode !== "BUY" && l.sell?.brand && brandIds.has(l.sell.brand)) {
+        const brandId = brandIds.get(l.sell.brand)!;
+        const st = normalize(l.sell.brand);
+        const product =
+          (await prisma.product.findFirst({ where: { goodId, searchText: st }, select: { id: true } })) ??
+          (await prisma.product.create({
+            data: { goodId, brandId, label: l.sell.brand, searchText: st, status: "ACTIVE" },
+            select: { id: true },
+          }));
+        await prisma.listing.update({ where: { id: (await prisma.listing.findFirst({ where: { businessId: biz.id, goodId, variantKey: "" }, select: { id: true } }))!.id }, data: { productId: product.id } });
+      }
     }
   }
   console.log(`  ok ${BUSINESSES.length} demo businesses with listings (password: ${DEMO_PASSWORD})`);
+
+  // catalogCount — the copy-from-similar-catalogs ranking key, warmed once here
+  for (const slug of bizIds.keys()) {
+    const id = bizIds.get(slug)!;
+    const count = await prisma.listing.count({
+      where: { businessId: id, isActive: true, mode: { in: ["SELL", "BOTH"] } },
+    });
+    await prisma.business.update({ where: { id }, data: { catalogCount: count } });
+  }
 
   // 5) Follows — typed graph: the buyer's BUY page tracks the supplier's SELL page
   const followPage = async (businessId: string, type: "SELL" | "BUY"): Promise<string> => {

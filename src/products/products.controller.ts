@@ -48,6 +48,8 @@ export class ProductsController {
       q: query.q,
       categoryId: query.categoryId,
       goodId: query.goodId,
+      brandId: query.brandId,
+      barcode: query.barcode,
       businessId: query.businessId,
       cursor: query.cursor,
       limit: query.limit,
@@ -73,7 +75,7 @@ export class ProductsController {
     if (!file.buffer?.length) {
       throw AppError.badRequest(locale === "en" ? "No file received" : "فایلی دریافت نشد", "NO_FILE");
     }
-    const rows = applyPriceUnit(parseImportWorkbook(file.buffer), priceUnit);
+    const rows = applyPriceUnit(parseImportWorkbook(file.buffer).rows, priceUnit);
     return this.products.importPreview({ businessId, mode, rows });
   }
 

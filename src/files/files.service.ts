@@ -58,6 +58,11 @@ const MODEL_FOLDER: Record<RelatedModel, string> = {
   Listing: "listings",
 };
 
+/** A shared copy (کپی از کاتالوگ هم‌صنف) points at bytes owned by another row. */
+function isSharedCopy(metadata: unknown): boolean {
+  return !!(metadata && typeof metadata === "object" && (metadata as { copiedFrom?: unknown }).copiedFrom);
+}
+
 const MIME_EXT: Record<string, string> = {
   "image/jpeg": "jpg",
   "image/png": "png",
@@ -344,20 +349,81 @@ export class FilesService implements OnModuleInit, OnModuleDestroy {
     return this.toDto(row);
   }
 
-  /** Delete every other file in the same slot (storage best-effort). */
+  /** Delete every other file in the same slot (storage best-effort).
+   *  Shared copies (metadata.copiedFrom — کپی از کاتالوگ) drop their row only:
+   *  the bytes belong to the original file and must survive. */
   private async removeSiblings(model: RelatedModel, modelId: string, fieldKey: string, keepId: string): Promise<void> {
     const stale = await this.prisma.file.findMany({
       where: { relatedModel: model, relatedId: modelId, fieldKey, id: { not: keepId } },
-      select: { id: true, storageKey: true, thumbStorageKey: true },
+      select: { id: true, storageKey: true, thumbStorageKey: true, metadata: true },
     });
     for (const f of stale) {
-      try {
-        await this.driver.delete(f.storageKey);
-        if (f.thumbStorageKey) await this.driver.delete(f.thumbStorageKey).catch(() => undefined);
-      } catch {
-        /* storage cleanup is best-effort — row removal is what matters */
+      if (!isSharedCopy(f.metadata)) {
+        try {
+          await this.driver.delete(f.storageKey);
+          if (f.thumbStorageKey) await this.driver.delete(f.thumbStorageKey).catch(() => undefined);
+        } catch {
+          /* storage cleanup is best-effort — row removal is what matters */
+        }
       }
       await this.prisma.file.delete({ where: { id: f.id } }).catch(() => undefined);
+    }
+  }
+
+  // ─── Ingest from URL (Excel «لینک عکس» column) ──────────────────────────────
+
+  /**
+   * Fetch ONE image over http(s) and push it through the exact same pipeline
+   * as an upload (process → store → File row). Built for the import sheet's
+   * «لینک عکس» column (خواسته‌ی کاربر: «ای کاش می‌شد از اکسل تصاویر رو هم
+   * وارد کرد»). Never throws — a broken/slow URL must never fail the row the
+   * image belongs to; the onDone callback fires only on success (cache bust).
+   *
+   * SSRF discipline: http/https only, no private/loopback hosts, 10s timeout,
+   * 5 MB cap, image/* content-type required.
+   */
+  async ingestUrl(
+    owner: AuthUser,
+    input: { model: RelatedModel; modelId: string; fieldKey: string; replace?: boolean },
+    rawUrl: string,
+    onDone?: () => void
+  ): Promise<void> {
+    const fail = (reason: string) => console.warn(`[files] ingestUrl skipped: ${reason}`);
+    try {
+      const u = new URL(rawUrl);
+      if (u.protocol !== "http:" && u.protocol !== "https:") return fail(`bad protocol ${u.protocol}`);
+      const host = u.hostname.toLowerCase();
+      const isPrivate =
+        host === "localhost" ||
+        host.endsWith(".local") ||
+        host.endsWith(".internal") ||
+        /^127\.|^10\.|^192\.168\.|^169\.254\.|^0\.|^::1$|^172\.(1[6-9]|2\d|3[01])\./.test(host) ||
+        /^\[?(fe80|fc|fd)/.test(host);
+      if (isPrivate) return fail(`private host ${host}`);
+
+      const res = await fetch(u.toString(), {
+        signal: AbortSignal.timeout(10_000),
+        headers: { "user-agent": "iMach-import/1.0", accept: "image/*" },
+        redirect: "follow",
+      });
+      if (!res.ok) return fail(`HTTP ${res.status}`);
+      const mime = (res.headers.get("content-type") ?? "").split(";")[0].trim().toLowerCase();
+      if (!mime.startsWith("image/")) return fail(`content-type ${mime || "?"}`);
+      const declared = Number(res.headers.get("content-length") ?? 0);
+      if (declared > 5 * 1024 * 1024) return fail(`too big ${declared}`);
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length === 0 || buf.length > 5 * 1024 * 1024) return fail(`size ${buf.length}`);
+
+      const name = decodeURIComponent(u.pathname.split("/").filter(Boolean).pop() ?? "image").slice(0, 120) || "image";
+      await this.upload(
+        owner,
+        { model: input.model, modelId: input.modelId, fieldKey: input.fieldKey, replace: input.replace },
+        { buffer: buf, mimetype: mime === "image/jpg" ? "image/jpeg" : mime, filename: name },
+        "fa"
+      );
+      onDone?.();
+    } catch (e) {
+      fail(e instanceof Error ? e.message : "unknown");
     }
   }
 
@@ -457,11 +523,13 @@ export class FilesService implements OnModuleInit, OnModuleDestroy {
       throw new AppError("FORBIDDEN", t(locale, "files.forbidden", "شما اجازه‌ی این کار را ندارید"), HttpStatus.FORBIDDEN);
     }
 
-    try {
-      await this.driver.delete(row.storageKey);
-      if (row.thumbStorageKey) await this.driver.delete(row.thumbStorageKey).catch(() => undefined);
-    } catch {
-      /* best-effort — the DB row is authoritative */
+    if (!isSharedCopy(row.metadata)) {
+      try {
+        await this.driver.delete(row.storageKey);
+        if (row.thumbStorageKey) await this.driver.delete(row.thumbStorageKey).catch(() => undefined);
+      } catch {
+        /* best-effort — the DB row is authoritative */
+      }
     }
     await this.prisma.file.delete({ where: { id: row.id } });
     await this.bustCaches(row.relatedModel as RelatedModel, row.relatedId);

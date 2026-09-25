@@ -1,11 +1,13 @@
 import { Injectable } from "@nestjs/common";
 import { normalizeFa, goodSearchText } from "../common/catalog/catalog";
+import { refreshCatalogCount } from "../common/catalog/catalog-count";
 import { provinceOf } from "../common/geo/cities";
 import { CacheService } from "../common/cache/cache.module";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
 import { cursorBefore, decodeCursor, toPage, type Page } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
+import { FilesService } from "../files/files.service";
 import type { AuthUser } from "../common/decorators/auth.decorators";
 import type { ImportRow, ImportRowInput } from "./import-file";
 
@@ -89,7 +91,8 @@ export function productIdentityParts(brandName: string | undefined, attrs: Recor
 export class ProductsService {
   constructor(
     private readonly prisma: PrismaService,
-    private readonly cache: CacheService
+    private readonly cache: CacheService,
+    private readonly files: FilesService
   ) {}
 
   /**
@@ -153,6 +156,9 @@ export class ProductsService {
     q?: string;
     categoryId?: string;
     goodId?: string;
+    brandId?: string;
+    /** exact barcode hit — the scanner's indexed fast path */
+    barcode?: string;
     /** caller's business for the «داریش» badge — omitted by the admin panel */
     businessId?: string;
     cursor?: string;
@@ -160,6 +166,16 @@ export class ProductsService {
   }): Promise<Page<ProductRowDto>> {
     const limit = Math.min(Math.max(params.limit ?? 40, 1), 100);
     const q = params.q?.trim();
+
+    // اسکنر — بارکد کلیدِ دقیق است: یک ایندکس‌هیت، بدون فازِ جست‌وجوی متنی
+    if (params.barcode) {
+      const hit = await this.prisma.product.findFirst({
+        where: { barcode: params.barcode, status: { not: "MERGED" } },
+        select: PRODUCT_SELECT,
+      });
+      const items = hit ? await this.decoratePage([hit], params.businessId) : [];
+      return { items, nextCursor: null } as Page<ProductRowDto>;
+    }
 
     // فیلترهای پایه‌ی گروه کالا — داخل هر شاخه‌ی جست‌وجو می‌روند (فیلتر گودِ
     // سطح‌بالا + شاخه‌ی گودِ OR در یک کوئری، باگِ «$size must be an array»
@@ -171,6 +187,7 @@ export class ProductsService {
     };
     const where: Record<string, unknown> = {
       status: { not: "MERGED" },
+      ...(params.brandId ? { brandId: params.brandId } : {}),
       ...cursorBefore(decodeCursor(params.cursor)),
     };
     if (q) {
@@ -190,9 +207,16 @@ export class ProductsService {
       take: limit + 1,
     });
     const page = toPage(rows as (ProductRowDto & { brand: { name: string } | null })[], limit);
+    const decorated = await this.decoratePage(page.items, params.businessId);
+    return { ...page, items: decorated };
+  }
 
-    // ── per-page aggregates: exact distinct-seller counts + «داریش» flags ──
-    const ids = page.items.map((p) => p.id);
+  /** sellers-count + «داریش» for one page of product rows — two bounded aggregates */
+  private async decoratePage(
+    items: Omit<ProductRowDto, "sellers" | "mineMode">[],
+    businessId?: string
+  ): Promise<ProductRowDto[]> {
+    const ids = items.map((p) => p.id);
     const [sellRows, mine] = await Promise.all([
       ids.length
         ? this.prisma.listing.findMany({
@@ -201,22 +225,17 @@ export class ProductsService {
             distinct: ["productId", "businessId"],
           })
         : Promise.resolve([] as { productId: string; businessId: string }[]),
-      ids.length && params.businessId
+      ids.length && businessId
         ? this.prisma.listing.findMany({
-            where: { businessId: params.businessId, productId: { in: ids }, isActive: true },
+            where: { businessId, productId: { in: ids }, isActive: true },
             select: { productId: true, mode: true },
           })
         : Promise.resolve([] as { productId: string; mode: string }[]),
     ]);
-
     const sellers = new Map<string, number>();
     for (const r of sellRows) sellers.set(r.productId!, (sellers.get(r.productId!) ?? 0) + 1);
     const mineMap = new Map(mine.map((m) => [m.productId!, m.mode]));
-
-    return {
-      ...page,
-      items: page.items.map((p) => ({ ...p, sellers: sellers.get(p.id) ?? 0, mineMode: mineMap.get(p.id) ?? null })),
-    };
+    return items.map((p) => ({ ...p, sellers: sellers.get(p.id) ?? 0, mineMode: mineMap.get(p.id) ?? null }));
   }
 
   /**
@@ -325,10 +344,13 @@ export class ProductsService {
       identity: { label: string; searchText: string } | null;
       sellers: number;
       mineMode: string | null;
+      /** which arms this row can land on — price → SELL, volume → BUY,
+       * both → one BOTH row (خواسته‌ی کاربر: «فقط خرید؟ ستون‌های خرید رو پر کن» */
+      arms: ("SELL" | "BUY")[];
       warning: string | null;
     }[]
   > {
-    const { businessId, mode, rows } = input;
+    const { businessId, rows } = input;
 
     // ۱) good resolution for the whole file — batch the exact lookups first
     const goodNorms = [...new Set(rows.map((r) => normalizeFa(r.name)).filter(Boolean))];
@@ -395,11 +417,14 @@ export class ProductsService {
       const identity = identities[i];
       const product = good && identity ? productMap.get(`${good.id}|${identity.searchText}`) ?? null : null;
       const matchType: "product" | "good" | "new" = product ? "product" : good ? "good" : "new";
+      const hasPrice = !!(row.priceMinor && row.priceMinor > 0);
+      const hasVolume = !!(row.volume && row.volume > 0);
+      const arms: ("SELL" | "BUY")[] = hasPrice && hasVolume ? ["SELL", "BUY"] : hasPrice ? ["SELL"] : hasVolume ? ["BUY"] : [];
       const warning =
-        mode === "SELL" && !(row.priceMinor && row.priceMinor > 0)
-          ? "noPrice"
-          : !normalizeFa(row.name)
-            ? "noName"
+        !normalizeFa(row.name)
+          ? "noName"
+          : arms.length === 0
+            ? "noData"
             : null;
       return {
         row,
@@ -412,6 +437,7 @@ export class ProductsService {
         identity,
         sellers: product ? sellers.get(product.id) ?? 0 : 0,
         mineMode: product ? mineMap.get(product.id) ?? null : null,
+        arms,
         warning,
       };
     });
@@ -430,6 +456,7 @@ export class ProductsService {
       goodLevel: classified.filter((c) => c.matchType === "good").length,
       newGood: classified.filter((c) => c.matchType === "new").length,
       willSkip: classified.filter((c) => c.warning).length,
+      withImage: classified.filter((c) => c.row.imageUrl).length,
     };
     return {
       summary,
@@ -442,6 +469,8 @@ export class ProductsService {
         stock: c.row.stock ?? null,
         minOrder: c.row.minOrder ?? null,
         volume: c.row.volume ?? null,
+        hasImage: !!c.row.imageUrl,
+        arms: c.arms,
         matchType: c.matchType,
         goodId: c.goodId,
         goodName: c.goodName,
@@ -458,10 +487,14 @@ export class ProductsService {
   /**
    * Commit of an import file — the SAME engine as the typed form and the
    * picker: brand upsert, product find-or-create (silent), listing upsert
-   * with the legacy fork-bridge. Rows without a matching reference good FAIL
+   * with the legacy fork-bridge. Per-row arms: قیمت → فروش، حجم → خرید،
+   * هر دو → یک ردیف BOTH (خواسته‌ی کاربر: «فقط خرید؟ ستون‌های فروش رو خالی
+   * بذار» — یک فایل، دو بازو). Rows without a matching reference good FAIL
    * with a clear reason — the import never invents categories (that is the
    * admin garden's job); one pass through the typed form adds the good for
-   * everyone and the next import matches.
+   * everyone and the next import matches. Image URLs go through the same
+   * gallery pipeline in the background — a slow or broken URL never blocks
+   * the row (کالا بدون عکس ذخیره می‌شود، عکس بعداً خودش می‌نشیند).
    */
   async importCommit(
     user: AuthUser,
@@ -499,8 +532,8 @@ export class ProductsService {
         skipped.push({ index: c.row.index, reason: "noName" });
         continue;
       }
-      if (input.mode === "SELL" && !(c.row.priceMinor && c.row.priceMinor > 0)) {
-        skipped.push({ index: c.row.index, reason: "noPrice" });
+      if (c.arms.length === 0) {
+        skipped.push({ index: c.row.index, reason: "noData" });
         continue;
       }
       if (!c.goodId) {
@@ -528,9 +561,12 @@ export class ProductsService {
         productId = created.id;
       }
 
+      // حالت هر ردیف از محتوایش می‌آید — قیمت و حجم با هم = BOTH
+      const rowMode = c.arms.includes("SELL") && c.arms.includes("BUY") ? "BOTH" : c.arms[0];
       const identityKey = c.identity?.searchText.slice(0, 60) ?? "";
+      const hasPrice = !!(c.row.priceMinor && c.row.priceMinor > 0);
       const data = {
-        mode: input.mode,
+        mode: rowMode,
         brandId: c.row.brand ? await this.resolveBrandRow(user, c.row.brand) : null,
         productId: productId ?? null,
         attrs: c.row.spec ? { spec: c.row.spec } : null,
@@ -540,31 +576,22 @@ export class ProductsService {
         city: business.city,
         province: business.province ?? provinceOf(business.city),
         country: business.country,
-        ...(input.mode === "SELL"
-          ? {
-              priceMinor: c.row.priceMinor!,
-              currency: business.currency,
-              stock: c.row.stock ?? 0,
-              minOrder: c.row.minOrder ?? 1,
-              volume: null,
-              frequency: null,
-            }
-          : {
-              priceMinor: null,
-              currency: null,
-              stock: null,
-              minOrder: null,
-              volume: c.row.volume ?? null,
-              frequency: "MONTHLY",
-            }),
+        priceMinor: hasPrice ? c.row.priceMinor! : null,
+        currency: hasPrice ? business.currency : null,
+        stock: hasPrice ? c.row.stock ?? 0 : null,
+        minOrder: hasPrice ? c.row.minOrder ?? 1 : null,
+        volume: c.row.volume ?? null,
+        frequency: c.row.volume ? "MONTHLY" : null,
       };
 
       const legacyId = legacyByKey.get(`${c.goodId}|${identityKey}`) ?? legacyByKey.get(`${c.goodId}|`) ?? null;
+      let listingId: string;
       try {
         if (legacyId) {
+          listingId = legacyId;
           await this.prisma.listing.update({ where: { id: legacyId }, data });
         } else {
-          await this.prisma.listing.upsert({
+          const row = await this.prisma.listing.upsert({
             where: {
               businessId_goodId_variantKey: {
                 businessId: business.id,
@@ -576,14 +603,28 @@ export class ProductsService {
             update: data,
             select: { id: true },
           });
+          listingId = row.id;
         }
         saved++;
+        // عکسِ ستون «لینک عکس» — پس‌زمینه‌ای، بدون بلاک‌کردن ثبت؛ خطای
+        // اینترنت/لینک هرگز کالا را نمی‌اندازد (کالا می‌ماند، عکس دیر می‌رسد)
+        if (c.row.imageUrl) {
+          void this.files.ingestUrl(
+            user,
+            { model: "Listing", modelId: listingId, fieldKey: "gallery", replace: false },
+            c.row.imageUrl,
+            () => this.bustBusinesses(new Set([business.id]))
+          );
+        }
       } catch {
         skipped.push({ index: c.row.index, reason: "conflict" });
       }
     }
 
-    if (saved > 0) this.bustBusinesses(new Set([business.id]));
+    if (saved > 0) {
+      this.bustBusinesses(new Set([business.id]));
+      void refreshCatalogCount(this.prisma, business.id);
+    }
     return { saved, failed: skipped.length, skipped };
   }
 

@@ -269,6 +269,7 @@ model Product {
   @@index([goodId, searchText])
   @@index([barcode])
   @@index([status])
+  @@index([brandId]) // brand filter in the reference picker
 }
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────
@@ -283,6 +284,14 @@ model Business {
   slug         String  @unique // drives the public arm links: /sell/{slug} /buy/{slug}
   name         String
   activityType String? // optional self-description, chosen later from the panel
+  /// صنف — the trade the business works in («سوپرمارکت», «ابزار و یراق»), free
+  /// text asked at creation. Powers «کپی از کاتالوگ هم‌صنف‌ها»: a new retailer
+  /// finds similar catalogs by trade instead of typing hundreds of items
+  /// (خواسته‌ی کاربر: «اولین سوپرمارکت که کالاهاشو وارد کرد بقیه تیک بزنن»).
+  trade        String?
+  /// Human catalog size — denormalized count of active listings, refreshed
+  /// opportunistically. Keeps catalog-search fast at scale (no groupBy per hit).
+  catalogCount Int     @default(0)
   city         String
   province     String? // derived from city at write time (matching granularity)
   country      String  @default("IR") // country code of the business
@@ -317,6 +326,7 @@ model Business {
 
   @@index([city])
   @@index([ownerId])
+  @@index([trade])
 }
 
 // ─── PushSubscription (Web Push — VAPID) ─────────────────────────────────────
