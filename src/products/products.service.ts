@@ -640,6 +640,7 @@ export class ProductsService {
 
       // گروه موجود ولی SKU جدید → محصول بی‌سروصدا ساخته می‌شود (همان لینک خاموش
       // فرم تایپی)؛ ردیفِ فلهٔ بدون برند/ویژگی بدون شناسه می‌ماند — همان مسیر امروز
+      // اگه ردیف اکسل imageUrl دارد، روی Product ست می‌شود به‌عنوان عکس مرجع.
       let productId = c.productId;
       if (!productId && c.identity) {
         const brandId = c.row.brand ? await this.resolveBrandRow(user, c.row.brand) : null;
@@ -649,6 +650,7 @@ export class ProductsService {
             brandId,
             label: c.identity.label,
             searchText: c.identity.searchText,
+            imageUrl: c.row.imageUrl ?? null,
             status: user.role === "ADMIN" ? "ACTIVE" : "PROVISIONAL",
             creatorRole: user.role === "ADMIN" ? "ADMIN" : "USER",
             createdById: user.id,

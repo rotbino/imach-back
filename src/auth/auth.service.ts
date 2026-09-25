@@ -362,6 +362,11 @@ export class AuthService {
     // ساخت کاربر جدید با passwordSet=false — placeholder name و placeholder password
     // (هش رندم ۴۸ بایتی: هرگز قابل guess نیست، ولی کاربر نمی‌تواند با آن وارد شود
     // چون نمی‌داندش — فقط سشن مرورگرش را دارد)
+    //
+    // Business اینجا ساخته نمی‌شود — کاربر در مرحله دوم ثبت‌نام (در فرانت) intent
+    // (خرید/فروش/هر دو) + صنف + شهر را مشخص می‌کند و بعد createBusiness صدا زده
+    // می‌شود. این طبیعی است چون اگه فقط خریدار است، کاتالوک (sell arm) معنا ندارد
+    // و باید مستقیم به دستیار خرید برود.
     const placeholderName = `کاربر ${phone.slice(-4)}`;
     const randomPassword = randomBytes(48).toString("base64url");
     const bcrypt = await import("bcryptjs");
@@ -376,32 +381,9 @@ export class AuthService {
       },
     });
 
-    // ساخت Business خودکار با نام پیش‌فرض «کاتالوگ شما» — slug یکتا با phone suffix
-    const slugBase = `biz-${phone.slice(-6)}`;
-    let slug = slugBase;
-    for (let i = 0; i < 5; i++) {
-      const clash = await this.prisma.business.findUnique({ where: { slug }, select: { id: true } });
-      if (!clash) break;
-      slug = `${slugBase}-${randomBytes(2).toString("hex")}`;
-    }
-    const business = await this.prisma.business.create({
-      data: {
-        slug,
-        name: "کاتالوگ شما",
-        city: "—", // شهر هنوز مشخص نیست — کاربر از مدال «انتخاب شهر» پر می‌کند
-        province: null,
-        country,
-        currency: currencyOfCountry(country),
-        phone: user.phone,
-        ownerId: user.id,
-        pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
-      },
-      include: { pages: { select: { id: true, type: true } } },
-    });
-    const mySellPageId = business.pages.find((p) => p.type === "SELL")?.id;
-    const myBuyPageId = business.pages.find((p) => p.type === "BUY")?.id;
-
-    // ── Referral attribution — همان منطق registerUser (هر دو ورودی ?ref= قبول می‌کنند)
+    // ── Referral attribution — فقط referredById + refArm روی User ذخیره می‌شود.
+    // auto-follow در createBusiness انجام می‌شود (وقتی business ساخته شد و pageها
+    // قابل reference شدن دارند).
     let refArm: "SELL" | "BUY" = "SELL";
     let refSlug = body.ref?.trim() ?? "";
     if (refSlug.startsWith("buy:")) {
@@ -411,35 +393,13 @@ export class AuthService {
     if (refSlug) {
       const refBiz = await this.prisma.business.findUnique({
         where: { slug: refSlug },
-        select: { id: true, ownerId: true },
+        select: { ownerId: true },
       });
       if (refBiz?.ownerId && refBiz.ownerId !== user.id) {
         await this.prisma.user.update({
           where: { id: user.id },
           data: { referredById: refBiz.ownerId, refArm },
         });
-        // auto-follow همان‌طور که در createBusiness انجام می‌شد
-        try {
-          if (refArm === "BUY") {
-            const refBuyPageId = await ensurePage(this.prisma, refBiz.id, "BUY");
-            const sellId = mySellPageId ?? (await ensurePage(this.prisma, business.id, "SELL"));
-            await this.prisma.follow.upsert({
-              where: { followerPageId_supplierPageId: { followerPageId: refBuyPageId, supplierPageId: sellId } },
-              create: { followerPageId: refBuyPageId, supplierPageId: sellId, viaRef: true },
-              update: {},
-            });
-          } else {
-            const buyId = myBuyPageId ?? (await ensurePage(this.prisma, business.id, "BUY"));
-            const refSellPageId = await ensurePage(this.prisma, refBiz.id, "SELL");
-            await this.prisma.follow.upsert({
-              where: { followerPageId_supplierPageId: { followerPageId: buyId, supplierPageId: refSellPageId } },
-              create: { followerPageId: buyId, supplierPageId: refSellPageId, viaRef: true },
-              update: {},
-            });
-          }
-        } catch {
-          /* best-effort */
-        }
       }
     }
 
