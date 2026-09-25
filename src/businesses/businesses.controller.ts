@@ -547,7 +547,7 @@ export class BusinessesController {
             category: { select: { id: true, nameFa: true, nameEn: true } },
           },
         },
-        product: { select: { id: true, label: true } },
+        product: { select: { id: true, label: true, imageUrl: true } },
       },
       orderBy: { id: "desc" },
       take: limit + 1,
@@ -597,7 +597,8 @@ export class BusinessesController {
         brandName: r.brand?.name ?? null,
         variantLabel: r.product?.label ?? null,
         good: r.good,
-        thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl ?? galleries.get(r.id)?.[0]?.url ?? null,
+        // اولویت: عکس مرجع Product → عکس گالری Listing → null
+        thumbUrl: r.product?.imageUrl ?? galleries.get(r.id)?.[0]?.thumbUrl ?? galleries.get(r.id)?.[0]?.url ?? null,
       })),
       nextCursor: hasMore ? items[items.length - 1].id : null,
       brands,

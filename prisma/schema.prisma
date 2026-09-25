@@ -263,6 +263,10 @@ model Product {
   searchText String
   /// GTIN/EAN when known — exact identity for packaged branded goods
   barcode    String?
+  /// عکس مرجع محصول — اختیاری. می‌تواند از اولین Listingای که این Product را
+  /// ساخت بیاید، یا ادمین در پنل بگذارد. در picker و کاتالوگ تجمیعی نشان داده
+  /// می‌شود تا کاربر بداند چه می‌خرد.
+  imageUrl   String?
   /// ACTIVE | PROVISIONAL | MERGED (mergedIntoId points at the survivor)
   status     String   @default("ACTIVE")
   mergedIntoId String? @db.ObjectId

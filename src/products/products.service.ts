@@ -31,6 +31,8 @@ export interface ProductRowDto {
   id: string;
   label: string;
   barcode: string | null;
+  /** عکس مرجع محصول — اختیاری. در picker نشان داده می‌شود. */
+  imageUrl: string | null;
   status: string;
   goodId: string;
   good: {
@@ -75,6 +77,7 @@ const PRODUCT_SELECT = {
   id: true,
   label: true,
   barcode: true,
+  imageUrl: true,
   status: true,
   goodId: true,
   brandId: true,
@@ -173,53 +176,6 @@ export class ProductsService {
   }
 
   /**
-   * Ensure every reference good has at least one Product row — the picker
-   * reads from Product, so a Good without one is invisible in the catalog
-   * (خواسته‌ی کاربر: «چرا هر چی توی کاتالوگ مرجع ثبت می کنم چیزی نمیاد»).
-   * A Good with no brand/spec → a single «plain» Product with brandId=null
-   * and searchText = the good's searchText. Idempotent — existing rows stay.
-   *
-   * Called lazily inside listForPicker so a freshly-seeded Good appears in
-   * the picker without a separate cron or admin action (قانون سرعت).
-   */
-  private async ensureDefaultProducts(q?: string): Promise<void> {
-    // فقط وقتی جست‌وجو خالی است یا کوتاه است این کار را بکنیم — روی q طولانی
-    // غیرضروری است و ممکن است هزینه بر باشد (با اینکه take=200 محدود است).
-    if (q && q.length > 3) return;
-    try {
-      // Goods با category فعال که هیچ Productی ندارند
-      const goodsWithoutProduct = await this.prisma.good.findMany({
-        where: {
-          status: "ACTIVE",
-          category: { isActive: true },
-          products: { none: {} },
-          ...(q ? { searchText: { contains: normalizeFa(q) } } : {}),
-        },
-        select: { id: true, nameFa: true, nameEn: true, searchText: true },
-        take: 50,
-      });
-      if (goodsWithoutProduct.length === 0) return;
-      // ساخت Product پیش‌فرض (بدون برند، با همان searchText گود) — سیستم
-      // هویت پیدا می‌کند چون searchText یکتاست؛ بعداً وقتی فروشنده‌ای با برند
-      // ثبت می‌کند، Product جدیدی برای آن برند ساخته می‌شود و این «plain»
-      // باقی می‌ماند برای کالای فله. کوئریِ «goods بدون product» تضمین می‌کند
-      // که برای همان گود دوبار نسازیم.
-      await this.prisma.product.createMany({
-        data: goodsWithoutProduct.map((g) => ({
-          goodId: g.id,
-          brandId: null,
-          label: g.nameFa,
-          searchText: g.searchText,
-          status: "ACTIVE",
-          creatorRole: "ADMIN",
-        })),
-      });
-    } catch {
-      /* non-blocking — picker must never fail because of this */
-    }
-  }
-
-  /**
    * Picker feed — browse/search the shared catalog. Every row carries the
    * two signals that make ticking feel safe: how many businesses already
    * sell it, and whether the caller already has it (داریش).
@@ -227,6 +183,12 @@ export class ProductsService {
    * Returns the page PLUS the brand strip + category strip — both derived
    * from the SAME filter scope EXCEPT the dimension they sit on, so the
    * strips stay stable as the user toggles a brand or category on/off.
+   *
+   * Productها فقط زمانی ساخته می‌شوند که کاربری Listing با برند/ویژگی ثبت
+   * کند (findOrCreateForListing) یا ادمین در پنل بسازد. Good بدون Product
+   * در picker دیده نمی‌شود — این عمدی است چون Product بدون برند بی‌معنی
+   * است. منبع اصلی پر کردن کاتالوگ برای کاربر جدید، «کپی از هم‌صنف‌ها» است
+   * (getAggregatedCatalog) که از Listingهای هم‌صنف‌ها تغذیه می‌شود.
    */
   async listForPicker(params: {
     q?: string;
@@ -252,9 +214,6 @@ export class ProductsService {
       const items = hit ? await this.decoratePage([hit], params.businessId) : [];
       return { items, nextCursor: null, brands: [], categories: [] };
     }
-
-    // Good‌های بدون Product را با Product پیش‌فرض پر کن — lazy و بی‌صدا
-    await this.ensureDefaultProducts(q);
 
     // فیلترهای پایه‌ی گروه کالا — داخل هر شاخه‌ی جست‌وجو می‌روند (فیلتر گودِ
     // سطح‌بالا + شاخه‌ی گودِ OR در یک کوئری، باگِ «$size must be an array»
