@@ -634,8 +634,19 @@ export class ProductsService {
         continue;
       }
       if (!c.goodId) {
-        skipped.push({ index: c.row.index, reason: "goodNotFound" });
-        continue;
+        // Good پیدا نشد → یک Good جدید بساز زیر «سایر › جدید» (find-or-create).
+        // ادمین بعداً در پنل آن را به دسته‌ی درست منتقل می‌کند. این طبیعی است چون
+        // در ایمپورت از اکسل، اسم کالا ممکن است با هیچ Good موجود تطابق نداشته باشد.
+        // کاربر گفت «اگر نبود خطا بده» ولی بهتر است Good بسازیم و PROVISIONAL
+        // بگذاریم تا ادمین باغبانی کند — قانون رشد ارگانیک.
+        const newGoodId = await this.ensureGoodForImport(c.row.name);
+        if (newGoodId) {
+          c.goodId = newGoodId;
+          c.matchType = "new";
+        } else {
+          skipped.push({ index: c.row.index, reason: "goodNotFound" });
+          continue;
+        }
       }
 
       // گروه موجود ولی SKU جدید → محصول بی‌سروصدا ساخته می‌شود (همان لینک خاموش
@@ -728,6 +739,69 @@ export class ProductsService {
   }
 
   /** brand free-text → deduped Brand row (same contract as saveListing) */
+  /**
+   * Ensure a Good exists for an import row whose name didn't match any
+   * existing Good. Creates it under «سایر › جدید» (find-or-create idempotent)
+   * so the row isn't skipped. Admin later moves it to the right category.
+   *
+   * Returns the Good id, or null if creation failed.
+   */
+  private async ensureGoodForImport(name: string): Promise<string | null> {
+    const trimmed = name.trim();
+    if (trimmed.length < 2) return null;
+
+    const searchText = goodSearchText({ nameFa: trimmed });
+
+    // اگر قبلاً ساخته شده (مثلاً در همین batch)، برگردان
+    const existing = await this.prisma.good.findFirst({
+      where: { searchText },
+      select: { id: true },
+    });
+    if (existing) return existing.id;
+
+    try {
+      // سبد موقت: ریشه‌ی «سایر» + برگ «جدید» (همان منطق createGood)
+      const root = await this.prisma.category.upsert({
+        where: { slug: "sayer" },
+        create: { slug: "sayer", nameFa: "سایر", nameEn: "Other", isActive: true, unit: null },
+        update: {},
+        select: { id: true },
+      });
+      const leaf = await this.prisma.category.upsert({
+        where: { slug: "jadid" },
+        create: {
+          slug: "jadid",
+          nameFa: "جدید",
+          nameEn: "New",
+          parentId: root.id,
+          unit: "PIECE",
+          isActive: true,
+        },
+        update: { parentId: root.id, isActive: true },
+        select: { id: true, unit: true },
+      });
+
+      const created = await this.prisma.good.create({
+        data: {
+          categoryId: leaf.id,
+          nameFa: trimmed.slice(0, 80),
+          nameEn: null,
+          aliases: [],
+          searchText,
+          unit: leaf.unit ?? "PIECE",
+          source: "USER",
+          status: "PROVISIONAL",
+          creatorRole: "USER",
+        },
+        select: { id: true },
+      });
+      this.cache.invalidateTag("goods");
+      return created.id;
+    } catch {
+      return null;
+    }
+  }
+
   private async resolveBrandRow(user: AuthUser, name: string): Promise<string | null> {
     const trimmed = name.trim();
     if (!trimmed) return null;
