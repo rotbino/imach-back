@@ -180,6 +180,16 @@ export class ImportRowDto {
   @IsString()
   @MaxLength(500)
   imageUrl?: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  category?: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  subcategory?: string;
 }
 
 export class ImportCommitDto {
