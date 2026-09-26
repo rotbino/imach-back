@@ -105,4 +105,18 @@ export class ProductsController {
   ) {
     return this.products.adminMerge(user, { intoId: body.intoId, fromIds: body.fromIds, locale });
   }
+
+  /**
+   * POST /products/setProductImage — ست کردن عکس مرجع Product.
+   * وقتی کاربر برای کالای مرجعی که عکس ندارد عکس آپلود می‌کند، آن عکس
+   * روی Product.imageUrl ست می‌شود تا از آن به بعد در لیست مرجع دیده شود.
+   */
+  @Post("setProductImage")
+  @UseGuards(JwtAuthGuard)
+  async setProductImage(
+    @Body() body: { productId: string; imageUrl: string },
+    @CurrentUser() user: AuthUser
+  ) {
+    return this.products.setProductImage(user, body);
+  }
 }

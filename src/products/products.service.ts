@@ -314,25 +314,32 @@ export class ProductsService {
     businessId?: string
   ): Promise<ProductRowDto[]> {
     const ids = items.map((p) => p.id);
-    const [sellRows, mine] = await Promise.all([
-      ids.length
-        ? this.prisma.listing.findMany({
-            where: { productId: { in: ids }, isActive: true, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } },
-            select: { productId: true, businessId: true },
-            distinct: ["productId", "businessId"],
-          })
-        : Promise.resolve([] as { productId: string; businessId: string }[]),
-      ids.length && businessId
+    if (ids.length === 0) return items.map((p) => ({ ...p, sellers: 0, mineMode: null }));
+
+    // sellers count — groupBy به‌جای distinct (سریع‌تر در MongoDB)
+    const [sellerCounts, mineRows] = await Promise.all([
+      this.prisma.listing.groupBy({
+        by: ["productId"],
+        where: { productId: { in: ids }, isActive: true, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } },
+        _count: { _all: true },
+      }).then((rows) => {
+        const m = new Map<string, number>();
+        for (const r of rows) { if (r.productId) m.set(r.productId, r._count._all); }
+        return m;
+      }),
+      businessId
         ? this.prisma.listing.findMany({
             where: { businessId, productId: { in: ids }, isActive: true },
             select: { productId: true, mode: true },
-          })
-        : Promise.resolve([] as { productId: string; mode: string }[]),
+          }).then((rows) => new Map(rows.map((m) => [m.productId!, m.mode])))
+        : Promise.resolve(new Map<string, string>()),
     ]);
-    const sellers = new Map<string, number>();
-    for (const r of sellRows) sellers.set(r.productId!, (sellers.get(r.productId!) ?? 0) + 1);
-    const mineMap = new Map(mine.map((m) => [m.productId!, m.mode]));
-    return items.map((p) => ({ ...p, sellers: sellers.get(p.id) ?? 0, mineMode: mineMap.get(p.id) ?? null }));
+
+    return items.map((p) => ({
+      ...p,
+      sellers: sellerCounts.get(p.id) ?? 0,
+      mineMode: mineRows.get(p.id) ?? null,
+    }));
   }
 
   /**
@@ -936,5 +943,30 @@ export class ProductsService {
       select: { id: true },
     });
     return brand.id;
+  }
+
+  /**
+   * ست کردن عکس مرجع Product — وقتی کاربر برای کالای مرجعی که عکس ندارد
+   * عکس آپلود می‌کند، آن عکس روی Product.imageUrl ست می‌شود تا از آن به بعد
+   * در لیست مرجع دیده شود (خواسته‌ی کاربر: عکس کاربر روی مرجع ثبت شود).
+   * اگر Product قبلاً عکس دارد، عکس جدید جایگزین نمی‌شود.
+   */
+  async setProductImage(
+    user: AuthUser,
+    input: { productId: string; imageUrl: string }
+  ): Promise<{ ok: boolean }> {
+    const product = await this.prisma.product.findUnique({
+      where: { id: input.productId },
+      select: { id: true, imageUrl: true },
+    });
+    if (!product) throw AppError.notFound("Product not found");
+    // فقط اگر عکس ندارد ست کن — عکس قبلی را بازنویسی نکن
+    if (product.imageUrl) return { ok: true };
+    await this.prisma.product.update({
+      where: { id: product.id },
+      data: { imageUrl: input.imageUrl },
+    });
+    this.cache.invalidateTag("goods");
+    return { ok: true };
   }
 }
