@@ -598,7 +598,7 @@ export class ProductsService {
   async importCommit(
     user: AuthUser,
     input: { businessId: string; mode: "SELL" | "BUY"; rows: ImportRowInput[]; locale: Locale }
-  ): Promise<{ saved: number; failed: number; skipped: { index: number; reason: string }[] }> {
+  ): Promise<{ saved: number; failed: number; skipped: { index: number; reason: string }[]; listingIds: string[] }> {
     const business = await this.prisma.business.findUnique({
       where: { id: input.businessId },
       select: { id: true, slug: true, city: true, province: true, country: true, currency: true },
@@ -608,6 +608,7 @@ export class ProductsService {
     const classified = await this.classifyImportRows({ businessId: business.id, mode: input.mode, rows: input.rows });
     const skipped: { index: number; reason: string }[] = [];
     let saved = 0;
+    const listingIds: string[] = [];
 
     // legacy bridge — pre-product-layer rows holding the same offer keep
     // their gallery/history instead of spawning an imageless twin
@@ -735,6 +736,7 @@ export class ProductsService {
           listingId = row.id;
         }
         saved++;
+        listingIds.push(listingId);
         if (c.row.imageUrl) {
           void this.files.ingestUrl(
             user,
@@ -752,7 +754,7 @@ export class ProductsService {
       this.bustBusinesses(new Set([business.id]));
       void refreshCatalogCount(this.prisma, business.id);
     }
-    return { saved, failed: skipped.length, skipped };
+    return { saved, failed: skipped.length, skipped, listingIds };
   }
 
   /** brand free-text → deduped Brand row (same contract as saveListing) */
