@@ -42,6 +42,9 @@ const LISTING_SELECT = {
       category: { select: { slug: true, nameFa: true, nameEn: true } },
     },
   },
+  // ── عکس مرجع محصول — وقتی آگهی گالری ندارد، این عکس نشان داده می‌شود
+  // (کاتالوگ فروش خالی از عکس، با عکس مرجع محصول پر می‌شود)
+  product: { select: { imageUrl: true } },
 } as const satisfies Prisma.ListingSelect;
 
 /** shallow {key: value} sanity cap for category attributes */
@@ -183,6 +186,8 @@ export class ListingsController {
             category: { select: { slug: true, nameFa: true, nameEn: true } },
           },
         },
+        // ── عکس مرجع محصول — وقتی آگهی گالری ندارد، این عکس نشان داده می‌شود
+        product: { select: { imageUrl: true } },
       },
       orderBy: { updatedAt: "desc" },
     });
