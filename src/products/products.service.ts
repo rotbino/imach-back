@@ -695,6 +695,26 @@ export class ProductsService {
 
       const legacyId = legacyByKey.get(`${c.goodId}|${identityKey}`) ?? legacyByKey.get(`${c.goodId}|`) ?? null;
       let listingId: string;
+
+      // بررسی تکراری بودن — اگر کالای مرجع (productId) قبلاً در کاتالوگ کاربر هست
+      // و کاربر قبلاً آن را ثبت کرده، تکراری است. به‌جای update خودکار،
+      // در skipped با reason "duplicate" ثبت می‌شود تا فرانت به کاربر نشان دهد.
+      if (productId && !legacyId) {
+        const existingListing = await this.prisma.listing.findFirst({
+          where: {
+            businessId: business.id,
+            goodId: c.goodId,
+            variantKey: identityKey,
+            isActive: true,
+          },
+          select: { id: true },
+        });
+        if (existingListing) {
+          skipped.push({ index: c.row.index, reason: "duplicate" });
+          continue;
+        }
+      }
+
       try {
         if (legacyId) {
           listingId = legacyId;
@@ -715,8 +735,6 @@ export class ProductsService {
           listingId = row.id;
         }
         saved++;
-        // عکسِ ستون «لینک عکس» — پس‌زمینه‌ای، بدون بلاک‌کردن ثبت؛ خطای
-        // اینترنت/لینک هرگز کالا را نمی‌اندازد (کالا می‌ماند، عکس دیر می‌رسد)
         if (c.row.imageUrl) {
           void this.files.ingestUrl(
             user,
