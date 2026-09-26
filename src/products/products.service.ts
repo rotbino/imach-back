@@ -597,7 +597,7 @@ export class ProductsService {
    */
   async importCommit(
     user: AuthUser,
-    input: { businessId: string; mode: "SELL" | "BUY"; rows: ImportRowInput[]; locale: Locale }
+    input: { businessId: string; mode: "SELL" | "BUY"; rows: ImportRowInput[]; locale: Locale; replaceDuplicates?: boolean }
   ): Promise<{ saved: number; failed: number; skipped: { index: number; reason: string }[]; listingIds: string[] }> {
     const business = await this.prisma.business.findUnique({
       where: { id: input.businessId },
@@ -697,9 +697,9 @@ export class ProductsService {
       const legacyId = legacyByKey.get(`${c.goodId}|${identityKey}`) ?? legacyByKey.get(`${c.goodId}|`) ?? null;
       let listingId: string;
 
-      // بررسی تکراری بودن — اگر کالای مرجع (productId) قبلاً در کاتالوگ کاربر هست
-      // و کاربر قبلاً آن را ثبت کرده، تکراری است. به‌جای update خودکار،
-      // در skipped با reason "duplicate" ثبت می‌شود تا فرانت به کاربر نشان دهد.
+      // بررسی تکراری بودن — اگر کالای مرجع قبلاً در کاتالوگ کاربر هست
+      // اگر replaceDuplicates=true → listing تکراری را آپدیت کن
+      // اگر replaceDuplicates=false → در skipped با reason "duplicate" ثبت کن
       if (productId && !legacyId) {
         const existingListing = await this.prisma.listing.findFirst({
           where: {
@@ -711,8 +711,21 @@ export class ProductsService {
           select: { id: true },
         });
         if (existingListing) {
-          skipped.push({ index: c.row.index, reason: "duplicate" });
-          continue;
+          if (input.replaceDuplicates) {
+            // آپدیت listing تکراری با دیتای جدید
+            try {
+              await this.prisma.listing.update({ where: { id: existingListing.id }, data });
+              listingIds.push(existingListing.id);
+              saved++;
+              continue;
+            } catch {
+              skipped.push({ index: c.row.index, reason: "duplicate" });
+              continue;
+            }
+          } else {
+            skipped.push({ index: c.row.index, reason: "duplicate" });
+            continue;
+          }
         }
       }
 

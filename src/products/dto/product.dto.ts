@@ -196,8 +196,6 @@ export class ImportCommitDto {
   @IsString()
   businessId: string;
 
-  /** the arm the user opened the sheet from — per-row arms still win: a row
-   * with sell price AND buy volume becomes a single BOTH row */
   @IsIn(["SELL", "BUY"])
   mode: string;
 
@@ -205,4 +203,8 @@ export class ImportCommitDto {
   @ArrayMaxSize(2000)
   @Type(() => ImportRowDto)
   rows: ImportRowDto[];
+
+  /** اگر true باشد، کالاهای تکراری را با دیتای جدید آپدیت می‌کند (نه skip) */
+  @IsOptional()
+  replaceDuplicates?: boolean;
 }

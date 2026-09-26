@@ -92,6 +92,7 @@ export class ProductsController {
       mode: body.mode as "SELL" | "BUY",
       rows: body.rows,
       locale,
+      replaceDuplicates: body.replaceDuplicates ?? false,
     });
   }
 
