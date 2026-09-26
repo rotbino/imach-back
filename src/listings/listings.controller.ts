@@ -238,13 +238,25 @@ export class ListingsController {
         throw AppError.badRequest(t(locale, "products.goodMismatch", "محصول با گروه کالا هم‌خوان نیست"), "PRODUCT_GOOD_MISMATCH");
       }
       productId = p.id;
-      productIdentity = { label: p.label, searchText: p.searchText };
+      // ── اگر کاربر عنوان جدید داده، label محصول را به‌روز کن (ولی searchText ثابت می‌ماند)
+      const newLabel = body.productLabel?.trim();
+      if (newLabel && newLabel !== p.label) {
+        await this.prisma.product.update({
+          where: { id: p.id },
+          data: { label: newLabel.slice(0, 120) },
+          select: { id: true },
+        });
+        productIdentity = { label: newLabel.slice(0, 120), searchText: p.searchText };
+      } else {
+        productIdentity = { label: p.label, searchText: p.searchText };
+      }
     } else {
       const linked = await this.products.findOrCreateForListing(user, {
         goodId: body.goodId,
         brandId,
         brandName: body.brandName,
         attrs,
+        userLabel: body.productLabel,
         locale,
       });
       productId = linked?.id ?? null;

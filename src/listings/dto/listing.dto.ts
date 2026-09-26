@@ -46,6 +46,15 @@ export class SaveListingDto {
   @IsObject()
   attrs?: Record<string, string>;
 
+  /** human-friendly product label — user can type a custom display name.
+   *  If omitted, the system auto-generates one from goodName + brand + attrs.
+   *  The machine identity (searchText) is ALWAYS auto-derived from brand +
+   *  attrs — this label is only for display and search. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(120)
+  productLabel?: string;
+
   @IsOptional()
   sell?: SellSpecDto;
 

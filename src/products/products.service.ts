@@ -95,9 +95,17 @@ const PRODUCT_SELECT = {
 
 /**
  * Deterministic identity text from what the seller already typed — brand +
- * attr VALUES in sorted-key order (خواسته‌ی کاربر: هیچ فیلد و قدم جدیدی در
- * فرم نیست؛ همان برند/ویژگی‌های امروز به یک رکورد مشترک وصل می‌شود).
+ * attr VALUES in sorted-key order. This is the IDENTITY used for find-or-
+ * create: two sellers entering the same brand + attr values produce the
+ * SAME searchText → the same Product row (خواسته‌ی کاربر: «دوقلو نسازیم»).
+ *
  * Sorted keys → two sellers entering specs in different order converge.
+ *
+ * NOTE: searchText is independent from label. Label is the user-facing
+ * display name (e.g. «چیبس اشی مشی ۲۵۰ گرمی طعم پیاز» — human-friendly).
+ * searchText is the machine identity (e.g. «اشي مشي 250g پیاز» — normalized,
+ * order-insensitive). Two sellers can write different labels but if brand
+ * + attrs match, they join the same Product.
  */
 export function productIdentityParts(brandName: string | undefined, attrs: Record<string, string> | null): {
   label: string;
@@ -115,6 +123,38 @@ export function productIdentityParts(brandName: string | undefined, attrs: Recor
   return { label, searchText: normalizeFa(label) };
 }
 
+/**
+ * Build a human-friendly display label from Good name + brand + attrs.
+ * Used as the DEFAULT label when the user hasn't typed one — the user can
+ * still override it (خواسته‌ی کاربر: «عنوان محصول رو خود کاربر وارد کنه»).
+ *
+ * Example: goodName="چیبس", brand="اشی مشی", attrs={weight:"250g", flavor:"پیاز"}
+ *        → "چیبس اشی مشی ۲۵۰ گرمی طعم پیاز"
+ *
+ * attrFaLabels maps attr keys (weight, flavor, ...) to their Persian label
+ * suffix (گرمی, طعم, ...) so the auto-label reads naturally. Falls back
+ * to just the value if no label is provided for that key.
+ */
+export function buildDisplayLabel(input: {
+  goodName: string;
+  brandName?: string;
+  attrs: Record<string, string> | null;
+  attrFaLabels?: Record<string, string>;
+}): string {
+  const parts: string[] = [input.goodName];
+  const brand = input.brandName?.trim();
+  if (brand) parts.push(brand);
+  if (input.attrs) {
+    for (const k of Object.keys(input.attrs).sort()) {
+      const v = (input.attrs[k] ?? "").trim();
+      if (!v) continue;
+      const suffix = input.attrFaLabels?.[k];
+      parts.push(suffix ? `${v} ${suffix}` : v);
+    }
+  }
+  return parts.join(" ").slice(0, 120);
+}
+
 @Injectable()
 export class ProductsService {
   constructor(
@@ -128,15 +168,23 @@ export class ProductsService {
    * belongs to (id + identity keys the listing upsert reuses as variantKey),
    * or null when the offer has no SKU-level identity (no brand, no attrs →
    * bulk/flee goods stay exactly on today's path).
+   *
+   * searchText is the machine identity (brand + sorted attr values, normalized).
+   * label is the human-friendly display name — user can override it via
+   * userLabel; if not provided, falls back to identity-based label.
    */
   async findOrCreateForListing(
     user: AuthUser,
-    input: { goodId: string; brandId: string | null; brandName?: string; attrs: Record<string, string> | null; locale: Locale }
+    input: { goodId: string; brandId: string | null; brandName?: string; attrs: Record<string, string> | null; userLabel?: string; goodName?: string; locale: Locale }
   ): Promise<{ id: string; label: string; searchText: string } | null> {
     const identity = productIdentityParts(input.brandName, input.attrs);
     if (!identity) return null;
 
     const isAdmin = user.role === "ADMIN";
+
+    // ── label: کاربر می‌تواند عنوان دلخواه بدهد؛ وگرنه از identity می‌سازیم
+    // searchText همیشه از identity می‌آید — مهم برای find-or-create یکسان
+    const label = (input.userLabel?.trim() || identity.label).slice(0, 120);
 
     // 1) exact normalized identity under the same good (barcode comes later
     //    with scan — when present it will be the FIRST lookup key here)
@@ -149,22 +197,45 @@ export class ProductsService {
       },
       select: { id: true, label: true, searchText: true },
     });
-    if (exact) return exact;
+    if (exact) {
+      // ── اگر کاربر عنوان جدید داده و محصول قبلاً با عنوان دیگری وجود دارد،
+      // عنوان را به‌روز کن (ولی فقط اگر userLabel آمده باشد — نبود یعنی همان
+      // عنوان قدیمی خوب است)
+      if (input.userLabel?.trim() && exact.label !== label) {
+        await this.prisma.product.update({
+          where: { id: exact.id },
+          data: { label },
+          select: { id: true },
+        });
+        return { ...exact, label };
+      }
+      return exact;
+    }
 
-    // 2) convergence fallback — an identical label stored with a different
-    //    (or null) brand row still joins; labels are the v1 identity
+    // 2) convergence fallback — an identical searchText stored with a different
+    //    (or null) brand row still joins; searchText is the identity
     const sameLabel = await this.prisma.product.findFirst({
       where: { goodId: input.goodId, searchText: identity.searchText, status: { not: "MERGED" } },
       select: { id: true, label: true, searchText: true },
       orderBy: { id: "asc" },
     });
-    if (sameLabel) return sameLabel;
+    if (sameLabel) {
+      if (input.userLabel?.trim() && sameLabel.label !== label) {
+        await this.prisma.product.update({
+          where: { id: sameLabel.id },
+          data: { label },
+          select: { id: true },
+        });
+        return { ...sameLabel, label };
+      }
+      return sameLabel;
+    }
 
     const created = await this.prisma.product.create({
       data: {
         goodId: input.goodId,
         brandId: input.brandId,
-        label: identity.label,
+        label,
         searchText: identity.searchText,
         status: isAdmin ? "ACTIVE" : "PROVISIONAL",
         creatorRole: isAdmin ? "ADMIN" : "USER",
