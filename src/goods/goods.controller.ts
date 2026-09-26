@@ -167,6 +167,86 @@ export class GoodsController {
   }
 
   /**
+   * JSON مرجع کاتالوگ برای پرامپت هوش مصنوعی — همه‌ی گودها + برندها + دسته‌ها
+   * در یک JSON فشرده. کاربر این را به AI می‌دهد تا اکسل خروجی دقیقاً مطابق با
+   * گودهای موجود باشد (خواسته‌ی کاربر: «برندها و گروههای کالا و لیست گود رو هم
+   * به هوش مصنوعی بده»).
+   *
+   * عمومی است (بدون auth) تا کاربر بتواند آن را کپی کند و به هر AI بدهد.
+   * cache پنج‌دقیقه‌ای چون کاتالوگ زیاد تغییر نمی‌کند.
+   */
+  @Get("getCatalogReference")
+  async getCatalogReference(@Res({ passthrough: true }) reply: FastifyReply) {
+    const { value, hit } = await this.cache.wrap(
+      "goods:catalog-reference",
+      { ttlMs: 5 * 60_000, tags: ["goods"] },
+      async () => {
+        const [goods, brands, categories] = await Promise.all([
+          this.prisma.good.findMany({
+            where: { status: "ACTIVE" },
+            select: {
+              id: true,
+              nameFa: true,
+              nameEn: true,
+              aliases: true,
+              unit: true,
+              categoryId: true,
+            },
+            orderBy: { nameFa: "asc" },
+          }),
+          this.prisma.brand.findMany({
+            where: { status: "ACTIVE" },
+            select: { id: true, name: true },
+            orderBy: { name: "asc" },
+          }),
+          this.prisma.category.findMany({
+            where: { isActive: true },
+            select: { id: true, slug: true, nameFa: true, nameEn: true, parentId: true },
+          }),
+        ]);
+
+        // ساخت درخت دسته‌ها (flat → tree) برای خوانایی بهتر
+        const catById = new Map(categories.map((c) => [c.id, { ...c, children: [] as any[], goods: [] as any[] }]));
+        const catRoots: any[] = [];
+        for (const c of categories) {
+          const node = catById.get(c.id)!;
+          if (c.parentId && catById.has(c.parentId)) {
+            catById.get(c.parentId)!.children.push(node);
+          } else {
+            catRoots.push(node);
+          }
+        }
+
+        // گودها را به دسته‌شان وصل کن
+        const goodsByCategory = new Map<string, any[]>();
+        for (const g of goods) {
+          const arr = goodsByCategory.get(g.categoryId) ?? [];
+          arr.push({ name: g.nameFa, aliases: g.aliases, unit: g.unit });
+          goodsByCategory.set(g.categoryId, arr);
+        }
+        for (const cat of catById.values()) {
+          cat.goods = goodsByCategory.get(cat.id) ?? [];
+        }
+
+        return {
+          categories: catRoots.map((c) => ({
+            name: c.nameFa,
+            slug: c.slug,
+            goods: c.goods,
+            children: c.children,
+          })),
+          brands: brands.map((b) => b.name),
+          totalGoods: goods.length,
+          totalBrands: brands.length,
+        };
+      }
+    );
+
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  /**
    * User-created reference good — the hidden catalog-growth path.
    * When the search finds nothing, the form creates the good here and the
    * catalog crystallizes from real demand. Duplicate names (normalized)
