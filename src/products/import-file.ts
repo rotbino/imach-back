@@ -24,6 +24,10 @@ export interface ImportRow {
   minOrder: number | null;
   volume: number | null; // buy volume
   imageUrl: string | null;
+  /** نام دسته اصلی (مثلاً «مواد غذایی») — اختیاری، برای ساخت Good در دسته درست */
+  category: string;
+  /** نام زیردسته (مثلاً «تن ماهی») — اختیاری، اگر خالی بود Good در دسته اصلی */
+  subcategory: string;
 }
 
 /** Loose shape accepted by the service — DTO rows (optional fields) fit in. */
@@ -37,6 +41,8 @@ export type ImportRowInput = {
   minOrder?: number | null;
   volume?: number | null;
   imageUrl?: string | null;
+  category?: string | null;
+  subcategory?: string | null;
 };
 
 /**
@@ -45,7 +51,7 @@ export type ImportRowInput = {
  * lowercase) and falls back to «cell contains synonym» so decorated headers
  * like «نام کالا (مثلا شیر)» or «قیمت فروش (تومان)» still land.
  */
-const HEADER_SYNONYMS: Record<keyof Omit<ImportRow, "index">, string[]> = {
+const HEADER_SYNONYMS: Record<string, string[]> = {
   name: [
     "نام کالا", "نام محصول", "نام جنس", "شرح کالا", "شرح", "عنوان کالا", "عنوان", "کالا",
     "محصول", "جنس", "نام", "product", "product name", "name", "item", "title", "description",
@@ -63,6 +69,8 @@ const HEADER_SYNONYMS: Record<keyof Omit<ImportRow, "index">, string[]> = {
   minOrder: ["حداقل سفارش", "حداقل سفارش خرید", "حداقل", "min order", "moq", "minimum order"],
   volume: ["حجم خرید", "حجم", "مقدار خرید", "مقدار", "volume", "buy volume", "purchase volume", "amount"],
   imageUrl: ["لینک عکس", "آدرس عکس", "عکس", "تصویر", "لینک تصویر", "image", "image url", "photo", "picture", "img"],
+  category: ["دسته", "دسته اصلی", "گروه کالا", "گروه اصلی", "category", "group", "department"],
+  subcategory: ["زیردسته", "زیر دسته", "دسته فرعی", "زیرگروه", "subcategory", "sub group", "sub category"],
 };
 
 const MAX_IMPORT_ROWS = 2000;
@@ -160,18 +168,15 @@ function readGrid(buffer: Buffer): unknown[][] {
 }
 
 interface ColumnMap {
-  colOf: Map<keyof Omit<ImportRow, "index">, number>;
+  colOf: Map<string, number>;
   /** how the columns were found — surfaced in the preview for trust */
   detected: "header" | "guess";
 }
 
 /** Score a row as header: distinct synonym fields matched (normalized contains). */
-function matchHeaderRow(cells: string[]): Map<keyof Omit<ImportRow, "index">, number> {
-  const found = new Map<keyof Omit<ImportRow, "index">, number>();
-  for (const [field, synonyms] of Object.entries(HEADER_SYNONYMS) as [
-    keyof Omit<ImportRow, "index">,
-    string[],
-  ][]) {
+function matchHeaderRow(cells: string[]): Map<string, number> {
+  const found = new Map<string, number>();
+  for (const [field, synonyms] of Object.entries(HEADER_SYNONYMS)) {
     let best = -1;
     let bestLen = 0;
     cells.forEach((c, idx) => {
@@ -212,7 +217,7 @@ function guessColumns(grid: string[][]): ColumnMap {
   const numericCols = stats
     .filter((s) => s.samples > 0 && s.numeric / Math.max(s.samples, 1) >= 0.8)
     .sort((a, b) => b.median - a.median);
-  const colOf = new Map<keyof Omit<ImportRow, "index">, number>();
+  const colOf = new Map<string, number>();
   colOf.set("name", nameCol);
   if (numericCols[0]) colOf.set("priceMinor", numericCols[0].c);
   if (numericCols[1]) colOf.set("stock", numericCols[1].c);
@@ -237,14 +242,14 @@ export function parseImportWorkbook(buffer: Buffer): { rows: ImportRow[]; detect
 
   const asText = (r: unknown[]) => r.map((c) => String(c ?? "").trim());
 
-  // the header row = the first row (≤10) that matches at least a name column
+  const colOf = new Map<string, number>();
   let headerIdx = -1;
-  let colOf = new Map<keyof Omit<ImportRow, "index">, number>();
   for (let i = 0; i < Math.min(grid.length, 10); i++) {
     const found = matchHeaderRow((grid[i] ?? []).map(normHeader));
     if (found.has("name")) {
       headerIdx = i;
-      colOf = found;
+      colOf.clear();
+      found.forEach((v, k) => colOf.set(k, v));
       break;
     }
   }
@@ -255,12 +260,12 @@ export function parseImportWorkbook(buffer: Buffer): { rows: ImportRow[]; detect
     const textGrid = grid.map(asText);
     const guessed = guessColumns(textGrid);
     if (guessed.colOf.size === 0) throw new Error("HEADER_NOT_FOUND");
-    colOf = guessed.colOf;
+    guessed.colOf.forEach((v, k) => colOf.set(k, v));
     detected = "guess";
     dataStart = 0;
   }
 
-  const cell = (cells: string[], f: keyof Omit<ImportRow, "index">): string => {
+  const cell = (cells: string[], f: string): string => {
     const idx = colOf.get(f);
     return idx === undefined ? "" : (cells[idx] ?? "").trim();
   };
@@ -284,6 +289,8 @@ export function parseImportWorkbook(buffer: Buffer): { rows: ImportRow[]; detect
       minOrder: toIntOrNull(cell(cells, "minOrder")),
       volume: toFloatOrNull(cell(cells, "volume")),
       imageUrl: toUrlOrNull(cell(cells, "imageUrl")),
+      category: cell(cells, "category").slice(0, 60),
+      subcategory: cell(cells, "subcategory").slice(0, 60),
     });
   }
   return { rows, detected };

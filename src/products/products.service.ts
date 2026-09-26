@@ -577,6 +577,8 @@ export class ProductsService {
         sellers: c.sellers,
         mineMode: c.mineMode,
         warning: c.warning,
+        category: c.row.category || null,
+        subcategory: c.row.subcategory || null,
       })),
     };
   }
@@ -634,12 +636,9 @@ export class ProductsService {
         continue;
       }
       if (!c.goodId) {
-        // Good پیدا نشد → یک Good جدید بساز زیر «سایر › جدید» (find-or-create).
-        // ادمین بعداً در پنل آن را به دسته‌ی درست منتقل می‌کند. این طبیعی است چون
-        // در ایمپورت از اکسل، اسم کالا ممکن است با هیچ Good موجود تطابق نداشته باشد.
-        // کاربر گفت «اگر نبود خطا بده» ولی بهتر است Good بسازیم و PROVISIONAL
-        // بگذاریم تا ادمین باغبانی کند — قانون رشد ارگانیک.
-        const newGoodId = await this.ensureGoodForImport(c.row.name);
+        // Good پیدا نشد → یک Good جدید بساز. اگر ردیف اکسل category/subcategory
+        // دارد، Good در دسته درست ساخته می‌شود. اگر نه، در «سایر › جدید».
+        const newGoodId = await this.ensureGoodForImport(c.row.name, c.row.category, c.row.subcategory);
         if (newGoodId) {
           c.goodId = newGoodId;
           c.matchType = "new";
@@ -741,12 +740,22 @@ export class ProductsService {
   /** brand free-text → deduped Brand row (same contract as saveListing) */
   /**
    * Ensure a Good exists for an import row whose name didn't match any
-   * existing Good. Creates it under «سایر › جدید» (find-or-create idempotent)
-   * so the row isn't skipped. Admin later moves it to the right category.
+   * existing Good. Creates it under the right category:
+   *   • اگر category و subcategory داده شده → دسته را پیدا کن یا بساز.
+   *   • اگر فقط category داده شده → Good در category اصلی.
+   *   • اگر هیچ‌کدام نیست → در «سایر › جدید» (fallback).
+   *
+   * Category/subcategory از روی نام (normalized) پیدا می‌شوند. اگر دسته‌ای
+   * با آن نام نیست، ساخته می‌شود — به‌عنوان root اگر parent نیست، یا به‌عنوان
+   * child اگر parent هست.
    *
    * Returns the Good id, or null if creation failed.
    */
-  private async ensureGoodForImport(name: string): Promise<string | null> {
+  private async ensureGoodForImport(
+    name: string,
+    category?: string | null,
+    subcategory?: string | null,
+  ): Promise<string | null> {
     const trimmed = name.trim();
     if (trimmed.length < 2) return null;
 
@@ -760,35 +769,108 @@ export class ProductsService {
     if (existing) return existing.id;
 
     try {
-      // سبد موقت: ریشه‌ی «سایر» + برگ «جدید» (همان منطق createGood)
-      const root = await this.prisma.category.upsert({
-        where: { slug: "sayer" },
-        create: { slug: "sayer", nameFa: "سایر", nameEn: "Other", isActive: true, unit: null },
-        update: {},
-        select: { id: true },
-      });
-      const leaf = await this.prisma.category.upsert({
-        where: { slug: "jadid" },
-        create: {
-          slug: "jadid",
-          nameFa: "جدید",
-          nameEn: "New",
-          parentId: root.id,
-          unit: "PIECE",
-          isActive: true,
-        },
-        update: { parentId: root.id, isActive: true },
-        select: { id: true, unit: true },
-      });
+      // تعیین categoryId بر اساس category/subcategory
+      let categoryId: string;
+
+      if (category && category.trim()) {
+        const catName = category.trim();
+        const catNorm = normalizeFa(catName);
+
+        // جستجوی category (هم nameFa هم slug)
+        let cat = await this.prisma.category.findFirst({
+          where: {
+            OR: [
+              { nameFa: catName },
+              { slug: catNorm },
+              { nameEn: catName },
+            ],
+          },
+          select: { id: true },
+        });
+
+        if (!cat) {
+          // دسته وجود ندارد → ساخته می‌شود به‌عنوان root (parentId = null)
+          cat = await this.prisma.category.create({
+            data: {
+              slug: catNorm.slice(0, 40),
+              nameFa: catName.slice(0, 40),
+              nameEn: catName.slice(0, 40),
+              isActive: true,
+              unit: "PIECE",
+            },
+            select: { id: true },
+          });
+        }
+
+        if (subcategory && subcategory.trim()) {
+          const subName = subcategory.trim();
+          const subNorm = normalizeFa(subName);
+
+          // جستجوی subcategory زیر این category
+          let sub = await this.prisma.category.findFirst({
+            where: {
+              parentId: cat.id,
+              OR: [
+                { nameFa: subName },
+                { slug: subNorm },
+                { nameEn: subName },
+              ],
+            },
+            select: { id: true },
+          });
+
+          if (!sub) {
+            // زیردسته وجود ندارد → ساخته می‌شود زیر category
+            sub = await this.prisma.category.create({
+              data: {
+                slug: subNorm.slice(0, 40),
+                nameFa: subName.slice(0, 40),
+                nameEn: subName.slice(0, 40),
+                parentId: cat.id,
+                isActive: true,
+                unit: "PIECE",
+              },
+              select: { id: true },
+            });
+          }
+
+          categoryId = sub.id;
+        } else {
+          // فقط category، بدون subcategory → Good در category اصلی
+          categoryId = cat.id;
+        }
+      } else {
+        // هیچ category داده نشده → «سایر › جدید» (fallback)
+        const root = await this.prisma.category.upsert({
+          where: { slug: "sayer" },
+          create: { slug: "sayer", nameFa: "سایر", nameEn: "Other", isActive: true, unit: null },
+          update: {},
+          select: { id: true },
+        });
+        const leaf = await this.prisma.category.upsert({
+          where: { slug: "jadid" },
+          create: {
+            slug: "jadid",
+            nameFa: "جدید",
+            nameEn: "New",
+            parentId: root.id,
+            unit: "PIECE",
+            isActive: true,
+          },
+          update: { parentId: root.id, isActive: true },
+          select: { id: true, unit: true },
+        });
+        categoryId = leaf.id;
+      }
 
       const created = await this.prisma.good.create({
         data: {
-          categoryId: leaf.id,
+          categoryId,
           nameFa: trimmed.slice(0, 80),
           nameEn: null,
           aliases: [],
           searchText,
-          unit: leaf.unit ?? "PIECE",
+          unit: "PIECE",
           source: "USER",
           status: "PROVISIONAL",
           creatorRole: "USER",
