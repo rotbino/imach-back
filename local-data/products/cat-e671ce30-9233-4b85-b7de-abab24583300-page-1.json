@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "id": "3e0e1e9b-5b45-4a5b-8823-13e9a7ef52fd",
+      "barcode": null,
+      "name_fa": "ژل ضد عفونی کننده 65 % اتانول 60 میلی لیتری کنز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "be915a29-234b-4102-941c-eab366db7532",
+      "category_id": "e671ce30-9233-4b85-b7de-abab24583300",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 60,
+        "clean_name": "ژل ضد عفونی کننده",
+        "pack_count": null,
+        "parsed_brand": "کنز",
+        "original_name": "ژل ضد عفونی کننده 65 % اتانول 60 میلی لیتری کنز",
+        "parsed_attributes": [
+          {
+            "name": "درصد الکل",
+            "value": "65"
+          }
+        ],
+        "suggested_variant_name": "60 میلی لیتری 65% اتانول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.495Z",
+      "updated_at": "2025-12-29T17:18:19.983Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "be915a29-234b-4102-941c-eab366db7532",
+        "name": "کنز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:17:32.794Z"
+      },
+      "category": {
+        "id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "name": "آرایشی و بهداشتی",
+        "icon_url": "💄",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.006Z"
+      }
+    }
+  ],
+  "total": 1
+}

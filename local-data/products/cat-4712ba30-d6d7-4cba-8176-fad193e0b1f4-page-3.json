@@ -1,0 +1,3287 @@
+{
+  "items": [
+    {
+      "id": "ff592742-f524-46e3-b98a-abd87e89ca8f",
+      "barcode": "6262211802710",
+      "name_fa": "کرم اکسیدان شماره 1، 120 میلی‌لیتری پرستیژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "580abc66-e78e-4538-abb4-24f7e14044cb",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1565763870.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 120,
+        "clean_name": "کرم اکسیدان",
+        "pack_count": null,
+        "parsed_brand": "پرستیژ",
+        "original_name": "کرم اکسیدان شماره 1، 120 میلی‌لیتری پرستیژ",
+        "parsed_attributes": [
+          {
+            "name": "شماره",
+            "value": "1"
+          }
+        ],
+        "suggested_variant_name": "120 میلی‌لیتری شماره 1"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.556Z",
+      "updated_at": "2025-12-29T17:17:28.387Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "580abc66-e78e-4538-abb4-24f7e14044cb",
+        "name": "پرستیژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:43:54.991Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "ea968b2d-6358-413e-91ba-3eb96b7b86a3",
+      "barcode": "6264707000310",
+      "name_fa": "ژل مو 200 میلی لیتری بیول",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1536402781.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 200,
+        "clean_name": "ژل مو",
+        "pack_count": null,
+        "parsed_brand": "بیول",
+        "original_name": "ژل مو 200 میلی لیتری بیول",
+        "parsed_attributes": [],
+        "suggested_variant_name": "200 میلی لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.127Z",
+      "updated_at": "2025-12-29T17:08:53.492Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+        "name": "بیول",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:50.612Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f1310214-0aa6-41f5-86a3-def5cab82465",
+      "barcode": "6260682508964",
+      "name_fa": "ژل پروویتامینه حالت دهنده موی سر 150 میلی لیتری آدرا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1706f960-7d42-43aa-b51e-96c18be7735b",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1591333681.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 150,
+        "clean_name": "ژل حالت دهنده موی سر",
+        "pack_count": null,
+        "parsed_brand": "آدرا",
+        "original_name": "ژل پروویتامینه حالت دهنده موی سر 150 میلی لیتری آدرا",
+        "parsed_attributes": [
+          {
+            "name": "پرویتامینه",
+            "value": "پرویتامینه"
+          }
+        ],
+        "suggested_variant_name": "150 میلی لیتری پرویتامینه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.330Z",
+      "updated_at": "2025-12-29T17:04:59.340Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1706f960-7d42-43aa-b51e-96c18be7735b",
+        "name": "آدرا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:44:12.712Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d6effdb4-ad92-4491-a683-9528cb359c43",
+      "barcode": "6262211802789",
+      "name_fa": "کرم اکسیدان شماره 2، 1000 میلی‌لیتری پرستیژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "580abc66-e78e-4538-abb4-24f7e14044cb",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6262211802789(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کرم اکسیدان",
+        "pack_count": null,
+        "parsed_brand": "پرستیژ",
+        "original_name": "کرم اکسیدان شماره 2، 1000 میلی‌لیتری پرستیژ",
+        "parsed_attributes": [
+          {
+            "name": "شماره",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "1000 میلی‌لیتری شماره 2"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.472Z",
+      "updated_at": "2025-12-29T17:02:23.124Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "580abc66-e78e-4538-abb4-24f7e14044cb",
+        "name": "پرستیژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:43:54.991Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "ff941eea-92b5-4e19-81dd-a3515c153d67",
+      "barcode": "6260059529028",
+      "name_fa": "ژل موی سر 150 گرمی دلبان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fc4cfff9-499f-44a9-8d86-dbdd23c191ab",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260059529028(1).jpg",
+      "reference_price": null,
+      "weight_grams": 150,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ژل موی سر",
+        "pack_count": null,
+        "parsed_brand": "دلبان",
+        "original_name": "ژل موی سر 150 گرمی دلبان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "150 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.879Z",
+      "updated_at": "2025-12-29T16:57:17.533Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fc4cfff9-499f-44a9-8d86-dbdd23c191ab",
+        "name": "دلبان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:50:45.732Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "fb4d24d8-a2a7-404d-9568-806b918c77fa",
+      "barcode": "4792034730171",
+      "name_fa": "رنگ مو شماره 9.0 بلوند خیلی روشن 100 میلی لیتری گپ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6271f7df-0b6a-457d-a883-f86d27b99381",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1591328615.jpg",
+      "reference_price": null,
+      "weight_grams": 0,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "رنگ مو",
+        "pack_count": null,
+        "parsed_brand": "گپ",
+        "original_name": "رنگ مو شماره 9.0 بلوند خیلی روشن 100 میلی لیتری گپ",
+        "parsed_attributes": [
+          {
+            "name": "شماره",
+            "value": "9.0"
+          },
+          {
+            "name": "رنگ",
+            "value": "بلوند خیلی روشن"
+          }
+        ],
+        "suggested_variant_name": "100 میلی لیتری شماره 9.0 بلوند خیلی روشن"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.791Z",
+      "updated_at": "2025-12-29T16:58:51.341Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6271f7df-0b6a-457d-a883-f86d27b99381",
+        "name": "گپ",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:09.010Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e9f16a65-fe5e-495e-bba6-347249b7a76a",
+      "barcode": "6264707000020",
+      "name_fa": "کیت رنگ مو بلوند بژ روشن شماره 8.32 بیول",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1549183193.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کیت رنگ مو",
+        "pack_count": null,
+        "parsed_brand": "بیول",
+        "original_name": "کیت رنگ مو بلوند بژ روشن شماره 8.32 بیول",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بلوند بژ روشن"
+          },
+          {
+            "name": "شماره",
+            "value": "8.32"
+          }
+        ],
+        "suggested_variant_name": "بلوند بژ روشن شماره 8.32"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.528Z",
+      "updated_at": "2025-12-29T16:42:58.743Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+        "name": "بیول",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:50.612Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d3237877-8aa1-4701-8837-46dbb857f0a8",
+      "barcode": "6264707000112",
+      "name_fa": "کیت رنگ مو بلوند کاپوچینو متوسط شماره 7.35 بیول",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1549183323.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کیت رنگ مو",
+        "pack_count": null,
+        "parsed_brand": "بیول",
+        "original_name": "کیت رنگ مو بلوند کاپوچینو متوسط شماره 7.35 بیول",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بلوند کاپوچینو متوسط"
+          },
+          {
+            "name": "شماره",
+            "value": "7.35"
+          }
+        ],
+        "suggested_variant_name": "بلوند کاپوچینو متوسط شماره 7.35"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.530Z",
+      "updated_at": "2025-12-29T16:42:55.872Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+        "name": "بیول",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:50.612Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e045486f-4621-4a27-aec5-77f8cc114de4",
+      "barcode": "6264707000129",
+      "name_fa": "کیت رنگ مو بلوند ماسه‌ای متوسط شماره 7.23 بیول",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1549183360.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کیت رنگ مو",
+        "pack_count": null,
+        "parsed_brand": "بیول",
+        "original_name": "کیت رنگ مو بلوند ماسه‌ای متوسط شماره 7.23 بیول",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بلوند ماسه‌ای متوسط"
+          },
+          {
+            "name": "شماره",
+            "value": "7.23"
+          }
+        ],
+        "suggested_variant_name": "بلوند ماسه‌ای متوسط شماره 7.23"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.531Z",
+      "updated_at": "2025-12-29T16:42:54.532Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+        "name": "بیول",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:50.612Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f2735ad0-c12c-4859-a050-29a44e5b0045",
+      "barcode": "6264707000068",
+      "name_fa": "کیت رنگ موی بلوند زیتونی تیره M6 شماره 6.7 بیول",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1571228063.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کیت رنگ مو",
+        "pack_count": null,
+        "parsed_brand": "بیول",
+        "original_name": "کیت رنگ موی بلوند زیتونی تیره M6 شماره 6.7 بیول",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بلوند زیتونی تیره"
+          },
+          {
+            "name": "شماره",
+            "value": "6.7"
+          },
+          {
+            "name": "سری",
+            "value": "M6"
+          }
+        ],
+        "suggested_variant_name": "بلوند زیتونی تیره شماره 6.7"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.534Z",
+      "updated_at": "2025-12-29T16:42:50.614Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cb7e0152-cbd1-4263-98fd-9abd94a53d42",
+        "name": "بیول",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:50.612Z"
+      },
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "dae06144-2124-4db4-925d-8a67454e3e2d",
+      "barcode": "3600523998685",
+      "name_fa": "LOREAL.رنگ مو 4",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523998685",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 304,
+          "original_name": "LOREAL.رنگ مو 4",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523998685"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d0e96002-112d-45de-906a-298a46c3c5fe",
+      "barcode": "3600523998739",
+      "name_fa": "LOREAL.رنگ مو 8",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523998739",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 311,
+          "original_name": "LOREAL.رنگ مو 8",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523998739"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d9f6bf25-b642-421c-8fee-8e583189ff29",
+      "barcode": "3600520921310",
+      "name_fa": "اورال. ژل مو 9",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600520921310",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2152,
+          "original_name": "اورال. ژل مو 9",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600520921310"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d97e00aa-0d6f-456f-932b-322d05c1747f",
+      "barcode": "4015100201710",
+      "name_fa": "اسپری حات دهنده مو سر Power تافت 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015100201710",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 775,
+          "original_name": "اسپري حات دهنده مو سر Power تافت 250 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015100201710"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e3e16049-7e4e-4065-bb86-8e3b4b56c09b",
+      "barcode": "3600523793020",
+      "name_fa": "اسپری حالت دهنده مو Precious Oils النت لورآل 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523793020",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 781,
+          "original_name": "اسپري حالت دهنده مو Precious Oils النت لورآل 250 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523793020"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d2116212-2ecc-4adb-8be9-dfd96cc09fb0",
+      "barcode": "4015100811377",
+      "name_fa": "اسپری حالت دهنده مو Ultimate 5 تافت 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015100811377",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 783,
+          "original_name": "اسپري حالت دهنده مو Ultimate 5 تافت 250 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015100811377"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "fbb91d32-12cd-4bd1-b4a2-088a5bbf968c",
+      "barcode": "4015100437225",
+      "name_fa": "اسپری حالت دهنده مو Volumen شماره 3 تافت 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015100437225",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 785,
+          "original_name": "اسپري حالت دهنده مو Volumen شماره 3 تافت 250 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015100437225"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e47fc272-be24-45eb-8167-d4f794520dd3",
+      "barcode": "9310714216071",
+      "name_fa": "اسپری مو حالت دهنده Mega Strong شماره 4 تافت 200 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:9310714216071",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1019,
+          "original_name": "اسپري مو حالت دهنده Mega Strong شماره 4 تافت 200 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "9310714216071"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f12e6388-239a-4271-874c-c2c013bf95ad",
+      "barcode": "4015000536097",
+      "name_fa": "اسپری براق کننده مو تافت شوارتسکف (250 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015000536097",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1057,
+          "original_name": "اسپری براق کننده مو تافت شوارتسکف (250 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015000536097"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f0f9e19d-7a4a-4771-a778-1731bfabab3d",
+      "barcode": "4015000712576",
+      "name_fa": "اسپری حالت دهنده مو الترا 4 تافت شوارتسکف (250 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015000712576",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1137,
+          "original_name": "اسپری حالت دهنده مو الترا 4 تافت شوارتسکف (250 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015000712576"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d834f1b4-a38b-4226-b6ca-58a0b7609538",
+      "barcode": "4015001003505",
+      "name_fa": "اسپری حالت دهنده مو پاور 5 تافت شوآرزکوف (250 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015001003505",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1141,
+          "original_name": "اسپری حالت دهنده مو پاور 5 تافت شوآرزکوف (250 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015001003505"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f1b62681-455b-4dab-bb43-b2af590dd377",
+      "barcode": "4015000535977",
+      "name_fa": "اسپری مو قوی مشکی تافت ۲۵۰ میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015000535977",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1496,
+          "original_name": "اسپری مو قوی مشکی تافت ۲۵۰ میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015000535977"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e4ca3a7b-7813-4c06-8509-bf79978cbac0",
+      "barcode": "6260235240204",
+      "name_fa": "اکسیدان 6٪ شماره یک با آب اکسیژنه آتوسا (60 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260235240204",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2004,
+          "original_name": "اکسیدان 6٪ شماره یک با آب اکسیژنه آتوسا (60 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260235240204"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e23d1511-8b79-4095-b47d-b19db0b95152",
+      "barcode": "4015100404524",
+      "name_fa": "تافت. موس مو",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015100404524",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 9211,
+          "original_name": "تافت. موس مو",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015100404524"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e5343543-05ad-4826-a1e4-4fdbe02a728a",
+      "barcode": "8015700157369",
+      "name_fa": "تافت.ژل فورس 15",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8015700157369",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 9214,
+          "original_name": "تافت.ژل فورس 15",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8015700157369"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f0400125-ff97-4e6a-9923-e06123f70348",
+      "barcode": "3600523972708",
+      "name_fa": "رنگ مو قهوه ای فندقی 6.41 لورآل (260 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523972708",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13729,
+          "original_name": "رنگ مو قهوه اي فندقي 6.41 لورآل (260 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523972708"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "def2fc4b-124b-466f-b73f-6ce0f5150279",
+      "barcode": "6260235289975",
+      "name_fa": "ژل حالت دهنده مو Aloe Vera آتوسا 100 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260235289975",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14718,
+          "original_name": "ژل حالت دهنده مو Aloe Vera آتوسا 100 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260235289975"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d82b95b9-d351-4abc-be5a-635fbd38ec5e",
+      "barcode": "5601036206036",
+      "name_fa": "ژل حالت دهنده مو Invisi Fix شماره 5 لورال 150 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:5601036206036",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14722,
+          "original_name": "ژل حالت دهنده مو Invisi Fix شماره 5 لورال 150 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "5601036206036"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f57a4191-3daf-4be4-a1ac-5874ab92685f",
+      "barcode": "8015700156447",
+      "name_fa": "ژل حالت دهنده موی مرطوب شماره 3 تافت شوآرزکوف (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8015700156447",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14729,
+          "original_name": "ژل حالت دهنده موي مرطوب شماره 3 تافت شوآرزکوف (150 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8015700156447"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "ff5e3fdb-6a86-44a5-80f3-4e8240677d6f",
+      "barcode": "3600522471141",
+      "name_fa": "ژل مو استودیولاین رادیکال لورآل (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600522471141",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14831,
+          "original_name": "ژل مو استودیولاین رادیکال لورآل (150 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600522471141"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "db55dc0e-4fc9-4f5e-9a7a-be1cc7dd305f",
+      "barcode": "3600520921068",
+      "name_fa": "ژل مو اکستریم هولد لورآل (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600520921068",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14833,
+          "original_name": "ژل مو اکستريم هولد لورآل (150 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600520921068"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "fab2813e-cf22-4343-951f-c719ef8cb4df",
+      "barcode": "4005900396099",
+      "name_fa": "ژل مو فلگر و هالت 4 نیوآ (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4005900396099",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14841,
+          "original_name": "ژل مو فلگر و هالت 4 نیوآ (150 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4005900396099"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e3902f58-56b0-461d-b1a7-966d1820b46a",
+      "barcode": "6264707003137",
+      "name_fa": "ژل مو قوی کراتینه و روغن آرگان بیول (200 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6264707003137",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14847,
+          "original_name": "ژل مو قوی کراتینه و روغن آرگان بیول (200 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6264707003137"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e342f36b-5149-4e98-a527-a897ba689756",
+      "barcode": "4015000233040",
+      "name_fa": "ژل مو مرطوب کننده تافت شوارتسکف (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015000233040",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14852,
+          "original_name": "ژل مو مرطوب کننده تافت شوارتسکف (150 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015000233040"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "cf42e960-1636-4482-8e4c-d23dc208bb0f",
+      "barcode": "3600522259039",
+      "name_fa": "کیت رنگ مو اکسلانس لور آل (شماره 6.03)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600522259039",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23366,
+          "original_name": "کيت رنگ مو اکسلانس لور آل (شماره 6.03)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600522259039"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "d20090f5-de9f-4a50-9370-4d6281b69a76",
+      "barcode": "3600523943166",
+      "name_fa": "کیت رنگ مو بلوند خاکستری تیره شماره 6.11 اکسلنس لورآل",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523943166",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23367,
+          "original_name": "کيت رنگ مو بلوند خاکستري تيره شماره 6.11 اکسلنس لورآل",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523943166"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "fb8d06da-554c-454b-9994-f53ce288180e",
+      "barcode": "3600523972630",
+      "name_fa": "کیت رنگ مو شماره 7.1 اکسلنس لورآل (48 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523972630",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23372,
+          "original_name": "کيت رنگ مو شماره 7.1 اکسلنس لورآل (48 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523972630"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "ee48b685-d3f7-448b-bfb4-f83ff1070672",
+      "barcode": "3600523972692",
+      "name_fa": "کیت رنگ مو مدل Excellence شماره 3 لورآل (48 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523972692",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23374,
+          "original_name": "کيت رنگ مو مدل Excellence شماره 3 لورآل (48 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523972692"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "da1106fa-8e9f-4bd1-9ef3-2358a84a3806",
+      "barcode": "3600523972678",
+      "name_fa": "کیت رنگ مو مدل Excellence شماره 7 لورآل (48 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523972678",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23584,
+          "original_name": "کیت رنگ مو مدل Excellence شماره 7 لورآل (48 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523972678"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f41ed4cd-b181-4348-837a-885235516226",
+      "barcode": "3600523972685",
+      "name_fa": "کیت رنگ مو مدل Excellence شماره 7.3 لورآل (50 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:3600523972685",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23585,
+          "original_name": "کیت رنگ مو مدل Excellence شماره 7.3 لورآل (50 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "3600523972685"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "ecd6ff18-424a-4a83-9b98-6fa7869a0fdb",
+      "barcode": "4015000548106",
+      "name_fa": "موس حالت دهنده مو پاور تافت شوآرزکوف (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015000548106",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27031,
+          "original_name": "موس حالت دهنده مو پاور تافت شوآرزکوف (150 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015000548106"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "cfee93e8-3316-4e5f-b08f-21039a43b06c",
+      "barcode": "4005808678631",
+      "name_fa": "موس حالت دهنده و مراقبت کننده موی فر نیوآ (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4005808678631",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27033,
+          "original_name": "موس حالت دهنده و مراقبت کننده موي فر نيوآ (150 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4005808678631"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f2214fad-437c-423b-9f01-b3dad7fa18be",
+      "barcode": "4005808680375",
+      "name_fa": "موس حالت دهنده مو والیوم سنسنیشن نیوآ (150 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4005808680375",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27037,
+          "original_name": "موس حالت‌دهنده مو واليوم سنسنيشن نيوآ (150 ميلي‌ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4005808680375"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "cf1cbc6c-4ebd-4224-9a72-4add41c4fc9c",
+      "barcode": "8698703026506",
+      "name_fa": "واکس براق کننده و مرطوب کننده مو مدل 08 آگیوا (175 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8698703026506",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29461,
+          "original_name": "واکس براق کننده و مرطوب کننده مو مدل 08 آگیوا (175 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8698703026506"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e70a6793-b636-49f8-a52b-72cd2c2f154d",
+      "barcode": "8698703020412",
+      "name_fa": "واکس حالت دهنده مو نارنجی شماره 01 آگیوا (175 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8698703020412",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29481,
+          "original_name": "واکس حالت‌دهنده مو نارنجي شماره 01 آگيوا (175 ميلي‌ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8698703020412"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "e6db1b5d-b70f-48d3-aba2-fa4adfb722e0",
+      "barcode": "077315009042",
+      "name_fa": "واکس مناسب موهای مجعد و فر خورده داکس (99 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:077315009042",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29495,
+          "original_name": "واکس مناسب موهای مجعد و فر خورده داکس (99 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "77315009042"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "df6bd762-b84d-4c63-9416-d6b659b3cda7",
+      "barcode": "4902806014402",
+      "name_fa": "واکس مو حالت دهنده مسی اسکرانچ گتسبی (75 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4902806014402",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29503,
+          "original_name": "واکس مو حالت دهنده مسی اسکرانچ گتسبی (75 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4902806014402"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    },
+    {
+      "id": "f4be9c39-5090-4fe0-bf5d-119ca7d82018",
+      "barcode": "6260235240235",
+      "name_fa": "اکسیدان 6٪ نمره یک آتوسا (750 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260235240235.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260235240235",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000099772",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایش مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2005,
+          "original_name": "اکسیدان 6٪ نمره یک آتوسا (750 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260235240235"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "4712ba30-d6d7-4cba-8176-fad193e0b1f4",
+        "name": "آرایش مو",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.366Z"
+      }
+    }
+  ],
+  "total": 248
+}

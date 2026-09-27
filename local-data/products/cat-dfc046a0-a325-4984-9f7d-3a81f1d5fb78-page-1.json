@@ -1,0 +1,1887 @@
+{
+  "items": [
+    {
+      "id": "a6bc67e8-8df9-4e32-a46a-aa76ee9be59b",
+      "barcode": "6260543504548",
+      "name_fa": "پاپ کورن کچاپ 62 گرمی هاگلز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9fb7504a-9ceb-4f15-8c40-6235089fad3a",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590210954.jpg",
+      "reference_price": null,
+      "weight_grams": 62,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "هاگلز",
+        "original_name": "پاپ کورن کچاپ 62 گرمی هاگلز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "62 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.726Z",
+      "updated_at": "2025-12-29T15:45:54.406Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9fb7504a-9ceb-4f15-8c40-6235089fad3a",
+        "name": "هاگلز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:41:06.406Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "873c5133-a882-47d8-8026-088b339953eb",
+      "barcode": "6262477320393",
+      "name_fa": "پاپ کورن مزپف پنیری 60 گرمی مزمز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590211206.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "مزمز",
+        "original_name": "پاپ کورن مزپف پنیری 60 گرمی مزمز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.727Z",
+      "updated_at": "2025-12-29T15:45:52.899Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+        "name": "مزمز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:17:42.669Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "3e7cdcc6-ee19-44eb-9c35-48a68cdc77ff",
+      "barcode": "6262477320416",
+      "name_fa": "پاپ کورن مزپف نمکی 60 گرمی مزمز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590211244.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "مزمز",
+        "original_name": "پاپ کورن مزپف نمکی 60 گرمی مزمز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نمکی"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی نمکی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.729Z",
+      "updated_at": "2025-12-29T15:45:51.013Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+        "name": "مزمز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:17:42.669Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "92dcc979-6767-46e1-aebe-191c5f3521d3",
+      "barcode": "6262477320430",
+      "name_fa": "پاپ کورن مزپف کچاپ 60 گرمی مزمز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590211354.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "مزمز",
+        "original_name": "پاپ کورن مزپف کچاپ 60 گرمی مزمز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.731Z",
+      "updated_at": "2025-12-29T15:45:49.430Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+        "name": "مزمز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:17:42.669Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "d284a9db-ddeb-4068-ad00-fe603368a848",
+      "barcode": "6265663104098",
+      "name_fa": "پاپ کورن بوشار بدون پوسته پنیری 92 گرمی لینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590212002.jpg",
+      "reference_price": null,
+      "weight_grams": 92,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن بوشار",
+        "pack_count": null,
+        "parsed_brand": "لینا",
+        "original_name": "پاپ کورن بوشار بدون پوسته پنیری 92 گرمی لینا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون پوسته"
+          },
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "92 گرمی بدون پوسته پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.820Z",
+      "updated_at": "2025-12-29T15:43:55.527Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+        "name": "لینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:28.328Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "b78ce102-1c7b-450f-9fb2-b735879b55a7",
+      "barcode": "6260399700026",
+      "name_fa": "ذرت کره ای 300 گرمی ۳-۲-۱",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1558769998.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ذرت",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "ذرت کره ای 300 گرمی ۳-۲-۱",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کره ای"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی کره ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.922Z",
+      "updated_at": "2025-12-29T15:41:42.456Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "2aaff0eb-74d5-4c59-a8e0-5ab4764ff8eb",
+      "barcode": "6261847504289",
+      "name_fa": "پاپ کورن پنیری 60 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1545805295.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن پنیری 60 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.941Z",
+      "updated_at": "2025-12-29T15:41:17.169Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "4cc880db-5935-4bda-8847-629994d8523d",
+      "barcode": "6261847504296",
+      "name_fa": "پاپ کورن کچاپ 60 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1545805324.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن کچاپ 60 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.942Z",
+      "updated_at": "2025-12-29T15:41:15.965Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "f9aa4ecb-768d-4f96-89a5-8d977a370dc0",
+      "barcode": "6263812801973",
+      "name_fa": "پاپ کورن پنیری 40 گرمی چی توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8146269c-f568-4663-aed7-e92d36ccff42",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590211807.jpg",
+      "reference_price": null,
+      "weight_grams": 40,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی توز",
+        "original_name": "پاپ کورن پنیری 40 گرمی چی توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "40 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.943Z",
+      "updated_at": "2025-12-29T15:41:14.625Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8146269c-f568-4663-aed7-e92d36ccff42",
+        "name": "چی توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:05.115Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "03d03972-7126-428e-9ddc-36778ea8fc49",
+      "barcode": "6263812801997",
+      "name_fa": "پاپ کورن کچاپ 35 گرمی چی توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8146269c-f568-4663-aed7-e92d36ccff42",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590211859.jpg",
+      "reference_price": null,
+      "weight_grams": 35,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی توز",
+        "original_name": "پاپ کورن کچاپ 35 گرمی چی توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "35 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.944Z",
+      "updated_at": "2025-12-29T15:41:13.086Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8146269c-f568-4663-aed7-e92d36ccff42",
+        "name": "چی توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:05.115Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "0f93e07e-8e8d-498e-bbdd-32f7138e4aae",
+      "barcode": "6260543504517",
+      "name_fa": "پاپ کورن نمکی 62 گرمی هاگلز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9fb7504a-9ceb-4f15-8c40-6235089fad3a",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590209661.jpg",
+      "reference_price": null,
+      "weight_grams": 62,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "هاگلز",
+        "original_name": "پاپ کورن نمکی 62 گرمی هاگلز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نمکی"
+          }
+        ],
+        "suggested_variant_name": "62 گرمی نمکی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.950Z",
+      "updated_at": "2025-12-29T15:41:06.408Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9fb7504a-9ceb-4f15-8c40-6235089fad3a",
+        "name": "هاگلز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:41:06.406Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "d3128e0e-e8eb-4855-89b8-0bf3ba6c82f4",
+      "barcode": "6261552200018",
+      "name_fa": "پاپ کورن پنیری 24 گرمی لوسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6261552200018(1).jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لوسی",
+        "original_name": "پاپ کورن پنیری 24 گرمی لوسی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.144Z",
+      "updated_at": "2025-12-29T15:36:39.869Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+        "name": "لوسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:36:22.235Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "c97e5611-7765-49f0-a6e5-3797bc121f8b",
+      "barcode": "6261552201299",
+      "name_fa": "پاپ کورن پنیری 58 گرمی لوسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473226342.jpg",
+      "reference_price": null,
+      "weight_grams": 58,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لوسی",
+        "original_name": "پاپ کورن پنیری 58 گرمی لوسی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "58 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.145Z",
+      "updated_at": "2025-12-29T15:36:38.362Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+        "name": "لوسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:36:22.235Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "55b0c03e-f389-43a4-a89d-7cba0f3d3544",
+      "barcode": "6261552201565",
+      "name_fa": "پاپ کورن کچاپ 24 گرمی لوسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473233171.jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لوسی",
+        "original_name": "پاپ کورن کچاپ 24 گرمی لوسی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.146Z",
+      "updated_at": "2025-12-29T15:36:37.177Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+        "name": "لوسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:36:22.235Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "6ccefb5f-cacf-450e-ba17-830988eee4de",
+      "barcode": "6261552201305",
+      "name_fa": "پاپ کورن کچاپ 58 گرمی لوسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6261552201305(1).jpg",
+      "reference_price": null,
+      "weight_grams": 58,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لوسی",
+        "original_name": "پاپ کورن کچاپ 58 گرمی لوسی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "58 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.147Z",
+      "updated_at": "2025-12-29T15:36:35.969Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "759f8c32-b33f-46df-8b1c-2c6145a7713c",
+        "name": "لوسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:36:22.235Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "832aa485-1221-47ec-a12c-79307a45fa79",
+      "barcode": "6261847503671",
+      "name_fa": "پاپ کورن پنیری نیک نک 50 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473923219.jpg",
+      "reference_price": null,
+      "weight_grams": 50,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن پنیری نیک نک",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن پنیری نیک نک 50 گرمی چی‌توز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "50 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.287Z",
+      "updated_at": "2025-12-29T15:33:13.799Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "24a94d72-6439-4599-9de4-499487c34dd9",
+      "barcode": "6261847503701",
+      "name_fa": "پاپ کورن پنیری فیلی 50 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6261847503701(1).jpg",
+      "reference_price": null,
+      "weight_grams": 50,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن پنیری فیلی 50 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "50 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.288Z",
+      "updated_at": "2025-12-29T15:33:12.120Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "28d7d236-7806-4ef9-b054-bf14542cfa3a",
+      "barcode": "6261847503718",
+      "name_fa": "پاپ کورن کچاپ فیلی 50 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6261847503718(1).jpg",
+      "reference_price": null,
+      "weight_grams": 50,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن کچاپ فیلی 50 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "50 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.289Z",
+      "updated_at": "2025-12-29T15:33:10.931Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "f595fcdf-34c1-4025-89dc-2fb7a96db665",
+      "barcode": "6261847503725",
+      "name_fa": "پاپ کورن کچاپ نیک نک 50 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6261847503725(1).jpg",
+      "reference_price": null,
+      "weight_grams": 50,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن کچاپ نیک نک 50 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "50 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.290Z",
+      "updated_at": "2025-12-29T15:33:09.796Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "857217c2-4e9d-4b60-9975-aae56854c788",
+      "barcode": "6260336503079",
+      "name_fa": "پاپ کورن پف پنیری 50 گرمی لینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260336503079(1).jpg",
+      "reference_price": null,
+      "weight_grams": 50,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن پف پنیری",
+        "pack_count": null,
+        "parsed_brand": "لینا",
+        "original_name": "پاپ کورن پف پنیری 50 گرمی لینا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "50 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.291Z",
+      "updated_at": "2025-12-29T15:33:08.295Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+        "name": "لینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:28.328Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "15b6ddc6-b48a-4a3b-aaaf-52289c80d0ef",
+      "barcode": "6260336503123",
+      "name_fa": "پاپ کورن پف پنیری  30 گرمی لینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260336503123(1).jpg",
+      "reference_price": null,
+      "weight_grams": 30,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لینا",
+        "original_name": "پاپ کورن پف پنیری  30 گرمی لینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "30 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.292Z",
+      "updated_at": "2025-12-29T15:33:06.812Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+        "name": "لینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:28.328Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "d8479c94-46b0-421a-91a2-66fa1eefdfe2",
+      "barcode": "6260336503215",
+      "name_fa": "پاپ کورن پف کچاپ 50 گرمی لینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260336503215(1).jpg",
+      "reference_price": null,
+      "weight_grams": 50,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن پف",
+        "pack_count": null,
+        "parsed_brand": "لینا",
+        "original_name": "پاپ کورن پف کچاپ 50 گرمی لینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "50 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.292Z",
+      "updated_at": "2025-12-29T15:33:05.605Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+        "name": "لینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:28.328Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "cbcffd8a-b39a-48c4-a071-b5f0074ed514",
+      "barcode": "6260002931779",
+      "name_fa": "پاپ کورن مزپف پنیری 55 گرمی مزمز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260002931779(1).jpg",
+      "reference_price": null,
+      "weight_grams": 55,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "مزمز",
+        "original_name": "پاپ کورن مزپف پنیری 55 گرمی مزمز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "55 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.293Z",
+      "updated_at": "2025-12-29T15:33:04.119Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+        "name": "مزمز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:17:42.669Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "452f3853-6a3b-40ee-bb55-c0d0a1ca1c9f",
+      "barcode": "6260002931809",
+      "name_fa": "پاپ کورن مزپف کچاپ 55 گرمی مزمز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260002931809(1).jpg",
+      "reference_price": null,
+      "weight_grams": 55,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "مزمز",
+        "original_name": "پاپ کورن مزپف کچاپ 55 گرمی مزمز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "55 گرمی کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.294Z",
+      "updated_at": "2025-12-29T15:33:02.988Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+        "name": "مزمز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:17:42.669Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "c089940c-727a-4931-8081-39a22caefbd5",
+      "barcode": "6260002931908",
+      "name_fa": "پاپ کورن مزپف سرکه ای 55 گرمی مزمز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260002931908(1).jpg",
+      "reference_price": null,
+      "weight_grams": 55,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "مزمز",
+        "original_name": "پاپ کورن مزپف سرکه ای 55 گرمی مزمز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "سرکه ای"
+          }
+        ],
+        "suggested_variant_name": "55 گرمی سرکه ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.295Z",
+      "updated_at": "2025-12-29T15:33:01.495Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bdbe7247-3a05-4654-a817-5a8f6a7ebef8",
+        "name": "مزمز",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:17:42.669Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "1c6021b8-ac65-46b9-8417-1545707fb3da",
+      "barcode": "6261537700021",
+      "name_fa": "پاپ کورن کره‌ای 300 گرمی روکو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1db6a4fe-d337-4b6d-8cd4-d5389eb3c68b",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473052170.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "روکو",
+        "original_name": "پاپ کورن کره‌ای 300 گرمی روکو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کره‌ای"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی کره‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.296Z",
+      "updated_at": "2025-12-29T15:32:54.134Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1db6a4fe-d337-4b6d-8cd4-d5389eb3c68b",
+        "name": "روکو",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:32:52.964Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "c7aa2940-06fb-43b6-9dc1-dce2b761dc20",
+      "barcode": "6261537700014",
+      "name_fa": "پاپ کورن پنیری 300 گرمی روکو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1db6a4fe-d337-4b6d-8cd4-d5389eb3c68b",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1482583984.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "روکو",
+        "original_name": "پاپ کورن پنیری 300 گرمی روکو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.297Z",
+      "updated_at": "2025-12-29T15:32:52.967Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1db6a4fe-d337-4b6d-8cd4-d5389eb3c68b",
+        "name": "روکو",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:32:52.964Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "5d60eca0-e3c0-4105-8b83-7af5a1e4a4e6",
+      "barcode": "6260336504069",
+      "name_fa": "پاپ کورن بدون پوسته با طعم کچاپ 47 گرمی لینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1550060932.jpg",
+      "reference_price": null,
+      "weight_grams": 47,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لینا",
+        "original_name": "پاپ کورن بدون پوسته با طعم کچاپ 47 گرمی لینا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون پوسته"
+          },
+          {
+            "name": "طعم",
+            "value": "کچاپ"
+          }
+        ],
+        "suggested_variant_name": "47 گرمی بدون پوسته با طعم کچاپ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.421Z",
+      "updated_at": "2025-12-29T15:30:09.949Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+        "name": "لینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:28.328Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "c59707f3-4971-45c0-baa7-8631922f96ee",
+      "barcode": "6261847500519",
+      "name_fa": "پاپ کورن پنیری 30 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1545805267.jpg",
+      "reference_price": null,
+      "weight_grams": 30,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن پنیری 30 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "30 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.429Z",
+      "updated_at": "2025-12-29T15:30:00.569Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "564e5668-2825-413a-ab74-2c91858b1e53",
+      "barcode": "6261847504326",
+      "name_fa": "پاپ کورن سرکه بالزامیک 30 گرمی چی‌توز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1545805351.jpg",
+      "reference_price": null,
+      "weight_grams": 30,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "چی‌توز",
+        "original_name": "پاپ کورن سرکه بالزامیک 30 گرمی چی‌توز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "سرکه بالزامیک"
+          }
+        ],
+        "suggested_variant_name": "30 گرمی سرکه بالزامیک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.430Z",
+      "updated_at": "2025-12-29T15:29:59.050Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "62ab8fc3-80cb-4069-bc25-f81db8e1c187",
+        "name": "چی‌توز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:30:22.435Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "24a533a7-0f27-4581-b794-2911229c082e",
+      "barcode": "6260336504083",
+      "name_fa": "پاپ کورن بدون پوسته با طعم سرکه و نمک 47 گرمی لینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1550060960.jpg",
+      "reference_price": null,
+      "weight_grams": 47,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "لینا",
+        "original_name": "پاپ کورن بدون پوسته با طعم سرکه و نمک 47 گرمی لینا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون پوسته"
+          },
+          {
+            "name": "طعم",
+            "value": "سرکه و نمک"
+          }
+        ],
+        "suggested_variant_name": "47 گرمی بدون پوسته سرکه و نمک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.468Z",
+      "updated_at": "2025-12-29T15:29:10.374Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f21da68f-0592-4937-bbed-e9eef23ed245",
+        "name": "لینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:17:28.328Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "8eaf0b4f-9094-447f-9e3d-f27caf2e6f6f",
+      "barcode": "6269305000014",
+      "name_fa": "ذرت نیمه آماده کره ای 300 گرمی ماکروپف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "26dbb4d0-a8a9-45a7-b0d8-420b28654cd6",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1569246705.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ذرت",
+        "pack_count": null,
+        "parsed_brand": "ماکروپف",
+        "original_name": "ذرت نیمه آماده کره ای 300 گرمی ماکروپف",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "نیمه آماده"
+          },
+          {
+            "name": "طعم",
+            "value": "کره ای"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی نیمه آماده کره ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.489Z",
+      "updated_at": "2025-12-29T15:28:44.842Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "26dbb4d0-a8a9-45a7-b0d8-420b28654cd6",
+        "name": "ماکروپف",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:28:43.487Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    },
+    {
+      "id": "c6a5771d-b6b6-4416-a555-a004a8df2f8e",
+      "barcode": "6269305000038",
+      "name_fa": "ذرت نیمه آماده باربیکیو 300 گرمی ماکروپف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "26dbb4d0-a8a9-45a7-b0d8-420b28654cd6",
+      "category_id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1569246749.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ذرت نیمه آماده",
+        "pack_count": null,
+        "parsed_brand": "ماکروپف",
+        "original_name": "ذرت نیمه آماده باربیکیو 300 گرمی ماکروپف",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "باربیکیو"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی باربیکیو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.490Z",
+      "updated_at": "2025-12-29T15:28:43.496Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "26dbb4d0-a8a9-45a7-b0d8-420b28654cd6",
+        "name": "ماکروپف",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:28:43.487Z"
+      },
+      "category": {
+        "id": "dfc046a0-a325-4984-9f7d-3a81f1d5fb78",
+        "name": "پاپ کورن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.725Z"
+      }
+    }
+  ],
+  "total": 33
+}

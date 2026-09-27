@@ -1,0 +1,4042 @@
+{
+  "items": [
+    {
+      "id": "2968d6a1-4c36-557c-9f0d-ba1b5adebad5",
+      "barcode": "6260222600080",
+      "name_fa": "فرخنده بسکوییت پتی بور 600 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260222600080-2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "b538ecdb-293f-5ed6-9ccd-841e9c9330c7",
+      "barcode": "6260222600363",
+      "name_fa": "فرخنده بیسکوییت با طعم نارگیل و تزیین شکر بزرگ 1630 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260222600363.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "fb0975b9-510a-5a75-b548-c2a2f157bee6",
+      "barcode": "6260222600622",
+      "name_fa": "فرخنده بسکوییت با تزیین کنجد و طعم هل بزرگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260222600622.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "64e80ad0-e384-5389-92e7-6047701d333a",
+      "barcode": "6260222600639",
+      "name_fa": "فرخنده بسکوییت پرتقالی 1300 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260222600639-3.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "c7b5e0c6-2f4c-5a25-a8e0-902318ce2bf9",
+      "barcode": "6260360007413",
+      "name_fa": "copa کوپا بسکوییت",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260360007413.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "882712eb-e0a9-5434-b389-c168118a6e75",
+      "barcode": "6260406231567",
+      "name_fa": "شیرین وطن ویفر پرتقالی 95 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260406231567.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "8dea8d3a-12b9-57a5-b37a-f95eb3682211",
+      "barcode": "6260512320056",
+      "name_fa": "ماهک بیسکوییت پتی بور کاکائویی 480 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260512320056.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0f8b6519-198c-5125-9edd-6a6e921de81d",
+      "barcode": "6261145000933",
+      "name_fa": "سلامت بسکوییت شیرینی خرمایی 240 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145000933.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "b719bb49-7eb6-50ca-abb8-b574c49501d4",
+      "barcode": "6261145013131",
+      "name_fa": "سلامت بسکوییت با طعم پرتقال 1200 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145013131.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "39d64cc0-9542-5c68-bdb8-38a498e29078",
+      "barcode": "6261149012628",
+      "name_fa": "شیرین عسل بسکوییت پتی بور کره ای 50 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149012628.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "9464fc70-bd27-5405-893d-2dd13ff15834",
+      "barcode": "6261149012789",
+      "name_fa": "شیرین عسل بیسکوییت آلبینا ماری 180  گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/mari-biskuit-1000x1000.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "cd4d119a-ef32-5c5e-84de-5136aaff44c9",
+      "barcode": "6261149016756",
+      "name_fa": "شیرین‌ عسل بسکوییت های بای نارگیلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149016756.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "75f94e9e-ea4f-5425-a7bd-9d4b8471bd0d",
+      "barcode": "6261149030196",
+      "name_fa": "شیرین عسل اکسترا ویفر کاکائویی 115 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "b99d1ea5-bf9c-52c8-a0d1-545c83e7f022",
+      "barcode": "6261149030547",
+      "name_fa": "شیرین عسل ویفر موزی مانژ اکسترا 70 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/DSC_8658-2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a6eff4ea-ebcf-5933-929a-7e36bc69e1be",
+      "barcode": "6261149030578",
+      "name_fa": "شیرین عسل ویفر تیست شکلاتی اکسترا 70 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "817207c7-c228-5489-a156-46a7a3eb2dcc",
+      "barcode": "6261149030851",
+      "name_fa": "شیرین عسل ویفر پرتقالی اکسترا 32 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149030851.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "81ee0ad0-3d19-574a-9177-8e29858e0f7a",
+      "barcode": "6261149036549",
+      "name_fa": "شیرین عسل هیت ویفر لیمویی 150 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/42643.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "1eee7acf-89d7-5570-8485-c79d818b1f09",
+      "barcode": "6261149036600",
+      "name_fa": "شیرین عسل ویفر فندقی هیت 150 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "70504311-4c03-573b-8f96-a0e414544252",
+      "barcode": "6261149036808",
+      "name_fa": "شیرین عسل ویفر هیت hit با طعم کرم فندق و روکش شکلات 150 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149036808.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "6eea0c55-fff2-5694-bf7b-96ddb3448ed0",
+      "barcode": "6263972400481",
+      "name_fa": "ستاک بسکوییت جو سبوس دار با کرم 150 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6263972400481-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "4d45b076-ba60-52e7-b1e8-dcb8cf13d08b",
+      "barcode": "6265663101820",
+      "name_fa": "الی بیسکویت پتی بور شیری 40 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6265663101820.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "18a22bfd-fb5e-561c-bf47-519eb8f90892",
+      "barcode": "6260117380097",
+      "name_fa": "سالمین نان روغنی بسکوییت نرم 6 عددی 50 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260117380097.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "24374ab8-6c99-58f2-8a93-4c4767470d7f",
+      "barcode": "6260002301909",
+      "name_fa": "گرجی بیسکویت بیسکوپلاس 100 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260002301909-2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "db36c264-7c75-5913-8b2b-6281d057bb4f",
+      "barcode": "6260003113600",
+      "name_fa": "ویتانا بیسکوییت شوکو اسکوئر 40 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260003113600.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "7b442ae0-9ba8-4ae7-a2e1-f47028a2bfeb",
+      "barcode": "6260002301107",
+      "name_fa": "کوکی رژیمی بدون شکر گرجی 380 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260002301107.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260002301107",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001835",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "کیک و کلوچه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23332,
+          "original_name": "کوکی رژیمی بدون شکر گرجی 380 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260002301107"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "51f32e4b-04e9-40a3-a5d7-c606eaa91da4",
+      "barcode": "6260003111798",
+      "name_fa": "بیسکویت مادر ممتاز ویتانا 70 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/file.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260003111798",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5829,
+          "original_name": "بیسکویت مادر ممتاز ویتانا 70 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260003111798"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "ed6b17c9-c21d-4abf-9891-f6f25e79a851",
+      "barcode": "6260003113273",
+      "name_fa": "بیسکویت روکش دار کاکائویی دایجستیو ویتانا 175 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260003113273-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260003113273",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5646,
+          "original_name": "بیسکویت روکش دار کاکائویی دایجستیو ویتانا 175 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260003113273"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "52e96b35-0fdf-4f95-80a3-3f4350332f02",
+      "barcode": "6260003113938",
+      "name_fa": "مینی کوکی کرم دار کاکائو فندقی ویتانا 125 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260003113938.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260003113938",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27245,
+          "original_name": "مینی کوکی کرم دار کاکائو فندقی ویتانا 125 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260003113938"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "92e59762-16b6-48f0-8238-767af4ebdb26",
+      "barcode": "6260003114010",
+      "name_fa": "بیسکویت تارت کرم دار شکلاتی نیکا ویتانا 45 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260003114010.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260003114010",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5581,
+          "original_name": "بیسکویت تارت کرم دار شکلاتی نیکا ویتانا 45 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260003114010"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a5f1e047-c0c1-4b0a-94bc-3f5b74ae83b6",
+      "barcode": "6260100121409",
+      "name_fa": "ویفر کرم دار کاراملی رنگارنگ مینو 14 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260100121409.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260100121409",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29905,
+          "original_name": "ویفر کرم دار کاراملی رنگارنگ مینو 14 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260100121409"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "06400a1f-7d6f-440e-9249-15d1eb8af86e",
+      "barcode": "6260222600264",
+      "name_fa": "بیسکویت نارگیلی 1000 زبان فرخنده 900 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/10162300022260026.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260222600264",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5510,
+          "original_name": "بیسكویت نارگیلی 1000 زبان فرخنده 900 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260222600264"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "203fb3ba-76ae-48ea-8fa3-7798de90c637",
+      "barcode": "6260509208312",
+      "name_fa": "بیسکویت جو با شهد توت دایجستیو جمانه 150 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260509208312.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509208312",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5589,
+          "original_name": "بیسکویت جو با شهد توت دایجستیو جمانه 150 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509208312"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "8b740d22-5e12-477c-97c9-7798e7587326",
+      "barcode": "6260509208329",
+      "name_fa": "بیسکویت جو دایجستیو جمانه (300 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260509208329.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509208329",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5597,
+          "original_name": "بیسکویت جو دایجستیو جمانه (300 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509208329"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "dbb95ff7-4ff9-463a-9de7-34921da8bee3",
+      "barcode": "6260509208336",
+      "name_fa": "بیسکویت جو شیرین شده با شهد توت جمانه (250 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260509208336.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509208336",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5604,
+          "original_name": "بیسکویت جو شیرین شده با شهد توت جمانه (250 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509208336"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3dc7ad07-ebe1-4735-8639-04cf3fe43ef7",
+      "barcode": "6260509213125",
+      "name_fa": "بیسکویت جو سبوسدار شیرین شده با شهد توت و خرما طرح ورزشی جمانه (یک کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/IMG_3800.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509213125",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5600,
+          "original_name": "بیسکویت جو سبوسدار شیرین شده با شهد توت و خرما طرح ورزشی جمانه (یک کیلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509213125"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2ab12c75-c7f8-4e1f-bad1-ce95a2debf72",
+      "barcode": "6260509290058",
+      "name_fa": "بیسکویت چند غله شیرین شده با شهد توت جمانه (420 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260509290058.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509290058",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5615,
+          "original_name": "بیسکویت چند غله شیرین شده با شهد توت جمانه (420 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509290058"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "87cb996c-2fc1-4a47-a766-9a6d7a240fdc",
+      "barcode": "6260509290591",
+      "name_fa": "بیسکویت جو سبوسدار شیرین شده با شهد توت و شیره خرما جمانه (1.1 کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/IMG_3797.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509290591",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5601,
+          "original_name": "بیسکویت جو سبوسدار شیرین شده با شهد توت و شیره خرما جمانه (1.1 کیلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509290591"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "458f9931-ccdd-4585-9b23-2d94156b9c8e",
+      "barcode": "6260509293011",
+      "name_fa": "بیسکویت جو کاکائویی شیرین شده با شهد توت جمانه (245 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260509293011.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509293011",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5606,
+          "original_name": "بیسکویت جو کاکائویی شیرین شده با شهد توت جمانه (245 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509293011"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "ea637ef6-d677-4a91-a06f-8dd4635fb0c1",
+      "barcode": "6260509298887",
+      "name_fa": "بیسکویت جو شکلاتی دایجستیو جمانه (200 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260509298887.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260509298887",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5603,
+          "original_name": "بیسکویت جو شکلاتی دایجستیو جمانه (200 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260509298887"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a443ea8c-0cd8-49d0-a360-cde3d08c2c98",
+      "barcode": "6261145000308",
+      "name_fa": "ویفر کرم دار توت فرنگی سلامت 160 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145000308.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145000308",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29887,
+          "original_name": "ویفر کرم دار توت فرنگی سلامت 160 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145000308"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a5698d06-32a6-4bb8-b6a2-1dfcaa81bd4f",
+      "barcode": "6261145000339",
+      "name_fa": "بیسکویت سلامت 400 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145000339.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145000339",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5675,
+          "original_name": "بیسکویت سلامت 400 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145000339"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "d7d2d883-372b-4ffa-8393-9357c1149712",
+      "barcode": "6261145000704",
+      "name_fa": "بیسکویت کاکائویی با کرم وانیلی کاکابیس سلامت 400 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/626114500704.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145000704",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5725,
+          "original_name": "بیسکویت کاکائویی با کرم وانیلی کاکابیس سلامت 400 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145000704"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "82e5f007-b902-4f28-8fd3-f5343af257c2",
+      "barcode": "6261145000803",
+      "name_fa": "ویفر کرم شیر قهوه سلامت (140 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145000803.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145000803",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29929,
+          "original_name": "ویفر کرم شیر قهوه سلامت (140 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145000803"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "09e73612-8c91-444b-8775-4ea4d154594b",
+      "barcode": "6261145010253",
+      "name_fa": "کوکی مغز کاکائویی سلامت (215 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145010253.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145010253",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001835",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "کیک و کلوچه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 23356,
+          "original_name": "کوکی مغز کاکائویی سلامت (215 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145010253"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "b6c3a341-f1c5-4939-8ba9-285c1fde086e",
+      "barcode": "6261145013018",
+      "name_fa": "بیسکویت کرم دار پرتقالی سلامت 400 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145013018.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145013018",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5753,
+          "original_name": "بیسکویت کرم دار پرتقالی سلامت 400 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145013018"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "d32f7d79-354f-4ffa-9973-59be5663d205",
+      "barcode": "6261145013056",
+      "name_fa": "بیسکویت کرم دار نارگیلی سلامت 400 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145013056.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145013056",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5773,
+          "original_name": "بیسکویت کرم دار نارگیلی سلامت 400 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145013056"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "79cb97e7-2410-4438-b197-a6906879ffea",
+      "barcode": "6261145013162",
+      "name_fa": "بیسکویت هل تزئین شکر سلامت (1.2 کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145013162.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145013162",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5873,
+          "original_name": "بیسکویت هل تزئین شکر سلامت (1.2 کیلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145013162"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "66731502-d207-4090-bbe1-062efff78a7a",
+      "barcode": "6261145030060",
+      "name_fa": "ویفر کرم دار پرتقالی سلامت 160 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145030060.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145030060",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29884,
+          "original_name": "ویفر کرم دار پرتقالی سلامت 160 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145030060"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "98f5c369-5225-4901-b9f8-ff33a10d87dc",
+      "barcode": "6261145030077",
+      "name_fa": "ویفر کرم دار موزی سلامت 160 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145030077.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145030077",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29917,
+          "original_name": "ویفر کرم دار موزی سلامت 160 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145030077"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "ec00d0ba-179c-4ed4-a746-3a4d871b7cca",
+      "barcode": "6261145040038",
+      "name_fa": "ویفر کرم دار نارگیلی سلامت 160 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145040038.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145040038",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29920,
+          "original_name": "ویفر کرم دار نارگیلی سلامت 160 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145040038"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "800b5115-9091-4fbf-8096-1165a2dec597",
+      "barcode": "6261149015094",
+      "name_fa": "بیسکویت کاکائویی کلاسیک شیرین عسل (80 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149015094.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149015094",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5741,
+          "original_name": "بیسکویت کاکائویی کلاسیک شیرین عسل (80 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149015094"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2659aafb-8f05-479a-8a79-7978b412cc37",
+      "barcode": "6261149033111",
+      "name_fa": "شکلات تلخ با مغز ویفر فندقی هیس شیرین عسل 21 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149033111.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149033111",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001781",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "شکلات و آبنبات و تافی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 18246,
+          "original_name": "شکلات تلخ با مغز ویفر فندقی هیس شیرین عسل 21 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149033111"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "72de4282-9cfa-4eb2-ae58-143af2272aaf",
+      "barcode": "6261149036525",
+      "name_fa": "ویفر کرم شیری هیت شیرین عسل (150 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149036525",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29932,
+          "original_name": "ویفر کرم شیری هیت شیرین عسل (150 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149036525"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "972101e8-2889-4f09-8d80-957a291855aa",
+      "barcode": "6261149036693",
+      "name_fa": "ویفر کرم دار فندقی هیت شیرین عسل 150 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149036693.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149036693",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29900,
+          "original_name": "ویفر کرم دار فندقی هیت شیرین عسل 150 گرم",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149036693"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "1a1fa759-6ced-4def-94ec-80ccd558559a",
+      "barcode": "6261149036709",
+      "name_fa": "ویفر کاکائویی با کرم شکلات سفید فندقی هیت شیرین عسل 150 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149036709.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149036709",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29857,
+          "original_name": "ویفر کاکائویی با کرم شکلات سفید فندقی هیت شیرین عسل 150 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149036709"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0df26b24-4730-4869-8257-70af3197aaae",
+      "barcode": "6261149036761",
+      "name_fa": "ویفر کرم دار شیری هیت شیرین عسل 150 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149036761.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149036761",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29897,
+          "original_name": "ویفر کرم دار شیری هیت شیرین عسل 150 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149036761"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "6bcf749b-0f2a-441c-b858-d376988b8eb2",
+      "barcode": "6262868100078",
+      "name_fa": "کلوچه خرمایی جمانه (110 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/IMG_3794.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262868100078",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001835",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "کیک و کلوچه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22498,
+          "original_name": "کلوچه خرمایی جمانه (110 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262868100078"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "4b45766b-11f0-43fc-9298-936b620355c3",
+      "barcode": "6263812801539",
+      "name_fa": "بیسکویت وانیلی پتی بور مینی بیسکوچی چی توز (55 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6263812801539.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263812801539",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5879,
+          "original_name": "بیسکویت وانیلی پتی بور مینی بیسکوچی چی توز (55 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263812801539"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "23e9e13b-f980-4262-b678-2cbc53c845c6",
+      "barcode": "6263972400306",
+      "name_fa": "بیسکویت چند غله ستاک 350 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6263972400306.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263972400306",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5614,
+          "original_name": "بیسکویت چند غله ستاک 350 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263972400306"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "ff1eda7c-4867-4a5e-a7c4-458cbfc89591",
+      "barcode": "6263972400498",
+      "name_fa": "بیسکویت سبوس دار کاکائویی ستاک 370 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6263972400498.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263972400498",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5665,
+          "original_name": "بیسکویت سبوس دار کاکائویی ستاک 370 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263972400498"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0c945dec-df06-452f-8d89-213af2a25fd4",
+      "barcode": "6265663102001",
+      "name_fa": "ویفر کرم دار موزی الی لینا 40 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6265663102001.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6265663102001",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29913,
+          "original_name": "ویفر کرم دار موزی الی لینا 40 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6265663102001"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2596c563-4a2f-43ff-a925-046b63a92f30",
+      "barcode": "6291003000010",
+      "name_fa": "بیسکویت گلوکز تیفانی (50 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/791a30319492658d01cb32fb30381010d7c4520f.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6291003000010",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5812,
+          "original_name": "بیسکویت گلوکز تیفانی (50 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6291003000010"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "89a44f4e-b1bb-47f0-ba36-f232a62fd0f0",
+      "barcode": "6291003007095",
+      "name_fa": "ویفر کرم فندق کرانچ تیفانی (153 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6291003007095.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6291003007095",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29937,
+          "original_name": "ویفر کرم فندق کرانچ تیفانی (153 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6291003007095"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "b7149c02-7e52-465d-a6e1-80072f6fbd81",
+      "barcode": "8901652142150",
+      "name_fa": "بیسکویت کره ای پریاگلد (150 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/8901652142150.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8901652142150",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5799,
+          "original_name": "بیسکویت کره ای پریاگلد (150 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8901652142150"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "014cb9b2-9d89-4fef-8535-f5710067b29f",
+      "barcode": "8992760221028",
+      "name_fa": "بیسکویت کاکائویی با کرم وانیلی اورئو 137 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/8992760221028.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8992760221028",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5723,
+          "original_name": "بیسکویت کاکائویی با کرم وانیلی اورئو 137 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8992760221028"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "13bab246-c096-436e-a821-9bc009423535",
+      "barcode": "8996001301715",
+      "name_fa": "بیسکویت قهوه کافی جوی 45 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/8996001301715.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8996001301715",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 5708,
+          "original_name": "بیسکویت قهوه کافی جوی 45 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8996001301715"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "6f331188-fcc2-437b-8119-338f58f49561",
+      "barcode": "8996001358009",
+      "name_fa": "ویفر باطعم کاکائو 32 گرمی ساندو",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/8996001358009-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8996001358009",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29762,
+          "original_name": "ویفر باطعم کاکائو 32 گرمی ساندو",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8996001358009"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "83a68929-f9a3-5cf4-b57a-4e097a9ba45d",
+        "name": "بسکویت، ویفر",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 67
+}

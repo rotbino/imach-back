@@ -1,0 +1,586 @@
+{
+  "items": [
+    {
+      "id": "7705ea20-5cee-48c2-9e33-aa1f948b7a28",
+      "barcode": null,
+      "name_fa": "ماست کم چرب 1/5 درصد 2000 گرمی میهن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0e1e2a60-3dcf-43b6-8ffa-20119dda21c2",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 2000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "میهن",
+        "original_name": "ماست کم چرب 1/5 درصد 2000 گرمی میهن",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          }
+        ],
+        "suggested_variant_name": "2000 گرمی کم‌چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.778Z",
+      "updated_at": "2025-12-29T12:57:30.792Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0e1e2a60-3dcf-43b6-8ffa-20119dda21c2",
+        "name": "میهن",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:52:32.425Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "a0f9225d-6ec3-4235-aef2-271389266928",
+      "barcode": null,
+      "name_fa": "ماست کم چرب 1/4 درصد پروبیوتیک 750 گرمی هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "ماست کم چرب 1/4 درصد پروبیوتیک 750 گرمی هراز",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          },
+          {
+            "name": "نوع",
+            "value": "پروبیوتیک"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی کم‌چرب پروبیوتیک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.623Z",
+      "updated_at": "2025-12-29T13:00:33.410Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "7b95f1b9-7b83-4153-8ff1-c98d4d7bcd20",
+      "barcode": null,
+      "name_fa": "ماست پرچرب 8/5 درصد 2200 گرمی می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 2200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "ماست پرچرب 8/5 درصد 2200 گرمی می‌ماس",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "پرچرب"
+          }
+        ],
+        "suggested_variant_name": "2200 گرمی پرچرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.822Z",
+      "updated_at": "2025-12-29T12:56:39.009Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "4d46dbbd-8fb8-43c4-883a-14ce8875fedd",
+      "barcode": null,
+      "name_fa": "پنیر سوپر لیقوان 800 گرمی آماندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d64273f-1783-4bf7-b54b-c47069f01318",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 800,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پنیر سوپر لیقوان",
+        "pack_count": null,
+        "parsed_brand": "آماندا",
+        "original_name": "پنیر سوپر لیقوان 800 گرمی آماندا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "800 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.893Z",
+      "updated_at": "2025-12-29T12:55:13.003Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d64273f-1783-4bf7-b54b-c47069f01318",
+        "name": "آماندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:55:13.000Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "74b24c50-a5bc-49c7-8d90-f0d2b8c25551",
+      "barcode": null,
+      "name_fa": "ماست چکیده موسیردار 3/5 درصد چربی 500 گرمی می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست چکیده موسیردار",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "ماست چکیده موسیردار 3/5 درصد چربی 500 گرمی می‌ماس",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "3/5 درصد چربی"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 3/5 درصد چربی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.012Z",
+      "updated_at": "2025-12-29T12:52:50.884Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "181c352b-d219-4a72-ac78-915d248222bb",
+      "barcode": null,
+      "name_fa": "ماست کم چرب 1/3 درصد چربی 1400 گرمی طراوت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6e885afe-ab61-44a5-8085-007979157414",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 1400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "طراوت",
+        "original_name": "ماست کم چرب 1/3 درصد چربی 1400 گرمی طراوت",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          }
+        ],
+        "suggested_variant_name": "1400 گرمی کم‌چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.058Z",
+      "updated_at": "2025-12-29T12:51:57.591Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6e885afe-ab61-44a5-8085-007979157414",
+        "name": "طراوت",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:43:16.451Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "f8b937fe-1580-404e-8a4e-9bf61b83a12a",
+      "barcode": null,
+      "name_fa": "ماست کم چرب پروبیوتیک 1/2 درصد 2500 گرمی دامداران",
+      "name_en": null,
+      "description": null,
+      "brand_id": "030a809e-6843-40fb-ae4d-890b3124736f",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 2500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "دامداران",
+        "original_name": "ماست کم چرب پروبیوتیک 1/2 درصد 2500 گرمی دامداران",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          },
+          {
+            "name": "نوع",
+            "value": "پروبیوتیک"
+          },
+          {
+            "name": "درصد",
+            "value": "1/2"
+          }
+        ],
+        "suggested_variant_name": "2500 گرمی کم‌چرب پروبیوتیک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.083Z",
+      "updated_at": "2025-12-29T12:51:17.278Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "030a809e-6843-40fb-ae4d-890b3124736f",
+        "name": "دامداران",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:46:01.966Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "ac0b4edc-8024-4509-80a6-cc13fcdf7d79",
+      "barcode": null,
+      "name_fa": "ماست کم چرب 1/4 درصد 2200 گرمی چوپان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "148eca2c-ff18-4779-a5d5-5ec2768dc704",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 2200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "چوپان",
+        "original_name": "ماست کم چرب 1/4 درصد 2200 گرمی چوپان",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          },
+          {
+            "name": "درصد",
+            "value": "1/4"
+          }
+        ],
+        "suggested_variant_name": "2200 گرمی کم‌چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.087Z",
+      "updated_at": "2025-12-29T12:51:09.881Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "148eca2c-ff18-4779-a5d5-5ec2768dc704",
+        "name": "چوپان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:14.315Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "18dbccf3-63f8-4304-9d9d-7e338ab8824b",
+      "barcode": null,
+      "name_fa": "ماست یونانی کم چرب 1/5 درصد 2200 گرمی می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 2200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست یونانی",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "ماست یونانی کم چرب 1/5 درصد 2200 گرمی می‌ماس",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم چرب"
+          }
+        ],
+        "suggested_variant_name": "2200 گرمی کم چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.105Z",
+      "updated_at": "2025-12-29T12:50:47.117Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    },
+    {
+      "id": "f27a3286-1f70-459a-a9b0-b942c45377ab",
+      "barcode": null,
+      "name_fa": "خامه کاکائویی 100 گرمی پاکبان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+      "category_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خامه",
+        "pack_count": null,
+        "parsed_brand": "پاکبان",
+        "original_name": "خامه کاکائویی 100 گرمی پاکبان",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "کاکائویی"
+          }
+        ],
+        "suggested_variant_name": "100 گرمی کاکائویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.253Z",
+      "updated_at": "2025-12-29T12:47:32.967Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+        "name": "پاکبان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:02.143Z"
+      },
+      "category": {
+        "id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "name": "لبنیات",
+        "icon_url": "🥛",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.025Z"
+      }
+    }
+  ],
+  "total": 10
+}

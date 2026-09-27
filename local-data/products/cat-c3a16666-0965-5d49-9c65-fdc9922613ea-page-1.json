@@ -1,0 +1,1510 @@
+{
+  "items": [
+    {
+      "id": "2d34a5bf-43f6-57fa-a8a0-26b759dc8bc1",
+      "barcode": "6269771300199",
+      "name_fa": "اسپری مو پوشش فوق قوی براق کننده MEGA HOLD SHINE شماره 5 کاسپین 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A7%D8%B3%D9%BE%D8%B1%DB%8C-%D9%85%D9%88-%D9%85%D8%B4%DA%A9%DB%8C-%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2d6d5960-c5f9-5692-bc14-940c82a44e0a",
+      "barcode": "6260165701295",
+      "name_fa": "عطر مردانه شماره 25 بیک با رایحه AQVA BVLGARI بنفش پرفیوم 7.5 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A8%DB%8C%DA%A9-25.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "580df10f-ced0-5411-a017-0a5a12d7f7f1",
+      "barcode": "6260165711126",
+      "name_fa": "عطر مردانه شماره 12 بیک با رایحه 007QUANTUM James Bond سبز پرفیوم 7.5 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A8%DB%8C%DA%A9-12.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3d48d39d-4c3f-5a6b-8a18-b8655cf46aa3",
+      "barcode": "6260204559016",
+      "name_fa": "پنبه هیدروفیل صد در صد طبیعی و خالص ماما 100 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%BE%D9%86%D8%A8%D9%87-%D9%87%DB%8C%D8%AF%D8%B1%D9%88%D9%81%DB%8C%D9%84-%D9%85%D8%A7%D9%85%D8%A7.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "5a2a1304-2fef-58fd-b081-7fdc845de5e6",
+      "barcode": "6260374025236",
+      "name_fa": "لوسیون بعد از اصلاح صورت (افترشیو) مخصوص آقایان سینره 150 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A8%D8%B9%D8%AF-%D8%A7%D8%B2-%D8%A7%D8%B5%D9%84%D8%A7%D8%AD-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "c88a2df1-4ae5-58bb-84af-41950b174b60",
+      "barcode": "6260482523723",
+      "name_fa": "خوشبو کننده بدن آقایان (بادی اسپلش) MOUNT VEIN MY مونت وین مای 320 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A7%D8%B3%D9%BE%D8%B1%DB%8C-%D8%A8%D8%AF%D9%86-%D9%85%D8%A7%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "55835de2-2275-5e73-9b65-7ea5f33d4c51",
+      "barcode": "6261342402851",
+      "name_fa": "محلول اسپری ضدعفونی کننده محیطی و سطحی Mayamay میامی 500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%85%D8%AD%D9%84%D9%88%D9%84_%D8%B6%D8%AF_%D8%B9%D9%81%D9%88%D9%86%DB%8C_%D8%B3%D8%B7%D9%88%D8%AD_%D9%85%DB%8C%D8%A7%D9%85%DB%8C.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "7367268d-f0b1-5011-b61b-dbabf903b70e",
+      "barcode": "6263936300017",
+      "name_fa": "صابون حمام دورو DURU با روغن طبیعی زیتون 180 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%B5%D8%A7%D8%A8%D9%88%D9%86-%D8%B2%DB%8C%D8%AA%D9%88%D9%86-%D8%AF%D9%88%D8%B1%D9%88.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "858f6dca-47a7-589e-8939-d41429a17a9e",
+      "barcode": "6260137934515",
+      "name_fa": "اسپری مو پوشش قوی ویتامینه شماره 4 کاسپین 500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A7%D8%B3%D9%BE%D8%B1%DB%8C-%D9%85%D9%88-%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86-250-%D8%B3%DB%8C-%D8%B3%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "8bdc787d-44d2-4a3a-b835-c9a23c694daa",
+      "barcode": "6260165701134",
+      "name_fa": "عطر شماره 13 بیک (7.5 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A8%DB%8C%DA%A9-13.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260165701134",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2905270101427",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایشی و عطر و ادکلن",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 19983,
+          "original_name": "عطر شماره 13 بیک (7.5 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260165701134"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a5fe7c72-4a42-41ba-9f94-7260e1dc5cb6",
+      "barcode": "6260462489322",
+      "name_fa": "خمیر دندان ضد پوسیدگی 3 کاره پونه 134 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AE%D9%85%DB%8C%D8%B1-%D8%AF%D9%86%D8%AF%D8%A7%D9%86-%D9%BE%D9%88%D9%86%D9%87.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260462489322",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000098621",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت دهان و دندان",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 11754,
+          "original_name": "خمیر دندان ضد پوسیدگی 3 کاره پونه 134 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260462489322"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0d325a2f-116c-4dd2-b75e-5388a9847570",
+      "barcode": "6260526418893",
+      "name_fa": "خمیر دندان خنک کننده Red Hot کلوس آپ 125 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%84%D9%88%D8%B2%D8%A2%D9%BE-%D8%AF%DB%8C%D9%BE-%D8%A7%DA%A9%D8%B4%D9%86.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260526418893",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000098621",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت دهان و دندان",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 11698,
+          "original_name": "خمیر دندان خنک کننده Red Hot کلوس آپ 125 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260526418893"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3a350743-3f37-4504-9a4b-ee9df1a62616",
+      "barcode": "6260526423019",
+      "name_fa": "خمیر دندان سفید کننده Integral 8 سیگنال 75 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AE%D9%85%DB%8C%D8%B1%D8%AF%D9%86%D8%AF%D8%A7%D9%86-%D8%B3%DB%8C%DA%AF%D9%86%D8%A7%D9%84-2.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260526423019",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2710000098621",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت دهان و دندان",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 11721,
+          "original_name": "خمیر دندان سفید کننده Integral 8 سیگنال 75 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260526423019"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "91fd6e16-8490-4152-8e54-0e20926f0892",
+      "barcode": "6260623310366",
+      "name_fa": "کاندوم خاردار تاخیری Super 3in1 ناچ کدکس 12 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%88%D8%AF%DA%A9%D8%B3-%D8%B3%D9%88%D9%BE%D8%B1-3-%D8%AF%D8%B1-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623310366",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2900832600080",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت جنسی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21521,
+          "original_name": "کاندوم خاردار تاخیری Super 3in1 ناچ کدکس 12 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623310366"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "60228ed5-278c-46b4-9f84-769bcc63ca03",
+      "barcode": "6260623310434",
+      "name_fa": "کاندوم کلاسیک Aloe Vera کدکس 12 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%88%D8%AF%DA%A9%D8%B3-%DA%A9%D9%84%D8%A7%D8%B3%DB%8C%DA%A9-%D8%A2%D9%84%D9%88%D8%A6%D9%87-%D9%88%D8%B1%D8%A7.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623310434",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2900832600080",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت جنسی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21544,
+          "original_name": "کاندوم کلاسیک Aloe Vera کدکس 12 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623310434"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "964df530-4b95-4361-9268-c8f9d653fd8f",
+      "barcode": "6260623330364",
+      "name_fa": "کاندوم کلاسیک Double Delay کدکس 10 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%88%D8%AF%DA%A9%D8%B3-%D8%AF%D8%A7%D8%A8%D9%84-%D8%AF%DB%8C%D9%84%D8%A7%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623330364",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2900832600080",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت جنسی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21549,
+          "original_name": "کاندوم کلاسیک Double Delay کدکس 10 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623330364"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "87cf8122-39b2-4b30-9bfe-61a5cc9a0d73",
+      "barcode": "6260623331460",
+      "name_fa": "کاندوم تاخیری Red Largo کدکس 12 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%88%D8%AF%DA%A9%D8%B3-%DA%A9%D8%A7%DA%A9%D8%AA%D9%88%D8%B3.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623331460",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2900832600080",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت جنسی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21499,
+          "original_name": "کاندوم تاخیری Red Largo کدکس 12 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623331460"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "414be1ae-4f7d-435e-b0d6-0722d13b2c5b",
+      "barcode": "6260623332443",
+      "name_fa": "کاندوم تنگ کننده Double Pomegranate ناچ کدکس 12 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%88%D8%AF%DA%A9%D8%B3-%D8%AF%D8%A7%D8%A8%D9%84.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623332443",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2900832600080",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت جنسی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21510,
+          "original_name": "کاندوم تنگ کننده Double Pomegranate ناچ کدکس 12 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623332443"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "dbd99238-795c-47ec-90cb-26ed1aaf39d5",
+      "barcode": "6260623332573",
+      "name_fa": "کاندوم نازک Zero Invisible کدکس 12 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D9%88%D8%AF%DA%A9%D8%B3-%D8%B2%DB%8C%D8%B1%D9%88.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623332573",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2900832600080",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "بهداشت جنسی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21567,
+          "original_name": "کاندوم نازک Zero Invisible کدکس 12 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623332573"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3672b28b-3e14-480d-a2b4-4972999aad36",
+      "barcode": "6263430601801",
+      "name_fa": "نرم کننده موآووکادو پرژک 280 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%86%D8%B1%D9%85-%DA%A9%D9%86%D9%86%D8%AF%D9%87-%D8%A7%D9%88%D9%88%DA%A9%D8%A7%D8%AF%D9%88-%D9%BE%D8%B1%DA%98%DA%A9.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263430601801",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098507",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "شامپو و مراقبت مو",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27704,
+          "original_name": "نرم کننده موآووکادو پرژک 280 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263430601801"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "8b1ea916-9796-4a08-b65f-61eedef7d3c6",
+      "barcode": "6266061104086",
+      "name_fa": "دستمال کاغذی 3 لایه تنو 100 برگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AF%D8%B3%D8%AA%D9%85%D8%A7%D9%84-%DA%A9%D8%A7%D8%BA%D8%B0%DB%8C-%D8%AA%D9%86%D9%88.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266061104086",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "دستمال کاغذی و توالت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12795,
+          "original_name": "دستمال کاغذی 3 لایه تنو 100 برگ",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266061104086"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2c7bcc9f-83af-4a40-8531-5997395e866e",
+      "barcode": "6267604412125",
+      "name_fa": "دستمال کاغذی 2 لایه گلرنگ 250 برگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-%DA%AF%D9%84%D8%B1%D9%86%DA%AF.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6267604412125",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "دستمال کاغذی و توالت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12787,
+          "original_name": "دستمال کاغذی 2 لایه گلرنگ 250 برگ",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6267604412125"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "1f8d97e5-175f-4211-abc6-c1ae2f73ba56",
+      "barcode": "6267604412132",
+      "name_fa": "بسته 4 عددی دستمال کاغذی 2 لایه گلرنگ 250برگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-%DA%AF%D9%84%D8%B1%D9%86%DA%AF-4%D9%82%D9%84%D9%88.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6267604412132",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "دستمال کاغذی و توالت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 4850,
+          "original_name": "بسته 4 عددی دستمال کاغذی 2 لایه گلرنگ 250برگ",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6267604412132"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "cd518b9b-2cff-4e6d-b6a2-fcfeeddb4c51",
+      "barcode": "6267604412149",
+      "name_fa": "دستمال توالت 3 لایه گلرنگ 2 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D9%88%D8%A7%D9%84%D8%AA-%D8%AF%D9%88-%D8%B1%D9%88%D9%84-%DA%AF%D9%84%D8%B1%D9%86%DA%AF.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6267604412149",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "دستمال کاغذی و توالت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12640,
+          "original_name": "دستمال توالت 3 لایه گلرنگ 2 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6267604412149"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "502b7bc7-9270-42a2-8c4c-da429a60861f",
+      "barcode": "6267604412156",
+      "name_fa": "دستمال حوله ای 3 لایه گلرنگ 2 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AD%D9%88%D9%84%D9%87-%DA%AF%D9%84%D8%B1%D9%86%DA%AF-%D8%AF%D9%88-%D8%B1%D9%88%D9%84.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6267604412156",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "دستمال کاغذی و توالت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12680,
+          "original_name": "دستمال حوله ای 3 لایه گلرنگ 2 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6267604412156"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c3a16666-0965-5d49-9c65-fdc9922613ea",
+        "name": "بهداشت شخصی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 25
+}

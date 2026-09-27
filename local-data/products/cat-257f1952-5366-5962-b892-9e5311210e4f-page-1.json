@@ -1,0 +1,218 @@
+{
+  "items": [
+    {
+      "id": "516b9eec-dbf0-4619-93f0-000cb47408c8",
+      "barcode": "6262147002888",
+      "name_fa": "شکلات صبحانه شیری و فندقی سوربن (300 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "257f1952-5366-5962-b892-9e5311210e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6262147002888.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262147002888",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040179",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "صبحانه",
+          "subcategory": "شکلات صبحانه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 18472,
+          "original_name": "شکلات صبحانه شیری و فندقی سوربن (300 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262147002888"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "257f1952-5366-5962-b892-9e5311210e4f",
+        "name": "شکلات صبحانه",
+        "icon_url": null,
+        "parent_id": "5882851a-5034-5cc5-981e-dcd5eb81c3b2",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "777a489a-e06e-4e44-a150-a366d141a766",
+      "barcode": "80176800",
+      "name_fa": "کرم کاکائو فندقی نوتلا 750 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "257f1952-5366-5962-b892-9e5311210e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:80176800",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040179",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "صبحانه",
+          "subcategory": "شکلات صبحانه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21971,
+          "original_name": "کرم کاکائو فندقی نوتلا 750 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "80176800"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "257f1952-5366-5962-b892-9e5311210e4f",
+        "name": "شکلات صبحانه",
+        "icon_url": null,
+        "parent_id": "5882851a-5034-5cc5-981e-dcd5eb81c3b2",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "047bcc97-b5d7-4385-8886-3fc51e1a8b29",
+      "barcode": "80177173",
+      "name_fa": "کرم کاکائو فندقی نوتلا 350 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "257f1952-5366-5962-b892-9e5311210e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/0006385_nutella-350-g-510x510.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:80177173",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040179",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "صبحانه",
+          "subcategory": "شکلات صبحانه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 21967,
+          "original_name": "کرم کاکائو فندقی نوتلا 350 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "80177173"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "257f1952-5366-5962-b892-9e5311210e4f",
+        "name": "شکلات صبحانه",
+        "icon_url": null,
+        "parent_id": "5882851a-5034-5cc5-981e-dcd5eb81c3b2",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 3
+}

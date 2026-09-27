@@ -1,0 +1,584 @@
+{
+  "items": [
+    {
+      "id": "95619dc5-f974-592b-a178-b57fb1d2610c",
+      "barcode": "6260201102246",
+      "name_fa": "فرمند کرم کاکائو فندقی 110 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/218161138804152-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "fa036b2e-e1ac-5d57-8375-093de4f6fe48",
+      "barcode": "6261149143056",
+      "name_fa": "نانی شکلات 20 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149143032.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3a86ef78-78ec-483c-bb26-dc410fce2a63",
+      "barcode": "5000159407236",
+      "name_fa": "شکلات مارس ۵۱ گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/5000159407236.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:5000159407236",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001781",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "شکلات و آبنبات و تافی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 18719,
+          "original_name": "شکلات مارس ۵۱ گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "5000159407236"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "1ca91515-6715-4c34-a698-4afff69497c9",
+      "barcode": "6260201100198",
+      "name_fa": "شکلات تخته ای مغز توت فرنگی گالاردو فرمند (100 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260201100198.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260201100198",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001781",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "شکلات و آبنبات و تافی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 18110,
+          "original_name": "شکلات تخته ای مغز توت فرنگی گالاردو فرمند (100 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260201100198"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a55ad44f-f677-44c9-9424-97dd995257be",
+      "barcode": "6260393001181",
+      "name_fa": "سورمالی هات چاکلت 12 عددی 24*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260393001181.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260393001181",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000180714",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "قهوه و هات چاکلت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 16105,
+          "original_name": "سورمالي هات چاکلت 12 عددي 24*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260393001181"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "d07768f9-ec3b-40e8-aad0-138fe649e92a",
+      "barcode": "6261145000346",
+      "name_fa": "ویفر شکلاتی با کرم کاکائو تلخ سلامت 140 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261145000346-2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261145000346",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000042517",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "بیسکویت و ویفر",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29816,
+          "original_name": "ویفر شکلاتی با کرم کاکائو تلخ سلامت 140 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261145000346"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "90028900-e463-4961-8db2-9d1abf44af8b",
+      "barcode": "6261149058039",
+      "name_fa": "شکلات شیری با مغز ویفر هیس شیرین عسل 21 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149058039.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149058039",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001781",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "شکلات و آبنبات و تافی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 18410,
+          "original_name": "شکلات شیری با مغز ویفر هیس شیرین عسل 21 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149058039"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "037eb10f-3545-4cd3-a580-0dca2246cae3",
+      "barcode": "6261149161302",
+      "name_fa": "شکلات شیری با مغز ماست توت فرنگی شیرین عسل 100 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261149161302.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261149161302",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001781",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "شکلات و آبنبات و تافی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 18405,
+          "original_name": "شکلات شیری با مغز ماست توت فرنگی شیرین عسل 100 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261149161302"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "c78faede-2254-4e0d-89ac-6c22aa048814",
+      "barcode": "6263276600082",
+      "name_fa": "تخم مرغ شانسی لپ لپ (1 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6263276600082.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263276600082",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000170739",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "شکلات و آبنبات و تافی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 9564,
+          "original_name": "تخم مرغ شانسی لپ لپ (1 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263276600082"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d71d81de-6aea-5dce-8156-133eaa0e901e",
+        "name": "شکلات",
+        "icon_url": null,
+        "parent_id": "9e417483-1c3f-54a0-8ba9-b7648f3541c0",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 9
+}

@@ -1,0 +1,311 @@
+{
+  "items": [
+    {
+      "id": "ddff1eb3-b772-52a5-a2b7-dae422be08ef",
+      "barcode": "69277996943831",
+      "name_fa": "باتری قلمی ونزAA VENS مدل R6 بسته 4 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "087a33db-8071-522f-9f09-9ee9edc26503",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A8%D8%A7%D8%AA%D8%B1%DB%8C.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "087a33db-8071-522f-9f09-9ee9edc26503",
+        "name": "ابزارهای الکترونیکی و لوازم جانبی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3a8c9752-f4c3-54b5-bbec-f5752f45f6f0",
+      "barcode": "6934582980037",
+      "name_fa": "باتری نیم قلمی ونز VENS AAA مدل R03 بسته 2عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "087a33db-8071-522f-9f09-9ee9edc26503",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A8%D8%A7%D8%AA%D8%B1%DB%8C-2.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "087a33db-8071-522f-9f09-9ee9edc26503",
+        "name": "ابزارهای الکترونیکی و لوازم جانبی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "f3fc578f-14d8-5c96-8084-90873d39d84a",
+      "barcode": "6260105312425",
+      "name_fa": "ماسک تنفسی سه لایه پرتودهی شده توسط شتابدهنده الکترون با دز 25 کیلو گری بسته 10 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "087a33db-8071-522f-9f09-9ee9edc26503",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%85%D8%A7%D8%B3%DA%A9.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "087a33db-8071-522f-9f09-9ee9edc26503",
+        "name": "ابزارهای الکترونیکی و لوازم جانبی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "7722640f-5fee-5c02-9e9d-2dfe40264ea3",
+      "barcode": "40078179600002",
+      "name_fa": "چسب حراتی تایوانی مدل sun بسته 3عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "087a33db-8071-522f-9f09-9ee9edc26503",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%86%D8%B3%D8%A8-%D8%AD%D8%B1%D8%A7%D8%B1%D8%AA%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "087a33db-8071-522f-9f09-9ee9edc26503",
+        "name": "ابزارهای الکترونیکی و لوازم جانبی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "a461f0c3-104b-4a03-a746-edbf315a43e4",
+      "barcode": "6260039032623",
+      "name_fa": "لامپ حبابی 12 وات پارس 1 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "087a33db-8071-522f-9f09-9ee9edc26503",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%84%D8%A7%D9%85%D9%BE-%D9%BE%D8%A7%D8%B1%D8%B3-12-%D9%88%D8%A7%D8%AA.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260039032623",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000107070",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "روشنایی و الکترونیکی",
+          "subcategory": "نور و روشنایی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 24246,
+          "original_name": "لامپ حبابی 12 وات پارس 1 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260039032623"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "087a33db-8071-522f-9f09-9ee9edc26503",
+        "name": "ابزارهای الکترونیکی و لوازم جانبی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "13589a2f-22fd-4e34-b538-8152c801c648",
+      "barcode": "6260039032975",
+      "name_fa": "لامپ SMD حبابی 20 وات پارس شهاب 1 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "087a33db-8071-522f-9f09-9ee9edc26503",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%84%D8%A7%D9%85%D9%BE-%D9%BE%D8%A7%D8%B1%D8%B3-20-%D9%88%D8%A7%D8%AA.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260039032975",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000107070",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "روشنایی و الکترونیکی",
+          "subcategory": "نور و روشنایی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 24226,
+          "original_name": "لامپ SMD حبابی 20 وات پارس شهاب 1 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260039032975"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "087a33db-8071-522f-9f09-9ee9edc26503",
+        "name": "ابزارهای الکترونیکی و لوازم جانبی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 6
+}

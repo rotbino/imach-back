@@ -1,0 +1,4319 @@
+{
+  "items": [
+    {
+      "id": "dd1cb617-e6f9-4fc5-8a0d-b3a27e537fd5",
+      "barcode": "6260176808266",
+      "name_fa": "دوغ سنتی 1500 میلی لیتری میهن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0e1e2a60-3dcf-43b6-8ffa-20119dda21c2",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1567405466.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ سنتی",
+        "pack_count": null,
+        "parsed_brand": "میهن",
+        "original_name": "دوغ سنتی 1500 میلی لیتری میهن",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1500 میلی لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.667Z",
+      "updated_at": "2025-12-29T12:59:41.426Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0e1e2a60-3dcf-43b6-8ffa-20119dda21c2",
+        "name": "میهن",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:52:32.425Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a480f543-cebb-4b26-a583-eb044f309b6f",
+      "barcode": "6260177600593",
+      "name_fa": "دوغ سنتی 1.5 لیتری سارا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2fc112e5-72ea-44d6-9a1f-45dd91947fef",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1512889630.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ سنتی",
+        "pack_count": null,
+        "parsed_brand": "سارا",
+        "original_name": "دوغ سنتی 1.5 لیتری سارا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1.5 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.374Z",
+      "updated_at": "2025-12-29T12:44:55.307Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2fc112e5-72ea-44d6-9a1f-45dd91947fef",
+        "name": "سارا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:54.079Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f5c801e7-ee20-4d14-b4f1-8875a9b7bacd",
+      "barcode": "6260176808648",
+      "name_fa": "دوغ ترش 1500 میلی لیتری میهن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0e1e2a60-3dcf-43b6-8ffa-20119dda21c2",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1567405494.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ ترش",
+        "pack_count": null,
+        "parsed_brand": "میهن",
+        "original_name": "دوغ ترش 1500 میلی لیتری میهن",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1500 میلی لیتری ترش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.669Z",
+      "updated_at": "2025-12-29T12:59:40.219Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0e1e2a60-3dcf-43b6-8ffa-20119dda21c2",
+        "name": "میهن",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:52:32.425Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "9317d3b2-7e8b-43ac-ada0-96e728aff1cd",
+      "barcode": "6262624902205",
+      "name_fa": "دوغ گرمادیده بدون گاز با طعم نعنا 275 میلی‌لیتری عالیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "67184782-9c5c-4810-9703-59d695e52fee",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1529818662.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 275,
+        "clean_name": "دوغ گرمادیده",
+        "pack_count": null,
+        "parsed_brand": "عالیس",
+        "original_name": "دوغ گرمادیده بدون گاز با طعم نعنا 275 میلی‌لیتری عالیس",
+        "parsed_attributes": [
+          {
+            "name": "گاز",
+            "value": "بدون گاز"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "275 میلی‌لیتری بدون گاز نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.534Z",
+      "updated_at": "2025-12-29T13:02:23.451Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "67184782-9c5c-4810-9703-59d695e52fee",
+        "name": "عالیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:15:48.933Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "ad12956f-5ffb-4e8d-ac83-48ee5dfe2c19",
+      "barcode": "6260063204836",
+      "name_fa": "دوغ نعنا و پونه 1 لیتری پاک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4a1eb819-539c-4799-8769-8518eee31504",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472718239.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "پاک",
+        "original_name": "دوغ نعنا و پونه 1 لیتری پاک",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا و پونه"
+          }
+        ],
+        "suggested_variant_name": "1 لیتری نعنا و پونه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.563Z",
+      "updated_at": "2025-12-29T13:01:50.365Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4a1eb819-539c-4799-8769-8518eee31504",
+        "name": "پاک",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:43:08.554Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "daa43bb9-9c6c-4130-a761-7f0bed4a209b",
+      "barcode": "6260661006801",
+      "name_fa": "دوغ با طعم گلپر 900 میلی‌لیتری هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1531550346.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 900,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ با طعم گلپر 900 میلی‌لیتری هراز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "گلپر"
+          }
+        ],
+        "suggested_variant_name": "900 میلی‌لیتری طعم گلپر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.593Z",
+      "updated_at": "2025-12-29T13:01:16.728Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a1f377ee-f9f9-4b55-b423-cb6748829c39",
+      "barcode": "6260524701362",
+      "name_fa": "دوغ سنتی گرما دیده بدون گاز با طعم پونه و کاکوتی 1.5 لیتری عالیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "67184782-9c5c-4810-9703-59d695e52fee",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1588773405.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ سنتی گرما دیده بدون گاز",
+        "pack_count": null,
+        "parsed_brand": "عالیس",
+        "original_name": "دوغ سنتی گرما دیده بدون گاز با طعم پونه و کاکوتی 1.5 لیتری عالیس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پونه و کاکوتی"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری با طعم پونه و کاکوتی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.660Z",
+      "updated_at": "2025-12-29T12:59:50.762Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "67184782-9c5c-4810-9703-59d695e52fee",
+        "name": "عالیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:15:48.933Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "c42b2770-e3e7-4d25-ba0e-2d041ffb9861",
+      "barcode": "6260661008379",
+      "name_fa": "دوغ با طعم نعنا 1500 گرمی هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1531547552.jpg",
+      "reference_price": null,
+      "weight_grams": 1500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ با طعم نعنا 1500 گرمی هراز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "1500 گرمی با طعم نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.663Z",
+      "updated_at": "2025-12-29T12:59:46.926Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "bff3ad67-194f-4aed-b523-faea7c4aaaaa",
+      "barcode": "6260007434374",
+      "name_fa": "دوغ بدون گاز با نعنا 1.5 لیتری پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480768795.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "دوغ بدون گاز با نعنا 1.5 لیتری پگاه",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          },
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری بدون گاز نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.689Z",
+      "updated_at": "2025-12-29T12:59:16.139Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "fce2fd85-5775-4b00-86a2-ad7b822cd69b",
+      "barcode": "6260161524720",
+      "name_fa": "دوغ کفیر پروبیوتیک 1 ‌لیتری ناری کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1589980239.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "دوغ کفیر پروبیوتیک",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "دوغ کفیر پروبیوتیک 1 ‌لیتری ناری کاله",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.693Z",
+      "updated_at": "2025-12-29T12:59:12.410Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f1270779-e783-4962-9635-85ff248562ce",
+      "barcode": "6261371300012",
+      "name_fa": "دوغ 1500 میلی لیتری طراوت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6e885afe-ab61-44a5-8085-007979157414",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1567405869.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "طراوت",
+        "original_name": "دوغ 1500 میلی لیتری طراوت",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1500 میلی لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.698Z",
+      "updated_at": "2025-12-29T12:59:07.542Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6e885afe-ab61-44a5-8085-007979157414",
+        "name": "طراوت",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:43:16.451Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "fdb249d3-dc2e-4e5d-805d-ce85e08f7fdd",
+      "barcode": "6260007434596",
+      "name_fa": "دوغ شهری 2 لیتری پگاه گلپایگان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "637ed10b-a838-4e30-befc-ac78406d4e76",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1567405129.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 2000,
+        "clean_name": "دوغ شهری",
+        "pack_count": null,
+        "parsed_brand": "پگاه گلپایگان",
+        "original_name": "دوغ شهری 2 لیتری پگاه گلپایگان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "2 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.754Z",
+      "updated_at": "2025-12-29T12:57:59.750Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "637ed10b-a838-4e30-befc-ac78406d4e76",
+        "name": "پگاه گلپایگان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:57:59.747Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "eca89846-84f0-4039-b8a5-5c9ca048882a",
+      "barcode": "6260661006320",
+      "name_fa": "دوغ کفیر 1 لیتری هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480774117.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "دوغ کفیر",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ کفیر 1 لیتری هراز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.996Z",
+      "updated_at": "2025-12-29T12:53:08.618Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e731d982-7560-4f3e-b0fc-1c427345e5ae",
+      "barcode": "6260661006672",
+      "name_fa": "دوغ ترش محلی با طعم گلپر 2450 میلی‌لیتری هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1567405763.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 2450,
+        "clean_name": "دوغ ترش محلی",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ ترش محلی با طعم گلپر 2450 میلی‌لیتری هراز",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "گلپر"
+          }
+        ],
+        "suggested_variant_name": "2450 میلی‌لیتری با طعم گلپر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.064Z",
+      "updated_at": "2025-12-29T12:51:41.754Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "c9344c18-e8fa-4628-92e0-a886dd8b400d",
+      "barcode": "6260177600296",
+      "name_fa": "دوغ پاستوريزه گرما دیده 1،5 لیتری اسپینان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "152e3cd7-d6de-445a-ae66-6e738ae97d86",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1496045193.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ پاستوريزه گرما دیده",
+        "pack_count": null,
+        "parsed_brand": "اسپینان",
+        "original_name": "دوغ پاستوريزه گرما دیده 1،5 لیتری اسپینان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1.5 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.193Z",
+      "updated_at": "2025-12-29T12:48:52.827Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "152e3cd7-d6de-445a-ae66-6e738ae97d86",
+        "name": "اسپینان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:48:52.824Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "eafd0298-4220-4641-88bb-7f3c6d605abd",
+      "barcode": "6260177600401",
+      "name_fa": "دوغ 260 میلی‌لیتری سارا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2fc112e5-72ea-44d6-9a1f-45dd91947fef",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472716250.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 260,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "سارا",
+        "original_name": "دوغ 260 میلی‌لیتری سارا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "260 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.189Z",
+      "updated_at": "2025-12-29T12:48:57.995Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2fc112e5-72ea-44d6-9a1f-45dd91947fef",
+        "name": "سارا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:54.079Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "dcb45105-f685-48f6-8348-0b615cf777ac",
+      "barcode": "6260177620034",
+      "name_fa": "دوغ پاستوريزه 1،3 لیتری سارا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2fc112e5-72ea-44d6-9a1f-45dd91947fef",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260177620034(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1300,
+        "clean_name": "دوغ پاستوريزه",
+        "pack_count": null,
+        "parsed_brand": "سارا",
+        "original_name": "دوغ پاستوريزه 1،3 لیتری سارا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1.3 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.192Z",
+      "updated_at": "2025-12-29T12:48:54.056Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2fc112e5-72ea-44d6-9a1f-45dd91947fef",
+        "name": "سارا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:54.079Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f5e6ab3d-b13b-412b-9276-96e333387768",
+      "barcode": "6261191001670",
+      "name_fa": "دوغ دلال 900 میلی‌لیتری می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6261191001670(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 900,
+        "clean_name": "دوغ دلال",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "دوغ دلال 900 میلی‌لیتری می‌ماس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "900 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.194Z",
+      "updated_at": "2025-12-29T12:48:51.403Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "dbb1385d-9e2c-4b5a-bd70-c76fc639b5a8",
+      "barcode": "6261191001694",
+      "name_fa": "دوغ دلال 330 میلی‌لیتری می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472717197.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 330,
+        "clean_name": "دوغ دلال",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "دوغ دلال 330 میلی‌لیتری می‌ماس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "330 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.195Z",
+      "updated_at": "2025-12-29T12:48:50.207Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "b324737e-a7ae-4326-9768-12bb2f03280d",
+      "barcode": "6261191001717",
+      "name_fa": "دوغ دلال 1 لیتری می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472884991.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "دوغ دلال",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "دوغ دلال 1 لیتری می‌ماس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.195Z",
+      "updated_at": "2025-12-29T12:48:48.915Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "fd205957-8184-4be0-acc7-3ea754dbde28",
+      "barcode": "6260161522733",
+      "name_fa": "دوغ ویژه 1،5 لیتری کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1474279369.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "دوغ ویژه 1،5 لیتری کاله",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ویژه"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری ویژه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.197Z",
+      "updated_at": "2025-12-29T12:48:46.504Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f8544336-7bc0-4b1d-a147-0172435a2ff5",
+      "barcode": "6260134520056",
+      "name_fa": "دوغ 60 درصد ماست 1،5 لیتری پاکبان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1495972072.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "پاکبان",
+        "original_name": "دوغ 60 درصد ماست 1،5 لیتری پاکبان",
+        "parsed_attributes": [
+          {
+            "name": "درصد ماست",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری 60 درصد ماست"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.249Z",
+      "updated_at": "2025-12-29T12:47:38.239Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+        "name": "پاکبان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:02.143Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "ef0820bf-c3d2-4101-a55a-b56efc88e362",
+      "barcode": "6260134520179",
+      "name_fa": "دوغ بدون گاز  330 میلی‌لیتری پاکبان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472877664.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 330,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "پاکبان",
+        "original_name": "دوغ بدون گاز  330 میلی‌لیتری پاکبان",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          }
+        ],
+        "suggested_variant_name": "330 میلی‌لیتری بدون گاز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.250Z",
+      "updated_at": "2025-12-29T12:47:36.699Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+        "name": "پاکبان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:02.143Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a5daa87d-5d15-49a0-ab7c-1acae7e33500",
+      "barcode": "6260007456185",
+      "name_fa": "دوغ غنی شده 1.5 لیتری پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260007456185(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "دوغ غنی شده 1.5 لیتری پگاه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "غنی شده"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری غنی شده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.272Z",
+      "updated_at": "2025-12-29T12:47:02.630Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "ef3aa9e6-4e5d-457a-8640-2236d2af3416",
+      "barcode": "6260134520339",
+      "name_fa": "دوغ بدون گاز 900 میلی‌لیتری پاکبان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260134520339(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 900,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "پاکبان",
+        "original_name": "دوغ بدون گاز 900 میلی‌لیتری پاکبان",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          }
+        ],
+        "suggested_variant_name": "900 میلی‌لیتری بدون گاز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.274Z",
+      "updated_at": "2025-12-29T12:47:00.061Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+        "name": "پاکبان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:02.143Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "aaeba17d-7c0c-4b42-96a4-c3356312d5ba",
+      "barcode": "6260167812159",
+      "name_fa": "دوغ بدون گاز با طعم نعنا 1.5 لیتری آبعلی بهنوش",
+      "name_en": null,
+      "description": null,
+      "brand_id": "32d61ba9-5a80-4e75-bad6-3c40c8a9e0cc",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260167812159(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "بهنوش",
+        "original_name": "دوغ بدون گاز با طعم نعنا 1.5 لیتری آبعلی بهنوش",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری بدون گاز نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.317Z",
+      "updated_at": "2025-12-29T12:46:06.281Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "32d61ba9-5a80-4e75-bad6-3c40c8a9e0cc",
+        "name": "بهنوش",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:46:54.977Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "d3419f7d-c50a-4253-8f9f-0dcefe038c3e",
+      "barcode": "6260272803387",
+      "name_fa": "دوغ گازدار با طعم نعنا 1.5 لیتری دامداران",
+      "name_en": null,
+      "description": null,
+      "brand_id": "030a809e-6843-40fb-ae4d-890b3124736f",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480772868.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ گازدار",
+        "pack_count": null,
+        "parsed_brand": "دامداران",
+        "original_name": "دوغ گازدار با طعم نعنا 1.5 لیتری دامداران",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری با طعم نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.318Z",
+      "updated_at": "2025-12-29T12:46:03.217Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "030a809e-6843-40fb-ae4d-890b3124736f",
+        "name": "دامداران",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:46:01.966Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a8ee97a6-f853-43e2-9d38-540d639c97b6",
+      "barcode": "6260661003763",
+      "name_fa": "دوغ گازدار 1300 میلی‌لیتری هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260661003763(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1300,
+        "clean_name": "دوغ گازدار",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ گازدار 1300 میلی‌لیتری هراز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1300 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.330Z",
+      "updated_at": "2025-12-29T12:45:49.421Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "99f6c4e6-40a9-4f6f-9b81-af76c371add9",
+      "barcode": "6260661006696",
+      "name_fa": "دوغ بدون گاز با طعم نعنا 1300 میلی‌لیتری هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480774235.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1300,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ بدون گاز با طعم نعنا 1300 میلی‌لیتری هراز",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "1300 میلی‌لیتری بدون گاز نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.336Z",
+      "updated_at": "2025-12-29T12:45:40.612Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a92eaddf-bbc3-4b46-a916-1b531e482d33",
+      "barcode": "6260661006719",
+      "name_fa": "دوغ بدون گاز با طعم گلپر 1300 میلی‌لیتری هراز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480774267.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1300,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "هراز",
+        "original_name": "دوغ بدون گاز با طعم گلپر 1300 میلی‌لیتری هراز",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          },
+          {
+            "name": "طعم",
+            "value": "گلپر"
+          }
+        ],
+        "suggested_variant_name": "1300 میلی‌لیتری بدون گاز با طعم گلپر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.337Z",
+      "updated_at": "2025-12-29T12:45:39.006Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1256eb04-5853-4518-9ac6-8e58ea7ed39b",
+        "name": "هراز",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:15.505Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "9c787e06-ee52-47e3-8c90-547cf44a71d7",
+      "barcode": "6260768501001",
+      "name_fa": "دوغ بدون گاز با طعم نعنا 1250 میلی‌لیتری صباح",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fb73ba40-ca95-42c5-a747-164ae7e7aab8",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260768501001(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1250,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "صباح",
+        "original_name": "دوغ بدون گاز با طعم نعنا 1250 میلی‌لیتری صباح",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "1250 میلی‌لیتری بدون گاز با طعم نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.348Z",
+      "updated_at": "2025-12-29T12:45:25.281Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fb73ba40-ca95-42c5-a747-164ae7e7aab8",
+        "name": "صباح",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:23.649Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "eaadbb2f-21ea-4894-b1cd-0148582841a4",
+      "barcode": "6260768528992",
+      "name_fa": "دوغ بدون گاز 2500 میلی‌لیتری صباح",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fb73ba40-ca95-42c5-a747-164ae7e7aab8",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480774466.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 2500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "صباح",
+        "original_name": "دوغ بدون گاز 2500 میلی‌لیتری صباح",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          }
+        ],
+        "suggested_variant_name": "2500 میلی‌لیتری بدون گاز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.350Z",
+      "updated_at": "2025-12-29T12:45:23.650Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fb73ba40-ca95-42c5-a747-164ae7e7aab8",
+        "name": "صباح",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:23.649Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a540077f-8d33-4498-81e9-0eed0f85c085",
+      "barcode": "6261191001748",
+      "name_fa": "دوغ بدون گاز 900 گرمی می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480774568.jpg",
+      "reference_price": null,
+      "weight_grams": 900,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "دوغ بدون گاز 900 گرمی می‌ماس",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          }
+        ],
+        "suggested_variant_name": "900 گرمی بدون گاز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.352Z",
+      "updated_at": "2025-12-29T12:45:21.302Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "9ce9d859-c47c-48d9-bec6-b3332f02a917",
+      "barcode": "6263310400036",
+      "name_fa": "دوغ شتر بدون گاز 946 میلی‌لیتری ساربونا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c1e5c476-97df-474b-a1e3-1010d63085b5",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1542893808.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 946,
+        "clean_name": "دوغ شتر",
+        "pack_count": null,
+        "parsed_brand": "ساربونا",
+        "original_name": "دوغ شتر بدون گاز 946 میلی‌لیتری ساربونا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون گاز"
+          }
+        ],
+        "suggested_variant_name": "946 میلی‌لیتری بدون گاز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.357Z",
+      "updated_at": "2025-12-29T12:45:16.161Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c1e5c476-97df-474b-a1e3-1010d63085b5",
+        "name": "ساربونا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:17.960Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "9b19912d-0b3e-4dd0-9ca8-2bcfd8ea4425",
+      "barcode": "6260524701881",
+      "name_fa": "دوغ گاز‌دار تخمیری 1.5 لیتری عالیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "67184782-9c5c-4810-9703-59d695e52fee",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1512889692.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "عالیس",
+        "original_name": "دوغ گاز‌دار تخمیری 1.5 لیتری عالیس",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گاز‌دار تخمیری"
+          }
+        ],
+        "suggested_variant_name": "1.5 لیتری گاز‌دار تخمیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.383Z",
+      "updated_at": "2025-12-29T12:44:36.757Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "67184782-9c5c-4810-9703-59d695e52fee",
+        "name": "عالیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:15:48.933Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e76cebf7-8f19-4043-83c3-3e421814a04b",
+      "barcode": "6260161531070",
+      "name_fa": "دوغ سون 1500 میلی لیتری کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1567405388.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1500,
+        "clean_name": "دوغ",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "دوغ سون 1500 میلی لیتری کاله",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1500 میلی لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.425Z",
+      "updated_at": "2025-12-29T12:43:42.736Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e6a876e5-3103-49a9-83c5-b5d5060b3aed",
+      "barcode": "6260867402193",
+      "name_fa": "پاک.دوغ 4لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260867402193",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 6669,
+          "original_name": "پاک.دوغ 4ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260867402193"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f80d9d50-1e77-47e9-a967-deba7c0ae6b9",
+      "barcode": "6260524702789",
+      "name_fa": "دوغ بدون گاز گرما دیده عالیس 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260524702789",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13328,
+          "original_name": "دوغ بدون گاز گرما ديده عاليس 1.5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260524702789"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "c6e9e726-e7e4-4983-a9fc-c42848661253",
+      "barcode": "6260161575753",
+      "name_fa": "دوغ بدون گاز گرمادیده کاله 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260161575753",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13329,
+          "original_name": "دوغ بدون گاز گرماديده کاله 1.5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260161575753"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "dc998383-ff4a-4eda-a5cc-0a364337f391",
+      "barcode": "6260272803172",
+      "name_fa": "دوغ بدون گاز گرمادیده سنتی دامداران 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260272803172",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13333,
+          "original_name": "دوغ بدون گاز گرمادیده سنتی دامداران 1.5 لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260272803172"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "c6f6cc57-972c-43ec-90d5-c73b2abdfc58",
+      "barcode": "6260063236561",
+      "name_fa": "دوغ بدون گاز نعنا و پونه گرمایده پاک 1 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260063236561",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13344,
+          "original_name": "دوغ بدون گاز نعنا و پونه گرمايده پاک 1 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260063236561"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e1e562f8-a8c9-4334-ba1a-1a8bd7643768",
+      "barcode": "6268714603465",
+      "name_fa": "دوغ بدون گاز نعنایی ماهشام 1 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6268714603465",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13347,
+          "original_name": "دوغ بدون گاز نعنايي ماهشام 1 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6268714603465"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f09e5921-a6b2-4cce-ac1b-905a89f8b078",
+      "barcode": "6268714603472",
+      "name_fa": "دوغ بدون گاز نعنایی ماهشام 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6268714603472",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13348,
+          "original_name": "دوغ بدون گاز نعنايي ماهشام 1.5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6268714603472"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "fcadffce-4817-4178-903c-cc1901ba0740",
+      "barcode": "6262624902564",
+      "name_fa": "دوغ بدون گاز نعنایی عالیس 275 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262624902564",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13351,
+          "original_name": "دوغ بدون گاز نعنایی عالیس 275 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262624902564"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e1987a1f-5688-49c3-a79a-fb2ae3c078b5",
+      "barcode": "6261191004312",
+      "name_fa": "دوغ دلال وسبزی های محلی می ماس 950 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261191004312",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13364,
+          "original_name": "دوغ دلال وسبزي هاي محلي مي ماس 950 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261191004312"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "97fd541d-f961-4c30-a400-f674a2292390",
+      "barcode": "6260661009802",
+      "name_fa": "دوغ فلوراکتیو هراز (یک لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260661009802",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13369,
+          "original_name": "دوغ فلوراکتیو هراز (یک لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260661009802"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a313e245-6946-414c-b674-869bb19913f5",
+      "barcode": "6260415738224",
+      "name_fa": "دوغ گازدار آبعلی 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260415738224",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13372,
+          "original_name": "دوغ گازدار آبعلی 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260415738224"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a473f0dd-11eb-475f-bad1-25e58821ee29",
+      "barcode": "6260290501913",
+      "name_fa": "دوغ گازدار آبعلی 285 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260290501913",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13374,
+          "original_name": "دوغ گازدار آبعلی 285 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260290501913"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "ffba04a8-d3c6-47e0-8ab8-2cfd3b077686",
+      "barcode": "6260161547804",
+      "name_fa": "دوغ گازدار تخمیری کاله (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260161547804",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13378,
+          "original_name": "دوغ گازدار تخمیری کاله (500 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260161547804"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "d3a06c9d-3c9a-44b3-a270-77885681675f",
+      "barcode": "6260415738149",
+      "name_fa": "دوغ گازدار زمزم آبعلی 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260415738149",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13382,
+          "original_name": "دوغ گازدار زمزم آبعلی 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260415738149"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e468932c-7b95-4b6e-8915-847b504bd82f",
+      "barcode": "6260100683914",
+      "name_fa": "دوغ گازدار فیروزکوه 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260100683914",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13383,
+          "original_name": "دوغ گازدار فیروزکوه 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260100683914"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "bb09c412-d78f-4ae2-8d9f-bdbe01f198f9",
+      "barcode": "6260176827267",
+      "name_fa": "دوغ گازدار کفیر پروبیوتیک میهن 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176827267",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13384,
+          "original_name": "دوغ گازدار کفير پروبيوتيک ميهن 1.5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176827267"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a0e1a8e6-d578-4f73-bf16-98ce3909336c",
+      "barcode": "6260079277459",
+      "name_fa": "دوغ گازدار گرمادیده آبعلی 1 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260079277459",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13385,
+          "original_name": "دوغ گازدار گرمادیده آبعلی 1 لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260079277459"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "b2493849-02c0-452a-816a-d2f8d9eebb21",
+      "barcode": "6260176819958",
+      "name_fa": "دوغ مشک میهن (1.5 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176819958",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13404,
+          "original_name": "دوغ مشک میهن (1.5 لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176819958"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "bf380e6a-5013-49bb-b13e-6d6a1503d14a",
+      "barcode": "6268714602819",
+      "name_fa": "دوغ نعنایی ماهشام (280 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6268714602819",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13406,
+          "original_name": "دوغ نعنايي ماهشام (280 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6268714602819"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "c401e80f-f83a-451a-9fdf-39b63b404d33",
+      "barcode": "6262624903882",
+      "name_fa": "دوغ نعنایی عالیس (330 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262624903882",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13408,
+          "original_name": "دوغ نعنایی عالیس (330 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262624903882"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f0c0b88d-b9b7-4dc0-b3e3-8976eb6883cb",
+      "barcode": "6260007464883",
+      "name_fa": "دوغ نعنایی گازدار تخمیری پگاه (2 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260007464883",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13409,
+          "original_name": "دوغ نعنایی گازدار تخمیری پگاه (2 لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260007464883"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "b1214e43-16b7-4c03-973a-8dcff23dbde0",
+      "barcode": "6260176808396",
+      "name_fa": "دوغ نعنایی میهن (270 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176808396",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13411,
+          "original_name": "دوغ نعنایی میهن (270 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176808396"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "df0069a9-a0c2-48f0-8815-37d6e1b14846",
+      "barcode": "6260063201088",
+      "name_fa": "دوغ هشت گیاه بدون گاز پاک 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260063201088",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13414,
+          "original_name": "دوغ هشت گياه بدون گاز پاک 1.5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260063201088"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "b1c948f4-73f4-4f52-b961-7ec1261db5ee",
+      "barcode": "6260729000239",
+      "name_fa": "دوغ ویتامینه لیوان دار گدوک (1.5 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260729000239",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13415,
+          "original_name": "دوغ ویتامینه لیوان دار گدوک (1.5 لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260729000239"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e352b0d6-9793-408e-ac49-b445251275f6",
+      "barcode": "6260027902600",
+      "name_fa": "دوماس.دوغ گیاهی 1.375 میلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260027902600",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13428,
+          "original_name": "دوماس.دوغ گياهي 1.375 ميلي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260027902600"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a783b2c1-f2fb-4fbd-ab34-86e0d02af62f",
+      "barcode": "6260027902334",
+      "name_fa": "دوماس.دوغ نعناع 1.375 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260027902334",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13429,
+          "original_name": "دوماس.دوغ نعناع 1.375 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260027902334"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "b6bb8866-58f0-5c14-bc0c-985128b90607",
+      "barcode": "6260522301526",
+      "name_fa": "آپادا دوغ نعنا 1000 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "a5d422b5-c722-4b79-a64b-968495ad6b2b",
+      "barcode": "6260100603417",
+      "name_fa": "فیروزکوه. دوغ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260100603417",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 20668,
+          "original_name": "فيروزکوه. دوغ",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260100603417"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "98d41baf-effa-4c88-9a11-ff776389002b",
+      "barcode": "6260303725077",
+      "name_fa": "مروارید.دوغ نعناع(1.5لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260303725077",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 26755,
+          "original_name": "مرواريد.دوغ نعناع(1.5ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260303725077"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "f1fb992e-67d5-44b4-90fb-4c9bb9f2fbbf",
+      "barcode": "6260176831998",
+      "name_fa": "میهن.دوغ گازدار(1500)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176831998",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27214,
+          "original_name": "ميهن.دوغ گازدار(1500)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176831998"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e58c4635-9e5a-45cb-9893-5bb4bb1107c6",
+      "barcode": "6260161543028",
+      "name_fa": "دوغ بدون گاز گرمادیده سون کاله 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AF%D9%88%D8%BA-%D8%B3%D9%88%D9%86-%DA%A9%D8%A7%D9%84%D9%87.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260161543028",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13334,
+          "original_name": "دوغ بدون گاز گرمادیده سون کاله 1.5 لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260161543028"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "e4b93ee4-34cd-441a-bcfe-4fff030bcae1",
+      "barcode": "6260167810117",
+      "name_fa": "دوغ گازدار آبعلی 260 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260167810117.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260167810117",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13373,
+          "original_name": "دوغ گازدار آبعلی 260 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260167810117"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    },
+    {
+      "id": "fe540340-ce6a-4b16-b0cc-ce80462e0cfb",
+      "barcode": "6260176815875",
+      "name_fa": "دوغ بدون گاز گرمادیده میهن 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AF%D9%88%D8%BA-%D9%85%D8%AD%D9%84%DB%8C-%D9%85%DB%8C%D9%87%D9%86.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176815875",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002276",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "دوغ",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13339,
+          "original_name": "دوغ بدون گاز گرمادیده میهن 1.5 لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176815875"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1e4602cb-5ef0-4b4d-949b-fb1634d59cb9",
+        "name": "دوغ",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.533Z"
+      }
+    }
+  ],
+  "total": 169
+}

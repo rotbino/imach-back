@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "f3ed1cdb-b8f3-5684-be57-ea047783578d",
+      "barcode": "2701",
+      "name_fa": "جوراب زنانه مچی زمینه سفید MC SOCKS",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cf60940e-ea70-512d-89e7-39b37b238b51",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AC%D9%88%D8%B1%D8%A7%D8%A8-%D9%85%DA%86%DB%8C-%D8%B2%D9%86%D8%A7%D9%86%D9%87.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cf60940e-ea70-512d-89e7-39b37b238b51",
+        "name": "دستکش و جوراب",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "b61d0c34-8a54-414c-ab10-cba18fe88991",
+      "barcode": null,
+      "name_fa": "قلوگاه گوساله 1 کیلویی آوا‌ پروتئین‌پایتخت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "270455a6-8a9b-45ce-a944-8746620e7246",
+      "category_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "قلوگاه گوساله",
+        "pack_count": null,
+        "parsed_brand": "آوا‌ پروتئین‌پایتخت",
+        "original_name": "قلوگاه گوساله 1 کیلویی آوا‌ پروتئین‌پایتخت",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.563Z",
+      "updated_at": "2025-12-29T10:37:27.481Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "270455a6-8a9b-45ce-a944-8746620e7246",
+        "name": "آوا‌ پروتئین‌پایتخت",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:36:57.233Z"
+      },
+      "category": {
+        "id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "name": "پروتئینی",
+        "icon_url": "🥩",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.028Z"
+      }
+    }
+  ],
+  "total": 1
+}

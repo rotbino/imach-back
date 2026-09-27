@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "1fc2df55-0734-504c-8819-fefde6b4d38c",
+      "barcode": "8050455003578",
+      "name_fa": "پودر دکلره بدون غبار اسکالیم Eskalim وزن 500 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "d8e65352-6090-5f38-8837-d0292ab7b8fe",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V03/%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%20%D9%88%20%D9%85%D8%B1%D8%A7%D9%82%D8%A8%D8%AA%20%D8%A7%D8%B2%20%D9%85%D9%88/Pic/%D9%BE%D9%88%D8%AF%D8%B1-%D8%AF%DA%A9%D9%84%D8%B1%D9%87-%D8%A8%D8%AF%D9%88%D9%86-%D8%BA%D8%A8%D8%A7%D8%B1-%D8%A7%D8%B3%DA%A9%D8%A7%D9%84%DB%8C%D9%85-eskalim-%D9%88%D8%B2%D9%86-500-%DA%AF%D8%B1%D9%85.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "بهداشت و مراقبت از مو.xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "d8e65352-6090-5f38-8837-d0292ab7b8fe",
+        "name": "رنگ مو و ملزومات",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

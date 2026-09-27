@@ -1,0 +1,5673 @@
+{
+  "items": [
+    {
+      "id": "0d8cc21f-67ce-4481-8125-51abf6e9c1af",
+      "barcode": "6260010504224",
+      "name_fa": "مایع ظرفشویی 2 عددی 1000 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1591337649.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": 2,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی 2 عددی 1000 گرمی اوه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1000 گرمی 2 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.204Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "0cfef54f-1ef5-46b1-9941-60ccd304e251",
+      "barcode": "5720233358192",
+      "name_fa": "مایع آب‌کشی و براق‌کننده ظروف 500 میلی‌لیتر ی کلین‌تبز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9bcf4949-8b1e-4a48-ac14-5dfbd9f81215",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484119952.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 500,
+        "clean_name": "مایع آب‌کشی و براق‌کننده ظروف",
+        "pack_count": null,
+        "parsed_brand": "کلین‌تبز",
+        "original_name": "مایع آب‌کشی و براق‌کننده ظروف 500 میلی‌لیتر ی کلین‌تبز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 میلی‌لیتر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.494Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9bcf4949-8b1e-4a48-ac14-5dfbd9f81215",
+        "name": "کلین‌تبز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:34.154Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "237bdda2-98a8-47e2-b598-ee75b5ec57a0",
+      "barcode": "6260001402041",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو و خیار 1000 گرمی هوم کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1588331511.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "هوم کر",
+        "original_name": "مایع ظرفشویی با رایحه لیمو و خیار 1000 گرمی هوم کر",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو و خیار"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لیمو و خیار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.961Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+        "name": "هوم کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:14:16.844Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7ec08188-bfbc-4bb7-a155-dc7f7b979b6a",
+      "barcode": "6260001402058",
+      "name_fa": "مایع ظرفشویی با رایحه گیلاس و انار 1000 گرمی هوم کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1588330633.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "هوم کر",
+        "original_name": "مایع ظرفشویی با رایحه گیلاس و انار 1000 گرمی هوم کر",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "گیلاس و انار"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی گیلاس و انار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.961Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+        "name": "هوم کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:14:16.844Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7619f79f-b326-4cd8-a733-3b4803ba79da",
+      "barcode": "6260001402065",
+      "name_fa": "مایع ظرفشویی با رایحه انگور و بلوبری 1000 گرمی هوم کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1588330665.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "هوم کر",
+        "original_name": "مایع ظرفشویی با رایحه انگور و بلوبری 1000 گرمی هوم کر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "انگور و بلوبری"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی انگور و بلوبری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.962Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+        "name": "هوم کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:14:16.844Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5ddf104c-45d9-4fca-8ff4-e32b04ffc8c4",
+      "barcode": "6260001402188",
+      "name_fa": "مایع ظرفشویی صدفی حاوی عصاره لاوندر 970 گرمی هوم کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1591338438.jpg",
+      "reference_price": null,
+      "weight_grams": 970,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی صدفی",
+        "pack_count": null,
+        "parsed_brand": "هوم کر",
+        "original_name": "مایع ظرفشویی صدفی حاوی عصاره لاوندر 970 گرمی هوم کر",
+        "parsed_attributes": [
+          {
+            "name": "عصاره",
+            "value": "لاوندر"
+          }
+        ],
+        "suggested_variant_name": "970 گرمی عصاره لاوندر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.938Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6ea70db7-f56a-4b8f-b66a-08d9083ae3aa",
+        "name": "هوم کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:14:16.844Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5b812006-76f8-4b2e-9114-7d5edf29b140",
+      "barcode": "6260007550395",
+      "name_fa": "مایع ‌ظرفشویی با رایحه سیب 1000 میلی‌لیتری ‌لطیفه‌",
+      "name_en": null,
+      "description": null,
+      "brand_id": "83822b61-781f-487f-a267-44e9573aadcc",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260007550395(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "لطیفه",
+        "original_name": "مایع ‌ظرفشویی با رایحه سیب 1000 میلی‌لیتری ‌لطیفه‌",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "سیب"
+          }
+        ],
+        "suggested_variant_name": "1000 میلی‌لیتری با رایحه سیب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.498Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "83822b61-781f-487f-a267-44e9573aadcc",
+        "name": "لطیفه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:26.071Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5192be83-02ca-4648-89ed-6caaafb82726",
+      "barcode": "6260007550555",
+      "name_fa": "مایع‌ ظرفشویی با رایحه توت‌ فرنگی 3800 گرمی لطیفه‌",
+      "name_en": null,
+      "description": null,
+      "brand_id": "83822b61-781f-487f-a267-44e9573aadcc",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260007550555(1).jpg",
+      "reference_price": null,
+      "weight_grams": 3800,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "لطیفه",
+        "original_name": "مایع‌ ظرفشویی با رایحه توت‌ فرنگی 3800 گرمی لطیفه‌",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت‌ فرنگی"
+          }
+        ],
+        "suggested_variant_name": "3800 گرمی توت‌ فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.499Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "83822b61-781f-487f-a267-44e9573aadcc",
+        "name": "لطیفه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:26.071Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5ca9e325-9b3b-4c79-9d3c-d74f9307f351",
+      "barcode": "6260010504194",
+      "name_fa": "مایع ظرفشویی با رایحه بری 750 گرمی هوم پلاس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28945e3d-e065-47df-af3b-7634ed6dea62",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1588330770.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "هوم پلاس",
+        "original_name": "مایع ظرفشویی با رایحه بری 750 گرمی هوم پلاس",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "بری"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی بری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.880Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28945e3d-e065-47df-af3b-7634ed6dea62",
+        "name": "هوم پلاس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:21:24.559Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "34e1b74e-dd4d-4470-82cf-3a39b9548b2b",
+      "barcode": "6260010510485",
+      "name_fa": "مایع ظرفشویی پلاتینیوم  750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1555912373.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی پلاتینیوم  750 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پلاتینیوم"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی پلاتینیوم"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.866Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "19c128dc-918e-4360-b7cb-b17a67e9a722",
+      "barcode": "6260010510935",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی گلرنگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9ef483c2-9315-4498-a1ae-50ad9f8feb6f",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260010510935(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلرنگ",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی گلرنگ",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.445Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9ef483c2-9315-4498-a1ae-50ad9f8feb6f",
+        "name": "گلرنگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:01.603Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "92261764-d95d-4c8f-828f-a94e574369bc",
+      "barcode": "6260010510973",
+      "name_fa": "مایع ظرفشویی پلاتینیوم لیمویی 3750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1591338599.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی پلاتینیوم لیمویی 3750 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیموئی"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی لیمویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.242Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "65075abb-5c85-44f9-bcd9-c12f75edd8e5",
+      "barcode": "6260010530902",
+      "name_fa": "مایع ظرفشویی لیمویی چربی زدای قوی 3500 گرمی گلرنگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9ef483c2-9315-4498-a1ae-50ad9f8feb6f",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1591338674.jpg",
+      "reference_price": null,
+      "weight_grams": 3500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلرنگ",
+        "original_name": "مایع ظرفشویی لیمویی چربی زدای قوی 3500 گرمی گلرنگ",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیموئی"
+          },
+          {
+            "name": "نوع",
+            "value": "چربی زدای قوی"
+          }
+        ],
+        "suggested_variant_name": "3500 گرمی لیموئی چربی زدای قوی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.223Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9ef483c2-9315-4498-a1ae-50ad9f8feb6f",
+        "name": "گلرنگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:01.603Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "75110670-7616-4cde-b960-e3803331228f",
+      "barcode": "6260010530919",
+      "name_fa": "مایع ظرفشویی زرد 1000 گرمی گلرنگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9ef483c2-9315-4498-a1ae-50ad9f8feb6f",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1562302047.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلرنگ",
+        "original_name": "مایع ظرفشویی زرد 1000 گرمی گلرنگ",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "زرد"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی زرد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.842Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9ef483c2-9315-4498-a1ae-50ad9f8feb6f",
+        "name": "گلرنگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:01.603Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "26fddf2f-64a3-4b86-81fb-9a2b8ee43668",
+      "barcode": "6260010540604",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 500 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260010540604(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 500 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.440Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5a8cc8c8-d93b-4508-b96d-81b5aee76354",
+      "barcode": "6260010540635",
+      "name_fa": "مایع ظرفشویی با رایحه توت فرنگی 500 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260010540635(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی با رایحه توت فرنگی 500 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.442Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "49dab459-7b5f-44c4-b1ad-2056b8c726cb",
+      "barcode": "6260010540642",
+      "name_fa": "مایع ظرفشویی پلاتینیوم 750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1545214823.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی پلاتینیوم 750 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پلاتینیوم"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی پلاتینیوم"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.152Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "66cf96e4-0704-4abd-b771-512ae054f114",
+      "barcode": "6260010540710",
+      "name_fa": "مایع ظرفشویی با رایحه سیب و گلابی 3750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484120073.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی با رایحه سیب و گلابی 3750 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "سیب و گلابی"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی با رایحه سیب و گلابی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.235Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "3822706f-9620-4fa4-a21c-faf600b7fd96",
+      "barcode": "6260010540734",
+      "name_fa": "مایع ظرفشویی قرمز 3750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1562302267.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی قرمز 3750 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "قرمز"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.234Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "402d8e63-5d79-4e1c-9f39-9e497a70fe78",
+      "barcode": "6260010540758",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260010540758(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.155Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "85e01508-99af-464e-927f-878f57136e6c",
+      "barcode": "6260010540765",
+      "name_fa": "مایع ظرفشویی بنفش 1000 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1492094519.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی بنفش 1000 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بنفش"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی بنفش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.443Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5e53a8b6-84bc-4aad-9808-c156e0e0485c",
+      "barcode": "6260010540789",
+      "name_fa": "مایع ظرفشویی با رایحه توت فرنگی 1000 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1492094263.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی با رایحه توت فرنگی 1000 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.157Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "05f62456-d109-4cff-952a-1522be6dbdb1",
+      "barcode": "6260010540864",
+      "name_fa": "مایع ظرفشویی گلبهی 750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260010540864(1).jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی گلبهی 750 گرمی اوه",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "گلبهی"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی گلبهی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.439Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "209120bf-b448-4956-9b3a-83743ae16271",
+      "barcode": "6260010541106",
+      "name_fa": "مایع ظرفشویی پلاتینیوم 3750 گرمی اوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1525852035.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی پلاتینیوم",
+        "pack_count": null,
+        "parsed_brand": "اوه",
+        "original_name": "مایع ظرفشویی پلاتینیوم 3750 گرمی اوه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3750 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.241Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51563817-5990-4259-9f7a-6f70ca7f4f55",
+        "name": "اوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:05:04.292Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7470992f-8481-4747-87cb-84a60d335d0d",
+      "barcode": "6260031042828",
+      "name_fa": "مایع ظرفشویی با رایحه بلوبری 750 گرمی صحت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484120097.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "صحت",
+        "original_name": "مایع ظرفشویی با رایحه بلوبری 750 گرمی صحت",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "بلوبری"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی بلوبری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.499Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+        "name": "صحت",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:16.435Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "05f41ef7-38a0-441e-9774-cb8dad031175",
+      "barcode": "6260031043030",
+      "name_fa": "مایع ظرفشویی با رایحه پرتقال 500 میلی لیتری صحت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1537071425.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 500,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "صحت",
+        "original_name": "مایع ظرفشویی با رایحه پرتقال 500 میلی لیتری صحت",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "500 میلی لیتری پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.503Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+        "name": "صحت",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:16.435Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "379af795-b100-4654-a42e-86c1279e69e0",
+      "barcode": "6260031043054",
+      "name_fa": "مایع ظرفشویی با رایحه پرتقال 1000 میلی‌‌لیتری صحت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1534169199.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "صحت",
+        "original_name": "مایع ظرفشویی با رایحه پرتقال 1000 میلی‌‌لیتری صحت",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "1000 میلی‌لیتری پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.924Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+        "name": "صحت",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:16.435Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4d9e94ed-96df-4edf-bbc7-ab058acff304",
+      "barcode": "6260031043764",
+      "name_fa": "مایع ظرفشویی حاوی گلیسرین 750 میلی‌‌لیتری صحت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1534169270.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 750,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "صحت",
+        "original_name": "مایع ظرفشویی حاوی گلیسرین 750 میلی‌‌لیتری صحت",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "گلیسرین"
+          }
+        ],
+        "suggested_variant_name": "750 میلی‌لیتری حاوی گلیسرین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.504Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+        "name": "صحت",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:16.435Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "707a10cc-6955-4b0d-a05e-be50a8443a34",
+      "barcode": "6260031044143",
+      "name_fa": "مایع ظرفشویی با رایحه توت‌ فرنگی 750 گرمی صحت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484120234.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "صحت",
+        "original_name": "مایع ظرفشویی با رایحه توت‌ فرنگی 750 گرمی صحت",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت‌ فرنگی"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی توت‌ فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.506Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+        "name": "صحت",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:16.435Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "267606f9-11e2-4503-96b5-51c7ce208b9c",
+      "barcode": "6260031044181",
+      "name_fa": "مایع ظرفشویی با رایحه توت‌ فرنگی 4000 گرمی صحت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484120343.jpg",
+      "reference_price": null,
+      "weight_grams": 4000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "صحت",
+        "original_name": "مایع ظرفشویی با رایحه توت‌ فرنگی 4000 گرمی صحت",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت‌ فرنگی"
+          }
+        ],
+        "suggested_variant_name": "4000 گرمی توت‌ فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.247Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "898f3ddf-d84d-4f09-898b-d724b4c1e097",
+        "name": "صحت",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:16.435Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "687293a9-7982-4bb9-b149-42046831ff30",
+      "barcode": "6260089416114",
+      "name_fa": "مایع ظرفشویی 500 گرمی خاکستر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0bcbf345-3bbd-4efd-a284-22631ea54829",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484120900.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "خاکستر",
+        "original_name": "مایع ظرفشویی 500 گرمی خاکستر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.127Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0bcbf345-3bbd-4efd-a284-22631ea54829",
+        "name": "خاکستر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:15.087Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6f4b5575-0b21-49aa-a683-8796b39c32c4",
+      "barcode": "6260089416121",
+      "name_fa": "مايع ظرفشویی سبز 500 گرمی خاكستر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0bcbf345-3bbd-4efd-a284-22631ea54829",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484120932.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "خاکستر",
+        "original_name": "مايع ظرفشویی سبز 500 گرمی خاكستر",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سبز"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی سبز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.508Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0bcbf345-3bbd-4efd-a284-22631ea54829",
+        "name": "خاکستر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:15.087Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6acc4852-7987-4fe7-9355-3c37af3237dd",
+      "barcode": "6260089416138",
+      "name_fa": "مایع ظرفشویی 1000 گرمی خاکستر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0bcbf345-3bbd-4efd-a284-22631ea54829",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1525850981.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "خاکستر",
+        "original_name": "مایع ظرفشویی 1000 گرمی خاکستر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1000 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.181Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0bcbf345-3bbd-4efd-a284-22631ea54829",
+        "name": "خاکستر",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:15.087Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6bcfcf36-6275-47ca-821b-8ca305630d4f",
+      "barcode": "6260105001430",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 3750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121038.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 3750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.509Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4d397e2c-c60a-45c7-a4f5-854875d86d11",
+      "barcode": "6260105001447",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121077.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.510Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "660dfac0-8d55-481e-9239-155bcdefe6eb",
+      "barcode": "6260105003519",
+      "name_fa": "مایع ظرفشویی محافظ دست و ناخن 750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1534168571.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی محافظ دست و ناخن 750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "محافظ دست و ناخن"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی محافظ دست و ناخن"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.878Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4aad403c-eb66-4df0-a286-6a83fec61601",
+      "barcode": "6260105003571",
+      "name_fa": "مایع ظرفشویی غلیظ گلد 3750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551275791.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی غلیظ گلد",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی غلیظ گلد 3750 گرمی پریل",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3750 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.080Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "10b7c48d-3630-4763-85c6-f6edaf0abbc9",
+      "barcode": "6260105003588",
+      "name_fa": "مایع ظرفشویی غلیظ گلد 750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551275811.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی غلیظ گلد 750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "غلیظ"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی غلیظ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.911Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4f4e1bab-4eef-496d-9686-0505b9fdefe6",
+      "barcode": "6260105003687",
+      "name_fa": "مایع ظرفشویی لاوندر 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551274745.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی لاوندر 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لاوندر"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لاوندر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.888Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4284bd1a-21ac-4496-9c3c-b4717ababa68",
+      "barcode": "6260105003694",
+      "name_fa": "مایع ظرفشویی لاوندر 3750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551274780.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی لاوندر 3750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لاوندر"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی لاوندر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.048Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5635330a-df65-46a3-a44e-eae17408f992",
+      "barcode": "6260105003731",
+      "name_fa": "مایع ظرفشویی پرتقال و گریپ فروت 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551274923.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی پرتقال و گریپ فروت 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پرتقال و گریپ فروت"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی پرتقال و گریپ فروت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.890Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "58f94cb3-53f9-4f21-b7dd-4068d4ea5508",
+      "barcode": "6260105003748",
+      "name_fa": "مایع ظرفشویی پرتقال و گریپ فروت 3750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551274952.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی پرتقال و گریپ فروت 3750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پرتقال و گریپ فروت"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی پرتقال و گریپ فروت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.050Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "43bddfab-a91e-4cdc-9c1c-fbcb2139342c",
+      "barcode": "6260105004318",
+      "name_fa": "مایع ظرفشویی پرتغال و گریپ فروت 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1582112274.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی پرتغال و گریپ فروت 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پرتغال و گریپ فروت"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی پرتغال و گریپ فروت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.159Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "37e7c702-e9cf-472a-a5fc-1f5a091fa0ba",
+      "barcode": "6260105023593",
+      "name_fa": "مایع ظرفشویی حاوی گلیسیرین 750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1474873303.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی حاوی گلیسیرین 750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "attribute",
+            "value": "حاوی گلیسیرین"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی حاوی گلیسیرین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.372Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "2343a653-190f-40ef-9d27-1b60f8c5a3d8",
+      "barcode": "6260105023753",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260105023753(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.373Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4bd106cf-c0e3-4b87-8be4-824dca34e605",
+      "barcode": "6260105023760",
+      "name_fa": "مایع ظرفشویی با رایحه پرتقال 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260105023760(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه پرتقال 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.374Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7ca737c4-e359-4c42-8d3d-3af45db03bb8",
+      "barcode": "6260105023852",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 3750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1492339736.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 3750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.376Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7e0b9156-7b65-42a9-8559-b447badf7781",
+      "barcode": "6260105023869",
+      "name_fa": "مایع ظرفشویی با رایحه پرتقال 3750 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1474441580.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه پرتقال 3750 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.377Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "565cab69-672c-4ecc-a4f5-501e1c6fbebc",
+      "barcode": "6260105088929",
+      "name_fa": "مایع ظرفشویی با رایحه پرتقال 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121108.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه پرتقال 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.513Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "90e1791b-e76d-4565-a49c-5a127c9165bd",
+      "barcode": "6260105088943",
+      "name_fa": "مایع ظرفشویی با رایحه میوه‌های سرخ 1000 گرمی پریل",
+      "name_en": null,
+      "description": null,
+      "brand_id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121173.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "پریل",
+        "original_name": "مایع ظرفشویی با رایحه میوه‌های سرخ 1000 گرمی پریل",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "میوه‌های سرخ"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی با رایحه میوه‌های سرخ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.514Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "72975b0d-bce9-48ae-b905-d9add9e81857",
+        "name": "پریل",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:05.228Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7dfe467d-1e2e-43ba-a4a0-766138116f55",
+      "barcode": "6260204505358",
+      "name_fa": "مایع ظرفشویی ذغالی انار 1000 گرمی راپیدو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8f995974-68f9-4c7a-8b6f-27e99006bad0",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1558853673.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "راپیدو",
+        "original_name": "مایع ظرفشویی ذغالی انار 1000 گرمی راپیدو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "انار"
+          },
+          {
+            "name": "نوع",
+            "value": "ذغالی"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی ذغالی انار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.947Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8f995974-68f9-4c7a-8b6f-27e99006bad0",
+        "name": "راپیدو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:12:43.981Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "2397d4ae-4542-48b7-8acb-2a91cae6dce1",
+      "barcode": "6260232870121",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی آ.ب.ث",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a26daf52-1802-491d-9548-487854bd7afe",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121203.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "آ.ب.ث",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی آ.ب.ث",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.832Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a26daf52-1802-491d-9548-487854bd7afe",
+        "name": "آ.ب.ث",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:59.067Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "991c1055-cb09-427b-a8b1-d4da7b645f12",
+      "barcode": "6260467401831",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260467401831(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.377Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6d3b15c3-2314-4cf2-8a8b-4ccc9ce5883d",
+      "barcode": "6260467401879",
+      "name_fa": "مایع ظرفشویی با رایحه توت فرنگی 1000 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1473076386.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی با رایحه توت فرنگی 1000 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.380Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "90b30e4e-36c4-4c08-ad62-0beff8baf4d8",
+      "barcode": "6260467401893",
+      "name_fa": "مایع ظرفشویی آبی 750 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1473069123.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی آبی 750 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "آبی"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی آبی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.381Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6b179f98-3a09-4c25-aa13-e0a6c2a94f70",
+      "barcode": "6260467402173",
+      "name_fa": "مایع ظرفشویی سیلیکو 500 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260467402173(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی سیلیکو 500 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "نامشخص",
+            "value": "سیلیکو"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی سیلیکو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.383Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "67b71f94-6be6-480b-9725-c173e443ffa7",
+      "barcode": "6260467402302",
+      "name_fa": "مایع ظرفشویی با رایحه توت فرنگی 3750 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260467402302(1).jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی با رایحه توت فرنگی 3750 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.380Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "125f22c0-939a-493c-8983-98532e17377f",
+      "barcode": "6260681701427",
+      "name_fa": "مایع ظرفشویی بنفش 750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260681701427(1).jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی بنفش 750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بنفش"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی بنفش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.525Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "19c58da4-7d92-483e-877b-d3c9ad2cebd6",
+      "barcode": "6260681701434",
+      "name_fa": "مایع ظرفشویی سبز آبی 750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/6260681701434(1).jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی سبز آبی 750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سبز آبی"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی سبز آبی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.526Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "27d5304e-a146-4608-ba3a-f9d3085dba8a",
+      "barcode": "6261101120354",
+      "name_fa": "مایع ظرفشویی قرمز 1000 گرمی برف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f96c24b-32df-4056-bd87-3e83c965d1c9",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1562303584.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "برف",
+        "original_name": "مایع ظرفشویی قرمز 1000 گرمی برف",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "قرمز"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.827Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f96c24b-32df-4056-bd87-3e83c965d1c9",
+        "name": "برف",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:43.802Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "0e0293b7-8d28-4687-b4cb-255a1891ba4b",
+      "barcode": "6261101120361",
+      "name_fa": "مایع ‌ظرفشویی با رایحه لیمو ‌1000 گرمی برف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f96c24b-32df-4056-bd87-3e83c965d1c9",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1492089264.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "برف",
+        "original_name": "مایع ‌ظرفشویی با رایحه لیمو ‌1000 گرمی برف",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.828Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f96c24b-32df-4056-bd87-3e83c965d1c9",
+        "name": "برف",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:43.802Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7e5d3a47-daed-4200-93de-42e079089cf7",
+      "barcode": "6261101121207",
+      "name_fa": "مایع‌ ظرفشویی صورتی 4000 گرمی گلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1496808818.jpg",
+      "reference_price": null,
+      "weight_grams": 4000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلی",
+        "original_name": "مایع‌ ظرفشویی صورتی 4000 گرمی گلی",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "صورتی"
+          }
+        ],
+        "suggested_variant_name": "4000 گرمی صورتی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.224Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+        "name": "گلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:18.074Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "4b3d4bc0-a7ec-4250-9918-9d4e65aa1e82",
+      "barcode": "6261101121436",
+      "name_fa": "مایع‌ ظرفشویی زرد 4000 گرمی گلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1491997287.jpg",
+      "reference_price": null,
+      "weight_grams": 4000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلی",
+        "original_name": "مایع‌ ظرفشویی زرد 4000 گرمی گلی",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "زرد"
+          }
+        ],
+        "suggested_variant_name": "4000 گرمی زرد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.528Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+        "name": "گلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:18.074Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "02af2eb0-138b-436a-9965-8c2c8da47be5",
+      "barcode": "6261101121764",
+      "name_fa": "مایع‌ ظرفشویی صورتی 1000 گرمی گلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1498282274.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلی",
+        "original_name": "مایع‌ ظرفشویی صورتی 1000 گرمی گلی",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "صورتی"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی صورتی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.830Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+        "name": "گلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:18.074Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "246ecd6d-62a2-42cc-8366-ee0e49f196c9",
+      "barcode": "6261101121832",
+      "name_fa": "مایع‌ ظرفشویی آبی 1000 گرمی گلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121601.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلی",
+        "original_name": "مایع‌ ظرفشویی آبی 1000 گرمی گلی",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "آبی"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی آبی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.531Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+        "name": "گلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:18.074Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "3dd1044c-7eae-40ff-8117-1d61d00e5555",
+      "barcode": "6261101121917",
+      "name_fa": "مایع‌ ظرفشویی زرد 1000 گرمی گلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121682.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلی",
+        "original_name": "مایع‌ ظرفشویی زرد 1000 گرمی گلی",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "زرد"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی زرد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.533Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+        "name": "گلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:18.074Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "111e781d-bb8f-4608-a07e-75167fbaf0d6",
+      "barcode": "6261124011691",
+      "name_fa": "مایع ‌ظرفشویی با رایحه پرتقال 4 لیتری بس‌",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121739.jpg",
+      "reference_price": null,
+      "weight_grams": 4,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 4000,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "بس",
+        "original_name": "مایع ‌ظرفشویی با رایحه پرتقال 4 لیتری بس‌",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "4 لیتری پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.044Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+        "name": "بس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:19.244Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "0d62ac33-ebd2-45ee-9b3a-85c44f2d08a4",
+      "barcode": "6261124001159",
+      "name_fa": "مایع ظرفشویی توت فرنگی 1000 میلی‌لیتری بس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1525852000.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 1000,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "بس",
+        "original_name": "مایع ظرفشویی توت فرنگی 1000 میلی‌لیتری بس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "1000 میلی‌لیتری توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.538Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+        "name": "بس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:19.244Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "7ba6ca5e-2ee6-496c-8c0a-0a8cd4554949",
+      "barcode": "6261124011714",
+      "name_fa": "مایع ‌ظرفشویی با رایحه سیب 4 لیتری بس‌",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121796.jpg",
+      "reference_price": null,
+      "weight_grams": 4,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 4000,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "بس",
+        "original_name": "مایع ‌ظرفشویی با رایحه سیب 4 لیتری بس‌",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "سیب"
+          }
+        ],
+        "suggested_variant_name": "4 لیتری سیب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.543Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+        "name": "بس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:19.244Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "91c76524-668d-4207-8cb5-a8d7a8d83412",
+      "barcode": "6261643604930",
+      "name_fa": "مایع ظرفشویی 1000 گرمی گلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1532146914.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "گلی",
+        "original_name": "مایع ظرفشویی 1000 گرمی گلی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1000 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.874Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "52df86db-262b-43c2-8b5d-c0fb0e7b5bde",
+        "name": "گلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:18.074Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "66f830d8-9c8d-441b-82a6-b6bbdd1b6661",
+      "barcode": "6262309500566",
+      "name_fa": "مایع ظرفشویی الماس 750 میلی‌لیتری ایکومویست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1516609314.jpg",
+      "reference_price": null,
+      "weight_grams": 1,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی الماس",
+        "pack_count": null,
+        "parsed_brand": "ایکومویست",
+        "original_name": "مایع ظرفشویی الماس 750 میلی‌لیتری ایکومویست",
+        "parsed_attributes": [],
+        "suggested_variant_name": "750 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.929Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+        "name": "ایکومویست",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:16:41.923Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "14be0d35-d9bf-4279-b2f4-a006a4323e1e",
+      "barcode": "6262309500689",
+      "name_fa": "مایع ظرفشویی قرمز 800 گرمی ایکومویست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1562303806.jpg",
+      "reference_price": null,
+      "weight_grams": 800,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "ایکومویست",
+        "original_name": "مایع ظرفشویی قرمز 800 گرمی ایکومویست",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "قرمز"
+          }
+        ],
+        "suggested_variant_name": "800 گرمی قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.884Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+        "name": "ایکومویست",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:16:41.923Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "89df91e7-a2e7-4073-812b-853561559d49",
+      "barcode": "6262309500696",
+      "name_fa": "مایع ظرفشویی آبی 750 میلی‌لیتری ایکومویست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1547533431.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 750,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "ایکومویست",
+        "original_name": "مایع ظرفشویی آبی 750 میلی‌لیتری ایکومویست",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "آبی"
+          }
+        ],
+        "suggested_variant_name": "750 میلی‌لیتری آبی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.887Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+        "name": "ایکومویست",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:16:41.923Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "5a3e83f6-81c4-44cc-b0c7-8b8c6f76b919",
+      "barcode": "6262309500740",
+      "name_fa": "مایع ظرفشویی سبز 750 میلی لیتری ایکومویست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1547533464.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 750,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "ایکومویست",
+        "original_name": "مایع ظرفشویی سبز 750 میلی لیتری ایکومویست",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سبز"
+          }
+        ],
+        "suggested_variant_name": "750 میلی لیتری سبز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.885Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+        "name": "ایکومویست",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:16:41.923Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "62b0e050-a84d-4acd-a337-9aac2eb0541a",
+      "barcode": "6262309500771",
+      "name_fa": "مایع ظرفشویی سبز 3750 میلی‌لیتری ایکومویست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1473077898.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 3750,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "ایکومویست",
+        "original_name": "مایع ظرفشویی سبز 3750 میلی‌لیتری ایکومویست",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سبز"
+          }
+        ],
+        "suggested_variant_name": "3750 میلی‌لیتری سبز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.054Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "897adc0d-6cf0-42d3-b2d8-6e6063327d27",
+        "name": "ایکومویست",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:16:41.923Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "1f2fe43f-6018-4052-a9ca-8ebe1a1439da",
+      "barcode": "6262825800522",
+      "name_fa": "مایع ظرفشویی زرد 3750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121848.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی زرد 3750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "زرد"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی زرد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.553Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "069a25d1-92a9-4742-8cc9-2f1915c51eae",
+      "barcode": "6262825800539",
+      "name_fa": "مایع ظرفشویی سبز 3750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121898.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی سبز 3750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سبز"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی سبز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.554Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "3d98091e-1701-4074-a4f3-0571c3914bb9",
+      "barcode": "6262825800546",
+      "name_fa": "مایع ظرفشویی بنفش 3750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121938.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی بنفش 3750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بنفش"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی بنفش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.554Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "942fb4f4-8ca0-43a3-b037-dbe1e75ca940",
+      "barcode": "6262825800553",
+      "name_fa": "مایع ظرفشویی بنفش 1000 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484121972.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی بنفش 1000 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بنفش"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی بنفش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.555Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "8cf65729-3cff-4503-8f64-a92cac14c3d1",
+      "barcode": "6262825800560",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 1000 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1485601798.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 1000 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.556Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "21824e9d-a8af-498b-ba00-8438c5f894f0",
+      "barcode": "6262825800591",
+      "name_fa": "مایع ظرفشویی با رایحه توت فرنگی 2000 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484122041.jpg",
+      "reference_price": null,
+      "weight_grams": 2000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی با رایحه توت فرنگی 2000 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "2000 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.200Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "062cd60d-3083-4aca-912c-8d63f99393cb",
+      "barcode": "6262825800799",
+      "name_fa": "مایع ظرفشویی بنفش 750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484122072.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی بنفش 750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بنفش"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی بنفش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.560Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "95cce7c1-11f3-44b5-95b9-3135a748fd1f",
+      "barcode": "6262825800805",
+      "name_fa": "مایع ظرفشویی با رایحه لیمو 750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484122098.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی با رایحه لیمو 750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.560Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "3a30c197-7dca-4e5f-ba36-9794ec93a9d1",
+      "barcode": "6262825802670",
+      "name_fa": "مایع ظرفشویی با رایحه توت فرنگی 3750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484122162.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی با رایحه توت فرنگی 3750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.564Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "3a90d93f-b19f-4b93-b8cb-387de0dc6e84",
+      "barcode": "6262825804056",
+      "name_fa": "مایع ظرفشویی بنفش 750 گرمی اکتیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1562304102.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "اکتیو",
+        "original_name": "مایع ظرفشویی بنفش 750 گرمی اکتیو",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "بنفش"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی بنفش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.864Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fabbcbad-2cb9-4686-b613-161e3b1e1726",
+        "name": "اکتیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:15.407Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "05c897e8-c051-42fa-a86f-a42995ea02b7",
+      "barcode": "6263381200214",
+      "name_fa": "مایع ظرفشویی 1000 گرمی آلوکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1f4ec54e-d59c-4cfd-914f-43a0090804c4",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1534223584.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "آلوکس",
+        "original_name": "مایع ظرفشویی 1000 گرمی آلوکس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1000 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.904Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1f4ec54e-d59c-4cfd-914f-43a0090804c4",
+        "name": "آلوکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:13:46.007Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6d4195f4-da6d-4714-a0e1-4f1d3aac08c9",
+      "barcode": "6263381200221",
+      "name_fa": "مایع ظرفشویی انگور 1000 گرمی آلوکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1f4ec54e-d59c-4cfd-914f-43a0090804c4",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1562304189.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "آلوکس",
+        "original_name": "مایع ظرفشویی انگور 1000 گرمی آلوکس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "انگور"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی انگور"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.905Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1f4ec54e-d59c-4cfd-914f-43a0090804c4",
+        "name": "آلوکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:13:46.007Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "1c40eca8-306f-497f-8f3f-c1828593070c",
+      "barcode": "6263381200252",
+      "name_fa": "مایع ظرفشویی انگور 3750 گرمی آلوکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "1f4ec54e-d59c-4cfd-914f-43a0090804c4",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1534223662.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی انگور",
+        "pack_count": null,
+        "parsed_brand": "آلوکس",
+        "original_name": "مایع ظرفشویی انگور 3750 گرمی آلوکس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3750 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.058Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "1f4ec54e-d59c-4cfd-914f-43a0090804c4",
+        "name": "آلوکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:13:46.007Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "841571a2-9e73-4dc8-a77f-06952bf7552b",
+      "barcode": "6263414002471",
+      "name_fa": "مایع ظرفشویی رایحه لیمو 1000 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1551275982.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی رایحه لیمو 1000 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.134Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "10c05fc5-0146-4f81-8544-21930ecbbc8c",
+      "barcode": "6263414002761",
+      "name_fa": "مایع ظرفشویی با اسانس لیمو ترش و سرکه 1000 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1575110041.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی با اسانس لیمو ترش و سرکه 1000 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیمو ترش و سرکه"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی لیمو ترش و سرکه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.837Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6877bddc-c7cc-4ce2-96cd-0e0e2853e792",
+      "barcode": "6263414002778",
+      "name_fa": "مایع ظرفشویی لیموترش و سرکه 3750 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1582112646.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی لیموترش و سرکه 3750 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیموترش و سرکه"
+          }
+        ],
+        "suggested_variant_name": "3750 گرمی لیموترش و سرکه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.227Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "26c55ead-79db-4c8f-b6a4-fb4f9668344a",
+      "barcode": "6263414002808",
+      "name_fa": "مایع ظرفشویی با اسانس لیمو و جوش شیرین 1000 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1575110069.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی با اسانس لیمو و جوش شیرین 1000 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "اسانس",
+            "value": "لیمو"
+          },
+          {
+            "name": "ترکیب",
+            "value": "جوش شیرین"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی با اسانس لیمو و جوش شیرین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.838Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "56ddbf79-ec7d-4c58-a6b0-c74b87aee70c",
+      "barcode": "6263414002976",
+      "name_fa": "مایع ظرفشویی 2 عددی سرکه و جوش شیرین  1000 گرمی تاژ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1582112835.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": 2,
+        "parsed_brand": "تاژ",
+        "original_name": "مایع ظرفشویی 2 عددی سرکه و جوش شیرین  1000 گرمی تاژ",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "سرکه و جوش شیرین"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی سرکه و جوش شیرین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.191Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c334beeb-cc4e-4f47-a9c5-f1a96ab42216",
+        "name": "تاژ",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:26.503Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "2abf1657-bb8c-4626-8053-9e17a5056669",
+      "barcode": "6263430600347",
+      "name_fa": "مایع ظرفشویی با عملکرد سه گانه 1000 گرمی دورتو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1547637994.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "دورتو",
+        "original_name": "مایع ظرفشویی با عملکرد سه گانه 1000 گرمی دورتو",
+        "parsed_attributes": [
+          {
+            "name": "عملکرد",
+            "value": "سه گانه"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی سه گانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.932Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+        "name": "دورتو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:10:27.571Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "92208857-fa24-49ce-8594-8469b8caaf6b",
+      "barcode": "6263430600415",
+      "name_fa": "مایع ظرفشویی با عملکرد سه گانه رایحه بری 1000 گرمی دورتو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1591337410.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "دورتو",
+        "original_name": "مایع ظرفشویی با عملکرد سه گانه رایحه بری 1000 گرمی دورتو",
+        "parsed_attributes": [
+          {
+            "name": "عملکرد",
+            "value": "سه گانه"
+          },
+          {
+            "name": "رایحه",
+            "value": "بری"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی سه گانه بری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.934Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+        "name": "دورتو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:10:27.571Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6d185748-69e2-4a8b-bf39-afce7e29ac49",
+      "barcode": "6263430600422",
+      "name_fa": "مایع ظرفشویی 3750 گرمی دورتو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1547533953.jpg",
+      "reference_price": null,
+      "weight_grams": 3750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "دورتو",
+        "original_name": "مایع ظرفشویی 3750 گرمی دورتو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3750 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.259Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+        "name": "دورتو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:10:27.571Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "18a993dd-13fe-419e-9140-15d652f5af5d",
+      "barcode": "6263430601962",
+      "name_fa": "مایع ظرفشویی غلیظ با عملکرد سه گانه رایحه لیمو 750 گرمی دورتو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1591337444.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "دورتو",
+        "original_name": "مایع ظرفشویی غلیظ با عملکرد سه گانه رایحه لیمو 750 گرمی دورتو",
+        "parsed_attributes": [
+          {
+            "name": "عملکرد",
+            "value": "سه گانه"
+          },
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          },
+          {
+            "name": "غلظت",
+            "value": "غلیظ"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی غلیظ با عملکرد سه گانه رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.915Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+        "name": "دورتو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:10:27.571Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "6d9d1b56-195b-461d-85af-b624a5606acd",
+      "barcode": "6263430602006",
+      "name_fa": "مایع ظرفشویی غلیظ با عملکرد سه گانه 750 گرمی دورتو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1547533971.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع ظرفشویی",
+        "pack_count": null,
+        "parsed_brand": "دورتو",
+        "original_name": "مایع ظرفشویی غلیظ با عملکرد سه گانه 750 گرمی دورتو",
+        "parsed_attributes": [
+          {
+            "name": "عملکرد",
+            "value": "سه گانه"
+          },
+          {
+            "name": "غلظت",
+            "value": "غلیظ"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی غلیظ سه گانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.912Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5de0f7a4-9e43-4a68-85e1-f1df505d0ddd",
+        "name": "دورتو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:10:27.571Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "57b826a5-aa0d-474c-aaa2-fd5914289a92",
+      "barcode": "6295120024669",
+      "name_fa": "مایع براق کننده 400 میلی‌لیتری فینیش",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bda63493-403d-423d-87db-a488d03eb5b3",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484122287.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 400,
+        "clean_name": "مایع براق کننده",
+        "pack_count": null,
+        "parsed_brand": "فینیش",
+        "original_name": "مایع براق کننده 400 میلی‌لیتری فینیش",
+        "parsed_attributes": [],
+        "suggested_variant_name": "400 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.580Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bda63493-403d-423d-87db-a488d03eb5b3",
+        "name": "فینیش",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:05.155Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    },
+    {
+      "id": "2ad617df-49d1-437b-b2a7-34b6489bedfa",
+      "barcode": "6295120024676",
+      "name_fa": "مایع براق کننده با رایحه لیمو 400 میلی‌لیتری فینیش",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bda63493-403d-423d-87db-a488d03eb5b3",
+      "category_id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%D8%B3%D8%AA%20%D9%88%20%D8%B4%D9%88/Pic/1484122323.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 400,
+        "clean_name": "مایع براق کننده",
+        "pack_count": null,
+        "parsed_brand": "فینیش",
+        "original_name": "مایع براق کننده با رایحه لیمو 400 میلی‌لیتری فینیش",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "400 میلی‌لیتری با رایحه لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.581Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bda63493-403d-423d-87db-a488d03eb5b3",
+        "name": "فینیش",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:05.155Z"
+      },
+      "category": {
+        "id": "810827b7-0ee3-4f64-a957-ab5b117eb88c",
+        "name": "مایع ظرفشویی",
+        "icon_url": null,
+        "parent_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "created_at": "2025-12-29T09:34:40.827Z"
+      }
+    }
+  ],
+  "total": 153
+}

@@ -1,0 +1,3544 @@
+{
+  "items": [
+    {
+      "id": "26802b52-f7a8-4436-8b2b-64674d0b44dc",
+      "barcode": "6260142530214",
+      "name_fa": "کشک 680 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260142530214(1).jpg",
+      "reference_price": null,
+      "weight_grams": 680,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک 680 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "680 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.160Z",
+      "updated_at": "2025-12-29T12:49:38.602Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "cbd6571e-f120-4cb4-ab43-bea5cb46f89f",
+      "barcode": "6260142530436",
+      "name_fa": "کشک 250 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472723612.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک 250 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.613Z",
+      "updated_at": "2025-12-29T13:00:53.120Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "65582d70-80e6-4e6d-8065-3144c7f706c8",
+      "barcode": "6260007435135",
+      "name_fa": "کشک 250 گرمی پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472724015.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "کشک 250 گرمی پگاه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.604Z",
+      "updated_at": "2025-12-29T13:01:02.578Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "dcd00c9d-73eb-46cf-a365-333372a9e6fe",
+      "barcode": "6260161513564",
+      "name_fa": "کشک پاستوریزه 250 گرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530622806.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "کشک پاستوریزه 250 گرمی کاله",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.620Z",
+      "updated_at": "2025-12-29T13:00:37.869Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "1d0cbd82-92e8-457d-b2a3-278d3d674b59",
+      "barcode": "6266147700102",
+      "name_fa": "کشک پاستوریزه 250 گرمی کوه پناه تفرش",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dd8c0023-40e6-48be-b9ab-91cb16576660",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530625316.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "کوه پناه تفرش",
+        "original_name": "کشک پاستوریزه 250 گرمی کوه پناه تفرش",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.631Z",
+      "updated_at": "2025-12-29T13:00:24.512Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dd8c0023-40e6-48be-b9ab-91cb16576660",
+        "name": "کوه پناه تفرش",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:00:24.510Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "3b66ef32-f876-44f3-a2bc-1f17635e9cde",
+      "barcode": "6260653700687",
+      "name_fa": "کشک 380 گرمی پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472904029.jpg",
+      "reference_price": null,
+      "weight_grams": 380,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "کشک 380 گرمی پگاه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "380 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.639Z",
+      "updated_at": "2025-12-29T13:00:14.504Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "6ee65c31-4f9e-41ba-94bc-83139db6b8a2",
+      "barcode": "6260142540305",
+      "name_fa": "کشک پاستوریزه 230 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530622773.jpg",
+      "reference_price": null,
+      "weight_grams": 230,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک پاستوریزه 230 گرمی سمیه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "230 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.710Z",
+      "updated_at": "2025-12-29T12:58:54.002Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "0efd6725-05f8-4833-9c42-9ddd851df75d",
+      "barcode": "6260142502044",
+      "name_fa": "کشک سیر و نعناع 230 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1590310288.jpg",
+      "reference_price": null,
+      "weight_grams": 230,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک سیر و نعناع",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک سیر و نعناع 230 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "230 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.699Z",
+      "updated_at": "2025-12-29T12:59:06.320Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "5474cfff-2054-475e-9041-8300767d0217",
+      "barcode": "6260007435159",
+      "name_fa": "کشک 500 گرمی پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472904707.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "کشک 500 گرمی پگاه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.702Z",
+      "updated_at": "2025-12-29T12:59:02.520Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "4cd25845-a503-4b22-b5dc-7f2d94a4999c",
+      "barcode": "6260161518637",
+      "name_fa": "کشک پاستوریزه 450 گرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1531548750.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "کشک پاستوریزه 450 گرمی کاله",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "450 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.735Z",
+      "updated_at": "2025-12-29T12:58:21.760Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "65a786b2-f435-4d73-876f-5021c0dae7b1",
+      "barcode": "6260142502006",
+      "name_fa": "کشک + ویتامین د سه 230 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1589982427.jpg",
+      "reference_price": null,
+      "weight_grams": 230,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک + ویتامین د سه 230 گرمی سمیه",
+        "parsed_attributes": [
+          {
+            "name": "افزودنی",
+            "value": "ویتامین د سه"
+          }
+        ],
+        "suggested_variant_name": "230 گرمی ویتامین د سه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.736Z",
+      "updated_at": "2025-12-29T12:58:20.445Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "e9cb0795-aecf-4be6-b1a9-fb3e7c0121bb",
+      "barcode": "6260142502013",
+      "name_fa": "کشک پروبیوتیک 230 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1590310247.jpg",
+      "reference_price": null,
+      "weight_grams": 230,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک پروبیوتیک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک پروبیوتیک 230 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "230 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.737Z",
+      "updated_at": "2025-12-29T12:58:19.243Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "098950c2-887c-4c56-89d0-e609d6c3462c",
+      "barcode": "6260142500286",
+      "name_fa": "کشک 450 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472913311.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک 450 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "450 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.780Z",
+      "updated_at": "2025-12-29T12:57:27.932Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "319d6aac-0829-42ac-8ea7-52526d0a5692",
+      "barcode": "6260161517418",
+      "name_fa": "کشک پاستوریزه 500 گرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480856631.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "کشک پاستوریزه 500 گرمی کاله",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.786Z",
+      "updated_at": "2025-12-29T12:57:20.653Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "3069ea5c-e419-466c-ae60-67dbce1c0d94",
+      "barcode": "6260142501986",
+      "name_fa": "کشک پاستوریزه 470 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530622695.jpg",
+      "reference_price": null,
+      "weight_grams": 470,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک پاستوریزه 470 گرمی سمیه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "470 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.814Z",
+      "updated_at": "2025-12-29T12:56:49.811Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "9410a012-cfe6-4a5b-9c11-d5eb467fd9f1",
+      "barcode": "6260142501993",
+      "name_fa": "کشک پاستوریزه 650 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530622733.jpg",
+      "reference_price": null,
+      "weight_grams": 650,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک پاستوریزه",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک پاستوریزه 650 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "650 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.829Z",
+      "updated_at": "2025-12-29T12:56:31.743Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "dd47ef20-37af-4a34-98db-952bfd06815f",
+      "barcode": "6262685800373",
+      "name_fa": "کشک مایع پاستوریزه 200 گرمی کاساندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530625236.jpg",
+      "reference_price": null,
+      "weight_grams": 200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع",
+        "pack_count": null,
+        "parsed_brand": "کاساندا",
+        "original_name": "کشک مایع پاستوریزه 200 گرمی کاساندا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "200 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.998Z",
+      "updated_at": "2025-12-29T12:53:06.618Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+        "name": "کاساندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:20.303Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "12308d10-0095-4d3e-b2ec-b155bea2f31a",
+      "barcode": "6262685800366",
+      "name_fa": "کشک مایع پاستوریزه 700 گرمی کاساندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530625200.jpg",
+      "reference_price": null,
+      "weight_grams": 700,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع پاستوریزه",
+        "pack_count": null,
+        "parsed_brand": "کاساندا",
+        "original_name": "کشک مایع پاستوریزه 700 گرمی کاساندا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "700 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.086Z",
+      "updated_at": "2025-12-29T12:51:11.222Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+        "name": "کاساندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:20.303Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "8e674ed9-f5e5-4984-ba0b-9f8be21dcab5",
+      "barcode": "6260142504024",
+      "name_fa": "کشک 500 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260142504024(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک 500 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.159Z",
+      "updated_at": "2025-12-29T12:49:39.725Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "6535bfe9-587f-40bc-a202-781b752f560b",
+      "barcode": "6260272815014",
+      "name_fa": "کشک پاستوريزه 230 گرمی دامداران",
+      "name_en": null,
+      "description": null,
+      "brand_id": "030a809e-6843-40fb-ae4d-890b3124736f",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1489576847.jpg",
+      "reference_price": null,
+      "weight_grams": 230,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "دامداران",
+        "original_name": "کشک پاستوريزه 230 گرمی دامداران",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوريزه"
+          }
+        ],
+        "suggested_variant_name": "230 گرمی پاستوريزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.158Z",
+      "updated_at": "2025-12-29T12:49:42.189Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "030a809e-6843-40fb-ae4d-890b3124736f",
+        "name": "دامداران",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:46:01.966Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "94d34cf3-2962-4739-b75e-6f8517e02364",
+      "barcode": "6260142530207",
+      "name_fa": "کشک 240 گرمی سمیه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260142530207(1).jpg",
+      "reference_price": null,
+      "weight_grams": 240,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "سمیه",
+        "original_name": "کشک 240 گرمی سمیه",
+        "parsed_attributes": [],
+        "suggested_variant_name": "240 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.158Z",
+      "updated_at": "2025-12-29T12:49:41.023Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fa83e433-ff08-443c-bd54-26d17af9ada8",
+        "name": "سمیه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:38:36.956Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "083f97fd-ff6a-44d2-a178-9b34a7663a48",
+      "barcode": "6260134528038",
+      "name_fa": "كشک 250 گرمی پاکبان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472723406.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک",
+        "pack_count": null,
+        "parsed_brand": "پاکبان",
+        "original_name": "كشک 250 گرمی پاکبان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.254Z",
+      "updated_at": "2025-12-29T12:47:31.749Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eaf86a79-5e09-4f62-b907-aaa18bc09129",
+        "name": "پاکبان",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:02.143Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "1116e48f-d647-42db-a86c-0582c590e057",
+      "barcode": "6260441000937",
+      "name_fa": "کشک پاستوریزه 480 گرمی دهکده‌نصر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480857318.jpg",
+      "reference_price": null,
+      "weight_grams": 480,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک پاستوریزه",
+        "pack_count": null,
+        "parsed_brand": "دهکده‌نصر",
+        "original_name": "کشک پاستوریزه 480 گرمی دهکده‌نصر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "480 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.321Z",
+      "updated_at": "2025-12-29T12:45:58.681Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+        "name": "دهکده‌نصر",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:54.924Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "2bc2339d-0a12-48ee-bb72-fc784cc0145d",
+      "barcode": "6260441001002",
+      "name_fa": "کشک مایع پاستوریزه 350 گرمی دهکده‌نصر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480857360.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع پاستوریزه",
+        "pack_count": null,
+        "parsed_brand": "دهکده‌نصر",
+        "original_name": "کشک مایع پاستوریزه 350 گرمی دهکده‌نصر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "350 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.322Z",
+      "updated_at": "2025-12-29T12:45:57.539Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+        "name": "دهکده‌نصر",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:54.924Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "91ded5b2-4cc4-4539-9258-d42b244ac163",
+      "barcode": "6260441001033",
+      "name_fa": "کشک مایع پاستوریزه 500 گرمی دهکده‌نصر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480857599.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع",
+        "pack_count": null,
+        "parsed_brand": "دهکده‌نصر",
+        "original_name": "کشک مایع پاستوریزه 500 گرمی دهکده‌نصر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.323Z",
+      "updated_at": "2025-12-29T12:45:56.092Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+        "name": "دهکده‌نصر",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:54.924Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "6d302148-9d63-4d2f-9048-043f232cd252",
+      "barcode": "6260441001040",
+      "name_fa": "کشک مایع پاستوریزه 1 کیلویی دهکده‌نصر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1480857627.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع پاستوریزه",
+        "pack_count": null,
+        "parsed_brand": "دهکده‌نصر",
+        "original_name": "کشک مایع پاستوریزه 1 کیلویی دهکده‌نصر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.324Z",
+      "updated_at": "2025-12-29T12:45:54.926Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b03c6c12-f9e2-4fe0-ae1a-79ba4478393b",
+        "name": "دهکده‌نصر",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:45:54.924Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "fb2fb9df-6802-449f-9bbe-742a83c27f47",
+      "barcode": "6262685800298",
+      "name_fa": "کشک مایع پاستوریزه 500 گرمی کاساندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1574845486.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع پاستوریزه",
+        "pack_count": null,
+        "parsed_brand": "کاساندا",
+        "original_name": "کشک مایع پاستوریزه 500 گرمی کاساندا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.395Z",
+      "updated_at": "2025-12-29T12:44:24.363Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+        "name": "کاساندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:20.303Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "4a9573d7-687a-4dd4-93c9-b432275f2a3e",
+      "barcode": "6262685800335",
+      "name_fa": "کشک مایع کیسه‌ای 500 گرمی کاساندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530625139.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع",
+        "pack_count": null,
+        "parsed_brand": "کاساندا",
+        "original_name": "کشک مایع کیسه‌ای 500 گرمی کاساندا",
+        "parsed_attributes": [
+          {
+            "name": "نوع بسته‌بندی",
+            "value": "کیسه‌ای"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی کیسه‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.396Z",
+      "updated_at": "2025-12-29T12:44:22.930Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+        "name": "کاساندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:20.303Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "9ef2a731-56d0-40a0-b2ef-857408615c1b",
+      "barcode": "6262685800342",
+      "name_fa": "کشک مایع کیسه‌ای 350 گرمی کاساندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530625159.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع",
+        "pack_count": null,
+        "parsed_brand": "کاساندا",
+        "original_name": "کشک مایع کیسه‌ای 350 گرمی کاساندا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "کیسه‌ای"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی کیسه‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.397Z",
+      "updated_at": "2025-12-29T12:44:21.712Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+        "name": "کاساندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:20.303Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "a3d6c664-b137-42dc-af47-16c73952e64c",
+      "barcode": "6262685800359",
+      "name_fa": "کشک مایع کیسه‌ای 1000 گرمی کاساندا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530625175.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع",
+        "pack_count": null,
+        "parsed_brand": "کاساندا",
+        "original_name": "کشک مایع کیسه‌ای 1000 گرمی کاساندا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "کیسه‌ای"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی کیسه‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.398Z",
+      "updated_at": "2025-12-29T12:44:20.305Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4507f98d-c82e-412e-aa48-f850bef103c7",
+        "name": "کاساندا",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:44:20.303Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "5a046762-c23d-4532-b388-1e22e7247725",
+      "barcode": "6260250707218",
+      "name_fa": "کشک مایع پاستوریزه 700 گرمی رضوی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e108905e-e29f-4115-8d98-05e5304ed661",
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1531549805.jpg",
+      "reference_price": null,
+      "weight_grams": 700,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کشک مایع",
+        "pack_count": null,
+        "parsed_brand": "رضوی",
+        "original_name": "کشک مایع پاستوریزه 700 گرمی رضوی",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پاستوریزه"
+          }
+        ],
+        "suggested_variant_name": "700 گرمی پاستوریزه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.403Z",
+      "updated_at": "2025-12-29T12:44:12.604Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e108905e-e29f-4115-8d98-05e5304ed661",
+        "name": "رضوی",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:43:27.084Z"
+      },
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "d8432c90-2650-4e14-bda3-ba39ca17902e",
+      "barcode": "6260007435104",
+      "name_fa": "پگاه .کشک لیوانی 500گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260007435104",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7063,
+          "original_name": "پگاه .کشک ليواني 500گرم",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260007435104"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "61a8c65d-e0dd-50f5-a62d-4d76991265f3",
+      "barcode": "6260184294051",
+      "name_fa": "برتر کشک شیشه ای 250 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260184294051.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "57d2b033-fcab-50e0-b663-d684044b7d17",
+      "barcode": "6260720200379",
+      "name_fa": "پگاه کشک 500 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "7ca442be-fa79-45ab-a87d-d41aa01648c9",
+      "barcode": "6263005300306",
+      "name_fa": "کشک چیپسی شفا 100 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263005300306",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22354,
+          "original_name": "کشک چيپسي شفا 100 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263005300306"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "a1f0028e-c9b7-4958-908e-0e14e3688873",
+      "barcode": "6260142503362",
+      "name_fa": "کشک خشک تنقلاتی چهار طعم سمیه (120 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260142503362",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22356,
+          "original_name": "کشک خشک تنقلاتی چهار طعم سمیه (120 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260142503362"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "6755117c-10e7-4607-9ff4-7881cfd31b1c",
+      "barcode": "6260272815533",
+      "name_fa": "کشک سنتی شیشه ای دامداران (240 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260272815533",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22363,
+          "original_name": "کشک سنتی شیشه ای دامداران (240 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260272815533"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "e3f7e349-37be-4fd6-9c13-233c96acb914",
+      "barcode": "6260272815526",
+      "name_fa": "کشک شیشه ای سنتی دامداران (680 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260272815526",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22365,
+          "original_name": "کشک شیشه ای سنتی دامداران (680 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260272815526"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "1c10780a-1633-4c72-ade6-24ebbfd9fa02",
+      "barcode": "6260129401216",
+      "name_fa": "کشک شیشه ای سیر و نعنا کامبیز (235 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260129401216",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22366,
+          "original_name": "کشک شیشه ای سیر و نعنا کامبیز (235 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260129401216"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "ad1d3345-a48a-4b33-bb61-28a3c81160a8",
+      "barcode": "6260129401575",
+      "name_fa": "کشک کیسه ای کامبیز (460 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260129401575",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22368,
+          "original_name": "کشک کیسه ای کامبیز (460 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260129401575"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "3e0ada20-ae12-4bf9-a8bd-011c08a860ce",
+      "barcode": "6260453500197",
+      "name_fa": "کشک لیوانی پاک (500 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260453500197",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22369,
+          "original_name": "کشک لیوانی پاک (500 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260453500197"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "a185005b-320e-49fd-ab7f-5c820a0dfedb",
+      "barcode": "6260142501016",
+      "name_fa": "کشک مایع سمیه 460 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260142501016",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22371,
+          "original_name": "کشک مايع سميه 460 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260142501016"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "8f3648a3-2ad2-4e80-a6da-b1a6ba799303",
+      "barcode": "6260176823399",
+      "name_fa": "کشک مایع میهن 240 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176823399",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22372,
+          "original_name": "کشک مايع ميهن 240 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176823399"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "c7d96070-40d8-4e00-bdc9-eef11c2839fc",
+      "barcode": "6260176810528",
+      "name_fa": "کشک مایع میهن 400 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176810528",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22373,
+          "original_name": "کشک مايع ميهن 400 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176810528"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "f95bc8e0-1ee1-4474-b965-fa471d5fcf1b",
+      "barcode": "6260037301356",
+      "name_fa": "کشک مایع بیژن 500 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260037301356",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22374,
+          "original_name": "کشک مایع بیژن 500 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260037301356"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "0687fc18-e49c-43ad-910e-1b1cbd1750d1",
+      "barcode": "6260453500012",
+      "name_fa": "کشک مایع پاک 250 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260453500012",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22375,
+          "original_name": "کشک مایع پاک 250 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260453500012"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "3365b534-41e1-487c-84d0-6424ca8f597a",
+      "barcode": "6260441000982",
+      "name_fa": "کشک مایع پاکتی دهکده نصر (250 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260441000982",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22376,
+          "original_name": "کشک مایع پاکتی دهکده نصر (250 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260441000982"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "d6236ab1-e87b-4eba-8cf4-3b441b11fd76",
+      "barcode": "6260007435142",
+      "name_fa": "کشک مایع پگاه 250 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260007435142",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22378,
+          "original_name": "کشک مایع پگاه 250 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260007435142"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "a637eb7e-96c3-4dca-b5ea-7943862299cf",
+      "barcode": "6260007465675",
+      "name_fa": "کشک مایع پگاه 380 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260007465675",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22379,
+          "original_name": "کشک مایع پگاه 380 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260007465675"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "9d6ee6cd-62a6-4272-9be8-6a7b702c38a4",
+      "barcode": "6260142540381",
+      "name_fa": "کشک مایع سمیه 200 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260142540381",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22384,
+          "original_name": "کشک مایع سمیه 200 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260142540381"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "23fc135a-908d-4fa0-9739-6ae780779d62",
+      "barcode": "6260441000944",
+      "name_fa": "کشک مایع شیشه ای دهکده نصر (670 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260441000944",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22391,
+          "original_name": "کشک مایع شیشه ای دهکده نصر (670 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260441000944"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "ca343b69-fe0a-49a0-932e-141a625b5c6f",
+      "barcode": "6260129410010",
+      "name_fa": "کشک مایع کامبیز 230 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260129410010",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22395,
+          "original_name": "کشک مایع کامبیز 230 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260129410010"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "cf9e608a-a489-4dff-88f9-9aa553842164",
+      "barcode": "6260129410027",
+      "name_fa": "کشک مایع کامبیز 500 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260129410027",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22396,
+          "original_name": "کشک مایع کامبیز 500 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260129410027"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "03953aac-1cc2-4bb1-814f-f1cd1984fc9e",
+      "barcode": "6260129410034",
+      "name_fa": "کشک مایع کامبیز 680 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260129410034",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22397,
+          "original_name": "کشک مایع کامبیز 680 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260129410034"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "2a5ca499-0059-42fd-94f8-5a96ed35aa22",
+      "barcode": "6260661000441",
+      "name_fa": "کشک مایع هراز 250 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260661000441",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22398,
+          "original_name": "کشک مایع هراز 250 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260661000441"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "4246803c-9a45-4e2e-a5fc-520533ac7c1c",
+      "barcode": "6260074030011",
+      "name_fa": "کشک رامک 250 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260074030011.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260074030011",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22362,
+          "original_name": "کشک رامک 250 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260074030011"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "f2873107-f970-458c-8640-3dcc5436a69a",
+      "barcode": "6260074030035",
+      "name_fa": "کشک پاستوریزه رامک 500 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/16-1.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260074030035",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22353,
+          "original_name": "کشک پاستوریزه رامک 500 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260074030035"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    },
+    {
+      "id": "7009fc20-8bbf-4a1b-aa57-3027e05ab36a",
+      "barcode": "6260661006245",
+      "name_fa": "کشک شیشه ای هراز (680 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260661006245.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260661006245",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001552",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "کشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22367,
+          "original_name": "کشک شیشه ای هراز (680 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260661006245"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "63aee4ee-9a6a-4777-a517-2b08e07c59b3",
+        "name": "کشک",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.604Z"
+      }
+    }
+  ],
+  "total": 58
+}

@@ -1,0 +1,5214 @@
+{
+  "items": [
+    {
+      "id": "752e83cf-347c-411b-ba89-f14bfffb2a12",
+      "barcode": "6260360003231",
+      "name_fa": "آدامس با طعم دارچین 24 گرمی فست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1526887542.jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "فست",
+        "original_name": "آدامس با طعم دارچین 24 گرمی فست",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی با طعم دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.719Z",
+      "updated_at": "2025-12-29T15:46:00.976Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+        "name": "فست",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:44.008Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "c96172a6-4192-4643-a545-ac8f3dedfa88",
+      "barcode": "6260360003248",
+      "name_fa": "آدامس با طعم نعنا و پونه 24 گرمی فست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1526887578.jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "فست",
+        "original_name": "آدامس با طعم نعنا و پونه 24 گرمی فست",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا و پونه"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی نعنا و پونه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.720Z",
+      "updated_at": "2025-12-29T15:45:59.769Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+        "name": "فست",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:44.008Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "8babd0da-0d60-4e63-b782-6bc0f88217aa",
+      "barcode": "6260360003224",
+      "name_fa": "آدامس با طعم توت فرنگی و موز 24 گرمی فست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1528022072.jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "فست",
+        "original_name": "آدامس با طعم توت فرنگی و موز 24 گرمی فست",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی و موز"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی توت فرنگی و موز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.722Z",
+      "updated_at": "2025-12-29T15:45:58.330Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+        "name": "فست",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:44.008Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "671e02a9-70ac-4e5c-bf88-66e095a5e84c",
+      "barcode": "6264961900760",
+      "name_fa": "آدامس مینی استیک بدون شکر با طعم توت‌ فرنگی 7 عددی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6264961900760(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس مینی استیک",
+        "pack_count": 7,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس مینی استیک بدون شکر با طعم توت‌ فرنگی 7 عددی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "توت‌ فرنگی"
+          }
+        ],
+        "suggested_variant_name": "7 عددی بدون شکر توت‌ فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.766Z",
+      "updated_at": "2025-12-29T15:45:06.255Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "a32f21e7-066f-4c5a-b7c7-a68ce3409886",
+      "barcode": "6264961900791",
+      "name_fa": "آدامس مینی استیک بدون شکر با طعم استوایی 7 عددی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6264961900791(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس مینی استیک",
+        "pack_count": 7,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس مینی استیک بدون شکر با طعم استوایی 7 عددی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "استوایی"
+          },
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          }
+        ],
+        "suggested_variant_name": "7 عددی استوایی بدون شکر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.767Z",
+      "updated_at": "2025-12-29T15:45:04.485Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "3934c7f8-5529-4af2-a1e7-17bdf7f1db36",
+      "barcode": "6264961901026",
+      "name_fa": "آدامس مینی استیک بدون شکر با طعم موهیتو بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762060.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس مینی استیک",
+        "pack_count": null,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس مینی استیک بدون شکر با طعم موهیتو بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "موهیتو"
+          }
+        ],
+        "suggested_variant_name": "بدون شکر موهیتو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.769Z",
+      "updated_at": "2025-12-29T15:45:01.817Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "e3dfa4d7-9518-407d-bbb5-71f8e4f8dcb9",
+      "barcode": "6262835600372",
+      "name_fa": "آدامس میوه های قرمز دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1547304151.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس میوه های قرمز دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "میوه های قرمز"
+          }
+        ],
+        "suggested_variant_name": "میوه های قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.808Z",
+      "updated_at": "2025-12-29T15:44:07.968Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "fce9b3af-87f5-4e05-a954-1dd30bd58638",
+      "barcode": "6262835600617",
+      "name_fa": "آدامس بدون شکر با طعم دارچین دن اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7ead63f2-a257-486b-a2d3-2fd806641d26",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1547304195.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن اکسیر",
+        "original_name": "آدامس بدون شکر با طعم دارچین دن اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          }
+        ],
+        "suggested_variant_name": "بدون شکر دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.810Z",
+      "updated_at": "2025-12-29T15:44:06.822Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7ead63f2-a257-486b-a2d3-2fd806641d26",
+        "name": "دن اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:25.203Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "8ef43cc0-0484-4143-a581-37deb73f8043",
+      "barcode": "6264961900050",
+      "name_fa": "آدامس بدون قند حاوی کافئین اکالیپتوس 18 عددی اکشن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590239808.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 18,
+        "parsed_brand": "اکشن",
+        "original_name": "آدامس بدون قند حاوی کافئین اکالیپتوس 18 عددی اکشن",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "اکالیپتوس"
+          }
+        ],
+        "suggested_variant_name": "18 عددی بدون قند اکالیپتوس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.821Z",
+      "updated_at": "2025-12-29T15:43:53.739Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+        "name": "اکشن",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:10.256Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "a1ce699e-2af2-43f9-a1c7-b199842757d1",
+      "barcode": "6264961900081",
+      "name_fa": "آدامس بدون قند حاوی کافئین نعنایی 18 عددی اکشن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590239853.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 18,
+        "parsed_brand": "اکشن",
+        "original_name": "آدامس بدون قند حاوی کافئین نعنایی 18 عددی اکشن",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "18 عددی بدون قند نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.822Z",
+      "updated_at": "2025-12-29T15:43:52.236Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+        "name": "اکشن",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:10.256Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "749f60a0-f1b3-43bd-9a41-21cc1a8d362f",
+      "barcode": "6264961902115",
+      "name_fa": "آدامس بدون شکر با طعم هندوانه بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762182.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر با طعم هندوانه بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "هندوانه"
+          }
+        ],
+        "suggested_variant_name": "بدون شکر هندوانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.825Z",
+      "updated_at": "2025-12-29T15:43:47.989Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "97ed43a1-82df-48b0-b20c-1a7db9fa16f9",
+      "barcode": "6264961901422",
+      "name_fa": "آدامس بدون قند انرژی زا 24 عددی اکشن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590239975.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 24,
+        "parsed_brand": "اکشن",
+        "original_name": "آدامس بدون قند انرژی زا 24 عددی اکشن",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          }
+        ],
+        "suggested_variant_name": "24 عددی بدون قند"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.892Z",
+      "updated_at": "2025-12-29T15:42:29.873Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+        "name": "اکشن",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:10.256Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "3daefcad-81b2-42e6-aca1-ec095e896728",
+      "barcode": "6260360003217",
+      "name_fa": "آدامس با طعم سیب و هلو 24 گرمی فست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1526887504.jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "فست",
+        "original_name": "آدامس با طعم سیب و هلو 24 گرمی فست",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "سیب و هلو"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی سیب و هلو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.948Z",
+      "updated_at": "2025-12-29T15:41:07.698Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+        "name": "فست",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:44.008Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "033733d2-6e3c-40a6-92b7-962569071496",
+      "barcode": "6262835600525",
+      "name_fa": "آدامس با طعم نعنا فلیپ تاپ دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600525(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم نعنا فلیپ تاپ دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.960Z",
+      "updated_at": "2025-12-29T15:40:51.521Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "23fde2e8-f2b7-4306-ab7e-51152b05ea59",
+      "barcode": "6262835600297",
+      "name_fa": "آدامس نعنایی خنک دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1547304099.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس نعنایی خنک دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.961Z",
+      "updated_at": "2025-12-29T15:40:50.388Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "503f2663-d6b8-460d-88d4-aaac4c534885",
+      "barcode": "7622210826374",
+      "name_fa": "آدامس بدون قند با طعم هندوانه حاوی شیرین کننده مصنوعی ریلکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762327.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "ریلکس",
+        "original_name": "آدامس بدون قند با طعم هندوانه حاوی شیرین کننده مصنوعی ریلکس",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "هندوانه"
+          }
+        ],
+        "suggested_variant_name": "بدون قند هندوانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.962Z",
+      "updated_at": "2025-12-29T15:40:48.960Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+        "name": "ریلکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:40:18.447Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "28dcfe63-c7d5-4550-801e-647d09bbd74c",
+      "barcode": "7622210824103",
+      "name_fa": "آدامس بدون قند با طعم نعنا حاوی شیرین کننده مصنوعی ریلکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762260.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "ریلکس",
+        "original_name": "آدامس بدون قند با طعم نعنا حاوی شیرین کننده مصنوعی ریلکس",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "بدون قند نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.963Z",
+      "updated_at": "2025-12-29T15:40:47.290Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+        "name": "ریلکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:40:18.447Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "7e4a319b-2fcc-4ec3-880f-a5eddc17e65c",
+      "barcode": "7622210824615",
+      "name_fa": "آدامس بدون قند با طعم نعنا و دارچین حاوی شیرین کننده مصنوعی ریلکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762287.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "ریلکس",
+        "original_name": "آدامس بدون قند با طعم نعنا و دارچین حاوی شیرین کننده مصنوعی ریلکس",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا و دارچین"
+          }
+        ],
+        "suggested_variant_name": "بدون قند نعنا و دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.964Z",
+      "updated_at": "2025-12-29T15:40:45.656Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+        "name": "ریلکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:40:18.447Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "0868b94b-947b-4d3f-bc22-7b54ec58be43",
+      "barcode": "8690515916358",
+      "name_fa": "آدامس فرش وانیلی و نعنا 21 گرمی ریلکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1550650248.jpg",
+      "reference_price": null,
+      "weight_grams": 21,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس فرش",
+        "pack_count": null,
+        "parsed_brand": "ریلکس",
+        "original_name": "آدامس فرش وانیلی و نعنا 21 گرمی ریلکس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "وانیلی و نعنا"
+          }
+        ],
+        "suggested_variant_name": "21 گرمی وانیلی و نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.985Z",
+      "updated_at": "2025-12-29T15:40:21.343Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+        "name": "ریلکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:40:18.447Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "967937bf-fbd6-4109-8a08-dd10d1ea26df",
+      "barcode": "8690515916457",
+      "name_fa": "آدامس وایت توت فرنگی 21 گرمی ریلکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1550650279.jpg",
+      "reference_price": null,
+      "weight_grams": 21,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "ریلکس",
+        "original_name": "آدامس وایت توت فرنگی 21 گرمی ریلکس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "21 گرمی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.986Z",
+      "updated_at": "2025-12-29T15:40:20.033Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+        "name": "ریلکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:40:18.447Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "ba9f6279-5282-47f8-a335-7ac73177cb3e",
+      "barcode": "8690515916815",
+      "name_fa": "آدامس بدون قند موزی ریلکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590241240.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "ریلکس",
+        "original_name": "آدامس بدون قند موزی ریلکس",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "موزی"
+          }
+        ],
+        "suggested_variant_name": "بدون قند موزی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:37.987Z",
+      "updated_at": "2025-12-29T15:40:18.449Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ca8c0dfb-9863-41b3-8101-1c01f777c1a7",
+        "name": "ریلکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:40:18.447Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "c0386305-db6b-4fa2-b2a1-1f7b6ffa6702",
+      "barcode": "6262835600143",
+      "name_fa": "آدامس با طعم میوه میکس 60 گرمی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1547303921.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم میوه میکس 60 گرمی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "میوه میکس"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی میوه میکس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.022Z",
+      "updated_at": "2025-12-29T15:39:29.202Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "f6dc761d-2b7a-4578-ac7c-fd394f5ba86a",
+      "barcode": "6262835600167",
+      "name_fa": "آدامس با طعم نعنا خنک 60 گرمی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1547304017.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم نعنا خنک 60 گرمی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا خنک"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی نعنا خنک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.024Z",
+      "updated_at": "2025-12-29T15:39:28.094Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "234cac24-1fb8-41b1-beb1-e1ef77bd4637",
+      "barcode": "6262835600150",
+      "name_fa": "آدامس با طعم نعنا 60 گرمی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1547303975.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم نعنا 60 گرمی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.025Z",
+      "updated_at": "2025-12-29T15:39:26.657Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "1a72d6b9-8721-4277-b956-f26b6de97e35",
+      "barcode": "6262835600686",
+      "name_fa": "آدامس با طعم دارچین 60 گرمی دن اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7ead63f2-a257-486b-a2d3-2fd806641d26",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546761806.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن اکسیر",
+        "original_name": "آدامس با طعم دارچین 60 گرمی دن اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.026Z",
+      "updated_at": "2025-12-29T15:39:25.205Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7ead63f2-a257-486b-a2d3-2fd806641d26",
+        "name": "دن اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:25.203Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "ac9f8c5c-24cf-48a8-bcdb-33c37e0edcda",
+      "barcode": "6264961901385",
+      "name_fa": "آدامس بدون قند حاوی کافئین نعنایی 30 عددی اکشن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590239922.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 30,
+        "parsed_brand": "اکشن",
+        "original_name": "آدامس بدون قند حاوی کافئین نعنایی 30 عددی اکشن",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          },
+          {
+            "name": "ویژگی",
+            "value": "حاوی کافئین"
+          }
+        ],
+        "suggested_variant_name": "30 عددی بدون قند نعنایی حاوی کافئین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.038Z",
+      "updated_at": "2025-12-29T15:39:11.962Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+        "name": "اکشن",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:10.256Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "173658d0-a5ae-4eff-8beb-3d1be8c862ef",
+      "barcode": "6264961902252",
+      "name_fa": "آدامس بدون قند حاوی کافئین اکالیپتوس 30 عددی اکشن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1590240031.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 30,
+        "parsed_brand": "اکشن",
+        "original_name": "آدامس بدون قند حاوی کافئین اکالیپتوس 30 عددی اکشن",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون قند"
+          },
+          {
+            "name": "طعم",
+            "value": "اکالیپتوس"
+          }
+        ],
+        "suggested_variant_name": "30 عددی بدون قند اکالیپتوس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.039Z",
+      "updated_at": "2025-12-29T15:39:10.258Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e53c992-be2d-4770-ad0b-c7edec1606cf",
+        "name": "اکشن",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:39:10.256Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "0ee32e73-bed9-480c-b946-2969d29d2a66",
+      "barcode": "6260138087258",
+      "name_fa": "آدامس دراژه فلیپ تاپ مونتین 10 عددی اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260138087258(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دراژه فلیپ تاپ مونتین",
+        "pack_count": 10,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه فلیپ تاپ مونتین 10 عددی اوینا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.175Z",
+      "updated_at": "2025-12-29T15:35:57.546Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "f15e8a8f-26ca-4389-8af6-112da1ba4e49",
+      "barcode": "6260138055042",
+      "name_fa": "آدامس دراژه فلیپ تاپ مونتین 10 عددی اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260138055042(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دراژه فلیپ تاپ مونتین",
+        "pack_count": 10,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه فلیپ تاپ مونتین 10 عددی اوینا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.176Z",
+      "updated_at": "2025-12-29T15:35:56.068Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "37f06320-62fe-43d0-a4cc-620e30b343ab",
+      "barcode": "6260138055059",
+      "name_fa": "آدامس دراژه فلیپ تاپ مونتین 10 عددی اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260138055059(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دراژه فلیپ تاپ مونتین",
+        "pack_count": 10,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه فلیپ تاپ مونتین 10 عددی اوینا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.177Z",
+      "updated_at": "2025-12-29T15:35:54.575Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "0d9caa58-052d-4dba-b45c-85a4eec75229",
+      "barcode": "6260138087173",
+      "name_fa": "آدامس دراژه بلیستر نکست 10 عددی اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6260138087173(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه بلیستر نکست 10 عددی اوینا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "دراژه بلیستر نکست"
+          }
+        ],
+        "suggested_variant_name": "10 عددی دراژه بلیستر نکست"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.178Z",
+      "updated_at": "2025-12-29T15:35:53.233Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "56c6e41e-fa4c-4075-a98b-2302587309fc",
+      "barcode": "6260138054960",
+      "name_fa": "آدامس دراژه بلیستر نکست 10 عددی اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473226098.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه بلیستر نکست 10 عددی اوینا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "دراژه بلیستر نکست"
+          }
+        ],
+        "suggested_variant_name": "10 عددی دراژه بلیستر نکست"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.179Z",
+      "updated_at": "2025-12-29T15:35:51.700Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "45100e74-7834-425d-83f5-ab0833ab6cd2",
+      "barcode": "6260138054977",
+      "name_fa": "آدامس دراژه بلیستر نکست 10 عددی اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1472894948.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دراژه",
+        "pack_count": 10,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه بلیستر نکست 10 عددی اوینا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.180Z",
+      "updated_at": "2025-12-29T15:35:50.229Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "375f5316-34d0-4394-8947-e33fccc28da8",
+      "barcode": "8801117841409",
+      "name_fa": "آدامس دکتر زایلیتول‌ نعنایی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117841409(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ نعنایی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.181Z",
+      "updated_at": "2025-12-29T15:35:48.888Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "f86b940f-b9b5-4047-9a8e-cf1801e735fc",
+      "barcode": "8801117841300",
+      "name_fa": "آدامس دکتر زایلیتول‌ سیب اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473228302.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دکتر زایلیتول",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ سیب اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "سیب"
+          }
+        ],
+        "suggested_variant_name": "سیب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.182Z",
+      "updated_at": "2025-12-29T15:35:47.158Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "41287132-2cbe-4f69-99f4-4ef93b983c2a",
+      "barcode": "8801117841904",
+      "name_fa": "آدامس دکتر زایلیتول‌ لیمویی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117841904(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ لیمویی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیموئی"
+          }
+        ],
+        "suggested_variant_name": "لیموئی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.183Z",
+      "updated_at": "2025-12-29T15:35:45.956Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "9901fa43-f7a8-4583-b8be-d8bda1914f7f",
+      "barcode": "8801117843908",
+      "name_fa": "آدامس دکتر زایلیتول‌ گریپ فروت اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492858125.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دکتر زایلیتول گریپ فروت",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ گریپ فروت اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "گریپ فروت"
+          }
+        ],
+        "suggested_variant_name": "گریپ فروت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.184Z",
+      "updated_at": "2025-12-29T15:35:44.829Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "8eed569b-6d85-4759-bd3a-c986207be9f5",
+      "barcode": "8801117841805",
+      "name_fa": "آدامس دکتر زایلیتول‌ موزی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117841805(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دکتر زایلیتول",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ موزی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "موزی"
+          }
+        ],
+        "suggested_variant_name": "موزی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.184Z",
+      "updated_at": "2025-12-29T15:35:43.305Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "e28a5522-fba7-420d-8bd0-3b383eed15fd",
+      "barcode": "8801117904401",
+      "name_fa": "آدامس دکتر زایلیتول‌ نعنایی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117904401(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ نعنایی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.186Z",
+      "updated_at": "2025-12-29T15:35:41.485Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "26cde7f8-b6d0-45ba-b013-3c0e4441d740",
+      "barcode": "8801117904302",
+      "name_fa": "آدامس دکتر زایلیتول‌ سیب اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117904302(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دکتر زایلیتول",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ سیب اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "سیب"
+          }
+        ],
+        "suggested_variant_name": "سیب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.187Z",
+      "updated_at": "2025-12-29T15:35:39.904Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "36d6e8eb-a9d2-47dc-9382-cc28ebe5ff90",
+      "barcode": "8801117909000",
+      "name_fa": "آدامس دکتر زایلیتول‌ لیمویی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492941611.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ لیمویی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیموئی"
+          }
+        ],
+        "suggested_variant_name": "لیموئی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.188Z",
+      "updated_at": "2025-12-29T15:35:38.722Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "b4b4ff42-9b1d-4b8a-9f87-2c069ec24ace",
+      "barcode": "8801117909109",
+      "name_fa": "آدامس دکتر زایلیتول‌ گریپ فروت اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117909109(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ گریپ فروت اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "گریپ فروت"
+          }
+        ],
+        "suggested_variant_name": "گریپ فروت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.189Z",
+      "updated_at": "2025-12-29T15:35:37.581Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "c07afd4e-d36f-4f90-ae6c-abfa11f863fa",
+      "barcode": "8801117909208",
+      "name_fa": "آدامس دکتر زایلیتول‌ موزی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8801117909208(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دکتر زایلیتول موزی",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ موزی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "موزی"
+          }
+        ],
+        "suggested_variant_name": "موزی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.190Z",
+      "updated_at": "2025-12-29T15:35:36.073Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "7d4074f1-98ab-4aad-a0a3-de958d8d5728",
+      "barcode": "6262835600396",
+      "name_fa": "آدامس با طعم نعنا 10 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600396(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم نعنا 10 عددی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "10 عددی نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.192Z",
+      "updated_at": "2025-12-29T15:35:34.528Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "8860a641-561d-4ab1-a406-4e46f470bb35",
+      "barcode": "6262835600433",
+      "name_fa": "آدامس با طعم نعنا خنک 10 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600433(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم نعنا خنک 10 عددی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا خنک"
+          }
+        ],
+        "suggested_variant_name": "نعنا خنک 10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.192Z",
+      "updated_at": "2025-12-29T15:35:33.206Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "a31cf612-dbf7-42ec-a101-dac355427e04",
+      "barcode": "6262835600419",
+      "name_fa": "آدامس سفید کننده (نقره‌ای) 10 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600419(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس سفید کننده (نقره‌ای) 10 عددی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "سفید کننده"
+          },
+          {
+            "name": "رنگ",
+            "value": "نقره‌ای"
+          }
+        ],
+        "suggested_variant_name": "10 عددی سفید کننده نقره‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.193Z",
+      "updated_at": "2025-12-29T15:35:31.986Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "75b7355f-d079-46ef-94ba-f11be022fae6",
+      "barcode": "6262835600495",
+      "name_fa": "آدامس رد انرژی (نقره ای) 10 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600495(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس رد انرژی",
+        "pack_count": 10,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس رد انرژی (نقره ای) 10 عددی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "نقره ای"
+          }
+        ],
+        "suggested_variant_name": "10 عددی نقره ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.194Z",
+      "updated_at": "2025-12-29T15:35:30.064Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "58cdf797-cfed-4bc6-8eea-ec9f43f41ae3",
+      "barcode": "6262835600457",
+      "name_fa": "آدامس با طعم توت فروتی (صورتی) 10 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600457(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم توت فروتی (صورتی) 10 عددی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فروتی"
+          }
+        ],
+        "suggested_variant_name": "توت فروتی 10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.195Z",
+      "updated_at": "2025-12-29T15:35:28.557Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "4af156ae-5157-47b3-b75d-6dd63aedd51a",
+      "barcode": "6262835600471",
+      "name_fa": "آدامس با طعم توت‌ فرنگی 10 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600471(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 10,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم توت‌ فرنگی 10 عددی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت‌ فرنگی"
+          }
+        ],
+        "suggested_variant_name": "10 عددی توت‌ فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.196Z",
+      "updated_at": "2025-12-29T15:35:27.344Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "645a0c53-9478-41cb-b69f-70d6682f0210",
+      "barcode": "6262835600518",
+      "name_fa": "آدامس سفید کننده (نقره‌ای) فلیپ تاپ دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600518(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس سفید کننده (نقره‌ای) فلیپ تاپ دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "سفید کننده",
+            "value": "سفید کننده"
+          },
+          {
+            "name": "نقره‌ای",
+            "value": "نقره‌ای"
+          }
+        ],
+        "suggested_variant_name": "سفید کننده نقره‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.197Z",
+      "updated_at": "2025-12-29T15:35:26.157Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "52dbd826-c04b-4725-8df2-c830ed5a10ff",
+      "barcode": "6262835600099",
+      "name_fa": "آدامس میکس 4 عددی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/6262835600099(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس میکس",
+        "pack_count": 4,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس میکس 4 عددی دن‌اکسیر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "4 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.198Z",
+      "updated_at": "2025-12-29T15:35:24.827Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "7a248c6e-3f85-405b-9cf8-140007c6ac49",
+      "barcode": "8690840223831",
+      "name_fa": "آدامس بدون شکر با طعم دارچین 20 عددی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8690840223831(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 20,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر با طعم دارچین 20 عددی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          }
+        ],
+        "suggested_variant_name": "20 عددی بدون شکر دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.316Z",
+      "updated_at": "2025-12-29T15:32:23.534Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "53633277-084c-4552-92ff-a75341fc0a4c",
+      "barcode": "8690840223817",
+      "name_fa": "آدامس بدون شکر نعنایی تند 20 عددی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/8690840223817(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 20,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر نعنایی تند 20 عددی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنایی تند"
+          }
+        ],
+        "suggested_variant_name": "20 عددی بدون شکر نعنایی تند"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.317Z",
+      "updated_at": "2025-12-29T15:32:21.878Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "a4ce92cf-13af-4d90-9e01-ed889c75fc80",
+      "barcode": "8690840223824",
+      "name_fa": "آدامس بدون شکر با طعم اکالیپتوس 20 عددی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1471187258.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 20,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر با طعم اکالیپتوس 20 عددی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "اکالیپتوس"
+          }
+        ],
+        "suggested_variant_name": "20 عددی بدون شکر اکالیپتوس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.318Z",
+      "updated_at": "2025-12-29T15:32:20.147Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "89dec6d3-dab3-4419-a34e-a34ea86d39d3",
+      "barcode": "8690840223800",
+      "name_fa": "آدامس بدون شکر نعنایی 20 عددی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1473926997.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": 20,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر نعنایی 20 عددی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "20 عددی بدون شکر نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.319Z",
+      "updated_at": "2025-12-29T15:32:18.741Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "78e98dfe-aada-4d41-8668-cb31208204a6",
+      "barcode": "6260100100800",
+      "name_fa": "آدامس وایت پرتقالی 10 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933111.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت پرتقالی",
+        "pack_count": 10,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت پرتقالی 10 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پرتقالی"
+          }
+        ],
+        "suggested_variant_name": "10 عددی پرتقالی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.340Z",
+      "updated_at": "2025-12-29T15:31:51.445Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "68676e50-3c8c-40c5-83c7-276d98e140b7",
+      "barcode": "6260100100879",
+      "name_fa": "آدامس وایت اكاليپتوس 10 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933143.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت",
+        "pack_count": 10,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت اكاليپتوس 10 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "اكاليپتوس"
+          }
+        ],
+        "suggested_variant_name": "10 عددی اکالیپتوس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.341Z",
+      "updated_at": "2025-12-29T15:31:50.251Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "3cb70466-35cc-4fce-b403-61c1b3d4b67d",
+      "barcode": "6260100100886",
+      "name_fa": "آدامس وایت نعنایی 10 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933175.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت نعنایی",
+        "pack_count": 10,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت نعنایی 10 عددی مینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.342Z",
+      "updated_at": "2025-12-29T15:31:49.064Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "d9a89d94-67a0-42cd-a4f2-aef9458c17c1",
+      "barcode": "6260100100893",
+      "name_fa": "آدامس وایت توت ‌فرنگی 10 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933204.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت",
+        "pack_count": 10,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت توت ‌فرنگی 10 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت ‌فرنگی"
+          }
+        ],
+        "suggested_variant_name": "10 عددی توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.343Z",
+      "updated_at": "2025-12-29T15:31:48.059Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "b1f209d2-d018-459c-aa87-24d84e78d62b",
+      "barcode": "6260100100909",
+      "name_fa": "آدامس وایت هندوانه 10 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933235.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت",
+        "pack_count": 10,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت هندوانه 10 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "هندوانه"
+          }
+        ],
+        "suggested_variant_name": "10 عددی هندوانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.344Z",
+      "updated_at": "2025-12-29T15:31:46.540Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "e65a9c24-a4a5-4010-a363-206ef9d54d6b",
+      "barcode": "6260100101227",
+      "name_fa": "آدامس وایت اکالپیتوس 60 گرمی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933269.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت اکالپیتوس",
+        "pack_count": null,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت اکالپیتوس 60 گرمی مینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "60 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.345Z",
+      "updated_at": "2025-12-29T15:31:44.987Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "576c266d-be8d-4ec8-b5b7-4a1e26500e2f",
+      "barcode": "6260100101258",
+      "name_fa": "آدامس وایت نعنایی 60 گرمی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933315.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت نعنایی 60 گرمی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          },
+          {
+            "name": "نوع",
+            "value": "وایت"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی نعنایی وایت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.346Z",
+      "updated_at": "2025-12-29T15:31:43.702Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "cc1c9076-8e6c-4035-8a84-6395b8b157d5",
+      "barcode": "6260100102002",
+      "name_fa": "آدامس وایت نعنایی 25 گرمی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933365.jpg",
+      "reference_price": null,
+      "weight_grams": 25,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس وایت",
+        "pack_count": null,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس وایت نعنایی 25 گرمی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "25 گرمی نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.347Z",
+      "updated_at": "2025-12-29T15:31:42.345Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "ed7e29aa-c663-4b3b-9e85-01c5468786f9",
+      "barcode": "6260138042387",
+      "name_fa": "آدامس نواری تری دنت با طعم نعنا اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546760747.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": null,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس نواری تری دنت با طعم نعنا اوینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.364Z",
+      "updated_at": "2025-12-29T15:31:24.422Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "16f99959-9476-48c3-aaeb-89e7390740b5",
+      "barcode": "6260138042394",
+      "name_fa": "آدامس نواری تری دنت با طعم پرتقال و تمشک اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e196c45a-323c-4242-8cbe-b78224abd364",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546760774.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": null,
+        "parsed_brand": "تری دنت",
+        "original_name": "آدامس نواری تری دنت با طعم پرتقال و تمشک اوینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پرتقال و تمشک"
+          }
+        ],
+        "suggested_variant_name": "پرتقال و تمشک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.365Z",
+      "updated_at": "2025-12-29T15:31:23.257Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e196c45a-323c-4242-8cbe-b78224abd364",
+        "name": "تری دنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:31:23.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "e58af88d-0b87-430c-96e4-2672fd6e1ba8",
+      "barcode": "6260138042400",
+      "name_fa": "آدامس نواری تری دنت با طعم توت فرنگی و انبه اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546760801.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": null,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس نواری تری دنت با طعم توت فرنگی و انبه اوینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت فرنگی و انبه"
+          }
+        ],
+        "suggested_variant_name": "توت فرنگی و انبه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.366Z",
+      "updated_at": "2025-12-29T15:31:22.078Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "b4798136-3b57-473f-a241-7ab9001e2c37",
+      "barcode": "6260138052348",
+      "name_fa": "آدامس نواری تری دنت با طعم طالبی و هندوانه اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546760828.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": null,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس نواری تری دنت با طعم طالبی و هندوانه اوینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "طالبی و هندوانه"
+          }
+        ],
+        "suggested_variant_name": "طالبی و هندوانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.367Z",
+      "updated_at": "2025-12-29T15:31:20.542Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "82d4328f-1ae9-4318-8944-52ecf64204e8",
+      "barcode": "8936036024456",
+      "name_fa": "آدامس دکتر زایلیتول‌ طالبی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492866117.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ طالبی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "طالبی"
+          }
+        ],
+        "suggested_variant_name": "طالبی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.384Z",
+      "updated_at": "2025-12-29T15:30:59.551Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "5230bece-1acd-4f06-9b0b-9c0225fd4df6",
+      "barcode": "8936036024425",
+      "name_fa": "آدامس دکتر زایلیتول‌ لیمو‌ نعنا 32 گرمی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492866444.jpg",
+      "reference_price": null,
+      "weight_grams": 32,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ لیمو‌ نعنا 32 گرمی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیمو نعنا"
+          }
+        ],
+        "suggested_variant_name": "32 گرمی لیمو نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.386Z",
+      "updated_at": "2025-12-29T15:30:58.431Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "415ac81c-dc82-431b-b82a-00e026823688",
+      "barcode": "8936036024432",
+      "name_fa": "آدامس دکتر زایلیتول‌ انگور 32 گرمی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492946297.jpg",
+      "reference_price": null,
+      "weight_grams": 32,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ انگور 32 گرمی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "انگور"
+          }
+        ],
+        "suggested_variant_name": "32 گرمی انگور"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.387Z",
+      "updated_at": "2025-12-29T15:30:57.197Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "3b7174b0-db19-416c-9757-dde1df67d6a6",
+      "barcode": "8936036024470",
+      "name_fa": "آدامس دکتر زایلیتول‌ انگور 61 گرمی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492946352.jpg",
+      "reference_price": null,
+      "weight_grams": 61,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول‌ انگور 61 گرمی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "انگور"
+          }
+        ],
+        "suggested_variant_name": "61 گرمی انگور"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.388Z",
+      "updated_at": "2025-12-29T15:30:56.079Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "7951cb86-b085-4233-8179-eeced3ae5eae",
+      "barcode": "8936036024463",
+      "name_fa": "آدامس دکتر زایلیتول لیمو نعنا‌ 61 گرمی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492946326.jpg",
+      "reference_price": null,
+      "weight_grams": 61,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول لیمو نعنا‌ 61 گرمی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیمو نعنا"
+          }
+        ],
+        "suggested_variant_name": "61 گرمی لیمو نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.389Z",
+      "updated_at": "2025-12-29T15:30:54.844Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "2431f43f-7605-4e99-ac7f-71d9a91761dd",
+      "barcode": "8936036024418",
+      "name_fa": "آدامس دکتر زایلیتول طالبی‌ 32 گرمی اوریون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1492946251.jpg",
+      "reference_price": null,
+      "weight_grams": 32,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "اوریون",
+        "original_name": "آدامس دکتر زایلیتول طالبی‌ 32 گرمی اوریون",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "طالبی"
+          }
+        ],
+        "suggested_variant_name": "32 گرمی طالبی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.390Z",
+      "updated_at": "2025-12-29T15:30:53.312Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f85e1e7-984c-4416-bf8f-c9bf47a2914e",
+        "name": "اوریون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:32.255Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "c9856f99-eb46-432b-a51e-e12d98a7637c",
+      "barcode": "6262835600532",
+      "name_fa": "آدامس با طعم میوه میکس 14 گرمی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1504440310.jpg",
+      "reference_price": null,
+      "weight_grams": 14,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم میوه میکس 14 گرمی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "میوه میکس"
+          }
+        ],
+        "suggested_variant_name": "14 گرمی میوه میکس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.393Z",
+      "updated_at": "2025-12-29T15:30:49.352Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "55b4a60d-7838-48bd-ae09-7fb8dde63342",
+      "barcode": "6262835600556",
+      "name_fa": "آدامس با طعم نعنا تند 14 گرمی دن‌اکسیر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "da006c74-a173-4679-9146-48bb7961d3c5",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1504440358.jpg",
+      "reference_price": null,
+      "weight_grams": 14,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "دن‌اکسیر",
+        "original_name": "آدامس با طعم نعنا تند 14 گرمی دن‌اکسیر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا تند"
+          }
+        ],
+        "suggested_variant_name": "14 گرمی نعنا تند"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.394Z",
+      "updated_at": "2025-12-29T15:30:48.079Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "da006c74-a173-4679-9146-48bb7961d3c5",
+        "name": "دن‌اکسیر",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:48.068Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "30730944-901d-481c-87c7-021b1c6bb0ba",
+      "barcode": "6260100105263",
+      "name_fa": "آدامس نواری وایت توت ‌فرنگی 7 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933716.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": 7,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس نواری وایت توت ‌فرنگی 7 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "توت ‌فرنگی"
+          }
+        ],
+        "suggested_variant_name": "7 عددی توت ‌فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.408Z",
+      "updated_at": "2025-12-29T15:30:25.376Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "f62569ba-546f-420e-a753-b1fb19a0a586",
+      "barcode": "6260100105270",
+      "name_fa": "آدامس نواری وایت نعنایی 7 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933778.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": 7,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس نواری وایت نعنایی 7 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          }
+        ],
+        "suggested_variant_name": "7 عددی نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.409Z",
+      "updated_at": "2025-12-29T15:30:24.155Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "bb2d7e65-e0e7-4aac-a7d4-bef37307ffcb",
+      "barcode": "6260100105287",
+      "name_fa": "آدامس نواری وایت اکالیپتوس 7 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933807.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری وایت اکالیپتوس",
+        "pack_count": 7,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس نواری وایت اکالیپتوس 7 عددی مینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "7 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.411Z",
+      "updated_at": "2025-12-29T15:30:22.696Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "fe863937-810f-4e49-9be0-59d13c0095a2",
+      "barcode": "6260100105362",
+      "name_fa": "آدامس نواری وایت دارچین 7 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933852.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": 7,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس نواری وایت دارچین 7 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          }
+        ],
+        "suggested_variant_name": "7 عددی دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.412Z",
+      "updated_at": "2025-12-29T15:30:21.322Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "1a353078-2977-452f-9452-f2afab3048a6",
+      "barcode": "6260100105454",
+      "name_fa": "آدامس نواری وایت استوایی 7 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1532933923.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": 7,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس نواری وایت استوایی 7 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "استوایی"
+          }
+        ],
+        "suggested_variant_name": "7 عددی استوایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.413Z",
+      "updated_at": "2025-12-29T15:30:19.989Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "9d91a1c2-b222-41bf-9fb1-62ce7772eebe",
+      "barcode": "6260138001964",
+      "name_fa": "آدامس دراژه ایر فرش با طعم پرتقال اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546760679.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دراژه ایر فرش",
+        "pack_count": null,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه ایر فرش با طعم پرتقال اوینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پرتقال"
+          }
+        ],
+        "suggested_variant_name": "پرتقال"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.419Z",
+      "updated_at": "2025-12-29T15:30:12.470Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "53d6c245-81c4-4b70-8672-336deb7d4aa1",
+      "barcode": "6260138001995",
+      "name_fa": "آدامس دراژه ایر فرش با طعم نعنا اوینا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546760712.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس دراژه ایر فرش",
+        "pack_count": null,
+        "parsed_brand": "اوینا",
+        "original_name": "آدامس دراژه ایر فرش با طعم نعنا اوینا",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.420Z",
+      "updated_at": "2025-12-29T15:30:11.119Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "803e35e3-5f17-4ede-b5b9-f7abee972438",
+        "name": "اوینا",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:30:11.117Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "3d48486b-4ddf-44d5-9f9f-9bbb30d9defa",
+      "barcode": "6260360003200",
+      "name_fa": "آدامس با طعم شاتوت 24 گرمی فست",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1528022043.jpg",
+      "reference_price": null,
+      "weight_grams": 24,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "فست",
+        "original_name": "آدامس با طعم شاتوت 24 گرمی فست",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "شاتوت"
+          }
+        ],
+        "suggested_variant_name": "24 گرمی شاتوت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.441Z",
+      "updated_at": "2025-12-29T15:29:44.010Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8bb5e3c4-4a3b-4ec6-8c45-8863a6c1e56f",
+        "name": "فست",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:44.008Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "d123c8bb-97aa-4deb-b952-fe10e1bec306",
+      "barcode": "6260100105294",
+      "name_fa": "آدامس نواری وایت هندوانه 7 عددی مینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1533361513.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس نواری",
+        "pack_count": 7,
+        "parsed_brand": "مینو",
+        "original_name": "آدامس نواری وایت هندوانه 7 عددی مینو",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "هندوانه"
+          }
+        ],
+        "suggested_variant_name": "7 عددی هندوانه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.444Z",
+      "updated_at": "2025-12-29T15:29:40.253Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2b26a0de-cd30-4bf6-93eb-056539781af4",
+        "name": "مینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:19:41.819Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "0db11ac6-acfa-49e4-84b0-bddd80cfa79c",
+      "barcode": "6264961902047",
+      "name_fa": "آدامس بدون شکر با طعم توت فرنگی بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762091.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر با طعم توت فرنگی بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "توت فرنگی"
+          }
+        ],
+        "suggested_variant_name": "بدون شکر با طعم توت فرنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.454Z",
+      "updated_at": "2025-12-29T15:29:28.340Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "d77b4d32-4db2-44ae-82eb-9ae7297e2dc2",
+      "barcode": "6264961902061",
+      "name_fa": "آدامس بدون شکر با طعم نعنا بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762124.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر با طعم نعنا بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "نعنا"
+          }
+        ],
+        "suggested_variant_name": "بدون شکر با طعم نعنا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.455Z",
+      "updated_at": "2025-12-29T15:29:27.050Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "c8b6060a-a356-479f-a23f-07fe440d1092",
+      "barcode": "6264961902160",
+      "name_fa": "آدامس بدون شکر با طعم اکامنتول بایودنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AA%D9%86%D9%82%D9%84%D8%A7%D8%AA%2FPic/1546762214.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آدامس",
+        "pack_count": null,
+        "parsed_brand": "بایودنت",
+        "original_name": "آدامس بدون شکر با طعم اکامنتول بایودنت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بدون شکر"
+          },
+          {
+            "name": "طعم",
+            "value": "اکامنتول"
+          }
+        ],
+        "suggested_variant_name": "بدون شکر اکامنتول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:38.456Z",
+      "updated_at": "2025-12-29T15:29:25.411Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8d7c33e3-599a-4494-9053-60b1bc62591a",
+        "name": "بایودنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T15:29:25.409Z"
+      },
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "bff4af24-f3ff-53f5-8bfc-dcb143183b27",
+      "barcode": "6936543553359",
+      "name_fa": "دکتر گام آدامس توت فرنگی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6936543553359-2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "74c5cf4e-e06c-50f8-ad31-872bfa1649c2",
+      "barcode": "6264961900579",
+      "name_fa": "biodent بایودنت آدامس اکالیپتوس",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6264961900579.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "85bf8543-693d-5f99-ac55-311a7c739a8c",
+      "barcode": "6264961902443",
+      "name_fa": "اکشن آدامس ترش بدون شکر با طعم بلک هول 10 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/adams-action-Black-Hole-10.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    },
+    {
+      "id": "ca8f1659-e67a-4856-9396-2113885a23c3",
+      "barcode": "6264961900807",
+      "name_fa": "آدامس طالبی بدون قند بایودنت 7 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/62649619008071.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6264961900807",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001668",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "آدامس و خوشبوکننده دهان",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 3366,
+          "original_name": "آدامس طالبی بدون قند بایودنت 7 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6264961900807"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "f0c8af80-1085-44b7-8b75-0402e405f913",
+        "name": "آدامس",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2025-12-29T09:34:37.718Z"
+      }
+    }
+  ],
+  "total": 91
+}

@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "4124df18-5a05-4241-81d6-f14b2479edbf",
+      "barcode": "6260010536409",
+      "name_fa": "مایع دستشویی کرمی شیر و آلوئه ورا اوه (2 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "34c380d6-1a05-5009-a787-a2d43602433d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%A9%D8%B1%D9%85%DB%8C-%D8%B4%DB%8C%D8%B1-%D8%A2%D9%84%D9%88%D8%A6%D9%87-%D9%88%D8%B1%D8%A7-%D8%A7%D9%88%D9%87.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260010536409",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "فوم و مایع دستشویی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 26162,
+          "original_name": "مایع دستشویی کرمی شیر و آلوئه ورا اوه (2 لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260010536409"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "34c380d6-1a05-5009-a787-a2d43602433d",
+        "name": "صابون و مایع دستشویی",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

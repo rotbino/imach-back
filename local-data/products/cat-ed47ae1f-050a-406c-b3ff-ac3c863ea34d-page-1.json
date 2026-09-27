@@ -1,0 +1,166 @@
+{
+  "items": [
+    {
+      "id": "b1ad5b66-71b6-4770-aef0-af497c3633e0",
+      "barcode": null,
+      "name_fa": "مایع جرم گیر 3200 گرمی صاف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "660687a0-646e-4d4b-ba11-da2a488e629b",
+      "category_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 3200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "مایع جرم گیر",
+        "pack_count": null,
+        "parsed_brand": "صاف",
+        "original_name": "مایع جرم گیر 3200 گرمی صاف",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3200 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.036Z",
+      "updated_at": "2025-12-29T14:17:14.234Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "660687a0-646e-4d4b-ba11-da2a488e629b",
+        "name": "صاف",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:07:20.534Z"
+      },
+      "category": {
+        "id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "name": "شوینده و بهداشتی",
+        "icon_url": "🧼",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.022Z"
+      }
+    },
+    {
+      "id": "0219c085-0abd-4057-afab-bb9fb3bd1c78",
+      "barcode": null,
+      "name_fa": "دستکش همه کاره با ساعد بلند متوسط اسپونتكس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "d570972a-ddd9-4df4-b718-a6d53e2f36a3",
+      "category_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستکش همه کاره با ساعد بلند",
+        "pack_count": null,
+        "parsed_brand": "اسپونتكس",
+        "original_name": "دستکش همه کاره با ساعد بلند متوسط اسپونتكس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "متوسط"
+          }
+        ],
+        "suggested_variant_name": "متوسط"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.297Z",
+      "updated_at": "2025-12-29T14:09:14.479Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "d570972a-ddd9-4df4-b718-a6d53e2f36a3",
+        "name": "اسپونتكس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:08:22.929Z"
+      },
+      "category": {
+        "id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "name": "شوینده و بهداشتی",
+        "icon_url": "🧼",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.022Z"
+      }
+    },
+    {
+      "id": "4c83f0b0-28fa-45cc-be97-4b93cea3aec2",
+      "barcode": null,
+      "name_fa": "پاک‌ کننده چند منظوره سطوح 750 گرمی مهرتاش",
+      "name_en": null,
+      "description": null,
+      "brand_id": "18b5d84a-117f-4a16-aa79-9fe64b3ede3c",
+      "category_id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پاک‌ کننده چند منظوره سطوح",
+        "pack_count": null,
+        "parsed_brand": "مهرتاش",
+        "original_name": "پاک‌ کننده چند منظوره سطوح 750 گرمی مهرتاش",
+        "parsed_attributes": [],
+        "suggested_variant_name": "750 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:41.570Z",
+      "updated_at": "2025-12-29T14:01:26.480Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "18b5d84a-117f-4a16-aa79-9fe64b3ede3c",
+        "name": "مهرتاش",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:01:21.244Z"
+      },
+      "category": {
+        "id": "ed47ae1f-050a-406c-b3ff-ac3c863ea34d",
+        "name": "شوینده و بهداشتی",
+        "icon_url": "🧼",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.022Z"
+      }
+    }
+  ],
+  "total": 3
+}

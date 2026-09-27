@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "622dd18b-b9f4-4731-802d-8046df7f0691",
+      "barcode": "756406357216",
+      "name_fa": "کره بادام زمینی کرانچی امریکن هریتاج (340 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "92baec36-4c7d-5b5e-ba7b-90178cc9a3c3",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/756406357216.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:756406357216",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040179",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "صبحانه",
+          "subcategory": "کره بادام زمینی و کرم بیسکویت",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22207,
+          "original_name": "کره بادام زمینی کرانچی امریکن هریتاج (340 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "756406357216"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "92baec36-4c7d-5b5e-ba7b-90178cc9a3c3",
+        "name": "کره بادام زمینی",
+        "icon_url": null,
+        "parent_id": "5882851a-5034-5cc5-981e-dcd5eb81c3b2",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

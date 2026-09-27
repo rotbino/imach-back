@@ -1,0 +1,595 @@
+{
+  "items": [
+    {
+      "id": "ae225532-22a6-5e67-a7ce-fdf4f299abbf",
+      "barcode": "6260191402555",
+      "name_fa": "خیارشور سوپر ویژه شیشه ای اروم آدا 700 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AE%DB%8C%D8%A7%D8%B1%D8%B4%D9%88%D8%B1-%D9%88%DB%8C%DA%98%D9%87-%D8%A7%D8%B1%D9%88%D9%85-%D8%A2%D8%AF%D8%A7.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "00eba5a4-9323-5b7f-ac0f-870cd5b5d7da",
+      "barcode": "6261111100599",
+      "name_fa": "ترشی سیر گل یک و یک 700 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%B1%D8%B4%DB%8C-%D8%B3%DB%8C%D8%B1-%DA%AF%D9%84-%DB%8C%DA%A9-%D9%88-%DB%8C%DA%A9.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "7df345d8-1ad6-5824-91bc-ab3fc090f48c",
+      "barcode": "6261111106928",
+      "name_fa": "ترشی بندری یک و یک 630 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%B1%D8%B4%DB%8C-%D8%A8%D9%86%D8%AF%D8%B1%DB%8C-%DB%8C%DA%A9-%D9%88-%DB%8C%DA%A9-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3288639a-7e19-54f6-ba2e-4a63abed2009",
+      "barcode": "6260107398378",
+      "name_fa": "زیتون شور با هسته دلپذیر 660 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%B2%DB%8C%D8%AA%D9%88%D9%86-%D8%B4%D9%88%D8%B1-%D8%A8%D8%A7-%D9%87%D8%B3%D8%AA%D9%87-%D8%AF%D9%84%D9%BE%D8%B0%DB%8C%D8%B1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "74595338-8727-4f41-a52d-efd381ef6aea",
+      "barcode": "6260107310028",
+      "name_fa": "خیارشور ویژه دلپذیر 650 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AE%DB%8C%D8%A7%D8%B1%D8%B4%D9%88%D8%B1-%D9%88%DB%8C%DA%98%D9%87-%D8%AF%D9%84%D9%BE%D8%B0%DB%8C%D8%B1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260107310028",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001422",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "چاشنی و افزودنی",
+          "subcategory": "خیارشور و زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12301,
+          "original_name": "خیارشور ویژه دلپذیر 650 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260107310028"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0c616bca-1377-496a-aba6-7fcc29607d78",
+      "barcode": "6260107310097",
+      "name_fa": "خیارشور درجه یک دلپذیر 650 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AE%DB%8C%D8%A7%D8%B1%D8%B4%D9%88%D8%B1-%D8%AF%D8%B1%D8%AC%D9%87-%DB%8C%DA%A9-%D8%AF%D9%84%D9%BE%D8%B0%DB%8C%D8%B1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260107310097",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001422",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "چاشنی و افزودنی",
+          "subcategory": "خیارشور و زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12238,
+          "original_name": "خیارشور درجه یک دلپذیر 650 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260107310097"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "ebec7435-584f-41ce-841c-e3d3841b6fc0",
+      "barcode": "6261111106935",
+      "name_fa": "ترشی لیته یک و یک (630 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%B1%D8%B4%DB%8C-%D9%84%DB%8C%D8%AA%D9%87-%DB%8C%DA%A9-%D9%88-%DB%8C%DA%A9-630-%DA%AF%D8%B1%D9%85%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261111106935",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001460",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "چاشنی و افزودنی",
+          "subcategory": "ترشی و شور",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 9864,
+          "original_name": "ترشی لیته یک و یک (630 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261111106935"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "d64f8006-4f59-4467-bc6a-ccdccaa6fd84",
+      "barcode": "6261198232176",
+      "name_fa": "خیارشور معمولی مهرام 680 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AE%DB%8C%D8%A7%D8%B1-%D8%B4%D9%88%D8%B1-%D9%85%D8%B9%D9%85%D9%88%D9%84%DB%8C-%D9%85%D9%87%D8%B1%D8%A7%D9%85.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261198232176",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000001422",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "چاشنی و افزودنی",
+          "subcategory": "ترشی و شور",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12264,
+          "original_name": "خیارشور معمولی مهرام 680 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261198232176"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "00249432-3426-4c3a-b04a-95f87cc86473",
+      "barcode": "6262477911201",
+      "name_fa": "آلوچه ترش مزمز 50 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A2%D9%84%D9%88%DA%86%D9%87-%D8%AA%D8%B1%D8%B4-%D9%85%D8%B2%D9%85%D8%B2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262477911201",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002139",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "آلوچه و لواشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 3756,
+          "original_name": "آلوچه ترش مزمز 50 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262477911201"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "9bb9ca9c-a577-4527-aaa2-e3641ffcc2d7",
+      "barcode": "6262477911997",
+      "name_fa": "آلبالو خشک مزمز 60 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A2%D9%84%D8%A8%D8%A7%D9%84%D9%88-%D8%AE%D8%B4%DA%A9-%D9%85%D8%B2%D9%85%D8%B2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262477911997",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000002139",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "آلوچه و لواشک",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 3715,
+          "original_name": "آلبالو خشک مزمز 60 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262477911997"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "2c6686ef-a576-5f25-9fe6-29f6d40b023d",
+        "name": "ترشی ها و شوری ها",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 10
+}

@@ -1,0 +1,901 @@
+{
+  "items": [
+    {
+      "id": "545a9e0a-f937-543e-bbbf-7f98c2aa3dea",
+      "barcode": "6260161527806",
+      "name_fa": "کاله لاکی دو نوشابه لیمو و نعنا 150 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260161527806.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "165f6025-8333-51ab-aa36-31e7c6427464",
+      "barcode": "6260161539229",
+      "name_fa": "کاله نوشیدنی لبنی گازدار لاکیدو با طعم پرتقال 1500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260161539229.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "63d2e6d7-bb22-5e02-830c-4f7952fe7f11",
+      "barcode": "6260215500335",
+      "name_fa": "پپسی نوشابه قوطی 330 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260215500335.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "c5fee702-8627-51de-8594-9bcf205faf70",
+      "barcode": "6261845300098",
+      "name_fa": "میرندا توت فرنگی  1500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261845300098.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "5ba2feda-ec41-598e-82a9-96a9d71ed579",
+      "barcode": "6261845300203",
+      "name_fa": "میرندا نوشابه پرتقالی 1500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/3559506.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "be5d8bdf-dea0-54ef-8958-14a9b573587e",
+      "barcode": "6261845300234",
+      "name_fa": "سون آپ1500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261845300234.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "856db912-9306-50c7-9a85-8089dc67d3cb",
+      "barcode": "6262106101485",
+      "name_fa": "عالیس نوشیدنی انار گازدار 1000 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6262106101485-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "04a2adaf-9ab9-50e1-a718-14b8816df3e4",
+      "barcode": "6260079240668",
+      "name_fa": "سینرژی شیشه250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260079240668.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "7aa75162-87c5-474c-a96c-397213e1842e",
+      "barcode": "6260195558210",
+      "name_fa": "نوشیدنی گازدار میوه های استوایی کریستال 1 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260195558210.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260195558210",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000019557",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آب معدنی، طعم دار و گازدار",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29077,
+          "original_name": "نوشیدنی گازدار میوه های استوایی کریستال 1 لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260195558210"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "eb564b68-9ff0-4be9-b11d-d3b4646aa531",
+      "barcode": "6260806400167",
+      "name_fa": "نوشابه پرتقالی کانادا درای 1.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260806400167.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260806400167",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 16,
+          "stuff_id": "2720000002221",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "نوشابه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28435,
+          "original_name": "نوشابه پرتقالی کانادا درای 1.5 لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260806400167"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "43edde92-7fa3-47fa-8bd3-2db878a4e440",
+      "barcode": "6260806400303",
+      "name_fa": "نوشابه پرتقالی فانتا 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/16260806400266.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260806400303",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 16,
+          "stuff_id": "2720000002221",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "نوشابه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28428,
+          "original_name": "نوشابه پرتقالی فانتا 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260806400303"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2a3eac6d-f2e7-4dee-bd8c-e05254cd437c",
+      "barcode": "6260806400310",
+      "name_fa": "نوشابه کولا کوکاکولا 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260806400310-1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260806400310",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 16,
+          "stuff_id": "2720000002221",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "نوشابه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28508,
+          "original_name": "نوشابه کولا کوکاکولا 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260806400310"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "2957de12-8c13-4640-a275-297dfe7db2e2",
+      "barcode": "6260806400327",
+      "name_fa": "نوشابه لیمویی سپرایت 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260806400327.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260806400327",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 16,
+          "stuff_id": "2720000002221",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "نوشابه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28546,
+          "original_name": "نوشابه لیمویی سپرایت 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260806400327"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "bbdeb260-2f55-4351-91bc-724de528b9fa",
+      "barcode": "8413481040021",
+      "name_fa": "آب انگور قرمز گازدار مای گلد (750 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/0029636_8413481040021jpg.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8413481040021",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آبمیوه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2338,
+          "original_name": "آب انگور قرمز گازدار مای گلد (750 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8413481040021"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "75553a0d-3c98-4311-97ff-ddccb28b3966",
+      "barcode": "8697459292258",
+      "name_fa": "نوشیدنی انرژی زا گلوری (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/glory.png",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8697459292258",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 16,
+          "stuff_id": "2720000002221",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "نوشیدنی انرژی زا",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28937,
+          "original_name": "نوشیدنی انرژی زا گلوری (500 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8697459292258"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "ae31c5cc-cd73-4585-868d-f5312ff808a2",
+      "barcode": "90162602",
+      "name_fa": "نوشیدنی انرژی زا ردبول 250 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/90162602.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:90162602",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 16,
+          "stuff_id": "2720000002221",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "نوشیدنی انرژی زا",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28911,
+          "original_name": "نوشیدنی انرژی زا ردبول 250 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "90162602"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "b5962034-1c62-5ceb-b308-b922fde9de39",
+        "name": "نوشابه",
+        "icon_url": null,
+        "parent_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 16
+}

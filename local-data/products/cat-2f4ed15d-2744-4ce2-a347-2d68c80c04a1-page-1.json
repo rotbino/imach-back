@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "id": "a38367b8-2298-4c90-8617-cfebab1d9bf1",
+      "barcode": null,
+      "name_fa": "ساندویچ کلاب ژامبون گوشت 90 درصد 150 گرمی پانی‌کلاب",
+      "name_en": null,
+      "description": null,
+      "brand_id": "493dbd36-6799-4cb6-b4a6-e53475f93e19",
+      "category_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": 150,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ساندویچ کلاب ژامبون گوشت",
+        "pack_count": null,
+        "parsed_brand": "پانی‌کلاب",
+        "original_name": "ساندویچ کلاب ژامبون گوشت 90 درصد 150 گرمی پانی‌کلاب",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "150 گرمی 90 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.160Z",
+      "updated_at": "2025-12-29T13:09:16.342Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "493dbd36-6799-4cb6-b4a6-e53475f93e19",
+        "name": "پانی‌کلاب",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:09:16.341Z"
+      },
+      "category": {
+        "id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "name": "غذا و کنسرو",
+        "icon_url": "🥫",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.024Z"
+      }
+    }
+  ],
+  "total": 1
+}

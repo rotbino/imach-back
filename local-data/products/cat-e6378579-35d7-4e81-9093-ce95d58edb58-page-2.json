@@ -1,0 +1,1312 @@
+{
+  "items": [
+    {
+      "id": "f3b1febd-66f3-4d54-b467-8d66040fe3c0",
+      "barcode": "6260462478012",
+      "name_fa": "خمیر دندان ژله‌ای دارچین 100 گرمی نسیم",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4c017241-3204-43f2-8494-0cfeccd0ed30",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1513423251.jpg",
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "نسیم",
+        "original_name": "خمیر دندان ژله‌ای دارچین 100 گرمی نسیم",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          },
+          {
+            "name": "نوع",
+            "value": "ژله‌ای"
+          }
+        ],
+        "suggested_variant_name": "100 گرمی دارچین ژله‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.372Z",
+      "updated_at": "2025-12-29T17:20:28.575Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4c017241-3204-43f2-8494-0cfeccd0ed30",
+        "name": "نسیم",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:20:28.568Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "e52b359b-ed1f-4f67-bd00-2acb84391f96",
+      "barcode": "6260007509959",
+      "name_fa": "خمیر دندان سه رنگ 120 گرمی كرند",
+      "name_en": null,
+      "description": null,
+      "brand_id": "41944e43-bc9d-4d68-9a26-fa3b55ad2bae",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1568702503.jpg",
+      "reference_price": null,
+      "weight_grams": 120,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "كرند",
+        "original_name": "خمیر دندان سه رنگ 120 گرمی كرند",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سه رنگ"
+          }
+        ],
+        "suggested_variant_name": "120 گرمی سه رنگ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.465Z",
+      "updated_at": "2025-12-29T17:18:51.939Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "41944e43-bc9d-4d68-9a26-fa3b55ad2bae",
+        "name": "كرند",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:18:51.938Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "ebc6f781-fb1c-4b46-95cf-b75089f28e3e",
+      "barcode": "6261124010533",
+      "name_fa": "خمیر دندان کامل با طعم دوگانه نعنا و سیب 100 گرمی بس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1537691852.jpg",
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "بس",
+        "original_name": "خمیر دندان کامل با طعم دوگانه نعنا و سیب 100 گرمی بس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دوگانه نعنا و سیب"
+          }
+        ],
+        "suggested_variant_name": "100 گرمی با طعم دوگانه نعنا و سیب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.475Z",
+      "updated_at": "2025-12-29T17:18:40.610Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+        "name": "بس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:19.244Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "effa658d-9897-41a1-9308-4e2fff4abd13",
+      "barcode": "6261124010861",
+      "name_fa": "خمیر دندان ژله ای کودک با طعم موز 80 گرمی بس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1537692018.jpg",
+      "reference_price": null,
+      "weight_grams": 80,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان ژله ای کودک",
+        "pack_count": null,
+        "parsed_brand": "بس",
+        "original_name": "خمیر دندان ژله ای کودک با طعم موز 80 گرمی بس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "موز"
+          }
+        ],
+        "suggested_variant_name": "80 گرمی با طعم موز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.477Z",
+      "updated_at": "2025-12-29T17:18:39.068Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "eb73ef38-79b9-4048-8adc-6c8a5f504f37",
+        "name": "بس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:19.244Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "e6144176-5418-4219-850f-2833e3a6edd9",
+      "barcode": "6260600106333",
+      "name_fa": "خمیر دندان کامل 70 گرمی پاتریکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "606d37c2-c8b7-406d-9bb4-e82bd031c175",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588074842.jpg",
+      "reference_price": null,
+      "weight_grams": 70,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان کامل",
+        "pack_count": null,
+        "parsed_brand": "پاتریکس",
+        "original_name": "خمیر دندان کامل 70 گرمی پاتریکس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.491Z",
+      "updated_at": "2025-12-29T17:18:24.265Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "606d37c2-c8b7-406d-9bb4-e82bd031c175",
+        "name": "پاتریکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:19.596Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "fe887f26-508c-4777-b7e3-d1bf5a2af10e",
+      "barcode": "6260462477770",
+      "name_fa": "خمیر دندان شب 75 میلی لیتری دنتا مکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f072a2ad-a1ae-41a7-a783-d75e05f6021b",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588074717.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 75,
+        "clean_name": "خمیر دندان شب",
+        "pack_count": null,
+        "parsed_brand": "دنتا مکس",
+        "original_name": "خمیر دندان شب 75 میلی لیتری دنتا مکس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "75 میلی لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.498Z",
+      "updated_at": "2025-12-29T17:18:17.699Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f072a2ad-a1ae-41a7-a783-d75e05f6021b",
+        "name": "دنتا مکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:18:17.696Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "e5ad678f-a746-4b5a-9a4d-4a7991624aad",
+      "barcode": "6260007551187",
+      "name_fa": "خمیر دندان گیاهی سه رنگ  120 گرمی کرند",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f245a75d-7304-4a71-b0ad-ecc9d1038e6b",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1568702583.jpg",
+      "reference_price": null,
+      "weight_grams": 120,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "کرند",
+        "original_name": "خمیر دندان گیاهی سه رنگ  120 گرمی کرند",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گیاهی"
+          },
+          {
+            "name": "رنگ",
+            "value": "سه رنگ"
+          }
+        ],
+        "suggested_variant_name": "120 گرمی گیاهی سه رنگ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.502Z",
+      "updated_at": "2025-12-29T17:18:13.889Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f245a75d-7304-4a71-b0ad-ecc9d1038e6b",
+        "name": "کرند",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:18:13.880Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "efb442ce-a547-4313-bf28-e4447997201a",
+      "barcode": "6260010549164",
+      "name_fa": "خمیر دندان کامل با طعم دارچین 130 گرمی مریدنت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2a3650f1-8fab-4f54-ba5e-ef59124cb147",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1561547535.jpg",
+      "reference_price": null,
+      "weight_grams": 130,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان کامل",
+        "pack_count": null,
+        "parsed_brand": "مریدنت",
+        "original_name": "خمیر دندان کامل با طعم دارچین 130 گرمی مریدنت",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دارچین"
+          }
+        ],
+        "suggested_variant_name": "130 گرمی دارچین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.594Z",
+      "updated_at": "2025-12-29T17:16:25.306Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2a3650f1-8fab-4f54-ba5e-ef59124cb147",
+        "name": "مریدنت",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:55:06.165Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "fafda33f-aa4c-4121-a6c5-ada53e165451",
+      "barcode": "6261101551349",
+      "name_fa": "خمیر دندان ژل ویتامینه 134 گرمی پونه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cf3cd94f-3aeb-4cce-bb4a-3e75947973fa",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1492335113.jpg",
+      "reference_price": null,
+      "weight_grams": 134,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "پونه",
+        "original_name": "خمیر دندان ژل ویتامینه 134 گرمی پونه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ژل ویتامینه"
+          }
+        ],
+        "suggested_variant_name": "134 گرمی ژل ویتامینه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.637Z",
+      "updated_at": "2025-12-29T17:15:28.602Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cf3cd94f-3aeb-4cce-bb4a-3e75947973fa",
+        "name": "پونه",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:15:26.094Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "f7c284a6-d4a4-4e4d-8099-f4311407800d",
+      "barcode": "6260156000789",
+      "name_fa": "خمیر دندان سفید کننده برای دندان های حساس 100 گرمی فارمد",
+      "name_en": null,
+      "description": null,
+      "brand_id": "90eef5bc-1b72-4710-8056-c65c24f3323d",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1548855477.jpg",
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "فارمد",
+        "original_name": "خمیر دندان سفید کننده برای دندان های حساس 100 گرمی فارمد",
+        "parsed_attributes": [
+          {
+            "name": "سایر",
+            "value": "سفید کننده برای دندان های حساس"
+          }
+        ],
+        "suggested_variant_name": "100 گرمی سفید کننده برای دندان های حساس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.892Z",
+      "updated_at": "2025-12-29T17:11:58.199Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "90eef5bc-1b72-4710-8056-c65c24f3323d",
+        "name": "فارمد",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:07:12.396Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "ee08fcd1-ff22-41dc-ad2a-7ce88f4d47c5",
+      "barcode": "6260526418299",
+      "name_fa": "خمیر دندان سفید کننده  125 گرمی کلوس آپ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f862e4c6-cea6-4fc8-b31a-0503552f6342",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1561548887.jpg",
+      "reference_price": null,
+      "weight_grams": 125,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "کلوس آپ",
+        "original_name": "خمیر دندان سفید کننده  125 گرمی کلوس آپ",
+        "parsed_attributes": [
+          {
+            "name": "attribute",
+            "value": "سفید کننده"
+          }
+        ],
+        "suggested_variant_name": "125 گرمی سفید کننده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.896Z",
+      "updated_at": "2025-12-29T17:11:55.346Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f862e4c6-cea6-4fc8-b31a-0503552f6342",
+        "name": "کلوس آپ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:38:44.934Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "f65212d2-4810-4d35-b984-d523bb4ba544",
+      "barcode": "6260156000772",
+      "name_fa": "خمیر دندان کامل برای دندان های حساس 100 گرمی فارمد",
+      "name_en": null,
+      "description": null,
+      "brand_id": "90eef5bc-1b72-4710-8056-c65c24f3323d",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1548855413.jpg",
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "فارمد",
+        "original_name": "خمیر دندان کامل برای دندان های حساس 100 گرمی فارمد",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "کامل"
+          },
+          {
+            "name": "مورد استفاده",
+            "value": "دندان های حساس"
+          }
+        ],
+        "suggested_variant_name": "100 گرمی کامل برای دندان های حساس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.992Z",
+      "updated_at": "2025-12-29T17:10:47.288Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "90eef5bc-1b72-4710-8056-c65c24f3323d",
+        "name": "فارمد",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:07:12.396Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "da67e866-ebeb-44e0-9459-c01ae21ce482",
+      "barcode": "8717644461068",
+      "name_fa": "خمیر دندان سفید کننده فوری 75 میلی‌‌‌لیتری سیگنال",
+      "name_en": null,
+      "description": null,
+      "brand_id": "022432e9-0144-4f86-9326-079f405350a6",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1537694364.jpg",
+      "reference_price": null,
+      "weight_grams": 0,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "سیگنال",
+        "original_name": "خمیر دندان سفید کننده فوری 75 میلی‌‌‌لیتری سیگنال",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "سفید کننده فوری"
+          }
+        ],
+        "suggested_variant_name": "75 میلی‌لیتری سفید کننده فوری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.366Z",
+      "updated_at": "2025-12-29T17:04:24.107Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "022432e9-0144-4f86-9326-079f405350a6",
+        "name": "سیگنال",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:39:07.376Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "dbbfb0e0-7f80-42cf-857b-1d56d165104a",
+      "barcode": "6238697990005",
+      "name_fa": "خمیر دندان ضد بوی بد دهان 2 عددی سومیگاکی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "63892845-c83f-4588-a1b0-2df7df0c2a9d",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589618119.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": 2,
+        "parsed_brand": "سومیگاکی",
+        "original_name": "خمیر دندان ضد بوی بد دهان 2 عددی سومیگاکی",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "ضد بوی بد دهان"
+          }
+        ],
+        "suggested_variant_name": "2 عددی ضد بوی بد دهان"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.639Z",
+      "updated_at": "2025-12-29T16:59:52.985Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "63892845-c83f-4588-a1b0-2df7df0c2a9d",
+        "name": "سومیگاکی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:59:52.983Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "fd292b44-15d1-45bb-806e-052f6bf32694",
+      "barcode": "8934839116095",
+      "name_fa": "خمیر دندان سفید کننده ۱۰۰ میلی‌لیتری سیگنال",
+      "name_en": null,
+      "description": null,
+      "brand_id": "022432e9-0144-4f86-9326-079f405350a6",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473137623.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 100,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "سیگنال",
+        "original_name": "خمیر دندان سفید کننده ۱۰۰ میلی‌لیتری سیگنال",
+        "parsed_attributes": [
+          {
+            "name": "سفید کننده",
+            "value": "سفید کننده"
+          }
+        ],
+        "suggested_variant_name": "100 میلی‌لیتری سفید کننده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.682Z",
+      "updated_at": "2025-12-29T16:39:16.007Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "022432e9-0144-4f86-9326-079f405350a6",
+        "name": "سیگنال",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:39:07.376Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "e2aa423e-19fd-4cad-9dfb-37fe1c3ecc5c",
+      "barcode": "8711700544078",
+      "name_fa": "خمیر دندان سفید کننده و براق کننده ۷۵ میلی‌لیتری سیگنال",
+      "name_en": null,
+      "description": null,
+      "brand_id": "022432e9-0144-4f86-9326-079f405350a6",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/8711700544078(1).jpg",
+      "reference_price": null,
+      "weight_grams": 0,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "سیگنال",
+        "original_name": "خمیر دندان سفید کننده و براق کننده ۷۵ میلی‌لیتری سیگنال",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "سفید کننده و براق کننده"
+          }
+        ],
+        "suggested_variant_name": "75 میلی‌لیتری سفید کننده و براق کننده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.688Z",
+      "updated_at": "2025-12-29T16:39:09.940Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "022432e9-0144-4f86-9326-079f405350a6",
+        "name": "سیگنال",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:39:07.376Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "f5b03670-2ae4-4e2b-a8e1-90db80c78d4b",
+      "barcode": "8718114667188",
+      "name_fa": "خمیر دندان بهبود حساسیت دندان ۷۵ میلی‌لیتری سیگنال",
+      "name_en": null,
+      "description": null,
+      "brand_id": "022432e9-0144-4f86-9326-079f405350a6",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/8718114667188(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 75,
+        "clean_name": "خمیر دندان بهبود حساسیت دندان",
+        "pack_count": null,
+        "parsed_brand": "سیگنال",
+        "original_name": "خمیر دندان بهبود حساسیت دندان ۷۵ میلی‌لیتری سیگنال",
+        "parsed_attributes": [],
+        "suggested_variant_name": "75 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.691Z",
+      "updated_at": "2025-12-29T16:39:07.394Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "022432e9-0144-4f86-9326-079f405350a6",
+        "name": "سیگنال",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:39:07.376Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "e85ae995-dd7b-4daa-8c63-bb164005a80c",
+      "barcode": "8934839117238",
+      "name_fa": "خمیر دندان منتول فرش ۶۰ گرمی کلوس آپ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f862e4c6-cea6-4fc8-b31a-0503552f6342",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1471242600.jpg",
+      "reference_price": null,
+      "weight_grams": 60,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "کلوس آپ",
+        "original_name": "خمیر دندان منتول فرش ۶۰ گرمی کلوس آپ",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "منتول فرش"
+          }
+        ],
+        "suggested_variant_name": "60 گرمی منتول فرش"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.696Z",
+      "updated_at": "2025-12-29T16:39:03.696Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f862e4c6-cea6-4fc8-b31a-0503552f6342",
+        "name": "کلوس آپ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:38:44.934Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "f237fba4-d3c9-41aa-b78e-e5f59809ddd8",
+      "barcode": "7891024124826",
+      "name_fa": "خمیر دندان اپتیک وایت نعنایی کلگیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "390a2c0c-9fcb-4601-9d65-05da37ccfa7b",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474459872.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "کلگیت",
+        "original_name": "خمیر دندان اپتیک وایت نعنایی کلگیت",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "نعنایی"
+          },
+          {
+            "name": "نوع",
+            "value": "اپتیک وایت"
+          }
+        ],
+        "suggested_variant_name": "اپتیک وایت نعنایی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.718Z",
+      "updated_at": "2025-12-29T16:38:29.594Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "390a2c0c-9fcb-4601-9d65-05da37ccfa7b",
+        "name": "کلگیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:38:26.412Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "fa52589b-8fd6-48a6-a417-f07de4cdc210",
+      "barcode": "8714789615592",
+      "name_fa": "خمیر دندان توتال سفید کننده دندان 75 میلی‌لیتری کلگیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "390a2c0c-9fcb-4601-9d65-05da37ccfa7b",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473139461.jpg",
+      "reference_price": null,
+      "weight_grams": 0,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان توتال",
+        "pack_count": null,
+        "parsed_brand": "کلگیت",
+        "original_name": "خمیر دندان توتال سفید کننده دندان 75 میلی‌لیتری کلگیت",
+        "parsed_attributes": [
+          {
+            "name": "سفید کننده",
+            "value": "دندان"
+          }
+        ],
+        "suggested_variant_name": "75 میلی‌لیتری سفید کننده دندان"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.720Z",
+      "updated_at": "2025-12-29T16:38:26.415Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "390a2c0c-9fcb-4601-9d65-05da37ccfa7b",
+        "name": "کلگیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:38:26.412Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "eefcb91e-f41e-4c45-8e9b-cb1e1fdd1be4",
+      "barcode": "8801046848197",
+      "name_fa": "خمیر دندان با عصاره چای سبز 120 گرمی 2080",
+      "name_en": null,
+      "description": null,
+      "brand_id": "560432e7-687a-4933-91a2-077c06395db6",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473135837.jpg",
+      "reference_price": null,
+      "weight_grams": 120,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": "2080",
+        "original_name": "خمیر دندان با عصاره چای سبز 120 گرمی 2080",
+        "parsed_attributes": [
+          {
+            "name": "عصاره",
+            "value": "چای سبز"
+          }
+        ],
+        "suggested_variant_name": "120 گرمی با عصاره چای سبز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.730Z",
+      "updated_at": "2025-12-29T16:38:13.335Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "560432e7-687a-4933-91a2-077c06395db6",
+        "name": "2080",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:38:11.865Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "f7d41aff-d53b-41cf-a965-e95d8006e746",
+      "barcode": "8801046862827",
+      "name_fa": "خمیر دندان خنک کننده 120 گرمی 2080",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473136071.jpg",
+      "reference_price": null,
+      "weight_grams": 120,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "خمیر دندان خنک کننده 120 گرمی 2080",
+        "parsed_attributes": [
+          {
+            "name": "خنک کننده",
+            "value": "خنک کننده"
+          }
+        ],
+        "suggested_variant_name": "120 گرمی خنک کننده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.732Z",
+      "updated_at": "2025-12-29T16:38:10.438Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    },
+    {
+      "id": "f586c3f0-ccb4-4671-b0c5-3db8e14ab586",
+      "barcode": "8414600132511",
+      "name_fa": "خمیر دندان و دهانشویه 2 در 1 محافظت کننده فورامن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "282f50cf-dd64-4a7e-97e4-d0a45c0dede3",
+      "category_id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1487157039.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خمیر دندان و دهانشویه",
+        "pack_count": null,
+        "parsed_brand": "فورامن",
+        "original_name": "خمیر دندان و دهانشویه 2 در 1 محافظت کننده فورامن",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "2 در 1 محافظت کننده"
+          }
+        ],
+        "suggested_variant_name": "2 در 1 محافظت کننده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.735Z",
+      "updated_at": "2025-12-29T16:38:06.731Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "282f50cf-dd64-4a7e-97e4-d0a45c0dede3",
+        "name": "فورامن",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:38:06.728Z"
+      },
+      "category": {
+        "id": "e6378579-35d7-4e81-9093-ce95d58edb58",
+        "name": "خمیر دندان",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.218Z"
+      }
+    }
+  ],
+  "total": 123
+}

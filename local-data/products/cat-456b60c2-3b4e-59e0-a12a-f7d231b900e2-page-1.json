@@ -1,0 +1,199 @@
+{
+  "items": [
+    {
+      "id": "b9f87cb2-3419-5146-81b4-44ab33ea4bdc",
+      "barcode": "6260191734045",
+      "name_fa": "گلبهار پنبه هیدرو فیل غیر استریل 50 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260191734038.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+        "name": "لوازم آرایشی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "26b24a64-ba1a-5b49-aa85-be2c0479e4ed",
+      "barcode": "6260603700019",
+      "name_fa": "رایا پنبه بهداشتی 100 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260603700019.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+        "name": "لوازم آرایشی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0445651f-6158-51d7-8793-6c924991735b",
+      "barcode": "6262801300022",
+      "name_fa": "ورکان پد لاک پاک کن 5 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/107-large_default.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+        "name": "لوازم آرایشی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "80abfdae-4934-4c7f-bd35-1d79f7f8e28b",
+      "barcode": "6260687200023",
+      "name_fa": "پد لاک پاک کن ناژه 5 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260687200023.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260687200023",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2905270101427",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "آرایشی و عطر و ادکلن",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 6778,
+          "original_name": "پد لاک پاک کن ناژه 5 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260687200023"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "456b60c2-3b4e-59e0-a12a-f7d231b900e2",
+        "name": "لوازم آرایشی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 4
+}

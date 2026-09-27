@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "15133d4f-10e0-4479-a8d0-9632ee85bea9",
+      "barcode": null,
+      "name_fa": "دمنوش گل گاوزبان 12 عددی شاهسوند",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c369e389-a6fe-4530-9d69-bae83305aeac",
+      "category_id": "f84e6875-e713-452f-b691-c56b62e4c378",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دمنوش گل گاوزبان",
+        "pack_count": 12,
+        "parsed_brand": "شاهسوند",
+        "original_name": "دمنوش گل گاوزبان 12 عددی شاهسوند",
+        "parsed_attributes": [],
+        "suggested_variant_name": "12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.897Z",
+      "updated_at": "2025-12-29T12:36:17.480Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c369e389-a6fe-4530-9d69-bae83305aeac",
+        "name": "شاهسوند",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:46:49.960Z"
+      },
+      "category": {
+        "id": "f84e6875-e713-452f-b691-c56b62e4c378",
+        "name": "نوشیدنی",
+        "icon_url": "🥤",
+        "parent_id": null,
+        "created_at": "2025-12-29T09:34:32.026Z"
+      }
+    }
+  ],
+  "total": 1
+}

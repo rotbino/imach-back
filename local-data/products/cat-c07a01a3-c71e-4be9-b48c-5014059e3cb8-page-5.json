@@ -1,0 +1,1199 @@
+{
+  "items": [
+    {
+      "id": "fb6b4643-0f1d-4286-9669-5b9d803bb69c",
+      "barcode": "6260272815045",
+      "name_fa": "ماست پرچرب 1،5 کیلویی دامداران",
+      "name_en": null,
+      "description": null,
+      "brand_id": "030a809e-6843-40fb-ae4d-890b3124736f",
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472910424.jpg",
+      "reference_price": null,
+      "weight_grams": 1500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "دامداران",
+        "original_name": "ماست پرچرب 1،5 کیلویی دامداران",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "پرچرب"
+          }
+        ],
+        "suggested_variant_name": "1.5 کیلویی پرچرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.022Z",
+      "updated_at": "2025-12-29T12:52:38.477Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "030a809e-6843-40fb-ae4d-890b3124736f",
+        "name": "دامداران",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:46:01.966Z"
+      },
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fd57b6a0-eb1f-4b31-84c8-556f7f1bb2bf",
+      "barcode": "6260007454655",
+      "name_fa": "ماست کم چرب 2200‌ گرمی پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472913936.jpg",
+      "reference_price": null,
+      "weight_grams": 2200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "ماست کم چرب 2200‌ گرمی پگاه",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          }
+        ],
+        "suggested_variant_name": "2200 گرمی کم‌چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.121Z",
+      "updated_at": "2025-12-29T12:50:26.889Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "f9d2748c-56ec-4109-93c9-320e2888ad78",
+      "barcode": "6260007416592",
+      "name_fa": "ماست آرسیل کم چرب 900 گرمی  پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1472887218.jpg",
+      "reference_price": null,
+      "weight_grams": 900,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "ماست آرسیل کم چرب 900 گرمی  پگاه",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم چرب"
+          }
+        ],
+        "suggested_variant_name": "900 گرمی کم چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.122Z",
+      "updated_at": "2025-12-29T12:50:25.619Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "f7280f43-da8c-41c7-aad9-0d827d1797a2",
+      "barcode": "6260161512093",
+      "name_fa": "ماست 1،4 درصد چربی 2200 گرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/6260161512093(1).jpg",
+      "reference_price": null,
+      "weight_grams": 2200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "ماست 1،4 درصد چربی 2200 گرمی کاله",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "کم‌چرب"
+          }
+        ],
+        "suggested_variant_name": "2200 گرمی کم‌چرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.215Z",
+      "updated_at": "2025-12-29T12:48:24.327Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "f9280755-53d1-4e7b-a30b-cc54dd1d912e",
+      "barcode": "6260007415090",
+      "name_fa": "ماست پر چرب 1000 گرمی پگاه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1530622658.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست",
+        "pack_count": null,
+        "parsed_brand": "پگاه",
+        "original_name": "ماست پر چرب 1000 گرمی پگاه",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "پرچرب"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی پرچرب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.367Z",
+      "updated_at": "2025-12-29T12:45:03.306Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27532c77-f6fa-47e4-b89b-c0f47c7d5181",
+        "name": "پگاه",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:23:44.197Z"
+      },
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fcfed549-1924-4f88-87b1-966e76a6d029",
+      "barcode": "6261191002769",
+      "name_fa": "ماست سنتی رویه دار 8 درصد چربی 900 گرمی می‌ماس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D9%84%D8%A8%D9%86%DB%8C%D8%A7%D8%AA%2Fpic/1589982835.jpg",
+      "reference_price": null,
+      "weight_grams": 900,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماست سنتی رویه دار",
+        "pack_count": null,
+        "parsed_brand": "می‌ماس",
+        "original_name": "ماست سنتی رویه دار 8 درصد چربی 900 گرمی می‌ماس",
+        "parsed_attributes": [
+          {
+            "name": "درصد چربی",
+            "value": "8 درصد چربی"
+          }
+        ],
+        "suggested_variant_name": "900 گرمی 8 درصد چربی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:45.460Z",
+      "updated_at": "2025-12-29T12:43:05.806Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "28344b6b-ac65-4666-a4b1-f1f561053aa3",
+        "name": "می‌ماس",
+        "logo_url": null,
+        "created_at": "2025-12-29T12:14:40.785Z"
+      },
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "ff12b0fa-45a3-4800-8e60-a14e0e2b7512",
+      "barcode": "6268714603007",
+      "name_fa": "ماست پرچرب 4.2? ماهشام (1.5 کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6268714603007",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25009,
+          "original_name": "ماست پرچرب 4.2? ماهشام (1.5 کيلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6268714603007"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fdae424f-08fc-4406-a371-5417385b54f7",
+      "barcode": "6260063200906",
+      "name_fa": "ماست پرچرب پاک 2 کیلوگرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260063200906",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25018,
+          "original_name": "ماست پرچرب پاک 2 کيلوگرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260063200906"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "f7669477-6c24-446b-ad08-4a3ed5c0829e",
+      "barcode": "6264078410008",
+      "name_fa": "ماست پرچرب دومینو 2 کیلوگرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6264078410008",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25035,
+          "original_name": "ماست پرچرب دومینو 2 کیلوگرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6264078410008"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "ff889252-7231-4468-8fb9-462c75f3f0b2",
+      "barcode": "6260661010662",
+      "name_fa": "ماست پرچرب هراز (1.75 کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260661010662",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25046,
+          "original_name": "ماست پرچرب هراز (1.75 کیلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260661010662"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fc268112-49cf-49db-b750-5104d6687395",
+      "barcode": "6261371301200",
+      "name_fa": "ماست چکیده طراوت",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261371301200",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25065,
+          "original_name": "ماست چکيده طراوت",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261371301200"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fbd6d53f-3308-4c4b-bcd2-b45581085f33",
+      "barcode": "6260768506266",
+      "name_fa": "ماست خامه ای صباح 800 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260768506266",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25093,
+          "original_name": "ماست خامه اي صباح 800 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260768506266"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "f5a19a52-4054-4b40-8f21-7cb672341caa",
+      "barcode": "6260161521002",
+      "name_fa": "ماست کم چرب 1.4٪ کاله (1.5 کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260161521002",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25132,
+          "original_name": "ماست کم چرب 1.4٪ کاله (1.5 کیلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260161521002"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "ff548d4f-f492-44e5-97c8-7a447d01cae2",
+      "barcode": "6260007466481",
+      "name_fa": "ماست کم چرب غنی شده با ویتامین دی 3 پگاه (2.2 کیلوگرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260007466481",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25163,
+          "original_name": "ماست کم چرب غنی شده با ویتامین دی 3 پگاه (2.2 کیلوگرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260007466481"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "f8d28727-3cad-47c1-a5b5-f2556dc573c5",
+      "barcode": "6260176816230",
+      "name_fa": "ماست کم چرب میهن 2 کیلوگرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260176816230",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25172,
+          "original_name": "ماست کم چرب میهن 2 کیلوگرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260176816230"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fb7b6c74-fea9-494e-8a81-72e266066290",
+      "barcode": "6260161543073",
+      "name_fa": "ماست موسیر چکیده کم چرب سون کاله 900 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260161543073",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25189,
+          "original_name": "ماست موسیر چکیده کم چرب سون کاله 900 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260161543073"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fd976863-f970-4eb3-81b3-72b1fc7b39d6",
+      "barcode": "6260161527813",
+      "name_fa": "ماست همزده پروبیوتیک کفیر کاله (750 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260161527813",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 25226,
+          "original_name": "ماست همزده پروبیوتیک کفیر کاله (750 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260161527813"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    },
+    {
+      "id": "fbb6c339-1c85-4966-b426-d8dadaa6f32a",
+      "barcode": "6260661009918",
+      "name_fa": "هراز. سالاد ماست",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260661009918",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2720000001569",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "لبنیات و بستنی",
+          "subcategory": "ماست",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29310,
+          "original_name": "هراز. سالاد ماست",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260661009918"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c07a01a3-c71e-4be9-b48c-5014059e3cb8",
+        "name": "ماست",
+        "icon_url": null,
+        "parent_id": "175f72c8-0b91-49ef-9090-4c77a065115e",
+        "created_at": "2025-12-29T09:34:44.584Z"
+      }
+    }
+  ],
+  "total": 418
+}

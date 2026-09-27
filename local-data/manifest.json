@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "approach": "structured-fetch",
+    "last_updated": "2026-09-27T22:45:00Z",
+    "status": "categories_fetched_brands_pending"
+  },
+  "structure": {
+    "categories.json": "All 272 barcodeapp categories with parent_id and counts (DONE)",
+    "brands.json": "All ~1144 barcodeapp brands (TODO - needs token)",
+    "products/": "Per-category product pages: cat-{catId}-page-{N}.json (TODO)",
+    "catalog-summary.json": "Final summary with per-category stats (generated at end)",
+    "fetch-log.json": "Detailed log of fetch process"
+  },
+  "categories_summary": {
+    "total": 272,
+    "with_products": 247,
+    "top_5": [
+      { "name": "شیرینی و دسر", "count": 1944 },
+      { "name": "سس", "count": 886 },
+      { "name": "نوشیدنی‌ های سرد", "count": 865 },
+      { "name": "ابزار و ملزومات", "count": 755 },
+      { "name": "نوشیدنی های گرم", "count": 744 }
+    ]
+  },
+  "next_steps": [
+    "Get fresh token (15 min validity needed)",
+    "Run: TOKEN='<bearer>' node /home/z/my-project/scripts/fetch-structured.js",
+    "Script will fetch brands.json (single request)",
+    "Then iterate categories: for each, fetch all pages of products",
+    "Expected: ~5000 pages total, ~15 minutes needed (need 2-3 token renewals)"
+  ]
+}

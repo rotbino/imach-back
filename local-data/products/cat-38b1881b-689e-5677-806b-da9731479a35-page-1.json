@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "bf0f6a66-c2a9-5a32-8122-84ac4a7c1a46",
+      "barcode": "6260147703576",
+      "name_fa": "ژل شستشو صورت آقایان هیدرودرم Hydroderm حجم 150 میلی‌لیتر",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "38b1881b-689e-5677-806b-da9731479a35",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V03/%D9%84%D9%88%D8%A7%D8%B2%D9%85%20%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%20%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87/pic/%DA%98%D9%84-%D8%B4%D8%B3%D8%AA%D8%B4%D9%88-%D8%B5%D9%88%D8%B1%D8%AA-%D8%A2%D9%82%D8%A7%DB%8C%D8%A7%D9%86-%D9%87%DB%8C%D8%AF%D8%B1%D9%88%D8%AF%D8%B1%D9%85-hydroderm-%D8%AD%D8%AC%D9%85-150-%D9%85%DB%8C%D9%84%DB%8C%D9%84%DB%8C%D8%AA%D8%B1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "لوازم بهداشتی مردانه .xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "38b1881b-689e-5677-806b-da9731479a35",
+        "name": "ژل شستشو مردانه",
+        "icon_url": null,
+        "parent_id": "4d3d0be8-7566-4c17-bb64-79cde1e76292",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

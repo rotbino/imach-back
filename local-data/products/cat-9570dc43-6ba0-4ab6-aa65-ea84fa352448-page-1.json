@@ -1,0 +1,5688 @@
+{
+  "items": [
+    {
+      "id": "08a41d65-0e38-40e8-b5cc-d46d85082352",
+      "barcode": "6260007801039",
+      "name_fa": "سوسیس کوکتل گوشت و پنیر 55 درصد گوشت قرمز 500 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853083.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل گوشت و پنیر",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس کوکتل گوشت و پنیر 55 درصد گوشت قرمز 500 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "55 درصد گوشت قرمز"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 55 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.250Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a2e1f035-39f1-4c88-be98-50ab89a43a3b",
+      "barcode": "6260007801046",
+      "name_fa": "سوسیس کوکتل مخصوص 70 درصد گوشت 500 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853140.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل مخصوص",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس کوکتل مخصوص 70 درصد گوشت 500 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.426Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "25cc8b63-7134-4dc1-84ad-4d35f6676e96",
+      "barcode": "6260007800612",
+      "name_fa": "همبرگر 75 درصد گوشت 500 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1589787157.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "همبرگر 75 درصد گوشت 500 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "75"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 75 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.442Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "776bf819-37f0-475b-b738-22ed8dc05dc2",
+      "barcode": "6260007800957",
+      "name_fa": "همبرگر 90 درصد گوشت 500 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1589787245.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "همبرگر 90 درصد گوشت 500 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90 درصد"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 90 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.274Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "62cfeb51-0568-40f7-bb53-5580eda732f0",
+      "barcode": "6260007801374",
+      "name_fa": "سوسیس هلندی 40 درصد گوشت قرمز 1000 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853169.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس هلندی",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس هلندی 40 درصد گوشت قرمز 1000 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت قرمز",
+            "value": "40"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 40 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.857Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "2d01b775-510d-4d76-808e-454a9abd1e52",
+      "barcode": "6260007801404",
+      "name_fa": "هات داگ ساده 55 درصد گوشت قرمز 1000 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853194.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "هات داگ ساده",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "هات داگ ساده 55 درصد گوشت قرمز 1000 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت قرمز",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 55 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.858Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "787f8e19-c8dd-4bc0-a11b-eec8a7f9f69f",
+      "barcode": "6260007801411",
+      "name_fa": "سوسیس کوکتل مرغ 1000 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853216.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل مرغ",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس کوکتل مرغ 1000 گرمی 202",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1000 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.859Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "6e8b0538-eb99-43e2-9bd3-a9eaa88256f4",
+      "barcode": "6260007801459",
+      "name_fa": "سوسیس کوکتل ساده 55 درصد گوشت 1000 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853271.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس کوکتل ساده 55 درصد گوشت 1000 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "ساده"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.481Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "856e9e9a-cca8-4602-a37e-b09f99eadb7e",
+      "barcode": "6260007802005",
+      "name_fa": "کالباس 80 درصد گوشت قرمز 250 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853298.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "کالباس 80 درصد گوشت قرمز 250 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گوشت قرمز"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "80"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی 80 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.273Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "6dd368a9-2c65-448d-8b11-287b7aa1ccd4",
+      "barcode": "6260007802012",
+      "name_fa": "ژامبون پپرونی 90 درصد گوشت 250 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853330.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ژامبون پپرونی",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "ژامبون پپرونی 90 درصد گوشت 250 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی 90 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.449Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "794dcbc0-efd8-440a-8c66-ff0cd2ee82bf",
+      "barcode": "6260007802104",
+      "name_fa": "بیکن گوشت فرانسوی 97 درصد گوساله 250 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853356.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "بیکن گوشت",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "بیکن گوشت فرانسوی 97 درصد گوساله 250 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گوشت گوساله"
+          },
+          {
+            "name": "منطقه",
+            "value": "فرانسوی"
+          },
+          {
+            "name": "درصد",
+            "value": "97 درصد"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی گوشت گوساله فرانسوی 97 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.444Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "314cdecc-9633-455e-a528-919bfef1fd2d",
+      "barcode": "6260007802166",
+      "name_fa": "ژامبون مرغ 90 درصد 300 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853381.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ژامبون مرغ",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "ژامبون مرغ 90 درصد 300 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 90 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.254Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "843b2499-9490-4a0f-a4af-75f8d9008be1",
+      "barcode": "6260007802326",
+      "name_fa": "سوسیس کوکتل 80 درصد گوشت قرمز 300 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853406.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس کوکتل 80 درصد گوشت قرمز 300 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "80 درصد گوشت قرمز"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 80 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.438Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3e6d923c-e36b-476e-a2f9-686b398584a1",
+      "barcode": "6260007802562",
+      "name_fa": "سوسیس 80 درصد گوشت قرمز 400 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853434.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس 80 درصد گوشت قرمز 400 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "80 درصد گوشت قرمز"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 80 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.440Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "434cd641-7d01-4c90-803d-7ed4a9157192",
+      "barcode": "6260007802579",
+      "name_fa": "سوسیس هات داگ مرغ با پنیر گودا 60 درصد 400 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853464.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس هات داگ مرغ",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "سوسیس هات داگ مرغ با پنیر گودا 60 درصد 400 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "با پنیر گودا"
+          },
+          {
+            "name": "درصد",
+            "value": "60 درصد"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی با پنیر گودا 60 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.892Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "051c2a77-7f89-4603-9d00-1b6df78962c7",
+      "barcode": "6260007802623",
+      "name_fa": "ژامبون رویال بیف 90 درصد گوشت قرمز 300 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1558853524.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ژامبون رویال بیف",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "ژامبون رویال بیف 90 درصد گوشت قرمز 300 گرمی 202",
+        "parsed_attributes": [
+          {
+            "name": "گوشت قرمز",
+            "value": "90 درصد"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 90 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.482Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "4bd8f481-92b7-4739-816f-dcaf4b8227d3",
+      "barcode": "6260007910038",
+      "name_fa": "همبرگر معمولی 30 درصد گوشت 5 عددی مام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fe07f984-c970-4a64-ad90-cc9f91c0805a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1547462252.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": 5,
+        "parsed_brand": "مام",
+        "original_name": "همبرگر معمولی 30 درصد گوشت 5 عددی مام",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "معمولی"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "30"
+          }
+        ],
+        "suggested_variant_name": "معمولی 30 درصد گوشت 5 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.233Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fe07f984-c970-4a64-ad90-cc9f91c0805a",
+        "name": "مام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:45:29.032Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5980e8fe-f7bc-45fd-b155-583d86b62543",
+      "barcode": "6260007910366",
+      "name_fa": "همبرگر رویال 85 درصد گوشت 5 عددی مام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fe07f984-c970-4a64-ad90-cc9f91c0805a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1547461013.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر رویال",
+        "pack_count": 5,
+        "parsed_brand": "مام",
+        "original_name": "همبرگر رویال 85 درصد گوشت 5 عددی مام",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "85"
+          }
+        ],
+        "suggested_variant_name": "5 عددی 85 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.272Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fe07f984-c970-4a64-ad90-cc9f91c0805a",
+        "name": "مام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:45:29.032Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5f546cde-3038-4ea4-8874-c9980f564715",
+      "barcode": "6260007910564",
+      "name_fa": "همبرگر کلاسیک 95 درصد گوشت 5 عددی مام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fe07f984-c970-4a64-ad90-cc9f91c0805a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1547462294.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر کلاسیک",
+        "pack_count": 5,
+        "parsed_brand": "مام",
+        "original_name": "همبرگر کلاسیک 95 درصد گوشت 5 عددی مام",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "95"
+          }
+        ],
+        "suggested_variant_name": "5 عددی 95 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.280Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fe07f984-c970-4a64-ad90-cc9f91c0805a",
+        "name": "مام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:45:29.032Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5fe4a197-113c-420c-a4f1-14f4f87206ba",
+      "barcode": "6260122010026",
+      "name_fa": "همبرگر 30 درصد گوشت 500 گرمی اروئی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e23a5506-d4b7-48f6-8caf-3e56007585a4",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1515576166.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": "ارویی",
+        "original_name": "همبرگر 30 درصد گوشت 500 گرمی اروئی",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "30"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 30 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.377Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e23a5506-d4b7-48f6-8caf-3e56007585a4",
+        "name": "ارویی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:43:23.571Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "29ee301b-8b8c-4211-ac90-b8e3ec71c996",
+      "barcode": "6260122011801",
+      "name_fa": "همبرگر 95 درصد گوشت 400 گرمی اروئی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e23a5506-d4b7-48f6-8caf-3e56007585a4",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260122011801(1).jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": "ارویی",
+        "original_name": "همبرگر 95 درصد گوشت 400 گرمی اروئی",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "95 درصد"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 95 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.265Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e23a5506-d4b7-48f6-8caf-3e56007585a4",
+        "name": "ارویی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:43:23.571Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "2fd30552-3bab-477b-b94c-b1b207af8282",
+      "barcode": "6260161326867",
+      "name_fa": "سوسیس کراکف با پنیر و طعم دودی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1512278112.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کراکف",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "سوسیس کراکف با پنیر و طعم دودی کاله",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "دودی"
+          }
+        ],
+        "suggested_variant_name": "دودی با پنیر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.239Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "93547ed7-a197-4613-86b3-bdf672a3ec07",
+      "barcode": "6260161400901",
+      "name_fa": "همبرگر 30 درصد گوشت 500 گرمی پمینا کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1589787284.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "همبرگر 30 درصد گوشت 500 گرمی پمینا کاله",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "30 درصد"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 30 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.235Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5e7fc146-26e7-4c6c-bc94-a4b0a493fdd9",
+      "barcode": "6260161411112",
+      "name_fa": "سوسیس کوکتل پنیری 55 درصد 300 گرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473577664.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "سوسیس کوکتل پنیری 55 درصد 300 گرمی کاله",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          },
+          {
+            "name": "درصد",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی پنیری 55 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.243Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "39fb7837-6c68-4c23-a680-28ae348e521f",
+      "barcode": "6260161412782",
+      "name_fa": "سوسیس بلغاری 55 درصد گوشت یک کیلوگرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1590238730.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس بلغاری",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "سوسیس بلغاری 55 درصد گوشت یک کیلوگرمی کاله",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 55 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.443Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5e1d5295-d2e1-49c2-a32a-ff652ccb9103",
+      "barcode": "6260161419125",
+      "name_fa": "کوکتل گوشت 1 کیلویی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1515576197.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کوکتل گوشت",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "کوکتل گوشت 1 کیلویی کاله",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.493Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "8c3f78c6-9ab1-4b21-91a7-47de65952c59",
+      "barcode": "6260161419415",
+      "name_fa": "سوسیس پارمسان 1 کیلویی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1514036274.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس پارمسان",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "سوسیس پارمسان 1 کیلویی کاله",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.293Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3ee82594-0e65-4aae-902a-19234fbddc49",
+      "barcode": "6260161425058",
+      "name_fa": "کالباس مارتادلا 500 گرمی کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260161425058(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس مارتادلا",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "کالباس مارتادلا 500 گرمی کاله",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.733Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "ac7c3280-4610-417e-97ca-2988cffee31b",
+      "barcode": "6260161440013",
+      "name_fa": "همبرگر ممتاز 60 درصد گوشت 500 گرمی پمینا کاله",
+      "name_en": null,
+      "description": null,
+      "brand_id": "6744f374-677d-44d8-aab0-51008915a332",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1589788410.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر ممتاز",
+        "pack_count": null,
+        "parsed_brand": "کاله",
+        "original_name": "همبرگر ممتاز 60 درصد گوشت 500 گرمی پمینا کاله",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.434Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "6744f374-677d-44d8-aab0-51008915a332",
+        "name": "کاله",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:47.663Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a667e6a9-79fa-4602-a8a0-e0790b61e043",
+      "barcode": "6260279500364",
+      "name_fa": "همبرگر 60 درصد گوشت 500 گرمی پویاپروتئین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a6dfd301-8fa2-4606-97da-40f65b32d5f4",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1516018225.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": "پویاپروتئین",
+        "original_name": "همبرگر 60 درصد گوشت 500 گرمی پویاپروتئین",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.861Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a6dfd301-8fa2-4606-97da-40f65b32d5f4",
+        "name": "پویاپروتئین",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:31:16.238Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "46bf9c07-4ffb-44b7-955d-8738d2e9fc4a",
+      "barcode": "6260406401816",
+      "name_fa": "سوسیس کوکتل 70 درصد گوشت 500 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260406401816(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کوکتل 70 درصد گوشت 500 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.721Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "18c77df1-cc9e-4439-9db5-8e502f37c900",
+      "barcode": "6260406401892",
+      "name_fa": "سوسیس آلمانی 40 درصد گوشت 1 کیلویی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473574177.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس آلمانی",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس آلمانی 40 درصد گوشت 1 کیلویی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "40"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 40 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.719Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5ba743ca-3137-41a5-9b28-5d974264064c",
+      "barcode": "6260406401915",
+      "name_fa": "سوسیس کوکتل مرغ با 55 درصد گوشت 1 کیلویی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473574367.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل مرغ",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کوکتل مرغ با 55 درصد گوشت 1 کیلویی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "55 درصد"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 55 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.718Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "60ac721b-2aae-4b94-ada8-2fa5d3f8f0f2",
+      "barcode": "6260406410047",
+      "name_fa": "کالباس خشک ساده 60 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473583358.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس خشک ساده",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس خشک ساده 60 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.772Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3f176d57-d7ce-4168-b367-89d39843b8fe",
+      "barcode": "6260406410160",
+      "name_fa": "کالباس لیونر 55 درصد گوشت 500 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260406410160(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس لیونر",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس لیونر 55 درصد گوشت 500 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 55 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.771Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "1ed7141c-7da3-4734-a4a2-0f11e7fc94d0",
+      "barcode": "6260406410467",
+      "name_fa": "کالباس مارتادلا 40 درصد گوشت 500 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260406410467(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس مارتادلا",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس مارتادلا 40 درصد گوشت 500 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "40"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 40 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.770Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "622d2d1e-6fbd-422a-95e5-85e36d324924",
+      "barcode": "6260406410610",
+      "name_fa": "کالباس مرغ 60 درصد گوشت 300 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473575789.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس مرغ",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس مرغ 60 درصد گوشت 300 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60 درصد"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.764Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "46cabeff-b06d-465d-ba62-31863be3e189",
+      "barcode": "6260406410948",
+      "name_fa": "کالباس دودی سالامی خشک 90 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473584263.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس دودی سالامی خشک",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس دودی سالامی خشک 90 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 90 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.479Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "7baae2bc-10e1-4fe1-84f1-92369f00e515",
+      "barcode": "6260406411242",
+      "name_fa": "کالباس خشک مرغ و قارچ 60 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473579705.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس خشک مرغ و قارچ",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس خشک مرغ و قارچ 60 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60 درصد"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.766Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "19b98d7e-04a2-4a0f-b21d-c748b46c640a",
+      "barcode": "6260406411341",
+      "name_fa": "کالباس مخلوط 90 درصد گوشت و مرغ 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D8%B4%DB%8C%D8%B1%DB%8C%D9%86%DB%8C%D8%AC%D8%A7%D8%AA-%D9%88-%D8%AF%D8%B3%D8%B1%D9%87%D8%A7/Pic/1473494739.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس مخلوط",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس مخلوط 90 درصد گوشت و مرغ 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت و مرغ",
+            "value": "90 درصد"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 90 درصد گوشت و مرغ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.769Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "64ed8605-985f-4149-a988-7d9235baad84",
+      "barcode": "6260406412508",
+      "name_fa": "کالباس مخلوط 70 درصد گوشت و مرغ و قارچ 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473493174.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس مخلوط",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس مخلوط 70 درصد گوشت و مرغ و قارچ 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "مخلوط"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          },
+          {
+            "name": "مواد تشکیل دهنده",
+            "value": "گوشت و مرغ و قارچ"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی مخلوط"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.384Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3f90d463-4f6e-4c54-867b-1523f97b86d7",
+      "barcode": "6260406412645",
+      "name_fa": "کالباس بوقلمون 70 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473573455.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس بوقلمون",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس بوقلمون 70 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "70 درصد"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.773Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "2e7ab84f-d28f-476b-8975-b731a06494fb",
+      "barcode": "6260406413130",
+      "name_fa": "کالباس گوشت و قارچ 60 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473575688.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس گوشت و قارچ",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس گوشت و قارچ 60 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.763Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "239724e3-6c70-4605-9f93-e8d9979fc333",
+      "barcode": "6260406413741",
+      "name_fa": "کالباس خشک ممتاز با پنیر سالامی 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473582986.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس خشک ممتاز با پنیر سالامی",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس خشک ممتاز با پنیر سالامی 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "350 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.499Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "82dda47b-d4bd-46ca-b84a-2263c5558d97",
+      "barcode": "6260406420046",
+      "name_fa": "سوسیس آلمانی 40 درصد گوشت 450 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473489429.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس آلمانی",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس آلمانی 40 درصد گوشت 450 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "40"
+          }
+        ],
+        "suggested_variant_name": "450 گرمی 40 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.727Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "0dd1ccf6-b786-47e7-a07d-9750cdb96fc6",
+      "barcode": "6260406420121",
+      "name_fa": "سوسیس کوکتل ساده 55 درصد گوشت 450 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473489900.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کوکتل ساده 55 درصد گوشت 450 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "ساده"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "450 گرمی ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.726Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "60bb55a5-cc04-4a2f-adad-7cd1e0ddab7d",
+      "barcode": "6260406420312",
+      "name_fa": "سوسیس کوکتل 70 درصد گوشت 1 کیلویی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260406420312(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کوکتل 70 درصد گوشت 1 کیلویی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.724Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3503c6e0-8b99-466f-93df-8b5755596049",
+      "barcode": "6260406420435",
+      "name_fa": "سوسیس کوکتل پنیر 55 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473575064.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کوکتل پنیر 55 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "پنیر"
+          },
+          {
+            "name": "گوشت",
+            "value": "55 درصد"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی پنیر 55 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.241Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "6398e819-1419-49be-9ad0-23d83a831d35",
+      "barcode": "6260406420633",
+      "name_fa": "سوسیس هات داگ کوکتل 70 درصد گوشت 350 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473574785.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس هات داگ کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس هات داگ کوکتل 70 درصد گوشت 350 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.725Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "83ae63b7-b53c-4f0b-ae7d-f916c2af8a62",
+      "barcode": "6260406420824",
+      "name_fa": "سوسیس کوکتل کبابی 70 درصد گوشت 1 کیلویی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473582789.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کوکتل کبابی 70 درصد گوشت 1 کیلویی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "کبابی"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی کبابی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.724Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a8c239c9-8e46-431e-ae56-3d466090a074",
+      "barcode": "6260406420855",
+      "name_fa": "سوسیس کراکف پنیری 60 درصد گوشت 500 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473574930.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کراکف",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس کراکف پنیری 60 درصد گوشت 500 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی پنیری 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.723Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "1776f4db-c5d0-4fbf-8bb6-3c1409e6175b",
+      "barcode": "6260406420862",
+      "name_fa": "سوسیس 70 درصد گوشت با سبزی 500 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473574524.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس 70 درصد گوشت با سبزی 500 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "70 درصد"
+          },
+          {
+            "name": "سبزی",
+            "value": "دار"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 70 درصد گوشت با سبزی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.722Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "8a722d34-64e6-482c-bde3-ab762a49737d",
+      "barcode": "6260406421258",
+      "name_fa": "سوسیس بلغاری پنیردار 55 درصد مرغ 1 کیلویی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473583251.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس بلغاری پنیردار",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "سوسیس بلغاری پنیردار 55 درصد مرغ 1 کیلویی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد مرغ",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 55 درصد مرغ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.445Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "89d3b68f-cbca-4be6-a461-b512d569c103",
+      "barcode": "6260406424112",
+      "name_fa": "کالباس  مرغ و قارچ 60 درصد گوشت 300 گرمی کامپوره‌خزر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1474013555.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس مرغ و قارچ",
+        "pack_count": null,
+        "parsed_brand": "کامپوره‌خزر",
+        "original_name": "کالباس  مرغ و قارچ 60 درصد گوشت 300 گرمی کامپوره‌خزر",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.764Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e6a56886-e5ae-48f6-aa8f-4b934c0f322a",
+        "name": "کامپوره‌خزر",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:33:01.073Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "03552873-b8ca-4a7a-bd69-25f34d63a5a8",
+      "barcode": "6260417400013",
+      "name_fa": "کالباس 60 درصد گوشت قرمز 300 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992660.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "کالباس 60 درصد گوشت قرمز 300 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت قرمز",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 60 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.242Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "144f172f-b136-48a5-827e-6989c2c79ad6",
+      "barcode": "6260417400099",
+      "name_fa": "کالباس 80 درصد گوشت قرمز 300 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992687.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "کالباس 80 درصد گوشت قرمز 300 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گوشت قرمز"
+          },
+          {
+            "name": "درصد",
+            "value": "80"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی گوشت قرمز 80 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.429Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5fd05de5-7f5c-42a4-9f53-c9e99904fc8e",
+      "barcode": "6260417400105",
+      "name_fa": "کالباس 40 درصد گوشت قرمز 400 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992731.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "کالباس 40 درصد گوشت قرمز 400 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "گوشت قرمز",
+            "value": "40 درصد"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 40 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.230Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "9e6b800a-151c-4671-8d07-be85e01986fa",
+      "barcode": "6260417400327",
+      "name_fa": "سوسیس کوکتل بلغاری 55 درصد گوشت قرمز 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992791.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل بلغاری",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل بلغاری 55 درصد گوشت قرمز 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت قرمز",
+            "value": "55 درصد"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 55 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.275Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "0f04f1d8-ddd4-4484-98f9-15fd327a60fb",
+      "barcode": "6260417400334",
+      "name_fa": "کوکتل ژاپنی 70 درصد گوشت قرمز 800 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992809.jpg",
+      "reference_price": null,
+      "weight_grams": 800,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کوکتل ژاپنی",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "کوکتل ژاپنی 70 درصد گوشت قرمز 800 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "گوشت قرمز",
+            "value": "70 درصد"
+          }
+        ],
+        "suggested_variant_name": "800 گرمی 70 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.285Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "8f803665-63b5-49fe-b084-f222872ed38f",
+      "barcode": "6260417400662",
+      "name_fa": "سوسیس کوکتل 55 درصد گوشت قرمز با طعم سبزیجات 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992868.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل 55 درصد گوشت قرمز با طعم سبزیجات 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت قرمز",
+            "value": "55"
+          },
+          {
+            "name": "طعم",
+            "value": "سبزیجات"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 55 درصد گوشت قرمز با طعم سبزیجات"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.264Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a2f84400-a7b3-496c-b987-4212e08d05ec",
+      "barcode": "6260417400693",
+      "name_fa": "سوسیس کوکتل 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992909.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90 درصد گوشت قرمز"
+          },
+          {
+            "name": "ویژگی",
+            "value": "پره بیوتیک"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 90 درصد گوشت قرمز پره بیوتیک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.291Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "31630728-ac05-4753-b744-77d5f7724e79",
+      "barcode": "6260417400716",
+      "name_fa": "سوسیس کوکتل ژاپنی 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992925.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل ژاپنی 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ژاپنی"
+          },
+          {
+            "name": "گوشت",
+            "value": "قرمز"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "90"
+          },
+          {
+            "name": "ویژگی",
+            "value": "پره بیوتیک"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی ژاپنی گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.309Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "755907b1-6f56-4c41-887d-d7ca943d82b9",
+      "barcode": "6260417400808",
+      "name_fa": "سوسیس کوکتل بلغاری 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992959.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل بلغاری 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بلغاری"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "90 درصد گوشت قرمز"
+          },
+          {
+            "name": "ویژگی",
+            "value": "پره بیوتیک"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی بلغاری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.532Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "2b23497f-2bfd-4b7b-a4ef-988ce808e58e",
+      "barcode": "6260417400815",
+      "name_fa": "سوسیس کوکتل دودی 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992983.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل دودی",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل دودی 90 درصد گوشت قرمز پره بیوتیک 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90 درصد گوشت قرمز"
+          },
+          {
+            "name": "ویژگی",
+            "value": "پره بیوتیک"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 90 درصد گوشت قرمز پره بیوتیک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.291Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "6ad827a3-5840-4f30-b9cf-81814045b942",
+      "barcode": "6260417400839",
+      "name_fa": "سوسیس کوکتل 90 درصد گوشت قرمز با طعم سبزیجات پره بیوتیک 1000 گرمی دالاهو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992998.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "دالاهو",
+        "original_name": "سوسیس کوکتل 90 درصد گوشت قرمز با طعم سبزیجات پره بیوتیک 1000 گرمی دالاهو",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت قرمز",
+            "value": "90"
+          },
+          {
+            "name": "طعم",
+            "value": "سبزیجات پره بیوتیک"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 90 درصد گوشت قرمز با طعم سبزیجات"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.533Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "8b2dc490-49ae-4558-8918-1c895d0fe8b1",
+        "name": "دالاهو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:38:04.493Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "6a0c436b-0a17-496b-a760-0e3cba2abd30",
+      "barcode": "6260608970295",
+      "name_fa": "کالباس لیونر 55 درصد گوشت قرمز 500 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1547994102.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس لیونر",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "کالباس لیونر 55 درصد گوشت قرمز 500 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "قرمز"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 55 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.251Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "0ab0d2ca-a44f-4640-8416-e935b9345667",
+      "barcode": "6260608970417",
+      "name_fa": "کالباس خشک تیکه‌ای 60 درصد گوشت 500 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1547994129.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس خشک تیکه‌ای",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "کالباس خشک تیکه‌ای 60 درصد گوشت 500 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.400Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a2ad68ca-6271-4049-b53b-5d451d7e783e",
+      "barcode": "6260608980317",
+      "name_fa": "سوسیس 70 درصد گوشت قرمز 1000 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658551.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "سوسیس 70 درصد گوشت قرمز 1000 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "گوشت قرمز"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "1000 گرمی 70 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.282Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a8d0afa2-b9ac-443d-b65d-8eb5986ecd1e",
+      "barcode": "6260608982939",
+      "name_fa": "سوسیس کوکتل دودی 55 درصد 500 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658584.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل دودی",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "سوسیس کوکتل دودی 55 درصد 500 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 55 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.247Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "68552828-ef30-43b2-b3ce-4c1a782235a6",
+      "barcode": "6260608983066",
+      "name_fa": "سوسیس هات داگ ممتاز 70 درصد 500 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658636.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس هات داگ ممتاز",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "سوسیس هات داگ ممتاز 70 درصد 500 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "70 درصد"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 70 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.884Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "0ae71e7d-7467-4720-a654-7c90ce690402",
+      "barcode": "6260608983424",
+      "name_fa": "سوسیس آلمانی 500 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658668.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس آلمانی",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "سوسیس آلمانی 500 گرمی شام شام",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.886Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "9a0cb301-ea25-45b8-ba25-1aec657bf7df",
+      "barcode": "6260608984643",
+      "name_fa": "سوسیس 55 درصد گوشت قرمز 420 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658690.jpg",
+      "reference_price": null,
+      "weight_grams": 420,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس",
+        "pack_count": null,
+        "parsed_brand": "شام شام",
+        "original_name": "سوسیس 55 درصد گوشت قرمز 420 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گوشت قرمز"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "420 گرمی 55 درصد گوشت قرمز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.245Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "301322d0-fb01-4ffe-a63b-21b4031bc473",
+      "barcode": "6260608985107",
+      "name_fa": "همبرگر 90 درصد گوشت 4 عددی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1531803906.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": 4,
+        "parsed_brand": "شام شام",
+        "original_name": "همبرگر 90 درصد گوشت 4 عددی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "90 درصد گوشت 4 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.881Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "168a3495-99ad-4ba5-8bd4-3f811c6ee5f5",
+      "barcode": "6260608985145",
+      "name_fa": "استیک برگر 90 درصد 4 عددی 500 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658811.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "استیک برگر",
+        "pack_count": 4,
+        "parsed_brand": "شام شام",
+        "original_name": "استیک برگر 90 درصد 4 عددی 500 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 90 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.284Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a09bbc50-e297-4bbe-bf30-a244e559a210",
+      "barcode": "6260608985152",
+      "name_fa": "چیزبرگر 60 درصد 4 عددی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1538296497.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "چیزبرگر",
+        "pack_count": 4,
+        "parsed_brand": "شام شام",
+        "original_name": "چیزبرگر 60 درصد 4 عددی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "4 عددی 60 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.887Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "405b1c0e-4da1-4f17-802d-851916600812",
+      "barcode": "6260608985190",
+      "name_fa": "زغال برگر  90 درصد 4 عددی 400 گرمی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658772.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "زغال برگر",
+        "pack_count": 4,
+        "parsed_brand": "شام شام",
+        "original_name": "زغال برگر  90 درصد 4 عددی 400 گرمی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 90 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.283Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "382b99de-54bd-44c8-9f1b-6b78785a4139",
+      "barcode": "6260608986074",
+      "name_fa": "کباب لقمه ویژه 70 درصد 9 عددی شام شام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1534658866.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کباب لقمه ویژه",
+        "pack_count": 9,
+        "parsed_brand": "شام شام",
+        "original_name": "کباب لقمه ویژه 70 درصد 9 عددی شام شام",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "9 عددی 70 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.259Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "af64306e-4f98-40dc-8cd5-0528c0941f18",
+        "name": "شام شام",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:30:41.346Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "37ea220a-70de-4d12-847f-5524ccd90662",
+      "barcode": "6260859000390",
+      "name_fa": "همبرگر 60 درصد گوشت 500 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1589789429.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "همبرگر 60 درصد گوشت 500 گرمی ب.آ",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60 درصد"
+          }
+        ],
+        "suggested_variant_name": "500 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.262Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "0c6c3b5d-5708-40fd-b2eb-d9bc3aed7dfa",
+      "barcode": "6260859002196",
+      "name_fa": "کباب لقمه 70 درصد گوشت 400 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1590310888.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کباب لقمه",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "کباب لقمه 70 درصد گوشت 400 گرمی ب.آ",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.264Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "899d1987-6d54-48cf-8148-df20ac81f10e",
+      "barcode": "6260859017534",
+      "name_fa": "همبرگر گوشت 90 درصد 400 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1510726181.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "همبرگر گوشت",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "همبرگر گوشت 90 درصد 400 گرمی ب.آ",
+        "parsed_attributes": [
+          {
+            "name": "درصد",
+            "value": "90 درصد"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 90 درصد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.814Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "5e577fb7-e832-4e0d-803a-48663958a767",
+      "barcode": "6260859018777",
+      "name_fa": "بیفتک همبرگر 90 درصد گوشت 480 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6260859018777(1).jpg",
+      "reference_price": null,
+      "weight_grams": 480,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "بیفتک همبرگر",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "بیفتک همبرگر 90 درصد گوشت 480 گرمی ب.آ",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "480 گرمی 90 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.289Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "8d710aa0-3941-449c-85c2-6413beeaef69",
+      "barcode": "6260962520464",
+      "name_fa": "هات داگ طلایی میکائیلیان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "18126814-2a38-4226-a501-08ca00b5c586",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1582537191.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "هات داگ طلایی",
+        "pack_count": null,
+        "parsed_brand": "میکائیلیان",
+        "original_name": "هات داگ طلایی میکائیلیان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "هات داگ طلایی میکائیلیان"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.311Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "18126814-2a38-4226-a501-08ca00b5c586",
+        "name": "میکائیلیان",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:37:42.159Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3351da3d-6adb-4d26-96ad-39b6dcbc5940",
+      "barcode": "6262586801905",
+      "name_fa": "برگر گوشت فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1531804159.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "برگر گوشت",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "برگر گوشت فارسی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "برگر گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.883Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "2fa67a55-542f-4af2-94ed-96fc0d6e4295",
+      "barcode": "6262586802186",
+      "name_fa": "برگر گوشت خانگی 4 عددی 500 گرمی فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1588139433.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "برگر گوشت خانگی",
+        "pack_count": 4,
+        "parsed_brand": null,
+        "original_name": "برگر گوشت خانگی 4 عددی 500 گرمی فارسی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی 4 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.898Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "152e57ea-f024-4708-aaf9-2afadc190a6b",
+      "barcode": "6262586802575",
+      "name_fa": "کالباس خشک 60 درصد گوشت قرمز با پنیر 250 گرمی فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992295.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس خشک",
+        "pack_count": null,
+        "parsed_brand": "فارسی",
+        "original_name": "کالباس خشک 60 درصد گوشت قرمز با پنیر 250 گرمی فارسی",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "قرمز"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          },
+          {
+            "name": "افزودنی",
+            "value": "پنیر"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی 60 درصد گوشت قرمز با پنیر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.253Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+        "name": "فارسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:39:52.171Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "8b547918-94e8-426a-972a-586afbf26f41",
+      "barcode": "6262586802605",
+      "name_fa": "کالباس خشک 80 درصد گوشت قرمز با طعم دود 250 گرمی فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1587992311.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس خشک",
+        "pack_count": null,
+        "parsed_brand": "فارسی",
+        "original_name": "کالباس خشک 80 درصد گوشت قرمز با طعم دود 250 گرمی فارسی",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "80 درصد گوشت قرمز"
+          },
+          {
+            "name": "طعم",
+            "value": "دود"
+          }
+        ],
+        "suggested_variant_name": "250 گرمی 80 درصد گوشت قرمز با طعم دود"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.260Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+        "name": "فارسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:39:52.171Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "ac40175a-9f74-4344-b4c1-94fa89f1efef",
+      "barcode": "6262794800158",
+      "name_fa": "سوسیس اسپایسی 60 درصد گوشت 1 کیلویی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794800158(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس اسپایسی 60 درصد گوشت 1 کیلویی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "اسپایسی"
+          },
+          {
+            "name": "درصد گوشت",
+            "value": "60"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی اسپایسی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.707Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "3b59d61a-1fe0-41f5-b226-018f56cd30d5",
+      "barcode": "6262794800172",
+      "name_fa": "سوسیس فرانکفورتر 70 درصد گوشت 1 کیلویی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794800172(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس فرانکفورتر",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس فرانکفورتر 70 درصد گوشت 1 کیلویی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.710Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "760b0614-c9f6-4072-8349-33b6e418a42b",
+      "barcode": "6262794800189",
+      "name_fa": "سوسیس ژاپنی 70 درصد گوشت 1 کیلویی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794800189(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس ژاپنی",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس ژاپنی 70 درصد گوشت 1 کیلویی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.711Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a7a1fe3a-9381-430a-9177-ac4de5834c73",
+      "barcode": "6262794800318",
+      "name_fa": "کالباس ژامبون فیله استیکی گوشت قرمز 300 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473507286.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس ژامبون فیله استیکی گوشت قرمز",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "کالباس ژامبون فیله استیکی گوشت قرمز 300 گرمی بارونس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "300 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.775Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "20a04cdc-41df-4288-b1fd-0d487e77da94",
+      "barcode": "6262794800431",
+      "name_fa": "سوسیس فرانکفورتر 70 درصد گوشت 400 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794800431(1).jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس فرانکفورتر",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس فرانکفورتر 70 درصد گوشت 400 گرمی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.714Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a5900c3e-4c97-49c4-96b7-b4543bd00001",
+      "barcode": "6262794800448",
+      "name_fa": "سوسیس ژاپنی 70 درصد گوشت 350 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473743751.jpg",
+      "reference_price": null,
+      "weight_grams": 350,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس ژاپنی",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس ژاپنی 70 درصد گوشت 350 گرمی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "350 گرمی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.715Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "2ea4eb19-fec0-4b56-bd96-30a7abb2b307",
+      "barcode": "6262794800509",
+      "name_fa": "کالباس ژامبون دودی بوقلمون 90 درصد گوشت 300 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473507351.jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کالباس ژامبون دودی بوقلمون",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "کالباس ژامبون دودی بوقلمون 90 درصد گوشت 300 گرمی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "گوشت",
+            "value": "90 درصد"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 90 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.774Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "529e328a-3b05-45f9-8cd9-b29650057ea6",
+      "barcode": "6262794800530",
+      "name_fa": "سوسیس کوکتل پنیری 60 درصد گوشت 300 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794800530(1).jpg",
+      "reference_price": null,
+      "weight_grams": 300,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل پنیری",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس کوکتل پنیری 60 درصد گوشت 300 گرمی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "60 درصد"
+          }
+        ],
+        "suggested_variant_name": "300 گرمی 60 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.712Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a7544686-1fc3-406f-82d0-a5dfd240e47c",
+      "barcode": "6262794800790",
+      "name_fa": "سوسیس کوکتل 70 درصد گوشت و مرغ 1 کیلویی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794800790(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس کوکتل",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس کوکتل 70 درصد گوشت و مرغ 1 کیلویی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت و مرغ",
+            "value": "70 درصد"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 70 درصد گوشت و مرغ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.709Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "63a92a76-2fc8-45d1-8846-934ba6b342fc",
+      "barcode": "6262794801407",
+      "name_fa": "سوسیس بوقلمون دودی 90 درصد گوشت 400 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473573186.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس بوقلمون دودی",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس بوقلمون دودی 90 درصد گوشت 400 گرمی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "90"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 90 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.717Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "231e323d-9cf0-4aae-af4a-8202e2fcaf20",
+      "barcode": "6262794801520",
+      "name_fa": "سوسیس سورپرایزر 80 درصد گوشت 400 گرمی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1473508092.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس سورپرایزر 80 درصد گوشت 400 گرمی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "80"
+          },
+          {
+            "name": "نوع",
+            "value": "سورپرایزر"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی 80 درصد گوشت سورپرایزر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.717Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "01594f3e-9995-4fba-9db8-e4440114d770",
+      "barcode": "6262794801575",
+      "name_fa": "سوسیس مینی کالیفرنیا 70 درصد گوشت 1 کیلویی بارونس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/6262794801575(1).jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوسیس مینی کالیفرنیا",
+        "pack_count": null,
+        "parsed_brand": "بارونس",
+        "original_name": "سوسیس مینی کالیفرنیا 70 درصد گوشت 1 کیلویی بارونس",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "70"
+          }
+        ],
+        "suggested_variant_name": "1 کیلویی 70 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.712Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "44c1da90-2122-45a3-b4e8-c7c22ef26815",
+        "name": "بارونس",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:55.397Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "a9e62abb-5307-44b4-a0b4-ec514077945c",
+      "barcode": "6268454664214",
+      "name_fa": "برگر گیاهی سبزیجات بر پایه گندم و سویا 400 گرمی نوپرو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5937b044-5a10-4ce2-bb14-9c0858287006",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1538297072.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "برگر گیاهی سبزیجات بر پایه گندم و سویا",
+        "pack_count": null,
+        "parsed_brand": "نوپرو",
+        "original_name": "برگر گیاهی سبزیجات بر پایه گندم و سویا 400 گرمی نوپرو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "400 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.255Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5937b044-5a10-4ce2-bb14-9c0858287006",
+        "name": "نوپرو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:40:23.910Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    },
+    {
+      "id": "9e78b5ca-1a25-4342-a98c-8d3536b331c7",
+      "barcode": "6268454665792",
+      "name_fa": "چیزبرگر گیاهی بر پایه گندم 400 گرمی نوپرو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5937b044-5a10-4ce2-bb14-9c0858287006",
+      "category_id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01/%D9%BE%D8%B1%D9%88%D8%AA%D8%A6%DB%8C%D9%86%DB%8C/Pic/1538297129.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "چیزبرگر گیاهی",
+        "pack_count": null,
+        "parsed_brand": "نوپرو",
+        "original_name": "چیزبرگر گیاهی بر پایه گندم 400 گرمی نوپرو",
+        "parsed_attributes": [
+          {
+            "name": "پایه",
+            "value": "گندم"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی بر پایه گندم"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:47.423Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5937b044-5a10-4ce2-bb14-9c0858287006",
+        "name": "نوپرو",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:40:23.910Z"
+      },
+      "category": {
+        "id": "9570dc43-6ba0-4ab6-aa65-ea84fa352448",
+        "name": "فرآورده های پروتئینی",
+        "icon_url": null,
+        "parent_id": "38805d2e-3a14-4778-aabc-e9d969dc9b64",
+        "created_at": "2025-12-29T09:34:47.226Z"
+      }
+    }
+  ],
+  "total": 150
+}

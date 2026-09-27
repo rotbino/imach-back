@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "79e61326-c077-450f-a9eb-86345e23bc16",
+      "barcode": "6262930200170",
+      "name_fa": "بادام هندی مانی 30 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "53f3048a-ceda-5077-b4ac-b6b169f80e64",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6262930200170.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262930200170",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000227038",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "تنقلات",
+          "subcategory": "آجیل تک و مغز آجیل",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 4175,
+          "original_name": "بادام هندی مانی 30 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262930200170"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "53f3048a-ceda-5077-b4ac-b6b169f80e64",
+        "name": "بادام زمینی",
+        "icon_url": null,
+        "parent_id": "f120e1b3-272e-5913-bcf8-c3f7f463e581",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

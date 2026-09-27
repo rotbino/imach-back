@@ -1,0 +1,4539 @@
+{
+  "items": [
+    {
+      "id": "ec071bba-5019-4991-988f-240f7fe9f92f",
+      "barcode": "6262435500638",
+      "name_fa": "سوپ جو 75 گرمی اسپرتو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3b1cab4c-ab96-40e4-b8ab-5bce02bc0638",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1529819384.jpg",
+      "reference_price": null,
+      "weight_grams": 75,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ جو",
+        "pack_count": null,
+        "parsed_brand": "اسپرتو",
+        "original_name": "سوپ جو 75 گرمی اسپرتو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "75 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.799Z",
+      "updated_at": "2025-12-29T13:16:25.756Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3b1cab4c-ab96-40e4-b8ab-5bce02bc0638",
+        "name": "اسپرتو",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:06:38.870Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "c99dd721-2380-4c10-959b-71a6a6afd65b",
+      "barcode": "6260360000186",
+      "name_fa": "آش رشته 180 گرمی الیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "25f49b64-bc74-4375-90c0-930917c9c465",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1472711876.jpg",
+      "reference_price": null,
+      "weight_grams": 180,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "آش رشته",
+        "pack_count": null,
+        "parsed_brand": "الیت",
+        "original_name": "آش رشته 180 گرمی الیت",
+        "parsed_attributes": [],
+        "suggested_variant_name": "180 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.825Z",
+      "updated_at": "2025-12-29T13:15:48.430Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "25f49b64-bc74-4375-90c0-930917c9c465",
+        "name": "الیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:35.588Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f15461c0-0a5f-4c32-9dc7-e57e01c23f53",
+      "barcode": "6260003811117",
+      "name_fa": "سوپ ورمیشل نیمه آماده خشک 70 گرمی سبزان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1516021955.jpg",
+      "reference_price": null,
+      "weight_grams": 70,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ ورمیشل",
+        "pack_count": null,
+        "parsed_brand": "سبزان",
+        "original_name": "سوپ ورمیشل نیمه آماده خشک 70 گرمی سبزان",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "نیمه آماده خشک"
+          }
+        ],
+        "suggested_variant_name": "70 گرمی نیمه آماده خشک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.801Z",
+      "updated_at": "2025-12-29T13:16:23.475Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+        "name": "سبزان",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:21.941Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d878dd6a-519d-479f-a6ba-261c327aa84b",
+      "barcode": "6260003812022",
+      "name_fa": "حلیم 70 گرمی سبزان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260003812022(1).jpg",
+      "reference_price": null,
+      "weight_grams": 70,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "حلیم",
+        "pack_count": null,
+        "parsed_brand": "سبزان",
+        "original_name": "حلیم 70 گرمی سبزان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.802Z",
+      "updated_at": "2025-12-29T13:16:21.975Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+        "name": "سبزان",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:21.941Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f2622e21-026d-4b22-b446-65107982458e",
+      "barcode": "6260360052338",
+      "name_fa": "سوپ مرغ و ورمیشل 65 گرمی آماده‌لذیذ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c30cdb47-69cd-4e59-b24a-7bb58b826c1b",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260360052338(1).jpg",
+      "reference_price": null,
+      "weight_grams": 65,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ مرغ و ورمیشل",
+        "pack_count": null,
+        "parsed_brand": "آماده‌لذیذ",
+        "original_name": "سوپ مرغ و ورمیشل 65 گرمی آماده‌لذیذ",
+        "parsed_attributes": [],
+        "suggested_variant_name": "65 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.819Z",
+      "updated_at": "2025-12-29T13:15:54.217Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c30cdb47-69cd-4e59-b24a-7bb58b826c1b",
+        "name": "آماده‌لذیذ",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:15:54.215Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f146215b-17d8-40b4-a475-0a84c76807ac",
+      "barcode": "6260360002227",
+      "name_fa": "سوپ اکسپرس 35 گرمی الیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "25f49b64-bc74-4375-90c0-930917c9c465",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1528021113.jpg",
+      "reference_price": null,
+      "weight_grams": 35,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ اکسپرس",
+        "pack_count": null,
+        "parsed_brand": "الیت",
+        "original_name": "سوپ اکسپرس 35 گرمی الیت",
+        "parsed_attributes": [],
+        "suggested_variant_name": "35 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.830Z",
+      "updated_at": "2025-12-29T13:15:41.949Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "25f49b64-bc74-4375-90c0-930917c9c465",
+        "name": "الیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:35.588Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e0090ea2-6261-4860-92eb-80dc84d36632",
+      "barcode": "6260360002388",
+      "name_fa": "سوپ اکسپرس با طعم مرغ و ورمیشل 35 گرمی الیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "25f49b64-bc74-4375-90c0-930917c9c465",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1528021191.jpg",
+      "reference_price": null,
+      "weight_grams": 35,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ اکسپرس",
+        "pack_count": null,
+        "parsed_brand": "الیت",
+        "original_name": "سوپ اکسپرس با طعم مرغ و ورمیشل 35 گرمی الیت",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "مرغ و ورمیشل"
+          }
+        ],
+        "suggested_variant_name": "35 گرمی مرغ و ورمیشل"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.831Z",
+      "updated_at": "2025-12-29T13:15:40.603Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "25f49b64-bc74-4375-90c0-930917c9c465",
+        "name": "الیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:35.588Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d64a5f08-1342-43ca-b043-7eacde31cbf4",
+      "barcode": "6260184286063",
+      "name_fa": "پودر کوکو سیب‌زمینی نیمه آماده 200 گرمی برتر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4a77ce1d-e6fa-417c-a00b-e711267c75d5",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1525005507.jpg",
+      "reference_price": null,
+      "weight_grams": 200,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پودر کوکو سیب‌زمینی",
+        "pack_count": null,
+        "parsed_brand": "برتر",
+        "original_name": "پودر کوکو سیب‌زمینی نیمه آماده 200 گرمی برتر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "نیمه آماده"
+          }
+        ],
+        "suggested_variant_name": "200 گرمی نیمه آماده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.969Z",
+      "updated_at": "2025-12-29T13:13:06.372Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4a77ce1d-e6fa-417c-a00b-e711267c75d5",
+        "name": "برتر",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:02:30.031Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cd7814b5-aa70-4423-8ca3-09b21b963fd4",
+      "barcode": "6260426910725",
+      "name_fa": "خلال سیب زمینی نیمه منجمد (10*10) 750 گرمی پریس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fcfb46f1-9aad-41fb-bffb-f096423e8485",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260426910725(1).jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خلال سیب زمینی نیمه منجمد",
+        "pack_count": null,
+        "parsed_brand": "پریس",
+        "original_name": "خلال سیب زمینی نیمه منجمد (10*10) 750 گرمی پریس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "10*10"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی 10*10"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:43.996Z",
+      "updated_at": "2025-12-29T13:12:34.833Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fcfb46f1-9aad-41fb-bffb-f096423e8485",
+        "name": "پریس",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:06:24.381Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d13765be-2adf-4230-a289-b23605fecc5f",
+      "barcode": "6260859018722",
+      "name_fa": "شامی کباب 55 درصد گوشت 450 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1473508076.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "شامی کباب",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "شامی کباب 55 درصد گوشت 450 گرمی ب.آ",
+        "parsed_attributes": [
+          {
+            "name": "درصد گوشت",
+            "value": "55"
+          }
+        ],
+        "suggested_variant_name": "450 گرمی 55 درصد گوشت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.049Z",
+      "updated_at": "2025-12-29T13:11:26.450Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "c9a54502-ba4a-4328-8521-82c21ff45e02",
+      "barcode": "6260859001298",
+      "name_fa": "کوردن بلو 420 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1513256406.jpg",
+      "reference_price": null,
+      "weight_grams": 420,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کوردن بلو",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "کوردن بلو 420 گرمی ب.آ",
+        "parsed_attributes": [],
+        "suggested_variant_name": "420 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.069Z",
+      "updated_at": "2025-12-29T13:11:05.514Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f2249632-79cb-4f4e-9a0d-8e1062aecffc",
+      "barcode": "6262586802100",
+      "name_fa": "چیکن پاپ کورن پنیری 400 گرمی فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1587991485.jpg",
+      "reference_price": null,
+      "weight_grams": 400,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "چیکن پاپ کورن",
+        "pack_count": null,
+        "parsed_brand": "فارسی",
+        "original_name": "چیکن پاپ کورن پنیری 400 گرمی فارسی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "پنیری"
+          }
+        ],
+        "suggested_variant_name": "400 گرمی پنیری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.074Z",
+      "updated_at": "2025-12-29T13:11:00.688Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+        "name": "فارسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:39:52.171Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "ef71d100-2cda-4507-a1bf-cb3751730bb7",
+      "barcode": "6262586801899",
+      "name_fa": "برگر مرغ 4 عددی 500 گرمی فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1587991251.jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "برگر مرغ",
+        "pack_count": 4,
+        "parsed_brand": "فارسی",
+        "original_name": "برگر مرغ 4 عددی 500 گرمی فارسی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی 4 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.076Z",
+      "updated_at": "2025-12-29T13:10:57.799Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+        "name": "فارسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:39:52.171Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "db7f20e9-8bbe-49a6-be73-28e0a6e85583",
+      "barcode": "6260517700181",
+      "name_fa": "ناگت 500 گرمی مارین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c38690f5-5ef4-40a9-9755-03a881927123",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260517700181(1).jpg",
+      "reference_price": null,
+      "weight_grams": 500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ناگت",
+        "pack_count": null,
+        "parsed_brand": "مارین",
+        "original_name": "ناگت 500 گرمی مارین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.082Z",
+      "updated_at": "2025-12-29T13:10:50.348Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c38690f5-5ef4-40a9-9755-03a881927123",
+        "name": "مارین",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:38.628Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e1ee0752-613d-4b73-bba6-cbdd0d4ee2cd",
+      "barcode": "6260859001724",
+      "name_fa": "شنیسل مرغ 950 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1513256458.jpg",
+      "reference_price": null,
+      "weight_grams": 950,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "شنیسل مرغ",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "شنیسل مرغ 950 گرمی ب.آ",
+        "parsed_attributes": [],
+        "suggested_variant_name": "950 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.098Z",
+      "updated_at": "2025-12-29T13:10:32.710Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "dd72e65c-d664-491d-a2b5-a72989a1b299",
+      "barcode": "6260007801336",
+      "name_fa": "شنیسل مرغ 1000 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1516017786.jpg",
+      "reference_price": null,
+      "weight_grams": 1000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "شنیسل مرغ",
+        "pack_count": 202,
+        "parsed_brand": null,
+        "original_name": "شنیسل مرغ 1000 گرمی 202",
+        "parsed_attributes": [],
+        "suggested_variant_name": "1000 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.102Z",
+      "updated_at": "2025-12-29T13:10:28.641Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d79bb841-1bbe-42d7-8f76-1a9f90478c7a",
+      "barcode": "6260426910749",
+      "name_fa": "خلال سیب زمینی نیمه منجمد (7*7) 2،5 کیلویی پریس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "fcfb46f1-9aad-41fb-bffb-f096423e8485",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1471343649.jpg",
+      "reference_price": null,
+      "weight_grams": 2500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خلال سیب زمینی نیمه منجمد",
+        "pack_count": null,
+        "parsed_brand": "پریس",
+        "original_name": "خلال سیب زمینی نیمه منجمد (7*7) 2،5 کیلویی پریس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "(7*7)"
+          }
+        ],
+        "suggested_variant_name": "2.5 کیلویی (7*7)"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.113Z",
+      "updated_at": "2025-12-29T13:10:15.949Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "fcfb46f1-9aad-41fb-bffb-f096423e8485",
+        "name": "پریس",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:06:24.381Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "eddbba66-36d1-4e43-92ae-5aef3fe81d5c",
+      "barcode": "6260006998495",
+      "name_fa": "سوپ مرغ 75 گرمی مهنام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4fe63f2a-2106-478c-8860-5d32e6461efc",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1537950634.jpg",
+      "reference_price": null,
+      "weight_grams": 75,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ مرغ",
+        "pack_count": null,
+        "parsed_brand": "مهنام",
+        "original_name": "سوپ مرغ 75 گرمی مهنام",
+        "parsed_attributes": [],
+        "suggested_variant_name": "75 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.122Z",
+      "updated_at": "2025-12-29T13:10:04.663Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4fe63f2a-2106-478c-8860-5d32e6461efc",
+        "name": "مهنام",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:20.927Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e0fdfe6a-8e85-478e-b022-408cfaff610a",
+      "barcode": "6260360005693",
+      "name_fa": "سوپ مرغ 61 گرمی نودیلند",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51abdaff-111c-4a79-b153-6fe76e50206c",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1572077715.jpg",
+      "reference_price": null,
+      "weight_grams": 61,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ مرغ",
+        "pack_count": null,
+        "parsed_brand": "نودیلند",
+        "original_name": "سوپ مرغ 61 گرمی نودیلند",
+        "parsed_attributes": [],
+        "suggested_variant_name": "61 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.123Z",
+      "updated_at": "2025-12-29T13:10:03.606Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51abdaff-111c-4a79-b153-6fe76e50206c",
+        "name": "نودیلند",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:10:00.284Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d9a8f004-52a1-4d62-80b6-c8039a7b05d1",
+      "barcode": "6260360005877",
+      "name_fa": "سوپ مرغ و ورمیشل 65 گرمی نودیلند",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51abdaff-111c-4a79-b153-6fe76e50206c",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1572077776.jpg",
+      "reference_price": null,
+      "weight_grams": 65,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ مرغ و ورمیشل",
+        "pack_count": null,
+        "parsed_brand": "نودیلند",
+        "original_name": "سوپ مرغ و ورمیشل 65 گرمی نودیلند",
+        "parsed_attributes": [],
+        "suggested_variant_name": "65 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.125Z",
+      "updated_at": "2025-12-29T13:10:01.618Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51abdaff-111c-4a79-b153-6fe76e50206c",
+        "name": "نودیلند",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:10:00.284Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d6e32e40-2b79-4b0b-a502-7e3a105c008e",
+      "barcode": "6260003800081",
+      "name_fa": "پودر فلافل نیمه آماده 100 گرمی سبزان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260003800081(1).jpg",
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "فلافل",
+        "pack_count": null,
+        "parsed_brand": "سبزان",
+        "original_name": "پودر فلافل نیمه آماده 100 گرمی سبزان",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "نیمه آماده"
+          }
+        ],
+        "suggested_variant_name": "100 گرمی نیمه آماده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.132Z",
+      "updated_at": "2025-12-29T13:09:54.298Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+        "name": "سبزان",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:21.941Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f12a6fde-fc19-4ee5-8fd3-880ecc95da28",
+      "barcode": "6260257500713",
+      "name_fa": "خلال سیب زمینی نیمه سرخ شده 750 گرمی نوبرسبز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "813a6052-9cbe-41cd-903d-5df46775d07d",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1495632395.jpg",
+      "reference_price": null,
+      "weight_grams": 750,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "خلال سیب زمینی",
+        "pack_count": null,
+        "parsed_brand": "نوبرسبز",
+        "original_name": "خلال سیب زمینی نیمه سرخ شده 750 گرمی نوبرسبز",
+        "parsed_attributes": [
+          {
+            "name": "وضعیت",
+            "value": "نیمه سرخ شده"
+          }
+        ],
+        "suggested_variant_name": "750 گرمی نیمه سرخ شده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.222Z",
+      "updated_at": "2025-12-29T13:08:03.328Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "813a6052-9cbe-41cd-903d-5df46775d07d",
+        "name": "نوبرسبز",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:08:03.326Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "eb6333c9-61cf-4684-9d1f-0e78e8f342a1",
+      "barcode": "6260007810017",
+      "name_fa": "پیتزا مخصوص 450 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1472730445.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پیتزا مخصوص",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "پیتزا مخصوص 450 گرمی 202",
+        "parsed_attributes": [],
+        "suggested_variant_name": "450 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.230Z",
+      "updated_at": "2025-12-29T13:07:54.828Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "c7d8d08f-4afd-4dc6-b19e-3bbaa7978408",
+      "barcode": "6260003811322",
+      "name_fa": "سوپ مرغ نیمه آماده خشک 70 گرمی سبزان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1516021995.jpg",
+      "reference_price": null,
+      "weight_grams": 70,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ مرغ",
+        "pack_count": null,
+        "parsed_brand": "سبزان",
+        "original_name": "سوپ مرغ نیمه آماده خشک 70 گرمی سبزان",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "نیمه آماده خشک"
+          }
+        ],
+        "suggested_variant_name": "70 گرمی نیمه آماده خشک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.278Z",
+      "updated_at": "2025-12-29T13:06:46.366Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "562e6a60-e0b1-4344-a9c1-24077d48fd32",
+        "name": "سبزان",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:21.941Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cd6bb474-ea65-4cd5-9f48-0e0b33715383",
+      "barcode": "6260006901587",
+      "name_fa": "سوپ سبزیجات 75 گرمی مهنام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4fe63f2a-2106-478c-8860-5d32e6461efc",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1472710623.jpg",
+      "reference_price": null,
+      "weight_grams": 75,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ سبزیجات",
+        "pack_count": null,
+        "parsed_brand": "مهنام",
+        "original_name": "سوپ سبزیجات 75 گرمی مهنام",
+        "parsed_attributes": [],
+        "suggested_variant_name": "75 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.285Z",
+      "updated_at": "2025-12-29T13:06:36.211Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4fe63f2a-2106-478c-8860-5d32e6461efc",
+        "name": "مهنام",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:20.927Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "ccbd0a8d-4df3-48d1-9882-8aae5b27e84b",
+      "barcode": "6260006901785",
+      "name_fa": "سوپ مرغ 70 گرمی مهنام",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4fe63f2a-2106-478c-8860-5d32e6461efc",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1472710668.jpg",
+      "reference_price": null,
+      "weight_grams": 70,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ مرغ",
+        "pack_count": null,
+        "parsed_brand": "مهنام",
+        "original_name": "سوپ مرغ 70 گرمی مهنام",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.288Z",
+      "updated_at": "2025-12-29T13:06:32.231Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4fe63f2a-2106-478c-8860-5d32e6461efc",
+        "name": "مهنام",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:20.927Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d0073ecd-ae6b-49ce-9288-367ea533af27",
+      "barcode": "6260859018876",
+      "name_fa": "ناگت مرغ و قارچ 250 گرمی ب.آ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260859018876(1).jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ناگت مرغ و قارچ",
+        "pack_count": null,
+        "parsed_brand": "ب.آ",
+        "original_name": "ناگت مرغ و قارچ 250 گرمی ب.آ",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.300Z",
+      "updated_at": "2025-12-29T13:06:16.534Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5e138335-acfe-4436-bc2e-6517a46b5619",
+        "name": "ب.آ",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:32:12.254Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cc5dc904-c4ed-424b-a3b8-1211f5959cac",
+      "barcode": "6261695600447",
+      "name_fa": "ناگت مرغ 250 گرمی زرا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e8401b07-9bbc-498c-80f3-51df86946f5a",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6261695600447(1).jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ناگت مرغ",
+        "pack_count": null,
+        "parsed_brand": "زرا",
+        "original_name": "ناگت مرغ 250 گرمی زرا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.303Z",
+      "updated_at": "2025-12-29T13:06:12.669Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e8401b07-9bbc-498c-80f3-51df86946f5a",
+        "name": "زرا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:06:12.667Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "dcd4a068-d9e8-4ec2-9753-a27c9cb2ee5a",
+      "barcode": "6260007810215",
+      "name_fa": "پیتزا سبزیجات 450 گرمی 202",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1473508265.jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پیتزا سبزیجات",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "پیتزا سبزیجات 450 گرمی 202",
+        "parsed_attributes": [],
+        "suggested_variant_name": "450 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.326Z",
+      "updated_at": "2025-12-29T13:05:45.395Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e130170d-c440-4a77-8ff1-f1c6bcd08e3d",
+      "barcode": "6260122032073",
+      "name_fa": "پیتزا مخلوط 450 گرمی اروئی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7a1e49ba-efc8-4d97-8f58-b6c0b0756ebc",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260122032073(1).jpg",
+      "reference_price": null,
+      "weight_grams": 450,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پیتزا مخلوط",
+        "pack_count": null,
+        "parsed_brand": "اروئی",
+        "original_name": "پیتزا مخلوط 450 گرمی اروئی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "450 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.330Z",
+      "updated_at": "2025-12-29T13:05:41.987Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7a1e49ba-efc8-4d97-8f58-b6c0b0756ebc",
+        "name": "اروئی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:40:07.886Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "caed17ca-0b3d-47e9-a7f6-cc3089d9b987",
+      "barcode": "6260100359338",
+      "name_fa": "سوپ ورمیشل نیمه آماده سبزیجات 180 گرمی تک‌ماکارون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5f1d176a-9b56-4a4f-a539-09cba884ab21",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/6260100359338(1).jpg",
+      "reference_price": null,
+      "weight_grams": 180,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ ورمیشل نیمه آماده سبزیجات",
+        "pack_count": null,
+        "parsed_brand": "تک‌ماکارون",
+        "original_name": "سوپ ورمیشل نیمه آماده سبزیجات 180 گرمی تک‌ماکارون",
+        "parsed_attributes": [],
+        "suggested_variant_name": "180 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.343Z",
+      "updated_at": "2025-12-29T13:05:24.143Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5f1d176a-9b56-4a4f-a539-09cba884ab21",
+        "name": "تک‌ماکارون",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:24.141Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "dbfb4e66-2074-4604-894b-3d63a9cad576",
+      "barcode": "6260360006423",
+      "name_fa": "پک سوپ  12 عددی الیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "25f49b64-bc74-4375-90c0-930917c9c465",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1515939014.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ",
+        "pack_count": 12,
+        "parsed_brand": "الیت",
+        "original_name": "پک سوپ  12 عددی الیت",
+        "parsed_attributes": [],
+        "suggested_variant_name": "12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.421Z",
+      "updated_at": "2025-12-29T13:03:50.341Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "25f49b64-bc74-4375-90c0-930917c9c465",
+        "name": "الیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:35.588Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e6ac253d-3847-491d-97b3-4e120de94a47",
+      "barcode": "6262586801943",
+      "name_fa": "کتلت گوشت نیمه پخته 10 عددی فارسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1531804185.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کتلت گوشت نیمه پخته",
+        "pack_count": 10,
+        "parsed_brand": "فارسی",
+        "original_name": "کتلت گوشت نیمه پخته 10 عددی فارسی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.443Z",
+      "updated_at": "2025-12-29T13:03:24.075Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "9280156d-02e2-45f0-97ec-7c0632ed6268",
+        "name": "فارسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:39:52.171Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "df58e08a-f268-4d66-b677-539d451baced",
+      "barcode": "6260805600049",
+      "name_fa": "سوپ سیب زمینی 80 گرمی آذر پوره",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3dd464e8-a8b4-41e3-b443-77d2b5e990ef",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1544589342.jpg",
+      "reference_price": null,
+      "weight_grams": 80,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سوپ سیب زمینی",
+        "pack_count": null,
+        "parsed_brand": "آذر پوره",
+        "original_name": "سوپ سیب زمینی 80 گرمی آذر پوره",
+        "parsed_attributes": [],
+        "suggested_variant_name": "80 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.445Z",
+      "updated_at": "2025-12-29T13:03:21.115Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3dd464e8-a8b4-41e3-b443-77d2b5e990ef",
+        "name": "آذر پوره",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:16.867Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "fc2ab5a2-d2f2-4ee0-8446-c42b7b87bf64",
+      "barcode": "6260805600032",
+      "name_fa": "پودر فلافل 100 گرمی آذر پوره",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3dd464e8-a8b4-41e3-b443-77d2b5e990ef",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1544589316.jpg",
+      "reference_price": null,
+      "weight_grams": 100,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پودر فلافل",
+        "pack_count": null,
+        "parsed_brand": "آذر پوره",
+        "original_name": "پودر فلافل 100 گرمی آذر پوره",
+        "parsed_attributes": [],
+        "suggested_variant_name": "100 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.447Z",
+      "updated_at": "2025-12-29T13:03:20.050Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3dd464e8-a8b4-41e3-b443-77d2b5e990ef",
+        "name": "آذر پوره",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:16.867Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e67d3870-48bb-45b2-ad7d-d3647a99331e",
+      "barcode": "6260805600063",
+      "name_fa": "پودر فلافل 250 گرمی آذر پوره",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3dd464e8-a8b4-41e3-b443-77d2b5e990ef",
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%BA%D8%B0%D8%A7%D8%8C%20%DA%A9%D9%86%D8%B3%D8%B1%D9%88%D8%8C%20%D8%B3%D8%A8%D8%B2%DB%8C%D8%AC%D8%A7%D8%AA%2FPic/1544589367.jpg",
+      "reference_price": null,
+      "weight_grams": 250,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "فلافل",
+        "pack_count": null,
+        "parsed_brand": "آذر پوره",
+        "original_name": "پودر فلافل 250 گرمی آذر پوره",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 گرمی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:44.448Z",
+      "updated_at": "2025-12-29T13:03:18.688Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3dd464e8-a8b4-41e3-b443-77d2b5e990ef",
+        "name": "آذر پوره",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:16.867Z"
+      },
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d93a26c6-4896-4e52-91cf-41f14f96176f",
+      "barcode": "6662316785640",
+      "name_fa": "Costa.نودل لیوانی 65 گ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6662316785640",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 164,
+          "original_name": "Costa.نودل ليواني 65 گ",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6662316785640"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "ea0585bc-0b58-45dd-a357-898ff694e2a9",
+      "barcode": "6260100301429",
+      "name_fa": "پاستا پاستا هورنلی گراب مرغ و قارچ نیمه آماده تک ماکارون 180 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260100301429",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 6014,
+          "original_name": "پاستا پاستا هورنلي گراب مرغ و قارچ نيمه آماده تک ماکارون 180 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260100301429"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f5929eed-3bc2-4579-8177-c1410b33a396",
+      "barcode": "6260360013933",
+      "name_fa": "پودر سوپ جو الیت 75 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260360013933",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7897,
+          "original_name": "پودر سوپ جو اليت 75 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260360013933"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f98a82e6-dd6f-4790-92d5-b7194b964df8",
+      "barcode": "6266218302419",
+      "name_fa": "پودر سوپ جو دوسر جوانه اُ.آ.ب (52 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266218302419",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7899,
+          "original_name": "پودر سوپ جو دوسر جوانه اُ.آ.ب (52 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266218302419"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f2558740-334e-4a1e-aa89-dc60c0c6abce",
+      "barcode": "6260418701065",
+      "name_fa": "پودر سوپ جو مگی (75 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260418701065",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7903,
+          "original_name": "پودر سوپ جو مگی (75 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260418701065"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f4a5ce2d-7a73-43a0-ae4c-72772f1b63bd",
+      "barcode": "6260418700815",
+      "name_fa": "پودر سوپ جو و گوجه فرنگی مگی (65 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260418700815",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7912,
+          "original_name": "پودر سوپ جو و گوجه فرنگی مگی (65 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260418700815"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cb8bda8f-ef66-4dc4-a9d7-45eb4e85c629",
+      "barcode": "8690637019814",
+      "name_fa": "پودر سوپ قارچ کنور (19 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690637019814",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7924,
+          "original_name": "پودر سوپ قارچ کنور (19 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690637019814"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f6ccfe88-7d1f-4ee7-af3b-a42159e4d02b",
+      "barcode": "8690637864728",
+      "name_fa": "پودر سوپ گیاهان کوهی کنور (72 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690637864728",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7929,
+          "original_name": "پودر سوپ گیاهان کوهی کنور (72 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690637864728"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f800b4e8-779b-4c64-9954-9db53360391c",
+      "barcode": "6266218302389",
+      "name_fa": "سوپ جو دوسر کینوا اُ.آ.ب (52 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266218302389",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 16077,
+          "original_name": "سوپ جو دوسر کينوا اُ.آ.ب (52 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266218302389"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "dbb9c297-2554-46ce-a36d-e42b84912236",
+      "barcode": "8683130018194",
+      "name_fa": "سوپ ماست کنور 12*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8683130018194",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 16083,
+          "original_name": "سوپ ماست کنور 12*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8683130018194"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d062fd12-fc03-425d-a633-8a074cb30ca9",
+      "barcode": "8690637503290",
+      "name_fa": "سوپ نیمه آماده حاوی عدس کنور (22 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690637503290",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 16084,
+          "original_name": "سوپ نيمه آماده حاوي عدس کنور (22 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690637503290"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f7938573-ab0f-4c08-9888-95798426043b",
+      "barcode": "4605496001461",
+      "name_fa": "نودل سطلی 85گرمی چیکن بیگ بون 24*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4605496001461",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28244,
+          "original_name": "نودل  سطلي 85گرمي چيکن بيگ بون 24*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4605496001461"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "fc60e230-1b49-4a44-b0e5-5a1479ec5e09",
+      "barcode": "4870227271073",
+      "name_fa": "نودل 90 گرمی بشقابی چیکن رولتن 24*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4870227271073",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28249,
+          "original_name": "نودل 90 گرمي بشقابي چيکن رولتن 24*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4870227271073"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "fc44bede-e5a3-4546-bc60-75829d362d15",
+      "barcode": "8690637946462",
+      "name_fa": "نودل ادویه کاری کنور (66 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690637946462",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28254,
+          "original_name": "نودل ادویه کاری کنور (66 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690637946462"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "de4067ee-879b-4053-8cf6-5cfa6aca9d25",
+      "barcode": "074603003287",
+      "name_fa": "نودل با کیمچی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:074603003287",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28261,
+          "original_name": "نودل با کيمچي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "74603003287"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "de3d2995-294b-4f2b-ba67-02633a505019",
+      "barcode": "8801073113428",
+      "name_fa": "نودل با مرغ تند",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073113428",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28263,
+          "original_name": "نودل با مرغ تند",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073113428"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f6d784ef-778d-4d7e-a225-9f2e8436d335",
+      "barcode": "6260000252159",
+      "name_fa": "نودل تند و فلفلی شف هو 65 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260000252159",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28269,
+          "original_name": "نودل تند و فلفلي شف هو 65 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260000252159"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e4b13e76-b4de-4736-9d76-f0b81b79eb11",
+      "barcode": "8801073113268",
+      "name_fa": "نودل خارجی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073113268",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28273,
+          "original_name": "نودل خارجي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073113268"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d85a879c-ebec-41f5-a1e8-cf028a343e92",
+      "barcode": "4605496019466",
+      "name_fa": "نودل رشته فرنگی و مرغ سزار رولتون 70 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4605496019466",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28279,
+          "original_name": "نودل رشته فرنگي و مرغ سزار رولتون 70 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4605496019466"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e2cbb0a8-ec06-4929-a5ad-f85aeb32dbaa",
+      "barcode": "6260000252104",
+      "name_fa": "نودل سبزیجات شف هو 65 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260000252104",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28284,
+          "original_name": "نودل سبزيجات شف هو 65 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260000252104"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d0601d53-327f-42c7-88e9-95d0c56ceb49",
+      "barcode": "089686120714",
+      "name_fa": "نودل سبزیجات اندومی (80 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:089686120714",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28292,
+          "original_name": "نودل سبزیجات اندومی (80 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "89686120714"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cc94710c-0aa7-40c7-942d-b638cc7d4d22",
+      "barcode": "9555022300054",
+      "name_fa": "نودل سبزیجات مامی (85 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:9555022300054",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28294,
+          "original_name": "نودل سبزیجات مامی (85 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "9555022300054"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "ee6ea17a-2ac6-48c5-9211-52784a8ad24b",
+      "barcode": "9555022304274",
+      "name_fa": "نودل طعم سبزیجات مامی (75 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:9555022304274",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28307,
+          "original_name": "نودل طعم سبزيجات مامي (75 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "9555022304274"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f95cdcd9-fc3b-46f8-8dd9-43304b4711f0",
+      "barcode": "6262092002971",
+      "name_fa": "نودل قارچ و پنیر کودک هاتی کارا (77 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262092002971",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28314,
+          "original_name": "نودل قارچ و پنير کودک هاتي کارا (77 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262092002971"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f804481c-196f-4332-9746-1bc0238e7f9a",
+      "barcode": "6262092000939",
+      "name_fa": "نودل کاری پک هاتی کارا (77 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262092000939",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28317,
+          "original_name": "نودل کاری پک هاتی کارا (77 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262092000939"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e3414b4c-a907-4a11-aa98-f2ee968c8efc",
+      "barcode": "8801073212480",
+      "name_fa": "نودل کاسه ای کارابونا خامه سامیانگ120گ 16*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073212480",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28325,
+          "original_name": "نودل کاسه اي کارابونا خامه ساميانگ120گ 16*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073212480"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "d0a2fe8b-2abd-4dfc-8010-3a76f9a423a5",
+      "barcode": "8801073211506",
+      "name_fa": "نودل کاسه ای کارابونا سامیانگ105گ 16*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073211506",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28326,
+          "original_name": "نودل کاسه اي کارابونا ساميانگ105گ 16*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073211506"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cdbb29d3-b765-4eaf-9064-36413d6d48f5",
+      "barcode": "8801073113893",
+      "name_fa": "نودل کره ای 13",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073113893",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28329,
+          "original_name": "نودل کره اي 13",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073113893"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cac9e8fd-83b0-49ba-904c-e7fc4f1eab89",
+      "barcode": "8801073114029",
+      "name_fa": "نودل کیمچی سامیانگ 80 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073114029",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28338,
+          "original_name": "نودل کيمچي ساميانگ 80 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073114029"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f20ccfc2-50bf-4b59-898b-3c3d34000e22",
+      "barcode": "6260000252111",
+      "name_fa": "نودل گوشت شف هو 65 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260000252111",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28346,
+          "original_name": "نودل گوشت شف هو 65 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260000252111"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "de833d2c-1304-4ac6-9677-ff34ab95e928",
+      "barcode": "9555022300009",
+      "name_fa": "نودل گوشت مامی (85 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:9555022300009",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28351,
+          "original_name": "نودل گوشت مامی (85 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "9555022300009"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "f7ad5fb5-632a-409a-a512-2dfd75b7e9f0",
+      "barcode": "8852018201014",
+      "name_fa": "نودل گوشت یام یام (70 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8852018201014",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28353,
+          "original_name": "نودل گوشت یام یام (70 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8852018201014"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "fb0b005b-5e83-443c-b0cf-447b777f7a93",
+      "barcode": "8801073211667",
+      "name_fa": "نودل لیوانی کاربونورا سامیانگ80گ 30*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073211667",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28358,
+          "original_name": "نودل ليواني کاربونورا ساميانگ80گ 30*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073211667"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "cc653e2a-0454-4a85-a469-c93f387b35ad",
+      "barcode": "8801073839830",
+      "name_fa": "نودل لیوانی گوشت سامیانگ65گ(15*1)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073839830",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28359,
+          "original_name": "نودل ليواني گوشت ساميانگ65گ(15*1)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073839830"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "e282578e-298b-4c4a-bb79-0802b838bdf5",
+      "barcode": "8801073210776",
+      "name_fa": "نودل لیوانی هات چیکن سامیانگ70گ(30*1)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8801073210776",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28361,
+          "original_name": "نودل ليواني هات چيکن ساميانگ70گ(30*1)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8801073210776"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "c9299fa5-a9fb-49e0-a713-31e84a4713a0",
+      "barcode": "8996001520291",
+      "name_fa": "نودل مرغ باکمی میوا (110 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8996001520291",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28372,
+          "original_name": "نودل مرغ باکمی میوا (110 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8996001520291"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    },
+    {
+      "id": "fc89ff24-c8a9-4bbb-8c4a-71ab9ae22210",
+      "barcode": "6262092000618",
+      "name_fa": "نودل گوجه فرنگی هاتی کارا 77 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%DA%AF%D9%88%D8%AC%D9%87-%D9%81%D8%B1%D9%86%DA%AF%DB%8C-%D9%87%D8%A7%D8%AA%DB%8C-%DA%A9%D8%A7%D8%B1%D8%A7.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262092000618",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000040902",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "کنسرو، غذای آماده و منجمد",
+          "subcategory": "غذای نیمه آماده",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28339,
+          "original_name": "نودل گوجه فرنگی هاتی کارا 77 گرمی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262092000618"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "eab6d021-56f9-452f-8360-dd270d0b4e4f",
+        "name": "غذای نیمه آماده",
+        "icon_url": null,
+        "parent_id": "2f4ed15d-2744-4ce2-a347-2d68c80c04a1",
+        "created_at": "2025-12-29T09:34:43.794Z"
+      }
+    }
+  ],
+  "total": 373
+}

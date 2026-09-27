@@ -1,0 +1,5586 @@
+{
+  "items": [
+    {
+      "id": "3fc08ad1-b75b-4796-ae2a-e1aea731cf81",
+      "barcode": "6266061101818",
+      "name_fa": "دستمال توالت چهار لایه 4 رول پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1471254822.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 1,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {
+        "general": 1
+      },
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال توالت چهار لایه 4 رول پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "4"
+          },
+          {
+            "name": "تعداد رول",
+            "value": "رول"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.164Z",
+      "updated_at": "2026-09-10T21:35:35.417Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3d18176e-0d34-4d2a-b9c4-df1fe78b5ade",
+      "barcode": "6260136510215",
+      "name_fa": "دستمال توالت چهار لایه 2 رول پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260136510215(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "پرمیس",
+        "original_name": "دستمال توالت چهار لایه 2 رول پرمیس",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "2 رول چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.517Z",
+      "updated_at": "2025-12-29T17:18:01.307Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "4033762a-0646-4956-b6d8-d3a27fbace9e",
+      "barcode": "6262280500890",
+      "name_fa": "دستمال توالت سفید 2 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6262280500890(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت سفید 2 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "2 رول سفید"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.529Z",
+      "updated_at": "2025-12-29T17:17:51.221Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "b714f11f-7008-445d-bad0-b9c65cab8a87",
+      "barcode": "6264234100453",
+      "name_fa": "دستمال توالت 4 لایه 2 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1483858427.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت 4 لایه 2 رول های‌کلین",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.531Z",
+      "updated_at": "2025-12-29T17:17:49.801Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "31909a43-ba8e-4764-be7e-19089aafa405",
+      "barcode": "6260119320169",
+      "name_fa": "دستمال توالت سفید طرح برفی و موج 2 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260119320169(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت سفید طرح برفی و موج 2 رول پاکان",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "برفی و موج"
+          },
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "2 رول سفید طرح برفی و موج"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.557Z",
+      "updated_at": "2025-12-29T17:17:26.755Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "e935c283-f8d7-42cd-af46-6674db81be9f",
+      "barcode": "6260573100352",
+      "name_fa": "دستمال توالت ساده 2 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473941816.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال توالت ساده 2 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ساده"
+          }
+        ],
+        "suggested_variant_name": "2 رول ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.622Z",
+      "updated_at": "2025-12-29T17:15:49.950Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "88ff0ffd-827c-4e64-80d7-a80101877419",
+      "barcode": "6267604414693",
+      "name_fa": "دستمال توالت چهار لایه 2 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473941442.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال توالت چهار لایه 2 رول سافتلن",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.624Z",
+      "updated_at": "2025-12-29T17:15:46.594Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "19ddb31e-9f0c-4011-a7b5-f939e7a9cf85",
+      "barcode": "6260119320138",
+      "name_fa": "دستمال توالت گلدار و رنگی 2 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473941564.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت گلدار و رنگی 2 رول پاکان",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "گلدار و رنگی"
+          }
+        ],
+        "suggested_variant_name": "2 رول گلدار و رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.658Z",
+      "updated_at": "2025-12-29T17:15:05.553Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3728dd13-c49d-4323-9272-5cd45c1b2c38",
+      "barcode": "6264234100415",
+      "name_fa": "دستمال توالت گلدار 2 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6264234100415(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت گلدار",
+        "pack_count": 2,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت گلدار 2 رول های‌کلین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "2 رول گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.661Z",
+      "updated_at": "2025-12-29T17:15:01.798Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "c464bf64-0a4a-45e7-b294-37c1a182ffb2",
+      "barcode": "6260179512023",
+      "name_fa": "دستمال توالت سفید طرح قلب 2 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474005093.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت سفید",
+        "pack_count": 2,
+        "parsed_brand": null,
+        "original_name": "دستمال توالت سفید طرح قلب 2 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "قلب"
+          }
+        ],
+        "suggested_variant_name": "2 رول طرح قلب"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.662Z",
+      "updated_at": "2025-12-29T17:15:00.445Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "82f73e4b-8e70-4742-ad7f-0cf8e74f0710",
+      "barcode": "6260119310375",
+      "name_fa": "دستمال توالت 3 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474006773.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 3,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت 3 رول پاکان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.846Z",
+      "updated_at": "2025-12-29T17:12:34.348Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "07e80495-59ff-47dd-9ac2-4149724e8735",
+      "barcode": "6260136540113",
+      "name_fa": "دستمال توالت چهار لایه 4 رول پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474008768.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "پرمیس",
+        "original_name": "دستمال توالت چهار لایه 4 رول پرمیس",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          },
+          {
+            "name": "تعداد رول",
+            "value": "4 رول"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.953Z",
+      "updated_at": "2025-12-29T17:11:15.608Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "be9d3743-47c3-48c6-8301-b38e2d2a60a6",
+      "barcode": "6262280500852",
+      "name_fa": "دستمال حوله‌ای سفید دو لایه 2 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010004.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال حوله‌ای سفید دو لایه 2 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          },
+          {
+            "name": "تعداد لایه",
+            "value": "دو لایه"
+          }
+        ],
+        "suggested_variant_name": "سفید دو لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.960Z",
+      "updated_at": "2025-12-29T17:11:10.726Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "808162c5-4a82-4c9a-ba21-f550cb376a8a",
+      "barcode": "6260119320060",
+      "name_fa": "دستمال حوله‌ای سفید طرح برفی 2 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009152.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال حوله‌ای سفید طرح برفی 2 رول پاکان",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          },
+          {
+            "name": "طرح",
+            "value": "برفی"
+          }
+        ],
+        "suggested_variant_name": "2 رول سفید برفی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.035Z",
+      "updated_at": "2025-12-29T17:10:24.557Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "d83669c7-4daf-4e29-848d-e7de33aea2f8",
+      "barcode": "6267604415034",
+      "name_fa": "دستمال توالت 3 لایه 4 رول نانسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "73adfbe6-90c3-4212-9a58-3c2ae13c1281",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1483858984.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "نانسی",
+        "original_name": "دستمال توالت 3 لایه 4 رول نانسی",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.037Z",
+      "updated_at": "2025-12-29T17:10:23.294Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "73adfbe6-90c3-4212-9a58-3c2ae13c1281",
+        "name": "نانسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:34.589Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "89d65999-ba75-485a-9c04-8fca34adb123",
+      "barcode": "6264234101207",
+      "name_fa": "دستمال توالت 4 لایه 4 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6264234101207(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت 4 لایه 4 رول های‌کلین",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          },
+          {
+            "name": "رول",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.038Z",
+      "updated_at": "2025-12-29T17:10:22.122Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "8bd5bae1-d35b-4eac-bcd6-8e0bcba1c8d3",
+      "barcode": "6260500511039",
+      "name_fa": "دستمال توالت 3 لایه  4 رول شکوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353481.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "شکوه",
+        "original_name": "دستمال توالت 3 لایه  4 رول شکوه",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.040Z",
+      "updated_at": "2025-12-29T17:10:20.438Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+        "name": "شکوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:59:29.782Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "bece29c7-0149-4cf6-8993-6bf32c06b452",
+      "barcode": "6260136510222",
+      "name_fa": "دستمال حوله‌ای آشپزخانه چهار لایه 2 رول پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009320.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای آشپزخانه",
+        "pack_count": 2,
+        "parsed_brand": "پرمیس",
+        "original_name": "دستمال حوله‌ای آشپزخانه چهار لایه 2 رول پرمیس",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.051Z",
+      "updated_at": "2025-12-29T17:10:11.390Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "fe749f2b-b8ab-4c02-9d51-e29edd123eb2",
+      "barcode": "6260119310818",
+      "name_fa": "دستمال توالت سفید و رنگی 4 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260119310818(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت سفید و رنگی 4 رول پاکان",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید و رنگی"
+          }
+        ],
+        "suggested_variant_name": "4 رول سفید و رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.058Z",
+      "updated_at": "2025-12-29T17:10:02.991Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "af807104-7511-44c1-8b52-ff856b3962b9",
+      "barcode": "6260119320039",
+      "name_fa": "دستمال حوله‌ای گلدار رنگی 2 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260119320039(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال حوله‌ای گلدار رنگی 2 رول پاکان",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "گلدار"
+          },
+          {
+            "name": "رنگ",
+            "value": "رنگی"
+          }
+        ],
+        "suggested_variant_name": "2 رول گلدار رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.120Z",
+      "updated_at": "2025-12-29T17:09:00.642Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "aeb66618-9a09-4f19-80c5-b9c10addaa17",
+      "barcode": "6260179512054",
+      "name_fa": "دستمال توالت سفید آفتابگردان 4 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010541.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "چشمک",
+        "original_name": "دستمال توالت سفید آفتابگردان 4 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          },
+          {
+            "name": "طرح",
+            "value": "آفتابگردان"
+          }
+        ],
+        "suggested_variant_name": "4 رول سفید آفتابگردان"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.122Z",
+      "updated_at": "2025-12-29T17:08:57.767Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+        "name": "چشمک",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:30:10.219Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "667d7d17-0396-475c-9aa0-d9a31da840b6",
+      "barcode": "6260573100550",
+      "name_fa": "دستمال حوله‌ای ساده 2 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473315446.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال حوله‌ای ساده 2 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ساده"
+          }
+        ],
+        "suggested_variant_name": "2 رول ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.173Z",
+      "updated_at": "2025-12-29T17:08:07.327Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "5090225e-be19-4548-b0a8-4d68a9166a2a",
+      "barcode": "6260179511026",
+      "name_fa": "دستمال حوله‌ای سفید طرح قلب 2 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010804.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای سفید طرح قلب",
+        "pack_count": 2,
+        "parsed_brand": "چشمک",
+        "original_name": "دستمال حوله‌ای سفید طرح قلب 2 رول چشمک",
+        "parsed_attributes": [],
+        "suggested_variant_name": "2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.211Z",
+      "updated_at": "2025-12-29T17:07:17.913Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+        "name": "چشمک",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:30:10.219Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "9435f740-f501-4a58-81a1-15e0dcdcbc94",
+      "barcode": "6260136540151",
+      "name_fa": "دستمال توالت چهار لایه 6 رول پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474011435.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "پرمیس",
+        "original_name": "دستمال توالت چهار لایه 6 رول پرمیس",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "6 عددی چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.228Z",
+      "updated_at": "2025-12-29T17:06:54.913Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3c0150da-2965-4562-b52e-ad2559d448d8",
+      "barcode": "6264234100408",
+      "name_fa": "دستمال توالت 6 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6264234100408(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت 6 رول های‌کلین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "6 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.291Z",
+      "updated_at": "2025-12-29T17:05:48.646Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "e96e44a9-dc49-4a19-945a-d16dcb369565",
+      "barcode": "6260119320046",
+      "name_fa": "دستمال توالت 6 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1478332227.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت 6 رول پاکان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "6 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.294Z",
+      "updated_at": "2025-12-29T17:05:45.391Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "a8e4061e-037a-4cbe-bc72-5e9f49b29f1b",
+      "barcode": "6266061101832",
+      "name_fa": "دستمال توالت کلاسیک سه لایه 8 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6266061101832(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 8,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال توالت کلاسیک سه لایه 8 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "کلاسیک"
+          },
+          {
+            "name": "تعداد لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "کلاسیک سه لایه 8 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.323Z",
+      "updated_at": "2025-12-29T17:05:13.025Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "97a152c9-1350-44b2-8ea1-7aaa4ef96d87",
+      "barcode": "6260573100451",
+      "name_fa": "دستمال توالت ساده 6 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474015467.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال توالت ساده 6 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ساده"
+          }
+        ],
+        "suggested_variant_name": "6 رول ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.353Z",
+      "updated_at": "2025-12-29T17:04:39.160Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "13e9fb0e-c887-44f4-8ef7-bd4a93f5e33c",
+      "barcode": "6264234100422",
+      "name_fa": "دستمال توالت گلدار 6 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6264234100422(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت گلدار 6 رول های‌کلین",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "6 عددی گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.396Z",
+      "updated_at": "2025-12-29T17:03:53.153Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "28b7cced-455f-4680-97b5-1a7715175e33",
+      "barcode": "6267604415058",
+      "name_fa": "دستمال توالت 3 لایه 8 رول نانسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "73adfbe6-90c3-4212-9a58-3c2ae13c1281",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6267604415058(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 8,
+        "parsed_brand": "نانسی",
+        "original_name": "دستمال توالت 3 لایه 8 رول نانسی",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 8 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.424Z",
+      "updated_at": "2025-12-29T17:03:17.697Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "73adfbe6-90c3-4212-9a58-3c2ae13c1281",
+        "name": "نانسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:34.589Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "0cfcd7d6-9056-4971-93dd-83b74b73dccc",
+      "barcode": "6260500541043",
+      "name_fa": "دستمال توالت 3 لایه  8 رول شکوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353607.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 8,
+        "parsed_brand": "شکوه",
+        "original_name": "دستمال توالت 3 لایه  8 رول شکوه",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 8 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.430Z",
+      "updated_at": "2025-12-29T17:03:10.058Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+        "name": "شکوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:59:29.782Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "7f221f14-a49b-4609-898b-73b82fbf3f9b",
+      "barcode": "6266840800048",
+      "name_fa": "دستمال توالت 4 لایه 50 برگ 4 بسته‌ای ایزی پیک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a6ab7d73-e360-44eb-bbc0-2d5803ce5a86",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547994214.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "ایزی پیک",
+        "original_name": "دستمال توالت 4 لایه 50 برگ 4 بسته‌ای ایزی پیک",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          },
+          {
+            "name": "برگ",
+            "value": "50"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 50 برگ 4 بسته‌ای"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.440Z",
+      "updated_at": "2025-12-29T17:03:02.227Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a6ab7d73-e360-44eb-bbc0-2d5803ce5a86",
+        "name": "ایزی پیک",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:03:02.217Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "8b9cd51d-7a83-4074-b892-de08dd40ee5c",
+      "barcode": "6260500542347",
+      "name_fa": "دستمال حوله ای سه لایه 4 رول شکوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1574653653.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله ای",
+        "pack_count": 4,
+        "parsed_brand": "شکوه",
+        "original_name": "دستمال حوله ای سه لایه 4 رول شکوه",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "سه لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.450Z",
+      "updated_at": "2025-12-29T17:02:54.669Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+        "name": "شکوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:59:29.782Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "2adc6ccc-d195-40c1-98db-35a821af7f98",
+      "barcode": "6267604414716",
+      "name_fa": "دستمال توالت 4 لایه 8 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1486814284.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 8,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال توالت 4 لایه 8 رول سافتلن",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "8 رول 4 لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.482Z",
+      "updated_at": "2025-12-29T17:02:10.592Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "285d616a-8cb0-4d82-9899-3b2fbb1af3f8",
+      "barcode": "6262280500920",
+      "name_fa": "دستمال توالت سفید 9 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6262280500920(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 9,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت سفید 9 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "9 رول سفید"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.488Z",
+      "updated_at": "2025-12-29T17:02:04.723Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "921ee6a0-4186-4682-841b-293b6d1a72fc",
+      "barcode": "6264234100446",
+      "name_fa": "دستمال توالت 4 لایه 9 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6264234100446(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 9,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت 4 لایه 9 رول های‌کلین",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 9 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.502Z",
+      "updated_at": "2025-12-29T17:01:49.798Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "224c2825-3447-4a6c-a466-d66cf4ead5e5",
+      "barcode": "6260179509887",
+      "name_fa": "دستمال توالت سه لایه 9 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1592197218.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 9,
+        "parsed_brand": "چشمک",
+        "original_name": "دستمال توالت سه لایه 9 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "سه لایه 9 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.561Z",
+      "updated_at": "2025-12-29T17:00:57.708Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+        "name": "چشمک",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:30:10.219Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "f4d9c488-1f39-4023-aac0-2e9bd3b08682",
+      "barcode": "6266061101856",
+      "name_fa": "دستمال توالت چهار لایه 12 رول پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474017633.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال توالت چهار لایه 12 رول پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "12 رول چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.578Z",
+      "updated_at": "2025-12-29T17:00:35.970Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "fdc2f07c-0f87-4770-84da-c6b984349475",
+      "barcode": "6260136540175",
+      "name_fa": "دستمال توالت 12 رول پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1512458327.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "پرمیس",
+        "original_name": "دستمال توالت 12 رول پرمیس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "12 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.590Z",
+      "updated_at": "2025-12-29T17:00:24.289Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "48ffe76d-6dba-4890-bbed-43ed69cd7bea",
+      "barcode": "6262280500876",
+      "name_fa": "دستمال توالت سفید 12 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474193717.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت سفید 12 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "12 رول سفید"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.640Z",
+      "updated_at": "2025-12-29T16:59:51.488Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "dfe564c5-855a-41dd-af0f-9e21527cf020",
+      "barcode": "6266061103300",
+      "name_fa": "دستمال توالت 3 لایه 16 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1510142926.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 16,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال توالت 3 لایه 16 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "16 عددی 3 لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.637Z",
+      "updated_at": "2025-12-29T16:59:54.417Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "0ec4ccb2-57b0-463d-9f67-85cac1623c0a",
+      "barcode": "6263973010436",
+      "name_fa": "کاغذ توالت 4 لایه 12 رول راشین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "0f693f0a-cd61-42a7-9d76-1346db8eec1f",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677894.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "کاغذ توالت",
+        "pack_count": 12,
+        "parsed_brand": "راشین",
+        "original_name": "کاغذ توالت 4 لایه 12 رول راشین",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 12 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.715Z",
+      "updated_at": "2025-12-29T16:59:32.565Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "0f693f0a-cd61-42a7-9d76-1346db8eec1f",
+        "name": "راشین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:56:39.188Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "74213db2-58e4-4d9e-91be-9352ad0138d8",
+      "barcode": "6264234101917",
+      "name_fa": "دستمال توالت 4 لایه 12 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1512458906.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال توالت 4 لایه 12 رول های‌کلین",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 12 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.717Z",
+      "updated_at": "2025-12-29T16:59:31.352Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "1d972df1-dbfe-4c19-99b7-95c3dff5823a",
+      "barcode": "6260500521298",
+      "name_fa": "دستمال توالت 3 لایه  12 رول شکوه",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353550.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "شکوه",
+        "original_name": "دستمال توالت 3 لایه  12 رول شکوه",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 12 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.751Z",
+      "updated_at": "2025-12-29T16:59:29.783Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3f9d249e-cd57-4c1a-82b5-e3f95fc2058e",
+        "name": "شکوه",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:59:29.782Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "06d5a5ab-dea0-44e3-ab19-e1afbc2c41f7",
+      "barcode": "6267604415102",
+      "name_fa": "دستمال توالت  12 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474194218.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال توالت  12 رول سافتلن",
+        "parsed_attributes": [],
+        "suggested_variant_name": "12 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.770Z",
+      "updated_at": "2025-12-29T16:59:06.482Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "a698e689-ceac-40e0-8105-576cea1dc8e9",
+      "barcode": "6260573100833",
+      "name_fa": "دستمال توالت ساده 12 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474193116.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال توالت ساده 12 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ساده"
+          }
+        ],
+        "suggested_variant_name": "12 رول ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.772Z",
+      "updated_at": "2025-12-29T16:59:03.995Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "7eb1d764-e039-43d0-81c9-3b65a5132350",
+      "barcode": "6260573100932",
+      "name_fa": "دستمال حوله‌ای ساده 6 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474193181.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 6,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال حوله‌ای ساده 6 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "ساده"
+          }
+        ],
+        "suggested_variant_name": "6 رول ساده"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.778Z",
+      "updated_at": "2025-12-29T16:58:57.805Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3a1243b3-dbd1-4d27-9c85-23a814b0dd86",
+      "barcode": "6262280500883",
+      "name_fa": "دستمال رولی 18 عددی هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1508214697.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال رولی",
+        "pack_count": 18,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال رولی 18 عددی هوبار",
+        "parsed_attributes": [],
+        "suggested_variant_name": "18 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.797Z",
+      "updated_at": "2025-12-29T16:58:46.218Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "70c7f889-0433-4722-a11d-fe28f8188670",
+      "barcode": "6260179519091",
+      "name_fa": "دستمال توالت چاپدار فانتزی 2 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474006815.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": null,
+        "original_name": "دستمال توالت چاپدار فانتزی 2 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "چاپدار فانتزی"
+          }
+        ],
+        "suggested_variant_name": "2 رول چاپدار فانتزی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.032Z",
+      "updated_at": "2025-12-29T16:54:25.309Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "ea218039-a698-41db-a8a4-c9a01f700d41",
+      "barcode": "6266061103850",
+      "name_fa": "دستمال حوله کاغذی 3 لایه 2 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1550061186.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله کاغذی",
+        "pack_count": 2,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال حوله کاغذی 3 لایه 2 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.093Z",
+      "updated_at": "2025-12-29T16:52:57.873Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "11e1d099-79c7-47a8-8f07-c992134d8ed7",
+      "barcode": "6264234100019",
+      "name_fa": "دستمال حوله‌ای 2 رول های‌کلین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6264234100019(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "های‌کلین",
+        "original_name": "دستمال حوله‌ای 2 رول های‌کلین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.218Z",
+      "updated_at": "2025-12-29T16:50:16.992Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "4b112cb3-1997-4381-8bec-d9c93e6de5a3",
+        "name": "های‌کلین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:10.601Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "738d15cd-7f3c-4d6a-ad25-44f4145e5d90",
+      "barcode": "6267604414839",
+      "name_fa": "دستمال توالت چهار لایه 4 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009614.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال توالت چهار لایه 4 رول سافتلن",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "4 رول چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.261Z",
+      "updated_at": "2025-12-29T16:49:20.705Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "c77ec50f-8473-499f-b29e-39be4e9fe214",
+      "barcode": "6267604411562",
+      "name_fa": "دستمال حوله سه لایه 2 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1574655046.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله",
+        "pack_count": 2,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال حوله سه لایه 2 رول سافتلن",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "سه لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.262Z",
+      "updated_at": "2025-12-29T16:49:19.470Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3ca9a8df-a631-47e4-b99d-1f9548a6e5b9",
+      "barcode": "6260119310580",
+      "name_fa": "دستمال حوله‌ای 3 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474014577.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 3,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال حوله‌ای 3 رول پاکان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.351Z",
+      "updated_at": "2025-12-29T16:47:14.535Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "ccd15f69-0045-4431-ab96-fd1cfd535d6d",
+      "barcode": "6267604401945",
+      "name_fa": "دستمال حوله‌ای آشپزخانه سه لایه 2 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474194123.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای آشپزخانه",
+        "pack_count": 2,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال حوله‌ای آشپزخانه سه لایه 2 رول سافتلن",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "سه لایه"
+          },
+          {
+            "name": "تعداد رول",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سه لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.352Z",
+      "updated_at": "2025-12-29T16:47:13.415Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "65c88cea-be3a-4c75-b6b6-aa912cb56a03",
+      "barcode": "6266061103881",
+      "name_fa": "دستمال حوله کاغذی 4 لایه 4 رول پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589789767.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله کاغذی",
+        "pack_count": 4,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال حوله کاغذی 4 لایه 4 رول پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          },
+          {
+            "name": "رول",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "4 لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.387Z",
+      "updated_at": "2025-12-29T16:46:22.415Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "fce08e96-f36b-4f15-859b-1568486a1ce9",
+      "barcode": "6266061101825",
+      "name_fa": "دستمال توالت چهار لایه 8 رول پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474020631.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 8,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال توالت چهار لایه 8 رول پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار"
+          }
+        ],
+        "suggested_variant_name": "8 رول چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.416Z",
+      "updated_at": "2025-12-29T16:45:35.833Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "b395ef64-04e3-4aa8-bd33-659aa233b3a1",
+      "barcode": "6260119330045",
+      "name_fa": "دستمال حوله‌ای 4 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474020685.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 4,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال حوله‌ای 4 رول پاکان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.439Z",
+      "updated_at": "2025-12-29T16:45:02.698Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "84b1414d-ec8f-4dc5-8513-a3d5c72264d7",
+      "barcode": "6260119330526",
+      "name_fa": "دستمال توالت 8 رول پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474021291.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 8,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت 8 رول پاکان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "8 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.449Z",
+      "updated_at": "2025-12-29T16:44:49.719Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "2c25ecc1-d1fa-46f0-a7fa-8a66a29db89b",
+      "barcode": "6267604411609",
+      "name_fa": "دستمال حوله سه لایه 4 رول سافتلن",
+      "name_en": null,
+      "description": null,
+      "brand_id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1574655082.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله",
+        "pack_count": 4,
+        "parsed_brand": "سافتلن",
+        "original_name": "دستمال حوله سه لایه 4 رول سافتلن",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "4 رول سه لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.451Z",
+      "updated_at": "2025-12-29T16:44:47.150Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "05bfc8b7-e8eb-45d2-a35e-c0c75cd42c52",
+        "name": "سافتلن",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:04:42.941Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "5e657b29-71c4-4b7e-8617-e63f0a72c71c",
+      "barcode": "6267604415065",
+      "name_fa": "دستمال توالت 3 لایه 12 رول نانسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "73adfbe6-90c3-4212-9a58-3c2ae13c1281",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6267604415065(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "نانسی",
+        "original_name": "دستمال توالت 3 لایه 12 رول نانسی",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "12 رول 3 لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.546Z",
+      "updated_at": "2025-12-29T16:42:34.591Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "73adfbe6-90c3-4212-9a58-3c2ae13c1281",
+        "name": "نانسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:34.589Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "1c6e7113-fda6-499f-ae8b-00e4e53c8a11",
+      "barcode": "6260119312140",
+      "name_fa": "دستمال توالت 16 عددی پاکان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1506576235.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 16,
+        "parsed_brand": "پاکان",
+        "original_name": "دستمال توالت 16 عددی پاکان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "16 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.592Z",
+      "updated_at": "2025-12-29T16:41:28.877Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "21dd510d-7e13-441f-ae84-a81d4f010d1a",
+        "name": "پاکان",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:35.581Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "e082c33d-6291-467f-8d64-818a2fed9c30",
+      "barcode": "6266061103256",
+      "name_fa": "دستمال توالت 4 لایه 24 عددی پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1516606006.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 24,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال توالت 4 لایه 24 عددی پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "24 عددی 4 لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.591Z",
+      "updated_at": "2025-12-29T16:41:30.098Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "474346e2-3ab5-4267-8959-de599504e167",
+      "barcode": "6260573100499",
+      "name_fa": "دستمال توالت گلدار 2 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474005204.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال توالت گلدار 2 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "2 رول گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.798Z",
+      "updated_at": "2025-12-29T16:36:54.978Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "2a7a555e-86d6-4ba4-81f5-c60038c83b82",
+      "barcode": "6260573100567",
+      "name_fa": "دستمال حوله‌ای گلدار 2 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474011676.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال حوله‌ای گلدار 2 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "2 رول گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.799Z",
+      "updated_at": "2025-12-29T16:36:53.400Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "27ed2372-b898-4b0c-944c-aea650715ad9",
+      "barcode": "6260573100598",
+      "name_fa": "دستمال توالت گلدار 4 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010880.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال توالت گلدار 4 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "4 رول گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.800Z",
+      "updated_at": "2025-12-29T16:36:52.253Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "116a1d5f-40bf-4aa3-8179-aa417d5ceede",
+      "barcode": "6260573100468",
+      "name_fa": "دستمال توالت گلدار 6 رول حریر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474020727.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "حریر",
+        "original_name": "دستمال توالت گلدار 6 رول حریر",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "6 عددی گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.801Z",
+      "updated_at": "2025-12-29T16:36:50.724Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "50548ff1-2dbe-4caf-9c02-a6587e7468ef",
+        "name": "حریر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:35:45.077Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "88c43905-6933-453c-b9c4-d9e75362e99e",
+      "barcode": "6260179519138",
+      "name_fa": "دستمال توالت رنگی سه لایه 2 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474005344.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "چشمک",
+        "original_name": "دستمال توالت رنگی سه لایه 2 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "رنگی"
+          },
+          {
+            "name": "تعداد لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "رنگی سه لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.802Z",
+      "updated_at": "2025-12-29T16:36:49.243Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+        "name": "چشمک",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:30:10.219Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "9fa233a8-9c32-45ce-b573-71d6d3b706d7",
+      "barcode": "6260179518957",
+      "name_fa": "دستمال توالت رنگی مینا 4 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010851.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "چشمک",
+        "original_name": "دستمال توالت رنگی مینا 4 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "رنگی"
+          }
+        ],
+        "suggested_variant_name": "4 رول رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.803Z",
+      "updated_at": "2025-12-29T16:36:47.339Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+        "name": "چشمک",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:30:10.219Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "8fd6ae7a-efde-4b2d-acbb-ffea9b38eb71",
+      "barcode": "6260179550452",
+      "name_fa": "دستمال حوله‌ای چاپدار فانتزی 2 رول چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474011037.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": null,
+        "original_name": "دستمال حوله‌ای چاپدار فانتزی 2 رول چشمک",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "چاپدار فانتزی"
+          }
+        ],
+        "suggested_variant_name": "2 رول چاپدار فانتزی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.804Z",
+      "updated_at": "2025-12-29T16:36:45.855Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3d32850a-0c36-4f1f-9783-dcff454dcdb1",
+      "barcode": "6260179580121",
+      "name_fa": "دستمال حوله‌ای گردگیری 1 رولی 35 عددی چشمک",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1471178560.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای گردگیری",
+        "pack_count": 35,
+        "parsed_brand": "چشمک",
+        "original_name": "دستمال حوله‌ای گردگیری 1 رولی 35 عددی چشمک",
+        "parsed_attributes": [],
+        "suggested_variant_name": "35 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.806Z",
+      "updated_at": "2025-12-29T16:36:44.625Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7845cb48-0729-49a7-ac05-174ce7ab1948",
+        "name": "چشمک",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:30:10.219Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "66e0a565-4430-462a-8e9d-6dd9c79958f3",
+      "barcode": "6260136100089",
+      "name_fa": "دستمال توالت سفید 2 رول گلریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473941664.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "گلریز",
+        "original_name": "دستمال توالت سفید 2 رول گلریز",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "2 رول سفید"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.808Z",
+      "updated_at": "2025-12-29T16:36:43.292Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+        "name": "گلریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:12:58.280Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "907d56df-a79f-4b13-ba3f-a77a8d9bebf4",
+      "barcode": "6260136100478",
+      "name_fa": "دستمال توالت گلدار 2 رول گلریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473943495.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "گلریز",
+        "original_name": "دستمال توالت گلدار 2 رول گلریز",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "2 رول گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.809Z",
+      "updated_at": "2025-12-29T16:36:42.146Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+        "name": "گلریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:12:58.280Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "0c54f85d-29c9-4c11-904d-4b80e32f16c6",
+      "barcode": "6260136100119",
+      "name_fa": "دستمال حوله‌ای گلدار 2 رول گلریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474011092.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "گلریز",
+        "original_name": "دستمال حوله‌ای گلدار 2 رول گلریز",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "2 رول گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.810Z",
+      "updated_at": "2025-12-29T16:36:40.990Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+        "name": "گلریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:12:58.280Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "3cd3fc01-1e7a-43b5-abc4-669848422b61",
+      "barcode": "6260136100546",
+      "name_fa": "دستمال حوله‌ای سفید 2 رول گلریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009465.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "گلریز",
+        "original_name": "دستمال حوله‌ای سفید 2 رول گلریز",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "2 رول سفید"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.811Z",
+      "updated_at": "2025-12-29T16:36:39.818Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+        "name": "گلریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:12:58.280Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "84197e30-2503-4c21-87cf-a22493f29fbd",
+      "barcode": "6260136101109",
+      "name_fa": "دستمال توالت دلفی سفید 9 رول گلریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474020899.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 9,
+        "parsed_brand": "گلریز",
+        "original_name": "دستمال توالت دلفی سفید 9 رول گلریز",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          }
+        ],
+        "suggested_variant_name": "9 رول سفید"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.812Z",
+      "updated_at": "2025-12-29T16:36:38.331Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "51b0a74f-4454-4069-b686-dad83e4bf5ca",
+        "name": "گلریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:12:58.280Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "9413c0dd-5516-47a5-9628-5e2210d0099c",
+      "barcode": "6260136101116",
+      "name_fa": "دستمال توالت دلفی سفید 12 رول گلریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "df017997-066c-4ca3-abcd-93ac8ea063aa",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260136101116(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "دلفی",
+        "original_name": "دستمال توالت دلفی سفید 12 رول گلریز",
+        "parsed_attributes": [
+          {
+            "name": "رنگ",
+            "value": "سفید"
+          },
+          {
+            "name": "طرح",
+            "value": "گلریز"
+          }
+        ],
+        "suggested_variant_name": "12 رول سفید گلریز"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.813Z",
+      "updated_at": "2025-12-29T16:36:37.166Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "df017997-066c-4ca3-abcd-93ac8ea063aa",
+        "name": "دلفی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:37.155Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "808e3c87-4ca9-44b4-a91d-2da38bddad5c",
+      "barcode": "6262280500210",
+      "name_fa": "دستمال حوله‌ای چهار لایه 2 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010047.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای",
+        "pack_count": 2,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال حوله‌ای چهار لایه 2 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.814Z",
+      "updated_at": "2025-12-29T16:36:35.898Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "109e0138-9eb3-4ec8-b185-ca1f3f231139",
+      "barcode": "6262280500173",
+      "name_fa": "دستمال توالت چهار لایه 2 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1473941506.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت چهار لایه 2 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.816Z",
+      "updated_at": "2025-12-29T16:36:27.869Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "a45de73f-3a50-4028-8ef2-bbe7a60824e0",
+      "barcode": "6262280500180",
+      "name_fa": "دستمال توالت چهار لایه 4 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009001.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت چهار لایه 4 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          },
+          {
+            "name": "رول",
+            "value": "4 رول"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.817Z",
+      "updated_at": "2025-12-29T16:36:26.501Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "5c63d939-bb9c-4116-ae44-159f89776cb7",
+      "barcode": "6262280500197",
+      "name_fa": "دستمال توالت چهار لایه 6 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474012784.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت چهار لایه 6 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "6 رول چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.819Z",
+      "updated_at": "2025-12-29T16:36:24.919Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "85a5e73d-0614-4465-bcb7-bd59ed7e8225",
+      "barcode": "6262280500661",
+      "name_fa": "دستمال توالت چهار لایه 9 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474193678.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 9,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت چهار لایه 9 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار"
+          }
+        ],
+        "suggested_variant_name": "9 رول چهار لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.824Z",
+      "updated_at": "2025-12-29T16:36:23.358Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "c59aeb33-c129-4d17-bd4f-7304248536d1",
+      "barcode": "6262280500203",
+      "name_fa": "دستمال توالت چهار لایه 12 رول هوبار",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6262280500203(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 12,
+        "parsed_brand": "هوبار",
+        "original_name": "دستمال توالت چهار لایه 12 رول هوبار",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 12 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.826Z",
+      "updated_at": "2025-12-29T16:36:22.243Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d2c409e-cc7d-4539-9e94-e45db7409743",
+        "name": "هوبار",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:00.476Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "75783a02-a925-48d6-b922-1b6642951751",
+      "barcode": "6260016140099",
+      "name_fa": "دستمال توالت چهار لایه 4 رول صبا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a8967179-0ad5-4198-a80e-923d75625c7d",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474192258.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "صبا",
+        "original_name": "دستمال توالت چهار لایه 4 رول صبا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.828Z",
+      "updated_at": "2025-12-29T16:36:20.715Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a8967179-0ad5-4198-a80e-923d75625c7d",
+        "name": "صبا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:23.117Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "c3dfc604-fa87-4b85-87c4-05b0bbbce355",
+      "barcode": "6260016140198",
+      "name_fa": "دستمال توالت چهار لایه 6 رول گل‌پر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474012069.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "گل‌پر",
+        "original_name": "دستمال توالت چهار لایه 6 رول گل‌پر",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 6 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.832Z",
+      "updated_at": "2025-12-29T16:36:19.209Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+        "name": "گل‌پر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:08.400Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "069c06ce-d706-4e03-97cb-2a4b995b5d9f",
+      "barcode": "6266061101894",
+      "name_fa": "دستمال توالت کلاسیک 3 لایه 2 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6266061101894(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت کلاسیک",
+        "pack_count": 2,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال توالت کلاسیک 3 لایه 2 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "3"
+          },
+          {
+            "name": "تعداد رول",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "3 لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.457Z",
+      "updated_at": "2025-12-29T17:19:02.406Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "a36d99d8-458f-4b2e-8822-dcbfe7c12f50",
+      "barcode": "6260016140181",
+      "name_fa": "دستمال توالت چهار لایه 2 رول گل‌پر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260016140181(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 2,
+        "parsed_brand": "گل‌پر",
+        "original_name": "دستمال توالت چهار لایه 2 رول گل‌پر",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "چهار"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.835Z",
+      "updated_at": "2025-12-29T16:36:15.955Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+        "name": "گل‌پر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:08.400Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "e8706938-9009-4a58-bbf2-2777b01e7db6",
+      "barcode": "6260016139888",
+      "name_fa": "دستمال حوله‌ای کاغذی چهار لایه 3 رول صبا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a8967179-0ad5-4198-a80e-923d75625c7d",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474015596.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای کاغذی",
+        "pack_count": 3,
+        "parsed_brand": "صبا",
+        "original_name": "دستمال حوله‌ای کاغذی چهار لایه 3 رول صبا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          },
+          {
+            "name": "رول",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 3 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.837Z",
+      "updated_at": "2025-12-29T16:36:14.262Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a8967179-0ad5-4198-a80e-923d75625c7d",
+        "name": "صبا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:23.117Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "1ec61cf1-27cf-4301-a68f-56f952d47895",
+      "barcode": "6260016139857",
+      "name_fa": "دستمال حوله‌ای کاغذی چهار لایه 2 رول گل‌پر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010496.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای کاغذی",
+        "pack_count": 2,
+        "parsed_brand": "گل‌پر",
+        "original_name": "دستمال حوله‌ای کاغذی چهار لایه 2 رول گل‌پر",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.838Z",
+      "updated_at": "2025-12-29T16:36:12.626Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+        "name": "گل‌پر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:08.400Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "c79e51d1-6ab0-4ebc-a7f9-32806308af40",
+      "barcode": "6260016140365",
+      "name_fa": "دستمال حوله‌ای کاغذی گلدار چهار لایه 2 رول گل‌پر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474010706.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای کاغذی",
+        "pack_count": 2,
+        "parsed_brand": "گل‌پر",
+        "original_name": "دستمال حوله‌ای کاغذی گلدار چهار لایه 2 رول گل‌پر",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          },
+          {
+            "name": "طرح",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "2 رول چهار لایه گلدار"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.839Z",
+      "updated_at": "2025-12-29T16:36:11.160Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+        "name": "گل‌پر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:08.400Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "ec9d823a-c335-4646-a5f0-eacc23ac5699",
+      "barcode": "6266061102822",
+      "name_fa": "دستمال حوله‌ای کاغذی سه لایه 2 رول پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009373.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای کاغذی",
+        "pack_count": 2,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال حوله‌ای کاغذی سه لایه 2 رول پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "تعداد لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "سه لایه 2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.841Z",
+      "updated_at": "2025-12-29T16:36:09.882Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "a7e901b9-b88d-4108-b533-4ebbafdd4fb4",
+      "barcode": "6266061102839",
+      "name_fa": "دستمال حوله‌ای کاغذی سه لایه 4 رول پاپیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6266061102839(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای کاغذی",
+        "pack_count": 4,
+        "parsed_brand": "پاپیا",
+        "original_name": "دستمال حوله‌ای کاغذی سه لایه 4 رول پاپیا",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "سه لایه"
+          }
+        ],
+        "suggested_variant_name": "4 رول سه لایه"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.842Z",
+      "updated_at": "2025-12-29T16:36:08.685Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f7e2dd2c-a819-4bdf-bc2d-2954922bd767",
+        "name": "پاپیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:08.683Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "ddec70d2-93a0-48d2-8ed1-ca62621f0132",
+      "barcode": "6266061101863",
+      "name_fa": "دستمال توالت معطر و رنگی سه لایه 4 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6266061101863(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال توالت معطر و رنگی سه لایه 4 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "layers",
+            "value": "سه لایه"
+          },
+          {
+            "name": "attribute",
+            "value": "معطر و رنگی"
+          }
+        ],
+        "suggested_variant_name": "4 رول سه لایه معطر و رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.843Z",
+      "updated_at": "2025-12-29T16:36:07.486Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "08c2c222-5f0d-4830-9ad6-70d226472183",
+      "barcode": "6266061101870",
+      "name_fa": "دستمال توالت معطر و رنگی سه لایه 4 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1471255073.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال توالت معطر و رنگی سه لایه 4 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "سه لایه"
+          },
+          {
+            "name": "ویژگی",
+            "value": "معطر و رنگی"
+          }
+        ],
+        "suggested_variant_name": "4 رول سه لایه معطر و رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.844Z",
+      "updated_at": "2025-12-29T16:36:05.803Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "6fb75d4e-d192-4b4f-9e4a-885fe2c3a3d3",
+      "barcode": "6266061101887",
+      "name_fa": "دستمال توالت معطر و رنگی سه لایه 4 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474009668.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 4,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال توالت معطر و رنگی سه لایه 4 رول تنو",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "سه لایه"
+          },
+          {
+            "name": "ویژگی",
+            "value": "معطر و رنگی"
+          }
+        ],
+        "suggested_variant_name": "4 رول سه لایه معطر و رنگی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.846Z",
+      "updated_at": "2025-12-29T16:36:04.227Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "2eccde87-af3d-4282-9f3c-5322395e44a3",
+      "barcode": "6266061101771",
+      "name_fa": "دستمال حوله‌ای دو لایه 2 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1471255302.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای دو لایه",
+        "pack_count": 2,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال حوله‌ای دو لایه 2 رول تنو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "2 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.847Z",
+      "updated_at": "2025-12-29T16:36:02.419Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "80b20b84-3ae7-4de8-8c93-45381122af25",
+      "barcode": "6266061101788",
+      "name_fa": "دستمال حوله‌ای کاغذی دو لایه 4 رول تنو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474013527.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال حوله‌ای کاغذی دو لایه",
+        "pack_count": 4,
+        "parsed_brand": "تنو",
+        "original_name": "دستمال حوله‌ای کاغذی دو لایه 4 رول تنو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "4 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.848Z",
+      "updated_at": "2025-12-29T16:36:01.326Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2eab0bf7-da91-4416-9f5c-6082381945cb",
+        "name": "تنو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:36:01.323Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    },
+    {
+      "id": "6b58aac5-edb3-47e0-b1bf-eed4dbfffe54",
+      "barcode": "6260016140136",
+      "name_fa": "دستمال توالت گلدار چهار لایه 6 رول گل‌پر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+      "category_id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474015544.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال توالت",
+        "pack_count": 6,
+        "parsed_brand": "گل‌پر",
+        "original_name": "دستمال توالت گلدار چهار لایه 6 رول گل‌پر",
+        "parsed_attributes": [
+          {
+            "name": "لایه",
+            "value": "چهار لایه"
+          },
+          {
+            "name": "طرح",
+            "value": "گلدار"
+          }
+        ],
+        "suggested_variant_name": "چهار لایه گلدار 6 رول"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.834Z",
+      "updated_at": "2025-12-29T16:36:17.297Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "5db7d6c1-15fb-496a-916c-34f925470ecc",
+        "name": "گل‌پر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:34:08.400Z"
+      },
+      "category": {
+        "id": "7d1f8cca-6d5c-4c13-9819-a53e4cd6a10c",
+        "name": "دستمال رولی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.456Z"
+      }
+    }
+  ],
+  "total": 98
+}

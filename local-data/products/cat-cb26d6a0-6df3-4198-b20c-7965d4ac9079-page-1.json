@@ -1,0 +1,5638 @@
+{
+  "items": [
+    {
+      "id": "acdea935-6ca3-47cc-8904-46a4c9ef2e8b",
+      "barcode": "6260623310106",
+      "name_fa": "دستمال مرطوب پاک کننده دست و صورت 10 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588676825.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده دست و صورت",
+        "pack_count": 10,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب پاک کننده دست و صورت 10 عددی نینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.203Z",
+      "updated_at": "2025-12-29T17:21:46.518Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "9a7de90f-5012-4469-ad9d-90f0809a231e",
+      "barcode": "6267914500178",
+      "name_fa": "دستمال مرطوب و پاک کننده دست آنتی باکتریال 12 عددی یونی لد",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f5ca518a-eeb0-4b7d-ac73-bfdf2ded6d0c",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1582537332.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب و پاک کننده دست آنتی باکتریال",
+        "pack_count": 12,
+        "parsed_brand": "یونی لد",
+        "original_name": "دستمال مرطوب و پاک کننده دست آنتی باکتریال 12 عددی یونی لد",
+        "parsed_attributes": [],
+        "suggested_variant_name": "12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.349Z",
+      "updated_at": "2025-12-29T17:20:46.702Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f5ca518a-eeb0-4b7d-ac73-bfdf2ded6d0c",
+        "name": "یونی لد",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:21:55.443Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "09df052e-11d8-4b64-b299-d20bdd7fe647",
+      "barcode": "6267914501052",
+      "name_fa": "دستمال مرطوب و پاک کننده دست و صورت مخصوص کودکان 12 عددی وی کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1582537379.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب و پاک کننده دست و صورت مخصوص کودکان",
+        "pack_count": 12,
+        "parsed_brand": "وی کر",
+        "original_name": "دستمال مرطوب و پاک کننده دست و صورت مخصوص کودکان 12 عددی وی کر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.351Z",
+      "updated_at": "2025-12-29T17:20:45.330Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+        "name": "وی کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:20:54.270Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "83f7f5b5-955d-4a4d-b618-c717df6e084d",
+      "barcode": "6260706100198",
+      "name_fa": "دستمال مرطوب معطر پاک کننده دست و صورت  15 عددی پانو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a21c4292-3152-40bd-ae94-f4320c4ec724",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1582537122.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب معطر پاک کننده دست و صورت",
+        "pack_count": 15,
+        "parsed_brand": "پانو",
+        "original_name": "دستمال مرطوب معطر پاک کننده دست و صورت  15 عددی پانو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "15 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.361Z",
+      "updated_at": "2025-12-29T17:20:38.022Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a21c4292-3152-40bd-ae94-f4320c4ec724",
+        "name": "پانو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:11:57.601Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "f8d27863-42b1-4bfd-9411-655d6eb5ea4d",
+      "barcode": "6266061102303",
+      "name_fa": "دستمال مرطوب کودک معطر 20 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588676930.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 20,
+        "parsed_brand": "مولفیکس",
+        "original_name": "دستمال مرطوب کودک معطر 20 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "رایحه",
+            "value": "معطر"
+          }
+        ],
+        "suggested_variant_name": "20 عددی معطر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.544Z",
+      "updated_at": "2025-12-29T17:17:39.903Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "b22a8109-23a9-481a-a11b-57956948bd66",
+      "barcode": "6266061102297",
+      "name_fa": "دستمال مرطوب بچه مخصوص پوست حساس 20 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6266061102297(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب بچه",
+        "pack_count": 20,
+        "parsed_brand": "مولفیکس",
+        "original_name": "دستمال مرطوب بچه مخصوص پوست حساس 20 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "نوع پوست",
+            "value": "حساس"
+          }
+        ],
+        "suggested_variant_name": "20 عددی مخصوص پوست حساس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.547Z",
+      "updated_at": "2025-12-29T17:17:38.331Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "c41ddd5f-c4b2-4c47-adc5-7462eac1c8d3",
+      "barcode": "6260114810474",
+      "name_fa": "دستمال مرطوب پاک کننده آرایش 20 عددی پنبه ریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d96de6e-0b59-4815-80e7-56de97d289c7",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1575896395.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده آرایش",
+        "pack_count": 20,
+        "parsed_brand": "پنبه ریز",
+        "original_name": "دستمال مرطوب پاک کننده آرایش 20 عددی پنبه ریز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.600Z",
+      "updated_at": "2025-12-29T17:16:16.669Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d96de6e-0b59-4815-80e7-56de97d289c7",
+        "name": "پنبه ریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:54:18.174Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "cd2cb492-a068-40f6-a83c-5c87601d059c",
+      "barcode": "6260706100075",
+      "name_fa": "دستمال مرطوب بهداشتی بانوان 20 عددی لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260706100075(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب بهداشتی بانوان",
+        "pack_count": 20,
+        "parsed_brand": "لوسین",
+        "original_name": "دستمال مرطوب بهداشتی بانوان 20 عددی لوسین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.669Z",
+      "updated_at": "2025-12-29T17:14:45.458Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+        "name": "لوسین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:47:35.759Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "c14a2c66-c39a-4138-bac0-5ea811b5f756",
+      "barcode": "6262320300831",
+      "name_fa": "دستمال مرطوب کودک 20 عددی وی کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677742.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 20,
+        "parsed_brand": "وی کر",
+        "original_name": "دستمال مرطوب کودک 20 عددی وی کر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.670Z",
+      "updated_at": "2025-12-29T17:14:44.409Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+        "name": "وی کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:20:54.270Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "4e7bcc0f-494d-4c4f-9a37-dc99ab5a82a9",
+      "barcode": "6267914501274",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن زیتون 20 عددی وی کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677053.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 20,
+        "parsed_brand": "وی کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن زیتون 20 عددی وی کر",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "روغن زیتون"
+          }
+        ],
+        "suggested_variant_name": "20 عددی حاوی روغن زیتون"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.671Z",
+      "updated_at": "2025-12-29T17:14:43.048Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+        "name": "وی کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:20:54.270Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "a7754101-103a-4b51-b1e7-3c4a165e9ba6",
+      "barcode": "6267914501311",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن بادام 20 عددی وی کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677766.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 20,
+        "parsed_brand": "وی کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن بادام 20 عددی وی کر",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "روغن بادام"
+          }
+        ],
+        "suggested_variant_name": "20 عددی روغن بادام"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.672Z",
+      "updated_at": "2025-12-29T17:14:41.350Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ab08e51c-7b8a-493d-8b0c-4a85558ec94a",
+        "name": "وی کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:20:54.270Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "4970b1d5-3f83-4096-b0ec-4e46b688bbd2",
+      "barcode": "6260623310120",
+      "name_fa": "دستمال مرطوب نرم کننده و پاک کننده کودک 20 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260623310120(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب",
+        "pack_count": 20,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب نرم کننده و پاک کننده کودک 20 عددی نینو",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "نرم کننده و پاک کننده کودک"
+          }
+        ],
+        "suggested_variant_name": "20 عددی نرم کننده و پاک کننده کودک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.726Z",
+      "updated_at": "2025-12-29T17:13:32.842Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "50054414-39aa-4593-a2f5-19c7543e4022",
+      "barcode": "6260623330227",
+      "name_fa": "دستمال مرطوب نرم کننده و پاک کننده کودک 20 عددی دافی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588676879.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب",
+        "pack_count": 20,
+        "parsed_brand": "دافی",
+        "original_name": "دستمال مرطوب نرم کننده و پاک کننده کودک 20 عددی دافی",
+        "parsed_attributes": [
+          {
+            "name": "بافت",
+            "value": "نرم کننده و پاک کننده کودک"
+          }
+        ],
+        "suggested_variant_name": "20 عددی نرم کننده و پاک کننده کودک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.731Z",
+      "updated_at": "2025-12-29T17:13:30.986Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+        "name": "دافی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:22:18.435Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "a2b5750f-2bb2-4f08-8f7f-ec089bb9dfd8",
+      "barcode": "6260623334799",
+      "name_fa": "دستمال مرطوب پاک کننده کودک طرح مینیون 50 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677624.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 50,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب پاک کننده کودک طرح مینیون 50 عددی نینو",
+        "parsed_attributes": [
+          {
+            "name": "طرح",
+            "value": "مینیون"
+          }
+        ],
+        "suggested_variant_name": "50 عددی طرح مینیون"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.970Z",
+      "updated_at": "2025-12-29T17:11:03.935Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "cd64e69d-6209-4d72-b3d4-2859e01c7f47",
+      "barcode": "6260623335406",
+      "name_fa": "دستمال مرطوب پاک کننده کودک حاوی کاندولا 50 عددی دافی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677658.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک حاوی کاندولا",
+        "pack_count": 50,
+        "parsed_brand": "دافی",
+        "original_name": "دستمال مرطوب پاک کننده کودک حاوی کاندولا 50 عددی دافی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "50 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.971Z",
+      "updated_at": "2025-12-29T17:11:02.673Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+        "name": "دافی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:22:18.435Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "32b60573-fa94-4a49-86b7-37408df4dd72",
+      "barcode": "6266061102280",
+      "name_fa": "دستمال مرطوب بچه مخصوص پوست حساس 60 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6266061102280(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب بچه",
+        "pack_count": 60,
+        "parsed_brand": "مولفیکس",
+        "original_name": "دستمال مرطوب بچه مخصوص پوست حساس 60 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "پوست",
+            "value": "حساس"
+          }
+        ],
+        "suggested_variant_name": "60 عددی مخصوص پوست حساس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.984Z",
+      "updated_at": "2025-12-29T17:10:49.602Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "c19e9607-c948-49fd-ad44-7c9d09247b48",
+      "barcode": "6266061102273",
+      "name_fa": "دستمال مرطوب بچه حاوی لوسیون 70 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1472910537.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب بچه",
+        "pack_count": 70,
+        "parsed_brand": "مولفیکس",
+        "original_name": "دستمال مرطوب بچه حاوی لوسیون 70 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "لوسیون"
+          }
+        ],
+        "suggested_variant_name": "70 عددی حاوی لوسیون"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.092Z",
+      "updated_at": "2025-12-29T17:09:32.664Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "e0f9cdf3-909b-4603-8210-fd97fcd811d7",
+      "barcode": "6260623332740",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 50 عددی دافی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677571.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 50,
+        "parsed_brand": "دافی",
+        "original_name": "دستمال مرطوب پاک کننده کودک 50 عددی دافی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "50 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.110Z",
+      "updated_at": "2025-12-29T17:09:13.901Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+        "name": "دافی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:22:18.435Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "614a63c2-a701-4a98-87a1-0b5fd422f7a9",
+      "barcode": "6260623330500",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 70 عددی دافی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260623330500(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 70,
+        "parsed_brand": "دافی",
+        "original_name": "دستمال مرطوب پاک کننده کودک 70 عددی دافی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.119Z",
+      "updated_at": "2025-12-29T17:09:02.091Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+        "name": "دافی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:22:18.435Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "40856d0a-7822-4407-a8b1-dabb7e799082",
+      "barcode": "6260623310083",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 70 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260623310083(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 70,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب پاک کننده کودک 70 عددی نینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.128Z",
+      "updated_at": "2025-12-29T17:08:52.452Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "1f34bbee-4b1f-4a16-8ab1-5409de53d66b",
+      "barcode": "6260623334300",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 40 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677596.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 40,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب پاک کننده کودک 40 عددی نینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "40 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.129Z",
+      "updated_at": "2025-12-29T17:08:51.348Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "fe5fc491-ddf9-4960-a151-0c2e2d2a72d6",
+      "barcode": "6260706100440",
+      "name_fa": "دستمال مرطوب پاک کننده کودک لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1524654037.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": null,
+        "parsed_brand": "لوسین",
+        "original_name": "دستمال مرطوب پاک کننده کودک لوسین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "لوسین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.223Z",
+      "updated_at": "2025-12-29T17:07:00.842Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+        "name": "لوسین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:47:35.759Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "943b81b7-4786-422a-bb28-92c30232c3b2",
+      "barcode": "6260623332276",
+      "name_fa": "دستمال مرطوب نرم کننده و پاک کننده کودک 70 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260623332276(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب",
+        "pack_count": 70,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب نرم کننده و پاک کننده کودک 70 عددی نینو",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "نرم کننده و پاک کننده کودک"
+          }
+        ],
+        "suggested_variant_name": "70 عددی نرم کننده و پاک کننده کودک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.171Z",
+      "updated_at": "2025-12-29T17:08:10.787Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "9e7bfa8a-9b37-4094-b657-2c52b679904f",
+      "barcode": "6262320300848",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن آرگان 72 عددی وی ‌کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1582538632.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 72,
+        "parsed_brand": "وی ‌کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن آرگان 72 عددی وی ‌کر",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "روغن آرگان"
+          }
+        ],
+        "suggested_variant_name": "72 عددی حاوی روغن آرگان"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.193Z",
+      "updated_at": "2025-12-29T17:07:45.091Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+        "name": "وی ‌کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:49:04.707Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "618e4d42-298c-44eb-9550-a17e9e408bfb",
+      "barcode": "6267914501281",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن زیتون 72 عددی وی ‌کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1493813885.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک حاوی روغن زیتون",
+        "pack_count": 72,
+        "parsed_brand": "وی ‌کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن زیتون 72 عددی وی ‌کر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "72 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.194Z",
+      "updated_at": "2025-12-29T17:07:43.537Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+        "name": "وی ‌کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:49:04.707Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "08ba7df2-506c-4683-9a38-6d6a1402f6c2",
+      "barcode": "6267914501304",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن بادام 72 عددی وی ‌کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1493813939.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 72,
+        "parsed_brand": "وی ‌کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن بادام 72 عددی وی ‌کر",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "روغن بادام"
+          }
+        ],
+        "suggested_variant_name": "72 عددی حاوی روغن بادام"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.196Z",
+      "updated_at": "2025-12-29T17:07:42.190Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+        "name": "وی ‌کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:49:04.707Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "ae0b2f10-4fa5-4b2e-b87b-56210b48ae65",
+      "barcode": "6267914501335",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن پنبه دانه 72 عددی وی‌ کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "bf51579d-0240-482f-a4d3-c09f4fb72666",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1493813965.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک حاوی روغن پنبه دانه",
+        "pack_count": 72,
+        "parsed_brand": "وی‌ کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن پنبه دانه 72 عددی وی‌ کر",
+        "parsed_attributes": [],
+        "suggested_variant_name": "72 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.197Z",
+      "updated_at": "2025-12-29T17:07:40.667Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "bf51579d-0240-482f-a4d3-c09f4fb72666",
+        "name": "وی‌ کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:07:40.665Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "8a29d27b-33d6-4d22-bd93-9812167689af",
+      "barcode": "6267914501533",
+      "name_fa": "دستمال مرطوب پاک کننده و ضدعفونی کننده دست 72 عددی یونی‌ لد",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ce709384-99b5-4a0c-9850-0666b0569f0f",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1494417089.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده و ضدعفونی کننده دست",
+        "pack_count": 72,
+        "parsed_brand": "یونی‌ لد",
+        "original_name": "دستمال مرطوب پاک کننده و ضدعفونی کننده دست 72 عددی یونی‌ لد",
+        "parsed_attributes": [],
+        "suggested_variant_name": "72 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.198Z",
+      "updated_at": "2025-12-29T17:07:39.592Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ce709384-99b5-4a0c-9850-0666b0569f0f",
+        "name": "یونی‌ لد",
+        "logo_url": null,
+        "created_at": "2025-12-29T17:07:39.542Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "42284f86-4a60-4535-8d42-82d41a9a2b3e",
+      "barcode": "6260706100419",
+      "name_fa": "دستمال مرطوب پاک کننده کودک مخصوص پوست حساس 72 عددی لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260706100419(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 72,
+        "parsed_brand": "لوسین",
+        "original_name": "دستمال مرطوب پاک کننده کودک مخصوص پوست حساس 72 عددی لوسین",
+        "parsed_attributes": [
+          {
+            "name": "پوست",
+            "value": "حساس"
+          }
+        ],
+        "suggested_variant_name": "72 عددی پوست حساس"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.224Z",
+      "updated_at": "2025-12-29T17:06:59.649Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+        "name": "لوسین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:47:35.759Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "e49f6470-b178-495a-9a3f-3ec43833c9c3",
+      "barcode": "6260706100433",
+      "name_fa": "دستمال مرطوب کودک حاوی نرم کننده لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1524654002.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": null,
+        "parsed_brand": null,
+        "original_name": "دستمال مرطوب کودک حاوی نرم کننده لوسین",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "نرم کننده لوسین"
+          }
+        ],
+        "suggested_variant_name": "نرم کننده لوسین"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.242Z",
+      "updated_at": "2025-12-29T17:06:41.142Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "aee433a1-7577-4d9b-a950-dc35f6f44265",
+      "barcode": "6260706100280",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 70 عددی لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260706100280(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 70,
+        "parsed_brand": "لوسین",
+        "original_name": "دستمال مرطوب پاک کننده کودک 70 عددی لوسین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.243Z",
+      "updated_at": "2025-12-29T17:06:39.473Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+        "name": "لوسین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:47:35.759Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "18824067-dd54-40dc-9213-37455d02bf73",
+      "barcode": "6260706100273",
+      "name_fa": "دستمال کودک کرم‌دار (طرح کلاسیک) 72 عددی لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260706100273(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال کودک",
+        "pack_count": 72,
+        "parsed_brand": "لوسین",
+        "original_name": "دستمال کودک کرم‌دار (طرح کلاسیک) 72 عددی لوسین",
+        "parsed_attributes": [
+          {
+            "name": "بافت",
+            "value": "کرم‌دار"
+          },
+          {
+            "name": "طرح",
+            "value": "کلاسیک"
+          }
+        ],
+        "suggested_variant_name": "72 عددی کرم‌دار کلاسیک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.245Z",
+      "updated_at": "2025-12-29T17:06:38.427Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+        "name": "لوسین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:47:35.759Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "4305d7b6-1512-4e1a-999e-1e78238e175e",
+      "barcode": "6260706100242",
+      "name_fa": "دستمال مرطوب سالمندان 20*20 سانتی‌متری لوسین",
+      "name_en": null,
+      "description": null,
+      "brand_id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260706100242(1).jpg",
+      "reference_price": null,
+      "weight_grams": 20,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب سالمندان",
+        "pack_count": null,
+        "parsed_brand": "لوسین",
+        "original_name": "دستمال مرطوب سالمندان 20*20 سانتی‌متری لوسین",
+        "parsed_attributes": [],
+        "suggested_variant_name": "20 سانتی‌متری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.554Z",
+      "updated_at": "2025-12-29T17:01:03.878Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "a822d0ae-1ec6-472b-bd3b-71e558883f49",
+        "name": "لوسین",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:47:35.759Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "2bcc70f4-48d5-4f6f-ab33-fa7ad091f1ef",
+      "barcode": "6260114810405",
+      "name_fa": "دستمال مرطوب آنتی باکتریال حاوی آلوئه‌ورا 12 عددی پنبه ریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "3d96de6e-0b59-4815-80e7-56de97d289c7",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1591329046.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب",
+        "pack_count": 12,
+        "parsed_brand": "پنبه ریز",
+        "original_name": "دستمال مرطوب آنتی باکتریال حاوی آلوئه‌ورا 12 عددی پنبه ریز",
+        "parsed_attributes": [
+          {
+            "name": "ویژگی",
+            "value": "آنتی باکتریال"
+          },
+          {
+            "name": "حاوی",
+            "value": "آلوئه‌ورا"
+          }
+        ],
+        "suggested_variant_name": "12 عددی آنتی باکتریال آلوئه‌ورا"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.842Z",
+      "updated_at": "2025-12-29T16:57:56.121Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "3d96de6e-0b59-4815-80e7-56de97d289c7",
+        "name": "پنبه ریز",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:54:18.174Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "5695fdab-3d7b-48c7-9bca-16f6503ddb25",
+      "barcode": "6260623310113",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 20 عددی نینو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260623310113(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 20,
+        "parsed_brand": "نینو",
+        "original_name": "دستمال مرطوب پاک کننده کودک 20 عددی نینو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.856Z",
+      "updated_at": "2025-12-29T16:57:40.688Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2e3d50a9-5f0b-4f11-8477-d3c578f70358",
+        "name": "نینو",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:23:32.272Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "9c2b98cf-65f1-4e3a-a497-15e47bde264d",
+      "barcode": "6260212700035",
+      "name_fa": "دستمال مرطوب کودک 20 عددی فیروز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "354e83c8-cd6a-4318-95f1-90d039912c94",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1512369286.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 20,
+        "parsed_brand": "فیروز",
+        "original_name": "دستمال مرطوب کودک 20 عددی فیروز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.982Z",
+      "updated_at": "2025-12-29T16:55:30.132Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "354e83c8-cd6a-4318-95f1-90d039912c94",
+        "name": "فیروز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:01.690Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "2266c3ce-60db-4402-b15e-8e3497338ee9",
+      "barcode": "6260212700042",
+      "name_fa": "دستمال مرطوب کودک 60 عددی فیروز",
+      "name_en": null,
+      "description": null,
+      "brand_id": "354e83c8-cd6a-4318-95f1-90d039912c94",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1512369328.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 60,
+        "parsed_brand": "فیروز",
+        "original_name": "دستمال مرطوب کودک 60 عددی فیروز",
+        "parsed_attributes": [],
+        "suggested_variant_name": "60 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.268Z",
+      "updated_at": "2025-12-29T16:49:12.985Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "354e83c8-cd6a-4318-95f1-90d039912c94",
+        "name": "فیروز",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:03:01.690Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "6bc40c5f-fbac-4db9-bcc0-8b8e318510e6",
+      "barcode": "6260623330241",
+      "name_fa": "دستمال مرطوب پاک کننده کودک 70 عددی دافی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1483856861.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب پاک کننده کودک",
+        "pack_count": 70,
+        "parsed_brand": "دافی",
+        "original_name": "دستمال مرطوب پاک کننده کودک 70 عددی دافی",
+        "parsed_attributes": [],
+        "suggested_variant_name": "70 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.272Z",
+      "updated_at": "2025-12-29T16:49:07.126Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "b71d4bbe-4cb1-413e-ae87-1c6644d58121",
+        "name": "دافی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:22:18.435Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "e2761529-2e3e-44e9-9a6c-178f6b1f7777",
+      "barcode": "6267914501298",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن زیتون 70 عددی وی ‌کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1493813913.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 70,
+        "parsed_brand": "وی ‌کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن زیتون 70 عددی وی ‌کر",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "روغن زیتون"
+          }
+        ],
+        "suggested_variant_name": "70 عددی حاوی روغن زیتون"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.273Z",
+      "updated_at": "2025-12-29T16:49:05.894Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+        "name": "وی ‌کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:49:04.707Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "eae40e1c-968d-4e55-8912-727273464a97",
+      "barcode": "6267914501410",
+      "name_fa": "دستمال مرطوب کودک حاوی روغن بادام 70 عددی وی ‌کر",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1493814123.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک",
+        "pack_count": 70,
+        "parsed_brand": "وی ‌کر",
+        "original_name": "دستمال مرطوب کودک حاوی روغن بادام 70 عددی وی ‌کر",
+        "parsed_attributes": [
+          {
+            "name": "حاوی",
+            "value": "روغن بادام"
+          }
+        ],
+        "suggested_variant_name": "70 عددی حاوی روغن بادام"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.274Z",
+      "updated_at": "2025-12-29T16:49:04.709Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f2d15676-ed9c-4b3e-80c5-4c82554da115",
+        "name": "وی ‌کر",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:49:04.707Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "e4175127-9af1-4c2e-875a-299834adfcd2",
+      "barcode": "6260706100983",
+      "name_fa": "دستمال مرطوب کودک و نوزاد جعبه ای 40 عددی ماکسی کول",
+      "name_en": null,
+      "description": null,
+      "brand_id": "74359829-5e6d-443e-8fc2-375f4f4bab48",
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1588677687.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "دستمال مرطوب کودک و نوزاد جعبه ای",
+        "pack_count": 40,
+        "parsed_brand": "ماکسی کول",
+        "original_name": "دستمال مرطوب کودک و نوزاد جعبه ای 40 عددی ماکسی کول",
+        "parsed_attributes": [],
+        "suggested_variant_name": "40 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.292Z",
+      "updated_at": "2025-12-29T16:48:42.112Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "74359829-5e6d-443e-8fc2-375f4f4bab48",
+        "name": "ماکسی کول",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:48:42.101Z"
+      },
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "b176d8ce-e696-4218-a755-01b5838c6746",
+      "barcode": "4002448117391",
+      "name_fa": "Dettol.دستمال مرطوب",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4002448117391",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 168,
+          "original_name": "Dettol.دستمال مرطوب",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4002448117391"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "1aa517e4-62e1-46a0-9340-c35a62cca5ee",
+      "barcode": "4002448117452",
+      "name_fa": "Dettol.دستمال مرطوب",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4002448117452",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 169,
+          "original_name": "Dettol.دستمال مرطوب",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4002448117452"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "1593b4f3-ebbd-4e86-9d09-033c254c3fbf",
+      "barcode": "4002448134664",
+      "name_fa": "Dettol.دستمال مرطوب",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4002448134664",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 170,
+          "original_name": "Dettol.دستمال مرطوب",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4002448134664"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "4dfab123-785c-45ad-8f87-c6624f0c6480",
+      "barcode": "4002448145424",
+      "name_fa": "Dettol.دستمال مرطوب",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4002448145424",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 171,
+          "original_name": "Dettol.دستمال مرطوب",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4002448145424"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "1de6b839-faef-448b-b00a-156bd91e289e",
+      "barcode": "4015400439547",
+      "name_fa": "پمبرز دستمال حساس",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015400439547",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7068,
+          "original_name": "پمبرز دستمال حساس",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015400439547"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "03013100-4c3a-45ec-a270-8e03437217b3",
+      "barcode": "4015400439233",
+      "name_fa": "پمبرز دستمال مرطوب",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015400439233",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7069,
+          "original_name": "پمبرز دستمال مرطوب",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015400439233"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "9bd8563f-d107-4ae0-a3a1-15f9941e97a4",
+      "barcode": "4015400439646",
+      "name_fa": "پمبرز دستمال مرطوب3عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:4015400439646",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7070,
+          "original_name": "پمبرز دستمال مرطوب3عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "4015400439646"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "e3eb797c-9ca4-4e50-8784-821c28c8a8a6",
+      "barcode": "6260461302066",
+      "name_fa": "پنبه ریز.دستمال مرطوب آرایش",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260461302066",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7084,
+          "original_name": "پنبه ريز.دستمال مرطوب آرايش",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260461302066"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "d19f028a-631c-43ef-8070-385db4f7c3a1",
+      "barcode": "8901396388159",
+      "name_fa": "دتول. دستمال مرطوب بزرگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8901396388159",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12418,
+          "original_name": "دتول. دستمال مرطوب بزرگ",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8901396388159"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "7b037321-244c-4d8d-895d-9266461d2431",
+      "barcode": "6260623330197",
+      "name_fa": "دستمال مرطوب Anti Bacterial دافی 12 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623330197",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12899,
+          "original_name": "دستمال مرطوب Anti Bacterial دافی 12 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623330197"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "a3c57d63-804c-4647-86a4-cb8cfcc74359",
+      "barcode": "8001090934444",
+      "name_fa": "دستمال مرطوب Aqua Harmonie پمپرز 48 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8001090934444",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12900,
+          "original_name": "دستمال مرطوب Aqua Harmonie پمپرز 48 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8001090934444"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "687426a5-2b3b-403e-a8b6-ea472ff5dddb",
+      "barcode": "6260623330203",
+      "name_fa": "دستمال مرطوب آرایشی 5*1 دافی (70 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623330203",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12902,
+          "original_name": "دستمال مرطوب آرایشی 5*1 دافی (70 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623330203"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "255bb504-9b8e-4019-bed0-d4d6bcaf94ff",
+      "barcode": "6262343540030",
+      "name_fa": "دستمال مرطوب آرایشی آلوئه ورا و خیار میک آپ رز (25 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262343540030",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12904,
+          "original_name": "دستمال مرطوب آرایشی آلوئه ورا و خیار میک آپ رز (25 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262343540030"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "ef270c1d-8fcf-4645-ad32-554e879eee5a",
+      "barcode": "6260623335703",
+      "name_fa": "دستمال مرطوب آرایشی آلوئه ورا و کالاندولا دافی (50 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623335703",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12905,
+          "original_name": "دستمال مرطوب آرایشی آلوئه ورا و کالاندولا دافی (50 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623335703"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "2bfcf568-3e40-43e2-84d7-3c9efb6d5815",
+      "barcode": "6260623333884",
+      "name_fa": "دستمال مرطوب آرایشی آلوئه ورا، ماریگلد، خیار و بابونه دکترآز (70 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623333884",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12906,
+          "original_name": "دستمال مرطوب آرایشی آلوئه ورا، ماریگلد، خیار و بابونه دکترآز (70 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623333884"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "8cd4a75e-d351-49ca-ba63-cce00404441d",
+      "barcode": "6260623340707",
+      "name_fa": "دستمال مرطوب آرایشی پوست چرب نینو (50 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623340707",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12908,
+          "original_name": "دستمال مرطوب آرایشی پوست چرب نینو (50 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623340707"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "1ec0a885-21b1-46ce-806a-02bd98f8b834",
+      "barcode": "6260623333488",
+      "name_fa": "دستمال مرطوب آرایشی دکترآز (25 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623333488",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12910,
+          "original_name": "دستمال مرطوب آرایشی دکترآز (25 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623333488"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "0ca9789b-1822-47f3-aa9b-3f5f4732b2a3",
+      "barcode": "6260623341162",
+      "name_fa": "دستمال مرطوب آرایشی دور چشم دافی (45 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623341162",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12911,
+          "original_name": "دستمال مرطوب آرایشی دور چشم دافی (45 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623341162"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "e0de610c-fb4b-4de4-8c85-9691fe836811",
+      "barcode": "6260623339404",
+      "name_fa": "دستمال مرطوب آرایشی روغن درخت چای دافی (55 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623339404",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12912,
+          "original_name": "دستمال مرطوب آرایشی روغن درخت چای دافی (55 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623339404"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "294520df-c921-414d-bbb6-19cae702b5ff",
+      "barcode": "6260623339398",
+      "name_fa": "دستمال مرطوب آرایشی فیس آف آنتی اکسیدان دافی (55 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623339398",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12913,
+          "original_name": "دستمال مرطوب آرایشی فیس آف آنتی اکسیدان دافی (55 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623339398"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "a01a4f51-610a-4580-882b-803c18b791f7",
+      "barcode": "6260623339411",
+      "name_fa": "دستمال مرطوب آرایشی فیس آف شکوفه گیلاس ژاپنی دافی (55 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623339411",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12914,
+          "original_name": "دستمال مرطوب آرایشی فیس آف شکوفه گیلاس ژاپنی دافی (55 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623339411"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "30734374-e7eb-46b4-91cf-a43ad55f202a",
+      "barcode": "6260623338308",
+      "name_fa": "دستمال مرطوب آرایشی فیس آف میسلار انجیر دافی (55 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623338308",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12915,
+          "original_name": "دستمال مرطوب آرایشی فیس آف میسلار انجیر دافی (55 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623338308"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "f569f5b1-2154-464b-96ed-afcd991e68fa",
+      "barcode": "6262343540016",
+      "name_fa": "دستمال مرطوب آرایشی نارگیل میک آپ رز (25 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262343540016",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12917,
+          "original_name": "دستمال مرطوب آرایشی نارگیل میک آپ رز (25 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262343540016"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "95439bf6-dd1a-4e4c-a49c-019063aa9380",
+      "barcode": "6266061105434",
+      "name_fa": "دستمال مرطوب آنتی باکتریال تنو 60 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266061105434",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12918,
+          "original_name": "دستمال مرطوب آنتي باکتريال تنو 60 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266061105434"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "5a2f530c-1463-4e97-a182-565be7b40449",
+      "barcode": "6266061105441",
+      "name_fa": "دستمال مرطوب آنتی باکتریال تنو 60 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266061105441",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12919,
+          "original_name": "دستمال مرطوب آنتي باکتريال تنو 60 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266061105441"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "f5442fd6-e740-4805-bb11-12f272471ac4",
+      "barcode": "8993560027612",
+      "name_fa": "دستمال مرطوب آنتی باکتریال سنسیتیو دتول (50 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8993560027612",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12920,
+          "original_name": "دستمال مرطوب آنتي باکتريال سنسيتيو دتول (50 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8993560027612"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "337b8284-3222-47fa-9304-cda5d90b5b3d",
+      "barcode": "8993560027629",
+      "name_fa": "دستمال مرطوب آنتی باکتریال پوست حساس دتول (10 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8993560027629",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12921,
+          "original_name": "دستمال مرطوب آنتی باکتریال پوست حساس دتول (10 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8993560027629"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "2a08dede-d96f-402d-9e21-4c69b83a8c31",
+      "barcode": "8993560027544",
+      "name_fa": "دستمال مرطوب آنتی باکتریال پوست حساس دتول (50 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8993560027544",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12922,
+          "original_name": "دستمال مرطوب آنتی باکتریال پوست حساس دتول (50 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8993560027544"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "07001aa9-9092-4550-9e57-7cf4eadb21d2",
+      "barcode": "8993560027537",
+      "name_fa": "دستمال مرطوب آنتی باکتریال دتول 10 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8993560027537",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12923,
+          "original_name": "دستمال مرطوب آنتی باکتریال دتول 10 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8993560027537"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "2cdc9fb6-0a17-48d9-9e7c-cece5fe3aec1",
+      "barcode": "8606100820610",
+      "name_fa": "دستمال مرطوب آنتی باکتریال فرش (15 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8606100820610",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12925,
+          "original_name": "دستمال مرطوب آنتی باکتریال فرش (15 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8606100820610"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "7227f9e7-4f21-4d50-9a71-6b65ddcbb9c9",
+      "barcode": "6260623300664",
+      "name_fa": "دستمال مرطوب بدن Sport آمبرلا 50 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623300664",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12926,
+          "original_name": "دستمال مرطوب بدن Sport آمبرلا 50 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623300664"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "d26a05a0-a355-48a4-b852-1ac067d7dd01",
+      "barcode": "6263957101624",
+      "name_fa": "دستمال مرطوب بزرگسال ایزی لایف 70 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263957101624",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12928,
+          "original_name": "دستمال مرطوب بزرگسال ايزي لايف 70 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263957101624"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "11d8c0ff-77a6-49d0-8e5f-553fb9a2dada",
+      "barcode": "6260623331446",
+      "name_fa": "دستمال مرطوب بهداشتی بانوان دافی 20 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623331446",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12929,
+          "original_name": "دستمال مرطوب بهداشتی بانوان دافی 20 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623331446"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "994cfa6a-ccf9-48db-b28a-2c4a9db3bd05",
+      "barcode": "6260623332733",
+      "name_fa": "دستمال مرطوب پاک کننده آرایش Hydration دافی 27 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623332733",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12931,
+          "original_name": "دستمال مرطوب پاک کننده آرایش Hydration دافی 27 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623332733"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "3a6069aa-3010-4c01-98b8-e1a7accc39e0",
+      "barcode": "6260623336038",
+      "name_fa": "دستمال مرطوب پاک کننده آرایش Q10 PLUS دافی 50 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623336038",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12932,
+          "original_name": "دستمال مرطوب پاک کننده آرایش Q10 PLUS دافی 50 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623336038"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "091bdf60-20da-45ba-a5fc-37ededa33296",
+      "barcode": "6260114800079",
+      "name_fa": "دستمال مرطوب پاک کننده آرایش استوانه ای آلوورا پنبه ریز ۷۰ عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260114800079",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12933,
+          "original_name": "دستمال مرطوب پاک کننده آرایش استوانه ای آلوورا پنبه ریز ۷۰ عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260114800079"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "d12a8938-cb76-4435-a1f8-6c57188d069c",
+      "barcode": "6260114800468",
+      "name_fa": "دستمال مرطوب پاک کننده آرایش کالندولا پنبه ریز 60 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260114800468",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12935,
+          "original_name": "دستمال مرطوب پاک کننده آرایش کالندولا پنبه ریز 60 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260114800468"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "f65ca4e3-50f4-4c31-bb7f-0ff46c4f1e46",
+      "barcode": "6260623335871",
+      "name_fa": "دستمال مرطوب پوست Adult دافی 100 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623335871",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12948,
+          "original_name": "دستمال مرطوب پوست Adult دافی 100 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623335871"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "56fa4a4e-f433-4af3-bd88-f84552005e5f",
+      "barcode": "8901396388135",
+      "name_fa": "دستمال مرطوب پوست و سطوح Original دتول 10 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8901396388135",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12949,
+          "original_name": "دستمال مرطوب پوست و سطوح Original دتول 10 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8901396388135"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "dde75924-8139-44d2-88d0-278aa018b886",
+      "barcode": "6260623300657",
+      "name_fa": "دستمال مرطوب خوشبو کننده بدن Total آمبرلا 50 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623300657",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12951,
+          "original_name": "دستمال مرطوب خوشبو کننده بدن Total آمبرلا 50 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623300657"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "89e96914-0ab8-4465-9661-2c9cf7c76848",
+      "barcode": "6260461302073",
+      "name_fa": "دستمال مرطوب دست و صورت Normal Skin پنبه ریز 15 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260461302073",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12952,
+          "original_name": "دستمال مرطوب دست و صورت Normal Skin پنبه ريز 15 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260461302073"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "41b252b0-052b-45d3-9ba4-133fb7caa1eb",
+      "barcode": "6260623335260",
+      "name_fa": "دستمال مرطوب دست و صورت معطر نینو (70 عدد)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623335260",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12955,
+          "original_name": "دستمال مرطوب دست و صورت معطر نینو (70 عدد)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623335260"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "30b6088e-9318-4072-b3f1-3bf8b4a5e19b",
+      "barcode": "6260114810412",
+      "name_fa": "دستمال مرطوب سطوح پنبه ریز",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260114810412",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12957,
+          "original_name": "دستمال مرطوب سطوح پنبه ريز",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260114810412"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "237fd97e-8ea4-4398-a65f-c7b12410e782",
+      "barcode": "6260623332955",
+      "name_fa": "دستمال مرطوب صورت Milk & Cucumber کامان 20 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260623332955",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12958,
+          "original_name": "دستمال مرطوب صورت Milk & Cucumber کامان 20 عددی",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260623332955"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "428e086f-fed8-4bd1-82e4-4999bd2cca4a",
+      "barcode": "6266061105946",
+      "name_fa": "دستمال مرطوب لیمو تنو 60 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266061105946",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12983,
+          "original_name": "دستمال مرطوب ليمو تنو 60 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266061105946"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "20cf7647-1a0f-42eb-9186-0990f5f6e788",
+      "barcode": "6266061105953",
+      "name_fa": "دستمال مرطوب معطر تنو 60 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266061105953",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 12984,
+          "original_name": "دستمال مرطوب معطر تنو 60 عددي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266061105953"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "01157e51-be31-49d2-8227-dca578753dfa",
+      "barcode": "9005800362953",
+      "name_fa": "لابلو.برق لب توت فرنگی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:9005800362953",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 24195,
+          "original_name": "لابلو.برق لب توت فرنگي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "9005800362953"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    },
+    {
+      "id": "1c5bcccc-e91a-44a0-84d2-9a101eb9ee46",
+      "barcode": "6261670805317",
+      "name_fa": "های دنت.مسواک سافت",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261670805317",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2900439600018",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "آرایشی و بهداشتی",
+          "subcategory": "دستمال مرطوب",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 29269,
+          "original_name": "هاي دنت.مسواک سافت",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261670805317"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "cb26d6a0-6df3-4198-b20c-7965d4ac9079",
+        "name": "دستمال مرطوب",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.190Z"
+      }
+    }
+  ],
+  "total": 89
+}

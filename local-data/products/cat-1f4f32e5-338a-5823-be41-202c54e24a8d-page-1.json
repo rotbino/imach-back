@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "cc8c1c62-f7b9-59ee-9939-27b19f9f9857",
+      "barcode": "6265663103992",
+      "name_fa": "لینا پف پاپ کرن بدون پوسته پنیری 50 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "1f4f32e5-338a-5823-be41-202c54e24a8d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6265663103992-2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "1f4f32e5-338a-5823-be41-202c54e24a8d",
+        "name": "پاپ کرن",
+        "icon_url": null,
+        "parent_id": "159f3a2c-1f68-4941-9f5b-604a5e7c7e1b",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 1
+}

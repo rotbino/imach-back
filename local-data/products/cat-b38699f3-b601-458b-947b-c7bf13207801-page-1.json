@@ -1,0 +1,3273 @@
+{
+  "items": [
+    {
+      "id": "da8c8993-c0fc-4eab-a69e-21e646ff4bd5",
+      "barcode": "6263957100481",
+      "name_fa": "پوشک کامل بچه سایز نوزادی (5-2 کیلوگرم) 11 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353637.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 11,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز نوزادی (5-2 کیلوگرم) 11 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "نوزادی"
+          }
+        ],
+        "suggested_variant_name": "سایز نوزادی 11 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.861Z",
+      "updated_at": "2025-12-29T17:12:26.883Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "1db86172-1110-4add-bdaf-4a5111d0ce53",
+      "barcode": "6263957100498",
+      "name_fa": "پوشک کامل بچه سایز 2 (6-3 کیلوگرم) 10 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353666.jpg",
+      "reference_price": null,
+      "weight_grams": 6000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 10,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز 2 (6-3 کیلوگرم) 10 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سایز 2 6-3 کیلوگرم 10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.863Z",
+      "updated_at": "2025-12-29T17:12:25.220Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "e684a303-2d88-4193-acbc-bd9412f32bbb",
+      "barcode": "6263957100504",
+      "name_fa": "پوشک کامل بچه سایز 3 (9-5 کیلوگرم) 9 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353693.jpg",
+      "reference_price": null,
+      "weight_grams": 9000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 9,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز 3 (9-5 کیلوگرم) 9 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "9 کیلوگرم سایز 3"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.864Z",
+      "updated_at": "2025-12-29T17:12:17.042Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "73115c48-21a8-49c9-93cf-1f75ce5ecad7",
+      "barcode": "6263957100511",
+      "name_fa": "پوشک کامل بچه سایز 4 (16-8 کیلوگرم) 8 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353721.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 8,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز 4 (16-8 کیلوگرم) 8 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "سایز 4 8 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.866Z",
+      "updated_at": "2025-12-29T17:12:15.858Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "5628d74f-fdc3-4a34-899a-06ace43a314a",
+      "barcode": "6263957100528",
+      "name_fa": "پوشک کامل بچه سایز 5 (20-12 کیلوگرم) 8 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353859.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 8,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز 5 (20-12 کیلوگرم) 8 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "سایز 5, 8 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:32.976Z",
+      "updated_at": "2025-12-29T17:10:57.125Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "7b620d01-07bc-49f6-845b-6c2c48f67b6a",
+      "barcode": "6260136520115",
+      "name_fa": "پوشک بچه  سایز کوچک 20 عددی پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566711011.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 20,
+        "parsed_brand": "پرمیس",
+        "original_name": "پوشک بچه  سایز کوچک 20 عددی پرمیس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "کوچک"
+          }
+        ],
+        "suggested_variant_name": "سایز کوچک 20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.088Z",
+      "updated_at": "2025-12-29T17:09:40.123Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "d7acabab-4ee6-4deb-be35-fa53194debd5",
+      "barcode": "6260136520122",
+      "name_fa": "پوشک بچه سایز بزرگ 20 عددی پرمیس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566711053.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 20,
+        "parsed_brand": "پرمیس",
+        "original_name": "پوشک بچه سایز بزرگ 20 عددی پرمیس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          }
+        ],
+        "suggested_variant_name": "بزرگ 20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.160Z",
+      "updated_at": "2025-12-29T17:08:21.580Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "48bbd79b-48db-415f-a401-7e2c3411cac8",
+        "name": "پرمیس",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:23:48.461Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "2293bedf-8b98-44a0-94a9-ef06c396e518",
+      "barcode": "6267604411739",
+      "name_fa": "پوشک بچه سایز 4 (7-18 کیلوگرم) 12 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566714980.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 12,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 4 (7-18 کیلوگرم) 12 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "سایز 4, 12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.181Z",
+      "updated_at": "2025-12-29T17:07:58.195Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "5e23b505-888f-4a34-8bd7-cc048b6725a1",
+      "barcode": "6266061103669",
+      "name_fa": "پوشک کامل بچه 3 تا 6 کیلویی 16 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1562301292.jpg",
+      "reference_price": null,
+      "weight_grams": 3000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 16,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه 3 تا 6 کیلویی 16 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3 تا 6 کیلویی"
+          }
+        ],
+        "suggested_variant_name": "16 عددی 3 تا 6 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.225Z",
+      "updated_at": "2025-12-29T17:06:58.436Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "a907b480-31bc-4857-8d66-49a03357cdd3",
+      "barcode": "6266061103676",
+      "name_fa": "پوشک کامل بچه سایز 3 (4 تا 9 کیلو گرم) 14 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444945.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 14,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 3 (4 تا 9 کیلو گرم) 14 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "سایز 3, 14 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.272Z",
+      "updated_at": "2025-12-29T17:06:06.110Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "da28a0a1-74bc-42db-abb2-1f44175d5b54",
+      "barcode": "6263957100580",
+      "name_fa": "پوشک شورتی بچه 15 عددی سایز 4 ،9-17 کیلوگرمی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1564383556.jpg",
+      "reference_price": null,
+      "weight_grams": 9000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک شورتی بچه",
+        "pack_count": 15,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک شورتی بچه 15 عددی سایز 4 ،9-17 کیلوگرمی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "15 عددی سایز 4"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.368Z",
+      "updated_at": "2025-12-29T17:04:21.659Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "76ba6be0-e1e7-4476-90ee-414b4cf4c58e",
+      "barcode": "6263957100597",
+      "name_fa": "پوشک شورتی بچه 15 عددی سایز 5 ،13-20 کیلوگرمی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1564383586.jpg",
+      "reference_price": null,
+      "weight_grams": 13000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک شورتی بچه",
+        "pack_count": 15,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک شورتی بچه 15 عددی سایز 5 ،13-20 کیلوگرمی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "15 عددی سایز 5"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.436Z",
+      "updated_at": "2025-12-29T17:03:04.965Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "1eeffcea-8462-4766-b63a-9be5e96cdbd5",
+      "barcode": "6263957100603",
+      "name_fa": "پوشک شورتی بچه سایز 6 سری پول آپ 15 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589615516.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک شورتی بچه",
+        "pack_count": 15,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک شورتی بچه سایز 6 سری پول آپ 15 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "6"
+          },
+          {
+            "name": "سری",
+            "value": "پول آپ"
+          }
+        ],
+        "suggested_variant_name": "سایز 6 پول آپ 15 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.507Z",
+      "updated_at": "2025-12-29T17:01:43.258Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "dd13b207-386c-4e56-869b-5adf8738cfb3",
+      "barcode": "6263845400099",
+      "name_fa": "پوشک کامل بچه 3 تا 6 کیلوگرم 44 عددی بیبی کینگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1574654625.jpg",
+      "reference_price": null,
+      "weight_grams": 3000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 44,
+        "parsed_brand": "بیبی کینگ",
+        "original_name": "پوشک کامل بچه 3 تا 6 کیلوگرم 44 عددی بیبی کینگ",
+        "parsed_attributes": [
+          {
+            "name": "وزن",
+            "value": "3 تا 6 کیلوگرم"
+          }
+        ],
+        "suggested_variant_name": "3 تا 6 کیلوگرم 44 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.752Z",
+      "updated_at": "2025-12-29T16:59:28.597Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+        "name": "بیبی کینگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:23.538Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "4fc8ef3f-4f57-4f35-9340-9edeb18fd77a",
+      "barcode": "6263845400105",
+      "name_fa": "پوشک کامل بچه 4 تا 9 کیلوگرم 38 عددی بیبی کینگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1574654662.jpg",
+      "reference_price": null,
+      "weight_grams": 4000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 38,
+        "parsed_brand": "بیبی کینگ",
+        "original_name": "پوشک کامل بچه 4 تا 9 کیلوگرم 38 عددی بیبی کینگ",
+        "parsed_attributes": [],
+        "suggested_variant_name": "4 کیلوگرم 38 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.753Z",
+      "updated_at": "2025-12-29T16:59:27.383Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+        "name": "بیبی کینگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:23.538Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "8d236b10-139a-452c-8bc4-28bdfd425054",
+      "barcode": "6263845400136",
+      "name_fa": "پوشک کامل بچه سایز 5 (11 تا 23 کیلوگرم) خیلی بزرگ 30 عددی بیبی کینگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589615330.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 30,
+        "parsed_brand": "بیبی کینگ",
+        "original_name": "پوشک کامل بچه سایز 5 (11 تا 23 کیلوگرم) خیلی بزرگ 30 عددی بیبی کینگ",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          },
+          {
+            "name": "سایز (کیلوگرم)",
+            "value": "11 تا 23"
+          },
+          {
+            "name": "اندازه",
+            "value": "خیلی بزرگ"
+          }
+        ],
+        "suggested_variant_name": "سایز 5 خیلی بزرگ 30 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.755Z",
+      "updated_at": "2025-12-29T16:59:26.167Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+        "name": "بیبی کینگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:23.538Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "fd3d0446-707e-4f61-a28d-07a186c21739",
+      "barcode": "6263957101068",
+      "name_fa": "پوشک کامل بچه سایز 5 (12 تا 20 کیلوگرم)  28 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589615563.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 28,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز 5 (12 تا 20 کیلوگرم)  28 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "سایز 5 28 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.756Z",
+      "updated_at": "2025-12-29T16:59:24.351Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "a1c8d803-625b-4578-8278-c13aaac25791",
+      "barcode": "6267604411722",
+      "name_fa": "پوشک بچه سایز 3 (4-9 کیلوگرم) 46 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566714926.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 46,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 3 (4-9 کیلوگرم) 46 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "سایز 3 46 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.789Z",
+      "updated_at": "2025-12-29T16:58:52.832Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "46eb1a97-2bf9-4f2f-b525-e7dae2295f09",
+      "barcode": "6263957100535",
+      "name_fa": "پوشک کامل بچه سایز 3 (9-5 کیلوگرم) 46 عددی کوکومی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1563353892.jpg",
+      "reference_price": null,
+      "weight_grams": 9000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 46,
+        "parsed_brand": "کوکومی",
+        "original_name": "پوشک کامل بچه سایز 3 (9-5 کیلوگرم) 46 عددی کوکومی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "سایز 3 (9-5 کیلوگرم) 46 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.794Z",
+      "updated_at": "2025-12-29T16:58:48.848Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dc353d3d-239f-4e78-b06a-dfcc02a174fe",
+        "name": "کوکومی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:48.845Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "03d5fa28-9ba2-46d6-9d69-cbbbdce6bbc9",
+      "barcode": "8690536804023",
+      "name_fa": "پوشینه بی‌اختیاری بزرگسال چسبی بزرگ 8 عددی جولی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27c20710-dfa8-4c05-9f11-ccd09b2917e4",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474194342.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشینه بی‌اختیاری بزرگسال چسبی",
+        "pack_count": 8,
+        "parsed_brand": "جولی",
+        "original_name": "پوشینه بی‌اختیاری بزرگسال چسبی بزرگ 8 عددی جولی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          }
+        ],
+        "suggested_variant_name": "8 عددی بزرگ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.795Z",
+      "updated_at": "2025-12-29T16:58:47.385Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27c20710-dfa8-4c05-9f11-ccd09b2917e4",
+        "name": "جولی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:45.227Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "d9718aed-4cf1-455b-8958-91d2b32e48b0",
+      "barcode": "8690536804009",
+      "name_fa": "پوشینه بی‌اختیاری بزرگسال چسبی متوسط 10 عددی جولی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "27c20710-dfa8-4c05-9f11-ccd09b2917e4",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1474091630.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشینه بی‌اختیاری بزرگسال چسبی",
+        "pack_count": 10,
+        "parsed_brand": "جولی",
+        "original_name": "پوشینه بی‌اختیاری بزرگسال چسبی متوسط 10 عددی جولی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "متوسط"
+          }
+        ],
+        "suggested_variant_name": "10 عددی متوسط"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.798Z",
+      "updated_at": "2025-12-29T16:58:45.229Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "27c20710-dfa8-4c05-9f11-ccd09b2917e4",
+        "name": "جولی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:58:45.227Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "3c6ec94f-3a65-44f7-94e9-3d0529b5ed6e",
+      "barcode": "6266061103737",
+      "name_fa": "پوشک کامل بچه بزرگ (7 تا 18 کیلوگرم) 40 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1531551925.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 40,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه بزرگ (7 تا 18 کیلوگرم) 40 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          }
+        ],
+        "suggested_variant_name": "بزرگ 40 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.799Z",
+      "updated_at": "2025-12-29T16:58:43.596Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "9e855087-4b5c-46e5-976a-95d3b1b5b59b",
+      "barcode": "6266061103720",
+      "name_fa": "پوشک کامل بچه سایز 3 (4 تا 9 کیلو گرم) 46 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566715517.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 46,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 3 (4 تا 9 کیلو گرم) 46 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "سایز 3 (4 تا 9 کیلو گرم) 46 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.801Z",
+      "updated_at": "2025-12-29T16:58:42.388Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "d402e374-c1ff-452b-9f81-8baafce76948",
+      "barcode": "6266061103744",
+      "name_fa": "پوشک بچه 11 تا 25 کیلویی 34 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1562301609.jpg",
+      "reference_price": null,
+      "weight_grams": 11000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 34,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک بچه 11 تا 25 کیلویی 34 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "11 تا 25"
+          }
+        ],
+        "suggested_variant_name": "34 عددی 11 تا 25 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.802Z",
+      "updated_at": "2025-12-29T16:58:41.188Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "8c7d0d08-6d65-44dc-b7cd-cc74929af283",
+      "barcode": "6266061103751",
+      "name_fa": "پوشک بچه بالای 15 کیلویی 28 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1562301646.jpg",
+      "reference_price": null,
+      "weight_grams": 15000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 28,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک بچه بالای 15 کیلویی 28 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بالای 15 کیلویی"
+          }
+        ],
+        "suggested_variant_name": "بالای 15 کیلویی 28 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.803Z",
+      "updated_at": "2025-12-29T16:58:39.327Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "e49f5c3b-3a33-4b88-8054-289cea35460c",
+      "barcode": "6263957100450",
+      "name_fa": "پوشینه کامل بزرگسال متوسط  16 عددی  ایزی لایف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e1c483c1-4452-4baf-b6f8-bd2a770e2077",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1570178394.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشینه کامل بزرگسال",
+        "pack_count": 16,
+        "parsed_brand": "ایزی لایف",
+        "original_name": "پوشینه کامل بزرگسال متوسط  16 عددی  ایزی لایف",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "متوسط"
+          }
+        ],
+        "suggested_variant_name": "16 عددی متوسط"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.806Z",
+      "updated_at": "2025-12-29T16:58:37.016Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e1c483c1-4452-4baf-b6f8-bd2a770e2077",
+        "name": "ایزی لایف",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:18.261Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "c1e85183-3426-48db-aa4e-bb544f1cf9ab",
+      "barcode": "6263957100474",
+      "name_fa": "پوشینه کامل بزرگسال بزرگ 14 عددی  ایزی لایف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e1c483c1-4452-4baf-b6f8-bd2a770e2077",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1570178457.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشینه کامل بزرگسال",
+        "pack_count": 14,
+        "parsed_brand": "ایزی لایف",
+        "original_name": "پوشینه کامل بزرگسال بزرگ 14 عددی  ایزی لایف",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          }
+        ],
+        "suggested_variant_name": "14 عددی بزرگ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.808Z",
+      "updated_at": "2025-12-29T16:58:35.531Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e1c483c1-4452-4baf-b6f8-bd2a770e2077",
+        "name": "ایزی لایف",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:18.261Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "6ca4f86a-b6aa-4d3a-b106-c1f64a637d94",
+      "barcode": "6266061104185",
+      "name_fa": "پوشک کامل بچه سایز 2 (3 تا 6 کیلو گرم) 96 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544445159.jpg",
+      "reference_price": null,
+      "weight_grams": 3000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 96,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 2 (3 تا 6 کیلو گرم) 96 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سایز 2 (3 تا 6 کیلو گرم) 96 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.824Z",
+      "updated_at": "2025-12-29T16:58:19.671Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "d244d48e-259a-4e75-8b9f-d0e2e5b7732e",
+      "barcode": "6266061103775",
+      "name_fa": "پوشک کامل بچه سایز 3 (4 تا 9 کیلو گرم) 84 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544445072.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 84,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 3 (4 تا 9 کیلو گرم) 84 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "سایز 3 84 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.825Z",
+      "updated_at": "2025-12-29T16:58:18.221Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "0a8c953f-9448-41f9-9f36-cfa7b270555a",
+      "barcode": "6267604411746",
+      "name_fa": "پوشک بچه سایز 1 (2 تا 5 کیلوگرم) 20 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589615649.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 20,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 1 (2 تا 5 کیلوگرم) 20 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "1"
+          }
+        ],
+        "suggested_variant_name": "سایز 1 20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.203Z",
+      "updated_at": "2025-12-29T16:50:36.096Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "42c44bc4-961f-4dc0-9b8a-f147b3da6a50",
+      "barcode": "6267604411753",
+      "name_fa": "پوشک بچه سایز 2 (3-6 کیلوگرم) 16 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566715034.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 16,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 2 (3-6 کیلوگرم) 16 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سایز 2 16 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.260Z",
+      "updated_at": "2025-12-29T16:49:23.587Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "ceeeee51-8121-426a-824e-4184b3fb6b53",
+      "barcode": "2000025749616",
+      "name_fa": "پوشک بچه سایز 5 (14 تا 25 کیلو گرم) 10عددی ماما",
+      "name_en": null,
+      "description": null,
+      "brand_id": "7c038963-7055-428e-8a6e-31e11dececea",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444198.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 10,
+        "parsed_brand": "ماما",
+        "original_name": "پوشک بچه سایز 5 (14 تا 25 کیلو گرم) 10عددی ماما",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "سایز 5 10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.275Z",
+      "updated_at": "2025-12-29T16:49:03.166Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "7c038963-7055-428e-8a6e-31e11dececea",
+        "name": "ماما",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:49:03.163Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "e8ce358e-dbba-4924-a977-e175158f8deb",
+      "barcode": "6266061103652",
+      "name_fa": "پوشک کامل بچه سایز 1 (2 تا 5 کیلو گرم) 20 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566715386.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 20,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 1 (2 تا 5 کیلو گرم) 20 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "1"
+          }
+        ],
+        "suggested_variant_name": "سایز 1 20 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.295Z",
+      "updated_at": "2025-12-29T16:48:39.765Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "6f4f9efa-1f14-44d6-9f32-551b0b3663cf",
+      "barcode": "6263957100047",
+      "name_fa": "پوشک کامل بچه سایز 0 (0 تا 2.5 کیلو گرم) 22 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444330.jpg",
+      "reference_price": null,
+      "weight_grams": 2500,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 22,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه سایز 0 (0 تا 2.5 کیلو گرم) 22 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "0"
+          }
+        ],
+        "suggested_variant_name": "سایز 0 22 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.333Z",
+      "updated_at": "2025-12-29T16:47:39.262Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "60d64e2f-c2b3-405f-975d-7d1d0e89dae8",
+      "barcode": "6266061103690",
+      "name_fa": "پوشک کامل بچه سایز 5 (11 تا 25 کیلو گرم) 10 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566715443.jpg",
+      "reference_price": null,
+      "weight_grams": 11000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 10,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 5 (11 تا 25 کیلو گرم) 10 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "سایز 5، 10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.345Z",
+      "updated_at": "2025-12-29T16:47:23.545Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "f863d565-4fe9-4261-b38e-357d9bf9fb38",
+      "barcode": "6266061103683",
+      "name_fa": "پوشک بچه 7 تا 18 کیلویی 12 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1562301560.jpg",
+      "reference_price": null,
+      "weight_grams": 7000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 12,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک بچه 7 تا 18 کیلویی 12 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "وزن",
+            "value": "7 تا 18"
+          }
+        ],
+        "suggested_variant_name": "7 تا 18 کیلویی 12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.347Z",
+      "updated_at": "2025-12-29T16:47:22.023Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "c8e43ee4-ffd9-4f4e-8aa5-c64d78deebc6",
+      "barcode": "6263957100061",
+      "name_fa": "پوشک کامل بچه سایز 2 (3 تا 6 کیلو گرم) 18عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444362.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 18,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه سایز 2 (3 تا 6 کیلو گرم) 18عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سایز 2 18 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.359Z",
+      "updated_at": "2025-12-29T16:47:02.646Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "6c1b223c-169b-4990-a4de-b0a401e308f5",
+      "barcode": "6263957100078",
+      "name_fa": "پوشک کامل بچه سایز 4 (8 تا 16 کیلو گرم) 12عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444392.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 12,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه سایز 4 (8 تا 16 کیلو گرم) 12عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "سایز 4 12 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.360Z",
+      "updated_at": "2025-12-29T16:47:01.328Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "a588305f-469c-403a-9476-c330232cd7d4",
+      "barcode": "6263957100085",
+      "name_fa": "پوشک کامل بچه سایز 5 (12 تا 20 کیلو گرم) 10عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444418.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 10,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه سایز 5 (12 تا 20 کیلو گرم) 10عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "سایز 5 10 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.361Z",
+      "updated_at": "2025-12-29T16:47:00.132Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "f1944605-20d9-4769-afe9-e0b2ba172f6f",
+      "barcode": "6263957100153",
+      "name_fa": "پوشک کامل بچه سایز 3 (5 تا 9 کیلو گرم) 14عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444817.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 14,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه سایز 3 (5 تا 9 کیلو گرم) 14عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "3"
+          }
+        ],
+        "suggested_variant_name": "سایز 3 14 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.362Z",
+      "updated_at": "2025-12-29T16:46:58.455Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "266b533a-1355-40a6-8144-8ad1195cfdfd",
+      "barcode": "6263957100290",
+      "name_fa": "پوشک بچه سایز 1(2 تا 5 کیلوگرم) 40 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1548855038.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 40,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک بچه سایز 1(2 تا 5 کیلوگرم) 40 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "1"
+          }
+        ],
+        "suggested_variant_name": "سایز 1 40 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.498Z",
+      "updated_at": "2025-12-29T16:43:39.272Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "b874afd1-481d-43c1-b057-95ba1f8929ca",
+      "barcode": "6263845400112",
+      "name_fa": "پوشک کامل بچه سایز 4 (7 تا 18 کیلوگرم) 34 عددی بیبی کینگ",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1589615284.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 34,
+        "parsed_brand": "بیبی کینگ",
+        "original_name": "پوشک کامل بچه سایز 4 (7 تا 18 کیلوگرم) 34 عددی بیبی کینگ",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "سایز 4, 34 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.555Z",
+      "updated_at": "2025-12-29T16:42:23.540Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f1b975a9-c308-4846-bbcb-2b95c86fbdc3",
+        "name": "بیبی کینگ",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:42:23.538Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "c2387e45-2504-4693-8466-d0d137c51711",
+      "barcode": "6267604411692",
+      "name_fa": "پوشک بچه سایز 2 (3-6 کیلوگرم) 52 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566714759.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 52,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 2 (3-6 کیلوگرم) 52 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سایز 2 52 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.562Z",
+      "updated_at": "2025-12-29T16:42:11.785Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "aa341052-4161-4a55-bef9-fe4be8b9c058",
+      "barcode": "6267604411715",
+      "name_fa": "پوشک بچه سایز 4 (7-18 کیلوگرم) 40 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566714869.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 40,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 4 (7-18 کیلوگرم) 40 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "4"
+          }
+        ],
+        "suggested_variant_name": "سایز 4 40 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.573Z",
+      "updated_at": "2025-12-29T16:41:56.173Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "04dac47a-0058-4f36-94e9-04b93f8db225",
+      "barcode": "6263957100092",
+      "name_fa": "پوشک کامل بچه کوچک (6-3 کیلوگرم) 44 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444452.jpg",
+      "reference_price": null,
+      "weight_grams": 6000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 44,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه کوچک (6-3 کیلوگرم) 44 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "کوچک"
+          }
+        ],
+        "suggested_variant_name": "6-3 کیلوگرم کوچک 44 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.570Z",
+      "updated_at": "2025-12-29T16:42:00.435Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "0a452bad-b9d7-47aa-84e9-baa71505c4ad",
+      "barcode": "6267604411708",
+      "name_fa": "پوشک بچه سایز 5 (12-25 کیلوگرم) 34 عددی بارلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1566714816.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک بچه",
+        "pack_count": 34,
+        "parsed_brand": "بارلی",
+        "original_name": "پوشک بچه سایز 5 (12-25 کیلوگرم) 34 عددی بارلی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "سایز 5 34 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.572Z",
+      "updated_at": "2025-12-29T16:41:57.825Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2bec2e9f-d1f6-415e-8d74-37b0d606149b",
+        "name": "بارلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:56.171Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "12765cd9-5cc8-4e8b-b69f-4b9abdba0039",
+      "barcode": "6263957100108",
+      "name_fa": "پوشک کامل بچه متوسط (9-5 کیلوگرم) 38 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444504.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 38,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه متوسط (9-5 کیلوگرم) 38 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "متوسط"
+          }
+        ],
+        "suggested_variant_name": "38 عددی متوسط"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.578Z",
+      "updated_at": "2025-12-29T16:41:48.763Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "f8eac116-f78d-4b39-b7b0-09998201cdac",
+      "barcode": "6263957100115",
+      "name_fa": "پوشک کامل بچه بزرگ (16-8 کیلوگرم) 34 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1520337916.jpg",
+      "reference_price": null,
+      "weight_grams": 8000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 34,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه بزرگ (16-8 کیلوگرم) 34 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          }
+        ],
+        "suggested_variant_name": "بزرگ 34 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.578Z",
+      "updated_at": "2025-12-29T16:41:47.310Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "e71bf1c1-ba8e-4ad4-bea3-4c7e1bf4e68d",
+      "barcode": "6263957100122",
+      "name_fa": "پوشک کامل بچه بزرگ (18-10 کیلوگرم) 32 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444595.jpg",
+      "reference_price": null,
+      "weight_grams": 10000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 32,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه بزرگ (18-10 کیلوگرم) 32 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          }
+        ],
+        "suggested_variant_name": "10-18 کیلوگرم 32 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.579Z",
+      "updated_at": "2025-12-29T16:41:45.660Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "41882e4c-817b-4290-999f-eef94e0e4220",
+      "barcode": "6263957100146",
+      "name_fa": "پوشک کامل بچه سایز 6 (15 تا 25 کیلو گرم) 24 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544444781.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 24,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه سایز 6 (15 تا 25 کیلو گرم) 24 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "6"
+          }
+        ],
+        "suggested_variant_name": "سایز 6, 24 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.580Z",
+      "updated_at": "2025-12-29T16:41:44.378Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "6a7fd639-80e1-4982-a9d2-da99c80a396e",
+      "barcode": "6263957100566",
+      "name_fa": "پوشک کامل بچه 12 تا 20 کیلویی 28 عددی مای بیبی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1562301256.jpg",
+      "reference_price": null,
+      "weight_grams": 12000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 28,
+        "parsed_brand": "مای بیبی",
+        "original_name": "پوشک کامل بچه 12 تا 20 کیلویی 28 عددی مای بیبی",
+        "parsed_attributes": [
+          {
+            "name": "وزن",
+            "value": "12 تا 20"
+          }
+        ],
+        "suggested_variant_name": "28 عددی 12 تا 20 کیلویی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.581Z",
+      "updated_at": "2025-12-29T16:41:42.817Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "cbb39f89-8394-49c3-ba7a-6b899b1e4d28",
+        "name": "مای بیبی",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:42.814Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "10d4b412-90a9-4c5a-9cc2-a9b422f6b125",
+      "barcode": "6266061103713",
+      "name_fa": "پوشک کامل بچه کوچک 3 تا 6 کیلو گرم 52 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1573885979.jpg",
+      "reference_price": null,
+      "weight_grams": 3000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 52,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه کوچک 3 تا 6 کیلو گرم 52 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "کوچک"
+          }
+        ],
+        "suggested_variant_name": "3 کیلوگرم کوچک 52 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.585Z",
+      "updated_at": "2025-12-29T16:41:37.660Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "69d4bd54-6d5d-4024-8553-efc81ed8b8d7",
+      "barcode": "6266061103812",
+      "name_fa": "پوشک کامل بچه سایز 2 (3 تا 6 کیلو گرم) 52 عددی + دستمال مرطوب بچه معطر هدیه مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544445122.jpg",
+      "reference_price": null,
+      "weight_grams": 3000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 52,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه سایز 2 (3 تا 6 کیلو گرم) 52 عددی + دستمال مرطوب بچه معطر هدیه مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "2"
+          }
+        ],
+        "suggested_variant_name": "سایز 2 (3 تا 6 کیلو گرم) 52 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.587Z",
+      "updated_at": "2025-12-29T16:41:36.348Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "70330d0d-81be-42e2-9fc2-a0e69f4d20d5",
+      "barcode": "6267604401068",
+      "name_fa": "پوشک کامل بچه بزرگ همراه با دستمال مرطوب کودک (18 - 7 کیلوگرم) 44 عددی مرسی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "d7605360-ea21-4cc0-8698-fe46039b24ac",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1544445275.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 44,
+        "parsed_brand": "مرسی",
+        "original_name": "پوشک کامل بچه بزرگ همراه با دستمال مرطوب کودک (18 - 7 کیلوگرم) 44 عددی مرسی",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          },
+          {
+            "name": "همراه",
+            "value": "دستمال مرطوب کودک"
+          },
+          {
+            "name": "وزن_کودک",
+            "value": "7-18 کیلوگرم"
+          }
+        ],
+        "suggested_variant_name": "44 عددی بزرگ"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.593Z",
+      "updated_at": "2025-12-29T16:41:27.705Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "d7605360-ea21-4cc0-8698-fe46039b24ac",
+        "name": "مرسی",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:22:01.801Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "1f0db9dd-84d4-4003-8e2c-892bd831c312",
+      "barcode": "6263957100467",
+      "name_fa": "پوشینه کامل بزرگسال کوچک 18 عددی  ایزی لایف",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e1c483c1-4452-4baf-b6f8-bd2a770e2077",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1570178426.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشینه کامل بزرگسال",
+        "pack_count": 18,
+        "parsed_brand": "ایزی لایف",
+        "original_name": "پوشینه کامل بزرگسال کوچک 18 عددی  ایزی لایف",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "کوچک"
+          }
+        ],
+        "suggested_variant_name": "18 عددی کوچک"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.594Z",
+      "updated_at": "2025-12-29T16:41:18.263Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e1c483c1-4452-4baf-b6f8-bd2a770e2077",
+        "name": "ایزی لایف",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:41:18.261Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "cd28db9a-fcbf-4579-b4d7-08441d45dd87",
+      "barcode": "6266061103799",
+      "name_fa": "پوشک کامل بچه خیلی بزرگ 11 تا 25 کیلو گرم 60 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1573886092.jpg",
+      "reference_price": null,
+      "weight_grams": 11000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 60,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه خیلی بزرگ 11 تا 25 کیلو گرم 60 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "خیلی بزرگ"
+          }
+        ],
+        "suggested_variant_name": "بزرگ 11 تا 25 کیلو گرم 60 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.610Z",
+      "updated_at": "2025-12-29T16:40:56.128Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    },
+    {
+      "id": "25c04235-8a2f-42eb-bf49-e0d8d6ff140c",
+      "barcode": "6266061104192",
+      "name_fa": "پوشک کامل بچه بزرگ 7 تا 18 کیلو گرم 72 عددی مولفیکس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "961d1266-c638-47d5-ae71-497640d6ed64",
+      "category_id": "b38699f3-b601-458b-947b-c7bf13207801",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1591014942.jpg",
+      "reference_price": null,
+      "weight_grams": 7000,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "پوشک کامل بچه",
+        "pack_count": 72,
+        "parsed_brand": "مولفیکس",
+        "original_name": "پوشک کامل بچه بزرگ 7 تا 18 کیلو گرم 72 عددی مولفیکس",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          },
+          {
+            "name": "وزن کودک",
+            "value": "7 تا 18 کیلو گرم"
+          }
+        ],
+        "suggested_variant_name": "بزرگ 7 تا 18 کیلو گرم 72 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.611Z",
+      "updated_at": "2025-12-29T16:40:54.864Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "961d1266-c638-47d5-ae71-497640d6ed64",
+        "name": "مولفیکس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:54.861Z"
+      },
+      "category": {
+        "id": "b38699f3-b601-458b-947b-c7bf13207801",
+        "name": "پوشک",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:32.860Z"
+      }
+    }
+  ],
+  "total": 57
+}

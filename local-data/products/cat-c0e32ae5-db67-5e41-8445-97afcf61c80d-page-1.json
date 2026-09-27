@@ -1,0 +1,720 @@
+{
+  "items": [
+    {
+      "id": "4880d9a1-c4cf-5c3f-bb2e-33309eb46696",
+      "barcode": "6260547144818",
+      "name_fa": "موم سرد آلوئه ورا اطلس( مخصوص اپیلاسیون) 300 گرم",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D9%85%D9%88%D9%85-%D8%B3%D8%B1%D8%AF-%D8%A7%D8%B7%D9%84%D8%B3.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "6a45e83c-5cda-5c8d-beaa-d558c19bb562",
+      "barcode": "6261745900367",
+      "name_fa": "اسپری حالت دهنده و براق کننده موی سر آلبورا 150 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%A2%D9%84%D8%A8%D9%88%D8%B1%D8%A7.jpeg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "08f839cf-3f0d-5e77-9d76-4e9cf76ad101",
+      "barcode": "6263923300419",
+      "name_fa": "نوشیدنی تخم شربتی با طعم نعنا (بدون گاز) Golden Max گلدن مکس 300 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D9%86%D8%B9%D9%86%D8%A7%DB%8C%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "4ef623e2-a4f3-577f-a2a1-81bae38acd23",
+      "barcode": "6263923300426",
+      "name_fa": "نوشیدنی تخم شربتی با طعم گل محمدی (بدون گاز) Golden Max گلدن مکس 300 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%DA%AF%D9%84-%D8%B1%D8%B2.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "7ac7130c-4af3-5cb9-90c6-bceab84156c1",
+      "barcode": "0421201",
+      "name_fa": "جوراب زنانه دو ربع 40 کفدار مشکی حدیث",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AC%D9%88%D8%B1%D8%A7%D8%A8-%D8%AF%D9%88-%D8%B1%D8%A8%D8%B9-%DA%A9%D9%81%D9%87-%D8%AF%D8%A7%D8%B1.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "377f4b6c-8245-5370-84fc-0223ce029557",
+      "barcode": "4601236000701",
+      "name_fa": "تیغ یدک روسی دو لبه RAPIRA راپیرا جعبه 10 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%DB%8C%D8%BA-%D8%B1%D8%A7%D9%BE%DB%8C%D8%B1%D8%A7.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V05-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "0390ad2a-4c91-4bd5-8cd0-ce0e1b1a638b",
+      "barcode": "8801038514895",
+      "name_fa": "razor blades",
+      "name_en": null,
+      "description": "برند: Dorco",
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/11111.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "crowdsource",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_vision": true,
+        "parsed_brand": "Dorco",
+        "price_disclaimer": "reference_only",
+        "ai_vision_confidence": 0.8
+      },
+      "last_price_update": null,
+      "created_at": "2026-06-11T11:01:52.818Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "5732f94e-f3b4-4682-9c24-99531e37f49c",
+      "barcode": "6263923300013",
+      "name_fa": "آب پرتقال و تخم شربتی گلدن مکس (300 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D9%BE%D8%B1%D8%AA%D9%82%D8%A7%D9%84%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263923300013",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آبمیوه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2553,
+          "original_name": "آب پرتقال و تخم شربتی گلدن مکس (300 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263923300013"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "6c466440-c178-4fbe-b590-dc573374cc5a",
+      "barcode": "6263923300020",
+      "name_fa": "آب آلبالو و تخم شربتی گلدن مکس (300 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D8%A2%D9%84%D8%A8%D8%A7%D9%84%D9%88%DB%8C%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263923300020",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آبمیوه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2403,
+          "original_name": "آب آلبالو و تخم شربتی گلدن مکس (300 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263923300020"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "efde651d-5e70-411d-93e1-cb771fe3a58a",
+      "barcode": "6263923300044",
+      "name_fa": "آب سیب و تخم شربتی گلدن مکس (300 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D8%B3%DB%8C%D8%A8.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263923300044",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آبمیوه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2647,
+          "original_name": "آب سیب و تخم شربتی گلدن مکس (300 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263923300044"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "bce02cc4-4dc4-432c-9f13-88971e2ef66e",
+      "barcode": "6263923300129",
+      "name_fa": "نوشیدنی تخم شربتی بلوبری گلدن مکس 300 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D8%A8%D9%84%D9%88%D8%A8%D8%B1%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263923300129",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آبمیوه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 28997,
+          "original_name": "نوشیدنی تخم شربتی بلوبری گلدن مکس 300 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263923300129"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "3b69f6c4-4026-42bc-93e9-48367048be9f",
+      "barcode": "6263923300389",
+      "name_fa": "آب میوه های استوایی و تخم شربتی گلدن مکس (300 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D8%A7%D8%B3%D8%AA%D9%88%D8%A7%DB%8C%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263923300389",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "چاشنی و افزودنی",
+          "subcategory": "ادویه و افزودنی",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 2805,
+          "original_name": "آب میوه های استوایی و تخم شربتی گلدن مکس (300 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263923300389"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "c231c27f-b243-49b2-ab2b-34ea960c6d6c",
+      "barcode": "6263923300402",
+      "name_fa": "موهیتو و تخم شربتی گلدن مکس (300 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V04/pic/%D8%AA%D8%AE%D9%85-%D8%B4%D8%B1%D8%A8%D8%AA%DB%8C-%D9%84%DB%8C%D9%85%D9%88%DB%8C%DB%8C.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6263923300402",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000039302",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "نوشیدنی",
+          "subcategory": "آبمیوه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 27101,
+          "original_name": "موهیتو و تخم شربتی گلدن مکس (300 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6263923300402"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "c0e32ae5-db67-5e41-8445-97afcf61c80d",
+        "name": "باشگاه مشتریان",
+        "icon_url": null,
+        "parent_id": null,
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 13
+}

@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "id": "97a9ed40-f635-527d-827e-fe41047cbd49",
+      "barcode": "6001106100599",
+      "name_fa": "pif paf پیف پاف حشره کش بدون بو مخصوص مگس و پشه 300 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6001106100599.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+        "name": "حشره کش",
+        "icon_url": null,
+        "parent_id": "968a2baa-93e7-5ea5-b2fd-52bfd83549c3",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "f6893ed0-bae8-5b95-8729-cdba6631a265",
+      "barcode": "6260012901045",
+      "name_fa": "اتک قرص حشره کش 15 عددی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260012901045.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "V03-(Shomarito.com).xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+        "name": "حشره کش",
+        "icon_url": null,
+        "parent_id": "968a2baa-93e7-5ea5-b2fd-52bfd83549c3",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "131e2cae-2639-47bd-9cbe-e5daf95b391d",
+      "barcode": "6260718800048",
+      "name_fa": "اسپری حشره کش کامن 460 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6260718800048.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260718800048",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "نظافت خانه و آشپزخانه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1156,
+          "original_name": "اسپری حشره کش کامن 460 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260718800048"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+        "name": "حشره کش",
+        "icon_url": null,
+        "parent_id": "968a2baa-93e7-5ea5-b2fd-52bfd83549c3",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "e333c7f9-3b6e-4ef0-a670-810318a11ca0",
+      "barcode": "6261877077036",
+      "name_fa": "پودر سوسک کش قوی هکر (100 گرم)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V02/Pic/6261877077036.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261877077036",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 10,
+          "stuff_id": "2720000098347",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "دستمال و شوینده",
+          "subcategory": "نظافت خانه و آشپزخانه",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 7974,
+          "original_name": "پودر سوسک کش قوی هکر (100 گرم)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261877077036"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "fbc71715-da80-56ec-a0a8-2ac0ad12fd2d",
+        "name": "حشره کش",
+        "icon_url": null,
+        "parent_id": "968a2baa-93e7-5ea5-b2fd-52bfd83549c3",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 4
+}

@@ -1,0 +1,175 @@
+{
+  "items": [
+    {
+      "id": "7c5d675d-1353-4577-bc6d-a45e3abd2bf0",
+      "barcode": "6261732004382",
+      "name_fa": "روکش یکبار مصرف توالت فرنگی بزرگ 20 عددی پاکنام‌‌بی‌بافت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "89ddebce-2400-4ee1-a643-840e8054dd58",
+      "category_id": "1e6e01da-b77c-4fd3-840b-f1a646b7329e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1510142759.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "روکش یکبار مصرف توالت فرنگی",
+        "pack_count": 20,
+        "parsed_brand": "پاکنام",
+        "original_name": "روکش یکبار مصرف توالت فرنگی بزرگ 20 عددی پاکنام‌‌بی‌بافت",
+        "parsed_attributes": [
+          {
+            "name": "سایز",
+            "value": "بزرگ"
+          },
+          {
+            "name": "جنس",
+            "value": "بی‌بافت"
+          }
+        ],
+        "suggested_variant_name": "20 عددی بزرگ بی‌بافت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.034Z",
+      "updated_at": "2025-12-29T17:10:26.286Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "89ddebce-2400-4ee1-a643-840e8054dd58",
+        "name": "پاکنام",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:18:03.341Z"
+      },
+      "category": {
+        "id": "1e6e01da-b77c-4fd3-840b-f1a646b7329e",
+        "name": "کاور توالت فرنگی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.030Z"
+      }
+    },
+    {
+      "id": "0942d4b2-a996-47f4-b0ae-8bf016cb6329",
+      "barcode": "6261732000285",
+      "name_fa": "روکش یکبار مصرف توالت فرنگی 20 عددی پاکنام‌‌بی‌بافت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "89ddebce-2400-4ee1-a643-840e8054dd58",
+      "category_id": "1e6e01da-b77c-4fd3-840b-f1a646b7329e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1542097336.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "روکش یکبار مصرف توالت فرنگی",
+        "pack_count": 20,
+        "parsed_brand": "پاکنام",
+        "original_name": "روکش یکبار مصرف توالت فرنگی 20 عددی پاکنام‌‌بی‌بافت",
+        "parsed_attributes": [
+          {
+            "name": "جنس",
+            "value": "بی‌بافت"
+          }
+        ],
+        "suggested_variant_name": "20 عددی بی‌بافت"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.080Z",
+      "updated_at": "2025-12-29T17:09:43.975Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "89ddebce-2400-4ee1-a643-840e8054dd58",
+        "name": "پاکنام",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:18:03.341Z"
+      },
+      "category": {
+        "id": "1e6e01da-b77c-4fd3-840b-f1a646b7329e",
+        "name": "کاور توالت فرنگی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.030Z"
+      }
+    },
+    {
+      "id": "e8e9ac49-385f-4e15-9e49-8713741cfcec",
+      "barcode": "6260658500121",
+      "name_fa": "روکش یکبار مصرف توالت فرنگی 40 عددی پرسان",
+      "name_en": null,
+      "description": null,
+      "brand_id": "986c3a72-f186-4184-b9ee-1967e5118050",
+      "category_id": "1e6e01da-b77c-4fd3-840b-f1a646b7329e",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/6260658500121(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "روکش یکبار مصرف توالت فرنگی",
+        "pack_count": 40,
+        "parsed_brand": "پرسان",
+        "original_name": "روکش یکبار مصرف توالت فرنگی 40 عددی پرسان",
+        "parsed_attributes": [],
+        "suggested_variant_name": "40 عددی"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.382Z",
+      "updated_at": "2025-12-29T17:04:05.200Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "986c3a72-f186-4184-b9ee-1967e5118050",
+        "name": "پرسان",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:02:48.051Z"
+      },
+      "category": {
+        "id": "1e6e01da-b77c-4fd3-840b-f1a646b7329e",
+        "name": "کاور توالت فرنگی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.030Z"
+      }
+    }
+  ],
+  "total": 3
+}

@@ -1,0 +1,730 @@
+{
+  "items": [
+    {
+      "id": "39f94703-d1b6-45d4-a303-b5c5ec31a580",
+      "barcode": "4210201129820",
+      "name_fa": "ماشین اصلاح بدن مدل BG5010 براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547995920.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماشین اصلاح بدن مدل BG5010",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "ماشین اصلاح بدن مدل BG5010 براون",
+        "parsed_attributes": [],
+        "suggested_variant_name": "ماشین اصلاح بدن مدل BG5010"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.828Z",
+      "updated_at": "2025-12-29T16:58:17.039Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "9e9354cb-34ad-4f99-9c48-1c6631b3d7c8",
+      "barcode": "4210201038931",
+      "name_fa": "ریش تراش مدل 150s-1 براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547995772.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ریش تراش",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "ریش تراش مدل 150s-1 براون",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "150s-1"
+          }
+        ],
+        "suggested_variant_name": "مدل 150s-1"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.829Z",
+      "updated_at": "2025-12-29T16:58:15.647Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "2fec88be-8889-4f2b-96fb-fffa8a6b9d9a",
+      "barcode": "4210201114659",
+      "name_fa": "اپیلاتور 5 Silk Epil مدل 511-5 براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547995839.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "اپیلاتور",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "اپیلاتور 5 Silk Epil مدل 511-5 براون",
+        "parsed_attributes": [],
+        "suggested_variant_name": "اپیلاتور براون"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.830Z",
+      "updated_at": "2025-12-29T16:58:13.863Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "cb08acbe-a599-4853-a723-9cc2ff505034",
+      "barcode": "4210201113256",
+      "name_fa": "ریش تراش مدل 3050cc براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547995808.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ریش تراش",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "ریش تراش مدل 3050cc براون",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "3050cc"
+          }
+        ],
+        "suggested_variant_name": "مدل 3050cc"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:33.831Z",
+      "updated_at": "2025-12-29T16:58:12.521Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "49be1c2a-1fa7-4cb1-bfd2-ffd3f8199a8b",
+      "barcode": "6261404613614",
+      "name_fa": "سشوار مدل HD-400 بیم",
+      "name_en": null,
+      "description": null,
+      "brand_id": "d3446d44-4dbc-437a-8f46-11a7000b630d",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1507445583.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "سشوار",
+        "pack_count": null,
+        "parsed_brand": "بیم",
+        "original_name": "سشوار مدل HD-400 بیم",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "HD-400"
+          }
+        ],
+        "suggested_variant_name": "مدل HD-400"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.612Z",
+      "updated_at": "2025-12-29T16:40:53.420Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "d3446d44-4dbc-437a-8f46-11a7000b630d",
+        "name": "بیم",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:53.416Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "b82342c4-915f-4b52-939a-fe15b20ee719",
+      "barcode": "4210201130123",
+      "name_fa": "ماشین اصلاح صورت مدل BT5070 براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547995946.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ماشین اصلاح صورت مدل BT5070",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "ماشین اصلاح صورت مدل BT5070 براون",
+        "parsed_attributes": [],
+        "suggested_variant_name": "ماشین اصلاح صورت مدل BT5070"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.613Z",
+      "updated_at": "2025-12-29T16:40:51.914Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "7ee9e9fb-5076-44d5-b46b-83e44a661233",
+      "barcode": "4008496789580",
+      "name_fa": "ریش تراش مدل XR1330 رمینگتون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f1c11cbc-fc33-4575-bbcc-d3eb87d895ee",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1507364064.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ریش تراش",
+        "pack_count": null,
+        "parsed_brand": "رمینگتون",
+        "original_name": "ریش تراش مدل XR1330 رمینگتون",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "XR1330"
+          }
+        ],
+        "suggested_variant_name": "مدل XR1330"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.614Z",
+      "updated_at": "2025-12-29T16:40:50.818Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f1c11cbc-fc33-4575-bbcc-d3eb87d895ee",
+        "name": "رمینگتون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:48.334Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "cf10daee-9db6-45e9-a015-b254267a7539",
+      "barcode": "8710103543022",
+      "name_fa": "ریش تراش مدل AT890 فیلییپس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "039eb142-16d3-4656-8a78-2f0c390d2aa1",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1494742671.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ریش تراش",
+        "pack_count": null,
+        "parsed_brand": "فیلییپس",
+        "original_name": "ریش تراش مدل AT890 فیلییپس",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "AT890"
+          }
+        ],
+        "suggested_variant_name": "AT890"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.615Z",
+      "updated_at": "2025-12-29T16:40:49.574Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "039eb142-16d3-4656-8a78-2f0c390d2aa1",
+        "name": "فیلییپس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:49.569Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "afeca7c6-fcc0-4a26-97a4-458e952eb89a",
+      "barcode": "4008496789702",
+      "name_fa": "ریش تراش مدل XR1370 رمینگتون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "f1c11cbc-fc33-4575-bbcc-d3eb87d895ee",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1507364115.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ریش تراش",
+        "pack_count": null,
+        "parsed_brand": "رمینگتون",
+        "original_name": "ریش تراش مدل XR1370 رمینگتون",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "XR1370"
+          }
+        ],
+        "suggested_variant_name": "XR1370"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.616Z",
+      "updated_at": "2025-12-29T16:40:48.337Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "f1c11cbc-fc33-4575-bbcc-d3eb87d895ee",
+        "name": "رمینگتون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:48.334Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "377d86b8-dbd2-47ab-8d07-f1c17d703b83",
+      "barcode": "4210201115021",
+      "name_fa": "اپیلاتور 5 Silk Epil مدل 541-5 براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1547995865.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "اپیلاتور Silk Epil",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "اپیلاتور 5 Silk Epil مدل 541-5 براون",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "541-5"
+          },
+          {
+            "name": "سری",
+            "value": "5"
+          }
+        ],
+        "suggested_variant_name": "مدل 541-5"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.617Z",
+      "updated_at": "2025-12-29T16:40:47.092Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "366556bc-ce20-4974-90a2-e8f08e889746",
+      "barcode": "8710103757269",
+      "name_fa": "اپیلاتور مدل BRE650 فیلیپس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ec5346c6-78a6-458a-a527-1b39e8db82c5",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1494687184.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "اپیلاتور مدل BRE650",
+        "pack_count": null,
+        "parsed_brand": "فیلیپس",
+        "original_name": "اپیلاتور مدل BRE650 فیلیپس",
+        "parsed_attributes": [],
+        "suggested_variant_name": "اپیلاتور مدل BRE650"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.618Z",
+      "updated_at": "2025-12-29T16:40:45.502Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ec5346c6-78a6-458a-a527-1b39e8db82c5",
+        "name": "فیلیپس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:42.688Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "8c2e75d8-fa94-41fc-87e9-6ebf97a92cfd",
+      "barcode": "4210201108542",
+      "name_fa": "اپیلاتور 9 Silk Epil مدل 579-9 براون",
+      "name_en": null,
+      "description": null,
+      "brand_id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1548660398.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "اپیلاتور",
+        "pack_count": null,
+        "parsed_brand": "براون",
+        "original_name": "اپیلاتور 9 Silk Epil مدل 579-9 براون",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "9 Silk Epil مدل 579-9"
+          }
+        ],
+        "suggested_variant_name": "9 Silk Epil مدل 579-9"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.619Z",
+      "updated_at": "2025-12-29T16:40:44.396Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "77e4b953-6c97-4c25-a5af-3cb941b8ee33",
+        "name": "براون",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:44.393Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    },
+    {
+      "id": "d5358041-40ab-453a-b16d-f4bdc3ba77d4",
+      "barcode": "8710103743774",
+      "name_fa": "ریش تراش مدل S7710 فیلیپس",
+      "name_en": null,
+      "description": null,
+      "brand_id": "ec5346c6-78a6-458a-a527-1b39e8db82c5",
+      "category_id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%A2%D8%B1%D8%A7%DB%8C%D8%B4%DB%8C-%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%2FPic/1507364552.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "ریش تراش",
+        "pack_count": null,
+        "parsed_brand": "فیلیپس",
+        "original_name": "ریش تراش مدل S7710 فیلیپس",
+        "parsed_attributes": [
+          {
+            "name": "مدل",
+            "value": "S7710"
+          }
+        ],
+        "suggested_variant_name": "مدل S7710"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:34.620Z",
+      "updated_at": "2025-12-29T16:40:42.691Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "ec5346c6-78a6-458a-a527-1b39e8db82c5",
+        "name": "فیلیپس",
+        "logo_url": null,
+        "created_at": "2025-12-29T16:40:42.688Z"
+      },
+      "category": {
+        "id": "90ba7e3a-d850-4b76-9cba-233dbef61db2",
+        "name": "وسايل برقی",
+        "icon_url": null,
+        "parent_id": "e671ce30-9233-4b85-b7de-abab24583300",
+        "created_at": "2025-12-29T09:34:33.827Z"
+      }
+    }
+  ],
+  "total": 13
+}

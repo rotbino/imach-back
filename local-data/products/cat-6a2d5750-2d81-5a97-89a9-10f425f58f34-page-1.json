@@ -1,0 +1,87 @@
+{
+  "items": [
+    {
+      "id": "0f12e2a7-d177-5267-a164-6611572bf969",
+      "barcode": "14972",
+      "name_fa": "مسواک پسرانه نرم اورادنت Oradent مدل 149",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "6a2d5750-2d81-5a97-89a9-10f425f58f34",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V03/%D9%84%D9%88%D8%A7%D8%B2%D9%85%20%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%20%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87/pic/%D9%85%D8%B3%D9%88%D8%A7%DA%A9-%D9%BE%D8%B3%D8%B1%D8%A7%D9%86%D9%87-%D8%A7%D9%88%D8%B1%D8%A7%D8%AF%D9%86%D8%AA-oradent-%D9%85%D8%AF%D9%84-149.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "لوازم بهداشتی مردانه .xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "6a2d5750-2d81-5a97-89a9-10f425f58f34",
+        "name": "مسواک-بچگانه",
+        "icon_url": null,
+        "parent_id": "d8e1e422-9096-544d-a96e-72076a5daed9",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    },
+    {
+      "id": "6520d731-217c-5527-8e7f-57fb15501cea",
+      "barcode": "14958",
+      "name_fa": "مسواک دخترانه نرم اورادنت Oradent مدل 149F",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "6a2d5750-2d81-5a97-89a9-10f425f58f34",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V03/%D9%84%D9%88%D8%A7%D8%B2%D9%85%20%D8%A8%D9%87%D8%AF%D8%A7%D8%B4%D8%AA%DB%8C%20%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87/pic/%D9%85%D8%B3%D9%88%D8%A7%DA%A9-%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86%D9%87-%D9%86%D8%B1%D9%85-%D8%A7%D9%88%D8%B1%D8%A7%D8%AF%D9%86%D8%AA-oradent-%D9%85%D8%AF%D9%84-149f.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.50",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_file": "لوازم بهداشتی مردانه .xlsx",
+        "imported_from": "mohadese-pictures-list-kala-2026-09"
+      },
+      "last_price_update": null,
+      "created_at": "2026-09-23T07:42:06.670Z",
+      "updated_at": "2026-09-23T07:42:06.670Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "6a2d5750-2d81-5a97-89a9-10f425f58f34",
+        "name": "مسواک-بچگانه",
+        "icon_url": null,
+        "parent_id": "d8e1e422-9096-544d-a96e-72076a5daed9",
+        "created_at": "2026-09-23T07:42:06.670Z"
+      }
+    }
+  ],
+  "total": 2
+}

@@ -1,0 +1,3020 @@
+{
+  "items": [
+    {
+      "id": "c5bf7555-f6bf-4ea5-9c13-653032056df6",
+      "barcode": "6260516600215",
+      "name_fa": "روغن زیتون بکر 250 میلی‌لیتری سرجیو",
+      "name_en": null,
+      "description": null,
+      "brand_id": "d5f9cb03-3630-4080-bafe-b41011bf0558",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1479213103.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 250,
+        "clean_name": "روغن زیتون بکر",
+        "pack_count": null,
+        "parsed_brand": "سرجیو",
+        "original_name": "روغن زیتون بکر 250 میلی‌لیتری سرجیو",
+        "parsed_attributes": [],
+        "suggested_variant_name": "250 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.163Z",
+      "updated_at": "2025-12-29T14:37:34.069Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "d5f9cb03-3630-4080-bafe-b41011bf0558",
+        "name": "سرجیو",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:36:55.158Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "bb4520a5-2530-4bfa-a4dd-9350b1c8b312",
+      "barcode": "6260360007796",
+      "name_fa": "روغن زیتون فرابکر 250 میلی‌لیتری الیت",
+      "name_en": null,
+      "description": null,
+      "brand_id": "25f49b64-bc74-4375-90c0-930917c9c465",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1539954314.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 250,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "الیت",
+        "original_name": "روغن زیتون فرابکر 250 میلی‌لیتری الیت",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "فرابکر"
+          }
+        ],
+        "suggested_variant_name": "250 میلی‌لیتری فرابکر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.196Z",
+      "updated_at": "2025-12-29T14:37:01.431Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "25f49b64-bc74-4375-90c0-930917c9c465",
+        "name": "الیت",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:03:35.588Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "cc92ae30-4a4a-423f-ace4-a3f4170551f2",
+      "barcode": "6262032500352",
+      "name_fa": "روغن زیتون بکر 250 میلی‌لیتری اویلا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "add70c9f-292e-472a-abd2-c934d12dcb08",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/6262032500352(1).jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 250,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "اویلا",
+        "original_name": "روغن زیتون بکر 250 میلی‌لیتری اویلا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "بکر"
+          }
+        ],
+        "suggested_variant_name": "250 میلی‌لیتری بکر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.202Z",
+      "updated_at": "2025-12-29T14:36:53.605Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "add70c9f-292e-472a-abd2-c934d12dcb08",
+        "name": "اویلا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:37.371Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "cdfa6465-fd83-4942-8dec-4fe23e4ca36b",
+      "barcode": "6262969300179",
+      "name_fa": "روغن زیتون فرابکر 460 گرمی آرشیا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "dfcbca6d-7545-4258-9cc7-e35e089a319d",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1508663638.jpg",
+      "reference_price": null,
+      "weight_grams": 460,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "آرشیا",
+        "original_name": "روغن زیتون فرابکر 460 گرمی آرشیا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "فرابکر"
+          }
+        ],
+        "suggested_variant_name": "460 گرمی فرابکر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.202Z",
+      "updated_at": "2025-12-29T14:36:52.485Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "dfcbca6d-7545-4258-9cc7-e35e089a319d",
+        "name": "آرشیا",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:36:07.047Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "db85b63c-ab44-4382-95f3-b8a05e23a127",
+      "barcode": "8410660035342",
+      "name_fa": "روغن زیتون  بارسلونا  500 میلی‌لیتری لااسپانولا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c0c7619a-c4a6-4020-9510-7a4b139de716",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1479214634.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 500,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "لااسپانولا",
+        "original_name": "روغن زیتون  بارسلونا  500 میلی‌لیتری لااسپانولا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.222Z",
+      "updated_at": "2025-12-29T14:36:44.710Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c0c7619a-c4a6-4020-9510-7a4b139de716",
+        "name": "لااسپانولا",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:36:27.928Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a6526ee7-e6a3-47c8-b932-0ce261d1e705",
+      "barcode": "8410660035359",
+      "name_fa": "روغن زیتون گرانادا 500 میلی‌لیتری لااسپانولا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "c0c7619a-c4a6-4020-9510-7a4b139de716",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1479214686.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 500,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "لااسپانولا",
+        "original_name": "روغن زیتون گرانادا 500 میلی‌لیتری لااسپانولا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "500 میلی‌لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.224Z",
+      "updated_at": "2025-12-29T14:36:43.250Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "c0c7619a-c4a6-4020-9510-7a4b139de716",
+        "name": "لااسپانولا",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:36:27.928Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "d0cc7f65-a1c6-4232-8190-f07e46e5d699",
+      "barcode": "6262032500376",
+      "name_fa": "روغن زیتون بکر مناسب پخت و پز و سالاد 500 میلی‌لیتری اویلا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "add70c9f-292e-472a-abd2-c934d12dcb08",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1564382050.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 500,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "اویلا",
+        "original_name": "روغن زیتون بکر مناسب پخت و پز و سالاد 500 میلی‌لیتری اویلا",
+        "parsed_attributes": [
+          {
+            "name": "مناسب",
+            "value": "پخت و پز و سالاد"
+          },
+          {
+            "name": "نوع",
+            "value": "بکر"
+          }
+        ],
+        "suggested_variant_name": "500 میلی‌لیتری بکر مناسب پخت و پز و سالاد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.259Z",
+      "updated_at": "2025-12-29T14:36:14.551Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "add70c9f-292e-472a-abd2-c934d12dcb08",
+        "name": "اویلا",
+        "logo_url": null,
+        "created_at": "2025-12-29T13:05:37.371Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "b8c92864-f1c6-4472-95b5-137a2d5fd4c9",
+      "barcode": "6262032500437",
+      "name_fa": "روغن زیتون تصفیه شده مناسب پخت و پز و سالاد 500 میلی‌لیتری فامیلا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "39825902-3994-4efa-8832-0078b4747d23",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1564382289.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 500,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "فامیلا",
+        "original_name": "روغن زیتون تصفیه شده مناسب پخت و پز و سالاد 500 میلی‌لیتری فامیلا",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "تصفیه شده"
+          },
+          {
+            "name": "کاربرد",
+            "value": "پخت و پز و سالاد"
+          }
+        ],
+        "suggested_variant_name": "500 میلی‌لیتری تصفیه شده مناسب پخت و پز و سالاد"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.260Z",
+      "updated_at": "2025-12-29T14:36:12.830Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "39825902-3994-4efa-8832-0078b4747d23",
+        "name": "فامیلا",
+        "logo_url": null,
+        "created_at": "2025-12-29T10:50:36.898Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "e24702a3-b8cf-41bd-9774-4067dae59813",
+      "barcode": "6262631500067",
+      "name_fa": "روغن زیتون فرابکر 900 گرمی پرند",
+      "name_en": null,
+      "description": null,
+      "brand_id": "57a10937-ae6b-4bd8-93aa-299231b1c915",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1516606367.jpg",
+      "reference_price": null,
+      "weight_grams": 900,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": null,
+        "clean_name": "روغن زیتون",
+        "pack_count": null,
+        "parsed_brand": "پرند",
+        "original_name": "روغن زیتون فرابکر 900 گرمی پرند",
+        "parsed_attributes": [
+          {
+            "name": "نوع",
+            "value": "فرابکر"
+          }
+        ],
+        "suggested_variant_name": "900 گرمی فرابکر"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.261Z",
+      "updated_at": "2025-12-29T14:36:11.395Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "57a10937-ae6b-4bd8-93aa-299231b1c915",
+        "name": "پرند",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:35:29.022Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a5d4b922-1ca8-44ba-9d9c-fc14c364226f",
+      "barcode": "8004275025302",
+      "name_fa": "روغن زیتون فرابکر با طعم ریحان 250 میلی لیتری پیترو کریچلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2c9231a8-545b-494a-86fa-da8551f458c4",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1540362840.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 250,
+        "clean_name": "روغن زیتون فرابکر",
+        "pack_count": null,
+        "parsed_brand": "پیترو کریچلی",
+        "original_name": "روغن زیتون فرابکر با طعم ریحان 250 میلی لیتری پیترو کریچلی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "ریحان"
+          }
+        ],
+        "suggested_variant_name": "250 میلی لیتری با طعم ریحان"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.265Z",
+      "updated_at": "2025-12-29T14:36:04.617Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2c9231a8-545b-494a-86fa-da8551f458c4",
+        "name": "پیترو کریچلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:35:37.785Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "c65d9c57-cdb2-447b-8419-5ac176fc0b46",
+      "barcode": "8004275025326",
+      "name_fa": "روغن زیتون فرابکر با طعم لیمو 250 میلی لیتری پیترو کریچلی",
+      "name_en": null,
+      "description": null,
+      "brand_id": "2c9231a8-545b-494a-86fa-da8551f458c4",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1540362887.jpg",
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 250,
+        "clean_name": "روغن زیتون فرابکر",
+        "pack_count": null,
+        "parsed_brand": "پیترو کریچلی",
+        "original_name": "روغن زیتون فرابکر با طعم لیمو 250 میلی لیتری پیترو کریچلی",
+        "parsed_attributes": [
+          {
+            "name": "طعم",
+            "value": "لیمو"
+          }
+        ],
+        "suggested_variant_name": "250 میلی لیتری با طعم لیمو"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.266Z",
+      "updated_at": "2025-12-29T14:36:03.362Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "2c9231a8-545b-494a-86fa-da8551f458c4",
+        "name": "پیترو کریچلی",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:35:37.785Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "d2dde172-e25e-4c93-a782-88d74d483b0f",
+      "barcode": "8004025100150",
+      "name_fa": "روغن زیتون فرابکر 3 لیتری مارکاوردا",
+      "name_en": null,
+      "description": null,
+      "brand_id": "e2046cdf-f383-4a34-a969-d3a7aca6bd77",
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": "https://content.barcodeapp.ir/products/extracted/V01%2F%D8%AE%D9%88%D8%A7%D8%B1%D8%A8%D8%A7%D8%B1%2FPic/1519194803.jpg",
+      "reference_price": null,
+      "weight_grams": 3,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "manual",
+      "source_url": null,
+      "source_id": null,
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "ai_parsed": true,
+        "volume_ml": 3000,
+        "clean_name": "روغن زیتون فرابکر",
+        "pack_count": null,
+        "parsed_brand": "مارکاوردا",
+        "original_name": "روغن زیتون فرابکر 3 لیتری مارکاوردا",
+        "parsed_attributes": [],
+        "suggested_variant_name": "3 لیتری"
+      },
+      "last_price_update": null,
+      "created_at": "2025-12-29T09:34:40.283Z",
+      "updated_at": "2025-12-29T14:35:33.034Z",
+      "deleted_at": null,
+      "brand": {
+        "id": "e2046cdf-f383-4a34-a969-d3a7aca6bd77",
+        "name": "مارکاوردا",
+        "logo_url": null,
+        "created_at": "2025-12-29T14:35:33.030Z"
+      },
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "f79071e4-fd2e-4b06-8a14-e0cf33300159",
+      "barcode": "8436001257662",
+      "name_fa": "اسپری روغن زیتون بدون بو آبریل (200 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8436001257662",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 865,
+          "original_name": "اسپري روغن زيتون بدون بو آبريل (200 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8436001257662"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "da02fe99-82cb-45aa-89cf-509f798b543f",
+      "barcode": "6262753001473",
+      "name_fa": "اسپری روغن زیتون تصفیه شده اویلا (230 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262753001473",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 867,
+          "original_name": "اسپري روغن زيتون تصفيه شده اويلا (230 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262753001473"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "eee7f010-e615-4a4c-b71a-b41b1a533de7",
+      "barcode": "051500705834",
+      "name_fa": "اسپری روغن زیتون کریسکو (141 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:051500705834",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 1246,
+          "original_name": "اسپری روغن زیتون کریسکو (141 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "51500705834"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "b23b1f3b-95da-489a-8cb2-fe5d77233bbb",
+      "barcode": "8690819260690",
+      "name_fa": "روغن زیتون 4 لیتری کریستال 4*1",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690819260690",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13883,
+          "original_name": "روغن زيتون 4 ليتري کريستال 4*1",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690819260690"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "f08f4aa1-2923-49aa-979e-6b13eef23e02",
+      "barcode": "6297000805337",
+      "name_fa": "روغن زیتون 500 میل برتینی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6297000805337",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13886,
+          "original_name": "روغن زيتون 500 ميل برتيني",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6297000805337"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "f8ec74fc-1d60-4e57-a67e-12cdbc780ae6",
+      "barcode": "6260145490171",
+      "name_fa": "روغن زیتون با بو اتکا 230 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260145490171",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13887,
+          "original_name": "روغن زيتون با بو اتکا 230 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260145490171"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "e2d70922-2e74-48d2-ae62-0668e968222a",
+      "barcode": "6260208700247",
+      "name_fa": "روغن زیتون بدون بو سفید رود 250 گرمی",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260208700247",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13894,
+          "original_name": "روغن زيتون بدون بو سفيد رود 250 گرمي",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260208700247"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "e28d7497-d382-4c56-8187-4e8733eaf0b7",
+      "barcode": "8690766381004",
+      "name_fa": "روغن زیتون ترکیه 5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690766381004",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13898,
+          "original_name": "روغن زيتون ترکيه 5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690766381004"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "ed63fedf-344e-4e62-844d-08332d13b0aa",
+      "barcode": "6260588800803",
+      "name_fa": "روغن زیتون تصفیه شده سمن (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260588800803",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13900,
+          "original_name": "روغن زيتون تصفيه شده سمن (500 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260588800803"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "d39d1869-6c75-418b-af2a-12566d45e4a7",
+      "barcode": "6269506800642",
+      "name_fa": "روغن زیتون تصفیه شده سی سام (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6269506800642",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13901,
+          "original_name": "روغن زيتون تصفيه شده سي سام (500 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6269506800642"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "cf9a75c7-82e7-4f9b-85b4-3bf598ab1993",
+      "barcode": "8690819259151",
+      "name_fa": "روغن زیتون سرخ کردنی کریستال (2 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690819259151",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13907,
+          "original_name": "روغن زيتون سرخ کردني کريستال (2 ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690819259151"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "e9b17916-f733-4096-93ba-379cea6eeae3",
+      "barcode": "6267489700157",
+      "name_fa": "روغن زیتون فرابکر اسپولیو 500 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6267489700157",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13908,
+          "original_name": "روغن زيتون فرابکر اسپوليو 500 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6267489700157"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "e418c140-9067-4e62-be9a-b4e57ce9ebcb",
+      "barcode": "6260037302377",
+      "name_fa": "روغن زیتون فرابکر بیژن (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260037302377",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13910,
+          "original_name": "روغن زيتون فرابکر بيژن (500 ميلي ليتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260037302377"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "d7c0899a-4bcd-433c-9970-b10eacb26ee8",
+      "barcode": "6261207700160",
+      "name_fa": "روغن زیتون فرابکر سرخ کردنی سانریوو 750 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261207700160",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13912,
+          "original_name": "روغن زيتون فرابکر سرخ کردني سانريوو 750 ميلي ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261207700160"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "fe7e543b-cd3a-4f0d-910c-e39bf3091036",
+      "barcode": "041790220933",
+      "name_fa": "روغن زیتون اکسترالایت برتولی (750 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:041790220933",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13922,
+          "original_name": "روغن زیتون اکسترالایت برتولی (750 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "41790220933"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "c9958753-cc85-4f3c-8c6a-1d5fc818b4d1",
+      "barcode": "6269616900133",
+      "name_fa": "روغن زیتون با بو میلانو 750 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6269616900133",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13927,
+          "original_name": "روغن زیتون با بو میلانو 750 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6269616900133"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "b457da1f-ded1-4c6c-8a94-4f31fccb6352",
+      "barcode": "041790214260",
+      "name_fa": "روغن زیتون برتولی (750 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:041790214260",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13939,
+          "original_name": "روغن زیتون برتولی (750 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "41790214260"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "fb2a331b-6760-46c6-8e53-d9eb0535c041",
+      "barcode": "6297000805276",
+      "name_fa": "روغن زیتون بریتنی (4 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6297000805276",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13941,
+          "original_name": "روغن زیتون بریتنی (4 لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6297000805276"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "ca63424f-8f41-462f-bff7-c6489e4c4177",
+      "barcode": "6262753001428",
+      "name_fa": "روغن زیتون بکر ویریجین فامیلا (445 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6262753001428",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13944,
+          "original_name": "روغن زیتون بکر ویریجین فامیلا (445 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6262753001428"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a232feca-1c09-46e2-b57b-12cc27f91fc2",
+      "barcode": "6260145490164",
+      "name_fa": "روغن زیتون بی بو اتکا (240 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260145490164",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13945,
+          "original_name": "روغن زیتون بی بو اتکا (240 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260145490164"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "c1a3962e-0fcb-4fac-ab7d-410915ec48cd",
+      "barcode": "6261207700153",
+      "name_fa": "روغن زیتون بی بو سانریو (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261207700153",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13949,
+          "original_name": "روغن زیتون بی بو سانریو (500 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261207700153"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a1462ffe-d724-4d85-b434-413f6a6067e4",
+      "barcode": "6269854700069",
+      "name_fa": "روغن زیتون تصفیه شده بایوبیت (یک لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6269854700069",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13954,
+          "original_name": "روغن زیتون تصفیه شده بایوبیت (یک لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6269854700069"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "cc19b194-c25e-4d2d-8862-882ad0bdd9cc",
+      "barcode": "6266218301443",
+      "name_fa": "روغن زیتون تصفیه شده بی بو اُ.آ.ب (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6266218301443",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13955,
+          "original_name": "روغن زیتون تصفیه شده بی بو اُ.آ.ب (500 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6266218301443"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "f91f3383-f9d5-4f7e-a638-0b1b9c4ef059",
+      "barcode": "046708899034",
+      "name_fa": "روغن زیتون رویال (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:046708899034",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13964,
+          "original_name": "روغن زیتون رویال (500 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "46708899034"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "ad3aa4cc-decf-4ffc-85fa-3af50e30cf9d",
+      "barcode": "8690819262540",
+      "name_fa": "روغن زیتون سرخ کردنی کریستال (3 لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690819262540",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13969,
+          "original_name": "روغن زیتون سرخ کردنی کریستال (3 لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690819262540"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a6a0435e-5564-4753-bd5a-481d7f524201",
+      "barcode": "8690819260423",
+      "name_fa": "روغن زیتون سرخ کردنی کریستال (یک لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690819260423",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13970,
+          "original_name": "روغن زیتون سرخ کردنی کریستال (یک لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690819260423"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "d2b212fe-1790-4f9a-a9fc-e68adfcc80f9",
+      "barcode": "6269854700038",
+      "name_fa": "روغن زیتون فرابکر بودار بایوبیت (یک لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6269854700038",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13976,
+          "original_name": "روغن زیتون فرابکر بودار بایوبیت (یک لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6269854700038"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a5acea1d-33d3-477a-82eb-bf8499517bcc",
+      "barcode": "8033576191621",
+      "name_fa": "روغن زیتون فرابکر دانته (یک لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8033576191621",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13977,
+          "original_name": "روغن زیتون فرابکر دانته (یک لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8033576191621"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "f43365ae-88c1-4deb-9129-716e16602f11",
+      "barcode": "6261207700092",
+      "name_fa": "روغن زیتون فرابکر سانریوو (500 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6261207700092",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13979,
+          "original_name": "روغن زیتون فرابکر سانریوو (500 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6261207700092"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a8d0f88e-f80a-47e0-8704-0f7bb4a7d2e7",
+      "barcode": "041790221060",
+      "name_fa": "روغن زیتون کلاسیکو برتولی (750 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:041790221060",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "normalized_barcode",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 13992,
+          "original_name": "روغن زیتون کلاسیکو برتولی (750 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "41790221060"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "c545e3e7-1cab-4140-9b2e-0c993fcf8305",
+      "barcode": "8690819112012",
+      "name_fa": "روغن مایع زیتون بکر کریستال (250 میلی لیتر)",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690819112012",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 14098,
+          "original_name": "روغن مایع زیتون بکر کریستال (250 میلی لیتر)",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690819112012"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "af9695c1-6c15-4a51-b857-1b3dfcfcd21a",
+      "barcode": "6260596400231",
+      "name_fa": "سس مخلوط روغن زیتون و سرکه خرما سبزینه تک 270 میلی لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:6260596400231",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.85",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": 0,
+          "stuff_id": "2710000161875",
+          "match_method": "exact",
+          "mapping_count": 1
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 15943,
+          "original_name": "سس مخلوط روغن زیتون و سرکه خرما سبزینه تک 270 میلی لیتری",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": false
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "6260596400231"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    },
+    {
+      "id": "a04437aa-5813-4832-93fc-b7d39a412b52",
+      "barcode": "8690819122035",
+      "name_fa": "کریستال.روغن زیتون.5 لیتری",
+      "name_en": null,
+      "description": null,
+      "brand_id": null,
+      "category_id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+      "image_url": null,
+      "reference_price": null,
+      "weight_grams": null,
+      "default_unit": "pcs",
+      "default_unit_step": "1.00",
+      "source": "foreign_db",
+      "source_url": null,
+      "source_id": "asana-12.8.0:8690819122035",
+      "is_verified": false,
+      "usage_count": 0,
+      "canonical_product_id": null,
+      "data_confidence": "0.80",
+      "last_reviewed_by": null,
+      "merge_history": null,
+      "usage_by_city": {},
+      "usage_by_store_type": {},
+      "metadata": {
+        "source_tax": {
+          "vat": null,
+          "stuff_id": null,
+          "match_method": "missing",
+          "mapping_count": 0
+        },
+        "source_taxonomy": {
+          "category": "خواربار و نان",
+          "subcategory": "روغن زیتون",
+          "match_method": "exact",
+          "mapping_count": 1,
+          "quick_access_category": null,
+          "quick_access_match_method": "missing"
+        },
+        "price_disclaimer": "reference_only",
+        "import_provenance": {
+          "kind": "asana_installer",
+          "release": "12.8.0",
+          "source_row": 22347,
+          "original_name": "کريستال.روغن زيتون.5 ليتري",
+          "source_sha256": "2b9d8deb65dbf15aa3074739b5c6f50c79b9f30b7c3a9953e163d3299f4c4b3c",
+          "name_was_cleaned": true
+        },
+        "barcode_validation": {
+          "kind": "valid_gtin",
+          "normalized_without_leading_zeroes": "8690819122035"
+        },
+        "discarded_seed_values": {
+          "price": "10",
+          "stock": "0",
+          "reason": "Installer values are uniform seed placeholders, not live merchant data."
+        }
+      },
+      "last_price_update": null,
+      "created_at": "2026-07-24T12:20:12.408Z",
+      "updated_at": "2026-07-24T12:20:12.408Z",
+      "deleted_at": null,
+      "brand": null,
+      "category": {
+        "id": "e1334ad0-6049-4b1d-8674-df81e882505a",
+        "name": "روغن زیتون",
+        "icon_url": null,
+        "parent_id": "61b0cc70-9175-4fe8-b912-bd0df0f7ea68",
+        "created_at": "2025-12-29T09:34:40.162Z"
+      }
+    }
+  ],
+  "total": 145
+}
