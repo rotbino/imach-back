@@ -154,6 +154,43 @@ model RefreshToken {
 
 // ─── Catalog (category tree + reference goods) ─────────────────────────────
 
+/// ── Unit table — multilingual units with packaging hierarchy.
+///
+/// Base units (PIECE, KILOGRAM, METER, LITER, …) have baseUnitKey=null.
+/// Packaging units (CARTON, SACK, JUMBO, …) reference a base unit and
+/// declare how many base units they contain.
+///
+/// Example:
+///   { key: "PIECE",  nameFa: "عدد",      nameEn: "Piece",     baseUnitKey: null }
+///   { key: "CARTON", nameFa: "کارتن",     nameEn: "Carton",    baseUnitKey: "PIECE", containsQty: null }
+///   { key: "SACK50", nameFa: "کیسه ۵۰kg", nameEn: "Sack 50kg", baseUnitKey: "KILOGRAM", containsQty: 50, qtyIsFixed: true }
+///
+/// containsQty=null on a packaging unit means "depends on the product" —
+/// the user enters the count at listing time (carton of chips = 24, carton of eggs = 30).
+///
+/// This enables price comparison: the matching engine divides priceMinor
+/// by containsQty to get price-per-base-unit.
+model Unit {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  key         String  @unique
+  nameFa      String
+  nameEn      String
+  /// null = this IS a base unit (عدد، کیلو، متر، …)
+  /// non-null = packaging unit referencing a base unit's key
+  baseUnitKey String?
+  /// how many base units in this packaging? null = product-dependent (user enters at listing time)
+  containsQty Int?
+  /// true = count is fixed and cannot be changed by user (SACK50 always = 50kg)
+  /// false = user can override (carton can be 24 or 30)
+  qtyIsFixed  Boolean @default(false)
+  /// "wholesale" | "retail" | null (legacy units without scope)
+  scope       String?
+  isActive    Boolean @default(true)
+
+  @@index([baseUnitKey])
+  @@index([scope])
+}
+
 /// Category tree (3–4 levels). Seed comes from trade standards (GS1 GPC / HS
 /// skeleton + local B2B naming); user-created goods always attach to a leaf.
 model Category {
