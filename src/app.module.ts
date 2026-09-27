@@ -5,6 +5,7 @@ import { CommonModule } from "./common/common.module";
 import { AuthModule } from "./auth/auth.module";
 import { GoodsModule } from "./goods/goods.module";
 import { UnitsModule } from "./units/units.module";
+import { BrandModule } from "./brand/brand.module";
 import { ProductsModule } from "./products/products.module";
 import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
@@ -26,6 +27,7 @@ import { FilesModule } from "./files/files.module";
     AuthModule,
     GoodsModule,
     UnitsModule,
+    BrandModule,
     ProductsModule,
     BusinessesModule,
     ListingsModule,
