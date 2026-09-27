@@ -119,4 +119,145 @@ export class ProductsController {
   ) {
     return this.products.setProductImage(user, body);
   }
+
+  /**
+   * POST /products/bulkCreate — admin bulk-creates products from a JSON array.
+   * Each item: { brandId, goodName, label, barcode?, imageUrl?, attrs? }
+   *
+   * If goodName doesn't match an existing Good, it's auto-created in "سایر › جدید".
+   * If attrs reference keys not in the Good's Category, they're added silently.
+   * If a Product with the same brandId + searchText already exists, it's skipped.
+   *
+   * Returns: { saved, skipped, failed, items: [{ productId, label }] }
+   */
+  @Post("bulkCreate")
+  @UseGuards(JwtAuthGuard, AdminGuard)
+  async bulkCreate(
+    @Body() body: {
+      items: {
+        brandId: string;
+        goodName: string;
+        label: string;
+        barcode?: string;
+        imageUrl?: string;
+        attrs?: Record<string, string>;
+      }[];
+    },
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!Array.isArray(body.items) || body.items.length === 0) {
+      throw AppError.badRequest("items باید آرایه‌ای غیرخالی باشد", "BAD_ITEMS");
+    }
+    if (body.items.length > 500) {
+      throw AppError.badRequest("حداکثر ۵۰۰ کالا در هر درخواست", "TOO_MANY");
+    }
+
+    const { goodSearchText, normalizeFa } = await import("../common/catalog/catalog");
+    let saved = 0;
+    let skipped = 0;
+    let failed = 0;
+    const results: { productId?: string; label: string; status: "saved" | "skipped" | "failed"; error?: string }[] = [];
+
+    // ── cache brand lookups
+    const brandCache = new Map<string, { id: string; name: string } | null>();
+    for (const item of body.items) {
+      try {
+        const label = (item.label || "").trim();
+        if (label.length < 2) { failed++; results.push({ label, status: "failed", error: "label too short" }); continue; }
+
+        // ── resolve brand
+        let brand = brandCache.get(item.brandId);
+        if (!brandCache.has(item.brandId)) {
+          brand = await this.prisma.brand.findUnique({ where: { id: item.brandId }, select: { id: true, name: true } });
+          brandCache.set(item.brandId, brand);
+        }
+        if (!brand) { failed++; results.push({ label, status: "failed", error: "brand not found" }); continue; }
+
+        // ── resolve good (by name search)
+        const st = goodSearchText({ nameFa: item.goodName.trim() });
+        let good = await this.prisma.good.findFirst({ where: { searchText: st }, select: { id: true, categoryId: true, unit: true } });
+        if (!good) {
+          // auto-create good in "سایر › جدید"
+          const otherCat = await this.prisma.category.findFirst({ where: { slug: "jadid" }, select: { id: true, unit: true } });
+          if (!otherCat) { failed++; results.push({ label, status: "failed", error: "category 'jadid' not found" }); continue; }
+          good = await this.prisma.good.create({
+            data: {
+              nameFa: item.goodName.trim(),
+              searchText: st,
+              unit: otherCat.unit || "PIECE",
+              categoryId: otherCat.id,
+              status: "ACTIVE",
+              source: "USER",
+              creatorRole: "ADMIN",
+              createdById: user.id,
+            },
+            select: { id: true, categoryId: true, unit: true },
+          });
+        }
+
+        // ── build searchText for product
+        const searchText = normalizeFa(label);
+
+        // ── check duplicate (same brand + good + searchText)
+        const existing = await this.prisma.product.findFirst({
+          where: { goodId: good.id, brandId: brand.id, searchText },
+          select: { id: true },
+        });
+        if (existing) { skipped++; results.push({ label, status: "skipped" }); continue; }
+
+        // ── check barcode uniqueness if provided
+        if (item.barcode?.trim()) {
+          const bcDup = await this.prisma.product.findFirst({
+            where: { barcode: item.barcode.trim(), status: { not: "MERGED" } },
+            select: { id: true },
+          });
+          if (bcDup) { failed++; results.push({ label, status: "failed", error: "barcode already exists" }); continue; }
+        }
+
+        // ── if attrs provided, check if Category has them — if not, add silently
+        if (item.attrs && Object.keys(item.attrs).length > 0) {
+          const cat = await this.prisma.category.findUnique({ where: { id: good.categoryId }, select: { attrs: true } });
+          const catAttrs = (cat?.attrs as Array<Record<string, unknown>>) ?? [];
+          const catKeys = new Set(catAttrs.map((a) => a.key as string));
+          let modified = false;
+          for (const k of Object.keys(item.attrs)) {
+            if (!catKeys.has(k)) {
+              catAttrs.push({ key: k, fa: k, en: k, type: "text" });
+              modified = true;
+            }
+          }
+          if (modified) {
+            await this.prisma.category.update({ where: { id: good.categoryId }, data: { attrs: JSON.parse(JSON.stringify(catAttrs)) } });
+          }
+        }
+
+        // ── create product
+        const product = await this.prisma.product.create({
+          data: {
+            goodId: good.id,
+            brandId: brand.id,
+            label,
+            searchText,
+            barcode: item.barcode?.trim() || null,
+            imageUrl: item.imageUrl?.trim() || null,
+            status: "ACTIVE",
+            creatorRole: "ADMIN",
+            createdById: user.id,
+          },
+          select: { id: true, label: true },
+        });
+        saved++;
+        results.push({ productId: product.id, label, status: "saved" });
+      } catch (err) {
+        failed++;
+        results.push({ label: item.label || "?", status: "failed", error: String(err) });
+      }
+    }
+
+    // invalidate cache
+    this.products["cache"]?.invalidateTag("goods");
+
+    return { saved, skipped, failed, items: results };
+  }
 }
