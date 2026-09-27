@@ -71,7 +71,7 @@ export class UnitsController {
         baseUnitKey: body.baseUnitKey?.trim().toUpperCase() || null,
         containsQty: body.containsQty ?? null,
         qtyIsFixed: body.qtyIsFixed ?? false,
-        scope: body.scope ?? null,
+        scope: body.scope ?? undefined,
         isActive: true,
       },
     });
