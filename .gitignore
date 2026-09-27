@@ -20,3 +20,6 @@ dist/
 # فایل‌های آپلودی محلی (درایور local) — در پروداکشن آروان است
 uploads/
 
+
+# نسخه JSON کامل - فقط نسخه فشرده پوش می‌شود
+local-data/products-merged.json

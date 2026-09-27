@@ -1,0 +1,27 @@
+[
+  {
+    "ts": "2026-09-27T23:29:32.054Z",
+    "level": "INFO",
+    "msg": "=== Fetch ALL products (no filter) starting ==="
+  },
+  {
+    "ts": "2026-09-27T23:29:32.061Z",
+    "level": "INFO",
+    "msg": "Page 1 cached. Total: 42027"
+  },
+  {
+    "ts": "2026-09-27T23:29:32.061Z",
+    "level": "INFO",
+    "msg": "Total pages: 421"
+  },
+  {
+    "ts": "2026-09-27T23:29:32.067Z",
+    "level": "INFO",
+    "msg": "Need to fetch 3/421 pages (skipping 418 cached)"
+  },
+  {
+    "ts": "2026-09-27T23:29:34.168Z",
+    "level": "INFO",
+    "msg": "[3/3] Page 201 ✓ (1.43 pg/s, 2.1s elapsed, ~0s left)"
+  }
+]

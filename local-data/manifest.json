@@ -1,32 +1,111 @@
 {
   "summary": {
-    "approach": "structured-fetch",
-    "last_updated": "2026-09-27T22:45:00Z",
-    "status": "categories_fetched_brands_pending"
+    "approach": "fetch-all-then-extract-brands",
+    "last_updated": "2026-09-27T23:40:00Z",
+    "status": "complete"
   },
-  "structure": {
-    "categories.json": "All 272 barcodeapp categories with parent_id and counts (DONE)",
-    "brands.json": "All ~1144 barcodeapp brands (TODO - needs token)",
-    "products/": "Per-category product pages: cat-{catId}-page-{N}.json (TODO)",
-    "catalog-summary.json": "Final summary with per-category stats (generated at end)",
-    "fetch-log.json": "Detailed log of fetch process"
+  "files": {
+    "categories.json": {
+      "size": "40 KB",
+      "description": "272 barcodeapp categories with parent_id and product counts"
+    },
+    "brands.json": {
+      "size": "92 KB",
+      "description": "1,144 brands from API with product counts"
+    },
+    "products-merged.json": {
+      "size": "91 MB",
+      "description": "All 42,027 products with extracted brand info. Each product has _extracted.brandName, _extracted.brandMethod, _extracted.brandSource."
+    },
+    "products-merged.json.gz": {
+      "size": "7.8 MB",
+      "description": "Compressed version for git"
+    },
+    "fetch-all-summary.json": {
+      "size": "1 KB",
+      "description": "Fetch metadata (421 pages, 0 failed)"
+    },
+    "fetch-all-log.json": {
+      "size": "2 KB",
+      "description": "Fetch process log"
+    },
+    "README.md": {
+      "size": "2 KB",
+      "description": "Documentation"
+    }
   },
-  "categories_summary": {
-    "total": 272,
-    "with_products": 247,
-    "top_5": [
-      { "name": "شیرینی و دسر", "count": 1944 },
-      { "name": "سس", "count": 886 },
-      { "name": "نوشیدنی‌ های سرد", "count": 865 },
-      { "name": "ابزار و ملزومات", "count": 755 },
-      { "name": "نوشیدنی های گرم", "count": 744 }
-    ]
+  "stats": {
+    "total_products": 42027,
+    "with_direct_brand": 13347,
+    "direct_brand_pct": "31.8%",
+    "with_extracted_brand": 16364,
+    "extracted_brand_pct": "38.9%",
+    "still_no_brand": 12316,
+    "no_brand_pct": "29.3%",
+    "total_with_brand": 29711,
+    "total_with_brand_pct": "70.7%",
+    "with_category": 19073,
+    "with_category_pct": "45.4%",
+    "total_brands_known": 1258,
+    "brands_from_api": 1144,
+    "brands_discovered": 114
   },
+  "extraction_methods": {
+    "direct": "Brand directly from API (item.brand.name)",
+    "extracted": "Brand extracted from product name by matching against known brands list (longest match first, multi-word phrases prioritized)"
+  },
+  "extraction_sources": {
+    "api": "Brand name found in brands.json",
+    "discovered": "Brand name added manually based on analysis of frequent unbranded product patterns"
+  },
+  "discovered_brands_sample": [
+    "مزایا (تنباکو)",
+    "بنگ بنگ (تنباکو)",
+    "ادالیا (تنباکو)",
+    "هداندشولدرز (شامپو)",
+    "وینستون (سیگار)",
+    "میلکا (شکلات)",
+    "نستله (شکلات و قهوه)",
+    "نسکافه (قهوه)",
+    "کیت کت (شکلات)",
+    "ام اند ام (شکلات)",
+    "ریتر اسپرت (شکلات)",
+    "امریکن گاردن (سس)",
+    "مارس (شکلات)",
+    "اسنیکرز (شکلات)",
+    "اورئو (بیسکویت)",
+    "لورآل (لوازم آرایشی)",
+    "داو (شامپو)",
+    "رکسونا (ضدتعریق)",
+    "نیوآ (مراقبت پوست)",
+    "گارنیه (مراقبت مو)",
+    "پنتن (شامپو)",
+    "سنسوداین (خمیردندان)",
+    "ژیلت (خودتراش)",
+    "دتول (ضدعفونی)",
+    "استارباکس (قهوه)",
+    "لینت (شکلات)",
+    "جاکوبز (بیسکویت)",
+    "تریدنت (آدامس)",
+    "جانسون (مراقبت کودک)",
+    "پرینگلز (چیپس)",
+    "کنور (عصاره مرغ)",
+    "کیندر (شکلات)",
+    "دوراسل (باتری)",
+    "نوتلا (شکلات صبحانه)",
+    "هاینز (سس)",
+    "توتال کر (دهان‌شویه)",
+    "لیسترین (دهان‌شویه)",
+    "تیک تاک (خوشبوکننده)",
+    "بالتیکا (ماءالشعیر)",
+    "پالمولیو (صابون)",
+    "معینی پور (کیک)",
+    "میهن (لبنیات)"
+  ],
   "next_steps": [
-    "Get fresh token (15 min validity needed)",
-    "Run: TOKEN='<bearer>' node /home/z/my-project/scripts/fetch-structured.js",
-    "Script will fetch brands.json (single request)",
-    "Then iterate categories: for each, fetch all pages of products",
-    "Expected: ~5000 pages total, ~15 minutes needed (need 2-3 token renewals)"
+    "Run import-from-merged.js to populate MongoDB with all 42,027 products",
+    "Each product will have brandId (from existing or newly created brand)",
+    "Goods (product classes) created from clean_name with category mapping",
+    "Products without brand assigned to 'نامشخص' brand"
   ]
 }
