@@ -378,6 +378,9 @@ export class BusinessesController {
         variantLabel: true,
         brandId: true,
         productId: true,
+        // ── موجودی و حداقل سفارش — برای کپی عینا به کاتالوگ کاربر
+        stock: true,
+        minOrder: true,
         brand: { select: { id: true, name: true } },
         good: {
           select: {
@@ -388,6 +391,8 @@ export class BusinessesController {
             category: { select: { id: true, nameFa: true, nameEn: true } },
           },
         },
+        // ── عکس مرجع محصول — وقتی گالری آگهی خالی است، این عکس نشان داده می‌شود
+        product: { select: { imageUrl: true } },
       },
       orderBy: { id: "desc" },
       ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
@@ -423,8 +428,15 @@ export class BusinessesController {
         brandId: r.brandId,
         brandName: r.brand?.name ?? null,
         productId: r.productId,
+        // ── موجودی و حداقل سفارش — برای کپی عینا به کاتالوگ کاربر
+        stock: r.stock,
+        minOrder: r.minOrder,
         good: r.good,
-        thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl ?? galleries.get(r.id)?.[0]?.url ?? null,
+        // ── عکس: اول گالری آگهی، اگر خالی بود عکس مرجع محصول
+        thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl
+          ?? galleries.get(r.id)?.[0]?.url
+          ?? r.product?.imageUrl
+          ?? null,
       })),
       nextCursor: hasMore ? items[items.length - 1].id : null,
       brands,
