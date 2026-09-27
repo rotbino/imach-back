@@ -52,6 +52,10 @@ interface CategoryNode {
   slug: string;
   nameFa: string;
   nameEn: string;
+  /// GS1 GPC Brick code — for global barcode matching
+  gs1GpcCode?: string | null;
+  /// HS Code — for customs/tariffs in cross-border matching
+  hsCode?: string | null;
   attrs?: unknown;
   /** default wholesale unit of the leaf — the form prefills it for new goods */
   unit?: string;
@@ -83,7 +87,7 @@ export class GoodsController {
       { ttlMs: 5 * 60_000, tags: ["goods"] },
       async (): Promise<CategoryNode[]> => {
         const rows = await this.prisma.category.findMany({
-          select: { id: true, slug: true, nameFa: true, nameEn: true, attrs: true, unit: true, isActive: true, parentId: true },
+          select: { id: true, slug: true, nameFa: true, nameEn: true, gs1GpcCode: true, hsCode: true, attrs: true, unit: true, isActive: true, parentId: true },
           orderBy: { id: "asc" },
         });
         const byId = new Map<string, CategoryNode>();
@@ -93,6 +97,8 @@ export class GoodsController {
             slug: r.slug,
             nameFa: r.nameFa,
             nameEn: r.nameEn,
+            gs1GpcCode: r.gs1GpcCode ?? undefined,
+            hsCode: r.hsCode ?? undefined,
             attrs: r.attrs ?? undefined,
             unit: r.unit ?? undefined,
             isActive: r.isActive,

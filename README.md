@@ -1,57 +1,260 @@
-# iMach API — NestJS 12 + Fastify 5 + Prisma + MongoDB
+# iMach — B2B Wholesale Marketplace & Matching Engine
 
-B2B wholesale marketplace API. Built for millions of records (cursor
-pagination on ObjectId, compound indexes, tag-based cache) with a
-modular NestJS architecture and Fastify for raw speed.
+> **"ای‌مچ"** = "match" به فارسی — پلتفرم تطابق و اتصال خریداران و فروشندگان عمده.
 
-## Stack
+## چیست iMach؟
 
-| Layer     | Choice                                  |
-| --------- | --------------------------------------- |
-| Framework | NestJS 12 (latest stable)               |
-| HTTP      | Fastify 5 adapter (`@nestjs/platform-fastify`) |
-| ORM       | Prisma + MongoDB Atlas                  |
-| Auth      | Access JWT (Bearer) + rotating refresh token (httpOnly cookie, sha256-at-rest) |
-| Rate limit| `@nestjs/throttler` — 300/min global, 15/min on auth |
-| Cache     | In-process TTL + tag invalidation (`x-cache: HIT/MISS` header) |
-| Docs      | OpenAPI at `/docs` (`SWAGGER_ENABLED`)  |
+iMach یک **شبکه اجتماعیِ عمده‌فروشی** است که خریداران و فروشندگان را بر اساس کالا، حجم، قیمت و جغرافیا به هم وصل می‌کند. مثل اینستاگرامِ تجارت عمده — کاربران محلی هستند، ولی زیرساخت جهانی.
 
-## Run
+### هدف اصلی
 
-```bash
-cp .env.example .env    # fill real values
-yarn install            # or: npm install — auto-generates the Prisma client (postinstall)
-npm run db:push         # sync schema to MongoDB (indexes included)
-npm run seed            # optional demo dataset
-npm run start:dev       # http://localhost:4000/api/v1
+**پیشنهاد بهترین و به‌صرفه‌ترین تامین‌کننده به خریدار، و بالعکس، معرفی خریداران با حجم مناسب به تامین‌کنندگان.**
+
+موتور تطابق (`matching engine`) عوامل زیر را در نظر می‌گیرد:
+- کالا (Good + Product)
+- برند
+- ویژگی‌ها (attrs: وزن، بسته‌بندی، نوع، ...)
+- قیمت
+- موجودی / حجم خرید
+- جغرافیا (شهر، استان، کشور)
+- حداقل سفارش
+
+در آینده، برای خریدهای بزرگ، می‌تواند تامین‌کننده‌ی خارجی را پیشنهاد دهد — حتی با احتساب هزینه‌های گمرکی و حمل، اگر به‌صرفه‌تر باشد.
+
+### مدلی که iMach نیست
+
+- **بازارگاه بین‌المللی نیست** (مثل Alibaba) — ۹۹٪ کاربران با هم‌وطنان خودشان تجارت می‌کنند
+- **پلتفرم صادرات/واردات نیست** — ولی برای خریداران بزرگ می‌تواند پیشنهاد بین‌المللی بدهد
+- **فروشگاه آنلاین نیست** — کاربران در iMach خرید نمی‌کنند، فقط ارتباط برقرار می‌کنند
+- **سامانه ERP نیست** — ولی می‌تواند با ERP یکپاره شود
+
+---
+
+## چشم‌انداز
+
+مثل اینستاگرام که هر کاربر ۹۹.۹۹٪ محتوای هم‌زبان خودش را می‌بیند، ولی زیرساخت جهانی است، iMach هم:
+- کاربر ایرانی کاتالوگ فارسی می‌بیند، با فروشندگان ایرانی ارتباط می‌گیرد
+- کاربر سوری کاتالوگ عربی می‌بیند، با فروشندگان سوری ارتباط می‌گیرد
+- ولی وقتی یک خریدار بزرگ ۲۰۰۰ تن مواد اولیه می‌خواهد، iMach می‌تواند تامین‌کننده‌ی خارجی را هم پیشنهاد دهد
+
+**زیرساخت چندزبانه و ترجمه‌پذیر از روز اول مهم است** — نه به‌خاطر صادرات، بلکه به‌خاطر مقیاس‌پذیری بین‌المللی.
+
+---
+
+## معماری داده
+
+سه لایه‌ی اصلی:
+
+```
+Good (نوع کالا) → Product (محصول/SKU) → Listing (آگهی)
 ```
 
-> The repo is locked with `yarn.lock`. If you must use npm, expect minor
-> dependency drift. If TypeScript ever floods you with implicit-any errors
-> (TS7006) in Prisma-heavy files, the generated client is missing — run
-> `npm run db:generate`.
+### Good — نوع کالا (کلاس محصول)
 
-## Endpoints — action naming
+مثل «برنج هاشمی»، «پفک»، «میلگرد آجدار»، «سیب». این یک **کلاس** است، نه یک SKU مشخص.
 
-Endpoints use explicit action names (`editUser`-style) so client and
-server read identically. All under `/api/v1`:
+- هر Good در یک `Category` (دسته‌بندی) قرار دارد
+- Good می‌تواند بدون Product باشد (کالای فله/بدون برند)
+- `searchText` برای جستجوی سریع نرمال‌شده است (fa-agnostic)
+- `nameFa` و `nameEn` — هر Good باید چندزبانه باشد
 
-| Module     | Endpoint                                          |
-| ---------- | ------------------------------------------------- |
-| auth       | `POST auth/registerUser` · `POST auth/loginUser` · `POST auth/refreshSession` · `POST auth/logoutUser` · `GET auth/getMe` |
-| goods      | `GET goods/getGoods` · `GET goods/getCategories`  |
-| businesses | `GET businesses/getMyBusinesses` · `POST businesses/createBusiness` · `GET businesses/getBusiness/:slug` · `PATCH businesses/editBusiness/:id` |
-| listings   | `GET listings/getMyListings` · `PUT listings/saveListing` · `DELETE listings/deleteListing/:id` |
-| market     | `POST market/requestQuote/:listingId` · `GET market/getOffers` · `POST market/sendOffer` · `GET market/getInquiries` · `POST market/markInquiryRead/:id` · `GET market/getFollows` · `POST market/followSupplier` · `POST market/unfollowSupplier/:supplierId` · `GET market/getPriceBoard` · `GET market/getSuggestions` |
-| health     | `GET getHealth`                                   |
+### Product — محصول (SKU با هویت)
 
-## Conventions
+مثل «برنج هاشمی ۱۰کیلویی هیمالیا»، «پفک هوشنگ ۲۰تایی». یک SKU مشخص با برند یا هویت قابل شناسایی.
 
-- **Error shape** — always `{ error: "STABLE_CODE", message: "human text" }`.
-  Clients match on `error` (language-independent), show `message`.
-- **i18n base** — request locale resolved from `Accept-Language`
-  (`fa` default, `ar`/`en` supported); services translate via `t()`.
-- **No enums in MongoDB** — connector limitation; values are validated
-  at the DTO boundary instead.
-- **Clean code rule** — leftover/dead code from refactors is deleted,
-  never disabled: the project stays small and reviewable.
+- `searchText` = **هویت ماشین** (از brand + sorted attr values) — برای find-or-create یکتا
+- `label` = **نام نمایشی** — کاربر می‌تواند دلخواه وارد کند (مثل Amazon)
+- `barcode` = GTIN/EAN-13 اختیاری — اگر باشد، جستجوی دقیق با ایندکس
+- `imageUrl` = عکس مرجع محصول (توسط اولین کاربری که عکس آپلود می‌کند تنظیم می‌شود)
+
+**قانون کلیدی:** فقط کالاهای با برند (یا هویت قابل شناسایی) Product می‌شوند. کالاهای فله (مثل سیب، برنج بدون برند) مستقیم روی Good می‌نشینند — `productId = null`.
+
+### Listing — آگهی
+
+پیشنهاد یک کسب‌وکار برای فروش یا خرید یک Good/Product.
+
+- `mode`: SELL | BUY | BOTH
+- `priceMinor`, `stock`, `minOrder` (برای فروش)
+- `volume`, `frequency` (برای خرید)
+- `gallery`: عکس‌های آگهی (مستقل از Product.imageUrl)
+- `variantKey`: کلید هویت آگهی — اگر Product داشته باشد، از searchText محصول می‌آید
+
+---
+
+## دسته‌بندی (Category)
+
+### ساختار
+
+درخت دو سطحی: **مادر → فرعی**. مثلاً:
+```
+مواد غذایی و آشامیدنی
+  ├── برنج [۱۳ کالا]
+  ├── حبوبات [۸ کالا]
+  ├── لبنیات [۱۰ کالا]
+  └── ...
+```
+
+### فیلدها
+
+| فیلد | نوع | توضیح |
+|------|-----|-------|
+| `slug` | String | شناسه‌ی پایدار، language-agnostic: `dried-fruit` |
+| `nameFa` | String | نام فارسی: «خشکبار و آجیل» |
+| `nameEn` | String | نام انگلیسی: «Dried Fruit & Nuts» |
+| `nameAr` | String? | نام عربی (آینده) |
+| `gs1GpcCode` | String? | کد GS1 GPC Brick — برای تطابق بارکد جهانی |
+| `hsCode` | String? | کد HS (Harmonized System) — برای گمرک و صادرات |
+| `attrs` | Json? | ویژگی‌های پیش‌فرض دسته (weight, packaging, variety, ...) |
+| `unit` | String? | واحد عمده‌ی پیش‌فرض: KILOGRAM, TON, CARTON, ... |
+
+### چرا GS1 GPC؟
+
+GS1 GPC (Global Product Classification) استاندارد جهانی دسته‌بندی محصولات است. وقتی یک بارکد EAN-13 اسکن می‌شود، GPC کد آن مشخص می‌کند که این محصول در کدام Brick جهانی قرار دارد.
+
+iMach از GPC برای:
+- **تطابق بین‌المللی** — کالای ایرانی و سوری با همان GPC قابل مقایسه
+- **استخراج خودکار دسته** — وقتی بارکد اسکن می‌شود، GPC از آن استخراج می‌شود
+- **آینده‌ی صادرات** — وقتی خریدار خارجی جستجو می‌کند، GPC مشترک پل ارتباطی است
+
+### چرا HS Code؟
+
+HS Code (Harmonized System) برای محاسبه‌ی هزینه‌های گمرکی. وقتی iMach پیشنهاد می‌دهد که «از سوریه بخر بهتر است»، باید هزینه‌ی گمرک را بداند — که از HS Code محاسبه می‌شود.
+
+### درخت دسته‌بندی فعلی
+
+**۲۴ ریشه، ۹۳ دسته‌ی فرعی، ۵۵۳ کالا.** شامل:
+- مواد غذایی و آشامیدنی (۱۷ زیردسته)
+- پلیمر، شیمیایی و رنگ
+- آهن‌آلات و فلزات
+- ابزار و یراق‌آلات
+- مصالح ساختمانی
+- ماشین‌آلات صنعتی
+- کشاورزی و نهاده‌ها
+- پوشاک و منسوجات
+- کالای دیجیتال
+- دام، طیور و آبزیان
+- تجهیزات پزشکی
+- ضایعات و بازیافت
+- و...
+
+### دسته‌ی «سایر › جدید»
+
+وقتی کاربر کالایی ثبت می‌کند که در هیچ دسته‌ای نیست، در `سایر › جدید` می‌نشیند. ادمین باید این‌ها را به دسته‌ی درست منتقل کند. این مکانیزم رشد ارگانیک کاتالوگ را تضمین می‌کند.
+
+---
+
+## سه قانون توسعه
+
+۱. **کد تمیز + حذف کد مرده** — هرچه اضافه می‌شود، باید تمیز باشد. کد مرده حذف شود.
+
+۲. **سرعت** — همیشه از بهترین راهکارهای کدنویسی استفاده شود تا سرعت لود و انجام عمل‌ها سریع باشد. به‌خصوص لود لیست‌ها.
+
+۳. **سادگی برای کاربر غیرحرفه‌ای** — کاربران iMach عمده‌فروشان و خریداران عمده هستند، نه برنامه‌نویس. UI باید ساده، مینیمال و بدون پیچیدگی باشد.
+
+---
+
+## جریان‌های اصلی
+
+### ثبت‌نام سریع
+کاربر فقط موبایل را وارد می‌کند → User + Business (placeholder) ساخته می‌شود → فرم خوش‌آمد (نام + نوع فعالیت) → ایجاد کاتالوگ.
+
+### ثبت کالا — ۵ روش
+۱. **دستی** — انتخاب نوع کالا → انتخاب/ساختن محصول → قیمت‌گذاری
+۲. **اکسل** — آپلود فایل → پیش‌نمایش گرید → تأیید گروهی
+۳. **از مرجع** — جستجو در Product‌های موجود → تیک‌زدن → قیمت‌گذاری
+۴. **با کپی** — جستجوی کاتالوگ همکاران → تیک‌زدن → کپی به گرید
+۵. **با اسکنر** — اسکن بارکد → پیدا کردن محصول → اضافه به گرید
+
+### منطق برند → Product
+- کاربر صریحاً می‌گوید کالایش برند دارد یا نه (دو رادیو باتن)
+- اگر برند دارد → Product ساخته می‌شود (find-or-create با searchText)
+- اگر برند ندارد → Listing مستقیم روی Good می‌نشیند (productId=null)
+- موتور تطابق از searchText (هویت ماشین) استفاده می‌کند، نه label (نام نمایشی)
+
+### عنوان محصول (label)
+- `label` = نام نمایشی — کاربر می‌تواند دلخواه وارد کند
+- اگر خالی باشد، بک‌اند از `goodName + brand + attrs` می‌سازد
+- `searchText` = هویت ماشین — همیشه از `brand + sorted attr values` — هرگز از label
+
+### عکس محصول
+- `Product.imageUrl` = عکس مرجع — اولین کاربری که عکس آپلود می‌کند، آن را تنظیم می‌کند
+- `Listing.gallery` = عکس‌های آگهی — مستقل از Product
+- کاتالوگ: اول gallery، اگر خالی بود Product.imageUrl
+
+---
+
+## پنل ادمین
+
+کدهای فرانت‌اند در `app/admin/**`، بک‌اند در `src/**` (در آینده `src/admin/**`).
+
+### صفحات فعلی
+- `/admin` — داشبورد
+- `/admin/goods` — مدیریت کالاهای مرجع (Good)
+- `/admin/brands` — مدیریت برندها
+- `/admin/categories` — درخت دسته‌بندی‌ها
+- `/admin/products` — مدیریت محصولات (Product/SKU)
+- `/admin/files` — مدیریت فایل‌ها
+
+### اطلاعات پایه
+دسته‌بندی‌ها، کالاها (Good)، محصولات (Product)، برندها و ویژگی‌ها — همه باید چندزبانه و ترجمه‌پذیر باشند. این اطلاعات پایه مبنای تطابق و جستجو هستند.
+
+---
+
+## تکنولوژی
+
+### فرانت‌اند
+- Next.js 16 + Turbopack
+- React + TanStack Query
+- Tailwind CSS + Radix UI
+- i18n: fa (فارسی) + en (انگلیسی) — قابل توسعه به زبان‌های دیگر
+
+### بک‌اند
+- NestJS + Prisma + MongoDB (Atlas)
+- ArvanCloud storage برای فایل‌ها
+- JWT + httpOnly refresh cookie برای احراز هویت
+
+### دیتابیس
+- MongoDB Atlas — cluster `MeganCluster`، db `imach_online_db`
+- Collections: User, Business, Good, Product, Listing, Category, Brand, File, ...
+
+---
+
+## نقشه‌ی راه
+
+### فاز فعلی
+- تکمیل اطلاعات پایه (دسته‌بندی + Good چندزبانه + GS1 + HS)
+- پنل ادمین برای مدیریت اطلاعات پایه
+- ویژگی‌های اجباری/اختیاری در دسته‌بندی
+
+### فاز بعدی
+- برندها و ویژگی‌ها در پنل ادمین
+- موتور تطابق اولیه (پیشنهاد تامین‌کننده به خریدار)
+- گزارش‌گیری برای صاحبان برند
+
+### آینده
+- چند کاتالوگ با چند زبان و چند قیمت برای یک کسب‌وکار
+- تطابق بین‌المللی با هزینه‌های گمرکی و حمل
+- API عمومی برای اتصال ERP
+
+---
+
+## مخازن
+
+- **فرانت‌اند**: `github.com/rotbino/imach-web`
+- **بک‌اند**: `github.com/rotbino/imach-back`
+
+---
+
+## نکات مهم برای توسعه‌دهندگان هوش مصنوعی
+
+۱. **کامنت‌ها فارسی هستند** — کل کدبیس از کامنت‌های فارسی برای منطق کسب‌وکار استفاده می‌کند. این عمدی است تا توسعه‌دهندگان ایرانی متن را بفهمند.
+
+۲. **i18n کلیدها در `i18n/messages/`** — fa.ts و en.ts. هر رشته‌ی قابل مشاهده باید از این مسیر بیاید.
+
+۳. **قانون صفحه‌ی توقف** — هیچ خروجی فقط متنی نیست. همه‌ی خروجی‌ها فایل یا کامپوننت هستند.
+
+۴. **اعتبارسنجی سه‌گانه‌ی فرم دستی**: برند (دو رادیو)، عکس (اجباری برای محصول جدید)، قیمت/موجودی/حداقل (همه اجباری).
+
+۵. **کش بک‌اند**: `goods:tree` با TTL ۵ دقیقه. بعد از تغییر داده، cache invalidate شود.
+
+۶. **مهاجرت DB**: اسکریپت‌ها در `/home/z/scripts/` — مستقیماً MongoDB را آپدیت می‌کنند. بعد از deploy بک‌اند، کش خودکار تازه می‌شود.

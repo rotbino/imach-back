@@ -164,8 +164,16 @@ model Category {
   slug     String     @unique // stable identifier — names are localizable
   nameFa   String
   nameEn   String
+  /// GS1 GPC Brick code — for global barcode matching and cross-border trade.
+  /// Example: "10000335" for "Dates". Enables international matching even when
+  /// category trees differ between countries. Optional (null = not yet mapped).
+  gs1GpcCode String?
+  /// HS Code (Harmonized System) — 4-6 digit chapter for customs and tariffs.
+  /// Used by the matching engine to calculate import/export costs when
+  /// suggesting cross-border suppliers. Example: "0813" for dried fruit.
+  hsCode   String?
   /// Attribute schema for goods under this category:
-  /// [{key, fa, en, type: "enum"|"text", options?: [{v, fa, en}]}]
+  /// [{key, fa, en, type: "enum"|"text", options?: [{v, fa, en}], required?: boolean}]
   attrs    Json?
   /// Default wholesale unit prefilled when a reference good is created
   /// under this leaf (KILOGRAM | TON | CARTON | …) — keys stay semantic.
@@ -176,6 +184,8 @@ model Category {
   goods    Good[]
 
   @@index([parentId])
+  @@index([gs1GpcCode])
+  @@index([hsCode])
 }
 
 /// The reference good — a tradeable CLASS ("خرمای خازویی"), NOT a brand×size SKU.
