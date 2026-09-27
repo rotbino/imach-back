@@ -27,6 +27,7 @@ export class AdminOverviewController {
       users,
       brands,
       categories,
+      products,
     ] = await Promise.all([
       this.prisma.good.count(),
       this.prisma.good.count({ where: { status: "PROVISIONAL" } }),
@@ -38,6 +39,7 @@ export class AdminOverviewController {
       this.prisma.user.count(),
       this.prisma.brand.count(),
       this.prisma.category.count(),
+      this.prisma.product.count(),
     ]);
     return {
       goods,
@@ -50,6 +52,7 @@ export class AdminOverviewController {
       users,
       brands,
       categories,
+      products,
     };
   }
 }
