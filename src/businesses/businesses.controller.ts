@@ -359,14 +359,17 @@ export class BusinessesController {
    */
   @Get("getCatalogItems")
   @UseGuards(JwtAuthGuard)
-  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string; brandId?: string }) {
+  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string; brandId?: string; mode?: string }) {
     if (!query.businessId) throw AppError.badRequest("businessId الزامی است", "BUSINESS_ID_REQUIRED");
     const limit = Math.min(Math.max(Number(query.limit ?? 40) || 40, 1), 100);
+    // ── mode: "SELL" (کاتالوگ فروش) یا "BUY" (دستیار خرید) — پیش‌فرض SELL
+    const armMode = query.mode === "BUY" ? "BUY" : "SELL";
+    const modes = armMode === "BUY" ? ["BUY", "BOTH"] : ["SELL", "BOTH"];
     const rows = await this.prisma.listing.findMany({
       where: {
         businessId: query.businessId,
         isActive: true,
-        mode: { in: ["SELL", "BOTH"] },
+        mode: { in: modes },
         ...(query.brandId ? { brandId: query.brandId } : {}),
       },
       select: {
@@ -378,9 +381,11 @@ export class BusinessesController {
         variantLabel: true,
         brandId: true,
         productId: true,
-        // ── موجودی و حداقل سفارش — برای کپی عینا به کاتالوگ کاربر
+        // ── موجودی و حداقل سفارش (sell) و حجم و دوره (buy) — برای کپی عینا
         stock: true,
         minOrder: true,
+        volume: true,
+        frequency: true,
         brand: { select: { id: true, name: true } },
         good: {
           select: {
@@ -404,7 +409,7 @@ export class BusinessesController {
 
     // ── نوار برند — از همه‌ی قلم‌های این کاتالوگ (بدون فیلتر برند)، شمارش هر برند
     const allBrandRows = await this.prisma.listing.findMany({
-      where: { businessId: query.businessId, isActive: true, mode: { in: ["SELL", "BOTH"] }, brandId: { not: null } },
+      where: { businessId: query.businessId, isActive: true, mode: { in: modes }, brandId: { not: null } },
       select: { brandId: true, brand: { select: { id: true, name: true } } },
       take: 500,
     });
@@ -428,9 +433,11 @@ export class BusinessesController {
         brandId: r.brandId,
         brandName: r.brand?.name ?? null,
         productId: r.productId,
-        // ── موجودی و حداقل سفارش — برای کپی عینا به کاتالوگ کاربر
+        // ── موجودی و حداقل سفارش (sell) و حجم و دوره (buy) — برای کپی عینا
         stock: r.stock,
         minOrder: r.minOrder,
+        volume: r.volume,
+        frequency: r.frequency,
         good: r.good,
         // ── عکس: اول گالری آگهی، اگر خالی بود عکس مرجع محصول
         thumbUrl: galleries.get(r.id)?.[0]?.thumbUrl
