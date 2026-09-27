@@ -154,41 +154,41 @@ model RefreshToken {
 
 // ─── Catalog (category tree + reference goods) ─────────────────────────────
 
-/// ── Unit table — multilingual units with packaging hierarchy.
+/// ── Unit table — multilingual units with 3-level classification.
 ///
-/// Base units (PIECE, KILOGRAM, METER, LITER, …) have baseUnitKey=null.
-/// Packaging units (CARTON, SACK, JUMBO, …) reference a base unit and
-/// declare how many base units they contain.
+/// Three scopes:
+///   "base"     — physical measurement units (KILOGRAM, METER, LITER, WATT, …)
+///   "retail"   — consumer/single-sale units (PIECE, CAN, BOTTLE, BAG, SACK, …)
+///   "wholesale"— bulk packaging containing multiple retail units
+///                 (CARTON, BOX, PALLET, JUMBO, …)
+///
+/// The matching engine uses containsQty to normalize prices for comparison:
+///   pricePerBaseUnit = priceMinor / containsQty
 ///
 /// Example:
-///   { key: "PIECE",  nameFa: "عدد",      nameEn: "Piece",     baseUnitKey: null }
-///   { key: "CARTON", nameFa: "کارتن",     nameEn: "Carton",    baseUnitKey: "PIECE", containsQty: null }
-///   { key: "SACK50", nameFa: "کیسه ۵۰kg", nameEn: "Sack 50kg", baseUnitKey: "KILOGRAM", containsQty: 50, qtyIsFixed: true }
-///
-/// containsQty=null on a packaging unit means "depends on the product" —
-/// the user enters the count at listing time (carton of chips = 24, carton of eggs = 30).
-///
-/// This enables price comparison: the matching engine divides priceMinor
-/// by containsQty to get price-per-base-unit.
+///   { key: "KILOGRAM", scope: "base",     baseUnitKey: null }
+///   { key: "PIECE",   scope: "retail",   baseUnitKey: null }
+///   { key: "BOTTLE",  scope: "retail",   baseUnitKey: "MILLILITER", containsQty: null }
+///   { key: "CARTON",  scope: "wholesale",baseUnitKey: "PIECE", containsQty: null }
+///   { key: "CARTON24",scope: "wholesale",baseUnitKey: "PIECE", containsQty: 24, qtyIsFixed: true }
 model Unit {
   id          String  @id @default(auto()) @map("_id") @db.ObjectId
   key         String  @unique
   nameFa      String
   nameEn      String
-  /// null = this IS a base unit (عدد، کیلو، متر، …)
-  /// non-null = packaging unit referencing a base unit's key
+  /// "base" | "retail" | "wholesale"
+  scope       String  @default("base")
+  /// null = this IS a root unit | non-null = references another unit's key
+  /// (e.g. CARTON → PIECE, SACK50 → KILOGRAM)
   baseUnitKey String?
-  /// how many base units in this packaging? null = product-dependent (user enters at listing time)
+  /// how many base units in this packaging? null = product-dependent
   containsQty Int?
-  /// true = count is fixed and cannot be changed by user (SACK50 always = 50kg)
-  /// false = user can override (carton can be 24 or 30)
+  /// true = count is fixed (CARTON24 always = 24) | false = user can override
   qtyIsFixed  Boolean @default(false)
-  /// "wholesale" | "retail" | null (legacy units without scope)
-  scope       String?
   isActive    Boolean @default(true)
 
-  @@index([baseUnitKey])
   @@index([scope])
+  @@index([baseUnitKey])
 }
 
 /// Category tree (3–4 levels). Seed comes from trade standards (GS1 GPC / HS
