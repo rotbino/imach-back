@@ -111,6 +111,12 @@ export class BulkSaveItemDto {
   @IsOptional()
   @IsIn(["WEEKLY", "MONTHLY", "OCCASIONAL"])
   frequency?: string;
+
+  /** آگهی مبدا برای کپی گالری عکس‌ها — وقتی کاربر از کاتالوگ همکار کپی
+   * می‌کند، عکس‌های گالری آگهی مبدا به آگهی جدید هم کپی می‌شوند. */
+  @IsOptional()
+  @IsString()
+  sourceListingId?: string;
 }
 
 export class BulkSaveDto {

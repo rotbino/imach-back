@@ -427,7 +427,7 @@ export class ListingsController {
 
     let saved = 0;
     let failed = 0;
-    const savedRows: { productId: string; listingId: string }[] = [];
+    const savedRows: { productId: string; listingId: string; sourceListingId?: string }[] = [];
 
     // پل legacy — ردیف‌های قبل از لایه‌ی محصول (productId null، کلید قدیمی) که
     // همین پیشنهاد را از قبل دارند: همان ردیف به‌روز می‌شود تا گالری و
@@ -504,14 +504,61 @@ export class ListingsController {
         });
       }
       saved++;
-      savedRows.push({ productId: p.id, listingId: row.id });
+      savedRows.push({ productId: p.id, listingId: row.id, sourceListingId: item.sourceListingId });
+    }
+
+    // ── کپی گالری عکس‌ها از آگهی‌های مبدا به آگهی‌های جدید
+    // وقتی کاربر از کاتالوگ همکار کپی می‌کند، عکس‌های گالری آگهی مبدا
+    // به آگهی جدید هم کپی می‌شوند (خواسته‌ی کاربر: «عکسها عین اون»)
+    const sourceIds = savedRows
+      .map((r) => r.sourceListingId)
+      .filter((id): id is string => !!id && /^[0-9a-fA-F]{24}$/.test(id));
+    if (sourceIds.length > 0) {
+      const sourceFiles = await this.prisma.file.findMany({
+        where: { relatedModel: "Listing", relatedId: { in: sourceIds }, fieldKey: "gallery" },
+        orderBy: { createdAt: "asc" },
+        take: 600,
+      });
+      // نگاشت sourceListingId → newListingId
+      const newById = new Map(savedRows.map((r) => [r.sourceListingId, r.listingId]));
+      // کلیدهای فایل‌های موجود در آگهی‌های جدید — برای جلوگیری از دوقلویی
+      const myFileKeys = new Set(
+        (
+          await this.prisma.file.findMany({
+            where: { relatedModel: "Listing", relatedId: { in: [...newById.values()] }, fieldKey: "gallery" },
+            select: { relatedId: true, storageKey: true },
+          })
+        ).map((f) => `${f.relatedId}|${f.storageKey}`)
+      );
+      for (const f of sourceFiles) {
+        const newId = newById.get(f.relatedId!);
+        if (!newId) continue;
+        if (myFileKeys.has(`${newId}|${f.storageKey}`)) continue; // قبلاً کپی شده
+        await this.prisma.file.create({
+          data: {
+            ownerId: user.id,
+            relatedModel: "Listing",
+            relatedId: newId,
+            fieldKey: "gallery",
+            description: f.description,
+            name: f.name,
+            mimeType: f.mimeType,
+            size: f.size,
+            url: f.url,
+            thumbUrl: f.thumbUrl,
+            storageKey: f.storageKey,
+            thumbStorageKey: f.thumbStorageKey,
+            metadata: f.metadata as object | null,
+          },
+        });
+      }
     }
 
     if (saved > 0) {
       this.invalidateFor(business.id, business.slug);
       void refreshCatalogCount(this.prisma, business.id);
     }
-    return { saved, failed, items: savedRows };
+    return { saved, failed, items: savedRows.map(({ sourceListingId, ...rest }) => rest) };
   }
 
   @Delete("deleteListing/:id")
