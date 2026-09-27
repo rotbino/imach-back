@@ -31,7 +31,9 @@ const ADMIN_BRAND_SELECT = {
   status: true,
   creatorRole: true,
   createdBy: { select: { id: true, name: true } },
-  _count: { select: { listings: true } },
+  ownerId: true,
+  owner: { select: { id: true, name: true, slug: true } },
+  _count: { select: { listings: true, products: true } },
 } as const;
 
 type AdminBrandRow = {
@@ -41,7 +43,9 @@ type AdminBrandRow = {
   status: string;
   creatorRole: string | null;
   createdBy: { id: string; name: string } | null;
-  _count: { listings: number };
+  ownerId: string | null;
+  owner: { id: string; name: string; slug: string } | null;
+  _count: { listings: number; products: number };
 };
 
 @Controller("admin/brands")
@@ -100,14 +104,48 @@ export class AdminBrandsController {
     @Body() body: AdminEditBrandDto,
     @CurrentLocale() locale: Locale
   ) {
-    const row = await this.prisma.brand.findUnique({ where: { id }, select: { id: true } });
+    const row = await this.prisma.brand.findUnique({ where: { id }, select: { id: true, searchText: true } });
     if (!row) throw AppError.notFound(t(locale, "admin.brandNotFound", "برند یافت نشد"));
+
+    const data: Record<string, unknown> = {};
+
+    // ── ویرایش نام
+    if (body.name !== undefined) {
+      const name = body.name.trim();
+      if (name.length < 1) throw AppError.badRequest("نام برند خالی است", "BAD_NAME");
+      const searchText = goodSearchText({ nameFa: name });
+      // اگر searchText عوض شد، مطمئن شو یکتاست
+      if (searchText !== row.searchText) {
+        const dup = await this.prisma.brand.findUnique({ where: { searchText }, select: { id: true } });
+        if (dup && dup.id !== id) throw AppError.conflict("برندی با همین نام وجود دارد", "BRAND_EXISTS");
+      }
+      data.name = name;
+      data.searchText = searchText;
+    }
+
+    // ── تغییر وضعیت
+    if (body.status) data.status = body.status;
+
+    // ── تخصیص مالک
+    if (body.ownerId !== undefined) {
+      if (body.ownerId === null) {
+        data.ownerId = null;
+      } else {
+        // اعتبارسنجی: Business وجود دارد
+        if (!/^[0-9a-fA-F]{24}$/.test(body.ownerId)) {
+          throw AppError.badRequest("ownerId معتبر نیست", "BAD_OWNER_ID");
+        }
+        const biz = await this.prisma.business.findUnique({ where: { id: body.ownerId }, select: { id: true } });
+        if (!biz) throw AppError.notFound("کسب‌وکار یافت نشد");
+        data.ownerId = body.ownerId;
+      }
+    }
+
+    if (Object.keys(data).length === 0) throw AppError.badRequest("هیچ فیلدی ارسال نشده", "NO_FIELDS");
 
     const updated = await this.prisma.brand.update({
       where: { id },
-      data: {
-        ...(body.status ? { status: body.status } : {}),
-      },
+      data,
       select: ADMIN_BRAND_SELECT,
     });
     this.cache.invalidateTag("goods");
@@ -131,6 +169,7 @@ export class AdminBrandsController {
 
     await this.prisma.$transaction([
       this.prisma.listing.updateMany({ where: { brandId: source.id }, data: { brandId: target.id } }),
+      this.prisma.product.updateMany({ where: { brandId: source.id }, data: { brandId: target.id } }),
       this.prisma.brand.delete({ where: { id: source.id } }),
     ]);
     this.cache.invalidateTag("goods");
@@ -139,9 +178,15 @@ export class AdminBrandsController {
 
   @Delete("delete/:id")
   async remove(@Param("id") id: string, @CurrentLocale() locale: Locale) {
-    const count = await this.prisma.listing.count({ where: { brandId: id } });
-    if (count > 0) {
-      throw AppError.conflict(t(locale, "admin.brandInUse", "این برند روی آگهی استفاده شده — اول ادغامش کنید"), "BRAND_IN_USE");
+    const [listingCount, productCount] = await Promise.all([
+      this.prisma.listing.count({ where: { brandId: id } }),
+      this.prisma.product.count({ where: { brandId: id } }),
+    ]);
+    if (listingCount > 0 || productCount > 0) {
+      throw AppError.conflict(
+        t(locale, "admin.brandInUse", "این برند در حال استفاده است — اول ادغامش کنید"),
+        "BRAND_IN_USE"
+      );
     }
     await this.prisma.brand.delete({ where: { id } });
     this.cache.invalidateTag("goods");

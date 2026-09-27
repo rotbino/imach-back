@@ -262,18 +262,29 @@ model Good {
 /// Brand — optional, resolved/created on the fly when a listing saves.
 /// Lives on the listing (not the reference) because the same class is sold
 /// under many brands — and most B2B trade is brand-agnostic by default.
+/// Brand — a tradeable identity (هیمالیا, مکنزی, کاله).
+///
+/// Not an attribute — it's a first-class entity with ownership:
+///   - ownerId: Business that owns this brand (null = unclaimed)
+///   - When ownerId is set, that business gets /brand/[slug] dashboard
+///   - Admin can assign/revoke ownership at any time
+///
+/// Brands are global — shared across all sellers. Each Product references
+/// a Brand. Bulk goods (no brand) have productId=null.
 model Brand {
   id          String    @id @default(auto()) @map("_id") @db.ObjectId
   name        String // as entered
   searchText  String    @unique // normalized — natural dedup
-  source      String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
-  /// ACTIVE | PROVISIONAL — same gardening contract as Good: pending brands
-  /// keep working everywhere, they just wait in the admin queue.
+  source      String    @default("SEED") // SEED | USER (legacy origin)
+  /// ACTIVE | PROVISIONAL — same gardening contract as Good
   status      String    @default("ACTIVE")
-  /// Who registered it: USER | ADMIN | BRAND_OWNER (null = system/seed).
+  /// Who registered it: USER | ADMIN | BRAND_OWNER (null = system/seed)
   creatorRole String?
   createdById String?   @db.ObjectId
   createdBy   User?     @relation("BrandCreator", fields: [createdById], references: [id], onUpdate: NoAction)
+  /// Business that owns this brand (null = unclaimed, admin can assign)
+  ownerId     String?   @db.ObjectId
+  owner       Business? @relation("BrandOwner", fields: [ownerId], references: [id], onDelete: SetNull, onUpdate: NoAction)
   listings    Listing[]
   products    Product[]
 }
@@ -379,6 +390,8 @@ model Business {
   offersSent   Offer[]   @relation("seller")
   offersRecv   Offer[]   @relation("buyer")
   pages        Page[]
+  /// Brands owned by this business (for brand dashboard)
+  ownedBrands  Brand[]   @relation("BrandOwner")
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 

@@ -44,11 +44,21 @@ export class AdminCreateBrandDto {
   name!: string;
 }
 
-/** PATCH /admin/brands/edit/:id — approve (PROVISIONAL → ACTIVE). */
+/** PATCH /admin/brands/edit/:id — approve (PROVISIONAL → ACTIVE), edit name, assign owner. */
 export class AdminEditBrandDto {
   @IsOptional()
   @IsIn(BRAND_STATUSES)
   status?: string;
+
+  @IsOptional()
+  @IsString()
+  @MinLength(1)
+  @MaxLength(60)
+  name?: string;
+
+  /// null = unclaim | string = Business id to assign as owner
+  @IsOptional()
+  ownerId?: string | null;
 }
 
 /** POST /admin/brands/merge/:id — move listings onto the target, delete source. */
