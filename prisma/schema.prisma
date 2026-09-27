@@ -331,6 +331,13 @@ model Product {
   creatorRole String?
   createdById String?  @db.ObjectId
   createdBy  User?    @relation("ProductCreator", fields: [createdById], references: [id], onUpdate: NoAction)
+  /// Category-level attribute values for this product: {key: value}
+  /// e.g. {"weight": "250g", "flavor": "نمکی", "volume_ml": "300"}
+  attrs      Json?
+  /// Rich metadata from external sources (barcodeapp, Open Food Facts, etc.)
+  /// Contains: parsed_brand, clean_name, parsed_attributes, volume_ml,
+  /// weight_grams, data_confidence, source, original_name, etc.
+  metadata   Json?
   listings   Listing[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
