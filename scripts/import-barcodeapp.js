@@ -6,7 +6,7 @@
  *   limit: number of products to import (default: 1)
  *   startPage: API page to start from (default: 1)
  */
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 const uri = "mongodb://uniqu434343:MirAli%40434343%2A@megancluster-shard-00-00.jm46r.mongodb.net:27017,megancluster-shard-00-01.jm46r.mongodb.net:27017,megancluster-shard-00-02.jm46r.mongodb.net:27017/imach_online_db?ssl=true&replicaSet=atlas-10bcqm-shard-0&authSource=admin&appName=MeganCluster";
 
 const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMmVjMGY5NC1lZDEwLTQ3ZjUtYTA4Zi1lZWE5OTU5YjhkN2QiLCJwaG9uZSI6Iis5ODkxOTY0MjEyNjQiLCJzdG9yZUlkIjoiOTM0MzE3NjUtZTNiOS00N2IwLTg2NTItZjY5MjY3Yzg5NzE0Iiwicm9sZSI6InN0b3JlX293bmVyIiwic2lkIjoiYmFlOTQxZDItMjA5Ny00OGNmLWIwNWItODc5ZTYyZDZlZDQ3IiwidG9rZW5fdXNlIjoiYmFyY29kZV9hY2Nlc3MiLCJpYXQiOjE3OTA1NDEzMjksImV4cCI6MTc5MDU0MjIyOSwiYXVkIjoiYmFyY29kZS1hcGkiLCJpc3MiOiJiYXJjb2RlLWF1dGgifQ.44_-Onw3DqxZdwDVKOBIvILQGuwSaQas7u2f8bjHiw0";
@@ -243,7 +243,7 @@ async function main() {
           source: "SEED",
           status: "ACTIVE",
           creatorRole: "ADMIN",
-          createdById: admin._id.toString(),
+          createdById: admin._id,
           ownerId: null,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -278,16 +278,16 @@ async function main() {
           aliases: [],
           searchText: goodSt,
           unit,
-          categoryId: categoryId.toString(),
+          categoryId: categoryId,
           hsCode: null,
           source: "SEED",
           status: "ACTIVE",
           creatorRole: "ADMIN",
-          createdById: admin._id.toString(),
+          createdById: admin._id,
           createdAt: new Date(),
           updatedAt: new Date(),
         });
-        good = { _id: good.insertedId, nameFa: cleanName, categoryId: categoryId.toString(), unit };
+        good = { _id: good.insertedId, nameFa: cleanName, categoryId: categoryId, unit };
         console.log(`  + Good created: ${cleanName} (cat: ${bcatName ? CAT_MAP[bcatName] || "jadid" : "jadid"})`);
       }
 
@@ -331,8 +331,8 @@ async function main() {
       }
       if (!existing) {
         existing = await db.collection('Product').findOne({
-          goodId: good._id.toString(),
-          brandId: brand._id.toString(),
+          goodId: good._id,
+          brandId: brand._id,
           searchText,
           status: { $ne: "MERGED" },
         });
@@ -344,8 +344,8 @@ async function main() {
 
       // ── 6. Create Product
       const product = await db.collection('Product').insertOne({
-        goodId: good._id.toString(),
-        brandId: brand._id.toString(),
+        goodId: good._id,
+        brandId: brand._id,
         label,
         searchText,
         barcode: barcode || null,
@@ -354,7 +354,7 @@ async function main() {
         metadata,
         status: "ACTIVE",
         creatorRole: "ADMIN",
-        createdById: admin._id.toString(),
+        createdById: admin._id,
         createdAt: new Date(),
         updatedAt: new Date(),
       });
