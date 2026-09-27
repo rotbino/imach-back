@@ -56,6 +56,31 @@ export class AdminBrandsController {
     private readonly cache: CacheService
   ) {}
 
+  /**
+   * GET /admin/brands/search-businesses?q=XXX — admin searches ALL businesses
+   * to assign brand ownership. Not limited to own businesses.
+   */
+  @Get("search-businesses")
+  async searchBusinesses(@Query("q") q: string) {
+    const text = q?.trim();
+    const where = text
+      ? {
+          OR: [
+            { name: { contains: text, mode: "insensitive" as const } },
+            { slug: { contains: text, mode: "insensitive" as const } },
+            { trade: { contains: text, mode: "insensitive" as const } },
+          ],
+        }
+      : {};
+    const rows = await this.prisma.business.findMany({
+      where,
+      select: { id: true, name: true, slug: true, trade: true, city: true },
+      orderBy: { name: "asc" },
+      take: 20,
+    });
+    return rows;
+  }
+
   @Get("list")
   async list(@Query() q: AdminBrandsQueryDto): Promise<Page<AdminBrandRow>> {
     const limit = Math.min(Math.max(q.limit ?? 30, 1), 100);
