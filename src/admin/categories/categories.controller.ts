@@ -16,6 +16,10 @@ interface AdminCategoryNode {
   slug: string;
   nameFa: string;
   nameEn: string;
+  gs1GpcCode?: string | null;
+  hsCode?: string | null;
+  unit?: string | null;
+  attrs?: unknown;
   direct: number;
   total: number;
   children: AdminCategoryNode[];
@@ -30,7 +34,7 @@ export class AdminCategoriesController {
   async tree(): Promise<AdminCategoryNode[]> {
     const [cats, counts] = await Promise.all([
       this.prisma.category.findMany({
-        select: { id: true, slug: true, nameFa: true, nameEn: true, parentId: true },
+        select: { id: true, slug: true, nameFa: true, nameEn: true, gs1GpcCode: true, hsCode: true, unit: true, attrs: true, parentId: true },
         orderBy: { id: "asc" },
       }),
       this.prisma.good.groupBy({ by: ["categoryId"], _count: { _all: true } }),
@@ -46,6 +50,10 @@ export class AdminCategoriesController {
         slug: c.slug,
         nameFa: c.nameFa,
         nameEn: c.nameEn,
+        gs1GpcCode: c.gs1GpcCode,
+        hsCode: c.hsCode,
+        unit: c.unit,
+        attrs: c.attrs,
         direct: direct.get(c.id) ?? 0,
         total: 0,
         children: [],

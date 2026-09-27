@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query, Res, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, Patch, Post, Query, Res, UseGuards } from "@nestjs/common";
 import type { FastifyReply } from "fastify";
 import { goodSearchText, normalizeFa } from "../common/catalog/catalog";
 import { CacheService } from "../common/cache/cache.module";
@@ -346,5 +346,98 @@ export class GoodsController {
 
     this.cache.invalidateTag("goods");
     return created;
+  }
+
+  /**
+   * PATCH /goods/updateCategoryAttrs — ادمین ویژگی‌های یک دسته‌بندی را ویرایش می‌کند.
+   *
+   * بدنه: { categoryId, attrs }
+   * attrs ساختار: [{key, fa, en, type: "enum"|"text", options?: [{v, fa, en}], required?: boolean}]
+   *
+   * فقط ADMIN اجازه دارد. بعد از تغییر، کش goods invalidate می‌شود.
+   */
+  @Patch("updateCategoryAttrs")
+  @UseGuards(JwtAuthGuard)
+  async updateCategoryAttrs(
+    @Body() body: { categoryId: string; attrs: unknown },
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (user.role !== "ADMIN") {
+      throw AppError.forbidden("فقط ادمین می‌تواند ویژگی‌های دسته‌بندی را ویرایش کند");
+    }
+    if (!body.categoryId || !/^[0-9a-fA-F]{24}$/.test(body.categoryId)) {
+      throw AppError.badRequest("categoryId معتبر نیست", "BAD_CATEGORY_ID");
+    }
+    if (!Array.isArray(body.attrs)) {
+      throw AppError.badRequest("attrs باید آرایه باشد", "BAD_ATTRS");
+    }
+
+    // ── اعتبارسنجی ساده: هر attr باید key, fa, en, type داشته باشد
+    for (const a of body.attrs) {
+      if (typeof a !== "object" || !a) {
+        throw AppError.badRequest("هر ویژگی باید object باشد", "BAD_ATTR");
+      }
+      const attr = a as Record<string, unknown>;
+      if (typeof attr.key !== "string" || !attr.key.trim()) {
+        throw AppError.badRequest("هر ویژگی باید key داشته باشد", "BAD_ATTR_KEY");
+      }
+      if (typeof attr.fa !== "string" || typeof attr.en !== "string") {
+        throw AppError.badRequest("هر ویژگی باید fa و en داشته باشد", "BAD_ATTR_LABEL");
+      }
+      if (attr.type !== "enum" && attr.type !== "text") {
+        throw AppError.badRequest("type باید enum یا text باشد", "BAD_ATTR_TYPE");
+      }
+      if (attr.type === "enum" && !Array.isArray(attr.options)) {
+        throw AppError.badRequest("ویژگی enum باید options داشته باشد", "BAD_ATTR_OPTIONS");
+      }
+    }
+
+    const updated = await this.prisma.category.update({
+      where: { id: body.categoryId },
+      data: { attrs: body.attrs },
+      select: { id: true, slug: true, nameFa: true, nameEn: true, attrs: true },
+    });
+
+    this.cache.invalidateTag("goods");
+    return updated;
+  }
+
+  /**
+   * PATCH /goods/updateCategory — ادمین نام/GS1/HS یک دسته‌بندی را ویرایش می‌کند.
+   */
+  @Patch("updateCategory")
+  @UseGuards(JwtAuthGuard)
+  async updateCategory(
+    @Body() body: { categoryId: string; nameFa?: string; nameEn?: string; gs1GpcCode?: string | null; hsCode?: string | null; unit?: string | null },
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (user.role !== "ADMIN") {
+      throw AppError.forbidden("فقط ادمین می‌تواند دسته‌بندی را ویرایش کند");
+    }
+    if (!body.categoryId || !/^[0-9a-fA-F]{24}$/.test(body.categoryId)) {
+      throw AppError.badRequest("categoryId معتبر نیست", "BAD_CATEGORY_ID");
+    }
+
+    const data: Record<string, unknown> = {};
+    if (typeof body.nameFa === "string" && body.nameFa.trim()) data.nameFa = body.nameFa.trim();
+    if (typeof body.nameEn === "string" && body.nameEn.trim()) data.nameEn = body.nameEn.trim();
+    if (body.gs1GpcCode !== undefined) data.gs1GpcCode = body.gs1GpcCode?.trim() || null;
+    if (body.hsCode !== undefined) data.hsCode = body.hsCode?.trim() || null;
+    if (body.unit !== undefined) data.unit = body.unit?.trim() || null;
+
+    if (Object.keys(data).length === 0) {
+      throw AppError.badRequest("هیچ فیلدی برای ویرایش ارسال نشده", "NO_FIELDS");
+    }
+
+    const updated = await this.prisma.category.update({
+      where: { id: body.categoryId },
+      data,
+      select: { id: true, slug: true, nameFa: true, nameEn: true, gs1GpcCode: true, hsCode: true, unit: true, attrs: true },
+    });
+
+    this.cache.invalidateTag("goods");
+    return updated;
   }
 }
