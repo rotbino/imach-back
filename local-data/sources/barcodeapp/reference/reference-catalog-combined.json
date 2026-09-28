@@ -1,0 +1,4184 @@
+{
+  "_version": "2.0.0",
+  "_generated_at": "2026-09-28",
+  "_total_goods": 148,
+  "goods": [
+    {
+      "slug": "milk-liquid-pasteurized",
+      "nameFa": "شیر پاستوریزه",
+      "nameEn": "Pasteurized Milk",
+      "aliases": [
+        "شیر تازه",
+        "شیر پرچرب",
+        "شیر کم‌چرب",
+        "شیر استریلیزه"
+      ],
+      "keywords": [
+        "شیر"
+      ],
+      "excludeKeywords": [
+        "ماشین",
+        "نارگیل",
+        "بادام",
+        "سویا",
+        "کاکائو",
+        "خشک",
+        "ماست",
+        "دوغ",
+        "شیره",
+        "شیرینی",
+        "شیربرنجی",
+        "شیرمال"
+      ],
+      "gs1GpcCode": "50202201",
+      "hsCode": "0401",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": [
+        {
+          "key": "fat_pct",
+          "fa": "درصد چربی",
+          "type": "enum",
+          "options": [
+            "پرچرب",
+            "کم‌چرب",
+            "بدون چربی",
+            "نیمه‌چرب"
+          ]
+        },
+        {
+          "key": "volume_ml",
+          "fa": "حجم",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "slug": "milk-flavored",
+      "nameFa": "شیر طعم‌دار",
+      "nameEn": "Flavored Milk",
+      "aliases": [
+        "شیر موز",
+        "شیر توت",
+        "شیر کاکائو",
+        "شیر شکلاتی"
+      ],
+      "keywords": [
+        "شیر"
+      ],
+      "excludeKeywords": [
+        "پاستوریزه",
+        "استریلیزه",
+        "نارگیل",
+        "بادام",
+        "سویا",
+        "خشک",
+        "ماشین"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "موز",
+          "توت",
+          "کاکائو",
+          "شکلاتی",
+          "انبه",
+          "خرما",
+          "وانیل",
+          "طعم",
+          "انار"
+        ]
+      ],
+      "gs1GpcCode": "50202203",
+      "hsCode": "0401",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "milk-plant-based",
+      "nameFa": "شیر گیاهی",
+      "nameEn": "Plant-based Milk",
+      "aliases": [
+        "شیر سویا",
+        "شیر بادام",
+        "شیر نارگیل",
+        "شیر برنج",
+        "شیر جو دوسر"
+      ],
+      "keywords": [
+        "شیر"
+      ],
+      "excludeKeywords": [
+        "پاستوریزه",
+        "استریلیزه",
+        "ماشین"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "سویا",
+          "بادام",
+          "نارگیل",
+          "برنج",
+          "جو",
+          "گردو",
+          "گیاهی"
+        ]
+      ],
+      "gs1GpcCode": "50202206",
+      "hsCode": "2202",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "yogurt-traditional",
+      "nameFa": "ماست سنتی",
+      "nameEn": "Traditional Yogurt",
+      "aliases": [
+        "ماست محلی",
+        "ماست چکیده",
+        "ماست ایستاده",
+        "ماست پاستوریزه"
+      ],
+      "keywords": [
+        "ماست"
+      ],
+      "excludeKeywords": [
+        "یونانی",
+        "نوشیدنی",
+        "ایسلندی",
+        "استیر",
+        "بسته‌ای",
+        "مزه",
+        "مایع",
+        "بستنی"
+      ],
+      "gs1GpcCode": "50202210",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "yogurt-greek",
+      "nameFa": "ماست یونانی",
+      "nameEn": "Greek Yogurt",
+      "aliases": [
+        "ماست استرین",
+        "ماست چکیده یونانی"
+      ],
+      "keywords": [
+        "ماست",
+        "یونانی"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202210",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "yogurt-stirred",
+      "nameFa": "ماست همزده",
+      "nameEn": "Stirred Yogurt",
+      "aliases": [
+        "ماست استیر",
+        "ماست بسته‌ای",
+        "ماست رقیق"
+      ],
+      "keywords": [
+        "ماست",
+        "استیر"
+      ],
+      "excludeKeywords": [
+        "یونانی",
+        "نوشیدنی"
+      ],
+      "gs1GpcCode": "50202210",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "yogurt-flavored",
+      "nameFa": "ماست طعم‌دار",
+      "nameEn": "Flavored Yogurt",
+      "aliases": [
+        "ماست میوه",
+        "ماست انبه",
+        "ماست توت",
+        "ماست آلوئه‌ورا"
+      ],
+      "keywords": [
+        "ماست"
+      ],
+      "excludeKeywords": [
+        "یونانی",
+        "نوشیدنی",
+        "ایسلندی",
+        "خشک"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "طعم",
+          "موزه",
+          "انبه",
+          "توت",
+          "آلوئه",
+          "اسفناج",
+          "ایلچی",
+          "میز",
+          "انار",
+          "زنجفیل",
+          "میوه",
+          "پسته",
+          "خرما"
+        ]
+      ],
+      "gs1GpcCode": "50202210",
+      "hsCode": "0403",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "doogh",
+      "nameFa": "دوغ",
+      "nameEn": "Doogh",
+      "aliases": [
+        "دوغ محلی",
+        "دوغ ترش",
+        "دوغ گازدار"
+      ],
+      "keywords": [
+        "دوغ"
+      ],
+      "excludeKeywords": [
+        "ماست",
+        "نوشیدنی",
+        "انرژی",
+        "مالت"
+      ],
+      "gs1GpcCode": "50202212",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "cheese-feta-white",
+      "nameFa": "پنیر سفید",
+      "nameEn": "White Cheese",
+      "aliases": [
+        "پنیر لیقوان",
+        "پنیر پاستوریزه",
+        "پنیر ایرانی",
+        "پنیر سنتی",
+        "پنیر تبریز",
+        "پنیر صبحانه",
+        "پنیر لبنه",
+        "پنیر قالبی"
+      ],
+      "keywords": [
+        "پنیر"
+      ],
+      "excludeKeywords": [
+        "پیتزا",
+        "ورقه",
+        "اسلایس",
+        "اسکویز",
+        "اسپونی",
+        "امانتال",
+        "پارمسان",
+        "چدار",
+        "موزارلا",
+        "کرم",
+        "خامه",
+        "طهرانگرم",
+        "زرشک",
+        "سبزی",
+        "فلفل",
+        "گردو",
+        "گودا",
+        "پروسس",
+        "دیپ",
+        "رنده",
+        "دودی",
+        "مدادی",
+        "بیبی بل",
+        "پودری"
+      ],
+      "gs1GpcCode": "50202218",
+      "hsCode": "KILOGRAM",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "cheese-processed-slice",
+      "nameFa": "پنیر ورقه‌ای",
+      "nameEn": "Sliced Processed Cheese",
+      "aliases": [
+        "پنیر اسلایس",
+        "پنیر ورقه‌ای",
+        "پنیر اسپونی",
+        "پنیر اسکویز"
+      ],
+      "keywords": [
+        "پنیر"
+      ],
+      "excludeKeywords": [],
+      "must_match_any_keyword_group": [
+        [
+          "ورقه",
+          "اسلایس",
+          "اسپونی",
+          "اسکویز",
+          "ورقه‌ای"
+        ]
+      ],
+      "gs1GpcCode": "50202224",
+      "hsCode": "0406",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "cheese-pizza-mozzarella",
+      "nameFa": "پنیر پیتزا",
+      "nameEn": "Pizza Cheese",
+      "aliases": [
+        "پنیر موزارلا",
+        "پنیر ذغالی",
+        "موزارلا"
+      ],
+      "keywords": [
+        "پنیر"
+      ],
+      "excludeKeywords": [],
+      "must_match_any_keyword_group": [
+        [
+          "پیتزا",
+          "موزارلا",
+          "ذغالی"
+        ]
+      ],
+      "gs1GpcCode": "50202222",
+      "hsCode": "0406",
+      "unit": "KILOGRAM",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "cheese-yellow-hard",
+      "nameFa": "پنیر زرد",
+      "nameEn": "Hard Yellow Cheese",
+      "aliases": [
+        "پنیر امنتالر",
+        "پنیر چدار",
+        "پنیر پارمسان",
+        "پنیر گودا"
+      ],
+      "keywords": [
+        "پنیر"
+      ],
+      "excludeKeywords": [],
+      "must_match_any_keyword_group": [
+        [
+          "امانتال",
+          "چدار",
+          "پارمسان",
+          "گودا",
+          "زرد"
+        ]
+      ],
+      "gs1GpcCode": "50202220",
+      "hsCode": "0406",
+      "unit": "KILOGRAM",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "cheese-processed-dip",
+      "nameFa": "پنیر پروسس",
+      "nameEn": "Processed Cheese",
+      "aliases": [
+        "پنیر دیپ",
+        "پنیر رشته‌ای",
+        "پنیر قالبی",
+        "پنیر مدادی",
+        "پنیر دودی",
+        "پنیر بیبی بل"
+      ],
+      "keywords": [
+        "پنیر"
+      ],
+      "excludeKeywords": [
+        "ورقه",
+        "اسلایس"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "دیپ",
+          "رشته",
+          "قالبی",
+          "مدادی",
+          "دودی",
+          "بیبی بل",
+          "پروسس",
+          "رنده"
+        ]
+      ],
+      "gs1GpcCode": "50202224",
+      "hsCode": "0406",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "cream-fresh",
+      "nameFa": "خامه تازه",
+      "nameEn": "Fresh Cream",
+      "aliases": [
+        "خامه قنادی",
+        "خامه پرچرب",
+        "خامه شیرین",
+        "خامه ترش"
+      ],
+      "keywords": [
+        "خامه"
+      ],
+      "excludeKeywords": [
+        "شکلاتی",
+        "شکلات",
+        "خرمایی",
+        "عسلی",
+        "صبحانه",
+        "ته شیر",
+        "آشپزی",
+        "پنیر"
+      ],
+      "gs1GpcCode": "50202230",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "cream-cooking",
+      "nameFa": "خامه آشپزی",
+      "nameEn": "Cooking Cream",
+      "aliases": [
+        "خامه مخصوص آشپزی",
+        "خامه مایع آشپزی"
+      ],
+      "keywords": [
+        "خامه",
+        "آشپزی"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202230",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "cream-cheese",
+      "nameFa": "پنیر کرمی",
+      "nameEn": "Cream Cheese",
+      "aliases": [
+        "پنیر خامه",
+        "کره پنیر",
+        "پنیر مایع",
+        "پنیر کرم"
+      ],
+      "keywords": [
+        "پنیر"
+      ],
+      "excludeKeywords": [
+        "ورقه",
+        "پیتزا",
+        "سفید",
+        "زرد",
+        "پروسس"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "خامه",
+          "کرم",
+          "مایع"
+        ]
+      ],
+      "gs1GpcCode": "50202226",
+      "hsCode": "0406",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "butter-animal",
+      "nameFa": "کره حیوانی",
+      "nameEn": "Butter",
+      "aliases": [
+        "کره پاستوریزه",
+        "کره سنتی",
+        "کره حیوانی",
+        "کره روغنی"
+      ],
+      "keywords": [
+        "کره"
+      ],
+      "excludeKeywords": [
+        "گیاهی",
+        "نباتی",
+        "بادام",
+        "زمینی",
+        "کاکائو",
+        "پسته",
+        "زعفرانی",
+        "سیر",
+        "دویچه",
+        "صبحانه",
+        "سان",
+        "شکلاتی",
+        "مارگارین"
+      ],
+      "gs1GpcCode": "50202236",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "butter-flavored",
+      "nameFa": "کره طعم‌دار",
+      "nameEn": "Flavored Butter",
+      "aliases": [
+        "کره زعفرانی",
+        "کره سیر",
+        "کره دویچه",
+        "کره سان",
+        "کره صبحانه"
+      ],
+      "keywords": [
+        "کره"
+      ],
+      "excludeKeywords": [
+        "گیاهی",
+        "نباتی",
+        "بادام",
+        "زمینی",
+        "کاکائو",
+        "پسته",
+        "مارگارین"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "زعفرانی",
+          "سیر",
+          "دویچه",
+          "سان",
+          "صبحانه",
+          "شکلاتی",
+          "زنجفیل"
+        ]
+      ],
+      "gs1GpcCode": "50202238",
+      "hsCode": "0405",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "butter-vegetable",
+      "nameFa": "کره گیاهی (مارگارین)",
+      "nameEn": "Margarine",
+      "aliases": [
+        "کره گیاهی",
+        "مارگارین",
+        "کره نباتی"
+      ],
+      "keywords": [
+        "کره"
+      ],
+      "excludeKeywords": [],
+      "must_match_any_keyword_group": [
+        [
+          "گیاهی",
+          "نباتی",
+          "مارگارین"
+        ]
+      ],
+      "gs1GpcCode": "50202239",
+      "hsCode": "1517",
+      "unit": "CARTON",
+      "categoryId": "dairy",
+      "attrs": []
+    },
+    {
+      "slug": "kashk",
+      "nameFa": "کشک",
+      "nameEn": "Kashk",
+      "aliases": [
+        "کشک سنتی",
+        "کشک مایع",
+        "کشک لیوانی",
+        "کشک شیشه"
+      ],
+      "keywords": [
+        "کشک"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202240",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "dairy-dessert",
+      "nameFa": "دسر لبنی",
+      "nameEn": "Dairy Dessert",
+      "aliases": [
+        "دسر کارامل",
+        "دسر وانیلی",
+        "دسر شکلاتی",
+        "دسر موز"
+      ],
+      "keywords": [
+        "دسر"
+      ],
+      "excludeKeywords": [
+        "شکلات صبحانه",
+        "شکلات تخته",
+        "بستنی"
+      ],
+      "gs1GpcCode": "50202242",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "milkshake",
+      "nameFa": "میلک‌شیک",
+      "nameEn": "Milkshake",
+      "aliases": [
+        "میلک شیک",
+        "اسموتی شیر",
+        "پرو شیک"
+      ],
+      "keywords": [
+        "میلک",
+        "شیک",
+        "اسموتی",
+        "پرو شیک"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202212",
+      "hsCode": "CARTON",
+      "unit": "dairy",
+      "attrs": [],
+      "categoryId": "dairy"
+    },
+    {
+      "slug": "ice-cream",
+      "nameFa": "بستنی",
+      "nameEn": "Ice Cream",
+      "aliases": [
+        "بستنی وانیلی",
+        "بستنی شکلاتی",
+        "بستنی پستی",
+        "فالوده",
+        "بستنس",
+        "یخمک"
+      ],
+      "keywords": [
+        "بستنی",
+        "فالوده",
+        "بستنس",
+        "یخمک"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202250",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "water-mineral",
+      "nameFa": "آب معدنی",
+      "nameEn": "Mineral Water",
+      "aliases": [
+        "آب آشامیدنی",
+        "آب طبیعی"
+      ],
+      "keywords": [
+        "آب معدنی",
+        "آب آشامیدنی"
+      ],
+      "excludeKeywords": [
+        "میوه",
+        "سیب",
+        "پرتقال",
+        "هلو",
+        "انبه",
+        "توت",
+        "آلبالو",
+        "زرشک",
+        "شلغم",
+        "گازدار",
+        "نوشیدنی",
+        "نارگیل"
+      ],
+      "gs1GpcCode": "50202260",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "soft-drink-cola",
+      "nameFa": "نوشابه کولا",
+      "nameEn": "Cola",
+      "aliases": [
+        "نوشابه کولا",
+        "کولا",
+        "کوکاکولا",
+        "پپسی"
+      ],
+      "keywords": [
+        "نوشابه",
+        "کولا"
+      ],
+      "excludeKeywords": [],
+      "must_match_any_keyword_group": [
+        [
+          "کولا",
+          "کوکاکولا",
+          "پپسی"
+        ]
+      ],
+      "gs1GpcCode": "50202264",
+      "hsCode": "2202",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "soft-drink-flavored",
+      "nameFa": "نوشابه طعم‌دار",
+      "nameEn": "Flavored Soft Drink",
+      "aliases": [
+        "نوشابه گازدار",
+        "نوشابه پرتقالی",
+        "نوشابه لیمویی"
+      ],
+      "keywords": [
+        "نوشابه"
+      ],
+      "excludeKeywords": [
+        "کولا",
+        "لبنی",
+        "انرژی"
+      ],
+      "gs1GpcCode": "50202264",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "energy-drink",
+      "nameFa": "نوشیدنی انرژی‌زا",
+      "nameEn": "Energy Drink",
+      "aliases": [
+        "نوشیدنی انرژی",
+        "انرژی زا",
+        "رِد بول",
+        "مانستر"
+      ],
+      "keywords": [
+        "انرژی",
+        "نوشیدنی"
+      ],
+      "excludeKeywords": [
+        "ورزشی"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "انرژی"
+        ]
+      ],
+      "gs1GpcCode": "50202266",
+      "hsCode": "2202",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "juice-fruit",
+      "nameFa": "آبمیوه",
+      "nameEn": "Fruit Juice",
+      "aliases": [
+        "آب میوه",
+        "آب سیب طبیعی",
+        "آب پرتقال طبیعی",
+        "آب انار"
+      ],
+      "keywords": [
+        "آبمیوه",
+        "آب میوه"
+      ],
+      "excludeKeywords": [
+        "نکتار",
+        "شربت",
+        "گازدار",
+        "نوشیدنی",
+        "کنسانتره",
+        "نارگیل"
+      ],
+      "gs1GpcCode": "50202270",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "juice-nectar",
+      "nameFa": "نکتار میوه",
+      "nameEn": "Fruit Nectar",
+      "aliases": [
+        "نکتار"
+      ],
+      "keywords": [
+        "نکتار"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202271",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "fruit-drink-carbonated",
+      "nameFa": "نوشیدنی گازدار میوه‌ای",
+      "nameEn": "Carbonated Fruit Drink",
+      "aliases": [
+        "نوشیدنی گازدار",
+        "آب گازدار طعم‌دار",
+        "آبمیوه گازدار"
+      ],
+      "keywords": [
+        "نوشیدنی",
+        "گازدار"
+      ],
+      "excludeKeywords": [
+        "انرژی",
+        "نوشابه",
+        "ورزشی",
+        "مالت"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "گازدار",
+          "اسپارکلینگ"
+        ]
+      ],
+      "gs1GpcCode": "50202274",
+      "hsCode": "2202",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "malt-drink",
+      "nameFa": "نوشیدنی مالت",
+      "nameEn": "Malt Drink",
+      "aliases": [
+        "نوشیدنی مالت گازدار",
+        "دلستر مالت",
+        "ماءالشعیر"
+      ],
+      "keywords": [
+        "مالت",
+        "ماءالشعیر"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202276",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "tea-black",
+      "nameFa": "چای سیاه",
+      "nameEn": "Black Tea",
+      "aliases": [
+        "چای سیلان",
+        "چای خارجی",
+        "چای ممتاز",
+        "چای قلم",
+        "چای شکسته",
+        "چای کیسه‌ای"
+      ],
+      "keywords": [
+        "چای"
+      ],
+      "excludeKeywords": [
+        "سبز",
+        "سفید",
+        "ماسالا",
+        "زرشک",
+        "عنچ",
+        "گل محمدی",
+        "گابز",
+        "گیاهی",
+        "دمنوش",
+        "کتری",
+        "سرد",
+        "یخ",
+        "عروس",
+        "پلمبر"
+      ],
+      "gs1GpcCode": "50202280",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "tea-green",
+      "nameFa": "چای سبز",
+      "nameEn": "Green Tea",
+      "aliases": [
+        "چای سبز کیسه‌ای",
+        "چای سبز ژاپنی"
+      ],
+      "keywords": [
+        "چای",
+        "سبز"
+      ],
+      "excludeKeywords": [
+        "سیاه",
+        "زنجبیلی",
+        "گل محمدی"
+      ],
+      "gs1GpcCode": "50202281",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "tea-herbal-infusion",
+      "nameFa": "دمنوش گیاهی",
+      "nameEn": "Herbal Infusion",
+      "aliases": [
+        "دمنوش",
+        "دمنوش کیسه",
+        "دمنوش گل‌گابز",
+        "دمنوش بهار نارنج",
+        "دمنوش بابونه",
+        "چای گیاهی"
+      ],
+      "keywords": [
+        "دمنوش"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202282",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "coffee-instant",
+      "nameFa": "قهوه فوری",
+      "nameEn": "Instant Coffee",
+      "aliases": [
+        "نسکافه",
+        "کافی میکس",
+        "کاپوچینو",
+        "پودر قهوه"
+      ],
+      "keywords": [
+        "قهوه",
+        "نسکافه",
+        "کافی",
+        "کاپوچینو"
+      ],
+      "excludeKeywords": [
+        "دام",
+        "اسپرسو",
+        "دمی",
+        "رست",
+        "دانه",
+        "ترک",
+        "عربی"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "فوری",
+          "نسکافه",
+          "میکس",
+          "کاپوچینو",
+          "پودر",
+          "آیس کافی"
+        ]
+      ],
+      "gs1GpcCode": "50202290",
+      "hsCode": "2101",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "coffee-ground-bean",
+      "nameFa": "قهوه دمی و اسپرسو",
+      "nameEn": "Ground Coffee",
+      "aliases": [
+        "قهوه دمی",
+        "قهوه اسپرسو",
+        "قهوه رست",
+        "دانه قهوه",
+        "قهوه ترک",
+        "قهوه ترکیبی"
+      ],
+      "keywords": [
+        "قهوه"
+      ],
+      "excludeKeywords": [
+        "فوری",
+        "نسکافه",
+        "میکس",
+        "کاپوچینو",
+        "پودر",
+        "کافی میکس",
+        "آیس کافی"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "دمی",
+          "اسپرسو",
+          "رست",
+          "دانه",
+          "ترک",
+          "عربی",
+          "ترکیبی"
+        ]
+      ],
+      "gs1GpcCode": "50202291",
+      "hsCode": "0901",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "syrup-fruit",
+      "nameFa": "شربت میوه",
+      "nameEn": "Fruit Syrup",
+      "aliases": [
+        "شربت انار",
+        "شربت بهارنارنج",
+        "شربت بیدمشک",
+        "شربت گلاب",
+        "شربت زعفران",
+        "شربت آلبالو",
+        "شربت سکنجبین",
+        "شربت ریواس"
+      ],
+      "keywords": [
+        "شربت"
+      ],
+      "excludeKeywords": [
+        "قهوه",
+        "نسکافه",
+        "کاکائو",
+        "سیروپ",
+        "سیراپ"
+      ],
+      "gs1GpcCode": "50202300",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "herbal-extract",
+      "nameFa": "عرقیات گیاهی",
+      "nameEn": "Herbal Distillates",
+      "aliases": [
+        "عرق نعناع",
+        "عرق کاسنی",
+        "عرق چای ترش",
+        "عرق بیدمشک",
+        "عرق گلاب",
+        "عرق بهار نارنج"
+      ],
+      "keywords": [
+        "عرق",
+        "عرقیات"
+      ],
+      "excludeKeywords": [
+        "الکل"
+      ],
+      "gs1GpcCode": "50202310",
+      "hsCode": "CARTON",
+      "unit": "beverages",
+      "attrs": [],
+      "categoryId": "beverages"
+    },
+    {
+      "slug": "coconut-water",
+      "nameFa": "آب نارگیل",
+      "nameEn": "Coconut Water",
+      "aliases": [
+        "آب نارگیل",
+        "آبمیوه نارگیل"
+      ],
+      "keywords": [
+        "آب",
+        "نارگیل"
+      ],
+      "excludeKeywords": [
+        "شیر",
+        "نوشیدنی",
+        "شکلاتی",
+        "گازدار",
+        "معدنی"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "نارگیل"
+        ]
+      ],
+      "gs1GpcCode": "50202270",
+      "hsCode": "2009",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "cocoa-powder-drink",
+      "nameFa": "پودر کاکائو",
+      "nameEn": "Cocoa Powder",
+      "aliases": [
+        "کاکائو",
+        "هات چاکلت",
+        "نوشیدنی شکلاتی",
+        "پودر کاکائو"
+      ],
+      "keywords": [
+        "کاکائو",
+        "هات چاکلت",
+        "شکلاتی"
+      ],
+      "excludeKeywords": [
+        "کافی میکس",
+        "نسکافه",
+        "صبحانه",
+        "تخته",
+        "تلخ",
+        "شیری"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "کاکائو",
+          "هات چاکلت",
+          "شکلاتی",
+          "نوشیدنی شکلاتی"
+        ]
+      ],
+      "gs1GpcCode": "50202295",
+      "hsCode": "1806",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "vegetable-juice",
+      "nameFa": "آب سبزیجات",
+      "nameEn": "Vegetable Juice",
+      "aliases": [
+        "آب هویج",
+        "آب کرفس",
+        "آب چغندر",
+        "آب گوجه",
+        "آب کلم",
+        "آب شلغم"
+      ],
+      "keywords": [
+        "آب"
+      ],
+      "excludeKeywords": [
+        "معدنی",
+        "نوشیدنی",
+        "گازدار",
+        "نوشابه",
+        "نارگیل",
+        "میوه",
+        "سیب",
+        "پرتقال"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "هویج",
+          "کرفس",
+          "چغندر",
+          "گوجه فرنگی",
+          "کلم",
+          "شلغم",
+          "اسفناج",
+          "کدو",
+          "سبزیجات"
+        ]
+      ],
+      "gs1GpcCode": "50202270",
+      "hsCode": "2009",
+      "unit": "CARTON",
+      "categoryId": "beverages",
+      "attrs": []
+    },
+    {
+      "slug": "chocolate-bar-milk",
+      "nameFa": "شکلات تخته‌ای شیری",
+      "nameEn": "Milk Chocolate Bar",
+      "aliases": [
+        "شکلات شیری",
+        "شکلات تخته ای"
+      ],
+      "keywords": [
+        "شکلات"
+      ],
+      "excludeKeywords": [
+        "تلخ",
+        "سفید",
+        "کادو",
+        "کادویی",
+        "پاستیل",
+        "تخمه",
+        "ویفر",
+        "بیسکویت",
+        "صبحانه",
+        "کرم"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "شیری",
+          "تخته",
+          "تخته‌ای",
+          "میلکا"
+        ]
+      ],
+      "gs1GpcCode": "50202310",
+      "hsCode": "1806",
+      "unit": "CARTON",
+      "categoryId": "snacks-sweets",
+      "attrs": []
+    },
+    {
+      "slug": "chocolate-bar-dark",
+      "nameFa": "شکلات تلخ",
+      "nameEn": "Dark Chocolate",
+      "aliases": [
+        "شکلات تلخ",
+        "شکلات سیاه"
+      ],
+      "keywords": [
+        "شکلات",
+        "تلخ"
+      ],
+      "excludeKeywords": [
+        "شیری",
+        "سفید",
+        "کادو",
+        "صبحانه"
+      ],
+      "gs1GpcCode": "50202310",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "chocolate-boxed",
+      "nameFa": "شکلات کادویی",
+      "nameEn": "Boxed Chocolate",
+      "aliases": [
+        "شکلات کادو",
+        "شکلات جعبه‌ای",
+        "شکلات باکس",
+        "شکلات تشریفات",
+        "شکلات صدبرگ"
+      ],
+      "keywords": [
+        "شکلات"
+      ],
+      "excludeKeywords": [
+        "تخته"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "کادو",
+          "جعبه",
+          "باکس",
+          "کادویی",
+          "تشریفات",
+          "صدبرگ"
+        ]
+      ],
+      "gs1GpcCode": "50202312",
+      "hsCode": "1806",
+      "unit": "CARTON",
+      "categoryId": "snacks-sweets",
+      "attrs": []
+    },
+    {
+      "slug": "chocolate-spread",
+      "nameFa": "شکلات صبحانه",
+      "nameEn": "Chocolate Spread",
+      "aliases": [
+        "کرم شکلاتی",
+        "نوتلا",
+        "نوکا"
+      ],
+      "keywords": [
+        "شکلات",
+        "صبحانه",
+        "نوتلا",
+        "نوکا"
+      ],
+      "excludeKeywords": [
+        "دسر",
+        "تخته",
+        "تلخ",
+        "شیری",
+        "کادو",
+        "پاستیل"
+      ],
+      "gs1GpcCode": "50202315",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "biscuit",
+      "nameFa": "بیسکویت",
+      "nameEn": "Biscuit",
+      "aliases": [
+        "بیسکویت شکلاتی",
+        "بیسکویت کره‌ای",
+        "کلوچه",
+        "بیسکوئیت",
+        "کراکر",
+        "تردک",
+        "ترد"
+      ],
+      "keywords": [
+        "بیسکویت",
+        "کلوچه",
+        "بیسکوئیت",
+        "کراکر",
+        "تردک",
+        "ترد"
+      ],
+      "excludeKeywords": [
+        "ویفر",
+        "کیک",
+        "پودر"
+      ],
+      "gs1GpcCode": "50202320",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "wafer",
+      "nameFa": "ویفر",
+      "nameEn": "Wafer",
+      "aliases": [
+        "ویفر شکلاتی",
+        "ویفر کرمی",
+        "ویفر رولی"
+      ],
+      "keywords": [
+        "ویفر"
+      ],
+      "excludeKeywords": [
+        "بیسکویت",
+        "کراکر"
+      ],
+      "gs1GpcCode": "50202322",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "cake-packaged",
+      "nameFa": "کیک بسته‌ای",
+      "nameEn": "Packaged Cake",
+      "aliases": [
+        "کیک روغنی",
+        "کیک خانواده",
+        "کیک پده‌ای"
+      ],
+      "keywords": [
+        "کیک"
+      ],
+      "excludeKeywords": [
+        "پودر",
+        "خمیر",
+        "اسفنجی",
+        "شکلات صبحانه"
+      ],
+      "gs1GpcCode": "50202325",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "candy-hard",
+      "nameFa": "آبنبات",
+      "nameEn": "Hard Candy",
+      "aliases": [
+        "آبنبات نعنایی",
+        "آبنبات عسلی",
+        "آبنبات میوه‌ای"
+      ],
+      "keywords": [
+        "آبنبات"
+      ],
+      "excludeKeywords": [
+        "تافی",
+        "نرم",
+        "پاستیل"
+      ],
+      "gs1GpcCode": "50202330",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "toffee-caramel",
+      "nameFa": "تافی و کارامل",
+      "nameEn": "Toffee",
+      "aliases": [
+        "تافی",
+        "کارامل",
+        "نوقا"
+      ],
+      "keywords": [
+        "تافی",
+        "کارامل",
+        "نوقا"
+      ],
+      "excludeKeywords": [
+        "پاستیل",
+        "آبنبات"
+      ],
+      "gs1GpcCode": "50202331",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "gummy-jelly",
+      "nameFa": "پاستیل و ژله",
+      "nameEn": "Gummy",
+      "aliases": [
+        "پاستیل",
+        "مارشمالو",
+        "پشمک",
+        "ژله"
+      ],
+      "keywords": [
+        "پاستیل",
+        "مارشمالو",
+        "پشمک",
+        "ژله"
+      ],
+      "excludeKeywords": [
+        "پودر"
+      ],
+      "gs1GpcCode": "50202332",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "chewing-gum",
+      "nameFa": "آدامس",
+      "nameEn": "Chewing Gum",
+      "aliases": [
+        "آدامس نعنایی",
+        "آدامس میوه‌ای",
+        "تند آدامس"
+      ],
+      "keywords": [
+        "آدامس"
+      ],
+      "excludeKeywords": [
+        "تنباکو"
+      ],
+      "gs1GpcCode": "50202333",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "potato-chips",
+      "nameFa": "چیپس سیب‌زمینی",
+      "nameEn": "Potato Chips",
+      "aliases": [
+        "چیپس",
+        "چیپس سیب زمینی",
+        "سوپر چیپس"
+      ],
+      "keywords": [
+        "چیپس"
+      ],
+      "excludeKeywords": [
+        "پفک",
+        "اسنک",
+        "ذرت"
+      ],
+      "gs1GpcCode": "50202340",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "corn-snack-puff",
+      "nameFa": "پفک و اسنک ذرتی",
+      "nameEn": "Corn Snack",
+      "aliases": [
+        "پفک",
+        "اسنک ذرتی",
+        "اسنک پنیری",
+        "چی پف"
+      ],
+      "keywords": [
+        "پفک",
+        "اسنک",
+        "چی پف"
+      ],
+      "excludeKeywords": [
+        "چیپس",
+        "تخمه",
+        "آجیل",
+        "میکس"
+      ],
+      "gs1GpcCode": "50202341",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "popcorn",
+      "nameFa": "پاپ کورن",
+      "nameEn": "Popcorn",
+      "aliases": [
+        "پاپ کورن",
+        "پاپ‌کورن",
+        "پاپ کرن"
+      ],
+      "keywords": [
+        "پاپ",
+        "کورن",
+        "کرن"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202342",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "halva-shekkeri",
+      "nameFa": "حلوا شکری و ارده",
+      "nameEn": "Halva",
+      "aliases": [
+        "حلوا شکری",
+        "حلوا ارده",
+        "حلوا زرده"
+      ],
+      "keywords": [
+        "حلوا"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202365",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "honey-jam",
+      "nameFa": "عسل و مربا",
+      "nameEn": "Honey & Jam",
+      "aliases": [
+        "عسل طبیعی",
+        "مربا",
+        "مربا بهار نارنج",
+        "مربا گلاب",
+        "مربا بالنگ"
+      ],
+      "keywords": [
+        "عسل",
+        "مربا"
+      ],
+      "excludeKeywords": [
+        "شکلات",
+        "شیره"
+      ],
+      "gs1GpcCode": "50202366",
+      "hsCode": "CARTON",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "tobacco-cigarette",
+      "nameFa": "تنباکو و دخانیات",
+      "nameEn": "Tobacco",
+      "aliases": [
+        "تنباکو",
+        "سیگار",
+        "دودکش",
+        "مازوت",
+        "معسل"
+      ],
+      "keywords": [
+        "تنباکو",
+        "سیگار",
+        "دخانیات",
+        "معسل"
+      ],
+      "excludeKeywords": [
+        "آدامس"
+      ],
+      "gs1GpcCode": "50202399",
+      "hsCode": "PIECE",
+      "unit": "snacks-sweets",
+      "attrs": [],
+      "categoryId": "snacks-sweets"
+    },
+    {
+      "slug": "nuts-dried-mix",
+      "nameFa": "آجیل مخلوط",
+      "nameEn": "Mixed Nuts",
+      "aliases": [
+        "آجیل مخلوط",
+        "مکس",
+        "چهارمغز",
+        "ششمغز",
+        "آجیل درجه یک",
+        "آجیل بسته‌ای",
+        "آجیل تشریفات"
+      ],
+      "keywords": [
+        "آجیل",
+        "مخلوط",
+        "میکس",
+        "چهارمغز",
+        "ششمغز"
+      ],
+      "excludeKeywords": [
+        "بادام",
+        "پسته",
+        "گردو",
+        "تک"
+      ],
+      "gs1GpcCode": "50202350",
+      "hsCode": "KILOGRAM",
+      "unit": "dried-fruit",
+      "attrs": [],
+      "categoryId": "dried-fruit"
+    },
+    {
+      "slug": "nuts-single",
+      "nameFa": "آجیل تکی",
+      "nameEn": "Single Nut",
+      "aliases": [
+        "بادام درختی",
+        "پسته",
+        "گردو",
+        "بادام زمینی",
+        "فندق",
+        "پکان",
+        "ماکادامیا",
+        "بادام هندی"
+      ],
+      "keywords": [
+        "بادام",
+        "پسته",
+        "گردو",
+        "فندق",
+        "پکان",
+        "ماکادامیا"
+      ],
+      "excludeKeywords": [
+        "آجیل",
+        "مخلوط",
+        "میکس",
+        "کره",
+        "روغن",
+        "تخمه",
+        "خرما",
+        "رطب"
+      ],
+      "gs1GpcCode": "50202351",
+      "hsCode": "KILOGRAM",
+      "unit": "dried-fruit",
+      "attrs": [],
+      "categoryId": "dried-fruit"
+    },
+    {
+      "slug": "seeds",
+      "nameFa": "تخمه",
+      "nameEn": "Seeds",
+      "aliases": [
+        "تخمه آفتابگردان",
+        "تخمه کدو",
+        "تخمه هندوانه",
+        "تخمه خربزه"
+      ],
+      "keywords": [
+        "تخمه"
+      ],
+      "excludeKeywords": [
+        "تخم مرغ",
+        "تخم‌مرغ",
+        "تخم شربتی",
+        "گشنیز",
+        "کرفس",
+        "خیار",
+        "کدو"
+      ],
+      "gs1GpcCode": "50202352",
+      "hsCode": "KILOGRAM",
+      "unit": "dried-fruit",
+      "attrs": [],
+      "categoryId": "dried-fruit"
+    },
+    {
+      "slug": "dates",
+      "nameFa": "خرما",
+      "nameEn": "Dates",
+      "aliases": [
+        "خرما",
+        "رطب",
+        "خرمای آلویی"
+      ],
+      "keywords": [
+        "خرما",
+        "رطب"
+      ],
+      "excludeKeywords": [
+        "شیره",
+        "کنسانتره",
+        "عسل",
+        "شکلات",
+        "کاکائو"
+      ],
+      "gs1GpcCode": "50202353",
+      "hsCode": "CARTON",
+      "unit": "dried-fruit",
+      "attrs": [],
+      "categoryId": "dried-fruit"
+    },
+    {
+      "slug": "dried-fruit",
+      "nameFa": "میوه خشک",
+      "nameEn": "Dried Fruit",
+      "aliases": [
+        "آلو بخارا",
+        "زردآلو خشک",
+        "انجیر خشک",
+        "خشکبار میوه",
+        "آلوچه",
+        "لواشک",
+        "ترشک"
+      ],
+      "keywords": [
+        "آلو",
+        "زردآلو",
+        "انجیر",
+        "خشک",
+        "لواشک",
+        "ترشک",
+        "آلوچه"
+      ],
+      "excludeKeywords": [
+        "خرما",
+        "رطب",
+        "تازه",
+        "کنسرو",
+        "عسل",
+        "شیره",
+        "شکری",
+        "ارده"
+      ],
+      "gs1GpcCode": "50202354",
+      "hsCode": "KILOGRAM",
+      "unit": "dried-fruit",
+      "attrs": [],
+      "categoryId": "dried-fruit"
+    },
+    {
+      "slug": "macaroni-pasta",
+      "nameFa": "ماکارونی و پاستا",
+      "nameEn": "Pasta",
+      "aliases": [
+        "ماکارونی",
+        "پاستا",
+        "اسپاگتی",
+        "لازانیا",
+        "رشته",
+        "ورمیشل",
+        "فیوزلی"
+      ],
+      "keywords": [
+        "ماکارونی",
+        "پاستا",
+        "اسپاگتی",
+        "لازانیا",
+        "ورمیشل",
+        "فیوزلی",
+        "رشته‌ای"
+      ],
+      "excludeKeywords": [
+        "آش",
+        "سوپ",
+        "کشت",
+        "نودل"
+      ],
+      "gs1GpcCode": "50202400",
+      "hsCode": "CARTON",
+      "unit": "flour-cereals",
+      "attrs": [],
+      "categoryId": "flour-cereals"
+    },
+    {
+      "slug": "bread-bakery",
+      "nameFa": "نان و خمیر آماده",
+      "nameEn": "Bread & Dough",
+      "aliases": [
+        "نان ساندویچی",
+        "نان باگت",
+        "نان بانی",
+        "خمیر پیتزا",
+        "خمیر نان",
+        "لاوش",
+        "بربری",
+        "تافتون"
+      ],
+      "keywords": [
+        "نان"
+      ],
+      "excludeKeywords": [
+        "ماکارونی",
+        "پاستا",
+        "اسپاگتی",
+        "شامپو",
+        "صابون",
+        "مایع",
+        "دستمال",
+        "کاکائو",
+        "شیرینی",
+        "هلندی"
+      ],
+      "gs1GpcCode": "50202405",
+      "hsCode": "PIECE",
+      "unit": "flour-cereals",
+      "attrs": [],
+      "categoryId": "flour-cereals"
+    },
+    {
+      "slug": "flour",
+      "nameFa": "آرد",
+      "nameEn": "Flour",
+      "aliases": [
+        "آرد گندم",
+        "آرد برنج",
+        "آرد نخودچی",
+        "آرد سویا",
+        "آرد جو",
+        "آرد ذرت"
+      ],
+      "keywords": [
+        "آرد"
+      ],
+      "excludeKeywords": [
+        "خمیر",
+        "نان",
+        "سوخاری",
+        "تمپورا",
+        "پودر"
+      ],
+      "gs1GpcCode": "50202410",
+      "hsCode": "SACK",
+      "unit": "flour-cereals",
+      "attrs": [],
+      "categoryId": "flour-cereals"
+    },
+    {
+      "slug": "breading-powder",
+      "nameFa": "پودر سوخاری",
+      "nameEn": "Breading Powder",
+      "aliases": [
+        "پودر سوخاری",
+        "پودر تمپورا",
+        "آرد سوخاری",
+        "پودر کتلت",
+        "پودر فیش",
+        "پودر کنتاکی"
+      ],
+      "keywords": [
+        "پودر",
+        "سوخاری",
+        "تمپورا",
+        "کتلت",
+        "فیش",
+        "کنتاکی"
+      ],
+      "excludeKeywords": [
+        "کیک",
+        "شیرینی",
+        "آرد خالص",
+        "نمک"
+      ],
+      "gs1GpcCode": "50202415",
+      "hsCode": "CARTON",
+      "unit": "flour-cereals",
+      "attrs": [],
+      "categoryId": "flour-cereals"
+    },
+    {
+      "slug": "breakfast-cereal",
+      "nameFa": "غلات صبحانه",
+      "nameEn": "Breakfast Cereal",
+      "aliases": [
+        "کرن فلکس",
+        "بالشتی",
+        "میسلی",
+        "سیریال",
+        "صبحانه"
+      ],
+      "keywords": [
+        "کرن",
+        "فلکس",
+        "بالشتی",
+        "میسلی",
+        "سیریال"
+      ],
+      "excludeKeywords": [
+        "شیر",
+        "ماست",
+        "عسل",
+        "مربا"
+      ],
+      "gs1GpcCode": "50202420",
+      "hsCode": "CARTON",
+      "unit": "flour-cereals",
+      "attrs": [],
+      "categoryId": "flour-cereals"
+    },
+    {
+      "slug": "cooking-oil",
+      "nameFa": "روغن خوراکی",
+      "nameEn": "Edible Oil",
+      "aliases": [
+        "روغن آفتابگردان",
+        "روغن سویا",
+        "روغن کنجد",
+        "روغن ذرت",
+        "روغن کانولا",
+        "روغن جامد",
+        "روغن مایع",
+        "روغن سرخ‌کردنی",
+        "روغن مخلوط",
+        "روغن پالم",
+        "روغن صنعت"
+      ],
+      "keywords": [
+        "روغن"
+      ],
+      "excludeKeywords": [
+        "ماشین",
+        "مو",
+        "بدن",
+        "کرچک",
+        "نارگیل",
+        "کودکان",
+        "آفتاب",
+        "زیتون"
+      ],
+      "gs1GpcCode": "50202430",
+      "hsCode": "CARTON",
+      "unit": "oils",
+      "attrs": [],
+      "categoryId": "oils"
+    },
+    {
+      "slug": "olive-oil",
+      "nameFa": "روغن زیتون",
+      "nameEn": "Olive Oil",
+      "aliases": [
+        "روغن زیتون فرابکر",
+        "روغن زیتون بکر",
+        "روغن زیتون تصفیه شده"
+      ],
+      "keywords": [
+        "روغن",
+        "زیتون"
+      ],
+      "excludeKeywords": [
+        "ماشین",
+        "مو",
+        "بدن",
+        "صنعت",
+        "کنسرو",
+        "زیتون پر شده",
+        "زیتون سبز",
+        "زیتون سیاه"
+      ],
+      "gs1GpcCode": "50202431",
+      "hsCode": "CARTON",
+      "unit": "oils",
+      "attrs": [],
+      "categoryId": "oils"
+    },
+    {
+      "slug": "sugar",
+      "nameFa": "شکر و قند",
+      "nameEn": "Sugar",
+      "aliases": [
+        "شکر سفید",
+        "شکر قهوه‌ای",
+        "قند",
+        "قند شکسته",
+        "حبه",
+        "قند کله شکسته"
+      ],
+      "keywords": [
+        "شکر",
+        "قند",
+        "حبه"
+      ],
+      "excludeKeywords": [
+        "شیرین‌کننده",
+        "رژیمی",
+        "قهوه",
+        "کلوچه"
+      ],
+      "gs1GpcCode": "50202435",
+      "hsCode": "SACK",
+      "unit": "sugar-tea",
+      "attrs": [],
+      "categoryId": "sugar-tea"
+    },
+    {
+      "slug": "sweetener",
+      "nameFa": "شیرین‌کننده رژیمی",
+      "nameEn": "Dietary Sweetener",
+      "aliases": [
+        "شیرین کننده",
+        "استویا",
+        "ساکارین",
+        "سوکرالوز"
+      ],
+      "keywords": [
+        "شیرین",
+        "استویا",
+        "ساکارین",
+        "سوکرالوز"
+      ],
+      "excludeKeywords": [
+        "شکر",
+        "قند",
+        "حبه"
+      ],
+      "gs1GpcCode": "50202436",
+      "hsCode": "CARTON",
+      "unit": "sugar-tea",
+      "attrs": [],
+      "categoryId": "sugar-tea"
+    },
+    {
+      "slug": "rice",
+      "nameFa": "برنج",
+      "nameEn": "Rice",
+      "aliases": [
+        "برنج ایرانی",
+        "برنج هندی",
+        "برنج طارم",
+        "برنج شیرودی",
+        "برنج دم‌سیاه",
+        "برنج هاشمی",
+        "برنج کشت دوم",
+        "درین",
+        "شلتوک"
+      ],
+      "keywords": [
+        "برنج",
+        "درین",
+        "شلتوک"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "50202440",
+      "hsCode": "SACK",
+      "unit": "rice",
+      "attrs": [],
+      "categoryId": "rice"
+    },
+    {
+      "slug": "legumes",
+      "nameFa": "حبوبات",
+      "nameEn": "Legumes",
+      "aliases": [
+        "لوبیا",
+        "عدس",
+        "نخود",
+        "ماش",
+        "باقلا",
+        "لپه",
+        "سویا",
+        "کینوا",
+        "دال",
+        "پیلیش"
+      ],
+      "keywords": [
+        "لوبیا",
+        "عدس",
+        "نخود",
+        "ماش",
+        "باقلا",
+        "لپه",
+        "سویا",
+        "کینوا",
+        "دال",
+        "پیلیش"
+      ],
+      "excludeKeywords": [
+        "کنسرو",
+        "پخته"
+      ],
+      "gs1GpcCode": "50202445",
+      "hsCode": "SACK",
+      "unit": "legumes",
+      "attrs": [],
+      "categoryId": "legumes"
+    },
+    {
+      "slug": "salt",
+      "nameFa": "نمک",
+      "nameEn": "Salt",
+      "aliases": [
+        "نمک دریا",
+        "نمک سنگ",
+        "نمک تصفیه",
+        "نمک یددار",
+        "نمک ریز",
+        "نمک درشت"
+      ],
+      "keywords": [
+        "نمک"
+      ],
+      "excludeKeywords": [
+        "سیر نمک",
+        "نمک سیر",
+        "شور",
+        "ترشی",
+        "ادویه"
+      ],
+      "gs1GpcCode": "50202450",
+      "hsCode": "CARTON",
+      "unit": "spices-saffron",
+      "attrs": [],
+      "categoryId": "spices-saffron"
+    },
+    {
+      "slug": "spice-blend",
+      "nameFa": "ادویه و چاشنی مخلوط",
+      "nameEn": "Spice Blend",
+      "aliases": [
+        "چاشنی",
+        "ادویه",
+        "پودر ادویه",
+        "آرومات",
+        "چاشنی کباب",
+        "چاشنی ماست",
+        "چاشنی اسپاگتی"
+      ],
+      "keywords": [
+        "چاشنی",
+        "ادویه",
+        "پودر آرومات"
+      ],
+      "excludeKeywords": [
+        "سیر",
+        "فلفل",
+        "نمک",
+        "دارچین",
+        "زردچوبه",
+        "زعفران"
+      ],
+      "gs1GpcCode": "50202455",
+      "hsCode": "CARTON",
+      "unit": "spices-saffron",
+      "attrs": [],
+      "categoryId": "spices-saffron"
+    },
+    {
+      "slug": "spice-single",
+      "nameFa": "ادویه تکی",
+      "nameEn": "Single Spice",
+      "aliases": [
+        "فلفل سیاه",
+        "فلفل قرمز",
+        "فلفل سفید",
+        "زردچوبه",
+        "دارچین",
+        "زنجبیل",
+        "هل",
+        "زعفران",
+        "میخک",
+        "گلپر",
+        "آویشن",
+        "مرزه",
+        "تخم گشنیز"
+      ],
+      "keywords": [
+        "فلفل",
+        "زردچوبه",
+        "دارچین",
+        "زنجبیل",
+        "هل",
+        "زعفران",
+        "میخک",
+        "گلپر",
+        "آویشن",
+        "مرزه",
+        "تخم"
+      ],
+      "excludeKeywords": [
+        "آرد",
+        "پودر سوخاری",
+        "نمک سیر",
+        "چاشنی",
+        "ادویه مخلوط",
+        "آرومات"
+      ],
+      "gs1GpcCode": "50202456",
+      "hsCode": "KILOGRAM",
+      "unit": "spices-saffron",
+      "attrs": [],
+      "categoryId": "spices-saffron"
+    },
+    {
+      "slug": "saffron",
+      "nameFa": "زعفران",
+      "nameEn": "Saffron",
+      "aliases": [
+        "زعفران قائنات",
+        "زعفران سرگل",
+        "زعفران پوشال",
+        "زعفران صادراتی"
+      ],
+      "keywords": [
+        "زعفران"
+      ],
+      "excludeKeywords": [
+        "عرق",
+        "رشته",
+        "خمیر"
+      ],
+      "gs1GpcCode": "50202460",
+      "hsCode": "GRAM",
+      "unit": "spices-saffron",
+      "attrs": [],
+      "categoryId": "spices-saffron"
+    },
+    {
+      "slug": "tomato-paste",
+      "nameFa": "رب گوجه‌فرنگی",
+      "nameEn": "Tomato Paste",
+      "aliases": [
+        "رب گوجه",
+        "رب قرمز",
+        "رب سانگول"
+      ],
+      "keywords": [
+        "رب",
+        "گوجه"
+      ],
+      "excludeKeywords": [
+        "آلو",
+        "انار",
+        "فلفل"
+      ],
+      "gs1GpcCode": "50202465",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "pomegranate-paste",
+      "nameFa": "رب انار",
+      "nameEn": "Pomegranate Paste",
+      "aliases": [
+        "دبس انار"
+      ],
+      "keywords": [
+        "رب",
+        "انار"
+      ],
+      "excludeKeywords": [
+        "گوجه"
+      ],
+      "gs1GpcCode": "50202466",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "sauce",
+      "nameFa": "سس",
+      "nameEn": "Sauce",
+      "aliases": [
+        "سس مایونز",
+        "سس کچاپ",
+        "سس خردل",
+        "سس باربکیو",
+        "سس سیریاچا",
+        "سس تارتار",
+        "سس فرانسوی",
+        "سس هزار جزیره",
+        "سس پیتزا",
+        "سس استیک"
+      ],
+      "keywords": [
+        "سس"
+      ],
+      "excludeKeywords": [
+        "ترشی",
+        "رب",
+        "سرکه",
+        "سیروپ"
+      ],
+      "gs1GpcCode": "50202470",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "vinegar",
+      "nameFa": "سرکه",
+      "nameEn": "Vinegar",
+      "aliases": [
+        "سرکه سیب",
+        "سرکه انگور",
+        "سرکه بالزامیک",
+        "سرکه اتری",
+        "سرکه شیره",
+        "سرکه سفید"
+      ],
+      "keywords": [
+        "سرکه"
+      ],
+      "excludeKeywords": [
+        "ترشی",
+        "سس"
+      ],
+      "gs1GpcCode": "50202475",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "pickle",
+      "nameFa": "ترشی و شور",
+      "nameEn": "Pickles",
+      "aliases": [
+        "ترشی مخلوط",
+        "ترشی انبه",
+        "ترشی آلبالو",
+        "ترشی انگور",
+        "ترشی فلفل",
+        "ترشی سیر",
+        "ترشی لو",
+        "خیارشور",
+        "کلم شور"
+      ],
+      "keywords": [
+        "ترشی",
+        "خیارشور",
+        "شور"
+      ],
+      "excludeKeywords": [
+        "سرکه خالص",
+        "سس",
+        "ترشک",
+        "لواشک"
+      ],
+      "gs1GpcCode": "50202480",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "olives",
+      "nameFa": "زیتون",
+      "nameEn": "Olives",
+      "aliases": [
+        "زیتون سبز",
+        "زیتون سیاه",
+        "زیتون بدون هسته",
+        "زیتون پر شده",
+        "زیتون اسلایس"
+      ],
+      "keywords": [
+        "زیتون"
+      ],
+      "excludeKeywords": [
+        "روغن"
+      ],
+      "gs1GpcCode": "50202485",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "lemon-juice",
+      "nameFa": "آبلیمو و آبغوره",
+      "nameEn": "Lemon Juice",
+      "aliases": [
+        "آبلیمو",
+        "آبغوره",
+        "آب لیمو",
+        "آب لیموترش",
+        "آب انار ترش",
+        "لیمو عمانی"
+      ],
+      "keywords": [
+        "آبلیمو",
+        "آبغوره",
+        "لیمو عمانی"
+      ],
+      "excludeKeywords": [
+        "سرکه",
+        "ترشی"
+      ],
+      "gs1GpcCode": "50202490",
+      "hsCode": "CARTON",
+      "unit": "prepared-food",
+      "attrs": [],
+      "categoryId": "prepared-food"
+    },
+    {
+      "slug": "canned-food",
+      "nameFa": "کنسرو غذایی",
+      "nameEn": "Canned Food",
+      "aliases": [
+        "کنسرو ذرت",
+        "کنسرو لوبیا",
+        "کنسرو نخود",
+        "کنسرو رب",
+        "کنسرو آبگوشت",
+        "کنسرو آش",
+        "کنسرو خوراک",
+        "کنسرو کوفته",
+        "کنسرو ارتیشو"
+      ],
+      "keywords": [
+        "کنسرو"
+      ],
+      "excludeKeywords": [
+        "تن ماهی",
+        "تن"
+      ],
+      "gs1GpcCode": "50202495",
+      "hsCode": "CARTON",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "tuna",
+      "nameFa": "تن ماهی",
+      "nameEn": "Canned Tuna",
+      "aliases": [
+        "تن ماهی در روغن",
+        "تن ماهی در آب",
+        "ماهی تن",
+        "تن ماهی ادویه",
+        "تون در"
+      ],
+      "keywords": [
+        "تن ماهی",
+        "ماهی تن",
+        "تون در"
+      ],
+      "excludeKeywords": [
+        "دستمال",
+        "شکلات",
+        "آبنبات",
+        "تافا",
+        "کلوچه",
+        "کیک",
+        "دنت",
+        "تنو",
+        "تنباکو",
+        "کاکائو",
+        "کنسرو ذرت",
+        "کنسرو لوبیا",
+        "آبگوشت"
+      ],
+      "gs1GpcCode": "50202496",
+      "hsCode": "CARTON",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "sausage-bologna",
+      "nameFa": "سوسیس و کالباس",
+      "nameEn": "Sausage & Bologna",
+      "aliases": [
+        "سوسیس",
+        "کالباس",
+        "ژامبون",
+        "سوسیس فرانکفورتر",
+        "کالباس بوقلمون",
+        "کالباس گوشت",
+        "هات‌داگ"
+      ],
+      "keywords": [
+        "سوسیس",
+        "کالباس",
+        "ژامبون",
+        "هات‌داگ"
+      ],
+      "excludeKeywords": [
+        "کنسرو",
+        "نودل",
+        "همبرگر",
+        "کتلت",
+        "نوگت"
+      ],
+      "gs1GpcCode": "50202500",
+      "hsCode": "CARTON",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "burger-kebab-ready",
+      "nameFa": "همبرگر و کباب آماده",
+      "nameEn": "Burger & Kebab",
+      "aliases": [
+        "همبرگر",
+        "کتلت",
+        "کباب",
+        "نوگت مرغ",
+        "فیله مرغ",
+        "فیله بوقلمون",
+        "جوجه کباب"
+      ],
+      "keywords": [
+        "همبرگر",
+        "کتلت",
+        "نوگت",
+        "فیله",
+        "جوجه"
+      ],
+      "excludeKeywords": [
+        "سوسیس",
+        "کالباس",
+        "کنسرو",
+        "خام",
+        "نودل",
+        "ساندویچ"
+      ],
+      "gs1GpcCode": "50202505",
+      "hsCode": "CARTON",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "ready-meal",
+      "nameFa": "غذای آماده",
+      "nameEn": "Ready Meal",
+      "aliases": [
+        "خورش آماده",
+        "آبگوشت آماده",
+        "خوراک آماده",
+        "غذای آماده",
+        "دلمه",
+        "ساندویچ",
+        "سالاد آماده",
+        "سوپ آماده"
+      ],
+      "keywords": [
+        "خورش",
+        "آماده",
+        "ساندویچ",
+        "سالاد",
+        "دلمه",
+        "سوپ"
+      ],
+      "excludeKeywords": [
+        "کنسرو",
+        "همبرگر",
+        "کتلت",
+        "نوگت",
+        "سوسیس",
+        "نودل"
+      ],
+      "gs1GpcCode": "50202510",
+      "hsCode": "CARTON",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "noodle-instant",
+      "nameFa": "نودل آماده",
+      "nameEn": "Instant Noodle",
+      "aliases": [
+        "نودل",
+        "نودل آماده",
+        "رامن",
+        "سوپ فوری"
+      ],
+      "keywords": [
+        "نودل"
+      ],
+      "excludeKeywords": [
+        "ماکارونی",
+        "پاستا",
+        "اسپاگتی"
+      ],
+      "gs1GpcCode": "50202515",
+      "hsCode": "CARTON",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "fresh-meat",
+      "nameFa": "گوشت تازه",
+      "nameEn": "Fresh Meat",
+      "aliases": [
+        "فیله مرغ",
+        "ران مرغ",
+        "بال مرغ",
+        "سینه مرغ",
+        "گوشت چرخ‌کرده",
+        "بلدرچین",
+        "بوقلمون",
+        "گوشت گوسفند",
+        "گوشت گوساله",
+        "میگو",
+        "ماهی تازه",
+        "بال و بازو"
+      ],
+      "keywords": [
+        "گوشت",
+        "مرغ",
+        "بلدرچین",
+        "بوقلمون",
+        "گوسفند",
+        "گوساله",
+        "میگو",
+        "ماهی تازه",
+        "بال و بازو"
+      ],
+      "excludeKeywords": [
+        "سوسیس",
+        "کالباس",
+        "کنسرو",
+        "همبرگر",
+        "کتلت",
+        "نوگت",
+        "نودل",
+        "تن ماهی",
+        "خورش",
+        "آماده",
+        "نمک",
+        "سوپ"
+      ],
+      "gs1GpcCode": "10002670",
+      "hsCode": "KILOGRAM",
+      "unit": "protein-canned",
+      "attrs": [],
+      "categoryId": "protein-canned"
+    },
+    {
+      "slug": "egg",
+      "nameFa": "تخم‌مرغ",
+      "nameEn": "Egg",
+      "aliases": [
+        "تخم مرغ",
+        "تخم‌مرغ",
+        "تخم بلدرچین"
+      ],
+      "keywords": [
+        "تخم مرغ",
+        "تخم‌مرغ"
+      ],
+      "excludeKeywords": [
+        "تخم آفتابگردان",
+        "تخم کدو",
+        "تخم هندوانه",
+        "تخم شربتی",
+        "کنسرو",
+        "تخم گشنیز"
+      ],
+      "gs1GpcCode": "10002675",
+      "hsCode": "CARTON",
+      "unit": "poultry-eggs",
+      "attrs": [],
+      "categoryId": "poultry-eggs"
+    },
+    {
+      "slug": "dishwashing-liquid",
+      "nameFa": "مایع ظرفشویی",
+      "nameEn": "Dishwashing Liquid",
+      "aliases": [
+        "مایع ظرف شویی"
+      ],
+      "keywords": [
+        "مایع",
+        "ظرفشویی"
+      ],
+      "excludeKeywords": [
+        "دستشویی",
+        "لباسشویی",
+        "سطح",
+        "توالت",
+        "کاسه",
+        "دست"
+      ],
+      "gs1GpcCode": "10002401",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "dishwasher-tablet-powder",
+      "nameFa": "مواد مصرفی ماشین ظرفشویی",
+      "nameEn": "Dishwasher Detergent",
+      "aliases": [
+        "قرص ماشین ظرفشویی",
+        "ژل ماشین ظرفشویی",
+        "پودر ماشین ظرفشویی",
+        "نمک ماشین ظرفشویی",
+        "شینا ماشین ظرفشویی"
+      ],
+      "keywords": [
+        "ماشین",
+        "ظرفشویی"
+      ],
+      "excludeKeywords": [
+        "لباسشویی"
+      ],
+      "gs1GpcCode": "10002402",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "laundry-detergent-powder",
+      "nameFa": "پودر و کپسول لباسشویی",
+      "nameEn": "Laundry Detergent",
+      "aliases": [
+        "پودر لباسشویی",
+        "کپسول لباسشویی",
+        "پودر ماشین لباسشویی",
+        "مایع لباسشویی"
+      ],
+      "keywords": [
+        "پودر",
+        "لباسشویی",
+        "کپسول",
+        "مایع لباس"
+      ],
+      "excludeKeywords": [
+        "ظرفشویی",
+        "سطح",
+        "بشر",
+        "ظرف"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "لباسشویی",
+          "لباس"
+        ]
+      ],
+      "gs1GpcCode": "10002405",
+      "hsCode": "3402",
+      "unit": "CARTON",
+      "categoryId": "home-cleaning",
+      "attrs": []
+    },
+    {
+      "slug": "fabric-softener",
+      "nameFa": "نرم‌کننده لباس",
+      "nameEn": "Fabric Softener",
+      "aliases": [
+        "نرم کننده لباس",
+        "نرم‌کننده لباس"
+      ],
+      "keywords": [
+        "نرم",
+        "لباس"
+      ],
+      "excludeKeywords": [
+        "مو",
+        "بدن",
+        "بچه",
+        "صورت"
+      ],
+      "gs1GpcCode": "10002406",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "surface-cleaner",
+      "nameFa": "پاک‌کننده سطوح",
+      "nameEn": "Surface Cleaner",
+      "aliases": [
+        "پاک کننده سطوح",
+        "جرم‌گیر",
+        "جرم گیر",
+        "مایع سطوح",
+        "ابر استیل"
+      ],
+      "keywords": [
+        "سطح",
+        "جرم",
+        "پاک"
+      ],
+      "excludeKeywords": [
+        "ظرفشویی",
+        "لباسشویی",
+        "دستشویی",
+        "توالت",
+        "شیشه",
+        "کاسه",
+        "دست"
+      ],
+      "gs1GpcCode": "10002410",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "glass-cleaner",
+      "nameFa": "شیشه پاک‌کن",
+      "nameEn": "Glass Cleaner",
+      "aliases": [
+        "شیشه پاک کن",
+        "شیشه‌پاک‌کن",
+        "مایع شیشه"
+      ],
+      "keywords": [
+        "شیشه",
+        "پاک"
+      ],
+      "excludeKeywords": [
+        "ظرفشویی",
+        "لباسشویی"
+      ],
+      "gs1GpcCode": "10002411",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "bleach",
+      "nameFa": "سفیدکننده",
+      "nameEn": "Bleach",
+      "aliases": [
+        "سفید کننده",
+        "وایتکس",
+        "سفیدکننده البسه",
+        "سفیدکننده لباس"
+      ],
+      "keywords": [
+        "سفید"
+      ],
+      "excludeKeywords": [
+        "ظرفشویی",
+        "سطح",
+        "شکر",
+        "قند"
+      ],
+      "gs1GpcCode": "10002415",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "toilet-cleaner",
+      "nameFa": "توالت‌شوی",
+      "nameEn": "Toilet Cleaner",
+      "aliases": [
+        "توالت شوی",
+        "دستشویی شوی",
+        "ژل توالت",
+        "اسید توالت",
+        "پاک‌کننده کاسه توالت"
+      ],
+      "keywords": [
+        "توالت",
+        "کاسه"
+      ],
+      "excludeKeywords": [
+        "ظرفشویی",
+        "لباسشویی",
+        "آدامس",
+        "ماشین",
+        "دست",
+        "صابون",
+        "ضدعفونی",
+        "بهداشتی",
+        "خانگی",
+        "مایع دست"
+      ],
+      "gs1GpcCode": "10002420",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "toilet-block-freshener",
+      "nameFa": "بوگیر توالت",
+      "nameEn": "Toilet Freshener",
+      "aliases": [
+        "بوگیر",
+        "بوگیر توالت",
+        "قرص بوگیر",
+        "اسپری بوگیر",
+        "قرص آویز فلاش تانک"
+      ],
+      "keywords": [
+        "بوگیر",
+        "خوشبو",
+        "آویز"
+      ],
+      "excludeKeywords": [
+        "دستشویی شوی",
+        "توالت شوی",
+        "هوا",
+        "اسپری خوشبوکننده هوا"
+      ],
+      "gs1GpcCode": "10002421",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "drain-cleaner",
+      "nameFa": "لوله بازکن",
+      "nameEn": "Drain Cleaner",
+      "aliases": [
+        "چربی‌بر لوله",
+        "بازکننده لوله"
+      ],
+      "keywords": [
+        "لوله"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002422",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "carpet-shampoo",
+      "nameFa": "شامپو فرش",
+      "nameEn": "Carpet Shampoo",
+      "aliases": [
+        "شامپو مبلمان",
+        "پودر فرش",
+        "مایع فرش"
+      ],
+      "keywords": [
+        "شامپو",
+        "فرش"
+      ],
+      "excludeKeywords": [
+        "مو",
+        "بدن",
+        "بچه"
+      ],
+      "gs1GpcCode": "10002425",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "sponge-scrub",
+      "nameFa": "اسکاچ و اسفنج",
+      "nameEn": "Sponge",
+      "aliases": [
+        "اسکاچ",
+        "اسفنج",
+        "اسکاچ ظرفشویی",
+        "سیم ظرفشویی",
+        "ابر استیل"
+      ],
+      "keywords": [
+        "اسکاچ",
+        "اسفنج",
+        "سیم"
+      ],
+      "excludeKeywords": [
+        "مایع",
+        "پودر",
+        "شامپو"
+      ],
+      "gs1GpcCode": "10002430",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "pest-insect-control",
+      "nameFa": "حشره‌کش",
+      "nameEn": "Insecticide",
+      "aliases": [
+        "سم حشره",
+        "اسپری پشه",
+        "قرص حشره",
+        "تله سوسک"
+      ],
+      "keywords": [
+        "حشره",
+        "سم",
+        "پشه",
+        "سوسک",
+        "موش"
+      ],
+      "excludeKeywords": [
+        "کشاورزی",
+        "باغ",
+        "گل"
+      ],
+      "gs1GpcCode": "10002440",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "air-freshener",
+      "nameFa": "خوشبوکننده هوا",
+      "nameEn": "Air Freshener",
+      "aliases": [
+        "اسپری خوشبوکننده",
+        "خوشبوکننده هوا",
+        "اسپری هوا",
+        "بوگیر خانه"
+      ],
+      "keywords": [
+        "خوشبو",
+        "هوا"
+      ],
+      "excludeKeywords": [
+        "توالت",
+        "دستشویی",
+        "بوگیر توالت",
+        "عود",
+        "بخور"
+      ],
+      "gs1GpcCode": "10002445",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "incense-fragrance",
+      "nameFa": "عود و بخور",
+      "nameEn": "Incense",
+      "aliases": [
+        "عود مایع",
+        "عود",
+        "بخور",
+        "عود جادویی"
+      ],
+      "keywords": [
+        "عود",
+        "بخور"
+      ],
+      "excludeKeywords": [
+        "خوشبوکننده",
+        "اسپری",
+        "توالت",
+        "هوا"
+      ],
+      "gs1GpcCode": "10002446",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "disinfectant",
+      "nameFa": "ضدعفونی‌کننده",
+      "nameEn": "Disinfectant",
+      "aliases": [
+        "ضدعفونی",
+        "ضد عفونی",
+        "الکل ضدعفونی",
+        "مایع ضدعفونی",
+        "اسپری ضدعفونی"
+      ],
+      "keywords": [
+        "ضدعفونی",
+        "ضد عفونی"
+      ],
+      "excludeKeywords": [
+        "توالت",
+        "سطح"
+      ],
+      "gs1GpcCode": "10002450",
+      "hsCode": "CARTON",
+      "unit": "home-cleaning",
+      "attrs": [],
+      "categoryId": "home-cleaning"
+    },
+    {
+      "slug": "shampoo-hair",
+      "nameFa": "شامپو مو",
+      "nameEn": "Hair Shampoo",
+      "aliases": [
+        "شامپو مو",
+        "شامپو سر",
+        "شامپو ضد شوره",
+        "شامپو ضد ریزش"
+      ],
+      "keywords": [
+        "شامپو"
+      ],
+      "excludeKeywords": [
+        "فرش",
+        "مبلمان",
+        "ماشین",
+        "بدن",
+        "بچه",
+        "سر و بدن"
+      ],
+      "gs1GpcCode": "10002501",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "hair-conditioner",
+      "nameFa": "نرم‌کننده مو",
+      "nameEn": "Hair Conditioner",
+      "aliases": [
+        "نرم کننده مو",
+        "ماسک مو",
+        "بالم مو"
+      ],
+      "keywords": [
+        "نرم",
+        "مو"
+      ],
+      "excludeKeywords": [
+        "لباس",
+        "بدن",
+        "صورت",
+        "بچه"
+      ],
+      "gs1GpcCode": "10002502",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "body-wash-shower-gel",
+      "nameFa": "ژل و شامپو بدن",
+      "nameEn": "Body Wash",
+      "aliases": [
+        "شامپو بدن",
+        "ژل بدن",
+        "مایع حمام",
+        "شاور ژل",
+        "سر و بدن"
+      ],
+      "keywords": [
+        "شامپو بدن",
+        "ژل بدن",
+        "ژل حمام",
+        "شاور",
+        "مایع حمام",
+        "سر و بدن"
+      ],
+      "excludeKeywords": [
+        "صورت",
+        "مو",
+        "بچه",
+        "فرش"
+      ],
+      "gs1GpcCode": "10002505",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "bar-soap",
+      "nameFa": "صابون",
+      "nameEn": "Bar Soap",
+      "aliases": [
+        "صابون کرمی",
+        "صابون گلیسیرین",
+        "صابون بچه",
+        "صابون گیاهی"
+      ],
+      "keywords": [
+        "صابون"
+      ],
+      "excludeKeywords": [
+        "مایع",
+        "دستشویی",
+        "توالت",
+        "ماشین",
+        "پودر",
+        "دست",
+        "ظرفشویی"
+      ],
+      "gs1GpcCode": "10002510",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "hand-soap-liquid",
+      "nameFa": "مایع دستشویی",
+      "nameEn": "Liquid Hand Soap",
+      "aliases": [
+        "مایع دست",
+        "فوم دستشویی",
+        "مایع دستشویی کرمدار"
+      ],
+      "keywords": [
+        "مایع",
+        "دستشویی",
+        "فوم"
+      ],
+      "excludeKeywords": [
+        "ظرفشویی",
+        "توالت",
+        "کاسه",
+        "ماشین",
+        "ضدعفونی سطوح",
+        "سطح",
+        "سر و بدن"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "دست",
+          "دستشویی"
+        ]
+      ],
+      "gs1GpcCode": "10002511",
+      "hsCode": "3401",
+      "unit": "CARTON",
+      "categoryId": "personal-care",
+      "attrs": []
+    },
+    {
+      "slug": "hand-body-lotion",
+      "nameFa": "لوسیون دست و بدن",
+      "nameEn": "Hand & Body Lotion",
+      "aliases": [
+        "لوسیون بدن",
+        "لوسیون دست",
+        "کرم بدن",
+        "روغن بدن",
+        "کرم دست"
+      ],
+      "keywords": [
+        "لوسیون",
+        "روغن بدن",
+        "کرم دست",
+        "کرم بدن"
+      ],
+      "excludeKeywords": [
+        "صورت",
+        "مو",
+        "بچه",
+        "خوراکی",
+        "ماشین",
+        "روغن کنجد",
+        "روغن زیتون",
+        "روغن نارگیل",
+        "روغن کرچک",
+        "روغن کودک",
+        "آفتاب"
+      ],
+      "gs1GpcCode": "10002515",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "face-cream",
+      "nameFa": "کرم صورت",
+      "nameEn": "Face Cream",
+      "aliases": [
+        "کرم صورت",
+        "کرم دور چشم",
+        "کرم روز",
+        "کرم شب",
+        "کرم مرطوب کننده",
+        "کرم آبرسان"
+      ],
+      "keywords": [
+        "کرم",
+        "صورت"
+      ],
+      "excludeKeywords": [
+        "بدن",
+        "دست",
+        "بچه",
+        "مو",
+        "پا",
+        "آفتاب",
+        "صبحانه",
+        "ماشین",
+        "کاکائو"
+      ],
+      "gs1GpcCode": "10002520",
+      "hsCode": "CARTON",
+      "unit": "cosmetics",
+      "attrs": [],
+      "categoryId": "cosmetics"
+    },
+    {
+      "slug": "sunscreen",
+      "nameFa": "ضد آفتاب",
+      "nameEn": "Sunscreen",
+      "aliases": [
+        "کرم ضد آفتاب",
+        "ضد آفتاب صورت",
+        "ضد آفتاب بدن",
+        "لوسیون ضد آفتاب"
+      ],
+      "keywords": [
+        "ضد آفتاب",
+        "ضدآفتاب"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002525",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "toothpaste",
+      "nameFa": "خمیر دندان",
+      "nameEn": "Toothpaste",
+      "aliases": [
+        "خمیردندان",
+        "خمیر دندان کودک"
+      ],
+      "keywords": [
+        "خمیر",
+        "دندان"
+      ],
+      "excludeKeywords": [
+        "مسواک",
+        "نخ دندان",
+        "دهانشویه"
+      ],
+      "gs1GpcCode": "10002530",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "toothbrush",
+      "nameFa": "مسواک",
+      "nameEn": "Toothbrush",
+      "aliases": [
+        "مسواک کودک",
+        "مسواک برقی"
+      ],
+      "keywords": [
+        "مسواک"
+      ],
+      "excludeKeywords": [
+        "خمیر",
+        "نخ",
+        "دهانشویه"
+      ],
+      "gs1GpcCode": "10002531",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "mouthwash",
+      "nameFa": "دهانشویه",
+      "nameEn": "Mouthwash",
+      "aliases": [
+        "دهان شویه",
+        "دهان‌شویه",
+        "مایع دهانشویه"
+      ],
+      "keywords": [
+        "دهانشویه",
+        "دهان شویه"
+      ],
+      "excludeKeywords": [
+        "خمیر",
+        "مسواک",
+        "نخ"
+      ],
+      "gs1GpcCode": "10002532",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "dental-floss",
+      "nameFa": "نخ دندان",
+      "nameEn": "Dental Floss",
+      "aliases": [
+        "نخ‌دندان",
+        "نخ خلال"
+      ],
+      "keywords": [
+        "نخ دندان",
+        "نخ‌دندان",
+        "نخ خلال"
+      ],
+      "excludeKeywords": [
+        "خمیر",
+        "مسواک",
+        "دهانشویه"
+      ],
+      "gs1GpcCode": "10002533",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "razor-blade",
+      "nameFa": "خودتراش و تیغ",
+      "nameEn": "Razor",
+      "aliases": [
+        "خودتراش",
+        "تیغ",
+        "ژل اصلاح",
+        "فوم اصلاح",
+        "کرم اصلاح"
+      ],
+      "keywords": [
+        "خودتراش",
+        "تیغ",
+        "اصلاح"
+      ],
+      "excludeKeywords": [
+        "خمیر دندان",
+        "دهانشویه"
+      ],
+      "gs1GpcCode": "10002535",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "perfume-cologne",
+      "nameFa": "عطر و ادکلن",
+      "nameEn": "Perfume",
+      "aliases": [
+        "عطر",
+        "ادکلن",
+        "ادوپرفیوم",
+        "بادی اسپلش",
+        "بادی‌اسپلش"
+      ],
+      "keywords": [
+        "عطر",
+        "ادکلن",
+        "ادوپرفیوم",
+        "بادی اسپلش",
+        "بادی‌اسپلش"
+      ],
+      "excludeKeywords": [
+        "خوشبوکننده",
+        "اسپری خانه",
+        "محیطی",
+        "عود",
+        "ضدتعریق"
+      ],
+      "gs1GpcCode": "10002540",
+      "hsCode": "PIECE",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "deodorant-antiperspirant",
+      "nameFa": "ضدتعریق",
+      "nameEn": "Deodorant",
+      "aliases": [
+        "ضد تعریق",
+        "استیک ضد تعریق",
+        "اسپری مردانه",
+        "اسپری زنانه",
+        "رول ضد تعریق"
+      ],
+      "keywords": [
+        "ضدتعریق",
+        "ضد تعریق"
+      ],
+      "excludeKeywords": [
+        "عطر",
+        "ادکلن",
+        "خوشبوکننده هوا",
+        "محیطی",
+        "عود"
+      ],
+      "gs1GpcCode": "10002541",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "lip-care",
+      "nameFa": "بالم لب",
+      "nameEn": "Lip Care",
+      "aliases": [
+        "پماد لب",
+        "کرم لب",
+        "روغن لب",
+        "نرم کننده لب"
+      ],
+      "keywords": [
+        "لب",
+        "بالم"
+      ],
+      "excludeKeywords": [
+        "رژلب",
+        "برق لب",
+        "آرایش"
+      ],
+      "gs1GpcCode": "10002545",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "hair-styling-gel",
+      "nameFa": "ژل و وکس مو",
+      "nameEn": "Hair Styling",
+      "aliases": [
+        "ژل مو",
+        "وکس مو",
+        "خاک مو",
+        "اسپری مو",
+        "فوم مو"
+      ],
+      "keywords": [
+        "ژل مو",
+        "وکس مو",
+        "خاک مو",
+        "فوم مو"
+      ],
+      "excludeKeywords": [
+        "اسپری ضدتعریق",
+        "ژل بدن",
+        "ژل اصلاح",
+        "ژل حمام",
+        "شامپو"
+      ],
+      "gs1GpcCode": "10002550",
+      "hsCode": "CARTON",
+      "unit": "cosmetics",
+      "attrs": [],
+      "categoryId": "cosmetics"
+    },
+    {
+      "slug": "hair-color-dye",
+      "nameFa": "رنگ مو",
+      "nameEn": "Hair Color",
+      "aliases": [
+        "رنگ مو دائمی",
+        "رنگ مو نیمه دائم",
+        "هاشور مو",
+        "رنگ‌بر مو"
+      ],
+      "keywords": [
+        "رنگ مو"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002555",
+      "hsCode": "CARTON",
+      "unit": "cosmetics",
+      "attrs": [],
+      "categoryId": "cosmetics"
+    },
+    {
+      "slug": "wet-wipes",
+      "nameFa": "دستمال مرطوب",
+      "nameEn": "Wet Wipes",
+      "aliases": [
+        "دستمال مرطوب کودک",
+        "دستمال ضدعفونی",
+        "ویپس"
+      ],
+      "keywords": [
+        "دستمال",
+        "مرطوب"
+      ],
+      "excludeKeywords": [
+        "کاغذی",
+        "رولی",
+        "خشک",
+        "توالت",
+        "آشپزخانه",
+        "صورت"
+      ],
+      "gs1GpcCode": "10002560",
+      "hsCode": "CARTON",
+      "unit": "tissue",
+      "attrs": [],
+      "categoryId": "tissue"
+    },
+    {
+      "slug": "cotton-pad",
+      "nameFa": "پنبه و پد آرایشی",
+      "nameEn": "Cotton Pads",
+      "aliases": [
+        "پنبه",
+        "پد آرایش",
+        "پد پاک‌کننده",
+        "پد گوش",
+        "پنبه سنگی"
+      ],
+      "keywords": [
+        "پنبه",
+        "پد آرایش",
+        "پد پاک‌کننده"
+      ],
+      "excludeKeywords": [
+        "نوار",
+        "بهداشتی"
+      ],
+      "gs1GpcCode": "10002565",
+      "hsCode": "CARTON",
+      "unit": "tissue",
+      "attrs": [],
+      "categoryId": "tissue"
+    },
+    {
+      "slug": "sanitary-napkin",
+      "nameFa": "نوار بهداشتی",
+      "nameEn": "Sanitary Napkin",
+      "aliases": [
+        "پد بهداشتی",
+        "پد بانوان",
+        "نوار بهداشتی بانوان",
+        "تامپون"
+      ],
+      "keywords": [
+        "نوار بهداشتی",
+        "پد بهداشتی"
+      ],
+      "excludeKeywords": [
+        "پنبه",
+        "پد آرایش"
+      ],
+      "gs1GpcCode": "10002570",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "diaper-adult-baby",
+      "nameFa": "پوشک و نیپر",
+      "nameEn": "Diaper",
+      "aliases": [
+        "پوشک کودک",
+        "پوشک بزرگسال",
+        "نیپر",
+        "پوشک نوزاد"
+      ],
+      "keywords": [
+        "پوشک",
+        "نیپر"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002575",
+      "hsCode": "CARTON",
+      "unit": "baby-care",
+      "attrs": [],
+      "categoryId": "baby-care"
+    },
+    {
+      "slug": "baby-care-product",
+      "nameFa": "محصول مراقبت کودک",
+      "nameEn": "Baby Care",
+      "aliases": [
+        "کرم کودک",
+        "شامپو کودک",
+        "لوسیون کودک",
+        "روغن کودک",
+        "پماد کودک",
+        "بچه شامپو"
+      ],
+      "keywords": [
+        "کودک",
+        "بچه"
+      ],
+      "excludeKeywords": [
+        "پوشک",
+        "بهداشتی",
+        "نوار",
+        "مسواک",
+        "پد بهداشتی"
+      ],
+      "gs1GpcCode": "10002580",
+      "hsCode": "CARTON",
+      "unit": "baby-care",
+      "attrs": [],
+      "categoryId": "baby-care"
+    },
+    {
+      "slug": "condom",
+      "nameFa": "کاندوم",
+      "nameEn": "Condom",
+      "aliases": [],
+      "keywords": [
+        "کاندوم"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002585",
+      "hsCode": "CARTON",
+      "unit": "personal-care",
+      "attrs": [],
+      "categoryId": "personal-care"
+    },
+    {
+      "slug": "face-mask",
+      "nameFa": "ماسک صورت",
+      "nameEn": "Face Mask",
+      "aliases": [
+        "ماسک صورت",
+        "ماسک آبرسان",
+        "ماسک اسکراب"
+      ],
+      "keywords": [
+        "ماسک"
+      ],
+      "excludeKeywords": [
+        "ماسک مو",
+        "ماسک پاک‌کننده",
+        "ماسک فرش"
+      ],
+      "gs1GpcCode": "10002590",
+      "hsCode": "CARTON",
+      "unit": "cosmetics",
+      "attrs": [],
+      "categoryId": "cosmetics"
+    },
+    {
+      "slug": "toilet-paper",
+      "nameFa": "دستمال کاغذی توالت",
+      "nameEn": "Toilet Paper",
+      "aliases": [
+        "دستمال توالت",
+        "توالت کاغذی",
+        "دستمال کاغذی رولی"
+      ],
+      "keywords": [
+        "دستمال کاغذی",
+        "توالت"
+      ],
+      "excludeKeywords": [
+        "مرطوب",
+        "آشپزخانه",
+        "روی میز",
+        "صورت"
+      ],
+      "gs1GpcCode": "10002600",
+      "hsCode": "CARTON",
+      "unit": "tissue",
+      "attrs": [],
+      "categoryId": "tissue"
+    },
+    {
+      "slug": "facial-tissue",
+      "nameFa": "دستمال روی میز",
+      "nameEn": "Facial Tissue",
+      "aliases": [
+        "دستمال صورت",
+        "دستمال روی میز",
+        "دستمال جعبه‌ای"
+      ],
+      "keywords": [
+        "دستمال",
+        "روی میز",
+        "صورت"
+      ],
+      "excludeKeywords": [
+        "کاغذی توالت",
+        "توالت",
+        "مرطوب",
+        "آشپزخانه",
+        "رولی"
+      ],
+      "gs1GpcCode": "10002605",
+      "hsCode": "CARTON",
+      "unit": "tissue",
+      "attrs": [],
+      "categoryId": "tissue"
+    },
+    {
+      "slug": "paper-towel",
+      "nameFa": "دستمال آشپزخانه",
+      "nameEn": "Paper Towel",
+      "aliases": [
+        "دستمال کاغذی آشپزخانه",
+        "رول آشپزخانه"
+      ],
+      "keywords": [
+        "دستمال",
+        "آشپزخانه"
+      ],
+      "excludeKeywords": [
+        "مرطوب",
+        "توالت",
+        "روی میز",
+        "صورت"
+      ],
+      "gs1GpcCode": "10002610",
+      "hsCode": "CARTON",
+      "unit": "tissue",
+      "attrs": [],
+      "categoryId": "tissue"
+    },
+    {
+      "slug": "disposable-tableware",
+      "nameFa": "ظروف یکبارمصرف",
+      "nameEn": "Disposable Tableware",
+      "aliases": [
+        "بشقاب یکبارمصرف",
+        "لیوان یکبارمصرف",
+        "چنگال یکبارمصرف",
+        "قاشق یکبارمصرف",
+        "نی",
+        "سفره یکبارمصرف"
+      ],
+      "keywords": [
+        "یکبارمصرف",
+        "یکبار مصرف"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002615",
+      "hsCode": "CARTON",
+      "unit": "disposables",
+      "attrs": [],
+      "categoryId": "disposables"
+    },
+    {
+      "slug": "garbage-bag",
+      "nameFa": "کیسه زباله",
+      "nameEn": "Garbage Bag",
+      "aliases": [
+        "نایلون زباله",
+        "کیسه نایلونی",
+        "زبان نایلون"
+      ],
+      "keywords": [
+        "کیسه زباله",
+        "نایلون",
+        "نایلونی"
+      ],
+      "excludeKeywords": [
+        "یخچال",
+        "فریزر",
+        "شیرین"
+      ],
+      "gs1GpcCode": "10002620",
+      "hsCode": "CARTON",
+      "unit": "films-nylons",
+      "attrs": [],
+      "categoryId": "films-nylons"
+    },
+    {
+      "slug": "freezer-bag",
+      "nameFa": "کیسه فریزر",
+      "nameEn": "Freezer Bag",
+      "aliases": [
+        "کیسه یخچال",
+        "نایلون فریزر",
+        "کیسه پلاستیکی"
+      ],
+      "keywords": [
+        "کیسه فریزر",
+        "کیسه یخچال",
+        "فریزر"
+      ],
+      "excludeKeywords": [
+        "زباله",
+        "نایلون زباله"
+      ],
+      "gs1GpcCode": "10002625",
+      "hsCode": "CARTON",
+      "unit": "films-nylons",
+      "attrs": [],
+      "categoryId": "films-nylons"
+    },
+    {
+      "slug": "aluminum-foil",
+      "nameFa": "فویل و ظروف آلومینیومی",
+      "nameEn": "Aluminum Foil",
+      "aliases": [
+        "فویل آلومینیوم",
+        "ظرف آلومینیوم",
+        "فویل آشپزخانه"
+      ],
+      "keywords": [
+        "فویل",
+        "آلومینیوم"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002630",
+      "hsCode": "CARTON",
+      "unit": "disposables",
+      "attrs": [],
+      "categoryId": "disposables"
+    },
+    {
+      "slug": "gloves-household",
+      "nameFa": "دستکش خانگی",
+      "nameEn": "Household Gloves",
+      "aliases": [
+        "دستکش ظرفشویی",
+        "دستکش خانگی",
+        "دستکش پلاستیکی",
+        "دستکش لاتکس"
+      ],
+      "keywords": [
+        "دستکش"
+      ],
+      "excludeKeywords": [
+        "طبی",
+        "جراحی"
+      ],
+      "gs1GpcCode": "10002635",
+      "hsCode": "CARTON",
+      "unit": "tissue",
+      "attrs": [],
+      "categoryId": "tissue"
+    },
+    {
+      "slug": "fire-extinguisher",
+      "nameFa": "کپسول اطفاء حریق",
+      "nameEn": "Fire Extinguisher",
+      "aliases": [
+        "اسپری اطفاء حریق",
+        "اسپری آتش نشانی"
+      ],
+      "keywords": [
+        "اطفاء",
+        "حریق",
+        "آتش نشانی"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002640",
+      "hsCode": "PIECE",
+      "unit": "hand-tools",
+      "attrs": [],
+      "categoryId": "hand-tools"
+    },
+    {
+      "slug": "shoe-polish",
+      "nameFa": "واکس کفش",
+      "nameEn": "Shoe Polish",
+      "aliases": [
+        "رنگ کفش",
+        "پماد کفش",
+        "براق‌کننده کفش"
+      ],
+      "keywords": [
+        "واکس",
+        "کفش"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002645",
+      "hsCode": "PIECE",
+      "unit": "hand-tools",
+      "attrs": [],
+      "categoryId": "hand-tools"
+    },
+    {
+      "slug": "battery",
+      "nameFa": "باتری",
+      "nameEn": "Battery",
+      "aliases": [
+        "باتتری",
+        "باتری قلمی",
+        "باتری نیم قلمی",
+        "باتری ساعت",
+        "باتری دکمه‌ای"
+      ],
+      "keywords": [
+        "باتری"
+      ],
+      "excludeKeywords": [],
+      "gs1GpcCode": "10002650",
+      "hsCode": "CARTON",
+      "unit": "batteries-power",
+      "attrs": [],
+      "categoryId": "batteries-power"
+    },
+    {
+      "slug": "pet-food",
+      "nameFa": "خوراک حیوانات خانگی",
+      "nameEn": "Pet Food",
+      "aliases": [
+        "غذای گربه",
+        "غذای سگ",
+        "خوراک گربه",
+        "خوراک سگ",
+        "خوراک حیوانات"
+      ],
+      "keywords": [
+        "خوراک",
+        "گربه",
+        "سگ",
+        "حیوانات"
+      ],
+      "excludeKeywords": [
+        "انسان",
+        "کودک",
+        "دام",
+        "طیور"
+      ],
+      "must_match_any_keyword_group": [
+        [
+          "گربه",
+          "سگ",
+          "حیوانات",
+          "پت"
+        ]
+      ],
+      "gs1GpcCode": "10002655",
+      "hsCode": "2309",
+      "unit": "CARTON",
+      "categoryId": "animal-feed",
+      "attrs": []
+    },
+    {
+      "slug": "charcoal",
+      "nameFa": "ذغال",
+      "nameEn": "Charcoal",
+      "aliases": [
+        "ذغال کبابی",
+        "زغال",
+        "ذغال خودسوز",
+        "هیزم"
+      ],
+      "keywords": [
+        "ذغال",
+        "زغال",
+        "هیزم"
+      ],
+      "excludeKeywords": [
+        "تنباکو",
+        "سیگار"
+      ],
+      "gs1GpcCode": "10002660",
+      "hsCode": "CARTON",
+      "unit": "hand-tools",
+      "attrs": [],
+      "categoryId": "hand-tools"
+    },
+    {
+      "slug": "lightbulb",
+      "nameFa": "لامپ",
+      "nameEn": "Light Bulb",
+      "aliases": [
+        "لامپ رشته‌ای",
+        "لامپ کم‌مصرف",
+        "لامپ LED",
+        "لامپ هالوژن"
+      ],
+      "keywords": [
+        "لامپ"
+      ],
+      "excludeKeywords": [
+        "ماشین",
+        "خودرو"
+      ],
+      "gs1GpcCode": "10002665",
+      "hsCode": "PIECE",
+      "unit": "lighting",
+      "attrs": [],
+      "categoryId": "lighting"
+    }
+  ]
+}
