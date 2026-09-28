@@ -346,6 +346,9 @@ model Product {
   @@index([barcode])
   @@index([status])
   @@index([brandId]) // brand filter in the reference picker
+  @@index([status, brandId]) // groupBy brand sidebar (-picker)
+  @@index([status, goodId]) // groupBy category sidebar (picker)
+  @@index([status, searchText]) // free-text search with status filter
 }
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────

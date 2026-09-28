@@ -309,6 +309,7 @@ export class ProductsService {
       // چون موقع import از clean_name (که از good هست) استفاده شده.
       where.searchText = { contains: normalizeFa(q) };
     }
+    let goodIdsForCat: string[] | null = null;
     if (params.categoryId) {
       // fetch goodIds for this category subtree first, then filter products
       const cats = await this.prisma.category.findMany({ select: { id: true, parentId: true } });
@@ -333,6 +334,9 @@ export class ProductsService {
         select: { id: true },
       });
       where.goodId = { in: goodsInCat.map(g => g.id) };
+      // Save the raw list for use in MongoDB aggregate (Prisma's { in: [...] } object
+      // doesn't translate directly to MongoDB's { $in: [...] } — ObjectId conversion)
+      goodIdsForCat = goodsInCat.map(g => g.id);
     }
 
     const t0 = Date.now();
@@ -345,28 +349,119 @@ export class ProductsService {
     const page = toPage(rows, limit);
     const decorated = await this.decoratePage(page.items, params.businessId);
 
-    // ── نوار برند و دسته — از همان صفحه‌ی فعلی محاسبه می‌شود (نه کل کاتالوگ)
-    // قبلاً ۵۰۰ ردیف جداگانه می‌گرفتیم که با ۴۰هزار محصول خیلی کنده بود.
-    // حالا از همان ردیف‌های fetch شده برای نوار برند/دسته استفاده می‌کنیم.
-    // وقتی کاربر برند/دسته خاصی را انتخاب می‌کند، URL فیلتر می‌کند و ردیف‌های
-    // صفحه بعد از همان فیلتر می‌آیند — نوار هم به‌طور طبیعی متناسب می‌شود.
-    const brandCount = new Map<string, { id: string; name: string; count: number }>();
-    const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
-    for (const r of rows.slice(0, limit)) {
-      if (r.brand) {
-        const cur = brandCount.get(r.brand.id);
-        if (cur) cur.count += 1;
-        else brandCount.set(r.brand.id, { id: r.brand.id, name: r.brand.name, count: 1 });
-      }
-      const c = r.good?.category;
-      if (c) {
-        const cur = catCount.get(c.id);
-        if (cur) cur.count += 1;
-        else catCount.set(c.id, { id: c.id, nameFa: c.nameFa, nameEn: c.nameEn ?? "", count: 1 });
-      }
+    // ── نوار برند — همه‌ی برندهای موجود در scope فعلی (نه فقط صفحه‌ی فعلی).
+    // از MongoDB aggregate مستقیم استفاده می‌کنیم — Prisma groupBy روی ۴۰هزار
+    // محصول کند است (۳۰ ثانیه!) ولی MongoDB aggregate فقط ۳۰۰ms.
+    // NOTE: وقتی کاربر برند خاصی را انتخاب می‌کند (params.brandId)، آن برند از
+    // نوار حذف نمی‌شود — نوار ثابت می‌ماند تا کاربر بداند چه برندهایی در این دسته هستن.
+    const brandAggMatch: Record<string, unknown> = {
+      status: { $ne: "MERGED" },
+      brandId: { $ne: null, $exists: true },
+      ...(params.goodId ? { goodId: params.goodId } : {}),
+      ...(goodIdsForCat ? { goodId: { $in: goodIdsForCat } } : {}),
+    };
+    if (q) {
+      brandAggMatch.searchText = { $regex: normalizeFa(q), $options: "i" };
     }
-    const brands = [...brandCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
-    const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 20);
+
+    const catAggMatch: Record<string, unknown> = {
+      status: { $ne: "MERGED" },
+      ...(params.goodId ? { goodId: params.goodId } : {}),
+      ...(goodIdsForCat ? { goodId: { $in: goodIdsForCat } } : {}),
+    };
+    if (q) {
+      catAggMatch.searchText = { $regex: normalizeFa(q), $options: "i" };
+    }
+
+    // Use raw MongoDB aggregate via the underlying connection.
+    // Prisma's groupBy is slow (30s on 40k products), but MongoDB's aggregate
+    // with $match + $group + $sort is ~300ms.
+    // We need ObjectId conversion for goodId $in — Prisma's runCommandRaw
+    // doesn't auto-convert hex strings to ObjectId, so we use EJSON.
+    const objectId = (hex: string): { $oid: string } => ({ $oid: hex });
+    const brandGoodIdFilter = goodIdsForCat
+      ? { goodId: { $in: goodIdsForCat.map(objectId) } }
+      : (params.goodId ? { goodId: objectId(params.goodId) } : {});
+    const catGoodIdFilter = goodIdsForCat
+      ? { goodId: { $in: goodIdsForCat.map(objectId) } }
+      : (params.goodId ? { goodId: objectId(params.goodId) } : {});
+
+    const brandAggPipeline = [
+      { $match: { ...brandAggMatch, ...brandGoodIdFilter } },
+      { $group: { _id: "$brandId", count: { $sum: 1 } } },
+      { $sort: { count: -1 } },
+      { $limit: 50 },
+    ];
+    const catAggPipeline = [
+      { $match: { ...catAggMatch, ...catGoodIdFilter } },
+      { $group: { _id: "$goodId", count: { $sum: 1 } } },
+      { $sort: { count: -1 } },
+      { $limit: 100 },
+    ];
+
+    const [brandAgg, catAgg] = await Promise.all([
+      (this.prisma as unknown as { $runCommandRaw: (cmd: unknown) => Promise<unknown> })
+        .$runCommandRaw({
+          aggregate: "Product",
+          pipeline: brandAggPipeline,
+          cursor: {},
+        }),
+      (this.prisma as unknown as { $runCommandRaw: (cmd: unknown) => Promise<unknown> })
+        .$runCommandRaw({
+          aggregate: "Product",
+          pipeline: catAggPipeline,
+          cursor: {},
+        }),
+    ]);
+
+    // brandAgg returns { cursor: { firstBatch: [...] } } — extract firstBatch
+    // _id may be an ObjectId instance, an EJSON {$oid: "..."} object, or a string.
+    // Normalize all three to a plain hex string for Prisma.
+    function toHexId(v: unknown): string {
+      if (!v) return "";
+      if (typeof v === "string") return v;
+      // EJSON extended JSON form: { $oid: "..." }
+      if (typeof v === "object" && v !== null && "$oid" in v) return String((v as { $oid: string }).$oid);
+      // ObjectId instance (has toString/toHexString)
+      if (typeof v === "object" && v !== null && "toHexString" in v && typeof (v as { toHexString: () => string }).toHexString === "function") {
+        return (v as { toHexString: () => string }).toHexString();
+      }
+      // Fallback — toString() on an ObjectId returns hex
+      try { return String(v); } catch { return ""; }
+    }
+    const rawBrandGroups = (brandAgg as { cursor?: { firstBatch?: Array<{ _id: unknown; count: number }> } })?.cursor?.firstBatch ?? [];
+    const rawCatGroups = (catAgg as { cursor?: { firstBatch?: Array<{ _id: unknown; count: number }> } })?.cursor?.firstBatch ?? [];
+    const brandGroups = rawBrandGroups.map(g => ({ _id: toHexId(g._id), count: g.count }));
+    const catGroups = rawCatGroups.map(g => ({ _id: toHexId(g._id), count: g.count }));
+
+    // brandGroups only has _id (brandId) — fetch brand names
+    const brandIds = brandGroups.map(g => g._id).filter(Boolean) as string[];
+    const brandRows = brandIds.length > 0
+      ? await this.prisma.brand.findMany({ where: { id: { in: brandIds } }, select: { id: true, name: true } })
+      : [];
+    const brandNameMap = new Map(brandRows.map(b => [b.id, b.name]));
+    const brands = brandGroups
+      .map(g => ({ id: g._id!, name: brandNameMap.get(g._id!) ?? "نامشخص", count: g.count }))
+      .filter(b => b.count > 0);
+
+    // catGroups only has _id (goodId) — fetch category names via good
+    const goodIds = catGroups.map(g => g._id).filter(Boolean) as string[];
+    const goodRows = goodIds.length > 0
+      ? await this.prisma.good.findMany({
+          where: { id: { in: goodIds } },
+          select: { id: true, categoryId: true, category: { select: { id: true, nameFa: true, nameEn: true } } },
+        })
+      : [];
+    const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
+    const goodToCat = new Map(goodRows.map(g => [g.id, g.category]));
+    for (const g of catGroups) {
+      const cat = goodToCat.get(g._id);
+      if (!cat) continue;
+      const cur = catCount.get(cat.id);
+      if (cur) cur.count += g.count;
+      else catCount.set(cat.id, { id: cat.id, nameFa: cat.nameFa, nameEn: cat.nameEn ?? "", count: g.count });
+    }
+    const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
 
     return { ...page, items: decorated, brands, categories };
   }
