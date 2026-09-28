@@ -65,6 +65,8 @@ export interface BrandChipDto {
 export interface PickerPageDto {
   items: ProductRowDto[];
   nextCursor: string | null;
+  /** total products matching the current filter scope (not just this page) */
+  total: number;
   /** brands present in the current scope (q + categoryId + goodId),
    *  ranked by product count desc — powers the horizontal brand strip */
   brands: BrandChipDto[];
@@ -285,7 +287,7 @@ export class ProductsService {
         select: PRODUCT_SELECT,
       });
       const items = hit ? await this.decoratePage([hit], params.businessId) : [];
-      return { items, nextCursor: null, brands: [], categories: [] };
+      return { items, nextCursor: null, total: items.length, brands: [], categories: [] };
     }
 
     // فیلترهای پایه‌ی گروه کالا — داخل هر شاخه‌ی جست‌وجو می‌روند (فیلتر گودِ
@@ -471,7 +473,11 @@ export class ProductsService {
     }
     const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
 
-    return { ...page, items: decorated, brands, categories };
+    // ── Total count for the current scope (not just this page)
+    // Uses the same `where` — fast because it hits the same index
+    const total = await this.prisma.product.count({ where });
+
+    return { ...page, total, items: decorated, brands, categories };
   }
 
   /** sellers-count + «داریش» for one page of product rows — two bounded aggregates */
