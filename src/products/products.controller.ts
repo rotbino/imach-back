@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Put, Query, Req, UseGuards } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Patch, Post, Put, Query, Req, UseGuards } from "@nestjs/common";
 import type { FastifyRequest } from "fastify";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { assertBusinessOwner } from "../common/guards";
@@ -104,6 +104,123 @@ export class ProductsController {
     @CurrentLocale() locale: Locale
   ) {
     return this.products.adminMerge(user, { intoId: body.intoId, fromIds: body.fromIds, locale });
+  }
+
+  /**
+   * PATCH /products/adminEdit/:id — ویرایش محصول مرجع توسط ادمین.
+   * فیلدهای قابل ویرایش: label, brandId, goodId, barcode, imageUrl, status, attrs
+   */
+  @Patch("adminEdit/:id")
+  @UseGuards(JwtAuthGuard, AdminGuard)
+  async adminEdit(
+    @Param("id") id: string,
+    @Body() body: {
+      label?: string;
+      brandId?: string;
+      goodId?: string;
+      barcode?: string | null;
+      imageUrl?: string | null;
+      status?: string;
+      attrs?: Record<string, string> | null;
+    },
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const product = await this.prisma.product.findUnique({
+      where: { id },
+      select: { id: true, label: true, brandId: true, goodId: true, barcode: true, status: true },
+    });
+    if (!product) {
+      throw AppError.notFound(t(locale, "products.notFound", "محصول مرجع یافت نشد"));
+    }
+
+    const data: Record<string, unknown> = {};
+
+    if (body.label !== undefined) {
+      const label = body.label.trim();
+      if (label.length < 2) {
+        throw AppError.badRequest("label حداقل ۲ کاراکتر", "BAD_LABEL");
+      }
+      data.label = label;
+      const { normalizeFa } = await import("../common/catalog/catalog");
+      data.searchText = normalizeFa(label);
+    }
+
+    if (body.brandId !== undefined) {
+      if (body.brandId) {
+        const brand = await this.prisma.brand.findUnique({ where: { id: body.brandId }, select: { id: true } });
+        if (!brand) throw AppError.badRequest("برند یافت نشد", "BRAND_NOT_FOUND");
+      }
+      data.brandId = body.brandId || null;
+    }
+
+    if (body.goodId !== undefined) {
+      const good = await this.prisma.good.findUnique({ where: { id: body.goodId }, select: { id: true } });
+      if (!good) throw AppError.badRequest("کالا یافت نشد", "GOOD_NOT_FOUND");
+      data.goodId = body.goodId;
+    }
+
+    if (body.barcode !== undefined) {
+      data.barcode = body.barcode?.trim() || null;
+    }
+
+    if (body.imageUrl !== undefined) {
+      data.imageUrl = body.imageUrl?.trim() || null;
+    }
+
+    if (body.status !== undefined) {
+      if (!["ACTIVE", "PROVISIONAL", "MERGED"].includes(body.status)) {
+        throw AppError.badRequest("status نامعتبر", "BAD_STATUS");
+      }
+      data.status = body.status;
+    }
+
+    if (body.attrs !== undefined) {
+      data.attrs = body.attrs;
+    }
+
+    data.updatedAt = new Date();
+
+    const updated = await this.prisma.product.update({
+      where: { id },
+      data,
+      select: { id: true, label: true, barcode: true, imageUrl: true, status: true, brandId: true, goodId: true, attrs: true },
+    });
+
+    return updated;
+  }
+
+  /**
+   * DELETE /products/adminDelete/:id — حذف محصول مرجع توسط ادمین.
+   * اگر محصول آگهی فعال دارد، حذف مجاز نیست.
+   */
+  @Delete("adminDelete/:id")
+  @UseGuards(JwtAuthGuard, AdminGuard)
+  async adminDelete(
+    @Param("id") id: string,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const product = await this.prisma.product.findUnique({
+      where: { id },
+      select: { id: true, status: true },
+    });
+    if (!product) {
+      throw AppError.notFound(t(locale, "products.notFound", "محصول مرجع یافت نشد"));
+    }
+
+    const listingCount = await this.prisma.listing.count({
+      where: { productId: id, isActive: true },
+    });
+    if (listingCount > 0) {
+      throw AppError.badRequest(
+        `این محصول ${listingCount} آگهی فعال دارد و قابل حذف نیست. ابتدا آگهی‌ها را حذف یا انتقال دهید.`,
+        "HAS_LISTINGS"
+      );
+    }
+
+    await this.prisma.product.delete({ where: { id } });
+    return { ok: true };
   }
 
   /**
