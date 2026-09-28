@@ -60,6 +60,16 @@ export class GetProductsQueryDto {
   @Min(1)
   @Max(100)
   limit?: number;
+
+  /** فیلتر عکس: "yes" = فقط با عکس، "no" = فقط بدون عکس */
+  @IsOptional()
+  @IsIn(["yes", "no"])
+  hasImage?: string;
+
+  /** فیلتر وضعیت محصول */
+  @IsOptional()
+  @IsIn(["ACTIVE", "PROVISIONAL"])
+  status?: string;
 }
 
 /** PUT /products/adminMerge — collapse fragmented identities into one survivor. */

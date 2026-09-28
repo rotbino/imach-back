@@ -53,6 +53,8 @@ export class ProductsController {
       businessId: query.businessId,
       cursor: query.cursor,
       limit: query.limit,
+      hasImage: query.hasImage,
+      status: query.status,
     });
   }
 

@@ -272,6 +272,8 @@ export class ProductsService {
     businessId?: string;
     cursor?: string;
     limit?: number;
+    hasImage?: string;
+    status?: string;
   }): Promise<PickerPageDto> {
     const limit = Math.min(Math.max(params.limit ?? 40, 1), 100);
     const q = params.q?.trim();
@@ -297,11 +299,17 @@ export class ProductsService {
     const goodIdFilter = params.goodId ? { goodId: params.goodId } : {};
     const categoryIdFilter = params.categoryId ? {} : {}; // در صورت نیاز با lookup
     const where: Record<string, unknown> = {
-      status: { not: "MERGED" },
+      status: params.status ? params.status : { not: "MERGED" },
       ...goodIdFilter,
       ...(params.brandId ? { brandId: params.brandId } : {}),
       ...cursorBefore(decodeCursor(params.cursor)),
     };
+    // فیلتر عکس
+    if (params.hasImage === "yes") {
+      where.imageUrl = { not: null };
+    } else if (params.hasImage === "no") {
+      where.imageUrl = null;
+    }
     if (q) {
       // the typed word may describe the SKU («مکنزی ۲۵۰ گرم») or the class («تن ماهی»)
       // NOTE: قبلاً relation filter روی good.searchText داشتیم که کند بود.
