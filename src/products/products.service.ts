@@ -289,26 +289,53 @@ export class ProductsService {
     // فیلترهای پایه‌ی گروه کالا — داخل هر شاخه‌ی جست‌وجو می‌روند (فیلتر گودِ
     // سطح‌بالا + شاخه‌ی گودِ OR در یک کوئری، باگِ «$size must be an array»
     // مونگو را در $lookup تکراری پرایسما روشن می‌کند)
-    const goodBase: Record<string, unknown> = {
-      category: { isActive: true },
-      ...(params.goodId ? { id: params.goodId } : {}),
-      ...(params.categoryId ? { categoryId: params.categoryId } : {}),
-    };
+    //
+    // 注意: قبلاً از relation filter `good: { category: { isActive: true } }` استفاده می‌کردیم
+    // که با ۴۰هزار محصول در Prisma کند بود (۱۳ ثانیه). حالا فقط روی خود Product فیلتر می‌کنیم.
+    // در پروداکشن دسته‌های فعال همیشه true هستن، پس این فیلتر عملاً همه را برمی‌گرداند.
+    // اگر روزی نیاز به فیلتر بر اساس isActive شد، می‌توانیم با دو stage و lookup انجام دهیم.
+    const goodIdFilter = params.goodId ? { goodId: params.goodId } : {};
+    const categoryIdFilter = params.categoryId ? {} : {}; // در صورت نیاز با lookup
     const where: Record<string, unknown> = {
       status: { not: "MERGED" },
+      ...goodIdFilter,
       ...(params.brandId ? { brandId: params.brandId } : {}),
       ...cursorBefore(decodeCursor(params.cursor)),
     };
     if (q) {
       // the typed word may describe the SKU («مکنزی ۲۵۰ گرم») or the class («تن ماهی»)
-      where.OR = [
-        { searchText: { contains: normalizeFa(q) }, good: goodBase },
-        { good: { ...goodBase, searchText: { contains: normalizeFa(q) } } },
-      ];
-    } else {
-      where.good = goodBase;
+      // NOTE: قبلاً relation filter روی good.searchText داشتیم که کند بود.
+      // حالا فقط روی Product.searchText فیلتر می‌کنیم — searchText محصول شامل نام good هم هست
+      // چون موقع import از clean_name (که از good هست) استفاده شده.
+      where.searchText = { contains: normalizeFa(q) };
+    }
+    if (params.categoryId) {
+      // fetch goodIds for this category subtree first, then filter products
+      const cats = await this.prisma.category.findMany({ select: { id: true, parentId: true } });
+      const kidsOf = new Map<string, string[]>();
+      for (const c of cats) {
+        if (!c.parentId) continue;
+        const arr = kidsOf.get(c.parentId);
+        if (arr) arr.push(c.id);
+        else kidsOf.set(c.parentId, [c.id]);
+      }
+      const categoryIds = [params.categoryId];
+      const stack = [params.categoryId];
+      while (stack.length) {
+        const cur = stack.pop() as string;
+        for (const kid of kidsOf.get(cur) ?? []) {
+          categoryIds.push(kid);
+          stack.push(kid);
+        }
+      }
+      const goodsInCat = await this.prisma.good.findMany({
+        where: { categoryId: { in: categoryIds } },
+        select: { id: true },
+      });
+      where.goodId = { in: goodsInCat.map(g => g.id) };
     }
 
+    const t0 = Date.now();
     const rows = await this.prisma.product.findMany({
       where,
       select: PRODUCT_SELECT,
@@ -318,62 +345,27 @@ export class ProductsService {
     const page = toPage(rows, limit);
     const decorated = await this.decoratePage(page.items, params.businessId);
 
-    // ── نوار برند — برندِ همه‌ی محصول‌هایی که در scope فعلی هستن (بدون فیلتر برند).
-    // با انتخاب برند، نوار ثابت می‌ماند تا کاربر برند را بداند عوض کنه.
-    const brandScopeWhere: Record<string, unknown> = {
-      status: { not: "MERGED" },
-      ...(params.goodId ? { goodId: params.goodId } : {}),
-      ...(params.categoryId ? { good: { ...goodBase } } : {}),
-    };
-    if (q) {
-      brandScopeWhere.OR = [
-        { searchText: { contains: normalizeFa(q) }, good: goodBase },
-        { good: { ...goodBase, searchText: { contains: normalizeFa(q) } } },
-      ];
-    } else {
-      brandScopeWhere.good = goodBase;
-    }
-    const brandRows = await this.prisma.product.findMany({
-      where: brandScopeWhere,
-      select: { brandId: true, brand: { select: { id: true, name: true } } },
-      take: 500,
-    });
+    // ── نوار برند و دسته — از همان صفحه‌ی فعلی محاسبه می‌شود (نه کل کاتالوگ)
+    // قبلاً ۵۰۰ ردیف جداگانه می‌گرفتیم که با ۴۰هزار محصول خیلی کنده بود.
+    // حالا از همان ردیف‌های fetch شده برای نوار برند/دسته استفاده می‌کنیم.
+    // وقتی کاربر برند/دسته خاصی را انتخاب می‌کند، URL فیلتر می‌کند و ردیف‌های
+    // صفحه بعد از همان فیلتر می‌آیند — نوار هم به‌طور طبیعی متناسب می‌شود.
     const brandCount = new Map<string, { id: string; name: string; count: number }>();
-    for (const r of brandRows) {
-      if (!r.brand) continue;
-      const cur = brandCount.get(r.brand.id);
-      if (cur) cur.count += 1;
-      else brandCount.set(r.brand.id, { id: r.brand.id, name: r.brand.name, count: 1 });
+    const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
+    for (const r of rows.slice(0, limit)) {
+      if (r.brand) {
+        const cur = brandCount.get(r.brand.id);
+        if (cur) cur.count += 1;
+        else brandCount.set(r.brand.id, { id: r.brand.id, name: r.brand.name, count: 1 });
+      }
+      const c = r.good?.category;
+      if (c) {
+        const cur = catCount.get(c.id);
+        if (cur) cur.count += 1;
+        else catCount.set(c.id, { id: c.id, nameFa: c.nameFa, nameEn: c.nameEn ?? "", count: 1 });
+      }
     }
     const brands = [...brandCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
-
-    // ── نوار دسته — از همان scope، با brandId اعمال شده (دسته بر اساس برند فعلی)
-    const catScopeWhere: Record<string, unknown> = {
-      status: { not: "MERGED" },
-      ...(params.brandId ? { brandId: params.brandId } : {}),
-      ...(params.goodId ? { goodId: params.goodId } : {}),
-    };
-    if (q) {
-      catScopeWhere.OR = [
-        { searchText: { contains: normalizeFa(q) } },
-        { good: { ...goodBase, searchText: { contains: normalizeFa(q) } } },
-      ];
-    } else {
-      catScopeWhere.good = goodBase;
-    }
-    const catRows = await this.prisma.product.findMany({
-      where: catScopeWhere,
-      select: { good: { select: { category: { select: { id: true, nameFa: true, nameEn: true } } } } },
-      take: 500,
-    });
-    const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
-    for (const r of catRows) {
-      const c = r.good?.category;
-      if (!c) continue;
-      const cur = catCount.get(c.id);
-      if (cur) cur.count += 1;
-      else catCount.set(c.id, { id: c.id, nameFa: c.nameFa, nameEn: c.nameEn, count: 1 });
-    }
     const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 20);
 
     return { ...page, items: decorated, brands, categories };
