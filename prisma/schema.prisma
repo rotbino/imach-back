@@ -252,6 +252,8 @@ model Good {
   listings    Listing[]
   /// SKU-level identities (brand×size) under this class — see Product.
   products    Product[]
+  /// فاز ۵ — خریدارهایی که قیمت این کالا را دنبال می‌کنند (شکاف ۱)
+  watchers    WatchedGood[]
 
   @@index([categoryId])
   @@index([searchText])
@@ -409,6 +411,8 @@ model Business {
   offersSent   Offer[]   @relation("seller")
   offersRecv   Offer[]   @relation("buyer")
   pages        Page[]
+  /// فاز ۵ — کالاهایی که این خریدار قیمتشان را دنبال می‌کند (لیست خرید)
+  watchedGoods WatchedGood[]
   /// Brands owned by this business (for brand dashboard)
   ownedBrands  Brand[]   @relation("BrandOwner")
   createdAt    DateTime  @default(now())
@@ -417,6 +421,28 @@ model Business {
   @@index([city])
   @@index([ownerId])
   @@index([trade])
+}
+
+// ─── WatchedGood (فاز ۵ — شکاف ۱) ────────────────────────────────────────────
+
+/// دنبال‌کردن قیمتِ یک کالا — رابطه‌ی خریدار↔کالا (good-level):
+/// ردیف‌های «لیست خرید» از همین‌ها + BUY listingهای موجود ساخته می‌شوند
+/// (گزینه‌ی کم‌ریسک مهاجرت: BUY listing منبع حجم/دوره می‌ماند).
+/// به‌ازای هر تغییر قیمتِ فعالِ همان کالا، یک اعلان PRICE_CHANGE — با
+/// throttle روزانه از طریق lastNotifiedAt.
+model WatchedGood {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  businessId String   @db.ObjectId
+  goodId    String    @db.ObjectId
+  createdAt DateTime  @default(now())
+  /// آخرین اعلانِ ارسال‌شده — حداکثر یک اعلان قیمت در روز به‌ازای هر کالا
+  lastNotifiedAt DateTime?
+
+  business Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  good     Good     @relation(fields: [goodId], references: [id], onDelete: Cascade)
+
+  @@unique([businessId, goodId])
+  @@index([goodId])
 }
 
 // ─── PushSubscription (Web Push — VAPID) ─────────────────────────────────────

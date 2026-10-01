@@ -13,6 +13,7 @@ import { FilesService } from "../files/files.service";
 import { ProductsService, productIdentityParts } from "../products/products.service";
 import { BulkSaveDto } from "../products/dto/product.dto";
 import { refreshCatalogCount } from "../common/catalog/catalog-count";
+import { NotificationsService } from "../notifications/notifications.service";
 import { SaveListingDto, CopyFromDto, SetActiveDto } from "./dto/listing.dto";
 
 /**
@@ -113,7 +114,8 @@ export class ListingsController {
     private readonly prisma: PrismaService,
     private readonly cache: CacheService,
     private readonly files: FilesService,
-    private readonly products: ProductsService
+    private readonly products: ProductsService,
+    private readonly notifications: NotificationsService
   ) {}
 
   /**
@@ -379,10 +381,59 @@ export class ListingsController {
       await this.prisma.priceLog.create({
         data: { listingId: listing.id, oldMinor: prevMinor, newMinor: listing.priceMinor },
       });
+      // فاز ۵ (شکاف ۲) — PriceLog دیگر بی‌صدا نیست: کسانی که این کالا را
+      // دنبال می‌کنند یک اعلان PRICE_CHANGE می‌گیرند (حداکثر روزی یکی).
+      await this.notifyPriceWatchers(
+        { goodId: listing.good.id, businessId: business.id, listingId: listing.id },
+        business.name
+      );
     }
 
     this.invalidateFor(business.id, business.slug);
     return listing;
+  }
+
+  /** اعلان تغییر قیمت به دنبال‌کنندگانِ همان کالا — با throttle روزانه
+   *  (lastNotifiedAt روی WatchedGood). فروشنده‌ی خودِ کالا طبیعتاً بی‌صدا می‌ماند.
+   *  best-effort: خطای اعلان هرگز ذخیره‌ی قیمت را نمی‌شکند.
+   *  ⚠ فیلترِ «رسیده به نوبت» در JS انجام می‌شود — فیلتر null روی فیلدِ
+   *  غایب در MongoDB (Prisma) مطابقت نمی‌دهد (رفتار اثبات‌شده در تست E2E). */
+  private async notifyPriceWatchers(
+    listing: { goodId: string; businessId: string; listingId: string },
+    sellerName: string
+  ): Promise<void> {
+    try {
+      const dayAgo = new Date(Date.now() - 24 * 3600 * 1000);
+      const watchers = await this.prisma.watchedGood.findMany({
+        where: { goodId: listing.goodId, businessId: { not: listing.businessId } },
+        select: { id: true, businessId: true, lastNotifiedAt: true },
+      });
+      const due = watchers.filter((w) => !w.lastNotifiedAt || w.lastNotifiedAt < dayAgo);
+      if (due.length === 0) return;
+      const good = await this.prisma.good.findUnique({
+        where: { id: listing.goodId },
+        select: { nameFa: true },
+      });
+      const owners = await this.prisma.business.findMany({
+        where: { id: { in: due.map((w) => w.businessId) }, ownerId: { not: null } },
+        select: { ownerId: true },
+      });
+      await this.notifications.pushMany(
+        owners.map((o) => ({
+          userId: o.ownerId as string,
+          type: "PRICE_CHANGE" as const,
+          actorId: listing.businessId,
+          actorName: sellerName,
+          good: good?.nameFa ?? null,
+        }))
+      );
+      await this.prisma.watchedGood.updateMany({
+        where: { id: { in: due.map((w) => w.id) } },
+        data: { lastNotifiedAt: new Date() },
+      });
+    } catch {
+      /* notification is best-effort — never break the price save */
+    }
   }
 
   /**

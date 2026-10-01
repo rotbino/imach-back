@@ -74,6 +74,21 @@ export class UnfollowSupplierDto {
   businessId: string;
 }
 
+/** POST /market/watchGood — فاز ۵ (طرح ۰۸/۰۲): دنبال‌کردن قیمت یک کالا */
+export class WatchGoodDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  goodId: string;
+}
+
+/** POST /market/unwatchGood/:goodId */
+export class UnwatchGoodDto {
+  @IsString()
+  businessId: string;
+}
+
 /** POST /market/removeFollower — catalog owner removes a follower from «مشتریان من». */
 export class RemoveFollowerDto {
   @IsString()

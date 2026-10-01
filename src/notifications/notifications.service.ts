@@ -9,13 +9,15 @@ import { PushService } from "./push.service";
  *  OFFER           — پیشنهاد مستقیم روی درخواست خرید من نشست
  *  QUOTE           — موتور تطبیق، استعلام قیمت را به من رساند
  *  CONTACT_JOINED  — شماره‌ای از دفترچه‌ی من همین حالا عضو iMach شد
+ *  PRICE_CHANGE    — فاز ۵ — کالایی که دنبال می‌کنم قیمتش عوض شد (شکاف ۲)
  */
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
   | "FOLLOW_BUYER"
   | "OFFER"
   | "QUOTE"
-  | "CONTACT_JOINED";
+  | "CONTACT_JOINED"
+  | "PRICE_CHANGE";
 
 export interface NotificationInput {
   userId: string;
@@ -53,6 +55,10 @@ const PUSH_VIEWS: Record<
   CONTACT_JOINED: {
     text: (n) => `${n.actorName ?? "کسی"} عضو iMach شد`,
     url: "/market",
+  },
+  PRICE_CHANGE: {
+    text: (n) => `قیمت «${n.good ?? "کالا"}» به‌روز شد`,
+    url: "/buy",
   },
 };
 

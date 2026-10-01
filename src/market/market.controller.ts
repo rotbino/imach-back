@@ -34,6 +34,8 @@ import {
   RequestQuoteDto,
   SendOfferDto,
   UnfollowSupplierDto,
+  UnwatchGoodDto,
+  WatchGoodDto,
 } from "./dto/market.dto";
 
 /** ObjectId hex guard — keeps invalid params away from Prisma. */
@@ -559,6 +561,221 @@ export class MarketController {
     });
     this.cache.invalidateTag(`market:inq:${inquiry.sellerId}`);
     return { ok: true };
+  }
+
+  // ═══ فاز ۵ — دنبال‌کردن قیمت (شکاف ۱) و لیست خرید (طرح ۰۸) ═══
+
+  /** «دنبال کردن قیمت» — خریدار کالا را در لیست/تابلوی خودش می‌نشاند.
+   *  آیدی‌پاتنت: upsert؛ دنبال‌کردنِ دوباره بی‌ضرر است. */
+  @Post("watchGood")
+  @HttpCode(HttpStatus.CREATED)
+  async watchGood(
+    @Body() body: WatchGoodDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(body.goodId)) throw AppError.notFound("Good not found");
+    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const good = await this.prisma.good.findUnique({ where: { id: body.goodId }, select: { id: true } });
+    if (!good) throw AppError.notFound("Good not found");
+    const wg = await this.prisma.watchedGood.upsert({
+      where: { businessId_goodId: { businessId: body.businessId, goodId: body.goodId } },
+      create: { businessId: body.businessId, goodId: body.goodId },
+      update: {},
+    });
+    this.cache.invalidateTag(`market:watch:${body.businessId}`);
+    return { ok: true, watched: true, id: wg.id };
+  }
+
+  /** حذف از لیست خرید — «دنبال نکردن»؛ BUY listing مالک دست‌نخورده می‌ماند. */
+  @Post("unwatchGood/:goodId")
+  async unwatchGood(
+    @Param("goodId") goodId: string,
+    @Body() body: UnwatchGoodDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(goodId)) throw AppError.notFound("Good not found");
+    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    await this.prisma.watchedGood.deleteMany({ where: { businessId: body.businessId, goodId } });
+    this.cache.invalidateTag(`market:watch:${body.businessId}`);
+    return { ok: true, watched: false };
+  }
+
+  /**
+   * لیست خرید (طرح ۰۸) — ردیف‌ها = WatchedGoodها + BUY listingهای موجود،
+   * ادغام‌شده بر حسب کالا (مهاجرت کم‌ریسک: BUY listing منبع حجم/دوره می‌ماند).
+   * هر ردیف خلاصه‌ی تابلوی تأمین همان کالا را دارد: تعداد تامین‌کننده‌ی فعال،
+   * ارزان‌ترین قیمت + فروشنده‌اش، روند هفتگی (PriceLog) و پرچم «تغییر قیمت».
+   * فروشنده‌های خودِ خریدار هرگز در تابلوی خودش نمی‌نشینند.
+   */
+  @Get("getWatchedGoods")
+  async getWatchedGoods(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+
+    const [buyListings, watched] = await Promise.all([
+      this.prisma.listing.findMany({
+        where: { businessId: query.businessId, mode: { in: ["BUY", "BOTH"] }, isActive: true },
+        select: { id: true, goodId: true, volume: true, frequency: true, variantLabel: true, createdAt: true },
+        orderBy: { createdAt: "desc" },
+      }),
+      this.prisma.watchedGood.findMany({
+        where: { businessId: query.businessId },
+        select: { goodId: true, createdAt: true, lastNotifiedAt: true },
+        orderBy: { createdAt: "desc" },
+      }),
+    ]);
+
+    const goodIds = [...new Set([...buyListings.map((l) => l.goodId), ...watched.map((w) => w.goodId)])];
+    if (goodIds.length === 0) return [];
+
+    const [goods, supply, logs] = await Promise.all([
+      this.prisma.good.findMany({
+        where: { id: { in: goodIds } },
+        select: {
+          id: true, nameFa: true, nameEn: true, unit: true,
+          category: { select: { slug: true, nameFa: true, nameEn: true } },
+        },
+      }),
+      this.prisma.listing.findMany({
+        where: {
+          goodId: { in: goodIds },
+          businessId: { not: query.businessId },
+          isActive: true,
+          mode: { in: ["SELL", "BOTH"] },
+          priceMinor: { not: null },
+        },
+        select: {
+          id: true, goodId: true, priceMinor: true, currency: true,
+          variantLabel: true, minOrder: true,
+          business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
+        },
+      }),
+      // تغییرات قیمتِ ۷ روز اخیرِ همان تابلوها — سوختِ روند و چیپ «تغییر قیمت»
+      this.prisma.priceLog.findMany({
+        where: {
+          createdAt: { gte: new Date(Date.now() - 7 * 24 * 3600 * 1000) },
+          listing: {
+            goodId: { in: goodIds },
+            isActive: true,
+            businessId: { not: query.businessId },
+            mode: { in: ["SELL", "BOTH"] },
+          },
+        },
+        select: { listingId: true, oldMinor: true, newMinor: true },
+        orderBy: { createdAt: "asc" },
+      }),
+    ]);
+
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+    const supplyByGood = new Map<string, typeof supply>();
+    for (const s of supply) {
+      const arr = supplyByGood.get(s.goodId) ?? [];
+      arr.push(s);
+      supplyByGood.set(s.goodId, arr);
+    }
+    // اولین تغییرِ داخل پنجره — قیمتِ «۷ روز پیش» همان oldMinor است
+    const firstLogOf = new Map<string, (typeof logs)[number]>();
+    for (const lg of logs) if (!firstLogOf.has(lg.listingId)) firstLogOf.set(lg.listingId, lg);
+    const changedGoods = new Set(
+      supply.filter((s) => firstLogOf.has(s.id)).map((s) => s.goodId)
+    );
+
+    const rows = goodIds.map((gid) => {
+      const board = supplyByGood.get(gid) ?? [];
+      const buy = buyListings.find((l) => l.goodId === gid) ?? null;
+      const watch = watched.find((w) => w.goodId === gid) ?? null;
+      const good = goodById.get(gid);
+
+      // ارزان‌ترین فروشنده‌ی فعال + قیمت هفت روز پیش برای روند
+      let cheapest: (typeof board)[number] | null = null;
+      for (const s of board) if (!cheapest || (s.priceMinor ?? 0) < (cheapest.priceMinor ?? 0)) cheapest = s;
+      let trendPct: number | null = null;
+      if (cheapest) {
+        const pastMin = Math.min(
+          ...board.map((s) => firstLogOf.get(s.id)?.oldMinor ?? (s.priceMinor as number))
+        );
+        if (pastMin > 0) trendPct = Math.round((((cheapest.priceMinor ?? 0) - pastMin) / pastMin) * 100);
+      }
+      return {
+        goodId: gid,
+        good: good ?? null,
+        buyListingId: buy?.id ?? null,
+        volume: buy?.volume ?? null,
+        frequency: buy?.frequency ?? null,
+        variantLabel: buy?.variantLabel ?? null,
+        watched: watch !== null,
+        watchedAt: watch?.createdAt ?? null,
+        lastNotifiedAt: watch?.lastNotifiedAt ?? null,
+        supplierCount: board.length,
+        cheapest: cheapest
+          ? {
+              listingId: cheapest.id,
+              priceMinor: cheapest.priceMinor,
+              currency: cheapest.currency,
+              minOrder: cheapest.minOrder,
+              variantLabel: cheapest.variantLabel,
+              seller: cheapest.business,
+            }
+          : null,
+        trendPct,
+        priceChanged: changedGoods.has(gid),
+      };
+    });
+
+    // تابلودارها اول (قابل‌اقدام)، بعد بی‌تابلوها؛ هر گروه بر اساس تازگی
+    const rowTime = (r: { watchedAt: Date | null; buyListingId: string | null }) =>
+      (r.watchedAt?.getTime() ?? 0) || (r.buyListingId ? 1 : 0);
+    rows.sort((a, b) => {
+      const aHas = a.supplierCount > 0 ? 1 : 0;
+      const bHas = b.supplierCount > 0 ? 1 : 0;
+      if (aHas !== bHas) return bHas - aHas;
+      return rowTime(b) - rowTime(a) || (b.volume ?? 0) - (a.volume ?? 0);
+    });
+    return rows;
+  }
+
+  /** «درخواست‌های من» (سمت خریدار — طرح ۰۸): استعلام‌هایی که فرستاده‌ام +
+   *  آخرین پیشنهادِ دریافتیِ هر کدام. بج هدر = شمار پاسخ‌های دریافتی. */
+  @Get("getMyInquiries")
+  async getMyInquiries(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const [rows, offers] = await Promise.all([
+      this.prisma.inquiry.findMany({
+        where: { buyerId: query.businessId },
+        include: {
+          listing: {
+            select: {
+              id: true, priceMinor: true, currency: true, variantLabel: true,
+              good: {
+                select: { id: true, nameFa: true, nameEn: true, unit: true, category: { select: { slug: true, nameFa: true, nameEn: true } } },
+              },
+            },
+          },
+          seller: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true, phone: true } },
+        },
+        orderBy: { id: "desc" },
+        take: 50,
+      }),
+      this.prisma.offer.findMany({
+        where: { buyerId: query.businessId },
+        select: { id: true, listingId: true, sellerId: true, priceMinor: true, currency: true, minOrder: true, note: true, createdAt: true },
+        orderBy: { id: "desc" },
+      }),
+    ]);
+    const offerKey = new Map(offers.map((o) => [`${o.listingId}:${o.sellerId}`, o]));
+    return {
+      rows: rows.map((r) => ({ ...r, offer: offerKey.get(`${r.listingId}:${r.sellerId}`) ?? null })),
+      answeredCount: rows.filter((r) => r.status === "ANSWERED").length,
+    };
   }
 
   /**
