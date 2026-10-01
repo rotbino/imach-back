@@ -24,7 +24,7 @@ import { cursorBefore, decodeCursor } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
-import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto, CatalogCategoriesDto } from "./dto/business.dto";
+import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto, CatalogCategoriesDto, NotifPrefsDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
@@ -116,6 +116,8 @@ export class BusinessesController {
         lat: true,
         lng: true,
         address: true,
+        // فاز ۸ (طرح ۱۴) — تنظیمات اعلان؛ null = همه روشن
+        notifPrefs: true,
         _count: { select: { listings: true } },
       },
       orderBy: { createdAt: "asc" },
@@ -292,6 +294,37 @@ export class BusinessesController {
     });
     if (!business) throw AppError.notFound("Business not found");
     return { phone: business.phone, name: business.name };
+  }
+
+  /**
+   * PUT /businesses/setNotifPrefs/:id — فاز ۸ (طرح ۱۴): تنظیمات اعلان
+   * از پروفایل. ذخیره‌ی ادغامی (merge): فقط کلیدهای ارسال‌شده عوض می‌شوند،
+   * بقیه دست‌نخورده می‌مانند — فرانت هر toggle را مستقل ذخیره می‌کند.
+   * بازگرداندن prefs کامل برای به‌روزرسانیِ optimistic سمت فرانت.
+   */
+  @Put("setNotifPrefs/:id")
+  @UseGuards(JwtAuthGuard)
+  async setNotifPrefs(
+    @Param("id") id: string,
+    @Body() body: NotifPrefsDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, id, locale);
+    const current = (business.notifPrefs as Record<string, unknown> | null) ?? {};
+    const prefs = {
+      ...current,
+      ...(body.priceChange !== undefined ? { priceChange: body.priceChange } : {}),
+      ...(body.quoteReplies !== undefined ? { quoteReplies: body.quoteReplies } : {}),
+      ...(body.suggestions !== undefined ? { suggestions: body.suggestions } : {}),
+      ...(body.push !== undefined ? { push: body.push } : {}),
+    };
+    await this.prisma.business.update({
+      where: { id: business.id },
+      data: { notifPrefs: prefs },
+    });
+    invalidateBusiness(this.cache, business.id, business.slug);
+    return prefs;
   }
 
   @Patch("editBusiness/:id")

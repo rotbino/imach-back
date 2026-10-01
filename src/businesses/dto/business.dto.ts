@@ -11,6 +11,7 @@ import {
   ArrayMaxSize,
   ValidateNested,
   Matches,
+  IsBoolean,
 } from "class-validator";
 import { Type } from "class-transformer";
 
@@ -94,6 +95,33 @@ export class EditBusinessDto {
   @IsString()
   @MaxLength(300)
   address?: string | null;
+}
+
+/**
+ * فاز ۸ (طرح ۱۴) — تنظیمات اعلانِ یک کسب‌وکار، از پروفایل.
+ * هر فیلد فقط false صریح را «خاموش» می‌کند؛ غایب = بدون تغییر.
+ * کل چهار کلید اختیاری‌اند تا فرانت بتواند هر toggle را جدا ذخیره کند.
+ */
+export class NotifPrefsDto {
+  /** PRICE_CHANGE — «تغییر قیمت در تابلوهای من» */
+  @IsOptional()
+  @IsBoolean()
+  priceChange?: boolean;
+
+  /** QUOTE + OFFER — «پاسخ درخواست‌های قیمت» */
+  @IsOptional()
+  @IsBoolean()
+  quoteReplies?: boolean;
+
+  /** FOLLOW_* + CONTACT_JOINED — «پیشنهادهای جدید iMach» */
+  @IsOptional()
+  @IsBoolean()
+  suggestions?: boolean;
+
+  /** فقط پوشِ وب خاموش می‌شود؛ ردیفِ درون‌برنامه‌ای می‌ماند */
+  @IsOptional()
+  @IsBoolean()
+  push?: boolean;
 }
 
 /** اکسپلور — سمت بازار (فروش/خرید) و شهرِ ترجیحی برای چیدمان */

@@ -395,6 +395,9 @@ export class ListingsController {
 
   /** اعلان تغییر قیمت به دنبال‌کنندگانِ همان کالا — با throttle روزانه
    *  (lastNotifiedAt روی WatchedGood). فروشنده‌ی خودِ کالا طبیعتاً بی‌صدا می‌ماند.
+   *  فاز ۸: دیده‌بانی که «تغییر قیمت در تابلوهای من» را خاموش کرده،
+   *  نه اعلان می‌گیرد و نه پنجره‌ی روزانه‌اش مصرف می‌شود — بعداً که
+   *  روشنش کرد، تغییرِ بعدی همان لحظه می‌رسد.
    *  best-effort: خطای اعلان هرگز ذخیره‌ی قیمت را نمی‌شکند.
    *  ⚠ فیلترِ «رسیده به نوبت» در JS انجام می‌شود — فیلتر null روی فیلدِ
    *  غایب در MongoDB (Prisma) مطابقت نمی‌دهد (رفتار اثبات‌شده در تست E2E). */
@@ -416,19 +419,26 @@ export class ListingsController {
       });
       const owners = await this.prisma.business.findMany({
         where: { id: { in: due.map((w) => w.businessId) }, ownerId: { not: null } },
-        select: { ownerId: true },
+        select: { id: true, ownerId: true, notifPrefs: true },
       });
+      const allowed = owners.filter(
+        (o) => (o.notifPrefs as Record<string, unknown> | null)?.priceChange !== false
+      );
+      const allowedIds = new Set(allowed.map((o) => o.id));
       await this.notifications.pushMany(
-        owners.map((o) => ({
+        allowed.map((o) => ({
           userId: o.ownerId as string,
+          // فاز ۸ — گیتِ «تغییر قیمت در تابلوهای من» از notifPrefs خوانده می‌شود
+          bizId: o.id,
           type: "PRICE_CHANGE" as const,
           actorId: listing.businessId,
           actorName: sellerName,
           good: good?.nameFa ?? null,
         }))
       );
+      // پنجره‌ی روزانه فقط برای دیده‌بان‌های مجاز تیک می‌خورد — خاموش‌ها منتظر می‌مانند
       await this.prisma.watchedGood.updateMany({
-        where: { id: { in: due.map((w) => w.id) } },
+        where: { id: { in: due.filter((w) => allowedIds.has(w.businessId)).map((w) => w.id) } },
         data: { lastNotifiedAt: new Date() },
       });
     } catch {

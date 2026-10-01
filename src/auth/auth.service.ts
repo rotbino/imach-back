@@ -90,6 +90,29 @@ export class AuthService {
     private readonly pushService: PushService
   ) {}
 
+  /**
+   * فاز ۸ — userIdهایی که «اتصال‌های تازه iMach» (CONTACT_JOINED) را
+   * خاموش نکرده‌اند. فقط false صریح در notifPrefs.suggestionsِ کسب‌وکارِ
+   * مالک، کاربر را از فهرست خارج می‌کند؛ خطای خواندن = همه مجاز.
+   */
+  private async notifSuggestionsAllowed(userIds: string[]): Promise<Set<string>> {
+    const all = new Set(userIds);
+    if (userIds.length === 0) return all;
+    try {
+      const bizs = await this.prisma.business.findMany({
+        where: { ownerId: { in: userIds }, notifPrefs: { not: null } },
+        select: { ownerId: true, notifPrefs: true },
+      });
+      for (const b of bizs) {
+        const prefs = b.notifPrefs as Record<string, unknown> | null;
+        if (prefs?.suggestions === false && b.ownerId) all.delete(b.ownerId);
+      }
+    } catch {
+      /* best-effort — defaults to all allowed */
+    }
+    return all;
+  }
+
   private async withBusinesses(user: PublicUser) {
     return this.prisma.business.findMany({
       where: { ownerId: user.id },
@@ -232,14 +255,20 @@ export class AuthService {
     // سپرده بود، همین حالا می‌فهمد صاحبش عضو iMach شد — بازگشت به اپ بدون
     // هیچ پیامکی. مستقیم با prisma (نه NotificationsService) تا چرخه‌ی
     // ماژولی درست نشود؛ اعلان best-effort است و ثبت‌نام هرگز نمی‌شکند.
+    // فاز ۸ — فقط مالکانی که «اتصال‌های تازه iMach» را در تنظیمات اعلان
+    // خاموش نکرده‌اند (prefs.suggestions !== false).
     try {
       const contactOwners = await this.prisma.contact.findMany({
         where: { phone, userId: { not: user.id } },
         select: { userId: true, name: true },
       });
-      if (contactOwners.length > 0) {
+      const allowed = await this.notifSuggestionsAllowed(
+        contactOwners.map((c) => c.userId)
+      );
+      const recipients = contactOwners.filter((c) => allowed.has(c.userId));
+      if (recipients.length > 0) {
         await this.prisma.notification.createMany({
-          data: contactOwners.map((c) => ({
+          data: recipients.map((c) => ({
             userId: c.userId,
             type: "CONTACT_JOINED",
             actorId: user.id,
@@ -247,9 +276,9 @@ export class AuthService {
           })),
         });
         // پوشِ همان اعلان — بهترین‌تلاش؛ ثبت‌نام هرگز نمی‌شکند
-        const actorName = fullName || contactOwners[0].name;
+        const actorName = fullName || recipients[0].name;
         await Promise.allSettled(
-          contactOwners.map((c) =>
+          recipients.map((c) =>
             this.pushService
               .sendToUser(c.userId, {
                 title: "iMach",
@@ -445,15 +474,20 @@ export class AuthService {
       }
     }
 
-    // ── حلقه‌ی گیت مخاطبین — ثبت‌نام سریع هم همین通知 را روشن می‌کند
+    // ── حلقه‌ی گیت مخاطبین — ثبت‌نام سریع هم همین اعلان را روشن می‌کند
+    // (فاز ۸: با احترام به تنظیمات اعلانِ گیرنده‌ها)
     try {
       const contactOwners = await this.prisma.contact.findMany({
         where: { phone, userId: { not: user.id } },
         select: { userId: true, name: true },
       });
-      if (contactOwners.length > 0) {
+      const allowed = await this.notifSuggestionsAllowed(
+        contactOwners.map((c) => c.userId)
+      );
+      const recipients = contactOwners.filter((c) => allowed.has(c.userId));
+      if (recipients.length > 0) {
         await this.prisma.notification.createMany({
-          data: contactOwners.map((c) => ({
+          data: recipients.map((c) => ({
             userId: c.userId,
             type: "CONTACT_JOINED",
             actorId: user.id,

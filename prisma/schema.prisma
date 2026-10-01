@@ -402,6 +402,17 @@ model Business {
   /// user-editable. This one IS public (shown on the owner's pages).
   address String?
 
+  /// فاز ۸ (طرح ۱۴) — تنظیمات اعلانِ این کسب‌وکار. JSON ساده:
+  /// { priceChange, suggestions, quoteReplies, push } — همه boolean.
+  /// null/فیلد غایب = روشن (پیش‌فرض). نگاشت به انواع اعلان:
+  ///   priceChange  → PRICE_CHANGE («تغییر قیمت در تابلوهای من»)
+  ///   quoteReplies → QUOTE + OFFER («درخواست‌ها و پاسخ‌های قیمت»)
+  ///   suggestions  → FOLLOW_SUPPLIER + FOLLOW_BUYER + CONTACT_JOINED
+  ///                  («اتصال‌ها و معرفی‌های تازه‌ی iMach»)
+  ///   push         → فقط گیتِ پوشِ وب؛ ردیفِ درون‌برنامه‌ای همیشه ثبت می‌شود
+  /// گیتِ خواندن در NotificationsService متمرکز است (push/pushMany).
+  notifPrefs Json?
+
   ownerId      String? @db.ObjectId
   owner        User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 

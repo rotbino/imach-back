@@ -21,12 +21,28 @@ export type NotificationType =
 
 export interface NotificationInput {
   userId: string;
+  /**
+   * فاز ۸ (طرح ۱۴) — کسب‌وکارِ گیرنده؛ فقط برای خواندن notifPrefs
+   * (تنظیمات اعلان از پروفایل) به‌کار می‌رود و روی خودِ ردیف ذخیره
+   * نمی‌شود. غایب = گیت نمی‌خورد (پیش‌فرض روشن).
+   */
+  bizId?: string | null;
   type: NotificationType;
   actorId?: string | null;
   actorName?: string | null;
   actorSlug?: string | null;
   good?: string | null;
 }
+
+/** نگاشت نوع اعلان → کلیدِ تنظیم در notifPrefs — null یعنی قابل‌تنظیم نیست */
+const PREF_KEY: Record<NotificationType, string | null> = {
+  PRICE_CHANGE: "priceChange",
+  QUOTE: "quoteReplies",
+  OFFER: "quoteReplies",
+  FOLLOW_SUPPLIER: "suggestions",
+  FOLLOW_BUYER: "suggestions",
+  CONTACT_JOINED: "suggestions",
+};
 
 /**
  * آینه‌ی TYPE_VIEWS سمت فرانت — متن و مقصدِ پوش باید همان اعلانِ درون‌برنامه‌ای
@@ -67,6 +83,11 @@ const PUSH_VIEWS: Record<
  * قاعده‌ی آهنین: اعلان هرگز جریان اصلی (فالو / پیشنهاد / استعلام / ثبت‌نام)
  * را نمی‌شکند — هر خطا اینجا بلعیده می‌شود و فقط ثبت نمی‌ماند.
  * هر ردیفِ درون‌برنامه‌ای، پوشِ همسان خودش را هم می‌فرستد (اگر اشتراک داشته باشد).
+ *
+ * فاز ۸ — گیتِ تنظیمات اعلان اینجا متمرکز شده (طرح ۱۴):
+ *  • کلیدِ نوع خاموش باشد → ردیف اصلاً ساخته نمی‌شود (نه درون‌برنامه‌ای، نه پوش)
+ *  • فقط «push» خاموش باشد → ردیفِ درون‌برنامه‌ای می‌ماند، پوشِ وب نمی‌رود
+ *  • bizId غایب یا prefs نال → پیش‌فرض: همه روشن
  */
 @Injectable()
 export class NotificationsService {
@@ -76,38 +97,31 @@ export class NotificationsService {
   ) {}
 
   async push(input: NotificationInput): Promise<void> {
-    try {
-      await this.prisma.notification.create({ data: input });
-    } catch {
-      /* notification is best-effort — never break the main flow */
-    }
-    const view = PUSH_VIEWS[input.type];
-    if (view) {
-      await this.pushService
-        .sendToUser(input.userId, {
-          title: "iMach",
-          body: view.text(input),
-          url: view.url,
-        })
-        .catch(() => {});
-    }
+    return this.pushMany([input]);
   }
 
   /** دسته‌ای — هر گیرنده یک ردیف به ازای هر رویداد (dedupe با userId). */
   async pushMany(rows: NotificationInput[]): Promise<void> {
     const seen = new Set<string>();
-    const data = rows.filter((r) =>
+    const deduped = rows.filter((r) =>
       seen.has(r.userId) ? false : (seen.add(r.userId), true)
     );
-    if (data.length === 0) return;
+    if (deduped.length === 0) return;
+
+    const { inApp, canPush } = await this.filterByPrefs(deduped);
+    if (inApp.length === 0) return;
+
     try {
-      await this.prisma.notification.createMany({ data });
+      // bizId صرفاً سوئیچ خواندنِ prefs است — روی ردیف اعلان ذخیره نمی‌شود
+      await this.prisma.notification.createMany({
+        data: inApp.map(({ bizId: _bizId, ...rest }) => rest),
+      });
     } catch {
       /* notification is best-effort — never break the main flow */
     }
-    // پوشِ دسته‌ای — موازی روی گیرنده‌های یکتا
+    // پوشِ دسته‌ای — موازی روی گیرنده‌های یکتا (تنها کسانی که push روشن دارند)
     await Promise.allSettled(
-      data.map((r) => {
+      inApp.filter(canPush).map((r) => {
         const view = PUSH_VIEWS[r.type];
         if (!view) return Promise.resolve();
         return this.pushService
@@ -115,5 +129,44 @@ export class NotificationsService {
           .catch(() => {});
       })
     );
+  }
+
+  /**
+   * تنظیمات اعلانِ گیرنده‌ها را یک فهرست‌خوانی می‌کند و ردیف‌ها را
+   * به دو لایه جدا می‌کند: (۱) ردیف‌هایی که اصلاً مجازند ساخته شوند،
+   * (۲) تابعِ «پوشِ وب مجاز است؟» برای همان ردیف‌ها. best-effort —
+   * اگر خواندن prefs خطا بخورد، همه‌چیز پیش‌فرضِ روشن می‌ماند.
+   */
+  private async filterByPrefs(rows: NotificationInput[]): Promise<{
+    inApp: NotificationInput[];
+    canPush: (r: NotificationInput) => boolean;
+  }> {
+    const bizIds = [...new Set(rows.map((r) => r.bizId).filter((x): x is string => !!x))];
+    if (bizIds.length === 0) return { inApp: rows, canPush: () => true };
+
+    let prefs = new Map<string, Record<string, unknown> | null>();
+    try {
+      const bizs = await this.prisma.business.findMany({
+        where: { id: { in: bizIds } },
+        select: { id: true, notifPrefs: true },
+      });
+      prefs = new Map(bizs.map((b) => [b.id, (b.notifPrefs as Record<string, unknown> | null) ?? null]));
+    } catch {
+      /* prefs read is best-effort — defaults to all-on */
+    }
+
+    const read = (bizId: string, key: string): boolean => {
+      const p = prefs.get(bizId);
+      if (!p) return true;
+      return p[key] !== false; // غایب/نال = روشن
+    };
+
+    return {
+      inApp: rows.filter((r) => {
+        const key = r.bizId ? PREF_KEY[r.type] : null;
+        return !key || !r.bizId || read(r.bizId, key);
+      }),
+      canPush: (r: NotificationInput) => !r.bizId || read(r.bizId, "push"),
+    };
   }
 }

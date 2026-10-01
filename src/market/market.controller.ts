@@ -296,6 +296,8 @@ export class MarketController {
     await this.notifications.pushMany(
       sellers.map((s) => ({
         userId: s.ownerId as string,
+        // فاز ۸ — گیتِ «درخواست‌ها و پاسخ‌های قیمت» از notifPrefs
+        bizId: s.id,
         type: "QUOTE" as const,
         actorId: business.id,
         actorName: business.name,
@@ -912,6 +914,8 @@ export class MarketController {
     if (!existed && buyer.ownerId) {
       await this.notifications.push({
         userId: buyer.ownerId,
+        // فاز ۸ — گیتِ «اتصال‌های تازه iMach» از notifPrefs
+        bizId: buyer.id,
         type: "FOLLOW_BUYER",
         actorId: business.id,
         actorName: business.name,
@@ -1003,11 +1007,13 @@ export class MarketController {
     // خریدار باید بداند پیشنهاد تازه نشسته — فوراً، نه دفعه‌ی بعد که پنل را باز کرد
     const buyerOwner = await this.prisma.business.findUnique({
       where: { id: need.businessId },
-      select: { ownerId: true },
+      select: { id: true, ownerId: true },
     });
     if (buyerOwner?.ownerId) {
       await this.notifications.push({
         userId: buyerOwner.ownerId,
+        // فاز ۸ — گیتِ «درخواست‌ها و پاسخ‌های قیمت» از notifPrefs
+        bizId: buyerOwner.id,
         type: "OFFER",
         actorId: business.id,
         actorName: business.name,
@@ -1087,6 +1093,8 @@ export class MarketController {
     if (buyerBiz?.ownerId) {
       await this.notifications.push({
         userId: buyerBiz.ownerId,
+        // فاز ۸ — گیتِ «درخواست‌ها و پاسخ‌های قیمت» از notifPrefs
+        bizId: buyerBiz.id,
         type: "OFFER",
         actorId: sellerBiz?.id ?? inquiry.sellerId,
         actorName: sellerBiz?.name ?? null,
@@ -1487,6 +1495,8 @@ export class MarketController {
     if (!existed && supplier.ownerId) {
       await this.notifications.push({
         userId: supplier.ownerId,
+        // فاز ۸ — گیتِ «اتصال‌های تازه iMach» از notifPrefs
+        bizId: supplier.id,
         type: "FOLLOW_SUPPLIER",
         actorId: business.id,
         actorName: business.name,
