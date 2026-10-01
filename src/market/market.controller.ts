@@ -263,25 +263,31 @@ export class MarketController {
     if (targets.size === 0) return { created: 0, networkAdded: 0, inquiries: [] };
 
     const note = body.note?.trim() || null;
-    const created = await this.prisma.$transaction(async (tx) => {
-      const inquiries = [];
-      for (const [sellerId, listingId] of targets) {
-        inquiries.push(
-          await tx.inquiry.create({
-            data: {
-              buyerId: business.id,
-              sellerId,
-              listingId,
-              volume: body.volume,
-              note,
-              frequency: body.frequency ?? null,
-              delivery: body.delivery?.trim() || null,
-            },
-          })
-        );
-      }
-      return inquiries;
-    });
+    // ── تایم‌اوتِ تراکنش: پیش‌فرض پرایسما ۵ ثانیه است؛ از ایران هر create یک
+    // رفت‌وبرگشت ~۲۰۰ms+ به Atlas دارد و تراکنشِ ۵ گیرنده مرتب کرش می‌کرد
+    // (باگ واقعی که در تست E2E دیده شد — 500 روی استعلام). پنجره را ۳۰ثانیه کردیم.
+    const created = await this.prisma.$transaction(
+      async (tx) => {
+        const inquiries = [];
+        for (const [sellerId, listingId] of targets) {
+          inquiries.push(
+            await tx.inquiry.create({
+              data: {
+                buyerId: business.id,
+                sellerId,
+                listingId,
+                volume: body.volume,
+                note,
+                frequency: body.frequency ?? null,
+                delivery: body.delivery?.trim() || null,
+              },
+            })
+          );
+        }
+        return inquiries;
+      },
+      { timeout: 30_000, maxWait: 10_000 }
+    );
 
     this.invalidateBuyerSide(business.id);
 

@@ -13,10 +13,10 @@ import {
 } from "@nestjs/common";
 import type { FastifyReply } from "fastify";
 import { normalizeFa } from "../common/catalog/catalog";
-import { CacheService } from "../common/cache/cache.module";
+import { CacheService, TTL } from "../common/cache/cache.module";
 import { CurrentLocale, CurrentUser, makeSlug, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
-import { assertBusinessOwner, uniqueSlug } from "../common/guards";
+import { assertBusinessOwner, invalidateBusinessCache, uniqueSlug } from "../common/guards";
 import { provinceOf } from "../common/geo/cities";
 import type { Locale } from "../common/i18n/i18n";
 import { t } from "../common/i18n/i18n";
@@ -84,6 +84,8 @@ function invalidateBusiness(cache: CacheService, businessId: string, slug?: stri
   cache.invalidateTag(`market:board:${businessId}`);
   cache.invalidateTag(`market:ssugg:${businessId}`);
   cache.invalidateTag(`market:buyreq:${businessId}`);
+  // کشِ ردیفِ assertBusinessOwner هم باید تازه شود (شهر/صنف عوض شده)
+  invalidateBusinessCache(businessId);
 }
 
 /** Business = the seller AND buyer identity of a user. */
@@ -252,7 +254,8 @@ export class BusinessesController {
         if (!business) return business;
         // ویترین تصویری: لوگوی کسب‌وکار + تامبنیل گالری هر آگهی — داخل همان
         // کش یک‌دقیقه‌ای؛ جابه‌جایی عکس با تگ business:{id} نامعتبر می‌شود.
-        const [logo, ownerAvatar] = await Promise.all([
+        // هر سه واکشی موازی (قبلاً دو مرحله‌ی متوالی بود)
+        const [logo, ownerAvatar, galleries] = await Promise.all([
           this.prisma.file.findFirst({
             where: { relatedModel: "Business", relatedId: business.id, fieldKey: "logo" },
             orderBy: { createdAt: "desc" },
@@ -265,8 +268,8 @@ export class BusinessesController {
                 select: { url: true, thumbUrl: true },
               })
             : Promise.resolve(null),
+          this.files.galleryMap(business.listings.map((l) => l.id)),
         ]);
-        const galleries = await this.files.galleryMap(business.listings.map((l) => l.id));
         return {
           ...business,
           owner: business.owner
@@ -454,34 +457,44 @@ export class BusinessesController {
    */
   @Get("searchCatalogs")
   @UseGuards(JwtAuthGuard)
-  async searchCatalogs(@Query() query: { q?: string; cursor?: string; limit?: string; mineId?: string }) {
+  async searchCatalogs(@Query() query: { q?: string; cursor?: string; limit?: string; mineId?: string }, @Res({ passthrough: true }) reply: FastifyReply) {
     const limit = Math.min(Math.max(Number(query.limit ?? 20) || 20, 1), 50);
     const q = query.q?.trim();
-    const rows = await this.prisma.business.findMany({
-      where: {
-        // only catalogs that actually hold something — a copy flow must never
-        // open an empty shelf (قانون سرعت و قانون رضایت، هر دو)
-        catalogCount: { gt: 0 },
-        ...(query.mineId ? { id: { not: query.mineId } } : {}),
-        ...(q ? { OR: [{ trade: { contains: q } }, { name: { contains: q } }] } : {}),
-      },
-      select: {
-        id: true,
-        slug: true,
-        name: true,
-        city: true,
-        trade: true,
-        isVerified: true,
-        isDemo: true,
-        catalogCount: true,
-      },
-      orderBy: { catalogCount: "desc" },
-      ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
-      take: limit + 1,
-    });
-    const hasMore = rows.length > limit;
-    const items = hasMore ? rows.slice(0, limit) : rows;
-    return { items, nextCursor: hasMore ? items[items.length - 1].id : null };
+    // جست‌وجوی کاتالوگ‌ها — زیر کش ۶۰ثانیه‌ای؛ تغییر لیستینگ (تگ products)
+    // آن را باطل می‌کند تا شمارش کاتالوگ تازه بماند
+    const { value, hit } = await this.cache.wrap(
+      `biz:search:${q ?? ""}|${query.cursor ?? ""}|${limit}|${query.mineId ?? ""}`,
+      { ttlMs: TTL.MINUTE, tags: ["products"] },
+      async () => {
+        const rows = await this.prisma.business.findMany({
+          where: {
+            // only catalogs that actually hold something — a copy flow must never
+            // open an empty shelf (قانون سرعت و قانون رضایت، هر دو)
+            catalogCount: { gt: 0 },
+            ...(query.mineId ? { id: { not: query.mineId } } : {}),
+            ...(q ? { OR: [{ trade: { contains: q } }, { name: { contains: q } }] } : {}),
+          },
+          select: {
+            id: true,
+            slug: true,
+            name: true,
+            city: true,
+            trade: true,
+            isVerified: true,
+            isDemo: true,
+            catalogCount: true,
+          },
+          orderBy: { catalogCount: "desc" },
+          ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
+          take: limit + 1,
+        });
+        const hasMore = rows.length > limit;
+        const items = hasMore ? rows.slice(0, limit) : rows;
+        return { items, nextCursor: hasMore ? items[items.length - 1].id : null };
+      }
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
   }
 
   /**
@@ -495,60 +508,73 @@ export class BusinessesController {
    */
   @Get("getCatalogItems")
   @UseGuards(JwtAuthGuard)
-  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string; brandId?: string; mode?: string }) {
+  async getCatalogItems(@Query() query: { businessId?: string; cursor?: string; limit?: string; brandId?: string; mode?: string }, @Res({ passthrough: true }) reply: FastifyReply) {
     if (!query.businessId) throw AppError.badRequest("businessId الزامی است", "BUSINESS_ID_REQUIRED");
     const limit = Math.min(Math.max(Number(query.limit ?? 40) || 40, 1), 100);
+    // ── کش ۶۰ثانیه‌ای (تگ products — ذخیره/حذف لیستینگ همان لحظه باطل می‌کند)
+    const { value, hit } = await this.cache.wrap(
+      `biz:catitems:${query.businessId}|${query.cursor ?? ""}|${limit}|${query.brandId ?? ""}|${query.mode ?? ""}`,
+      { ttlMs: TTL.MINUTE, tags: ["products", `business:${query.businessId}`] },
+      async () => this.getCatalogItemsImpl(query, limit)
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  private async getCatalogItemsImpl(query: { businessId?: string; cursor?: string; limit?: string; brandId?: string; mode?: string }, limit: number) {
     // ── mode: "SELL" (کاتالوگ فروش) یا "BUY" (دستیار خرید) — پیش‌فرض SELL
     const armMode = query.mode === "BUY" ? "BUY" : "SELL";
     const modes = armMode === "BUY" ? ["BUY", "BOTH"] : ["SELL", "BOTH"];
-    const rows = await this.prisma.listing.findMany({
-      where: {
-        businessId: query.businessId,
-        isActive: true,
-        mode: { in: modes },
-        ...(query.brandId ? { brandId: query.brandId } : {}),
-      },
-      select: {
-        id: true,
-        mode: true,
-        priceMinor: true,
-        currency: true,
-        attrs: true,
-        variantLabel: true,
-        brandId: true,
-        productId: true,
-        // ── موجودی و حداقل سفارش (sell) و حجم و دوره (buy) — برای کپی عینا
-        stock: true,
-        minOrder: true,
-        volume: true,
-        frequency: true,
-        brand: { select: { id: true, name: true } },
-        good: {
-          select: {
-            id: true,
-            nameFa: true,
-            nameEn: true,
-            unit: true,
-            category: { select: { id: true, nameFa: true, nameEn: true } },
-          },
+    // ── دو کوئری مستقل، موازی (قبلاً متوالی بودند → دو رفت‌وبرگشت اضافه به Atlas)
+    const [rows, allBrandRows] = await Promise.all([
+      this.prisma.listing.findMany({
+        where: {
+          businessId: query.businessId,
+          isActive: true,
+          mode: { in: modes },
+          ...(query.brandId ? { brandId: query.brandId } : {}),
         },
-        // ── عکس مرجع محصول — وقتی گالری آگهی خالی است، این عکس نشان داده می‌شود
-        product: { select: { imageUrl: true } },
-      },
-      orderBy: { id: "desc" },
-      ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
-      take: limit + 1,
-    });
+        select: {
+          id: true,
+          mode: true,
+          priceMinor: true,
+          currency: true,
+          attrs: true,
+          variantLabel: true,
+          brandId: true,
+          productId: true,
+          // ── موجودی و حداقل سفارش (sell) و حجم و دوره (buy) — برای کپی عینا
+          stock: true,
+          minOrder: true,
+          volume: true,
+          frequency: true,
+          brand: { select: { id: true, name: true } },
+          good: {
+            select: {
+              id: true,
+              nameFa: true,
+              nameEn: true,
+              unit: true,
+              category: { select: { id: true, nameFa: true, nameEn: true } },
+            },
+          },
+          // ── عکس مرجع محصول — وقتی گالری آگهی خالی است، این عکس نشان داده می‌شود
+          product: { select: { imageUrl: true } },
+        },
+        orderBy: { id: "desc" },
+        ...(query.cursor ? { skip: 1, cursor: { id: query.cursor } } : {}),
+        take: limit + 1,
+      }),
+      // ── نوار برند — از همه‌ی قلم‌های این کاتالوگ (بدون فیلتر برند)، شمارش هر برند
+      this.prisma.listing.findMany({
+        where: { businessId: query.businessId, isActive: true, mode: { in: modes }, brandId: { not: null } },
+        select: { brandId: true, brand: { select: { id: true, name: true } } },
+        take: 500,
+      }),
+    ]);
     const hasMore = rows.length > limit;
     const items = hasMore ? rows.slice(0, limit) : rows;
     const galleries = await this.files.galleryMap(items.map((r) => r.id));
-
-    // ── نوار برند — از همه‌ی قلم‌های این کاتالوگ (بدون فیلتر برند)، شمارش هر برند
-    const allBrandRows = await this.prisma.listing.findMany({
-      where: { businessId: query.businessId, isActive: true, mode: { in: modes }, brandId: { not: null } },
-      select: { brandId: true, brand: { select: { id: true, name: true } } },
-      take: 500,
-    });
     const brandMap = new Map<string, { id: string; name: string; count: number }>();
     for (const r of allBrandRows) {
       if (!r.brand) continue;
@@ -585,4 +611,5 @@ export class BusinessesController {
       brands,
     };
   }
+
 }

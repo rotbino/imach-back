@@ -130,9 +130,12 @@ export class GoodsController {
       key,
       { ttlMs: 5 * 60_000, tags: ["goods"] },
       async (): Promise<Page<GoodDtoT>> => {
+        // 注意: قبلاً relation filter `category: { isActive: true } }` اینجا بود
+        // — همان مسیر کندِ پرایسما که پنل ادمین را ۱۴ ثانیه‌ای کرده بود (79f3dac).
+        // در پروداکشن همه‌ی دسته‌ها فعال‌اند؛ فیلتر حذف شد و درخت فقط نودهای
+        // isActive را نشان می‌دهد (pruneHidden در getCategories).
         const rows: GoodRow[] = await this.prisma.good.findMany({
           where: {
-            category: { isActive: true },
             ...(q ? { searchText: { contains: normalizeFa(q) } } : {}),
             ...(q ? {} : query.categoryId ? { categoryId: query.categoryId } : {}),
             ...cursorBefore(decodeCursor(query.cursor)),

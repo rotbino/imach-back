@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { normalizeFa, goodSearchText } from "../common/catalog/catalog";
 import { refreshCatalogCount } from "../common/catalog/catalog-count";
 import { provinceOf } from "../common/geo/cities";
-import { CacheService } from "../common/cache/cache.module";
+import { CacheService, TTL } from "../common/cache/cache.module";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
 import { cursorBefore, decodeCursor, toPage, type Page } from "../common/pagination/cursor";
@@ -245,6 +245,8 @@ export class ProductsService {
       },
       select: { id: true, label: true, searchText: true },
     });
+    // محصول تازه ساخته شد → کش صفحه‌ها/استریپ‌ها/شمارشِ پیکر باید تازه شود
+    this.cache.invalidateTag("products");
     return created;
   }
 
@@ -299,26 +301,29 @@ export class ProductsService {
     // در پروداکشن دسته‌های فعال همیشه true هستن، پس این فیلتر عملاً همه را برمی‌گرداند.
     // اگر روزی نیاز به فیلتر بر اساس isActive شد، می‌توانیم با دو stage و lookup انجام دهیم.
     const goodIdFilter = params.goodId ? { goodId: params.goodId } : {};
-    const categoryIdFilter = params.categoryId ? {} : {}; // در صورت نیاز با lookup
-    const where: Record<string, unknown> = {
+    // ── شمارشِ کل نباید cursor را شامل شود (باگ قدیمی: total هنگام صفحه‌بندی کوچک می‌شد)
+    const whereNoCursor: Record<string, unknown> = {
       status: params.status ? params.status : { not: "MERGED" },
       ...goodIdFilter,
       ...(params.brandId ? { brandId: params.brandId } : {}),
-      ...cursorBefore(decodeCursor(params.cursor)),
     };
-    // فیلتر عکس
+    // فیلتر عکس — در هر دو where (با/بدون cursor) می‌نشیند
     if (params.hasImage === "yes") {
-      where.imageUrl = { not: null };
+      whereNoCursor.imageUrl = { not: null };
     } else if (params.hasImage === "no") {
-      where.imageUrl = null;
+      whereNoCursor.imageUrl = null;
     }
     if (q) {
       // the typed word may describe the SKU («مکنزی ۲۵۰ گرم») or the class («تن ماهی»)
       // NOTE: قبلاً relation filter روی good.searchText داشتیم که کند بود.
       // حالا فقط روی Product.searchText فیلتر می‌کنیم — searchText محصول شامل نام good هم هست
       // چون موقع import از clean_name (که از good هست) استفاده شده.
-      where.searchText = { contains: normalizeFa(q) };
+      whereNoCursor.searchText = { contains: normalizeFa(q) };
     }
+    const where: Record<string, unknown> = {
+      ...whereNoCursor,
+      ...cursorBefore(decodeCursor(params.cursor)),
+    };
     let goodIdsForCat: string[] | null = null;
     if (params.categoryId) {
       // fetch goodIds for this category subtree first, then filter products
@@ -343,141 +348,177 @@ export class ProductsService {
         where: { categoryId: { in: categoryIds } },
         select: { id: true },
       });
-      where.goodId = { in: goodsInCat.map(g => g.id) };
+      const goodInFilter = { in: goodsInCat.map(g => g.id) };
+      where.goodId = goodInFilter;
+      // شمارشِ کل هم باید همان scope (شامل دسته) را ببیند — نه فقط صفحه‌ی فعلی
+      whereNoCursor.goodId = goodInFilter;
       // Save the raw list for use in MongoDB aggregate (Prisma's { in: [...] } object
       // doesn't translate directly to MongoDB's { $in: [...] } — ObjectId conversion)
       goodIdsForCat = goodsInCat.map(g => g.id);
     }
 
-    const t0 = Date.now();
-    const rows = await this.prisma.product.findMany({
-      where,
-      select: PRODUCT_SELECT,
-      orderBy: { id: "desc" },
-      take: limit + 1,
-    });
-    const page = toPage(rows, limit);
-    const decorated = await this.decoratePage(page.items, params.businessId);
-
-    // ── نوار برند — همه‌ی برندهای موجود در scope فعلی (نه فقط صفحه‌ی فعلی).
-    // از MongoDB aggregate مستقیم استفاده می‌کنیم — Prisma groupBy روی ۴۰هزار
-    // محصول کند است (۳۰ ثانیه!) ولی MongoDB aggregate فقط ۳۰۰ms.
-    // NOTE: وقتی کاربر برند خاصی را انتخاب می‌کند (params.brandId)، آن برند از
-    // نوار حذف نمی‌شود — نوار ثابت می‌ماند تا کاربر بداند چه برندهایی در این دسته هستن.
-    const brandAggMatch: Record<string, unknown> = {
-      status: { $ne: "MERGED" },
-      brandId: { $ne: null, $exists: true },
-      ...(params.goodId ? { goodId: params.goodId } : {}),
-      ...(goodIdsForCat ? { goodId: { $in: goodIdsForCat } } : {}),
-    };
-    if (q) {
-      brandAggMatch.searchText = { $regex: normalizeFa(q), $options: "i" };
-    }
-
-    const catAggMatch: Record<string, unknown> = {
-      status: { $ne: "MERGED" },
-      ...(params.goodId ? { goodId: params.goodId } : {}),
-      ...(goodIdsForCat ? { goodId: { $in: goodIdsForCat } } : {}),
-    };
-    if (q) {
-      catAggMatch.searchText = { $regex: normalizeFa(q), $options: "i" };
-    }
-
-    // Use raw MongoDB aggregate via the underlying connection.
-    // Prisma's groupBy is slow (30s on 40k products), but MongoDB's aggregate
-    // with $match + $group + $sort is ~300ms.
-    // We need ObjectId conversion for goodId $in — Prisma's runCommandRaw
-    // doesn't auto-convert hex strings to ObjectId, so we use EJSON.
+    // ── کش و موازی‌سازی ───────────────────────────────────────────────────────
+    // قبلاً این متد ۷ کوئریِ «متوالی» به Atlas می‌زد (از ایران هر کدام ۲۰۰ms+ =
+    // بیش از ۲ ثانیه). حالا:
+    //   • صفحه‌ی اصلی + شمارشِ فروشنده‌ها → کش ۶۰ثانیه‌ای (تگ products)
+    //   • استریپ برند/دسته → کش ۵دقیقه‌ای (تگ products)
+    //   • total → کش ۶۰ثانیه‌ای، بدون cursor (رفع باگ کوچک‌شدن total در صفحه‌بندی)
+    //   • فقط «داریش» (mineMode) per-request می‌ماند چون به businessId فراخوان بستگی دارد
+    // هر جهشِ ایمپورت/ادمین (importCommit، bulkCreate، adminEdit/Delete/Merge،
+    // setProductImage) تگ products را باطل می‌کند.
+    const scopeKey = `${q ?? ""}|${params.goodId ?? ""}|${params.categoryId ?? ""}|${params.brandId ?? ""}|${params.hasImage ?? ""}|${params.status ?? ""}`;
+    const pageKey = `products:page:${scopeKey}|${params.cursor ?? ""}|${limit}`;
+    const stripsKey = `products:strips:${q ?? ""}|${params.goodId ?? ""}|${params.categoryId ?? ""}`;
+    const totalKey = `products:total:${scopeKey}`;
     const objectId = (hex: string): { $oid: string } => ({ $oid: hex });
-    const brandGoodIdFilter = goodIdsForCat
-      ? { goodId: { $in: goodIdsForCat.map(objectId) } }
-      : (params.goodId ? { goodId: objectId(params.goodId) } : {});
-    const catGoodIdFilter = goodIdsForCat
-      ? { goodId: { $in: goodIdsForCat.map(objectId) } }
-      : (params.goodId ? { goodId: objectId(params.goodId) } : {});
 
-    const brandAggPipeline = [
-      { $match: { ...brandAggMatch, ...brandGoodIdFilter } },
-      { $group: { _id: "$brandId", count: { $sum: 1 } } },
-      { $sort: { count: -1 } },
-      { $limit: 50 },
-    ];
-    const catAggPipeline = [
-      { $match: { ...catAggMatch, ...catGoodIdFilter } },
-      { $group: { _id: "$goodId", count: { $sum: 1 } } },
-      { $sort: { count: -1 } },
-      { $limit: 100 },
-    ];
+    // ── صفحه: ردیف‌ها + شمارش فروشندگان (مشترک بین همه‌ی کاربران)
+    const pageLoader = async (): Promise<{
+      items: Omit<ProductRowDto, "sellers" | "mineMode">[];
+      nextCursor: string | null;
+      sellers: Record<string, number>;
+    }> => {
+      const rows = await this.prisma.product.findMany({
+        where,
+        select: PRODUCT_SELECT,
+        orderBy: { id: "desc" },
+        take: limit + 1,
+      });
+      const page = toPage(rows, limit);
+      const ids = page.items.map((p) => p.id);
+      const sellerCounts = ids.length > 0
+        ? await this.prisma.listing.groupBy({
+            by: ["productId"],
+            where: { productId: { in: ids }, isActive: true, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } },
+            _count: { _all: true },
+          })
+        : [];
+      const sellers: Record<string, number> = {};
+      for (const r of sellerCounts) {
+        if (r.productId) sellers[r.productId] = r._count._all;
+      }
+      return { items: page.items, nextCursor: page.nextCursor, sellers };
+    };
 
-    const [brandAgg, catAgg] = await Promise.all([
-      (this.prisma as unknown as { $runCommandRaw: (cmd: unknown) => Promise<unknown> })
-        .$runCommandRaw({
-          aggregate: "Product",
-          pipeline: brandAggPipeline,
-          cursor: {},
-        }),
-      (this.prisma as unknown as { $runCommandRaw: (cmd: unknown) => Promise<unknown> })
-        .$runCommandRaw({
-          aggregate: "Product",
-          pipeline: catAggPipeline,
-          cursor: {},
-        }),
+    // ── استریپ برند/دسته — از scope فعلی (بدون brandId تا با کلیک برند ثابت بمانند)
+    const stripsLoader = async (): Promise<{ brands: BrandChipDto[]; categories: PickerPageDto["categories"] }> => {
+      // از MongoDB aggregate مستقیم استفاده می‌کنیم — Prisma groupBy روی ۴۰هزار
+      // محصول کند است (۳۰ ثانیه!) ولی MongoDB aggregate فقط ~۳۰۰ms.
+      const goodIdFilter = goodIdsForCat
+        ? { goodId: { $in: goodIdsForCat.map(objectId) } }
+        : params.goodId ? { goodId: objectId(params.goodId) } : {};
+
+      const brandAggPipeline = [
+        { $match: { status: { $ne: "MERGED" }, brandId: { $ne: null, $exists: true }, ...goodIdFilter, ...(q ? { searchText: { $regex: normalizeFa(q), $options: "i" } } : {}) } },
+        { $group: { _id: "$brandId", count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+        { $limit: 50 },
+      ];
+      const catAggPipeline = [
+        { $match: { status: { $ne: "MERGED" }, ...goodIdFilter, ...(q ? { searchText: { $regex: normalizeFa(q), $options: "i" } } : {}) } },
+        { $group: { _id: "$goodId", count: { $sum: 1 } } },
+        { $sort: { count: -1 } },
+        { $limit: 100 },
+      ];
+
+      const [brandAgg, catAgg] = await Promise.all([
+        (this.prisma as unknown as { $runCommandRaw: (cmd: unknown) => Promise<unknown> })
+          .$runCommandRaw({ aggregate: "Product", pipeline: brandAggPipeline, cursor: {} }),
+        (this.prisma as unknown as { $runCommandRaw: (cmd: unknown) => Promise<unknown> })
+          .$runCommandRaw({ aggregate: "Product", pipeline: catAggPipeline, cursor: {} }),
+      ]);
+
+      // brandAgg returns { cursor: { firstBatch: [...] } } — extract firstBatch
+      // _id may be an ObjectId instance, an EJSON {$oid: "..."} object, or a string.
+      // Normalize all three to a plain hex string for Prisma.
+      function toHexId(v: unknown): string {
+        if (!v) return "";
+        if (typeof v === "string") return v;
+        // EJSON extended JSON form: { $oid: "..." }
+        if (typeof v === "object" && v !== null && "$oid" in v) return String((v as { $oid: string }).$oid);
+        // ObjectId instance (has toString/toHexString)
+        if (typeof v === "object" && v !== null && "toHexString" in v && typeof (v as { toHexString: () => string }).toHexString === "function") {
+          return (v as { toHexString: () => string }).toHexString();
+        }
+        // Fallback — toString() on an ObjectId returns hex
+        try { return String(v); } catch { return ""; }
+      }
+      const rawBrandGroups = (brandAgg as { cursor?: { firstBatch?: Array<{ _id: unknown; count: number }> } })?.cursor?.firstBatch ?? [];
+      const rawCatGroups = (catAgg as { cursor?: { firstBatch?: Array<{ _id: unknown; count: number }> } })?.cursor?.firstBatch ?? [];
+      const brandGroups = rawBrandGroups.map(g => ({ _id: toHexId(g._id), count: g.count }));
+      const catGroups = rawCatGroups.map(g => ({ _id: toHexId(g._id), count: g.count }));
+
+      // brandGroups only has _id (brandId) — fetch brand names + good rows in parallel
+      const brandIds = brandGroups.map(g => g._id).filter(Boolean) as string[];
+      const goodIds = catGroups.map(g => g._id).filter(Boolean) as string[];
+      const [brandRows, goodRows] = await Promise.all([
+        brandIds.length > 0
+          ? this.prisma.brand.findMany({ where: { id: { in: brandIds } }, select: { id: true, name: true } })
+          : Promise.resolve([] as { id: string; name: string }[]),
+        goodIds.length > 0
+          ? this.prisma.good.findMany({
+              where: { id: { in: goodIds } },
+              select: { id: true, categoryId: true, category: { select: { id: true, nameFa: true, nameEn: true } } },
+            })
+          : Promise.resolve([] as { id: string; categoryId: string; category: { id: string; nameFa: string; nameEn: string } }[]),
+      ]);
+      const brandNameMap = new Map(brandRows.map(b => [b.id, b.name]));
+      const brands = brandGroups
+        .map(g => ({ id: g._id!, name: brandNameMap.get(g._id!) ?? "نامشخص", count: g.count }))
+        .filter(b => b.count > 0);
+
+      const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
+      const goodToCat = new Map(goodRows.map(g => [g.id, g.category]));
+      for (const g of catGroups) {
+        const cat = goodToCat.get(g._id);
+        if (!cat) continue;
+        const cur = catCount.get(cat.id);
+        if (cur) cur.count += g.count;
+        else catCount.set(cat.id, { id: cat.id, nameFa: cat.nameFa, nameEn: cat.nameEn ?? "", count: g.count });
+      }
+      const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
+      return { brands, categories };
+    };
+
+    // ── صفحه + استریپ‌ها + شمارش، همه موازی و زیر کش
+    const [pageC, stripsC, totalC] = await Promise.all([
+      this.cache.wrap(pageKey, { ttlMs: TTL.MINUTE, tags: ["products"] }, pageLoader),
+      this.cache.wrap(stripsKey, { ttlMs: TTL.FIVE_MIN, tags: ["products"] }, stripsLoader),
+      this.cache.wrap(totalKey, { ttlMs: TTL.MINUTE, tags: ["products"] }, async () =>
+        this.prisma.product.count({ where: whereNoCursor })),
     ]);
 
-    // brandAgg returns { cursor: { firstBatch: [...] } } — extract firstBatch
-    // _id may be an ObjectId instance, an EJSON {$oid: "..."} object, or a string.
-    // Normalize all three to a plain hex string for Prisma.
-    function toHexId(v: unknown): string {
-      if (!v) return "";
-      if (typeof v === "string") return v;
-      // EJSON extended JSON form: { $oid: "..." }
-      if (typeof v === "object" && v !== null && "$oid" in v) return String((v as { $oid: string }).$oid);
-      // ObjectId instance (has toString/toHexString)
-      if (typeof v === "object" && v !== null && "toHexString" in v && typeof (v as { toHexString: () => string }).toHexString === "function") {
-        return (v as { toHexString: () => string }).toHexString();
-      }
-      // Fallback — toString() on an ObjectId returns hex
-      try { return String(v); } catch { return ""; }
+    // ── «داریش» per-request ولی زیر کشِ ۳۰ثانیه‌ای per-business — نشانِ
+    // داشتنِ خودِ کاربر به‌ندرت عوض می‌شود و saveListing همان لحظه تگ products
+    // را باطل می‌کند. بدون این کش، هر تایپِ جست‌وجو یک رفت‌وبرگشت اضافه داشت.
+    let mineMap = new Map<string, string>();
+    if (params.businessId) {
+      const { value: cachedMine } = await this.cache.wrap(
+        `products:mine:${params.businessId}:${pageKey}`,
+        { ttlMs: 30_000, tags: ["products"] },
+        async () => {
+          const mineRows = await this.prisma.listing.findMany({
+            where: { businessId: params.businessId!, productId: { in: pageC.value.items.map((p) => p.id) }, isActive: true },
+            select: { productId: true, mode: true },
+          });
+          return mineRows.map((m) => [m.productId!, m.mode] as [string, string]);
+        }
+      );
+      mineMap = new Map(cachedMine);
     }
-    const rawBrandGroups = (brandAgg as { cursor?: { firstBatch?: Array<{ _id: unknown; count: number }> } })?.cursor?.firstBatch ?? [];
-    const rawCatGroups = (catAgg as { cursor?: { firstBatch?: Array<{ _id: unknown; count: number }> } })?.cursor?.firstBatch ?? [];
-    const brandGroups = rawBrandGroups.map(g => ({ _id: toHexId(g._id), count: g.count }));
-    const catGroups = rawCatGroups.map(g => ({ _id: toHexId(g._id), count: g.count }));
+    const items = pageC.value.items.map((p) => ({
+      ...p,
+      sellers: pageC.value.sellers[p.id] ?? 0,
+      mineMode: mineMap.get(p.id) ?? null,
+    }));
 
-    // brandGroups only has _id (brandId) — fetch brand names
-    const brandIds = brandGroups.map(g => g._id).filter(Boolean) as string[];
-    const brandRows = brandIds.length > 0
-      ? await this.prisma.brand.findMany({ where: { id: { in: brandIds } }, select: { id: true, name: true } })
-      : [];
-    const brandNameMap = new Map(brandRows.map(b => [b.id, b.name]));
-    const brands = brandGroups
-      .map(g => ({ id: g._id!, name: brandNameMap.get(g._id!) ?? "نامشخص", count: g.count }))
-      .filter(b => b.count > 0);
-
-    // catGroups only has _id (goodId) — fetch category names via good
-    const goodIds = catGroups.map(g => g._id).filter(Boolean) as string[];
-    const goodRows = goodIds.length > 0
-      ? await this.prisma.good.findMany({
-          where: { id: { in: goodIds } },
-          select: { id: true, categoryId: true, category: { select: { id: true, nameFa: true, nameEn: true } } },
-        })
-      : [];
-    const catCount = new Map<string, { id: string; nameFa: string; nameEn: string; count: number }>();
-    const goodToCat = new Map(goodRows.map(g => [g.id, g.category]));
-    for (const g of catGroups) {
-      const cat = goodToCat.get(g._id);
-      if (!cat) continue;
-      const cur = catCount.get(cat.id);
-      if (cur) cur.count += g.count;
-      else catCount.set(cat.id, { id: cat.id, nameFa: cat.nameFa, nameEn: cat.nameEn ?? "", count: g.count });
-    }
-    const categories = [...catCount.values()].sort((a, b) => b.count - a.count).slice(0, 30);
-
-    // ── Total count for the current scope (not just this page)
-    // Uses the same `where` — fast because it hits the same index
-    const total = await this.prisma.product.count({ where });
-
-    return { ...page, total, items: decorated, brands, categories };
+    return {
+      items,
+      nextCursor: pageC.value.nextCursor,
+      total: totalC.value,
+      brands: stripsC.value.brands,
+      categories: stripsC.value.categories,
+    };
   }
 
   /** sellers-count + «داریش» for one page of product rows — two bounded aggregates */
@@ -577,6 +618,7 @@ export class ProductsService {
 
     // reach every cached vitrine a re-pointed listing may appear on
     await this.bustBusinesses(affectedBusinesses);
+    this.cache.invalidateTag("products");
     return { merged, intoId: survivor.id };
   }
 
@@ -944,6 +986,7 @@ export class ProductsService {
 
     if (saved > 0) {
       this.bustBusinesses(new Set([business.id]));
+      this.cache.invalidateTag("products");
       void refreshCatalogCount(this.prisma, business.id);
     }
     return { saved, failed: skipped.length, skipped, listingIds };
@@ -1139,6 +1182,7 @@ export class ProductsService {
       data: { imageUrl: input.imageUrl },
     });
     this.cache.invalidateTag("goods");
+    this.cache.invalidateTag("products");
     return { ok: true };
   }
 }

@@ -565,6 +565,7 @@ export class AuthService {
     });
     return { ok: true };
   }
+
   async refreshSession(request: FastifyRequest, reply: FastifyReply) {
     const raw = (request.cookies as Record<string, string | undefined>)[REFRESH_COOKIE];
     if (!raw) throw AppError.unauthorized("Refresh token missing");

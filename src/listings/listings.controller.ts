@@ -133,6 +133,9 @@ export class ListingsController {
     this.cache.invalidateTag(`market:home:${businessId}`);
     this.cache.invalidateTag(`market:buyreq:${businessId}`);
     this.cache.invalidateTag(`market:selloff:${businessId}`);
+    // نشانِ «چند فروشنده دارد» در پیکر محصولات از لیستینگ‌ها می‌آید —
+    // تغییر لیستینگ باید کشِ آن صفحه‌ها را هم تازه کند
+    this.cache.invalidateTag("products");
   }
 
   /**
@@ -390,6 +393,10 @@ export class ListingsController {
     }
 
     this.invalidateFor(business.id, business.slug);
+    // شمارش کاتالوگ تازه شود — جست‌وجوی «کپی از هم‌صنف‌ها» (searchCatalogs/
+    // getAggregatedCatalog) فقط کاتالوگ‌های catalogCount>0 را می‌بیند؛ بدون
+    // این فراخوان، ذخیره‌ی فرمِ اصلی کسب‌وکار را نامرئی می‌کرد (باگ واقعی)
+    void refreshCatalogCount(this.prisma, business.id);
     return listing;
   }
 

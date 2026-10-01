@@ -8,6 +8,7 @@ import { FilesService } from "../files/files.service";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
+import { CacheService } from "../common/cache/cache.module";
 import { ProductsService } from "./products.service";
 import { AdminMergeDto, ImportCommitDto, GetProductsQueryDto } from "./dto/product.dto";
 import { applyPriceUnit, parseImportWorkbook } from "./import-file";
@@ -29,7 +30,8 @@ export class ProductsController {
   constructor(
     private readonly prisma: PrismaService,
     private readonly products: ProductsService,
-    private readonly files: FilesService
+    private readonly files: FilesService,
+    private readonly cache: CacheService
   ) {}
 
   @Get("getProducts")
@@ -189,6 +191,7 @@ export class ProductsController {
       select: { id: true, label: true, barcode: true, imageUrl: true, status: true, brandId: true, goodId: true, attrs: true },
     });
 
+    this.cache.invalidateTag("products");
     return updated;
   }
 
@@ -222,6 +225,7 @@ export class ProductsController {
     }
 
     await this.prisma.product.delete({ where: { id } });
+    this.cache.invalidateTag("products");
     return { ok: true };
   }
 
@@ -375,7 +379,8 @@ export class ProductsController {
     }
 
     // invalidate cache
-    this.products["cache"]?.invalidateTag("goods");
+    this.cache.invalidateTag("goods");
+    if (saved > 0) this.cache.invalidateTag("products");
 
     return { saved, skipped, failed, items: results };
   }
