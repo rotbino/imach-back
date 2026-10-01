@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Put,
   Query,
   Res,
   UseGuards,
@@ -18,11 +19,12 @@ import { AppError } from "../common/errors/app-error";
 import { assertBusinessOwner, uniqueSlug } from "../common/guards";
 import { provinceOf } from "../common/geo/cities";
 import type { Locale } from "../common/i18n/i18n";
+import { t } from "../common/i18n/i18n";
 import { cursorBefore, decodeCursor } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
-import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto } from "./dto/business.dto";
+import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto, CatalogCategoriesDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
@@ -31,6 +33,8 @@ const LISTING_SELECT = {
   mode: true,
   // فاز ۲ — صفحه‌ی جزئیات کالای عمومی (طرح ۰۲) به واریانت و عکس مرجع نیاز دارد
   variantLabel: true,
+  // فاز ۳ — دسته‌ی شخصی کاتالوگ برای چيپ‌های ویترین عمومی
+  catalogCategoryId: true,
   priceMinor: true,
   currency: true,
   attrs: true,
@@ -55,6 +59,7 @@ type ListingDtoT = {
   id: string;
   mode: string;
   variantLabel?: string | null;
+  catalogCategoryId?: string | null;
   priceMinor: number | null;
   currency: string | null;
   attrs: unknown;
@@ -105,6 +110,8 @@ export class BusinessesController {
         country: true,
         currency: true,
         isVerified: true,
+        // فاز ۳ — دسته‌های شخصی کاتالوگ: چيپ‌های ویترین مالک
+        customCategories: true,
         // لوکیشن دقیق فقط به صاحبش برمی‌گردد — endpoint عمومی هرگز
         lat: true,
         lng: true,
@@ -215,6 +222,8 @@ export class BusinessesController {
             currency: true,
             isVerified: true,
             isDemo: true,
+            // فاز ۳ — دسته‌های شخصی کاتالوگ برای چيپ‌های ویترین عمومی
+            customCategories: true,
             // لوکیشن دقیق و آدرس — فقط مالک در ویترین خودش می‌بیند (برای ویرایش)
             lat: true,
             lng: true,
@@ -312,6 +321,51 @@ export class BusinessesController {
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data
+    return updated;
+  }
+
+  /**
+   * PUT /businesses/catalogCategories/:id — فاز ۳ (طرح ۰۱): دسته‌های شخصیِ
+   * کاتالوگ. فروشنده ویترینش را خودش گروه‌بندی می‌کند («هاشمی/طارم/فجر/
+   * صدری» برای برنج‌فروش — «میلگرد/مقطعات/ورق» برای آهن‌فروش؛ هیچ چیز
+   * هاردکد نیست). کل لیست یکجا جایگزین می‌شود تا create / تغییر نام /
+   * مرتب‌سازی / حذف همگی با یک فراخوانِ idempotent انجام شوند.
+   * حذف دسته فقط آگهی‌هایش را «بی‌دسته» می‌کند — خودِ آگهی سر جایش می‌ماند
+   * و کالای مرجع (هسته‌ی تطابق) هرگز دست نمی‌خورد.
+   */
+  @Put("catalogCategories/:id")
+  @UseGuards(JwtAuthGuard)
+  async setCatalogCategories(
+    @Param("id") id: string,
+    @Body() body: CatalogCategoriesDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, id, locale);
+    const categories = body.categories.map((c) => ({ id: c.id, name: c.name.trim() }));
+    // یکتایی id و نام — چیپ تکراری در ویترین گیج‌کننده است
+    const ids = categories.map((c) => c.id);
+    const names = categories.map((c) => c.name);
+    if (new Set(ids).size !== ids.length || new Set(names).size !== names.length) {
+      throw AppError.badRequest(
+        t(locale, "business.duplicateCategory", "نام یا شناسه‌ی دسته تکراری است"),
+        "DUPLICATE_CATEGORY"
+      );
+    }
+    const [updated] = await this.prisma.$transaction([
+      this.prisma.business.update({
+        where: { id: business.id },
+        data: { customCategories: categories },
+        select: { id: true, slug: true, customCategories: true },
+      }),
+      // آگهی‌هایی که دسته‌شان حذف/تغییر کرده → بی‌دسته (notIn در Prisma
+      // روی nullها اعمال نمی‌شود — همان چیزی که می‌خواهیم)
+      this.prisma.listing.updateMany({
+        where: { businessId: business.id, catalogCategoryId: { notIn: ids } },
+        data: { catalogCategoryId: null },
+      }),
+    ]);
+    invalidateBusiness(this.cache, business.id, business.slug);
     return updated;
   }
 

@@ -37,6 +37,8 @@ const LISTING_SELECT = {
   isActive: true,
   viewCount30: true,
   viewCountTotal: true,
+  // ── فاز ۳ — دسته‌ی شخصی کاتالوگ برای چيپ‌های ویترین
+  catalogCategoryId: true,
   brand: { select: { id: true, name: true } },
   good: {
     select: {
@@ -207,6 +209,22 @@ export class ListingsController {
     const variantKey = deriveVariantKey(attrs);
     const variantLabel = deriveVariantLabel(attrs, (good.category?.attrs as AttrDef[] | null) ?? null);
 
+    // ── فاز ۳ (طرح ۰۱) — دسته‌ی شخصی کاتالوگ ──
+    // id باید یکی از customCategories همین بيزنس باشد؛ null صریح = بی‌دسته.
+    // undefined = بدون تغییر (کلاینت کهنه‌ی کش‌شده امن می‌ماند).
+    let catalogCategoryId: string | null = null;
+    if (body.catalogCategoryId) {
+      const cats =
+        (business.customCategories as { id: string; name: string }[] | null) ?? [];
+      if (!cats.some((c) => c.id === body.catalogCategoryId)) {
+        throw AppError.badRequest(
+          t(locale, "listing.categoryNotFound", "دسته‌ی انتخابی در کاتالوگ شما یافت نشد"),
+          "CATEGORY_NOT_FOUND"
+        );
+      }
+      catalogCategoryId = body.catalogCategoryId;
+    }
+
     // ── لایه‌ی مرجع محصول (لینک خاموش) — هیچ قدم و فیلد جدیدی برای کاربر ──
     // اگر کلاینت productId آورد (انتخابگر)، همان اعتبارسنجی و وصل می‌شود؛
     // وگرنه از دلِ برند+ویژگی‌هایی که همین حالا تایپ شده، find-or-create می‌شود.
@@ -254,6 +272,8 @@ export class ListingsController {
       mode: body.mode,
       brandId, // empty input explicitly detaches the brand
       productId,
+      // فاز ۳ — دسته‌ی شخصی ویترین (undefined = دست‌نخورده در ویرایش‌های قدیمی)
+      ...(body.catalogCategoryId !== undefined ? { catalogCategoryId } : {}),
       // آگهیِ متصل به محصولِ مشترک، کلید واریانتش را از خودِ محصول می‌گیرد —
       // دو SKU از یک گود (مکنزی + باريلا) دو ردیف جدا می‌مانند و تکرارِ همان
       // انتخاب توسط همان فروشنده، همان ردیف را به‌روز می‌کند (همگرا، نه دوبله)

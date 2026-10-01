@@ -60,6 +60,15 @@ export class SaveListingDto {
 
   @IsOptional()
   buy?: BuySpecDto;
+
+  /** فاز ۳ (طرح ۰۱) — دسته‌ی شخصی کاتالوگ: id یکی از آیتم‌های
+   *  Business.customCategories همین کسب‌وکار (اعتبارسنجی سمت سرور).
+   *  undefined = بدون تغییر (کلاینتِ کهنه‌ی کش‌شده امن است)؛
+   *  null صریح = برداشتن کالا از دسته‌اش. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(40)
+  catalogCategoryId?: string | null;
 }
 
 /**

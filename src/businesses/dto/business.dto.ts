@@ -7,6 +7,10 @@ import {
   MinLength,
   Max,
   Min,
+  IsArray,
+  ArrayMaxSize,
+  ValidateNested,
+  Matches,
 } from "class-validator";
 import { Type } from "class-transformer";
 
@@ -102,4 +106,30 @@ export class ExploreQueryDto {
   @IsString()
   @MaxLength(30)
   city?: string;
+}
+
+/**
+ * PUT /businesses/catalogCategories/:id — فاز ۳ (طرح ۰۱): دسته‌های شخصی
+ * کاتالوگ. فروشنده ویترینش را خودش گروه‌بندی می‌کند — «هاشمی/طارم/فجر/
+ * صدری» برای برنج‌فروش، «میلگرد/مقطعات/ورق» برای آهن‌فروش. کل لیست یکجا
+ * جایگزین می‌شود تا create/rename/reorder/delete همه با یک فراخوان
+ * idempotent باشند؛ id را کلاینت می‌سازد و آگهی‌ها با آن اشاره می‌کنند.
+ */
+export class CatalogCategoryItemDto {
+  @IsString()
+  @Matches(/^[a-zA-Z0-9_-]{1,40}$/, { message: "دسته: id نامعتبر" })
+  id: string;
+
+  @IsString()
+  @MinLength(1)
+  @MaxLength(40)
+  name: string;
+}
+
+export class CatalogCategoriesDto {
+  @IsArray()
+  @ArrayMaxSize(20)
+  @ValidateNested({ each: true })
+  @Type(() => CatalogCategoryItemDto)
+  categories: CatalogCategoryItemDto[];
 }

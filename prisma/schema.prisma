@@ -381,6 +381,15 @@ model Business {
   isVerified   Boolean @default(false)
   isDemo       Boolean @default(false)
 
+  // ── دسته‌بندی شخصی کاتالوگ (فاز ۳ — طرح ۰۱) ──
+  /// فروشنده خودش کاتالوگش را گروه‌بندی می‌کند — چیپ‌های بالای ویترین:
+  /// «هاشمی / طارم / فجر / صدری» برای برنج‌فروش، هر چیز دیگری برای آهن‌فروش.
+  /// ساختار: [{id: "کوتاه-یکتا", name: "نام فارسی"}] — id را کلاینت می‌سازد
+  /// و آگهی‌ها با Listing.catalogCategoryId به آن اشاره می‌کنند.
+  /// JSON است چون دسته‌های هر فروشنده شخصی‌اند و جدول جهانی نمی‌خواهند —
+  /// این لایه «چیدمان ویترین» است نه «کالای مرجع»؛ هسته‌ی تطابق دست‌نخورده.
+  customCategories Json?
+
   /// Precise geo point of the business — user-consented, optional, set from
   /// the catalog settings map (LocationPicker). Feeds the matcher's distance
   /// tiering later (city → province → exact point). Never rendered publicly
@@ -480,6 +489,12 @@ model Listing {
   viewCountTotal  Int       @default(0)
   /// شروع پنجره‌ی سی‌روزه — وقتی از ۳۰ روز بگذرد ریست و از امروز شروع می‌شود
   viewWindowStart DateTime?
+
+  // ── دسته‌ی شخصی کاتالوگ (فاز ۳ — طرح ۰۱) ──
+  /// id یکی از آیتم‌های Business.customCategories همان کسب‌وکار —
+  /// «این کالا در ویترین من زیر کدام دسته بنشیند». اعتبارسنجی سمت سرور؛
+  /// حذف دسته، این فیلد را در آگهی‌هایش null می‌کند (نه خود آگهی را).
+  catalogCategoryId String?
 
   /// Soft delete — «حذف» فقط کاتالوگ را ترک می‌کند؛ Inquiry/Offer/PriceLog
   /// (تاریخچه قیمت) می‌ماند. Upsert یک سطر حذف‌شده را دوباره زنده می‌کند.
