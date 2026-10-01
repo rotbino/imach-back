@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsInt, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
+import { ArrayMaxSize, IsArray, IsBoolean, IsIn, IsInt, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
 
 /** GET /market/getOffers | getInquiries | getFollows | getPriceBoard | getFollowers | getSupplierSuggestions | getBuyRequests */
 export class BusinessIdQueryDto {
@@ -35,12 +35,55 @@ export class InquiriesQueryDto extends BusinessIdQueryDto {
   limit?: number;
 }
 
-/** POST /market/requestQuote/:listingId */
+/** GET /market/getSupplyBoard — تابلوی تأمین یک کالا (فاز ۶ · طرح ۰۹ · شکاف ۵) */
+export class SupplyBoardQueryDto extends BusinessIdQueryDto {
+  @IsString()
+  goodId: string;
+}
+
+/**
+ * POST /market/requestQuote — فرم درخواست قیمت از تابلوی تأمین (فاز ۶ · طرح ۱۲ · شکاف ۴).
+ * جایگزینِ requestQuote/:listingId خودکارِ قدیمی است: گیرندگان این‌جا انتخابی‌اند.
+ */
 export class RequestQuoteDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  goodId: string;
+
+  @Type(() => Number)
+  @IsInt()
+  @Min(1)
+  @Max(1e9)
+  volume: number;
+
+  @IsOptional()
+  @IsIn(["WEEKLY", "MONTHLY", "OCCASIONAL"])
+  frequency?: string;
+
+  /** انتظار تحویل — «فوری» | «این ماه» (متن آزاد کوتاه از فرم) */
+  @IsOptional()
+  @IsString()
+  @MaxLength(30)
+  delivery?: string;
+
   @IsOptional()
   @IsString()
   @MaxLength(300)
   note?: string;
+
+  /** تأمین‌کننده‌های انتخاب‌شده از تابلو — businessId ها */
+  @IsOptional()
+  @IsArray()
+  @ArrayMaxSize(10)
+  @IsString({ each: true })
+  supplierIds?: string[];
+
+  /** بقیه ظرفیت با موتور تطبیق پر شود (رفتار «شبکه iMach» در فرم) */
+  @IsOptional()
+  @IsBoolean()
+  includeNetwork?: boolean;
 }
 
 /** POST /market/sendOffer — price in the smallest currency unit (integer). */

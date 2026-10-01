@@ -50,7 +50,7 @@ const PUSH_VIEWS: Record<
   },
   QUOTE: {
     text: (n) => `درخواست قیمت برای «${n.good ?? "کالا"}»`,
-    url: "/sell/panel",
+    url: "/sell/requests",
   },
   CONTACT_JOINED: {
     text: (n) => `${n.actorName ?? "کسی"} عضو iMach شد`,

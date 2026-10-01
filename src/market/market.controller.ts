@@ -33,6 +33,7 @@ import {
   RemoveFollowerDto,
   RequestQuoteDto,
   SendOfferDto,
+  SupplyBoardQueryDto,
   UnfollowSupplierDto,
   UnwatchGoodDto,
   WatchGoodDto,
@@ -180,85 +181,92 @@ export class MarketController {
   }
 
   /**
-   * The core loop: buyer hits "درخواست قیمت" on a BUY listing.
-   * The engine ranks suppliers, creates an Inquiry for each matched seller
-   * and a persisted Offer for the buyer — atomically in one transaction.
+   * POST /market/requestQuote — فرم درخواست قیمت (فاز ۶ · طرح ۱۲ · شکاف ۴).
+   * جایگزین جریان خودکارِ قدیمی (requestQuote/:listingId): گیرندگان این‌جا
+   * از تابلوی تأمین «انتخابی»‌اند + گزینه گسترش به شبکه iMach (موتور تطبیق،
+   * حداکثر ۵ گیرنده در کل). Inquiry روی آگهیِ فروشِ همان تأمین‌کننده می‌نشیند —
+   * پیشنهادِ قیمت را خودِ فروشنده بعداً با sendOffer می‌فرستد (پاسخ واقعی،
+   * نه پاسخِ آنیِ موتور). پاسخ‌ها در «درخواست‌های من» خریدار می‌نشینند.
    */
-  @Post("requestQuote/:id")
-  @HttpCode(201)
+  @Post("requestQuote")
+  @HttpCode(HttpStatus.CREATED)
   async requestQuote(
-    @Param("id") listingId: string,
     @Body() body: RequestQuoteDto,
     @CurrentUser() user: AuthUser,
     @CurrentLocale() locale: Locale
   ) {
-    if (!isObjectId(listingId)) throw AppError.notFound("Listing not found");
-    return this.requestQuoteImpl(listingId, body, user, locale);
-  }
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const good = await this.prisma.good.findUnique({
+      where: { id: body.goodId },
+      select: { id: true, nameFa: true },
+    });
+    if (!good) throw AppError.notFound("Good not found");
 
-  private async requestQuoteImpl(
-    listingId: string,
-    body: RequestQuoteDto,
-    user: AuthUser,
-    locale: Locale
-  ) {
-    const need = await this.prisma.listing.findUnique({ where: { id: listingId }, include: { good: true } });
-    if (!need || !need.isActive) throw AppError.notFound("Listing not found");
-    const business = await assertBusinessOwner(this.prisma, user, need.businessId, locale);
-
-    if (need.mode === "SELL" || need.volume === null) {
-      throw AppError.badRequest("استعلام قیمت فقط برای کالاهای خرید قابل انجام است", "NOT_A_BUY_LISTING");
+    const hasSelection = (body.supplierIds?.length ?? 0) > 0;
+    if (!hasSelection && !body.includeNetwork) {
+      throw AppError.badRequest("حداقل یک تأمین‌کننده انتخاب کنید یا شبکه iMach را روشن کنید", "NO_RECIPIENT");
     }
 
-    const matches = await this.matching.suppliersForNeed(
-      business.id,
-      { city: business.city, province: business.province, country: business.country },
-      need.goodId,
-      need.volume
-    );
-    if (matches.length === 0) return { created: 0, offers: [] };
+    // رزولوشن گیرندگان: sellerId → آگهیِ فروشِ فعالِ همان کالا (ردیف تابلو)
+    const CAP = 5;
+    const targets = new Map<string, string>(); // sellerBusinessId → listingId
+    if (hasSelection) {
+      const rows = await this.prisma.listing.findMany({
+        where: {
+          goodId: good.id,
+          isActive: true,
+          mode: { in: ["SELL", "BOTH"] },
+          businessId: { in: [...new Set(body.supplierIds as string[])].filter((id) => id !== business.id) },
+        },
+        select: { id: true, businessId: true },
+        orderBy: { priceMinor: "asc" },
+      });
+      for (const r of rows) if (!targets.has(r.businessId)) targets.set(r.businessId, r.id);
+    }
 
-    const created = await this.prisma.$transaction(async (tx) => {
-      const offers = [];
+    // گسترش به شبکه iMach — بقیه ظرفیت با موتور تطبیق (امتیاز + جغرافیا)
+    if (body.includeNetwork && targets.size < CAP) {
+      const matches = await this.matching.suppliersForNeed(
+        business.id,
+        { city: business.city, province: business.province, country: business.country },
+        good.id,
+        body.volume,
+        CAP
+      );
       for (const m of matches) {
-        await tx.inquiry.create({
-          data: {
-            buyerId: business.id,
-            sellerId: m.sellerId,
-            listingId: m.listingId,
-            volume: need.volume as number,
-            note: body.note?.trim() || null,
-            // فاز ۴ — تناوب خریدِ خریدار همان لحظه روی درخواست عکس می‌افتد
-            // تا فروشنده «دوره خرید» را بدون کالبدشکافی ببیند.
-            frequency: need.frequency ?? null,
-          },
-        });
-        offers.push(
-          await tx.offer.create({
+        if (targets.size >= CAP) break;
+        if (!targets.has(m.sellerId)) targets.set(m.sellerId, m.listingId);
+      }
+    }
+
+    if (targets.size === 0) return { created: 0, networkAdded: 0, inquiries: [] };
+
+    const note = body.note?.trim() || null;
+    const created = await this.prisma.$transaction(async (tx) => {
+      const inquiries = [];
+      for (const [sellerId, listingId] of targets) {
+        inquiries.push(
+          await tx.inquiry.create({
             data: {
               buyerId: business.id,
-              sellerId: m.sellerId,
-              listingId: m.listingId,
-              priceMinor: m.priceMinor,
-              currency: m.currency ?? "IRR",
-              minOrder: m.minOrder,
-              score: m.score,
-              isSpecial: m.isSpecial,
-              note: body.note?.trim() || null,
+              sellerId,
+              listingId,
+              volume: body.volume,
+              note,
+              frequency: body.frequency ?? null,
+              delivery: body.delivery?.trim() || null,
             },
-            include: OFFER_INCLUDE,
           })
         );
       }
-      return offers;
+      return inquiries;
     });
 
     this.invalidateBuyerSide(business.id);
 
-    // استعلام به تامین‌کننده‌های منطبق رسید — هر مالک یک اعلان (dedupe با pushMany)
-    const sellerIds = [...new Set(matches.map((m) => m.sellerId))];
+    // درخواست به هر فروشنده رسید — هر مالک یک اعلان (dedupe با pushMany)
     const sellers = await this.prisma.business.findMany({
-      where: { id: { in: sellerIds }, ownerId: { not: null } },
+      where: { id: { in: [...targets.keys()] }, ownerId: { not: null } },
       select: { id: true, ownerId: true },
     });
     await this.notifications.pushMany(
@@ -268,11 +276,121 @@ export class MarketController {
         actorId: business.id,
         actorName: business.name,
         actorSlug: business.slug,
-        good: need.good.nameFa,
+        good: good.nameFa,
       }))
     );
 
-    return { created: created.length, offers: created };
+    const selectedSet = new Set(body.supplierIds ?? []);
+    return {
+      created: created.length,
+      networkAdded: created.filter((i) => !selectedSet.has(i.sellerId)).length,
+      inquiries: created.map((i) => ({ id: i.id, sellerId: i.sellerId, status: i.status })),
+    };
+  }
+
+  /**
+   * GET /market/getSupplyBoard — تابلوی تأمین یک کالا (فاز ۶ · طرح ۰۹ · شکاف ۵).
+   * ردیف = هر آگهیِ فروشِ فعالِ همان کالا (به‌جز خودم): قیمت/روند از آخرین
+   * PriceLog، تازگی از updatedAt، ظرفیت از stock/minOrder + برچسب رابطه:
+   *   followedByMe → «دنبال می‌کنم» (فالوی کاتالوگِ او از میز خرید من)
+   *   boughtFrom   → «از او خریده‌ام» (سابقه Inquiry بین دو کسب‌وکار در همین کالا)
+   *   sponsored    → «معرفی iMach» (فعلاً خالی — فقط ساختار UI، طرح ۰۹)
+   * به‌علاوه زمینه‌ی خریدار: watched + حجم/دوره‌ی BUY listing خودش (پیش‌فرض فرم ۱۲).
+   */
+  @Get("getSupplyBoard")
+  async getSupplyBoard(
+    @Query() query: SupplyBoardQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const good = await this.prisma.good.findUnique({
+      where: { id: query.goodId },
+      select: {
+        id: true, nameFa: true, nameEn: true, unit: true,
+        category: { select: { slug: true, nameFa: true, nameEn: true } },
+      },
+    });
+    if (!good) throw AppError.notFound("Good not found");
+
+    const listings = await this.prisma.listing.findMany({
+      where: {
+        goodId: good.id,
+        isActive: true,
+        mode: { in: ["SELL", "BOTH"] },
+        priceMinor: { not: null },
+        businessId: { not: business.id },
+      },
+      select: {
+        id: true, priceMinor: true, currency: true, minOrder: true, stock: true,
+        variantLabel: true, updatedAt: true,
+        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true } },
+        priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldMinor: true, newMinor: true } },
+      },
+      orderBy: { updatedAt: "desc" },
+      take: 100,
+    });
+
+    const [followedPages, myInquirySellers, watch, myBuy] = await Promise.all([
+      // «دنبال می‌کنم» — فالوی کاتالوگِ فروشنده از میز خرید من
+      this.prisma.follow.findMany({
+        where: {
+          followerPage: { businessId: business.id, type: "BUY" },
+          supplierPage: { businessId: { in: listings.map((l) => l.business.id) }, type: "SELL" },
+        },
+        select: { supplierPage: { select: { businessId: true } } },
+      }),
+      // «از او خریده‌ام» — سابقه استعلام بین من و او روی همین کالا
+      this.prisma.inquiry.findMany({
+        where: {
+          buyerId: business.id,
+          sellerId: { in: listings.map((l) => l.business.id) },
+          listing: { goodId: good.id },
+        },
+        select: { sellerId: true },
+        take: 200,
+      }),
+      this.prisma.watchedGood.findUnique({
+        where: { businessId_goodId: { businessId: business.id, goodId: good.id } },
+        select: { id: true },
+      }),
+      this.prisma.listing.findFirst({
+        where: { businessId: business.id, goodId: good.id, mode: { in: ["BUY", "BOTH"] }, isActive: true },
+        select: { volume: true, frequency: true, variantLabel: true },
+      }),
+    ]);
+
+    const followedSet = new Set(followedPages.map((f) => f.supplierPage.businessId));
+    const boughtSet = new Set(myInquirySellers.map((i) => i.sellerId));
+
+    return {
+      good,
+      watched: watch !== null,
+      volume: myBuy?.volume ?? null,
+      frequency: myBuy?.frequency ?? null,
+      variantLabel: myBuy?.variantLabel ?? null,
+      rows: listings.map((l) => {
+        const log = l.priceLogs[0];
+        return {
+          listingId: l.id,
+          priceMinor: l.priceMinor as number,
+          currency: l.currency,
+          minOrder: l.minOrder,
+          stock: l.stock,
+          variantLabel: l.variantLabel,
+          updatedAt: l.updatedAt,
+          seller: l.business,
+          prevMinor: log?.oldMinor ?? null,
+          trendPct:
+            log && log.oldMinor > 0
+              ? Math.round((((l.priceMinor as number) - log.oldMinor) / log.oldMinor) * 100)
+              : null,
+          followedByMe: followedSet.has(l.business.id),
+          boughtFrom: boughtSet.has(l.business.id),
+          sponsored: false, // فلگ آینده — فعلاً خالی (طرح ۰۹: فقط ساختار UI)
+        };
+      }),
+    };
   }
 
   /**
