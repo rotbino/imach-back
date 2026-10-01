@@ -66,6 +66,8 @@ const INQUIRY_INCLUDE = {
       id: true,
       priceMinor: true,
       currency: true,
+      /** فاز ۴ — برچسب واریانت برای کارت «مطابق کاتالوگ شما» (طرح ۰۶) */
+      variantLabel: true,
       good: {
         select: {
           id: true,
@@ -77,7 +79,19 @@ const INQUIRY_INCLUDE = {
       },
     },
   },
-  buyer: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
+  buyer: {
+    select: {
+      id: true,
+      slug: true,
+      name: true,
+      city: true,
+      isVerified: true,
+      /** فاز ۴ — صنف و تماس خریدار برای صفحه جزئیات درخواست (طرح ۰۶) */
+      trade: true,
+      activityType: true,
+      phone: true,
+    },
+  },
 } as const;
 
 /** The whole market module is authenticated — buyers and sellers only. */
@@ -212,6 +226,9 @@ export class MarketController {
             listingId: m.listingId,
             volume: need.volume as number,
             note: body.note?.trim() || null,
+            // فاز ۴ — تناوب خریدِ خریدار همان لحظه روی درخواست عکس می‌افتد
+            // تا فروشنده «دوره خرید» را بدون کالبدشکافی ببیند.
+            frequency: need.frequency ?? null,
           },
         });
         offers.push(
@@ -517,6 +534,29 @@ export class MarketController {
     if (!inquiry) throw AppError.notFound("Inquiry not found");
     await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
     await this.prisma.inquiry.update({ where: { id: inquiry.id }, data: { isRead: true } });
+    this.cache.invalidateTag(`market:inq:${inquiry.sellerId}`);
+    return { ok: true };
+  }
+
+  /** فاز ۴ (طرح ۰۶) — فروشنده درخواست را از صندوق ورودی بیرون می‌گذارد.
+   *  آرشیو = فقط وضعیت؛ تاریخچه و پیشنهادهای قبلی دست‌نخورده می‌مانند. */
+  @Post("archiveInquiry/:id")
+  async archiveInquiry(
+    @Param("id") inquiryId: string,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(inquiryId)) throw AppError.notFound("Inquiry not found");
+    const inquiry = await this.prisma.inquiry.findUnique({
+      where: { id: inquiryId },
+      select: { id: true, sellerId: true, status: true },
+    });
+    if (!inquiry) throw AppError.notFound("Inquiry not found");
+    await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
+    await this.prisma.inquiry.update({
+      where: { id: inquiry.id },
+      data: { status: "ARCHIVED", isRead: true },
+    });
     this.cache.invalidateTag(`market:inq:${inquiry.sellerId}`);
     return { ok: true };
   }

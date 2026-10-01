@@ -523,6 +523,12 @@ model Inquiry {
   listingId String   @db.ObjectId
   volume    Float
   note      String?
+  /// Purchase rhythm snapshot from the buyer's BUY listing
+  /// (WEEKLY | MONTHLY | OCCASIONAL) — shown as «دوره خرید» on the request card.
+  frequency String?
+  /// Delivery expectation snapshot («این ماه», «فوری», …) — free text from
+  /// the quote-request form (design 12, phase 6); null until that form exists.
+  delivery  String?
   status    String   @default("NEW") // NEW | ANSWERED | ARCHIVED
   isRead    Boolean  @default(false)
   createdAt DateTime @default(now())
