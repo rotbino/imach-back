@@ -42,7 +42,9 @@ async function main() {
   const related = dir.data.related ?? [];
   const followed = dir.data.followed ?? [];
   ok(related.length >= 4, `related ≥۴ فروشنده (got ${related.length})`);
-  ok(followed.length === 4, `followed = ۴ (انزلی/سعید/سپید mine + کیان theirs) — got ${followed.length}`);
+  // ≥۴: چهار فالویِ seed همیشه هست؛ فالوی اضافی = فعالیت واقعی کاربر (دمو)
+  // روی محیط زنده — تست نباید با فالوی مشروع کاربر شکست بخورد
+  ok(followed.length >= 4, `followed ≥۴ (انزلی/سعید/سپید mine + کیان theirs) — got ${followed.length}`);
 
   const gilrangRel = related.find((r) => r.name === "تجارت گیل‌رنج");
   ok(!!gilrangRel, "گیل‌رنج در related");

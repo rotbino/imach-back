@@ -330,35 +330,48 @@ export class MarketController {
   async getSupplyBoard(
     @Query() query: SupplyBoardQueryDto,
     @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
   ) {
     const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const good = await this.prisma.good.findUnique({
-      where: { id: query.goodId },
-      select: {
-        id: true, nameFa: true, nameEn: true, unit: true,
-        category: { select: { slug: true, nameFa: true, nameEn: true } },
-      },
-    });
-    if (!good) throw AppError.notFound("Good not found");
+    // ── بخشِ مشترک (کالا + تابلو قیمت‌ها) زیر کش ۶۰ثانیه‌ای با تگ products:
+    // heavy query است (لیستینگ‌ها + priceLog + business) و برای همه‌ی خریدارانِ
+    // همان کالا یکسان است — قبلاً هر فراخوان ۱.۱ ثانیه به Atlas می‌زد.
+    const { value: shared, hit } = await this.cache.wrap(
+      `market:board2:${query.goodId}`,
+      { ttlMs: TTL.MINUTE, tags: ["products", `market:board:${query.businessId}`] },
+      async () => {
+        const good = await this.prisma.good.findUnique({
+          where: { id: query.goodId },
+          select: {
+            id: true, nameFa: true, nameEn: true, unit: true,
+            category: { select: { slug: true, nameFa: true, nameEn: true } },
+          },
+        });
+        if (!good) throw AppError.notFound("Good not found");
 
-    const listings = await this.prisma.listing.findMany({
-      where: {
-        goodId: good.id,
-        isActive: true,
-        mode: { in: ["SELL", "BOTH"] },
-        priceMinor: { not: null },
-        businessId: { not: business.id },
-      },
-      select: {
-        id: true, priceMinor: true, currency: true, minOrder: true, stock: true,
-        variantLabel: true, updatedAt: true,
-        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true } },
-        priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldMinor: true, newMinor: true } },
-      },
-      orderBy: { updatedAt: "desc" },
-      take: 100,
-    });
+        const listings = await this.prisma.listing.findMany({
+          where: {
+            goodId: good.id,
+            isActive: true,
+            mode: { in: ["SELL", "BOTH"] },
+            priceMinor: { not: null },
+          },
+          select: {
+            id: true, priceMinor: true, currency: true, minOrder: true, stock: true,
+            variantLabel: true, updatedAt: true,
+            business: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true } },
+            priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldMinor: true, newMinor: true } },
+          },
+          orderBy: { updatedAt: "desc" },
+          take: 100,
+        });
+        return { good, listings };
+      }
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    const good = shared.good;
+    const listings = shared.listings.filter((l) => l.business.id !== business.id);
 
     const [followedPages, myInquirySellers, watch, myBuy] = await Promise.all([
       // «دنبال می‌کنم» — فالوی کاتالوگِ فروشنده از میز خرید من
