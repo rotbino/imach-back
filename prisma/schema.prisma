@@ -473,6 +473,14 @@ model Listing {
   province String?
   country  String  @default("IR")
 
+  // ── شمارش بازدید عمومی (شکاف ۳ — فاز ۲ بازطراحی) ──
+  /// بازدیدهای پنجره‌ی سی‌روزه‌ی جاری — همان عدد کارت‌ها و «عملکرد ۳۰ روز»
+  viewCount30     Int       @default(0)
+  /// بازدید کل از پیدایش آگهی
+  viewCountTotal  Int       @default(0)
+  /// شروع پنجره‌ی سی‌روزه — وقتی از ۳۰ روز بگذرد ریست و از امروز شروع می‌شود
+  viewWindowStart DateTime?
+
   /// Soft delete — «حذف» فقط کاتالوگ را ترک می‌کند؛ Inquiry/Offer/PriceLog
   /// (تاریخچه قیمت) می‌ماند. Upsert یک سطر حذف‌شده را دوباره زنده می‌کند.
   isActive Boolean @default(true)

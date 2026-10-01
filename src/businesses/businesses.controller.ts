@@ -29,6 +29,8 @@ import { currencyOfCountry } from "../common/catalog/catalog";
 const LISTING_SELECT = {
   id: true,
   mode: true,
+  // فاز ۲ — صفحه‌ی جزئیات کالای عمومی (طرح ۰۲) به واریانت و عکس مرجع نیاز دارد
+  variantLabel: true,
   priceMinor: true,
   currency: true,
   attrs: true,
@@ -46,11 +48,13 @@ const LISTING_SELECT = {
       category: { select: { slug: true, nameFa: true, nameEn: true } },
     },
   },
+  product: { select: { imageUrl: true } },
 } as const;
 
 type ListingDtoT = {
   id: string;
   mode: string;
+  variantLabel?: string | null;
   priceMinor: number | null;
   currency: string | null;
   attrs: unknown;
@@ -66,6 +70,7 @@ type ListingDtoT = {
     unit: string;
     category: { slug: string; nameFa: string; nameEn: string };
   };
+  product?: { imageUrl: string | null } | null;
 };
 
 function invalidateBusiness(cache: CacheService, businessId: string, slug?: string): void {

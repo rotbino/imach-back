@@ -13,7 +13,7 @@ import { FilesService } from "../files/files.service";
 import { ProductsService, productIdentityParts } from "../products/products.service";
 import { BulkSaveDto } from "../products/dto/product.dto";
 import { refreshCatalogCount } from "../common/catalog/catalog-count";
-import { SaveListingDto, CopyFromDto } from "./dto/listing.dto";
+import { SaveListingDto, CopyFromDto, SetActiveDto } from "./dto/listing.dto";
 
 /**
  * Same shape as getMyListings rows — every save path returns this so the
@@ -32,6 +32,11 @@ const LISTING_SELECT = {
   minOrder: true,
   volume: true,
   frequency: true,
+  updatedAt: true,
+  // ── وضعیت + شاخص‌های مالک (فاز ۲) — ردیف غیرفعال و شمارش بازدید
+  isActive: true,
+  viewCount30: true,
+  viewCountTotal: true,
   brand: { select: { id: true, name: true } },
   good: {
     select: {
@@ -156,39 +161,16 @@ export class ListingsController {
   async getMyListings(
     @CurrentUser() user: AuthUser,
     @Query("businessId") businessId: string | undefined,
+    @Query("includeInactive") includeInactive: string | undefined,
     @CurrentLocale() locale: Locale
   ) {
     if (!businessId) throw AppError.badRequest("businessId is required", "BUSINESS_ID_REQUIRED");
     await assertBusinessOwner(this.prisma, user, businessId, locale);
     const rows = await this.prisma.listing.findMany({
-      where: { businessId, isActive: true },
-      select: {
-        id: true,
-        mode: true,
-        variantKey: true,
-        variantLabel: true,
-        productId: true,
-        priceMinor: true,
-        currency: true,
-        attrs: true,
-        stock: true,
-        minOrder: true,
-        volume: true,
-        frequency: true,
-        updatedAt: true,
-        brand: { select: { id: true, name: true } },
-        good: {
-          select: {
-            id: true,
-            nameFa: true,
-            nameEn: true,
-            unit: true,
-            category: { select: { slug: true, nameFa: true, nameEn: true } },
-          },
-        },
-        // ── عکس مرجع محصول — وقتی آگهی گالری ندارد، این عکس نشان داده می‌شود
-        product: { select: { imageUrl: true } },
-      },
+      // فاز ۲ — includeInactive=true: ردیف‌های غیرفعال هم برمی‌گردند تا کاتالوگ
+      // «ردیف غیرفعال + فعال‌سازی» طرح را بسازد؛ پیش‌فرض، رفتار قبلی است.
+      where: { businessId, ...(includeInactive === "true" ? {} : { isActive: true }) },
+      select: LISTING_SELECT,
       orderBy: { updatedAt: "desc" },
     });
     // پنل مالک هم عکس می‌بیند — یک کوئری «in» برای همه‌ی ردیف‌های صفحه
@@ -577,6 +559,35 @@ export class ListingsController {
     this.invalidateFor(listing.businessId, owner.slug);
     void refreshCatalogCount(this.prisma, listing.businessId);
     return { ok: true };
+  }
+
+  /**
+   * PUT /listings/setActive/:id — فاز ۲ (طرح ۰۱/۰۳): «غیرفعال کردن» از پنل
+   * مدیریت کالا و «فعال‌سازی» از ردیف غیرفعالِ کاتالوگ. برخلاف delete،
+   * مقدارها دست‌نخورده می‌مانند و فقط می‌بندد/باز می‌شود — مثل «توقف نمایش».
+   */
+  @Put("setActive/:id")
+  async setActive(
+    @Param("id") id: string,
+    @Body() body: SetActiveDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!/^[0-9a-fA-F]{24}$/.test(id)) throw AppError.notFound("Listing not found"); // bad id → 404, not a 500
+    const listing = await this.prisma.listing.findUnique({
+      where: { id },
+      select: { id: true, businessId: true, isActive: true },
+    });
+    if (!listing) throw AppError.notFound("Listing not found");
+    const owner = await assertBusinessOwner(this.prisma, user, listing.businessId, locale);
+    if (listing.isActive === body.active) {
+      // تغییر وضعیت تکراری — بی‌صدا قبول؛ پاسخ همان ردیف است
+    } else {
+      await this.prisma.listing.update({ where: { id: listing.id }, data: { isActive: body.active } });
+      this.invalidateFor(listing.businessId, owner.slug);
+      void refreshCatalogCount(this.prisma, listing.businessId);
+    }
+    return this.prisma.listing.findUnique({ where: { id: listing.id }, select: LISTING_SELECT });
   }
 
   /**

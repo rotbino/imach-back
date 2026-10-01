@@ -1,4 +1,4 @@
-import { IsArray, IsIn, IsObject, IsOptional, IsString, Matches, MaxLength, ArrayMaxSize } from "class-validator";
+import { IsArray, IsBoolean, IsIn, IsObject, IsOptional, IsString, Matches, MaxLength, ArrayMaxSize } from "class-validator";
 import { BuySpecDto, SellSpecDto, TRADE_MODES } from "../../goods/dto/goods.dto";
 
 /**
@@ -80,4 +80,13 @@ export class CopyFromDto {
   @ArrayMaxSize(200)
   @IsString({ each: true })
   sourceListingIds: string[];
+}
+
+/**
+ * PUT /listings/setActive/:id — فاز ۲: «غیرفعال کردن / فعال‌سازی» کالا.
+ * مقدارها دست‌نخورده می‌مانند؛ فقط نمایش در کاتالوگ می‌بندد/باز می‌شود.
+ */
+export class SetActiveDto {
+  @IsBoolean()
+  active: boolean;
 }
