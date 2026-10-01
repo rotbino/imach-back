@@ -10,7 +10,6 @@ import type { Locale } from "../common/i18n/i18n";
  * ─── Files API ───────────────────────────────────────────────────────────────
  *   POST   /files/upload?model=&modelId=&key=&description=&replace=   (auth)
  *   GET    /files/getUrl?model=&modelId=&key=                          (public)
- *   GET    /files/getList?model=&modelId=&key=                         (public)
  *   DELETE /files/delete/:id                                           (auth)
  *
  * Uploads are multipart/form-data with a single `file` part. Reads are
@@ -59,11 +58,6 @@ export class FilesController {
   @Get("getUrl")
   async getUrl(@Query("model") model: string, @Query("modelId") modelId: string, @Query("key") key: string): Promise<FileDto> {
     return this.files.getUrl(model, modelId, key);
-  }
-
-  @Get("getList")
-  async getList(@Query("model") model: string, @Query("modelId") modelId: string, @Query("key") key: string | undefined): Promise<{ items: FileDto[] }> {
-    return { items: await this.files.listFiles(model, modelId, key) };
   }
 
   @Delete("delete/:id")

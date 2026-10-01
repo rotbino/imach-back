@@ -235,34 +235,11 @@ export class MatchingService {
       .slice(0, limit);
   }
 
-  /** Suppliers selling goods I need — the sell-tab strip. */
-  async suppliersForBuyer(
-    buyerBusinessId: string,
-    buyerGeo: GeoSpot,
-    limit = 12
-  ): Promise<SupplierSuggestion[]> {
-    const myBuyListings = await this.prisma.listing.findMany({
-      where: {
-        businessId: buyerBusinessId,
-        isActive: true,
-        mode: { in: ["BUY", "BOTH"] },
-        volume: { not: null },
-      },
-      select: { goodId: true, volume: true },
-    });
-    return this.suppliersForGoods(
-      buyerBusinessId,
-      buyerGeo,
-      myBuyListings.map((l) => ({ goodId: l.goodId, volume: l.volume as number })),
-      limit
-    );
-  }
-
   /**
    * Suppliers selling the goods I track — the shared buyer-side engine.
    * `goods` carries my need per good (volume, null = plain watch); the caller
-   * decides the source: BUY listings (legacy strip), WatchedGood rows, or the
-   * union of both (فاز ۷ — دایرکتوری تأمین‌کنندگان و پیشنهادها).
+   * decides the source: BUY listings, WatchedGood rows, or the union of both
+   * (فاز ۷ — دایرکتوری تأمین‌کنندگان و پیشنهادها).
    */
   async suppliersForGoods(
     buyerBusinessId: string,

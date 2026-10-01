@@ -463,18 +463,6 @@ export class FilesService implements OnModuleInit, OnModuleDestroy {
     return this.toDto(row);
   }
 
-  /** Public list of a slot (galleries) — or the whole entity when key omitted. */
-  async listFiles(model: string, modelId: string, key?: string): Promise<FileDto[]> {
-    if (!(RELATED_MODELS as readonly string[]).includes(model)) throw AppError.badRequest("bad model", "BAD_MODEL");
-    if (!OID_RE.test(modelId)) return [];
-    const rows = await this.prisma.file.findMany({
-      where: { relatedModel: model, relatedId: modelId, ...(key ? { fieldKey: key } : {}) },
-      orderBy: { createdAt: "asc" },
-      take: 100,
-    });
-    return rows.map((r) => this.toDto(r));
-  }
-
   /**
    * Batch gallery map for list payloads (catalog tiles, my listings) — one
    * `in` query for the whole page, not one per row.

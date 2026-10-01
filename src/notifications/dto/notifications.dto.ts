@@ -43,11 +43,3 @@ export class SubscribePushDto {
   @Type(() => PushKeysDto)
   keys: PushKeysDto;
 }
-
-/** POST /notifications/unsubscribePush */
-export class UnsubscribePushDto {
-  @IsString()
-  @MinLength(1)
-  @MaxLength(1024)
-  endpoint: string;
-}

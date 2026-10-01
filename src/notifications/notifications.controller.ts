@@ -7,7 +7,6 @@ import { PushService } from "./push.service";
 import {
   NotificationsQueryDto,
   SubscribePushDto,
-  UnsubscribePushDto,
 } from "./dto/notifications.dto";
 
 /**
@@ -71,14 +70,6 @@ export class NotificationsController {
       p256dh: body.keys.p256dh,
       auth: body.keys.auth,
     });
-    return { ok: true };
-  }
-
-  /** خروج/لغو از یک مرورگر — endpoint همان اشتراک */
-  @Post("unsubscribePush")
-  @HttpCode(HttpStatus.OK)
-  async unsubscribePush(@Body() body: UnsubscribePushDto) {
-    await this.pushService.unsubscribe(body.endpoint);
     return { ok: true };
   }
 }

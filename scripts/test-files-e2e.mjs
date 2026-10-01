@@ -106,8 +106,9 @@ try {
   await new Promise((r) => setTimeout(r, 800));
   const firstGone = await fetch(firstUrl);
   ok("old file deleted from arvan", firstGone.status === 404 || firstGone.status === 403, `status ${firstGone.status}`);
-  const list1 = await api(`/files/getList?model=Business&modelId=${bizId}&key=logo`, { auth: false });
-  ok("slot has exactly 1 record", list1.data.items.length === 1, `count=${list1.data.items.length}`);
+  // جای getListِ حذف‌شده: getUrl باید رکورد تازه‌ی slot را برگرداند
+  const url2 = await api(`/files/getUrl?model=Business&modelId=${bizId}&key=logo`, { auth: false });
+  ok("slot points to the replaced file", url2.status === 200 && url2.data.url === up2.data.url, `url=${url2.data?.url}`);
 
   // ── 7. gallery: append 2 images (replace=false)
   for (const name of ["a.jpg", "b.jpg"]) {

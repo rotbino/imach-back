@@ -149,18 +149,6 @@ export class SetArmsDto {
   buy?: boolean;
 }
 
-/** اکسپلور — سمت بازار (فروش/خرید) و شهرِ ترجیحی برای چیدمان */
-export class ExploreQueryDto {
-  @IsOptional()
-  @IsIn(["SELL", "BUY"])
-  mode?: "SELL" | "BUY";
-
-  @IsOptional()
-  @IsString()
-  @MaxLength(30)
-  city?: string;
-}
-
 /**
  * PUT /businesses/catalogCategories/:id — فاز ۳ (طرح ۰۱): دسته‌های شخصی
  * کاتالوگ. فروشنده ویترینش را خودش گروه‌بندی می‌کند — «هاشمی/طارم/فجر/

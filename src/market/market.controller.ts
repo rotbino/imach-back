@@ -29,7 +29,6 @@ import {
   FollowBuyerDto,
   FollowSupplierDto,
   InquiriesQueryDto,
-  OffersQueryDto,
   OfferBuyRequestDto,
   RemoveFollowerDto,
   RequestQuoteDto,
@@ -131,8 +130,6 @@ export class MarketController {
   ) {}
 
   private invalidateBuyerSide(businessId: string): void {
-    this.cache.invalidateTag(`market:board:${businessId}`);
-    this.cache.invalidateTag(`market:ssugg:${businessId}`);
     this.cache.invalidateTag(`market:buyreq:${businessId}`);
     this.cache.invalidateTag(`market:supdir:${businessId}`);
     this.cache.invalidateTag(`market:sugg:${businessId}`);
@@ -1026,24 +1023,6 @@ export class MarketController {
     return offer;
   }
 
-  /** Offers received by a buyer (per business), newest first, cursor-paginated. */
-  @Get("getOffers")
-  async getOffers(
-    @Query() query: OffersQueryDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale
-  ) {
-    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const cap = Math.min(query.limit ?? 50, 100);
-    const rows = await this.prisma.offer.findMany({
-      where: { buyerId: query.businessId, ...cursorBefore(decodeCursor(query.cursor)) },
-      include: OFFER_INCLUDE,
-      orderBy: { id: "desc" },
-      take: cap + 1,
-    });
-    return toPage(rows, cap);
-  }
-
   /** Seller answers an inquiry with a concrete price → becomes an Offer for the buyer. */
   @Post("sendOffer")
   async sendOffer(
@@ -1523,85 +1502,6 @@ export class MarketController {
     });
     this.invalidateBuyerSide(business.id);
     return { ok: true };
-  }
-
-  /**
-   * Live price board: latest sell listing of every followed supplier with
-   * the most recent PriceLog for trend detection. Short TTL — "live" by design.
-   */
-  @Get("getPriceBoard")
-  async getPriceBoard(
-    @Query() query: BusinessIdQueryDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale,
-    @Res({ passthrough: true }) reply: FastifyReply
-  ) {
-    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const { value, hit } = await this.cache.wrap(
-      `market:board:${query.businessId}`,
-      { ttlMs: TTL.SHORT, tags: [`market:board:${query.businessId}`] },
-      async () => {
-        const pageId = await ensurePage(this.prisma, query.businessId, "BUY");
-        const follows = await this.prisma.follow.findMany({
-          where: { followerPageId: pageId },
-          select: { supplierPage: { select: { businessId: true } } },
-        });
-        const supplierIds = follows.map((f) => f.supplierPage.businessId);
-        if (supplierIds.length === 0) return [];
-
-        return this.prisma.listing.findMany({
-          where: {
-            businessId: { in: supplierIds },
-            isActive: true,
-            mode: { in: ["SELL", "BOTH"] },
-            priceMinor: { not: null },
-          },
-          select: {
-            id: true,
-            priceMinor: true,
-            currency: true,
-            stock: true,
-            minOrder: true,
-            updatedAt: true,
-            good: {
-              select: {
-                id: true,
-                nameFa: true,
-                nameEn: true,
-                unit: true,
-                category: { select: { slug: true, nameFa: true, nameEn: true } },
-              },
-            },
-            business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
-            priceLogs: { orderBy: { createdAt: "desc" }, take: 1, select: { oldMinor: true, newMinor: true, createdAt: true } },
-          },
-          orderBy: { updatedAt: "desc" },
-          take: 200,
-        });
-      }
-    );
-
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
-  }
-
-  /** Suggested suppliers for my buy needs — the buy-side follow engine. */
-  @Get("getSupplierSuggestions")
-  async getSupplierSuggestions(
-    @Query() query: BusinessIdQueryDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale,
-    @Res({ passthrough: true }) reply: FastifyReply
-  ) {
-    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const { value, hit } = await this.cache.wrap(
-      `market:ssugg:${query.businessId}`,
-      { ttlMs: TTL.MINUTE, tags: [`market:ssugg:${query.businessId}`] },
-      () => this.matching.suppliersForBuyer(business.id, { city: business.city, province: business.province, country: business.country })
-    );
-
-    reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
   }
 
   /**

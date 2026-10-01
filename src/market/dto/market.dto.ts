@@ -1,24 +1,10 @@
 import { Type } from "class-transformer";
 import { ArrayMaxSize, IsArray, IsBoolean, IsIn, IsInt, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
 
-/** GET /market/getOffers | getInquiries | getFollows | getPriceBoard | getFollowers | getSupplierSuggestions | getBuyRequests */
+/** GET /market/getInquiries | getFollows | getPriceBoard | getFollowers | getBuyRequests */
 export class BusinessIdQueryDto {
   @IsString()
   businessId: string;
-}
-
-export class OffersQueryDto extends BusinessIdQueryDto {
-  @IsOptional()
-  @IsString()
-  @MaxLength(120)
-  cursor?: string;
-
-  @IsOptional()
-  @Type(() => Number)
-  @IsInt()
-  @Min(1)
-  @Max(100)
-  limit?: number;
 }
 
 export class InquiriesQueryDto extends BusinessIdQueryDto {

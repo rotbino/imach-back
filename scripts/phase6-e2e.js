@@ -49,7 +49,20 @@ async function main() {
   ok(board.data.watched === false, "واچ برای کاربر تازه false");
 
   // ── ۳) فرم درخواست قیمت — ۱ گیرنده انتخابی + شبکه ──
-  const target = rows.find((r) => r.seller.name.includes("انزلی")) ?? rows[0];
+  // گیرنده‌ی انتخابی باید مالک داشته باشد تا اعلان QUOTE چک‌پذیر باشد
+  // (انزلی و بعضی دموی‌های صحنه مالک ندارند — prop کاتالوگ‌اند، لاگین ندارند)
+  const { PrismaClient } = require("@prisma/client");
+  const prismaSel = new PrismaClient();
+  const ownedIds = new Set(
+    (
+      await prismaSel.business.findMany({
+        where: { id: { in: rows.map((r) => r.seller.id) }, ownerId: { not: null } },
+        select: { id: true },
+      })
+    ).map((b) => b.id)
+  );
+  await prismaSel.$disconnect();
+  const target = rows.find((r) => ownedIds.has(r.seller.id)) ?? rows[0];
   const rq = await j(
     "POST",
     "/market/requestQuote",
@@ -76,44 +89,76 @@ async function main() {
   const withDelivery = mine.find((r) => r.delivery === "فوری" && r.frequency === "WEEKLY" && r.volume === 15);
   ok(!!withDelivery, "Inquiry با delivery=فوری + frequency=WEEKLY + volume=15");
 
-  // ── ۴) اعلان QUOTE برای مالکِ فروشنده‌ی انتخابی ──
-  // (url در payload نیست — کلاینت از روی type نگاشت می‌کند؛ فقط presence/متن چک می‌شود)
+  // ── ۴) اعلان QUOTE برای مالکِ فروشنده‌ی «انتخابی» ──
+  // نکته‌ی فاز ۸: اعلان QUOTE پشت گیت quoteReplies است — دیتای دمو طبق طرح ۱۴
+  // برای پارس خاموش است؛ برای تست موقتاً روشن می‌کنیم و بعد برمی‌گردانیم.
+  // چک مستقیم از DB: مالکِ خودِ فروشنده‌ی هدف (target.seller) — نه کاربر ثابت تست.
   const sellerLogin = await j("POST", "/auth/loginUser", SELLER_LOGIN);
   const sellerToken = sellerLogin.data.accessToken;
-  const sellerNotifs = (await j("GET", "/notifications/getNotifications", null, sellerToken)).data;
-  const sellerRows = sellerNotifs.rows ?? sellerNotifs.items ?? [];
-  const quoteNotif = sellerRows.find((r) => r.type === "QUOTE" && r.actorName === tempBiz.name);
+  const sellerBizId = sellerLogin.data.businesses[0].id;
+  const prisma = prismaSel;
+  const savedPrefs = await prisma.business.findUnique({
+    where: { id: sellerBizId },
+    select: { notifPrefs: true },
+  });
+  await j("PUT", `/businesses/setNotifPrefs/${sellerBizId}`, { quoteReplies: true }, sellerToken);
+  let quoteNotif = null;
+  try {
+    const rq2 = await j("POST", "/market/requestQuote", {
+      businessId: tempBiz.id,
+      goodId: hashemi.id,
+      volume: 15,
+      frequency: "WEEKLY",
+      delivery: "فوری",
+      note: "تست e2e فاز ۶ — پاک می‌شود",
+      supplierIds: [target.seller.id],
+      includeNetwork: false,
+    }, tempToken);
+    if (rq2.status === 201) {
+      const targetOwner = await prisma.business.findUnique({
+        where: { id: target.seller.id },
+        select: { ownerId: true },
+      });
+      quoteNotif = await prisma.notification.findFirst({
+        where: { userId: targetOwner?.ownerId ?? "", type: "QUOTE", actorId: tempBiz.id },
+        orderBy: { id: "desc" },
+      });
+    }
+  } finally {
+    const savedQr = savedPrefs && savedPrefs.notifPrefs ? savedPrefs.notifPrefs.quoteReplies : true;
+    await j("PUT", `/businesses/setNotifPrefs/${sellerBizId}`, { quoteReplies: savedQr }, sellerToken);
+    await prisma.$disconnect();
+  }
   ok(!!quoteNotif, `اعلان QUOTE برای فروشنده‌ی انتخابی (good=${quoteNotif?.good ?? "—"})`);
 
   // ── ۵) پاک‌سازی کامل ──
-  const { PrismaClient } = require("@prisma/client");
-  const prisma = new PrismaClient();
+  const prisma2 = new PrismaClient();
   try {
-    const tempUser = await prisma.user.findFirst({ where: { phone: TEMP_PHONE }, select: { id: true } });
+    const tempUser = await prisma2.user.findFirst({ where: { phone: TEMP_PHONE }, select: { id: true } });
     if (tempUser) {
-      const delN = await prisma.notification.deleteMany({ where: { userId: tempUser.id } });
+      const delN = await prisma2.notification.deleteMany({ where: { userId: tempUser.id } });
       console.log(`  cleanup: ${delN.count} temp notifications`);
     }
-    const delI = await prisma.inquiry.deleteMany({
+    const delI = await prisma2.inquiry.deleteMany({
       where: { buyerId: tempBiz.id, note: "تست e2e فاز ۶ — پاک می‌شود" },
     });
     console.log(`  cleanup: ${delI.count} test inquiries`);
     // اعلان QUOTE که به مالک فروشنده رفت هم پاک شود (actor = temp biz)
-    const delSellerN = await prisma.notification.deleteMany({
+    const delSellerN = await prisma2.notification.deleteMany({
       where: { type: "QUOTE", actorId: tempBiz.id },
     });
     console.log(`  cleanup: ${delSellerN.count} seller QUOTE notifications`);
-    await prisma.watchedGood.deleteMany({ where: { businessId: tempBiz.id } });
-    await prisma.page.deleteMany({ where: { businessId: tempBiz.id } });
-    await prisma.follow.deleteMany({
+    await prisma2.watchedGood.deleteMany({ where: { businessId: tempBiz.id } });
+    await prisma2.page.deleteMany({ where: { businessId: tempBiz.id } });
+    await prisma2.follow.deleteMany({
       where: { OR: [{ followerPage: { businessId: tempBiz.id } }, { supplierPage: { businessId: tempBiz.id } }] },
     });
-    await prisma.listing.deleteMany({ where: { businessId: tempBiz.id } });
-    await prisma.business.delete({ where: { id: tempBiz.id } });
-    if (tempUser) await prisma.user.delete({ where: { id: tempUser.id } });
+    await prisma2.listing.deleteMany({ where: { businessId: tempBiz.id } });
+    await prisma2.business.delete({ where: { id: tempBiz.id } });
+    if (tempUser) await prisma2.user.delete({ where: { id: tempUser.id } });
     console.log("  cleanup: temp business + user removed");
   } finally {
-    await prisma.$disconnect();
+    await prisma2.$disconnect();
   }
 }
 

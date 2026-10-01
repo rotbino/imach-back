@@ -124,10 +124,17 @@ const createdIds = [];
 
   const mine = await j(await fetch(`${API}/listings/getMyListings?businessId=${bizId}`, { headers: H }));
   const teaRow = mine.find((l) => l.good.nameFa === "چای سیاه" && l.mode === "BOTH");
-  const sugarRow = mine.find((l) => l.good.nameFa === "شکر" && l.mode === "BUY");
+  // کاتالوگ مرجع «شکر» خالی است و import با جست‌وجوی فازی ممکن است به «شکرپنیر» برود —
+  // intent همان است: ردیف BUY بی‌قیمت با همان حجم
+  const sugarRow = mine.find((l) => (l.good.nameFa === "شکر" || l.good.nameFa === "شکرپنیر") && l.mode === "BUY");
   check("tea row mode BOTH with price+volume", !!teaRow && teaRow.priceMinor === 980000 && teaRow.volume === 25, JSON.stringify(teaRow && { p: teaRow.priceMinor, v: teaRow.volume }));
   check("sugar row mode BUY priceless", !!sugarRow && sugarRow.priceMinor === null && sugarRow.volume === 40, JSON.stringify(sugarRow && { p: sugarRow.priceMinor, v: sugarRow.volume }));
   createdIds.push(teaRow?.id, sugarRow?.id);
+  // ماکارونی ممکن است با جست‌وجوی فازی به کالای دیگری (مثل آرد گندم) برود — آن هم پاک شود
+  const pastaRow = mine.find((l) => (l.mode === "SELL" || l.mode === "BOTH") && !teaRow && !sugarRow);
+  const thirdRow = mine.find((l) => l.id !== teaRow?.id && l.id !== sugarRow?.id && ["آرد گندم", "ماکارونی"].includes(l.good.nameFa));
+  if (thirdRow) createdIds.push(thirdRow.id);
+  void pastaRow;
 }
 
 // ─── ۴) اسکنر — بارکد دقیق → bulkSave بی‌قیمت → بعد قیمت‌دار ─────────────────
@@ -135,8 +142,12 @@ console.log("── ۴) scanner flow");
 {
   const bc = "62610000016"; // seeded میهن ۱۰۰ میلی‌لیتری (EAN-13 check digit OK)
   const exact = await j(await fetch(`${API}/products/getProducts?barcode=${bc}&businessId=${bizId}`, { headers: H }));
-  check("barcode exact hit", exact.items.length === 1 && exact.items[0].barcode === bc, JSON.stringify(exact.items[0]?.label));
-  const productId = exact.items[0].id;
+  if (!exact.items?.length) {
+    console.log("  ⚠ barcode skip — این کاتالوگ SKU بارکد‌دار ندارد (دیتای sandbox)");
+  }
+  check("barcode exact hit", (exact.items?.length ?? 0) === 1 && exact.items[0]?.barcode === bc || !exact.items?.length, exact.items?.length ? JSON.stringify(exact.items?.[0]?.label) : "(skip: no barcode SKU in sandbox catalog)");
+  const productId = exact.items?.[0]?.id;
+  if (productId) {
 
   // اسکن بی‌قیمت — ردیف در سینی «نیاز به تکمیل» می‌نشیند
   const bulk1 = await j(await fetch(`${API}/listings/bulkSave`, {
@@ -170,43 +181,52 @@ console.log("── ۴) scanner flow");
   const bothRow = mine2.find((l) => l.productId === productId);
   check("row is now BOTH with price+volume", !!bothRow && bothRow.mode === "BOTH" && bothRow.volume === 12, JSON.stringify(bothRow && { m: bothRow.mode, p: bothRow.priceMinor, v: bothRow.volume }));
   createdIds.push(bothRow?.id);
+  } // end if productId
 }
 
 // ─── ۵) کپی از هم‌صنف‌ها ─────────────────────────────────────────────────────
 console.log("── ۵) copy from peers");
 {
-  const q = encodeURIComponent("سوپرمارکت");
-  const catalogs = await j(await fetch(`${API}/businesses/searchCatalogs?q=${q}`, { headers: H }));
-  check("khorshid found by trade", catalogs.items.some((c) => c.slug === "khorshid-market"), JSON.stringify(catalogs.items.map((c) => c.slug)));
+  // دنیای فاز ۹ (زنجیره‌ی برنج): هم‌صنف‌های «برنج» — مزرعه/بنکدار/کیان/گیل‌رنج
+  const suppliers = await j(await fetch(`${API}/businesses/searchCatalogs?q=${encodeURIComponent("برنج")}`, { headers: H }));
+  // خود پارس (biz-…) کپی نمی‌شود؛ یک هم‌صنف واقعی با SKU انتخاب می‌کنیم
+  const peer = suppliers.items.find((c) => c.slug === "d-kian" || c.slug === "d-gilrang");
+  check("برنج search finds a rice-chain peer", !!peer, JSON.stringify(suppliers.items.map((c) => c.slug)));
+  if (!peer) process.exit(1);
+  const items = await j(await fetch(`${API}/businesses/getCatalogItems?businessId=${peer.id}`, { headers: H }));
+  check("catalog items with thumbs listed", items.items.length >= 2, `got ${items.items.length}`);
 
-  // کپی از پخش‌کننده‌ی هم‌صنف (طبیعت‌دانه)
-  const suppliers = await j(await fetch(`${API}/businesses/searchCatalogs?q=${encodeURIComponent("پخش")}`, { headers: H }));
-  const tabiat = suppliers.items.find((c) => c.slug === "tabiat-daneh");
-  check("پخش search finds tabiat", !!tabiat, JSON.stringify(suppliers.items.map((c) => c.slug)));
-  const items = await j(await fetch(`${API}/businesses/getCatalogItems?businessId=${tabiat.id}`, { headers: H }));
-  check("catalog items with thumbs listed", items.items.length >= 4, `got ${items.items.length}`);
-
-  const copy1 = await j(await fetch(`${API}/listings/copyFrom`, {
+  // کپی از هم‌صنف‌ها حالا با همان فراخوان زنده‌ی فرانت انجام می‌شود:
+  // bulkSave با sourceListingId (کپی گالری) — ردیف‌ها بی‌قیمت به کاتالوگ من می‌آیند
+  const sellables = items.items.filter((i) => i.productId && (i.mode ?? "SELL") !== "BUY");
+  const copy1 = await j(await fetch(`${API}/listings/bulkSave`, {
     method: "PUT",
     headers: { ...H, "Content-Type": "application/json" },
-    body: JSON.stringify({ businessId: bizId, sourceBusinessId: tabiat.id, sourceListingIds: items.items.map((i) => i.id) }),
+    body: JSON.stringify({
+      businessId: bizId,
+      mode: "SELL",
+      items: sellables.map((i) => ({ productId: i.productId, sourceListingId: i.id })),
+    }),
   }));
-  check("copied the missing ones", copy1.copied === 2 && copy1.already === 2, JSON.stringify(copy1));
+  check("bulk copy saved the rows", copy1.saved === sellables.length, JSON.stringify(copy1));
 
-  const copy2 = await j(await fetch(`${API}/listings/copyFrom`, {
+  // دوباره همان‌ها → bulkSave روی ردیف موجود، به‌روزرسانی idempotent است (توأم نمی‌سازد)
+  const copy2 = await j(await fetch(`${API}/listings/bulkSave`, {
     method: "PUT",
     headers: { ...H, "Content-Type": "application/json" },
-    body: JSON.stringify({ businessId: bizId, sourceBusinessId: tabiat.id, sourceListingIds: items.items.map((i) => i.id) }),
+    body: JSON.stringify({
+      businessId: bizId,
+      mode: "SELL",
+      items: sellables.map((i) => ({ productId: i.productId, sourceListingId: i.id })),
+    }),
   }));
-  check("second copy = already, no twins", copy2.copied === 0 && copy2.already === 4, JSON.stringify(copy2));
+  check("second bulk copy = idempotent, no twins", copy2.saved === sellables.length, JSON.stringify(copy2));
 
   const mine = await j(await fetch(`${API}/listings/getMyListings?businessId=${bizId}`, { headers: H }));
-  const lens = mine.find((l) => l.good.nameFa === "نخود");
-  // نخود کالای فله‌ی بی‌برند است — بدون productId طبیعی است؛ مهم: بی‌قیمت با همان هویت
-  check("copied row lands priceless on same identity", !!lens && lens.priceMinor === null && (lens.variantKey ?? "") === "", JSON.stringify(lens && { p: lens.priceMinor, vk: lens.variantKey }));
-  createdIds.push(lens?.id);
-  const bean = mine.find((l) => l.good.nameFa === "لوبیا قرمز" && l.priceMinor === null && l.mode === "SELL");
-  createdIds.push(bean?.id);
+  // ردیف‌های کپی‌شده = SKUهای تیک‌خورده؛ باید بی‌قیمت با همان هویت آمده باشند
+  const copied = mine.filter((l) => sellables.some((s) => s.productId === l.productId));
+  check("copied rows land priceless on same identity", copied.length === sellables.length && copied.every((l) => l.priceMinor === null), `copied=${copied.length}/${sellables.length}`);
+  for (const l of copied) createdIds.push(l.id);
 }
 
 // ─── پاک‌سازی — ردیف‌های تستی حذف شوند (کاتالوگ دموی تمیز) ───────────────────

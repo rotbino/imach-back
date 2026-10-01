@@ -131,15 +131,3 @@ export class SetPasswordDto {
   @MaxLength(72)
   newPassword: string;
 }
-
-/** Change the phone number on the authenticated account (rare; risky). */
-export class ChangePhoneDto {
-  @IsString()
-  @Matches(PHONE_DIALLED)
-  phone: string;
-
-  @IsOptional()
-  @IsString()
-  @MaxLength(2)
-  country?: string;
-}

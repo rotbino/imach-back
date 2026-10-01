@@ -565,32 +565,6 @@ export class AuthService {
     });
     return { ok: true };
   }
-
-  /**
-   * Change phone — برای کاربری که موقع ثبت‌نام سریع شماره‌اش را اشتباه زده.
-   * شماره جدید را می‌گیرد و اگر آزاد بود، عوض می‌کند.
-   */
-  async changePhone(user: AuthUser, body: { phone: string; country?: string }, locale: Locale) {
-    const country = body.country && isSupportedCountry(body.country) ? body.country : "IR";
-    const phone = normalizeIntlPhone(body.phone, country);
-    if (!phone) {
-      throw AppError.badRequest(
-        t(locale, "auth.invalidPhone", "شماره موبایل معتبر نیست"),
-        "INVALID_PHONE"
-      );
-    }
-    const taken = await this.prisma.user.findUnique({ where: { phone }, select: { id: true } });
-    if (taken && taken.id !== user.id) {
-      throw AppError.conflict(
-        t(locale, "auth.phoneTaken", "این شماره قبلاً ثبت شده است"),
-        "PHONE_TAKEN"
-      );
-    }
-    await this.prisma.user.update({ where: { id: user.id }, data: { phone } });
-    // phone روی Business هم آپدیت می‌شود (هر Business یک phone دارد که از signup آمده)
-    await this.prisma.business.updateMany({ where: { ownerId: user.id }, data: { phone } });
-    return { ok: true, phone };
-  }
   async refreshSession(request: FastifyRequest, reply: FastifyReply) {
     const raw = (request.cookies as Record<string, string | undefined>)[REFRESH_COOKIE];
     if (!raw) throw AppError.unauthorized("Refresh token missing");

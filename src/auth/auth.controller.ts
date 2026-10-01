@@ -5,7 +5,7 @@ import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/
 import type { Locale } from "../common/i18n/i18n";
 import { JwtAuthGuard } from "./jwt-auth.guard";
 import { AuthService } from "./auth.service";
-import { ChangePhoneDto, LoginUserDto, QuickRegisterDto, RegisterUserDto, SetPasswordDto, CheckPhoneDto } from "./dto/auth.dto";
+import { LoginUserDto, QuickRegisterDto, RegisterUserDto, SetPasswordDto, CheckPhoneDto } from "./dto/auth.dto";
 
 /**
  * Auth endpoints — deliberately action-named for readability
@@ -74,20 +74,6 @@ export class AuthController {
     @CurrentLocale() locale: Locale
   ) {
     return this.authService.setPassword(user, body, locale);
-  }
-
-  /**
-   * Change phone — برای کاربری که موقع ثبت‌نام سریع شماره‌اش را اشتباه زده
-   * و می‌خواهد عوض کند (قبل از ثبت پسورد).
-   */
-  @Post("changePhone")
-  @UseGuards(JwtAuthGuard)
-  changePhone(
-    @Body() body: ChangePhoneDto,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale
-  ) {
-    return this.authService.changePhone(user, body, locale);
   }
 
   @Post("refreshSession")

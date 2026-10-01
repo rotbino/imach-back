@@ -152,9 +152,11 @@ async function main() {
   const demoListings = (await j("GET", `/listings/getMyListings?businessId=${sellerBiz.id}`, null, sellerToken)).data;
   const active = demoListings.filter((l) => l.isActive !== false && (l.mode === "SELL" || l.mode === "BOTH"));
   const views = active.reduce((s, l) => s + (l.viewCount30 ?? 0), 0);
-  ok(active.length === 5 && views === 120, `آمار طرح ۰۷: ۵ کالا · ۱۲۰ بازدید (got ${active.length}/${views})`);
+  // فاز ۹: viewCount30 با بازدیدهای تست/دمو کمی بالا می‌رود — سقفِ پایین seed مهم است
+  ok(active.length === 5 && views >= 120, `آمار طرح ۰۷: ۵ کالا · ۱۲۰+ بازدید (got ${active.length}/${views})`);
   const followers = (await j("GET", `/market/getFollowers?businessId=${sellerBiz.id}`, null, sellerToken)).data;
-  ok(followers.length === 38, `۳۸ مشتری (got ${followers.length})`);
+  // فاز ۹: سوپرمارکت‌های دمو حذف شدند → مشتریان از ۳۸ به ۲۸ رسید (زنجیره‌ی برنج)
+  ok(followers.length === 28, `۲۸ مشتری زنجیره‌ی برنج (got ${followers.length})`);
   const watchedQ = (await j("GET", `/market/getWatchedGoods?businessId=${sellerBiz.id}`, null, sellerToken)).data;
   ok(watchedQ.length >= 4, `لیست خرید ≥۴ کالا (got ${watchedQ.length})`);
 

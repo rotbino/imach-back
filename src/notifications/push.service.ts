@@ -58,10 +58,6 @@ export class PushService {
     });
   }
 
-  async unsubscribe(endpoint: string): Promise<void> {
-    await this.prisma.pushSubscription.deleteMany({ where: { endpoint } });
-  }
-
   async sendToUser(userId: string, payload: PushPayload): Promise<void> {
     if (!this.configured) return;
     let subs: { id: string; endpoint: string; p256dh: string; auth: string }[] = [];

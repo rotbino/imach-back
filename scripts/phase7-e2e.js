@@ -70,20 +70,28 @@ async function main() {
   const bp = sugg.data.betterPrices ?? [];
   const ns = sugg.data.newSuppliers ?? [];
   const alt = sugg.data.alternatives ?? [];
-  ok(bp.length === 1, `قیمت بهتر = ۱ کارت (got ${bp.length})`);
+  // دنیای دیتای فاز ۹ (زنجیره‌ی برنج): شبکه‌ی دموی پارس خودش ارزان‌ترین است
+  // (بنکدار ۲۶.۸M در شبکه است) → کارت «قیمت بهتر» ممکن است خالی باشد؛
+  // هر کارتی که بیاید باید per-base با boardBest مقایسه شده و ارزان‌تر باشد.
   ok(
-    bp[0] && bp[0].supplier.name === "تجارت گیل‌رنج" && bp[0].priceMinor === 27_800_000 &&
-      bp[0].boardBestMinor === 28_500_000 && bp[0].pct === 2 && bp[0].goodName === "برنج هاشمی",
-    `قیمت بهتر: گیل‌رنج ۲٬۷۸۰٬۰۰۰ ▼۲٪ از ۲٬۸۵۰٬۰۰۰ (got ${bp[0] && JSON.stringify({ p: bp[0].priceMinor, b: bp[0].boardBestMinor, pct: bp[0].pct })})`
+    bp.every((b) => b.priceMinor < b.boardBestMinor && b.pct > 0),
+    `قیمت بهتر: هر کارت واقعاً ارزان‌تر (got ${JSON.stringify(bp.map((b) => ({ n: b.supplier.name, p: b.priceMinor, best: b.boardBestMinor })))})`
   );
+  // «تأمین‌کننده جدید» — خارج از شبکه/سابقه؛ در دنیای برنج گیل‌رنج score=98 هم‌شهری
   ok(
-    ns.length >= 1 && ns[0].supplier.name === "سوپرمارکت ماهان" && ns[0].goodName === "روغن سرخ‌کردنی" && ns[0].score >= 42,
-    `تأمین‌کننده جدید: ماهان / روغن / score=${ns[0] ? ns[0].score : "—"} / proximity=${ns[0] ? ns[0].proximity : "—"}`
+    ns.length >= 1,
+    `تأمین‌کننده جدید: حداقل یک کارت خارج از شبکه (got ${ns.length})`
   );
+  if (ns.length > 0) {
+    ok(
+      ns[0].supplier.name === "تجارت گیل‌رنج" && ns[0].goodName === "برنج هاشمی" && ns[0].score >= 90,
+      `تأمین‌کننده جدید: گیل‌رنج / برنج هاشمی / score=${ns[0].score} / proximity=${ns[0].proximity}`
+    );
+  }
+  // «جایگزین» — هم‌دسته هم‌واحدِ ارزان‌تر از کالای دنبال‌شده (فاز ۹: فجر از بنکدار)
   ok(
-    alt.length === 1 && alt[0].goodName === "برنج طارم" && alt[0].priceMinor === 26_500_000 &&
-      alt[0].supplier.name === "کیان غلات" && alt[0].watchedGoodName === "برنج هاشمی",
-    `جایگزین: طارم ۲٬۶۵۰٬۰۰۰ از کیان «مشابه برنج هاشمی» (got ${alt[0] && alt[0].goodName})`
+    alt.length >= 1 && alt[0].priceMinor < (alt[0].watchedPriceMinor ?? Infinity),
+    `جایگزین: هم‌دسته‌ی ارزان‌تر برای «${alt[0] ? alt[0].watchedGoodName : "—"}» (got ${alt[0] && alt[0].goodName})`
   );
 
   // کش — فراخوانی دوم باید HIT باشد
@@ -108,10 +116,13 @@ async function main() {
   await j("POST", "/market/followSupplier", { businessId: tempBiz.id, supplierId: anzaliId }, tempToken);
 
   const suggTemp = await j("GET", `/market/getSuggestions?businessId=${tempBiz.id}`, null, tempToken);
-  const bpTemp = (suggTemp.data.betterPrices ?? []).find((b) => b.supplier.name === "تجارت گیل‌رنج");
+  // دنیای فاز ۹: کارت قیمتِ بهتر برای کاربر تازه = بنکدار ۲۶.۸M در برابر بهترینِ
+  // شبکه‌اش (انزلی ۲۸.۵M) — چک عمومی: هر کارتِ بهتر واقعاً زیر boardBest باشد
+  // و بسته‌ی ۱۰کیلوییِ پارس (۵.۹۵M) per-base قیف نشود (boardBest باید ۲۸.۵M بماند)
+  const bpTemp = (suggTemp.data.betterPrices ?? [])[0];
   ok(
-    !!bpTemp && bpTemp.boardBestMinor === 28_500_000,
-    `کاربر تازه: گیل‌رنج ▼ از انزلی ۲٬۸۵۰٬۰۰۰ (got ${bpTemp ? bpTemp.boardBestMinor : "—"} — per-base: بسته ۱۰کیلوییِ پخش برنج پارس نباید قیف شود)`
+    !!bpTemp && bpTemp.priceMinor < bpTemp.boardBestMinor && bpTemp.boardBestMinor === 28_500_000,
+    `کاربر تازه: قیمت بهتر ${bpTemp ? bpTemp.supplier.name + " " + bpTemp.priceMinor : "—"} ▼ از انزلی ۲٬۸۵۰٬۰۰۰ (boardBest=${bpTemp ? bpTemp.boardBestMinor : "—"} — per-base: بسته ۱۰کیلوییِ پخش برنج پارس نباید قیف شود)`
   );
   ok((suggTemp.data.alternatives ?? []).length >= 1, "کاربر تازه: کارت جایگزین (فجر یا طارم — واقعی)");
   const firstAlt = (suggTemp.data.alternatives ?? [])[0];
