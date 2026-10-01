@@ -413,6 +413,15 @@ model Business {
   /// گیتِ خواندن در NotificationsService متمرکز است (push/pushMany).
   notifPrefs Json?
 
+  /// فاز ۹ (شکاف ۶ — د۹) — دستیارهای فعالِ این کسب‌وکار. JSON:
+  /// { sell: boolean, buy: boolean } — null/فیلد غایب = هر دو روشن (پیش‌فرض).
+  /// «می‌فروشم/می‌خرم/هر دو»ی ثبت‌نام فقط همین پیش‌فرض را تعیین می‌کند؛
+  /// کاربر بعداً از پروفایل هر دستیار را جدا خاموش/روشن می‌کند (نیاز
+  /// خرده‌فروش‌ها/تالارها/هتل‌ها که بازوی فروش عمده نمی‌خواهند). سوییچرِ
+  /// شل فقط دستیارهای فعال را نشان می‌دهد و با تک‌بازو کلاً غیب می‌شود.
+  /// حداقل یک دستیار باید روشن بماند (اعتبارسنجی در setArms).
+  enabledArms Json?
+
   ownerId      String? @db.ObjectId
   owner        User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 

@@ -48,6 +48,13 @@ export class CreateBusinessDto {
   @IsString()
   @MaxLength(60)
   trade?: string;
+
+  /** فاز ۹ (د۹) — نقشِ ثبت‌نام فقط پیش‌فرضِ دستیارها را می‌گذارد:
+   *  sell → فروش روشن/خرید خاموش · buy → خرید روشن/فروش خاموش ·
+   *  both (یا غایب) → هر دو روشن. بعداً از پروفایل قابل تغییر است. */
+  @IsOptional()
+  @IsIn(["sell", "buy", "both"])
+  intent?: "sell" | "buy" | "both";
 }
 
 export class EditBusinessDto {
@@ -122,6 +129,24 @@ export class NotifPrefsDto {
   @IsOptional()
   @IsBoolean()
   push?: boolean;
+}
+
+/**
+ * فاز ۹ (شکاف ۶ — د۹) — دستیارهای فعالِ کسب‌وکار، از پروفایل.
+ * هر فیلد فقط false صریح را «خاموش» می‌کند؛ غایب = بدون تغییر.
+ * هر دو اختیاری‌اند تا فرانت هر سوییچ را جدا ذخیره کند؛ ولی نتیجه‌ی
+ * نهایی نباید هر دو خاموش شود — سرور 400 می‌دهد (ARMS_REQUIRED).
+ */
+export class SetArmsDto {
+  /** دستیار فروش عمده (کاتالوگ + درخواست‌های قیمت) */
+  @IsOptional()
+  @IsBoolean()
+  sell?: boolean;
+
+  /** دستیار خرید عمده (لیست خرید + تابلوی تأمین) */
+  @IsOptional()
+  @IsBoolean()
+  buy?: boolean;
 }
 
 /** اکسپلور — سمت بازار (فروش/خرید) و شهرِ ترجیحی برای چیدمان */

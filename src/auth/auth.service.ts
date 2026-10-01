@@ -43,6 +43,8 @@ const BUSINESS_SUMMARY_SELECT = {
   currency: true,
   isVerified: true,
   trade: true,
+  // فاز ۹ (شکاف ۶) — دستیارهای فعال؛ null = هر دو روشن
+  enabledArms: true,
 } as const;
 
 export interface PublicUser {
@@ -159,8 +161,14 @@ export class AuthService {
         "INVALID_PHONE"
       );
     }
-    const exists = await this.prisma.user.findUnique({ where: { phone }, select: { id: true } });
-    return { available: !exists };
+    // فاز ۹ (طرح ۱۷) — صفحه ورود از همین پاسخ تصمیم می‌گیرد مسیرش را:
+    // hasPassword → فرم رمز (loginUser) · بدون رمز → ورود بی‌رمز (quickRegister).
+    // فاش‌کردنِ وجود حساب در checkPhone از قبل جزو قرارداد این اندپوینت است.
+    const exists = await this.prisma.user.findUnique({
+      where: { phone },
+      select: { passwordSet: true },
+    });
+    return { available: !exists, hasPassword: exists?.passwordSet ?? false };
   }
 
   async registerUser(

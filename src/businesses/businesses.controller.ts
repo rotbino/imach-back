@@ -24,7 +24,7 @@ import { cursorBefore, decodeCursor } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
-import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto, CatalogCategoriesDto, NotifPrefsDto } from "./dto/business.dto";
+import { CreateBusinessDto, EditBusinessDto, ExploreQueryDto, CatalogCategoriesDto, NotifPrefsDto, SetArmsDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
@@ -118,6 +118,8 @@ export class BusinessesController {
         address: true,
         // فاز ۸ (طرح ۱۴) — تنظیمات اعلان؛ null = همه روشن
         notifPrefs: true,
+        // فاز ۹ (شکاف ۶) — دستیارهای فعال؛ null = هر دو روشن
+        enabledArms: true,
         _count: { select: { listings: true } },
       },
       orderBy: { createdAt: "asc" },
@@ -149,6 +151,13 @@ export class BusinessesController {
         currency: currencyOfCountry(country),
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
         trade: body.trade?.trim() || null, // صنف — درگاه کپی از هم‌صنف‌ها
+        // فاز ۹ (د۹) — نقشِ ثبت‌نام، پیش‌فرضِ دستیارها (بعداً از پروفایل تغییرپذیر)
+        enabledArms:
+          body.intent === "sell"
+            ? { sell: true, buy: false }
+            : body.intent === "buy"
+              ? { sell: false, buy: true }
+              : null,
         ownerId: user.id,
         // هر کسب‌وکار با دو محیط خود متولد می‌شود: کاتالوگ فروش + میز خرید
         pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
@@ -325,6 +334,41 @@ export class BusinessesController {
     });
     invalidateBusiness(this.cache, business.id, business.slug);
     return prefs;
+  }
+
+  /**
+   * PUT /businesses/setArms/:id — فاز ۹ (شکاف ۶ — د۹): دستیارهای فعال.
+   * ذخیره‌ی ادغامی (merge): فقط کلیدهای ارسال‌شده عوض می‌شوند. نتیجه هرگز
+   * هر-دو-خاموش نمی‌شود — 400 با ARMS_REQUIRED («بالاخره باید از یکی
+   * استفاده کنی»). سوییچر شل برای بیزینسِ تک‌بازو غیب می‌شود.
+   * بازگرداندن arms کامل برای به‌روزرسانی optimistic سمت فرانت.
+   */
+  @Put("setArms/:id")
+  @UseGuards(JwtAuthGuard)
+  async setArms(
+    @Param("id") id: string,
+    @Body() body: SetArmsDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, id, locale);
+    const current = (business.enabledArms as { sell?: boolean; buy?: boolean } | null) ?? {};
+    const arms = {
+      sell: body.sell !== undefined ? body.sell : (current.sell ?? true),
+      buy: body.buy !== undefined ? body.buy : (current.buy ?? true),
+    };
+    if (!arms.sell && !arms.buy) {
+      throw AppError.badRequest(
+        t(locale, "business.armsRequired", "حداقل یکی از دستیارها باید فعال بماند — دستیاری که لازم ندارید را می‌توانید خاموش کنید، اما نه هر دو را"),
+        "ARMS_REQUIRED"
+      );
+    }
+    await this.prisma.business.update({
+      where: { id: business.id },
+      data: { enabledArms: arms },
+    });
+    invalidateBusiness(this.cache, business.id, business.slug);
+    return arms;
   }
 
   @Patch("editBusiness/:id")
