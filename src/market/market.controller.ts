@@ -21,6 +21,7 @@ import { cursorBefore, decodeCursor, toPage } from "../common/pagination/cursor"
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
+import { proximity } from "../common/geo/cities";
 import { NotificationsService } from "../notifications/notifications.service";
 import { MatchingService } from "./matching.service";
 import {
@@ -41,6 +42,27 @@ import {
 
 /** ObjectId hex guard — keeps invalid params away from Prisma. */
 const isObjectId = (v: string | undefined): v is string => /^[a-f\d]{24}$/i.test(v ?? "");
+
+/** رقم فارسی → لاتین — برای خواندن اندازه‌ی بسته از variantLabel */
+const FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+function toLatinDigits(s: string): string {
+  return s.replace(/[۰-۹]/g, (d) => String(FA_DIGITS.indexOf(d)));
+}
+
+/**
+ * ضریب بسته‌بندی از variantLabel — «کیسه ۵۰ کیلویی» → ۵۰، بدون بسته → ۱.
+ * مقایسه‌ی قیمتِ پیشنهادها per-base انجام می‌شود نه per-bag؛ وگرنه بسته‌ی
+ * ۱۰کیلوییِ هم‌قیمت، «۵ برابر ارزان‌تر» دیده می‌شود.
+ */
+function packFactor(variantLabel: string | null): number {
+  if (!variantLabel) return 1;
+  const m = toLatinDigits(variantLabel).match(/(\d{1,4})\s*(?:کیلو|گرم|لیتر)/);
+  return m ? parseInt(m[1], 10) : 1;
+}
+
+/** قیمت نرمال‌شده بر واحد پایه (per کیلو/گرم/لیتر) — برای مقایسه‌ی منصفانه */
+const perBase = (s: { priceMinor: number | null; variantLabel: string | null }): number =>
+  (s.priceMinor as number) / packFactor(s.variantLabel);
 
 const OFFER_INCLUDE = {
   listing: {
@@ -112,6 +134,8 @@ export class MarketController {
     this.cache.invalidateTag(`market:board:${businessId}`);
     this.cache.invalidateTag(`market:ssugg:${businessId}`);
     this.cache.invalidateTag(`market:buyreq:${businessId}`);
+    this.cache.invalidateTag(`market:supdir:${businessId}`);
+    this.cache.invalidateTag(`market:sugg:${businessId}`);
   }
 
   /** Members this owner personally brought in via referral links — the growth currency. */
@@ -391,6 +415,463 @@ export class MarketController {
         };
       }),
     };
+  }
+
+  // ═══ فاز ۷ — دایرکتوری تأمین‌کنندگان (طرح ۱۰) و پیشنهادها (طرح ۱۱) ═══
+
+  /**
+   * دایرکتوری تأمین‌کنندگان (طرح ۱۰) — دو تب، بدون دایرکتوری کل بازار:
+   *   related  → پیشنهاد موتور تطبیق برای کالاهای لیست من (WatchedGood ∪ BUY)،
+   *              گروه‌بندی‌شده بر حسب فروشنده با چیپ کالاهای مرتبط
+   *   followed → شبکه‌ی فعلی من: فالوهای mine + theirs («خودش آمد»)
+   * هر ردیف: شمارش قیمت‌های او در تابلوهای من + «از او خریده‌ام» (استعلامِ
+   * پاسخ‌داده‌شده — مبادله‌ی قیمتِ واقعاً کامل‌شده، نه صرفاً سؤال).
+   */
+  @Get("getSuppliersDirectory")
+  async getSuppliersDirectory(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const { value, hit } = await this.cache.wrap(
+      `market:supdir:${query.businessId}`,
+      { ttlMs: TTL.MINUTE, tags: [`market:supdir:${query.businessId}`] },
+      () => this.buildSuppliersDirectory(business)
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  private async buildSuppliersDirectory(business: {
+    id: string;
+    city: string;
+    province: string | null;
+    country: string;
+  }) {
+    const buyerGeo = { city: business.city, province: business.province, country: business.country };
+
+    // کالاهای من: WatchedGood ∪ BUY listing فعال — سوختِ موتور و چیپ‌ها
+    const [watched, buyListings, buyPageId] = await Promise.all([
+      this.prisma.watchedGood.findMany({
+        where: { businessId: business.id },
+        select: { goodId: true },
+      }),
+      this.prisma.listing.findMany({
+        where: { businessId: business.id, mode: { in: ["BUY", "BOTH"] }, isActive: true },
+        select: { goodId: true, volume: true },
+      }),
+      ensurePage(this.prisma, business.id, "BUY"),
+    ]);
+    const volumeByGood = new Map(buyListings.map((l) => [l.goodId, l.volume]));
+    const myGoods = [...new Set([...watched.map((w) => w.goodId), ...buyListings.map((l) => l.goodId)])].map(
+      (goodId) => ({ goodId, volume: volumeByGood.get(goodId) ?? null })
+    );
+    const myGoodIds = myGoods.map((g) => g.goodId);
+
+    // شبکه‌ی فالو — قرینه‌ی getFollows (mine + theirs)
+    const SUPPLIER_SELECT = {
+      select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true },
+    } as const;
+    const [mine, theirs] = await Promise.all([
+      this.prisma.follow.findMany({
+        where: { followerPageId: buyPageId },
+        select: { createdAt: true, viaRef: true, supplierPage: { select: { business: SUPPLIER_SELECT } } },
+        orderBy: { createdAt: "desc" },
+      }),
+      this.prisma.follow.findMany({
+        where: { supplierPage: { businessId: business.id, type: "BUY" }, followerPage: { type: "SELL" } },
+        select: { createdAt: true, viaRef: true, followerPage: { select: { business: SUPPLIER_SELECT } } },
+        orderBy: { createdAt: "desc" },
+        take: 200,
+      }),
+    ]);
+    const networkIds = new Set<string>([
+      ...mine.map((f) => f.supplierPage.business.id),
+      ...theirs.map((f) => f.followerPage.business.id),
+    ]);
+
+    // «از او خریده‌ام» — استعلام پاسخ‌داده‌شده (مبادله‌ی کامل‌شده‌ی قیمت)
+    const answered = await this.prisma.inquiry.findMany({
+      where: { buyerId: business.id, status: "ANSWERED" },
+      select: { sellerId: true },
+      take: 200,
+    });
+    const boughtSet = new Set(answered.map((a) => a.sellerId));
+
+    // ۱) related — ردیف‌های موتور، گروه‌بندی بر حسب فروشنده
+    const engine = myGoods.length
+      ? await this.matching.suppliersForGoods(business.id, buyerGeo, myGoods, 24)
+      : [];
+    const engineBySupplier = new Map<string, typeof engine>();
+    for (const row of engine) {
+      const arr = engineBySupplier.get(row.supplierId) ?? [];
+      arr.push(row);
+      engineBySupplier.set(row.supplierId, arr);
+    }
+    // صنفِ فروشنده‌های مرتبط — موتور آن را نمی‌دهد؛ یک کوئری سبک
+    const relatedIds = [...engineBySupplier.keys()];
+    const trades = relatedIds.length
+      ? await this.prisma.business.findMany({
+          where: { id: { in: relatedIds } },
+          select: { id: true, trade: true },
+        })
+      : [];
+    const tradeById = new Map(trades.map((t) => [t.id, t.trade]));
+    const related = [...engineBySupplier.entries()]
+      .map(([supplierId, rows]) => {
+        const cheapest = rows.reduce((a, b) => (b.priceMinor < a.priceMinor ? b : a));
+        const goods = [...new Map(rows.map((r) => [r.goodId, r.goodName])).entries()].map(
+          ([goodId, nameFa]) => ({ goodId, nameFa })
+        );
+        const b = cheapest;
+        return {
+          supplierId,
+          slug: b.supplierSlug,
+          name: b.supplierName,
+          city: b.supplierCity,
+          isVerified: b.supplierVerified,
+          trade: tradeById.get(supplierId) ?? null,
+          goods,
+          priceCount: rows.length,
+          followedByMe: networkIds.has(supplierId),
+          boughtFrom: boughtSet.has(supplierId),
+          // مرتب‌سازی سرور: بهترین امتیازِ ردیف‌های همان فروشنده
+          sortScore: Math.max(...rows.map((r) => r.score)),
+        };
+      })
+      .sort((a, b) => b.sortScore - a.sortScore)
+      .map(({ sortScore, ...row }) => row);
+
+    // ۲) followed — شبکه‌ی من + چیپ کالاهای مشترک
+    const networkListings = networkIds.size
+      ? await this.prisma.listing.findMany({
+          where: {
+            businessId: { in: [...networkIds] },
+            goodId: { in: myGoodIds },
+            isActive: true,
+            mode: { in: ["SELL", "BOTH"] },
+          },
+          select: { businessId: true, goodId: true, good: { select: { id: true, nameFa: true } } },
+        })
+      : [];
+    const netBySupplier = new Map<string, typeof networkListings>();
+    for (const l of networkListings) {
+      const arr = netBySupplier.get(l.businessId) ?? [];
+      arr.push(l);
+      netBySupplier.set(l.businessId, arr);
+    }
+    const followedRow = (
+      r: { createdAt: Date; viaRef: boolean },
+      b: { id: string; slug: string; name: string; city: string; isVerified: boolean; trade: string | null },
+      origin: "mine" | "theirs"
+    ) => {
+      const listings = netBySupplier.get(b.id) ?? [];
+      const goods = [...new Map(listings.map((l) => [l.good.id, l.good.nameFa])).entries()].map(
+        ([goodId, nameFa]) => ({ goodId, nameFa })
+      );
+      return {
+        supplierId: b.id,
+        slug: b.slug,
+        name: b.name,
+        city: b.city,
+        isVerified: b.isVerified,
+        trade: b.trade,
+        origin,
+        viaRef: r.viaRef,
+        createdAt: r.createdAt,
+        goods,
+        priceCount: listings.length,
+        boughtFrom: boughtSet.has(b.id),
+      };
+    };
+    // mine اول؛ theirs فقط اگر قبلاً در mine نبود (قرینه‌ی getFollows)
+    const seenMine = new Set(mine.map((f) => f.supplierPage.business.id));
+    const followed = [
+      ...mine.map((f) => followedRow(f, f.supplierPage.business, "mine")),
+      ...theirs
+        .filter((f) => !seenMine.has(f.followerPage.business.id))
+        .map((f) => followedRow(f, f.followerPage.business, "theirs")),
+    ].sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+
+    return { related, followed };
+  }
+
+  /**
+   * پیشنهادهای iMach (طرح ۱۱) — سه کارت، همه از داده‌ی واقعی:
+   *   betterPrices  → برای هر کالای لیست من: تأمین‌کننده‌ای خارج از شبکه‌ام که
+   *                   از بهترین قیمتِ شبکه‌ی فعلی‌ام ارزان‌تر است («قیمت بهتر»)
+   *   newSuppliers  → تأمین‌کننده‌ی تازه از موتور تطبیق: نه فالو، نه سابقه، نه
+   *                   صاحبِ کارتِ قیمتِ بهتر — با امتیاز تطبیق (MatchRing)
+   *   alternatives  → کالای هم‌دسته‌ی ارزان‌تر از ارزان‌ترینِ تابلوی کالای من
+   *                   («جایگزین» — مثل طارم به‌جای هاشمی)
+   */
+  @Get("getSuggestions")
+  async getSuggestions(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const { value, hit } = await this.cache.wrap(
+      `market:sugg:${query.businessId}`,
+      { ttlMs: TTL.MINUTE, tags: [`market:sugg:${query.businessId}`] },
+      () => this.buildSuggestions(business)
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
+  }
+
+  private async buildSuggestions(business: {
+    id: string;
+    city: string;
+    province: string | null;
+    country: string;
+  }) {
+    const buyerGeo = { city: business.city, province: business.province, country: business.country };
+
+    // زمینه‌ی خریدار: کالاهای من + شبکه‌ام + سابقه‌ی استعلام
+    const [watched, buyListings, buyPageId, inquiries] = await Promise.all([
+      this.prisma.watchedGood.findMany({
+        where: { businessId: business.id },
+        select: { goodId: true },
+      }),
+      this.prisma.listing.findMany({
+        where: { businessId: business.id, mode: { in: ["BUY", "BOTH"] }, isActive: true },
+        select: { goodId: true, volume: true },
+      }),
+      ensurePage(this.prisma, business.id, "BUY"),
+      this.prisma.inquiry.findMany({
+        where: { buyerId: business.id },
+        select: { sellerId: true },
+        take: 200,
+      }),
+    ]);
+    const volumeByGood = new Map(buyListings.map((l) => [l.goodId, l.volume]));
+    const myGoods = [...new Set([...watched.map((w) => w.goodId), ...buyListings.map((l) => l.goodId)])].map(
+      (goodId) => ({ goodId, volume: volumeByGood.get(goodId) ?? null })
+    );
+    const myGoodIds = myGoods.map((g) => g.goodId);
+    if (myGoodIds.length === 0) return { betterPrices: [], newSuppliers: [], alternatives: [] };
+
+    const follows = await this.prisma.follow.findMany({
+      where: { followerPageId: buyPageId, supplierPage: { type: "SELL" } },
+      select: { supplierPage: { select: { businessId: true } } },
+    });
+    const theirs = await this.prisma.follow.findMany({
+      where: { supplierPage: { businessId: business.id, type: "BUY" }, followerPage: { type: "SELL" } },
+      select: { followerPage: { select: { business: { select: { id: true } } } } },
+      take: 200,
+    });
+    const networkIds = new Set<string>([
+      ...follows.map((f) => f.supplierPage.businessId),
+      ...theirs.map((f) => f.followerPage.business.id),
+    ]);
+    const inquiredSet = new Set(inquiries.map((i) => i.sellerId));
+
+    // کل تابلوی کالاهای من — بنیانِ هر سه کارت
+    const [goods, supply] = await Promise.all([
+      this.prisma.good.findMany({
+        where: { id: { in: myGoodIds } },
+        select: { id: true, nameFa: true, unit: true, categoryId: true },
+      }),
+      this.prisma.listing.findMany({
+        where: {
+          goodId: { in: myGoodIds },
+          businessId: { not: business.id },
+          isActive: true,
+          mode: { in: ["SELL", "BOTH"] },
+          priceMinor: { not: null },
+        },
+        select: {
+          id: true,
+          goodId: true,
+          priceMinor: true,
+          currency: true,
+          minOrder: true,
+          stock: true,
+          variantLabel: true,
+          updatedAt: true,
+          city: true,
+          province: true,
+          country: true,
+          business: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true, province: true, country: true } },
+        },
+        orderBy: { updatedAt: "desc" },
+        take: 300,
+      }),
+    ]);
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+    const supplyByGood = new Map<string, typeof supply>();
+    for (const s of supply) {
+      const arr = supplyByGood.get(s.goodId) ?? [];
+      arr.push(s);
+      supplyByGood.set(s.goodId, arr);
+    }
+
+    // ۱) قیمت بهتر — ارزان‌ترینِ خارج از شبکه‌ام در برابر بهترینِ شبکه‌ام
+    // مقایسه per-base (کیلو/گرم/لیتر) — بسته‌های کوچک «ارزان‌تر» دیده نمی‌شوند
+    interface BetterPriceRow {
+      goodId: string;
+      goodName: string;
+      unit: string;
+      listingId: string;
+      priceMinor: number;
+      currency: string | null;
+      minOrder: number | null;
+      stock: number | null;
+      variantLabel: string | null;
+      boardBestMinor: number;
+      pct: number;
+      supplier: (typeof supply)[number]["business"];
+    }
+    const betterPrices: BetterPriceRow[] = [];
+    const betterSupplierIds = new Set<string>();
+    for (const gid of myGoodIds) {
+      const board = supplyByGood.get(gid) ?? [];
+      const mineNetwork = board.filter((s) => networkIds.has(s.business.id));
+      if (mineNetwork.length === 0) continue; // تابلویی از شبکه‌ام نیست — مرجع مقایسه نداریم
+      const boardBest = Math.min(...mineNetwork.map(perBase));
+      const candidates = board.filter(
+        (s) => !networkIds.has(s.business.id) && perBase(s) < boardBest * 0.99
+      );
+      if (candidates.length === 0) continue;
+      const cheapest = candidates.reduce((a, b) => (perBase(b) < perBase(a) ? b : a));
+      betterSupplierIds.add(cheapest.business.id);
+      betterPrices.push({
+        goodId: gid,
+        goodName: goodById.get(gid)?.nameFa ?? "",
+        unit: goodById.get(gid)?.unit ?? "",
+        listingId: cheapest.id,
+        priceMinor: cheapest.priceMinor as number,
+        currency: cheapest.currency,
+        minOrder: cheapest.minOrder,
+        stock: cheapest.stock,
+        variantLabel: cheapest.variantLabel,
+        boardBestMinor: Math.round(boardBest * packFactor(cheapest.variantLabel)),
+        pct: Math.round(((boardBest - perBase(cheapest)) / boardBest) * 100),
+        supplier: cheapest.business,
+      });
+    }
+    betterPrices.sort((a, b) => b.pct - a.pct);
+
+    // ۲) تأمین‌کننده جدید — موتور تطبیق، خارج از شبکه/سابقه/کارتِ قیمتِ بهتر
+    const engine = await this.matching.suppliersForGoods(business.id, buyerGeo, myGoods, 24);
+    const seenSuppliers = new Set<string>();
+    const newSuppliers: {
+      supplier: { id: string; slug: string; name: string; city: string; isVerified: boolean };
+      score: number;
+      goodId: string;
+      goodName: string;
+      unit: string;
+      priceMinor: number;
+      currency: string | null;
+      minOrder: number;
+      myVolume: number | null;
+      proximity: string;
+    }[] = [];
+    for (const row of engine) {
+      if (seenSuppliers.has(row.supplierId)) continue;
+      if (networkIds.has(row.supplierId)) continue;
+      if (inquiredSet.has(row.supplierId)) continue;
+      if (betterSupplierIds.has(row.supplierId)) continue;
+      seenSuppliers.add(row.supplierId);
+      newSuppliers.push({
+        supplier: {
+          id: row.supplierId,
+          slug: row.supplierSlug,
+          name: row.supplierName,
+          city: row.supplierCity,
+          isVerified: row.supplierVerified,
+        },
+        score: row.score,
+        goodId: row.goodId,
+        goodName: row.goodName,
+        unit: row.unit,
+        priceMinor: row.priceMinor,
+        currency: row.currency,
+        minOrder: row.minOrder,
+        myVolume: volumeByGood.get(row.goodId) ?? null,
+        proximity: proximity(buyerGeo, { city: row.supplierCity }),
+      });
+      if (newSuppliers.length >= 3) break;
+    }
+
+    // ۳) جایگزین — کالای هم‌دسته (هم‌واحد) با قیمت پایین‌تر از تابلوی کالای من
+    const alternatives: {
+      goodId: string;
+      goodName: string;
+      unit: string;
+      variantLabel: string | null;
+      listingId: string;
+      priceMinor: number;
+      currency: string | null;
+      minOrder: number | null;
+      supplier: { id: string; slug: string; name: string; city: string; isVerified: boolean };
+      watchedGoodId: string;
+      watchedGoodName: string;
+      proximity: string;
+    }[] = [];
+    const catIds = [...new Set(goods.map((g) => g.categoryId).filter((c): c is string => !!c))];
+    if (catIds.length > 0) {
+      const siblingSupply = await this.prisma.listing.findMany({
+        where: {
+          good: { categoryId: { in: catIds }, id: { notIn: myGoodIds } },
+          businessId: { not: business.id },
+          isActive: true,
+          mode: { in: ["SELL", "BOTH"] },
+          priceMinor: { not: null },
+        },
+        select: {
+          id: true,
+          goodId: true,
+          priceMinor: true,
+          currency: true,
+          minOrder: true,
+          variantLabel: true,
+          good: { select: { id: true, nameFa: true, unit: true, categoryId: true } },
+          business: { select: { id: true, slug: true, name: true, city: true, isVerified: true, province: true, country: true } },
+        },
+        orderBy: { priceMinor: "asc" },
+        take: 200,
+      });
+      // برای هر کالای من: ارزان‌ترین کالای خواهری هم‌واحد که از تابلویم ارزان‌تر باشد
+      // (مقایسه per-base — بسته‌بندی‌های متفاوت منصفانه مقایسه می‌شوند)
+      const usedGoods = new Set<string>();
+      for (const gid of myGoodIds) {
+        const my = goodById.get(gid);
+        if (!my || !my.categoryId) continue;
+        const board = supplyByGood.get(gid) ?? [];
+        if (board.length === 0) continue;
+        const boardCheapest = Math.min(...board.map(perBase));
+        const cheaper = siblingSupply
+          .filter((s) => s.good.unit === my.unit && s.good.categoryId === my.categoryId)
+          .filter((s) => perBase(s) < boardCheapest && !usedGoods.has(s.goodId))
+          .sort((a, b) => perBase(a) - perBase(b));
+        const pick = cheaper[0];
+        if (!pick) continue;
+        usedGoods.add(pick.goodId);
+        alternatives.push({
+          goodId: pick.goodId,
+          goodName: pick.good.nameFa,
+          unit: pick.good.unit,
+          variantLabel: pick.variantLabel,
+          listingId: pick.id,
+          priceMinor: pick.priceMinor as number,
+          currency: pick.currency,
+          minOrder: pick.minOrder,
+          supplier: pick.business,
+          watchedGoodId: gid,
+          watchedGoodName: my.nameFa,
+          proximity: proximity(buyerGeo, pick.business),
+        });
+        if (alternatives.length >= 3) break;
+      }
+    }
+
+    return { betterPrices, newSuppliers, alternatives };
   }
 
   /**
@@ -702,6 +1183,7 @@ export class MarketController {
       update: {},
     });
     this.cache.invalidateTag(`market:watch:${body.businessId}`);
+    this.invalidateBuyerSide(body.businessId);
     return { ok: true, watched: true, id: wg.id };
   }
 
@@ -717,6 +1199,7 @@ export class MarketController {
     await assertBusinessOwner(this.prisma, user, body.businessId, locale);
     await this.prisma.watchedGood.deleteMany({ where: { businessId: body.businessId, goodId } });
     this.cache.invalidateTag(`market:watch:${body.businessId}`);
+    this.invalidateBuyerSide(body.businessId);
     return { ok: true, watched: false };
   }
 

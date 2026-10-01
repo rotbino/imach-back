@@ -250,10 +250,30 @@ export class MatchingService {
       },
       select: { goodId: true, volume: true },
     });
-    if (myBuyListings.length === 0) return [];
+    return this.suppliersForGoods(
+      buyerBusinessId,
+      buyerGeo,
+      myBuyListings.map((l) => ({ goodId: l.goodId, volume: l.volume as number })),
+      limit
+    );
+  }
 
-    const goodIds = [...new Set(myBuyListings.map((l) => l.goodId))];
-    const volumeByGood = new Map(myBuyListings.map((l) => [l.goodId, l.volume as number]));
+  /**
+   * Suppliers selling the goods I track — the shared buyer-side engine.
+   * `goods` carries my need per good (volume, null = plain watch); the caller
+   * decides the source: BUY listings (legacy strip), WatchedGood rows, or the
+   * union of both (فاز ۷ — دایرکتوری تأمین‌کنندگان و پیشنهادها).
+   */
+  async suppliersForGoods(
+    buyerBusinessId: string,
+    buyerGeo: GeoSpot,
+    goods: { goodId: string; volume: number | null }[],
+    limit = 12
+  ): Promise<SupplierSuggestion[]> {
+    if (goods.length === 0) return [];
+
+    const volumeByGood = new Map(goods.map((g) => [g.goodId, g.volume ?? 0]));
+    const goodIds = [...volumeByGood.keys()];
 
     const sellRows = await this.prisma.listing.findMany({
       where: {
