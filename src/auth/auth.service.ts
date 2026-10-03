@@ -464,7 +464,7 @@ export class AuthService {
             const sellId = mySellPageId ?? (await ensurePage(this.prisma, business.id, "SELL"));
             await this.prisma.follow.upsert({
               where: { followerPageId_supplierPageId: { followerPageId: refBuyPageId, supplierPageId: sellId } },
-              create: { followerPageId: refBuyPageId, supplierPageId: sellId, viaRef: true },
+              create: { followerPageId: refBuyPageId, supplierPageId: sellId, viaRef: true, source: "SHARED" },
               update: {},
             });
           } else {
@@ -472,12 +472,45 @@ export class AuthService {
             const refSellPageId = await ensurePage(this.prisma, refBiz.id, "SELL");
             await this.prisma.follow.upsert({
               where: { followerPageId_supplierPageId: { followerPageId: buyId, supplierPageId: refSellPageId } },
-              create: { followerPageId: buyId, supplierPageId: refSellPageId, viaRef: true },
+              create: { followerPageId: buyId, supplierPageId: refSellPageId, viaRef: true, source: "SHARED" },
               update: {},
             });
           }
         } catch {
           /* best-effort */
+        }
+        // طرح ۸ (U43) — پاداش دعوت: +۵٬۰۰۰ تومان به کیف معرفی‌کننده پس از
+        // اولین ذخیرهٔ معرفی‌شده (خودِ یالِ بالا). یکتا به‌ازای هر کاربر تازه.
+        try {
+          const wallet = await this.prisma.wallet.upsert({
+            where: { businessId: refBiz.id },
+            create: { businessId: refBiz.id },
+            update: {},
+            select: { id: true },
+          });
+          const dup = await this.prisma.walletTxn.findFirst({
+            where: { walletId: wallet.id, type: "REFERRAL_REWARD", ref: user.id },
+            select: { id: true },
+          });
+          if (!dup) {
+            await this.prisma.$transaction([
+              this.prisma.wallet.update({
+                where: { id: wallet.id },
+                data: { balanceMinor: { increment: 50_000 } }, // ۵٬۰۰۰ تومان
+              }),
+              this.prisma.walletTxn.create({
+                data: {
+                  walletId: wallet.id,
+                  type: "REFERRAL_REWARD",
+                  amountMinor: 50_000,
+                  ref: user.id,
+                  description: "پاداش دعوت — اولین ذخیرهٔ معرفی‌شده",
+                },
+              }),
+            ]);
+          }
+        } catch {
+          /* best-effort — پاداش هرگز ثبت‌نام را نمی‌شکند */
         }
       }
     }

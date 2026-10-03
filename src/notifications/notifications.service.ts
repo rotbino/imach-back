@@ -10,6 +10,7 @@ import { PushService } from "./push.service";
  *  QUOTE           — موتور تطبیق، استعلام قیمت را به من رساند
  *  CONTACT_JOINED  — شماره‌ای از دفترچه‌ی من همین حالا عضو iMach شد
  *  PRICE_CHANGE    — فاز ۵ — کالایی که دنبال می‌کنم قیمتش عوض شد (شکاف ۲)
+ *  BUYER_NEED      — طرح ۸ (U63) — خریداری که گوش‌به‌زنگش هستم نیاز جدید ثبت کرد
  */
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
@@ -17,7 +18,8 @@ export type NotificationType =
   | "OFFER"
   | "QUOTE"
   | "CONTACT_JOINED"
-  | "PRICE_CHANGE";
+  | "PRICE_CHANGE"
+  | "BUYER_NEED";
 
 export interface NotificationInput {
   userId: string;
@@ -42,6 +44,7 @@ const PREF_KEY: Record<NotificationType, string | null> = {
   FOLLOW_SUPPLIER: "suggestions",
   FOLLOW_BUYER: "suggestions",
   CONTACT_JOINED: "suggestions",
+  BUYER_NEED: "quoteReplies",
 };
 
 /**
@@ -75,6 +78,10 @@ const PUSH_VIEWS: Record<
   PRICE_CHANGE: {
     text: (n) => `قیمت «${n.good ?? "کالا"}» به‌روز شد`,
     url: "/buy",
+  },
+  BUYER_NEED: {
+    text: (n) => `${n.actorName ?? "خریداری"} اعلام نیاز کرد: «${n.good ?? "کالا"}»`,
+    url: "/sell/requests",
   },
 };
 

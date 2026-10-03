@@ -14,6 +14,8 @@ import { NotificationsModule } from "./notifications/notifications.module";
 import { ContactsModule } from "./contacts/contacts.module";
 import { AdminModule } from "./admin/admin.module";
 import { FilesModule } from "./files/files.module";
+import { WalletModule } from "./wallet/wallet.module";
+import { PromosModule } from "./promos/promos.module";
 
 /**
  * iMach API root — feature modules only; cross-cutting infra lives in
@@ -36,6 +38,8 @@ import { FilesModule } from "./files/files.module";
     ContactsModule,
     FilesModule,
     AdminModule,
+    WalletModule,
+    PromosModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })

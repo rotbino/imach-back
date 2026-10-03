@@ -23,6 +23,7 @@ import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
 import { proximity } from "../common/geo/cities";
 import { NotificationsService } from "../notifications/notifications.service";
+import { PromosService } from "../promos/promos.service";
 import { MatchingService } from "./matching.service";
 import {
   BusinessIdQueryDto,
@@ -126,7 +127,8 @@ export class MarketController {
     private readonly prisma: PrismaService,
     private readonly cache: CacheService,
     private readonly matching: MatchingService,
-    private readonly notifications: NotificationsService
+    private readonly notifications: NotificationsService,
+    private readonly promos: PromosService
   ) {}
 
   private invalidateBuyerSide(businessId: string): void {
@@ -923,8 +925,8 @@ export class MarketController {
     });
     await this.prisma.follow.upsert({
       where: { followerPageId_supplierPageId: { followerPageId, supplierPageId: buyerPageId } },
-      create: { followerPageId, supplierPageId: buyerPageId },
-      update: {},
+      create: { followerPageId, supplierPageId: buyerPageId, source: body.source ?? "ORGANIC" },
+      update: existed ? {} : { source: body.source ?? "ORGANIC" },
     });
     // فقط فالوی تازه اعلان دارد — تکرار ساکت می‌ماند
     if (!existed && buyer.ownerId) {
@@ -975,8 +977,6 @@ export class MarketController {
   ) {
     if (!isObjectId(body.buyListingId)) throw AppError.notFound("Listing not found");
     const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
-    await this.assertReferralUnlocked(business, locale);
-
     const need = await this.prisma.listing.findUnique({
       where: { id: body.buyListingId },
       select: {
@@ -994,6 +994,23 @@ export class MarketController {
     }
     if (need.businessId === business.id) {
       throw AppError.badRequest("نمی‌توانید به درخواست خودتان پیشنهاد بدهید", "SELF_OFFER");
+    }
+
+    // طرح ۸ (U63) — «گوش به زنگ» بودن یعنی گیت رفع شده: نیازِ منتشرشدهٔ
+    // خریداری که صفحه SELL من او را دنبال می‌کند، خودش دعوت است. فقط
+    // خریدارِ ناشناسِ بازار پشت گیت ۱۰ معرف می‌ماند.
+    const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
+    const watching = await this.prisma.follow.findUnique({
+      where: {
+        followerPageId_supplierPageId: {
+          followerPageId: mySellPageId,
+          supplierPageId: await ensurePage(this.prisma, need.businessId, "BUY"),
+        },
+      },
+      select: { id: true },
+    });
+    if (!watching) {
+      await this.assertReferralUnlocked(business, locale);
     }
 
     const myList = await this.prisma.listing.findFirst({
@@ -1484,11 +1501,24 @@ export class MarketController {
       where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
       select: { id: true },
     });
+    // طرح ۸ (U60) — منبعِ رسیدن ذخیره: خود کاربر اعلام نمی‌کند، مسیرش
+    // خودش می‌گوید (در اپ / از لینک / از پرومو). منبع فقط بارِ اول ثبت
+    // می‌شود — باورپذیرترین لحظه، همان لحظهٔ ذخیره است.
+    const source =
+      body.promoId ? "PROMO" : (body.source ?? "ORGANIC");
     await this.prisma.follow.upsert({
       where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
-      create: { followerPageId, supplierPageId },
-      update: {},
+      create: { followerPageId, supplierPageId, source },
+      update: existed ? {} : { source },
     });
+    // طرح ۸ (U07) — ذخیرهٔ حاصل از پرومو: ۵٬۰۰۰ تومان از بودجهٔ کمپین
+    // کم می‌شود و در گزارش کمپین می‌نشیند. best-effort — ذخیره هرگز
+    // به‌خاطر کیف فروشنده نمی‌شکند.
+    if (!existed && body.promoId) {
+      await this.promos
+        .chargeEvent(body.promoId, business.id, "FOLLOW")
+        .catch(() => false);
+    }
     // فالوی تازه = مشتری جدید — صاحب کاتالوگ باید همین حالا بداند
     if (!existed && supplier.ownerId) {
       await this.notifications.push({
@@ -1543,6 +1573,7 @@ export class MarketController {
       select: {
         createdAt: true,
         viaRef: true,
+        source: true,
         followerPage: {
           select: {
             business: {
@@ -1580,18 +1611,31 @@ export class MarketController {
       isVerified: r.followerPage.business.isVerified,
       followedAt: r.createdAt,
       viaRef: r.viaRef,
+      // طرح ۸ (U60) — منبعِ رسیدن: ORGANIC | SHARED | PROMO (ردیف‌های
+      // قدیمی از viaRef استنتاج می‌شوند) — برچسب ردیف + شمارندهٔ خلاصه
+      source: r.source ?? (r.viaRef ? "SHARED" : "ORGANIC"),
       latestRequest: r.followerPage.business.listings[0] ?? null,
     }));
+    // خط خلاصهٔ عددی شیت دنبال‌کنندگان: «۶ از لینک · ۴ از تابلو · ۲ از پرومو»
+    const countBy = (src: string) =>
+      mapped.filter((m) => (m as { source?: string }).source === src).length;
+    const summary = {
+      total: mapped.length,
+      organic: countBy("ORGANIC"),
+      shared: countBy("SHARED"),
+      promo: countBy("PROMO"),
+    };
 
     // active-request customers first (newest request wins), then the rest
     // in follow order
-    return mapped.sort((a, b) => {
+    const sorted = mapped.sort((a, b) => {
       const ra = a.latestRequest?.updatedAt?.getTime() ?? 0;
       const rb = b.latestRequest?.updatedAt?.getTime() ?? 0;
       if ((ra > 0) !== (rb > 0)) return rb > 0 ? 1 : -1;
       if (ra && rb && ra !== rb) return rb - ra;
       return b.followedAt.getTime() - a.followedAt.getTime();
     });
+    return { rows: sorted, summary };
   }
 
   /**
@@ -1635,5 +1679,299 @@ export class MarketController {
     );
     reply.header("x-cache", hit ? "HIT" : "MISS");
     return value;
+  }
+
+  // ═══════════════ طرح ۸ — تحلیل ذخیره‌کنندگان / گوش‌به‌زنگ / تابلوی قیمت ═══════════════
+
+  /**
+   * GET /market/getSaverAnalysis (U60/U61) — تحلیل کالا × ذخیره‌کننده:
+   * برای هر کالای فروشِ من، خریدارهایی که قیمتش را دنبال می‌کنند
+   * (در لیست خریدشان همان کالا را دارند) + منبعِ رسیدنشان.
+   * مشتق از دادهٔ موجود — هیچ اکشن جدیدی به خریدار تحمیل نمی‌شود.
+   */
+  @Get("getSaverAnalysis")
+  async getSaverAnalysis(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    // کالاهای فروشِ فعال من — دو مرحله‌ای: ردیف‌های با گودِ حذف‌شده (حذف خام)
+    // با رابطهٔ required، کوئری را می‌شکنند؛ گودها جدا واکشی می‌شوند.
+    const myListRows = await this.prisma.listing.findMany({
+      where: { businessId: business.id, isActive: true, mode: { in: ["SELL", "BOTH"] } },
+      select: { id: true, goodId: true, priceMinor: true, currency: true, variantLabel: true, updatedAt: true },
+      orderBy: { updatedAt: "desc" },
+      take: 100,
+    });
+    const goodIds = [...new Set(myListRows.map((l) => l.goodId))];
+    if (goodIds.length === 0) return { items: [] };
+    const goods = await this.prisma.good.findMany({
+      where: { id: { in: goodIds } },
+      select: { id: true, nameFa: true, nameEn: true, unit: true },
+    });
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+    const myListings = myListRows
+      .map((l) => ({ ...l, good: goodById.get(l.goodId) }))
+      .filter((l): l is typeof l & { good: (typeof goods)[number] } => !!l.good);
+
+    // خریدارانی که این کالاها را دنبال می‌کنند (لیست خریدشان) — دو مرحله‌ای:
+    // رابطهٔ required روی WatchedGood.business با ردیف‌های یتیم (حذف خامِ
+    // کسب‌وکار در تست‌ها) کل کوئری را می‌شکند؛ پس رابطه مستقیم نمی‌خوانیم.
+    const watcherRows = await this.prisma.watchedGood.findMany({
+      where: { goodId: { in: goodIds }, businessId: { not: business.id } },
+      select: { goodId: true, createdAt: true, businessId: true },
+      take: 500,
+    });
+    const watcherBizIds = [...new Set(watcherRows.map((w) => w.businessId))];
+    const watcherBizs = watcherBizIds.length
+      ? await this.prisma.business.findMany({
+          where: { id: { in: watcherBizIds } },
+          select: { id: true, slug: true, name: true, city: true, isVerified: true },
+        })
+      : [];
+    const bizById = new Map(watcherBizs.map((b) => [b.id, b]));
+    const watchers = watcherRows
+      .map((w) => ({ ...w, business: bizById.get(w.businessId) }))
+      .filter((w): w is typeof w & { business: (typeof watcherBizs)[number] } => !!w.business);
+    // خریدارانی که روی همان کالاها BUY listing دارند (اعلام نیاز واقعی) —
+    // دو مرحله‌ای برای ایمنیِ ردیف‌های یتیم (همان درسِ بالا)
+    const needRawRows = await this.prisma.listing.findMany({
+      where: { goodId: { in: goodIds }, isActive: true, mode: { in: ["BUY", "BOTH"] }, businessId: { not: business.id } },
+      select: { goodId: true, volume: true, frequency: true, updatedAt: true, businessId: true },
+      take: 500,
+    });
+    const needBizIds = [...new Set(needRawRows.map((n) => n.businessId))];
+    const needBizs = needBizIds.length
+      ? await this.prisma.business.findMany({
+          where: { id: { in: needBizIds } },
+          select: { id: true, slug: true, name: true, city: true, isVerified: true },
+        })
+      : [];
+    const needBizById = new Map(needBizs.map((b) => [b.id, b]));
+    const needRows = needRawRows
+      .map((n) => ({ ...n, business: needBizById.get(n.businessId) }))
+      .filter((n): n is typeof n & { business: (typeof needBizs)[number] } => !!n.business);
+
+    // منبعِ رسیدنِ هر خریدار به من (یال‌های ذخیرهٔ کاتالوگم)
+    const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
+    const edges = await this.prisma.follow.findMany({
+      where: { supplierPageId: mySellPageId },
+      select: { source: true, viaRef: true, followerPage: { select: { business: { select: { id: true } } } } },
+      take: 500,
+    });
+    const sourceOf = new Map<string, string>();
+    for (const e of edges) {
+      const id = e.followerPage.business.id;
+      if (!sourceOf.has(id)) sourceOf.set(id, e.source ?? (e.viaRef ? "SHARED" : "ORGANIC"));
+    }
+
+    // ساخت: کالا → ذخیره‌کنندگان (یکتا) + شمارش‌ها
+    type SaverRow = {
+      business: { id: string; slug: string; name: string; city: string | null; isVerified: boolean };
+      source: string;
+      since: Date;
+      need: { volume: number | null; frequency: string | null } | null;
+    };
+    const byGood = new Map<string, SaverRow[]>();
+    const push = (
+      goodId: string,
+      biz: { id: string; slug: string; name: string; city: string | null; isVerified: boolean },
+      since: Date,
+      need: { volume: number | null; frequency: string | null } | null
+    ) => {
+      const list = byGood.get(goodId) ?? [];
+      if (!list.some((r) => r.business.id === biz.id)) {
+        list.push({ business: biz, source: sourceOf.get(biz.id) ?? "ORGANIC", since, need });
+        byGood.set(goodId, list);
+      }
+    };
+    for (const w of watchers) push(w.goodId, w.business, w.createdAt, null);
+    for (const n of needRows) push(n.goodId, n.business, n.updatedAt, { volume: n.volume, frequency: n.frequency });
+
+    const items = myListings.map((l) => {
+      const savers = byGood.get(l.goodId) ?? [];
+      const countBy = (src: string) => savers.filter((r) => r.source === src).length;
+      return {
+        listingId: l.id,
+        goodId: l.goodId,
+        goodName: l.good.nameFa,
+        unit: l.good.unit,
+        priceMinor: l.priceMinor,
+        currency: l.currency,
+        variantLabel: l.variantLabel,
+        saverCount: savers.length,
+        summary: {
+          total: savers.length,
+          organic: countBy("ORGANIC"),
+          shared: countBy("SHARED"),
+          promo: countBy("PROMO"),
+        },
+        savers: savers.slice(0, 50),
+      };
+    });
+    return { items };
+  }
+
+  /**
+   * GET /market/getWatchedBuyerNeeds (U63) — تب «گوش به زنگ» در درخواست‌های
+   * قیمت فروشنده: نیازهای خریدارهایی که صفحه SELL من آنها را دنبال می‌کند.
+   * پیشنهاد روی همین نیازها از گیت ۱۰ معرف عبور می‌کند — نیازِ منتشرشده
+   * خودش دعوت است.
+   */
+  @Get("getWatchedBuyerNeeds")
+  async getWatchedBuyerNeeds(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
+    // خریدارهای گوش‌به‌زنگِ من
+    const edges = await this.prisma.follow.findMany({
+      where: { followerPageId: mySellPageId },
+      select: { supplierPage: { select: { businessId: true } } },
+      take: 200,
+    });
+    const buyerIds = [...new Set(edges.map((e) => e.supplierPage.businessId))];
+    if (buyerIds.length === 0) return { needs: [], buyers: 0 };
+
+    // نیازهای فعالِ این خریدارها (BUY listing با حجم)
+    const needs = await this.prisma.listing.findMany({
+      where: { businessId: { in: buyerIds }, isActive: true, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
+      select: {
+        id: true, volume: true, frequency: true, updatedAt: true,
+        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
+        good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
+      },
+      orderBy: { updatedAt: "desc" },
+      take: 100,
+    });
+    return {
+      buyers: buyerIds.length,
+      needs: needs.map((n) => ({
+        id: n.id,
+        volume: n.volume,
+        frequency: n.frequency,
+        updatedAt: n.updatedAt,
+        buyer: n.business,
+        good: n.good,
+        // من همین کالا را می‌فروشم؟ → فرانت با کاتالوگ خودش تطبیق می‌دهد
+        sellsSameGood: null,
+      })),
+    };
+  }
+
+  /**
+   * GET /market/getPriceBoard (U05/U06) — تابلوهای ذخیره‌شدهٔ خریدار:
+   * کالاهای لیست خرید او × آخرین قیمتِ فروشنده‌های ذخیره‌شده + تزریق
+   * پرومو (فقط فروشنده‌هایی که هنوز ذخیره نکرده — ۱٬۰۰۰ تومان نمایش).
+   * خوراکِ «قیمتِ زنده» — هر تغییری اینجا می‌درخشد.
+   */
+  @Get("getPriceBoard")
+  async getPriceBoard(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    // کالاهای لیست خرید من
+    const watched = await this.prisma.watchedGood.findMany({
+      where: { businessId: business.id },
+      select: { goodId: true, createdAt: true },
+      take: 200,
+    });
+    const buyRows = await this.prisma.listing.findMany({
+      where: { businessId: business.id, isActive: true, mode: { in: ["BUY", "BOTH"] } },
+      select: { goodId: true, volume: true, frequency: true },
+      take: 200,
+    });
+    const goodIds = [...new Set([...watched.map((w) => w.goodId), ...buyRows.map((b) => b.goodId)])];
+    if (goodIds.length === 0) return { rows: [] };
+
+    // فروشنده‌های ذخیره‌شدهٔ من
+    const myBuyPageId = await ensurePage(this.prisma, business.id, "BUY");
+    const savedEdges = await this.prisma.follow.findMany({
+      where: { followerPageId: myBuyPageId },
+      select: { supplierPage: { select: { business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } } } } },
+      take: 200,
+    });
+    const savedSupplierIds = savedEdges.map((e) => e.supplierPage.business.id);
+
+    // آخرین قیمتِ هر (کالا × فروشندهٔ ذخیره‌شده)
+    const listings = savedSupplierIds.length
+      ? await this.prisma.listing.findMany({
+          where: { businessId: { in: savedSupplierIds }, goodId: { in: goodIds }, isActive: true, mode: { in: ["SELL", "BOTH"] }, priceMinor: { not: null } },
+          select: {
+            id: true, goodId: true, priceMinor: true, currency: true, stock: true, minOrder: true,
+            variantLabel: true, updatedAt: true,
+            business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
+            priceLogs: { orderBy: { createdAt: "desc" }, take: 2, select: { oldMinor: true, newMinor: true, createdAt: true } },
+          },
+          orderBy: { updatedAt: "desc" },
+          take: 600,
+        })
+      : [];
+
+    const goods = await this.prisma.good.findMany({
+      where: { id: { in: goodIds } },
+      select: { id: true, nameFa: true, nameEn: true, unit: true },
+    });
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+
+    // گروه‌بندی بر اساس کالا — یک ردیف برای هر فروشنده (آخرین)
+    const rowsByGood = new Map<string, typeof listings>();
+    for (const l of listings) {
+      const arr = rowsByGood.get(l.goodId) ?? [];
+      if (!arr.some((a) => a.business.id === l.business.id)) {
+        arr.push(l);
+        rowsByGood.set(l.goodId, arr);
+      }
+    }
+
+    // تزریق پرومو — فقط غیرذخیره‌شده‌ها (U06)؛ best-effort
+    const promoRows = await this.promos.injectPromos(business.id, goodIds).catch(() => []);
+
+    const rows = goodIds.map((goodId) => {
+      const g = goodById.get(goodId);
+      const sup = (rowsByGood.get(goodId) ?? []).map((l) => {
+        const lastLog = l.priceLogs[0];
+        const deltaMinor = lastLog ? l.priceMinor! - lastLog.oldMinor : 0;
+        return {
+          listingId: l.id,
+          business: l.business,
+          priceMinor: l.priceMinor,
+          currency: l.currency,
+          stock: l.stock,
+          minOrder: l.minOrder,
+          variantLabel: l.variantLabel,
+          updatedAt: l.updatedAt,
+          deltaMinor,
+        };
+      });
+      const prices = sup.filter((r) => r.priceMinor !== null).map((r) => r.priceMinor!);
+      const promo = promoRows.find((p) => p.listing?.goodId === goodId) ?? null;
+      return {
+        goodId,
+        goodName: g?.nameFa ?? null,
+        unit: g?.unit ?? null,
+        suppliers: sup.sort((a, b) => (a.priceMinor ?? Infinity) - (b.priceMinor ?? Infinity)),
+        bestMinor: prices.length ? Math.min(...prices) : null,
+        promo: promo
+          ? {
+              promoId: promo.id,
+              listingId: promo.listingId,
+              supplier: promo.business,
+              priceMinor: promo.listing.priceMinor,
+              currency: promo.listing.currency,
+              variantLabel: promo.listing.variantLabel,
+              goodName: promo.listing.good?.nameFa ?? null,
+            }
+          : null,
+      };
+    });
+    reply.header("x-cache", "MISS");
+    return { rows: rows.filter((r) => r.suppliers.length > 0 || r.promo) };
   }
 }

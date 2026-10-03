@@ -433,6 +433,10 @@ model Business {
   pages        Page[]
   /// فاز ۵ — کالاهایی که این خریدار قیمتشان را دنبال می‌کند (لیست خرید)
   watchedGoods WatchedGood[]
+  /// طرح ۸ — کیف پول تومانی (هر کسب‌وکار حداکثر یکی)
+  wallet       Wallet?
+  /// طرح ۸ — کمپین‌های «صف اول» این فروشنده
+  promos       Promo[]
   /// Brands owned by this business (for brand dashboard)
   ownedBrands  Brand[]   @relation("BrandOwner")
   createdAt    DateTime  @default(now())
@@ -551,6 +555,8 @@ model Listing {
   inquiries Inquiry[]
   offers    Offer[]
   priceLogs PriceLog[]
+  /// طرح ۸ — کمپین‌های فعال/توقف‌شده روی همین کالا (فقط رابطه؛ خواندن از Promo)
+  promos    Promo[]    @relation("promoListing")
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
 
@@ -643,6 +649,11 @@ model Follow {
   /// True when the edge was born from a referral signup (?ref= auto-follow) —
   /// powers the «با لینک» badge and future reward attribution.
   viaRef         Boolean  @default(false)
+  /// طرح ۸ (U60) — منبعِ رسیدنِ این یال: ORGANIC (خودش در اپ پیدا کرد) |
+  /// SHARED (از لینک اشتراکی/کاتالوگ/لیست) | PROMO (از نمایش پرومو).
+  /// ردیف‌های قدیمی‌تر ORGANIC تلقی می‌شوند؛ viaRef=true و source خالی → SHARED.
+  /// تحلیل «از کجا آمدند» (شیت دنبال‌کنندگان + خط خلاصهٔ عددی) از اینجا می‌سد.
+  source         String?
   createdAt      DateTime @default(now())
 
   followerPage Page @relation("pageFollower", fields: [followerPageId], references: [id], onDelete: Cascade)
@@ -664,6 +675,77 @@ model PriceLog {
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
 
   @@index([listingId, createdAt])
+}
+
+// ─── طرح ۸ — کیف پول تومانی + کمپین «صف اول» (پرداخت به‌ازای نتیجه) ────────
+
+/// کیف پول تومانی هر کسب‌وکار — الگوی اینستاگرام: پول واقعی، نه «اعتبار».
+/// موجودی به minor واحد پایه (ریال) ذخیره می‌شود؛ نمایش همیشه به تومان.
+model Wallet {
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  businessId   String      @unique @db.ObjectId
+  balanceMinor Int         @default(0) // IRR minor — نمایش به تومان = ÷۱۰
+  txns         WalletTxn[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  business Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+}
+
+/// تراکنش‌های کیف — شارژ، خرج کمپین، پاداش دعوت، برگشت بودجه.
+/// CHARGE = شارژ درگاه · PROMO_SPEND = کسر به‌ازای رویداد کمپین ·
+/// REFERRAL_REWARD = پاداش دعوت (+۵٬۰۰۰ تومان پس از اولین ذخیرهٔ معرفی‌شده) ·
+/// REFUND = برگشت باقیماندهٔ کمپین متوقف‌شده.
+model WalletTxn {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  walletId    String   @db.ObjectId
+  type        String // CHARGE | PROMO_SPEND | REFERRAL_REWARD | REFUND
+  amountMinor Int // مثبت = واریز، منفی = برداشت
+  ref         String? // شناسهٔ کمپین/رسید/معرفی
+  description String?
+  createdAt   DateTime @default(now())
+
+  wallet Wallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+
+  @@index([walletId, createdAt])
+}
+
+/// کمپین «صف اول» — پرداخت به‌ازای نتیجه (U66): ۱٬۰۰۰ تومان هر نمایشِ
+/// هدفمند + ۵٬۰۰۰ تومان هر ذخیرهٔ حاصل. بدون مدت ۷روزه؛ بودجه که تمام
+/// شود نمایش می‌ایستد. صرفاً دیده‌شدن می‌خرد — رتبهٔ تطبیق مستقل می‌ماند.
+model Promo {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  businessId  String    @db.ObjectId // فروشندهٔ پرداخت‌کننده
+  listingId   String    @db.ObjectId // کالای هدف
+  budgetMinor Int // بودجهٔ تعهدی
+  spentMinor  Int       @default(0) // خرج‌شده (مشاهده + ذخیره)
+  isActive    Boolean   @default(true)
+  stoppedAt   DateTime? // توقف دستی یا خالی‌شدن بودجه
+  createdAt   DateTime  @default(now())
+
+  business Business     @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  listing  Listing      @relation("promoListing", fields: [listingId], references: [id], onDelete: Cascade)
+  events   PromoEvent[]
+
+  @@index([isActive])
+  @@index([listingId, isActive])
+}
+
+/// رویداد کمپین — هر خریدار به‌ازای هر کمپین و هر نوع، یکتا (U07):
+/// VIEW = ۱٬۰۰۰ تومان (فقط خریدارِ همان کالا که کاتالوک فروشنده را ذخیره
+/// نکرده باشد) · FOLLOW = ۵٬۰۰۰ تومان (همان بیننده ذخیره کرد → Follow.source=PROMO)
+model PromoEvent {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  promoId          String   @db.ObjectId
+  viewerBusinessId String   @db.ObjectId // خریداری که دید/ذخیره کرد
+  type             String // VIEW | FOLLOW
+  costMinor        Int
+  createdAt        DateTime @default(now())
+
+  promo Promo @relation(fields: [promoId], references: [id], onDelete: Cascade)
+
+  @@unique([promoId, viewerBusinessId, type])
+  @@index([viewerBusinessId])
 }
 
 // ─── Specialized markets (FUTURE — additive overlay, not exposed yet) ────────

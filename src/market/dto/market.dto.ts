@@ -88,13 +88,24 @@ export class SendOfferDto {
   note?: string;
 }
 
-/** POST /market/followSupplier */
+/** POST /market/followSupplier — ذخیرهٔ کاتالوگ (طرح ۸): خریدار کاتالوگ را
+ *  ذخیره می‌کند. source = منبعِ رسیدن (ORGANIC | SHARED | PROMO)؛
+ *  promoId فقط وقتی می‌آید که از ردیف پروموی تابلوی ذخیره‌شده ذخیره شده —
+ *  سرور رویداد FOLLOW را می‌شمارد و ۵٬۰۰۰ تومان از بودجهٔ کمپین کم می‌کند. */
 export class FollowSupplierDto {
   @IsString()
   businessId: string;
 
   @IsString()
   supplierId: string;
+
+  @IsOptional()
+  @IsIn(["ORGANIC", "SHARED", "PROMO"])
+  source?: "ORGANIC" | "SHARED" | "PROMO";
+
+  @IsOptional()
+  @IsString()
+  promoId?: string;
 }
 
 /** POST /market/unfollowSupplier/:supplierId */
@@ -129,7 +140,7 @@ export class RemoveFollowerDto {
 
 /**
  * POST /market/followBuyer — my SELL page follows a buyer's BUY desk:
- * «می‌خواهم تامین‌کننده‌ی این خریدار باشم». Gated behind the referral target.
+ * «می‌خواهم تامین‌کننده‌ی این خریدار باشم». طرح ۸ (U63): «گوش به زنگ» — به محض نیاز جدید، درخواست در تب گوش‌به‌زنگ فروشنده می‌نشیند.
  */
 export class FollowBuyerDto {
   @IsString()
@@ -137,6 +148,10 @@ export class FollowBuyerDto {
 
   @IsString()
   buyerBusinessId: string;
+
+  @IsOptional()
+  @IsIn(["ORGANIC", "SHARED"])
+  source?: "ORGANIC" | "SHARED";
 }
 
 /**

@@ -255,7 +255,9 @@ export class BusinessesController {
         // ویترین تصویری: لوگوی کسب‌وکار + تامبنیل گالری هر آگهی — داخل همان
         // کش یک‌دقیقه‌ای؛ جابه‌جایی عکس با تگ business:{id} نامعتبر می‌شود.
         // هر سه واکشی موازی (قبلاً دو مرحله‌ی متوالی بود)
-        const [logo, ownerAvatar, galleries] = await Promise.all([
+        // طرح ۸ (U61) — شمار ذخیره‌کنندگان کاتالوگ: یال‌های فالو روی صفحهٔ SELL.
+        // شمارشِ عمومیِ بی‌خطر — «ذخیره» ابزاری است (مثل بوکمارک)، نه رابطه.
+        const [logo, ownerAvatar, galleries, saverCount] = await Promise.all([
           this.prisma.file.findFirst({
             where: { relatedModel: "Business", relatedId: business.id, fieldKey: "logo" },
             orderBy: { createdAt: "desc" },
@@ -269,9 +271,13 @@ export class BusinessesController {
               })
             : Promise.resolve(null),
           this.files.galleryMap(business.listings.map((l) => l.id)),
+          this.prisma.follow.count({
+            where: { supplierPage: { businessId: business.id, type: "SELL" } },
+          }),
         ]);
         return {
           ...business,
+          saverCount,
           owner: business.owner
             ? {
                 ...business.owner,

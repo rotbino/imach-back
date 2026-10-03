@@ -392,6 +392,18 @@ export class ListingsController {
       );
     }
 
+    // طرح ۸ (U63) — اعلام نیازِ خریدار: فروشنده‌هایی که روی این خریدار
+    // «گوش به زنگ» شده‌اند همان لحظه خبردار می‌شوند؛ درخواست در تب
+    // «گوش به زنگ»ِ درخواست‌های قیمت فروشنده می‌نشیند و پیشنهاد از همان‌جا
+    // بدون گیت معرف می‌رود (نیازِ منتشرشده خودش دعوت است).
+    if ((body.mode === "BUY" || body.mode === "BOTH") && body.buy && !target && !holder) {
+      await this.notifyNeedWatchers({
+        buyerBusinessId: business.id,
+        buyerName: business.name,
+        goodId: listing.good.id,
+      });
+    }
+
     this.invalidateFor(business.id, business.slug);
     // شمارش کاتالوگ تازه شود — جست‌وجوی «کپی از هم‌صنف‌ها» (searchCatalogs/
     // getAggregatedCatalog) فقط کاتالوگ‌های catalogCount>0 را می‌بیند؛ بدون
@@ -450,6 +462,49 @@ export class ListingsController {
       });
     } catch {
       /* notification is best-effort — never break the price save */
+    }
+  }
+
+  /** اعلان «اعلام نیاز» به فروشنده‌های گوش‌به‌زنگِ این خریدار (طرح ۸ — U63).
+   *  گوش به زنگ = یال فالویِ صفحه SELL فروشنده → صفحه BUY خریدار.
+   *  best-effort: خطا هرگز ذخیرهٔ نیاز را نمی‌شکند. */
+  private async notifyNeedWatchers(input: {
+    buyerBusinessId: string;
+    buyerName: string;
+    goodId: string;
+  }): Promise<void> {
+    try {
+      const edges = await this.prisma.follow.findMany({
+        where: { supplierPage: { businessId: input.buyerBusinessId, type: "BUY" } },
+        select: { followerPage: { select: { businessId: true } } },
+        take: 500,
+      });
+      const sellerIds = [...new Set(edges.map((e) => e.followerPage.businessId))];
+      if (sellerIds.length === 0) return;
+      const good = await this.prisma.good.findUnique({
+        where: { id: input.goodId },
+        select: { nameFa: true },
+      });
+      const owners = await this.prisma.business.findMany({
+        where: { id: { in: sellerIds }, ownerId: { not: null } },
+        select: { id: true, ownerId: true, notifPrefs: true },
+      });
+      const allowed = owners.filter(
+        (o) => (o.notifPrefs as Record<string, unknown> | null)?.quoteReplies !== false
+      );
+      if (allowed.length === 0) return;
+      await this.notifications.pushMany(
+        allowed.map((o) => ({
+          userId: o.ownerId as string,
+          bizId: o.id,
+          type: "BUYER_NEED" as const,
+          actorId: input.buyerBusinessId,
+          actorName: input.buyerName,
+          good: good?.nameFa ?? null,
+        }))
+      );
+    } catch {
+      /* best-effort — اعلان هرگز ذخیرهٔ نیاز را نمی‌شکند */
     }
   }
 
