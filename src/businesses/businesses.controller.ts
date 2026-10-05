@@ -42,6 +42,10 @@ const LISTING_SELECT = {
   minOrder: true,
   volume: true,
   frequency: true,
+  // فاز ۷ مهاجرت — کاتالوگ/کالای عمومی: «آخرین به‌روزرسانی» + بازدید پنجرهٔ ۳۰روزه
+  updatedAt: true,
+  viewCount30: true,
+  viewCountTotal: true,
   brand: { select: { id: true, name: true } },
   good: {
     select: {
@@ -67,6 +71,10 @@ type ListingDtoT = {
   minOrder: number | null;
   volume: number | null;
   frequency: string | null;
+  /** فاز ۷ — کاتالوگ عمومی: بازدید پنجرهٔ ۳۰روزه + کل + آخرین به‌روزرسانی */
+  updatedAt?: Date;
+  viewCount30?: number;
+  viewCountTotal?: number;
   brand: { id: string; name: string } | null;
   good: {
     id: string;
@@ -467,6 +475,35 @@ export class BusinessesController {
     ]);
     invalidateBusiness(this.cache, business.id, business.slug);
     return updated;
+  }
+
+  /**
+   * فاز ۷ مهاجرت — فهرست عمومی کاتالوگ‌های ایندکس‌پذیر برای sitemap.
+   * فقط slug + آخرین به‌روزرسانی (هر دو عمومی‌اند؛ خود صفحه‌ها عمومی‌اند).
+   * بدون احراز هویت — زیر کش ۱۵ دقیقه‌ای.
+   */
+  @Get("publicCatalogs")
+  async publicCatalogs(@Res({ passthrough: true }) reply: FastifyReply) {
+    const { value, hit } = await this.cache.wrap(
+      "biz:publicCatalogs",
+      { ttlMs: 15 * TTL.MINUTE, tags: ["products"] },
+      async () => {
+        const rows = await this.prisma.business.findMany({
+          where: { catalogCount: { gt: 0 }, isDemo: false },
+          select: { slug: true, name: true, catalogCount: true, updatedAt: true },
+          orderBy: { updatedAt: "desc" },
+          take: 500,
+        });
+        return rows.map((r) => ({
+          slug: r.slug,
+          name: r.name,
+          catalogCount: r.catalogCount,
+          updatedAt: r.updatedAt,
+        }));
+      }
+    );
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return value;
   }
 
   /**
