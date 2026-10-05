@@ -12,7 +12,6 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import type { FastifyReply } from "fastify";
-import { normalizeFa } from "../common/catalog/catalog";
 import { CacheService, TTL } from "../common/cache/cache.module";
 import { CurrentLocale, CurrentUser, makeSlug, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
@@ -20,7 +19,6 @@ import { assertBusinessOwner, invalidateBusinessCache, uniqueSlug } from "../com
 import { provinceOf } from "../common/geo/cities";
 import type { Locale } from "../common/i18n/i18n";
 import { t } from "../common/i18n/i18n";
-import { cursorBefore, decodeCursor } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
@@ -58,33 +56,6 @@ const LISTING_SELECT = {
   },
   product: { select: { imageUrl: true } },
 } as const;
-
-type ListingDtoT = {
-  id: string;
-  mode: string;
-  variantLabel?: string | null;
-  catalogCategoryId?: string | null;
-  priceMinor: number | null;
-  currency: string | null;
-  attrs: unknown;
-  stock: number | null;
-  minOrder: number | null;
-  volume: number | null;
-  frequency: string | null;
-  /** فاز ۷ — کاتالوگ عمومی: بازدید پنجرهٔ ۳۰روزه + کل + آخرین به‌روزرسانی */
-  updatedAt?: Date;
-  viewCount30?: number;
-  viewCountTotal?: number;
-  brand: { id: string; name: string } | null;
-  good: {
-    id: string;
-    nameFa: string;
-    nameEn: string | null;
-    unit: string;
-    category: { slug: string; nameFa: string; nameEn: string };
-  };
-  product?: { imageUrl: string | null } | null;
-};
 
 function invalidateBusiness(cache: CacheService, businessId: string, slug?: string): void {
   cache.invalidateTag(`business:${businessId}`);
@@ -315,8 +286,8 @@ export class BusinessesController {
   @UseGuards(JwtAuthGuard)
   async getContact(
     @Param("slug") slug: string,
-    @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale
+    @CurrentUser() _user: AuthUser,
+    @CurrentLocale() _locale: Locale
   ) {
     const business = await this.prisma.business.findUnique({
       where: { slug },

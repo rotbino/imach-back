@@ -364,7 +364,7 @@ export class GoodsController {
   async updateCategoryAttrs(
     @Body() body: { categoryId: string; attrs: unknown },
     @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale
+    @CurrentLocale() _locale: Locale
   ) {
     if (user.role !== "ADMIN") {
       throw AppError.forbidden("فقط ادمین می‌تواند ویژگی‌های دسته‌بندی را ویرایش کند");
@@ -414,7 +414,7 @@ export class GoodsController {
   async updateCategory(
     @Body() body: { categoryId: string; nameFa?: string; nameEn?: string; gs1GpcCode?: string | null; hsCode?: string | null; unit?: string | null },
     @CurrentUser() user: AuthUser,
-    @CurrentLocale() locale: Locale
+    @CurrentLocale() _locale: Locale
   ) {
     if (user.role !== "ADMIN") {
       throw AppError.forbidden("فقط ادمین می‌تواند دسته‌بندی را ویرایش کند");

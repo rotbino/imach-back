@@ -152,7 +152,7 @@ export class MarketController {
    */
   private async assertReferralUnlocked(
     business: { ownerId: string | null },
-    locale: Locale
+    _locale: Locale
   ): Promise<void> {
     const count = await this.referralCountOf(business.ownerId);
     if (count >= env.REFERRAL_TARGET) return;

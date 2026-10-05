@@ -1,4 +1,4 @@
-import { CanActivate, ExecutionContext, HttpStatus } from "@nestjs/common";
+import { CanActivate, ExecutionContext } from "@nestjs/common";
 import type { FastifyRequest } from "fastify";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";

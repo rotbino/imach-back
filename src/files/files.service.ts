@@ -36,7 +36,7 @@ export type RelatedModel = (typeof RELATED_MODELS)[number];
 
 /** Client-supplied ObjectIds are validated before touching Prisma (a 24-hex check turns what would be a 500 into a clean 404). */
 const OID_RE = /^[0-9a-fA-F]{24}$/;
-function oidOr404(id: string | null | undefined, what: string): string {
+function oidOr404(id: string | null | undefined): string {
   if (!id || !OID_RE.test(id)) throw AppError.notFound(t("fa", "files.notFound", "فایل یافت نشد"));
   return id;
 }
@@ -231,10 +231,10 @@ export class FilesService implements OnModuleInit, OnModuleDestroy {
       return { id: modelId };
     }
     if (model === "Business") {
-      return assertBusinessOwner(this.prisma, user, oidOr404(modelId, "Business not found"), locale);
+      return assertBusinessOwner(this.prisma, user, oidOr404(modelId), locale);
     }
     // Listing
-    const listing = await this.prisma.listing.findUnique({ where: { id: oidOr404(modelId, "Listing not found") }, select: { id: true, businessId: true } });
+    const listing = await this.prisma.listing.findUnique({ where: { id: oidOr404(modelId) }, select: { id: true, businessId: true } });
     if (!listing) throw AppError.notFound("Listing not found");
     await assertBusinessOwner(this.prisma, user, listing.businessId, locale);
     return listing;
@@ -487,7 +487,7 @@ export class FilesService implements OnModuleInit, OnModuleDestroy {
 
   /** Frontend «remove» (e.g. profile X) — owner, entity owner, or admin. */
   async remove(user: AuthUser, fileId: string, locale: Locale): Promise<{ ok: true }> {
-    oidOr404(fileId, "File not found");
+    oidOr404(fileId);
     const row = await this.prisma.file.findUnique({ where: { id: fileId } });
     if (!row) throw AppError.notFound(t(locale, "files.notFound", "فایل یافت نشد"));
 

@@ -5,11 +5,11 @@ import { provinceOf } from "../common/geo/cities";
 import { CacheService, TTL } from "../common/cache/cache.module";
 import { AppError } from "../common/errors/app-error";
 import { t, type Locale } from "../common/i18n/i18n";
-import { cursorBefore, decodeCursor, toPage, type Page } from "../common/pagination/cursor";
+import { cursorBefore, decodeCursor, toPage } from "../common/pagination/cursor";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { FilesService } from "../files/files.service";
 import type { AuthUser } from "../common/decorators/auth.decorators";
-import type { ImportRow, ImportRowInput } from "./import-file";
+import type { ImportRowInput } from "./import-file";
 
 /**
  * ─── Products service ────────────────────────────────────────────────────────
@@ -562,7 +562,7 @@ export class ProductsService {
    * (MERGED + mergedIntoId), barcode fills the survivor when missing.
    */
   async adminMerge(
-    user: AuthUser,
+    _user: AuthUser,
     input: { intoId: string; fromIds: string[]; locale: Locale }
   ): Promise<{ merged: number; intoId: string }> {
     const into = await this.prisma.product.findUnique({
@@ -1167,7 +1167,7 @@ export class ProductsService {
    * اگر Product قبلاً عکس دارد، عکس جدید جایگزین نمی‌شود.
    */
   async setProductImage(
-    user: AuthUser,
+    _user: AuthUser,
     input: { productId: string; imageUrl: string }
   ): Promise<{ ok: boolean }> {
     const product = await this.prisma.product.findUnique({

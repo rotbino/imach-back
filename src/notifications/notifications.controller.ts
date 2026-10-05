@@ -2,7 +2,6 @@ import { Controller, Get, HttpCode, HttpStatus, Post, Query, UseGuards, Body } f
 import { CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { PrismaService } from "../common/prisma/prisma.module";
-import { NotificationsService } from "./notifications.service";
 import { PushService } from "./push.service";
 import {
   NotificationsQueryDto,

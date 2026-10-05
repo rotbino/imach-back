@@ -32,7 +32,7 @@ function num(name: string, value: string | undefined, fallback: number): number 
   return parsed;
 }
 
-function bool(name: string, value: string | undefined, fallback: boolean): boolean {
+function bool(value: string | undefined, fallback: boolean): boolean {
   if (value === undefined || value === "") return fallback;
   return value === "true" || value === "1";
 }
@@ -46,7 +46,7 @@ export const env = Object.freeze({
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || "15m",
   REFRESH_TOKEN_TTL_DAYS: num("REFRESH_TOKEN_TTL_DAYS", process.env.REFRESH_TOKEN_TTL_DAYS, 30),
   CORS_ORIGINS: process.env.CORS_ORIGINS || "*",
-  SWAGGER_ENABLED: bool("SWAGGER_ENABLED", process.env.SWAGGER_ENABLED, true),
+  SWAGGER_ENABLED: bool(process.env.SWAGGER_ENABLED, true),
   /**
    * Web Push (VAPID) — استاندارد باز؛ بدون ثبت‌نام گوگل. خالی = پوش خاموش
    * (بقیه‌ی اپ سالم می‌ماند؛ فقط sendToUser ناپ می‌شود).

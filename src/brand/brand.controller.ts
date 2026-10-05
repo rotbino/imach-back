@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, Post, Query, UseGuards } from "@nestjs/common";
-import { goodSearchText, normalizeFa } from "../common/catalog/catalog";
+import { normalizeFa } from "../common/catalog/catalog";
 import { CacheService } from "../common/cache/cache.module";
 import { CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
