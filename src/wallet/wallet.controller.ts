@@ -5,6 +5,7 @@ import { AppError } from "../common/errors/app-error";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { WalletService } from "./wallet.service";
+import { SettingsService } from "../settings/settings.service";
 
 class GetWalletDto {
   @IsString() businessId!: string;
@@ -28,6 +29,7 @@ export class WalletController {
   constructor(
     private readonly prisma: PrismaService,
     private readonly wallets: WalletService,
+    private readonly settings: SettingsService,
   ) {}
 
   /** موجودی + ۳۰ تراکنش آخر — نمایش تومانی سمت فرانت انجام می‌شود */
@@ -55,6 +57,12 @@ export class WalletController {
    */
   @Post("charge")
   async charge(@Body() body: ChargeWalletDto, @CurrentUser() user: AuthUser) {
+    // فاز ۸ — سوییچ ادمین: پرداخت فقط ایران؛ خاموش = مسیر دعوت/فعالیت
+    if (!(await this.settings.paymentsEnabled())) {
+      throw AppError.forbidden(
+        "پرداخت درگاه فعلاً غیرفعال است — با دعوت از همکاران اعتبار بگیر"
+      );
+    }
     await this.assertMine(body.businessId, user);
     const amountMinor = body.amountToman * 10; // تومان → ریال
     const wallet = await this.wallets.charge(body.businessId, amountMinor, body.gatewayRef);

@@ -6,6 +6,8 @@ import { AdminGoodsController } from "./goods/goods.controller";
 import { AdminBrandsController } from "./brands/brands.controller";
 import { AdminCategoriesController } from "./categories/categories.controller";
 import { AdminFilesController } from "./files/admin-files.controller";
+import { AdminSettingsController } from "./settings/admin-settings.controller";
+import { SettingsModule } from "../settings/settings.module";
 
 /**
  * Self-contained admin feature module — the ONLY place admin API code lives.
@@ -14,13 +16,14 @@ import { AdminFilesController } from "./files/admin-files.controller";
  * any day the whole tree can lift into its own deployable as one piece.
  */
 @Module({
-  imports: [AuthModule, FilesModule],
+  imports: [AuthModule, FilesModule, SettingsModule],
   controllers: [
     AdminOverviewController,
     AdminGoodsController,
     AdminBrandsController,
     AdminCategoriesController,
     AdminFilesController,
+    AdminSettingsController,
   ],
 })
 export class AdminModule {}

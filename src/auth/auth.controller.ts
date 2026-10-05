@@ -113,6 +113,8 @@ export class AuthController {
       armBuyColor?: string | null;
       armSellColor?: string | null;
       lang?: string;
+      /** فاز ۸ — ارز نمایش (ISO 4217 · null = ارز مرجع) */
+      currency?: string | null;
     },
     @CurrentUser() user: AuthUser
   ) {

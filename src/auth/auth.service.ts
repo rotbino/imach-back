@@ -52,6 +52,8 @@ export interface UserPrefsDto {
   theme: "light" | "dark";
   armBuyColor: string | null;
   armSellColor: string | null;
+  /** فاز ۸ — ارز نمایش کاربر (ISO 4217 · null = ارز مرجع IRR) */
+  currency: string | null;
 }
 
 export interface PublicUser {
@@ -671,6 +673,7 @@ export class AuthService {
       theme: p.theme === "dark" ? "dark" : "light",
       armBuyColor: typeof p.armBuyColor === "string" ? p.armBuyColor : null,
       armSellColor: typeof p.armSellColor === "string" ? p.armSellColor : null,
+      currency: typeof p.currency === "string" ? p.currency : null,
     };
   }
 
@@ -681,7 +684,13 @@ export class AuthService {
    */
   async setPrefs(
     user: AuthUser,
-    body: { theme?: string; armBuyColor?: string | null; armSellColor?: string | null; lang?: string }
+    body: {
+      theme?: string;
+      armBuyColor?: string | null;
+      armSellColor?: string | null;
+      lang?: string;
+      currency?: string | null;
+    }
   ) {
     const row = await this.prisma.user.findUnique({
       where: { id: user.id },
@@ -715,11 +724,20 @@ export class AuthService {
       next.lang = body.lang;
     }
 
+    // فاز ۸ — ارز نمایش (ISO 4217؛ null = پیش‌فرض ارز مرجع)
+    if (body.currency !== undefined) {
+      if (body.currency !== null && !/^[A-Z]{3}$/.test(body.currency)) {
+        throw AppError.badRequest("کد ارز سه‌حرفی ISO لازم است (مثل USD)", "PREFS_BAD_CURRENCY");
+      }
+      next.currency = body.currency;
+    }
+
     // JSON خالص برای Prisma (InputJsonValue) — literal type با index ضمنی
     const prefsJson = {
       theme: next.theme,
       armBuyColor: next.armBuyColor,
       armSellColor: next.armSellColor,
+      ...(next.currency !== null ? { currency: next.currency } : {}),
       ...(next.lang !== undefined ? { lang: next.lang } : {}),
     };
     await this.prisma.user.update({

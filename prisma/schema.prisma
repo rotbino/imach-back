@@ -183,6 +183,8 @@ model Unit {
   key         String  @unique
   nameFa      String
   nameEn      String
+  /// فاز ۸ مهاجرت — نام عربی واحد (null = fallback به nameEn در UI عربی)
+  nameAr      String?
   /// "base" | "retail" | "wholesale"
   scope       String  @default("base")
   /// null = this IS a root unit | non-null = references another unit's key
@@ -208,6 +210,8 @@ model Category {
   slug       String     @unique // stable identifier — names are localizable
   nameFa     String
   nameEn     String
+  /// فاز ۸ مهاجرت — نام عربی دسته (null = fallback به nameEn در UI عربی)
+  nameAr     String?
   /// GS1 GPC Brick code — for global barcode matching and cross-border trade.
   /// Example: "10000335" for "Dates". Enables international matching even when
   /// category trees differ between countries. Optional (null = not yet mapped).
@@ -964,4 +968,19 @@ model DiscountRule {
   @@unique([businessId, scope, refId])
   @@index([businessId, scope])
   @@index([refId])
+}
+
+// ─── فاز ۸ مهاجرت — تنظیمات سیستمی (AppSetting) ──────────────────────────────
+// مخزن key/value برای سوییچ‌های ادمین و پیکربندی بین‌المللی. کلیدهای شناخته‌شده:
+//   payments.enabled (bool)  — پرداخت درگاه فقط ایران؛ ادمین می‌تواند خاموش کند
+//   currency.base    ("IRR") — ارز مرجع پایهٔ حسابداری (کیف پول/کمپین)
+//   currency.rates   ({CODE: baseMinorPerMajor}) — نرخ‌ها: چند minor ارز مرجع
+//                              برابر ۱ واحد اصلیِ آن ارز (rate.IRR = ۱۰ همیشه)
+// مخزن است نه فایل env: تغییر از پنل ادمین بدون redeploy اعمال می‌شود.
+model AppSetting {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  key       String   @unique
+  /// مقدار ساختاریافته — اعتبارسنجی در سرویس، نه اسکیما (کلیدهای متنوع)
+  value     Json
+  updatedAt DateTime @updatedAt
 }

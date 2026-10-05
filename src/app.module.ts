@@ -18,6 +18,7 @@ import { WalletModule } from "./wallet/wallet.module";
 import { PromosModule } from "./promos/promos.module";
 import { PricingModule } from "./pricing/pricing.module";
 import { ChatModule } from "./chat/chat.module";
+import { SettingsModule } from "./settings/settings.module";
 
 /**
  * iMach API root — feature modules only; cross-cutting infra lives in
@@ -44,6 +45,7 @@ import { ChatModule } from "./chat/chat.module";
     PromosModule,
     PricingModule,
     ChatModule,
+    SettingsModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })
