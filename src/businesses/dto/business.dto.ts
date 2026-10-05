@@ -102,6 +102,25 @@ export class EditBusinessDto {
   @IsString()
   @MaxLength(300)
   address?: string | null;
+
+  /** فاز ۶ مهاجرت (sc-edit-biz) — شمارهٔ تماس روی کاتالوگ و صفحهٔ کالاها.
+   *  null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(20)
+  phone?: string | null;
+
+  /** فاز ۶ مهاجرت (sc-settings «فروشگاه») — ساعت پاسخگویی. null = پاک کردن. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  hours?: string | null;
+
+  /** فاز ۶ مهاجرت (sc-settings «فروشگاه») — شرایط پرداخت پیش‌فرض. null = پاک کردن. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  defaultPayTerm?: string | null;
 }
 
 /**

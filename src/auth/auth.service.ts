@@ -47,6 +47,13 @@ const BUSINESS_SUMMARY_SELECT = {
   enabledArms: true,
 } as const;
 
+/** فاز ۶ مهاجرت — ترجیحات نمایش کاربر (User.prefs) */
+export interface UserPrefsDto {
+  theme: "light" | "dark";
+  armBuyColor: string | null;
+  armSellColor: string | null;
+}
+
 export interface PublicUser {
   id: string;
   name: string;
@@ -652,7 +659,77 @@ export class AuthService {
       user: publicUser,
       businesses: await this.withBusinesses(publicUser),
       avatar: avatar ? { url: avatar.url, thumbUrl: avatar.thumbUrl } : null,
+      // فاز ۶ — ترجیحات نمایش (تم/رنگ arm/زبان) — cross-device
+      prefs: this.readPrefs(row.prefs),
     };
+  }
+
+  /** خواندن امن prefs — فقط کلیدهای شناخته‌شده، همیشه آبجکت */
+  private readPrefs(raw: unknown): UserPrefsDto {
+    const p = (raw ?? {}) as Record<string, unknown>;
+    return {
+      theme: p.theme === "dark" ? "dark" : "light",
+      armBuyColor: typeof p.armBuyColor === "string" ? p.armBuyColor : null,
+      armSellColor: typeof p.armSellColor === "string" ? p.armSellColor : null,
+    };
+  }
+
+  /**
+   * فاز ۶ مهاجرت — POST /auth/setPrefs: ترجیحات نمایش کاربر (ادغامی).
+   * تم روشن/تاریک + رنگ دلخواه هر arm (هگز معتبر) + زبان — همان انتخاب
+   * که سمت فرانت در کوکی هم می‌نشیند، اینجا cross-device می‌ماند (الزام مالک).
+   */
+  async setPrefs(
+    user: AuthUser,
+    body: { theme?: string; armBuyColor?: string | null; armSellColor?: string | null; lang?: string }
+  ) {
+    const row = await this.prisma.user.findUnique({
+      where: { id: user.id },
+      select: { id: true, prefs: true, language: true },
+    });
+    if (!row) throw AppError.notFound("User not found");
+
+    const current = this.readPrefs(row.prefs);
+    const HEX = /^#[0-9a-fA-F]{6}$/;
+    const next: UserPrefsDto & { lang?: string } = { ...current };
+
+    if (body.theme !== undefined) {
+      if (body.theme !== "light" && body.theme !== "dark") {
+        throw AppError.badRequest("تم فقط روشن یا تاریک است", "PREFS_BAD_THEME");
+      }
+      next.theme = body.theme;
+    }
+    for (const key of ["armBuyColor", "armSellColor"] as const) {
+      const v = body[key];
+      if (v === undefined) continue;
+      if (v !== null && !HEX.test(v)) {
+        throw AppError.badRequest("رنگ باید هگز معتبر باشد (مثل #0e9f8a)", "PREFS_BAD_COLOR");
+      }
+      next[key] = v;
+    }
+
+    if (body.lang !== undefined) {
+      if (!["fa", "en", "ar"].includes(body.lang)) {
+        throw AppError.badRequest("زبان پشتیبانی‌شده: fa / en / ar", "PREFS_BAD_LANG");
+      }
+      next.lang = body.lang;
+    }
+
+    // JSON خالص برای Prisma (InputJsonValue) — literal type با index ضمنی
+    const prefsJson = {
+      theme: next.theme,
+      armBuyColor: next.armBuyColor,
+      armSellColor: next.armSellColor,
+      ...(next.lang !== undefined ? { lang: next.lang } : {}),
+    };
+    await this.prisma.user.update({
+      where: { id: row.id },
+      data: {
+        prefs: prefsJson,
+        ...(body.lang !== undefined ? { language: body.lang } : {}),
+      },
+    });
+    return next;
   }
 
   /**

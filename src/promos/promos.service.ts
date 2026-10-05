@@ -281,6 +281,16 @@ export class PromosService {
       },
       viewers: viewerBizs,
       converted: followersBizs,
+      // فاز ۶ مهاجرت (sc-campaign «چه کسانی دیدند؟») — رویدادهای خام با
+      // زمان دقیق: هر بیننده چه ساعتی دید و همان جلسه دنبال کرد یا نه.
+      viewerEvents: promo.events
+        .slice()
+        .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
+        .map((e) => ({
+          viewerId: e.viewerBusinessId,
+          type: e.type as "VIEW" | "FOLLOW",
+          at: e.createdAt,
+        })),
     };
   }
 

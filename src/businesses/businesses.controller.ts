@@ -122,6 +122,10 @@ export class BusinessesController {
         notifPrefs: true,
         // فاز ۹ (شکاف ۶) — دستیارهای فعال؛ null = هر دو روشن
         enabledArms: true,
+        // فاز ۶ مهاجرت — شمارهٔ تماس/ساعت پاسخگویی/شرایط پرداخت (sc-edit-biz + sc-settings)
+        phone: true,
+        hours: true,
+        defaultPayTerm: true,
         _count: { select: { listings: true } },
       },
       orderBy: { createdAt: "asc" },
@@ -403,6 +407,16 @@ export class BusinessesController {
         // آدرس متنی قابل ویرایش — همراه پین ذخیره می‌شود
         ...(body.address !== undefined
           ? { address: body.address ? body.address.trim() : null }
+          : {}),
+        // فاز ۶ مهاجرت — شمارهٔ تماس / ساعت پاسخگویی / شرایط پرداخت پیش‌فرض
+        ...(body.phone !== undefined
+          ? { phone: body.phone ? body.phone.trim() : null }
+          : {}),
+        ...(body.hours !== undefined
+          ? { hours: body.hours ? body.hours.trim() : null }
+          : {}),
+        ...(body.defaultPayTerm !== undefined
+          ? { defaultPayTerm: body.defaultPayTerm ? body.defaultPayTerm.trim() : null }
           : {}),
       },
     });

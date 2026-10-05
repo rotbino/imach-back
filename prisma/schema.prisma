@@ -30,61 +30,68 @@ datasource db {
 // ─── Auth ────────────────────────────────────────────────────────────────────
 
 model User {
-  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  id              String         @id @default(auto()) @map("_id") @db.ObjectId
   /// Unique international mobile identity: dial code + national number
   /// WITHOUT the leading trunk 0 — e.g. Iran 0912… → 98912….
   /// The dial comes from the signup country, so two countries can never
   /// collide on the same local number.
-  phone         String         @unique
+  phone           String         @unique
   /// Display full name — "firstName lastName". Kept in sync at write time so
   /// every existing reader (chat, notifications, vitrine) keeps working.
-  name          String
+  name            String
   /// Person identity — stored SEPARATELY from the business name on purpose:
   /// in wholesale, buyers want to know WHO they are dealing with (the catalog
   /// header shows the owner's name; photo comes later). Legacy rows keep null
   /// here — their combined `name` still renders everywhere.
-  firstName     String?
-  lastName      String?
-  passwordHash  String
+  firstName       String?
+  lastName        String?
+  passwordHash    String
   /// آیا کاربر پسورد واقعی تنظیم کرده؟ کاربران ثبت‌نام سریع (فقط موبایل) این
   /// فیلد را false دارند تا دکمه‌ی چشمک‌زن «ثبت پسورد» در هدر دیده شود.
   /// وقتی setPassword صدا زده شد، true می‌شود و دکمه ناپدید می‌گردد.
   /// پیش‌فرض true: کاربران قدیمی (که همگی با registerUser ساخته شده‌اند) این
   /// فیلد را نداشتند — برای آن‌ها true در نظر می‌گیریم. فقط quickRegister این
   /// فیلد را صریحاً false می‌گذارد.
-  passwordSet   Boolean  @default(true)
-  role          String         @default("MEMBER") // MEMBER | ADMIN
-  country       String         @default("IR") // chosen at signup → default business currency + dial code
+  passwordSet     Boolean        @default(true)
+  role            String         @default("MEMBER") // MEMBER | ADMIN
+  country         String         @default("IR") // chosen at signup → default business currency + dial code
   /// UI language chosen at signup (BCP-47 base: fa/en/ar/…) — restored on
   /// future logins once the product goes multilingual.
-  language      String         @default("fa")
-  businesses    Business[]
-  refreshTokens RefreshToken[]
+  language        String         @default("fa")
+  /// فاز ۶ مهاجرت — ترجیحات نمایش کاربر (cross-device): تم روشن/تاریک،
+  /// رنگ دلخواه هر arm، زبانِ صریحاً انتخاب‌شده. JSON ساده:
+  /// { theme?: "light"|"dark", armBuyColor?: string, armSellColor?: string, lang?: string }
+  /// null/فیلد غایب = پیش‌فرض سیستم (روشن + رنگ‌های Prototype). سمت فرانت
+  /// آینهٔ کوکی imach_theme/imach_arm رنگ‌ها برای رندر SSR می‌ماند — این
+  /// فیلد همان انتخاب را بین دستگاه‌ها هم می‌برد (الزام مالک: سوییچ تم از پروفایل).
+  prefs           Json?
+  businesses      Business[]
+  refreshTokens   RefreshToken[]
   /// Basic-data rows this user registered (goods, brands, products) — the
   /// audit trail of who grew the catalog. Null creator = system/seed row.
-  createdGoods    Good[]    @relation("GoodCreator")
-  createdBrands   Brand[]   @relation("BrandCreator")
-  createdProducts Product[] @relation("ProductCreator")
+  createdGoods    Good[]         @relation("GoodCreator")
+  createdBrands   Brand[]        @relation("BrandCreator")
+  createdProducts Product[]      @relation("ProductCreator")
   /// Attribution: the owner of the catalog / invite link this user signed up
   /// through (?ref={businessSlug}). The auto-follow fires later, when the
   /// referred user finally gets a Business (and therefore a BUY page).
-  referredBy    User?          @relation("Referrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  referredById  String?        @db.ObjectId
-  referrals     User[]         @relation("Referrals")
+  referredBy      User?          @relation("Referrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  referredById    String?        @db.ObjectId
+  referrals       User[]         @relation("Referrals")
   /// Which page of the referrer the invite came from: SELL = catalog link
   /// (referred becomes the referrer's CUSTOMER), BUY = purchase-desk link
   /// (referred becomes the referrer's SUPPLIER). Null = legacy sell default.
-  refArm        String?
+  refArm          String?
   /// Phone contacts this user shared via the contacts gate — the user's
   /// private network, stored for the growth engine (who is on iMach, who
   /// was invited, when).
-  contacts      Contact[]
+  contacts        Contact[]
   /// In-app notification feed (bell) — follow / offer / quote / contact-joined
-  notifications Notification[]
+  notifications   Notification[]
   /// Files this user uploaded (avatar + anything else) — per-user usage rollup
-  files         File[]         @relation("FileOwner")
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
+  files           File[]         @relation("FileOwner")
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
 
   @@index([referredById])
 }
@@ -194,13 +201,13 @@ model Unit {
 /// Category tree (3–4 levels). Seed comes from trade standards (GS1 GPC / HS
 /// skeleton + local B2B naming); user-created goods always attach to a leaf.
 model Category {
-  id       String     @id @default(auto()) @map("_id") @db.ObjectId
-  parentId String?    @db.ObjectId
-  parent   Category?  @relation("catTree", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  children Category[] @relation("catTree")
-  slug     String     @unique // stable identifier — names are localizable
-  nameFa   String
-  nameEn   String
+  id         String     @id @default(auto()) @map("_id") @db.ObjectId
+  parentId   String?    @db.ObjectId
+  parent     Category?  @relation("catTree", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children   Category[] @relation("catTree")
+  slug       String     @unique // stable identifier — names are localizable
+  nameFa     String
+  nameEn     String
   /// GS1 GPC Brick code — for global barcode matching and cross-border trade.
   /// Example: "10000335" for "Dates". Enables international matching even when
   /// category trees differ between countries. Optional (null = not yet mapped).
@@ -208,17 +215,17 @@ model Category {
   /// HS Code (Harmonized System) — 4-6 digit chapter for customs and tariffs.
   /// Used by the matching engine to calculate import/export costs when
   /// suggesting cross-border suppliers. Example: "0813" for dried fruit.
-  hsCode   String?
+  hsCode     String?
   /// Attribute schema for goods under this category:
   /// [{key, fa, en, type: "enum"|"text", options?: [{v, fa, en}], required?: boolean}]
-  attrs    Json?
+  attrs      Json?
   /// Default wholesale unit prefilled when a reference good is created
   /// under this leaf (KILOGRAM | TON | CARTON | …) — keys stay semantic.
-  unit     String?
+  unit       String?
   /// Hidden subtree (e.g. services before their launch day) — excluded from
   /// every user-facing read; flipping it back on needs no migration.
-  isActive Boolean @default(true)
-  goods    Good[]
+  isActive   Boolean    @default(true)
+  goods      Good[]
 
   @@index([parentId])
   @@index([gs1GpcCode])
@@ -229,9 +236,9 @@ model Category {
 /// Weight/packaging live on Category attrs, brand lives on Listing — so the
 /// catalog stays demand-driven and match-friendly across languages.
 model Good {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  categoryId  String    @db.ObjectId
-  category    Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  id          String        @id @default(auto()) @map("_id") @db.ObjectId
+  categoryId  String        @db.ObjectId
+  category    Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade, onUpdate: NoAction)
   nameFa      String // canonical Persian name (or the name the user typed)
   nameEn      String?
   aliases     String[] // extra search terms in any language
@@ -241,14 +248,14 @@ model Good {
   /// Optional external-classification metadata (customs HS 6–10 digits).
   /// Empty today by design — tomorrow it powers export/import workflows.
   hsCode      String?
-  source      String    @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
-  status      String    @default("ACTIVE") // ACTIVE | PROVISIONAL (pending review)
+  source      String        @default("SEED") // SEED | USER (legacy origin; superseded by creatorRole)
+  status      String        @default("ACTIVE") // ACTIVE | PROVISIONAL (pending review)
   /// Who registered this row: USER (ordinary member) | ADMIN | BRAND_OWNER.
   /// Null = system/seed. Rows stay usable for everyone while PROVISIONAL —
   /// the state only drives the admin gardening queue (approve / merge / delete).
   creatorRole String?
-  createdById String?   @db.ObjectId
-  createdBy   User?     @relation("GoodCreator", fields: [createdById], references: [id], onUpdate: NoAction)
+  createdById String?       @db.ObjectId
+  createdBy   User?         @relation("GoodCreator", fields: [createdById], references: [id], onUpdate: NoAction)
   listings    Listing[]
   /// SKU-level identities (brand×size) under this class — see Product.
   products    Product[]
@@ -312,37 +319,37 @@ model Brand {
 ///   • Matching NEVER reads Product — the score stays Good-level (خواسته‌ی
 ///     کاربر: خریدارِ بی‌برند نباید فروشنده‌های مرتبط را از دست بدهد).
 model Product {
-  id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  goodId     String   @db.ObjectId
-  good       Good     @relation(fields: [goodId], references: [id], onDelete: Cascade, onUpdate: NoAction)
-  brandId    String?  @db.ObjectId
-  brand      Brand?   @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  goodId       String    @db.ObjectId
+  good         Good      @relation(fields: [goodId], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  brandId      String?   @db.ObjectId
+  brand        Brand?    @relation(fields: [brandId], references: [id], onDelete: SetNull, onUpdate: NoAction)
   /// «تن ماهی مکنزی ۲۵۰ گرم» — the first text that created it (brand + specs)
-  label      String
+  label        String
   /// normalized label — same normalizer as Good/Brand, powers find-or-create + picker search
-  searchText String
+  searchText   String
   /// GTIN/EAN when known — exact identity for packaged branded goods
-  barcode    String?
+  barcode      String?
   /// عکس مرجع محصول — اختیاری. می‌تواند از اولین Listingای که این Product را
   /// ساخت بیاید، یا ادمین در پنل بگذارد. در picker و کاتالوگ تجمیعی نشان داده
   /// می‌شود تا کاربر بداند چه می‌خرد.
-  imageUrl   String?
+  imageUrl     String?
   /// ACTIVE | PROVISIONAL | MERGED (mergedIntoId points at the survivor)
-  status     String   @default("ACTIVE")
-  mergedIntoId String? @db.ObjectId
-  creatorRole String?
-  createdById String?  @db.ObjectId
-  createdBy  User?    @relation("ProductCreator", fields: [createdById], references: [id], onUpdate: NoAction)
+  status       String    @default("ACTIVE")
+  mergedIntoId String?   @db.ObjectId
+  creatorRole  String?
+  createdById  String?   @db.ObjectId
+  createdBy    User?     @relation("ProductCreator", fields: [createdById], references: [id], onUpdate: NoAction)
   /// Category-level attribute values for this product: {key: value}
   /// e.g. {"weight": "250g", "flavor": "نمکی", "volume_ml": "300"}
-  attrs      Json?
+  attrs        Json?
   /// Rich metadata from external sources (barcodeapp, Open Food Facts, etc.)
   /// Contains: parsed_brand, clean_name, parsed_attributes, volume_ml,
   /// weight_grams, data_confidence, source, original_name, etc.
-  metadata   Json?
-  listings   Listing[]
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  metadata     Json?
+  listings     Listing[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 
   @@index([goodId, searchText])
   @@index([barcode])
@@ -396,11 +403,18 @@ model Business {
   /// the catalog settings map (LocationPicker). Feeds the matcher's distance
   /// tiering later (city → province → exact point). Never rendered publicly
   /// as an exact pin; the public catalog shows only the city.
-  lat Float?
-  lng Float?
+  lat            Float?
+  lng            Float?
   /// Textual address — prefilled from reverse-geocode of the pin, but always
   /// user-editable. This one IS public (shown on the owner's pages).
-  address String?
+  address        String?
+  /// فاز ۶ مهاجرت (sc-settings «فروشگاه») — ساعت پاسخگویی فروشنده به‌صورت
+  /// متن آزاد فارسی («شنبه تا پنج‌شنبه · ۸ تا ۱۸»). نمایش عمومی در کاتالوگ
+  /// فاز ۷ می‌آید؛ ذخیره از همین فاز تا تنظیمات مرده نباشد.
+  hours          String?
+  /// فاز ۶ مهاجرت (sc-settings «فروشگاه») — شرایط پرداخت پیش‌فرض فروشنده
+  /// (متن آزاد: «نقدی» / «عندالتحویل» / …). همان قاعدهٔ hours.
+  defaultPayTerm String?
 
   /// فاز ۸ (طرح ۱۴) — تنظیمات اعلانِ این کسب‌وکار. JSON ساده:
   /// { priceChange, suggestions, quoteReplies, push } — همه boolean.
@@ -422,14 +436,14 @@ model Business {
   /// حداقل یک دستیار باید روشن بماند (اعتبارسنجی در setArms).
   enabledArms Json?
 
-  ownerId      String? @db.ObjectId
-  owner        User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+  ownerId String? @db.ObjectId
+  owner   User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 
-  listings     Listing[] @relation("listings")
-  inquiriesIn  Inquiry[] @relation("seller")
-  inquiriesOut Inquiry[] @relation("buyer")
-  offersSent   Offer[]   @relation("seller")
-  offersRecv   Offer[]   @relation("buyer")
+  listings     Listing[]     @relation("listings")
+  inquiriesIn  Inquiry[]     @relation("seller")
+  inquiriesOut Inquiry[]     @relation("buyer")
+  offersSent   Offer[]       @relation("seller")
+  offersRecv   Offer[]       @relation("buyer")
   pages        Page[]
   /// فاز ۵ — کالاهایی که این خریدار قیمتشان را دنبال می‌کند (لیست خرید)
   watchedGoods WatchedGood[]
@@ -437,10 +451,13 @@ model Business {
   wallet       Wallet?
   /// طرح ۸ — کمپین‌های «صف اول» این فروشنده
   promos       Promo[]
+  /// فاز ۶ مهاجرت — گفتگوهای این کسب‌وکار (دو جهت رابطهٔ Thread)
+  threadsA     Thread[]      @relation("threadA")
+  threadsB     Thread[]      @relation("threadB")
   /// Brands owned by this business (for brand dashboard)
-  ownedBrands  Brand[]   @relation("BrandOwner")
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
+  ownedBrands  Brand[]       @relation("BrandOwner")
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
 
   @@index([city])
   @@index([ownerId])
@@ -455,10 +472,10 @@ model Business {
 /// به‌ازای هر تغییر قیمتِ فعالِ همان کالا، یک اعلان PRICE_CHANGE — با
 /// throttle روزانه از طریق lastNotifiedAt.
 model WatchedGood {
-  id        String    @id @default(auto()) @map("_id") @db.ObjectId
-  businessId String   @db.ObjectId
-  goodId    String    @db.ObjectId
-  createdAt DateTime  @default(now())
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  businessId     String    @db.ObjectId
+  goodId         String    @db.ObjectId
+  createdAt      DateTime  @default(now())
   /// آخرین اعلانِ ارسال‌شده — حداکثر یک اعلان قیمت در روز به‌ازای هر کالا
   lastNotifiedAt DateTime?
 
@@ -524,7 +541,7 @@ model Listing {
   /// فاز ۵ مهاجرت — پکیج‌بندی چندتاییِ این ردیف: [{label, qty, priceMinor?, stock?}]
   /// («کیسهٔ ۱۰ کیلویی · ۸۹۵٬۰۰۰»). خالی = فقط قیمت پایه؛ قیمت هر بسته اختیاری و
   /// اگر خالی باشد از قیمت پایه × نسبت تعدد واحد محاسبه می‌شود (pack-note Prototype).
-  packaging  Json?
+  packaging Json?
 
   // ── buy side ──
   volume    Float?
@@ -574,29 +591,29 @@ model Listing {
 
 /// Buyer asked for a price on a seller's catalog listing.
 model Inquiry {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  buyerId   String   @db.ObjectId
-  sellerId  String   @db.ObjectId
-  listingId String   @db.ObjectId
-  volume    Float
-  note      String?
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId          String   @db.ObjectId
+  sellerId         String   @db.ObjectId
+  listingId        String   @db.ObjectId
+  volume           Float
+  note             String?
   /// Purchase rhythm snapshot from the buyer's BUY listing
   /// (WEEKLY | MONTHLY | OCCASIONAL) — shown as «دوره خرید» on the request card.
-  frequency String?
+  frequency        String?
   /// Delivery expectation snapshot («این ماه», «فوری», …) — free text from
   /// the quote-request form (design 12, phase 6); null until that form exists.
-  delivery  String?
+  delivery         String?
   /// فاز ۴ مهاجرت (sc-rfq) — محل تحویل («همدان — درب انبار»؛ پیش‌فرض شهر خریدار).
-  deliveryCity String?
+  deliveryCity     String?
   /// فاز ۴ مهاجرت (sc-rfq) — قیمت هدف اختیاری خریدار (تومان×۱۰؛ جهت مذاکره فروشنده).
   targetPriceMinor Int?
   /// فاز ۴ مهاجرت — یک «استعلام گروهی» (requestQuote) چند Inquiry می‌سازد؛
   /// این کلید همهٔ ردیف‌های همان ارسال را در یک کارت «پیشنهادها» گروه می‌کند.
   /// ردیف‌های legacy مقدار ندارند → هر کدام گروه تک‌نفرهٔ خودشان هستند.
-  rfqGroupId String?
-  status    String   @default("NEW") // NEW | ANSWERED | ARCHIVED
-  isRead    Boolean  @default(false)
-  createdAt DateTime @default(now())
+  rfqGroupId       String?
+  status           String   @default("NEW") // NEW | ANSWERED | ARCHIVED
+  isRead           Boolean  @default(false)
+  createdAt        DateTime @default(now())
 
   buyer   Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)
   seller  Business @relation("seller", fields: [sellerId], references: [id], onDelete: Cascade)
@@ -772,6 +789,46 @@ model PromoEvent {
 
   @@unique([promoId, viewerBusinessId, type])
   @@index([viewerBusinessId])
+}
+
+// ─── فاز ۶ مهاجرت — چت کاری (sc-msgs / sc-chat) ──────────────────────────────
+// گفتگو بین دو کسب‌وکار (خریدار ↔ تأمین‌کننده). «سابقهٔ معامله» است، نه
+// ابزار چت عمومی: عکس کالا و قیمتِ گفته‌شده همیشه قابل مرور بماند.
+
+/// گفتگو — بین دو کسب‌وکار. aId همیشه کوچکتر از bId ذخیره می‌شود تا
+/// (a,b) یکتای بدون‌جهت باشد؛ سمت read، «طرف مقابلِ من» پروجکت می‌شود.
+/// lastText/lastAt denormalized برای لیست سریع بدون join پیام‌ها.
+model Thread {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  aId       String   @db.ObjectId
+  bId       String   @db.ObjectId
+  lastText  String?
+  lastAt    DateTime @default(now())
+  createdAt DateTime @default(now())
+
+  a        Business  @relation("threadA", fields: [aId], references: [id], onDelete: Cascade)
+  b        Business  @relation("threadB", fields: [bId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@unique([aId, bId])
+  @@index([aId, lastAt])
+  @@index([bId, lastAt])
+}
+
+/// پیام — یک ردیف در گفتگو. متن + پیوستِ اختیاری عکس (File). readAt فقط
+/// برای پیام‌های طرف مقابل معنا دارد (خواندنِ من) — پیام‌های خودم null.
+model Message {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  threadId  String    @db.ObjectId
+  senderId  String    @db.ObjectId // کسب‌وکار فرستنده
+  text      String
+  fileId    String?   @db.ObjectId // پیوست عکس — از /files/upload
+  readAt    DateTime? // لحظهٔ خواندن توسط گیرنده
+  createdAt DateTime  @default(now())
+
+  thread Thread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+
+  @@index([threadId, createdAt])
 }
 
 // ─── Specialized markets (FUTURE — additive overlay, not exposed yet) ────────

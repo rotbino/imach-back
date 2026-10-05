@@ -101,6 +101,25 @@ export class AuthController {
   }
 
   /**
+   * فاز ۶ مهاجرت — ترجیحات نمایش کاربر: تم روشن/تاریک، رنگ دلخواه هر arm،
+   * زبان. ادغامی (merge) — فقط کلیدهای ارسال‌شده عوض می‌شوند. cross-device.
+   */
+  @Post("setPrefs")
+  @UseGuards(JwtAuthGuard)
+  setPrefs(
+    @Body()
+    body: {
+      theme?: string;
+      armBuyColor?: string | null;
+      armSellColor?: string | null;
+      lang?: string;
+    },
+    @CurrentUser() user: AuthUser
+  ) {
+    return this.authService.setPrefs(user, body);
+  }
+
+  /**
    * Edit profile — نام و نام خانوادگی مالک کسب‌وکار را به‌روزرسانی می‌کند.
    * این فیلدها در ویترین کاتالوگ زیر عنوان نشان داده می‌شوند (خواسته‌ی کاربر).
    */
