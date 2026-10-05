@@ -30,6 +30,7 @@ export class SupplyBoardQueryDto extends BusinessIdQueryDto {
 /**
  * POST /market/requestQuote — فرم درخواست قیمت از تابلوی تأمین (فاز ۶ · طرح ۱۲ · شکاف ۴).
  * جایگزینِ requestQuote/:listingId خودکارِ قدیمی است: گیرندگان این‌جا انتخابی‌اند.
+ * فاز ۴ مهاجرت (sc-rfq): قیمت هدف + محل تحویل + گروه‌بندی ردیف‌ها با rfqGroupId.
  */
 export class RequestQuoteDto {
   @IsString()
@@ -54,6 +55,20 @@ export class RequestQuoteDto {
   @MaxLength(30)
   delivery?: string;
 
+  /** فاز ۴ مهاجرت — محل تحویل (پیش‌فرض: شهر خریدار) */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  deliveryCity?: string;
+
+  /** فاز ۴ مهاجرت — قیمت هدف اختیاری (ریال/Minor) */
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  @Max(1e12)
+  targetPriceMinor?: number;
+
   @IsOptional()
   @IsString()
   @MaxLength(300)
@@ -72,7 +87,8 @@ export class RequestQuoteDto {
   includeNetwork?: boolean;
 }
 
-/** POST /market/sendOffer — price in the smallest currency unit (integer). */
+/** POST /market/sendOffer — price in the smallest currency unit (integer).
+ *  فاز ۴ مهاجرت (sc-quote): شرایط پرداخت + زمان تحویل از چیپ‌های فرم. */
 export class SendOfferDto {
   @IsString()
   inquiryId: string;
@@ -82,10 +98,39 @@ export class SendOfferDto {
   @Max(1e12)
   priceMinor: number;
 
+  /** شرایط پرداخت — «نقدی» | «عندالتحویل» | «چک ۳۰ روزه» */
+  @IsOptional()
+  @IsString()
+  @MaxLength(30)
+  payTerm?: string;
+
+  /** زمان تحویل — «همان روز» | «فردا» | «۲ روز» */
+  @IsOptional()
+  @IsString()
+  @MaxLength(30)
+  delivTerm?: string;
+
   @IsOptional()
   @IsString()
   @MaxLength(300)
   note?: string;
+}
+
+/** POST /market/setOfferStatus/:id — نشان خصوصی خریدار روی پیشنهاد (sheet-offer-status).
+ *  "NONE" = حذف نشان (null). فقط خریدارِ خود پیشنهاد مجاز است. */
+export class SetOfferStatusDto {
+  @IsOptional()
+  @IsIn(["INTERESTED", "CONTACTED", "REVIEWED", "NONE"])
+  status?: "INTERESTED" | "CONTACTED" | "REVIEWED" | "NONE";
+}
+
+/** GET /market/getQuoteContext — زمینهٔ فرم «پاسخ با قیمت» (فاز ۴ مهاجرت).
+ *  id = شناسهٔ Inquiry (پاسخ به «به من») یا «b» + شناسهٔ BUY listing
+ *  (پاسخ به فرصت بازار / گوش‌به‌زنگ از مسیر offerBuyRequest). */
+export class QuoteContextQueryDto extends BusinessIdQueryDto {
+  @IsString()
+  @MaxLength(40)
+  id: string;
 }
 
 /** POST /market/followSupplier — ذخیرهٔ کاتالوگ (طرح ۸): خریدار کاتالوگ را
@@ -170,6 +215,18 @@ export class OfferBuyRequestDto {
   @Min(1)
   @Max(1e12)
   priceMinor: number;
+
+  /** فاز ۴ مهاجرت (sc-quote) — شرایط پرداخت */
+  @IsOptional()
+  @IsString()
+  @MaxLength(30)
+  payTerm?: string;
+
+  /** فاز ۴ مهاجرت (sc-quote) — زمان تحویل */
+  @IsOptional()
+  @IsString()
+  @MaxLength(30)
+  delivTerm?: string;
 
   @IsOptional()
   @IsString()

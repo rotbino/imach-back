@@ -581,6 +581,14 @@ model Inquiry {
   /// Delivery expectation snapshot («این ماه», «فوری», …) — free text from
   /// the quote-request form (design 12, phase 6); null until that form exists.
   delivery  String?
+  /// فاز ۴ مهاجرت (sc-rfq) — محل تحویل («همدان — درب انبار»؛ پیش‌فرض شهر خریدار).
+  deliveryCity String?
+  /// فاز ۴ مهاجرت (sc-rfq) — قیمت هدف اختیاری خریدار (تومان×۱۰؛ جهت مذاکره فروشنده).
+  targetPriceMinor Int?
+  /// فاز ۴ مهاجرت — یک «استعلام گروهی» (requestQuote) چند Inquiry می‌سازد؛
+  /// این کلید همهٔ ردیف‌های همان ارسال را در یک کارت «پیشنهادها» گروه می‌کند.
+  /// ردیف‌های legacy مقدار ندارند → هر کدام گروه تک‌نفرهٔ خودشان هستند.
+  rfqGroupId String?
   status    String   @default("NEW") // NEW | ANSWERED | ARCHIVED
   isRead    Boolean  @default(false)
   createdAt DateTime @default(now())
@@ -591,6 +599,7 @@ model Inquiry {
 
   @@index([sellerId, isRead, createdAt])
   @@index([buyerId, createdAt])
+  @@index([rfqGroupId])
 }
 
 /// A price offer — either produced by the matching engine on quote-request,
@@ -606,6 +615,13 @@ model Offer {
   score      Int // persisted matching score (0–100)
   isSpecial  Boolean  @default(false)
   note       String?
+  /// فاز ۴ مهاجرت (sc-quote) — شرایط پرداخت («نقدی» | «عندالتحویل» | «چک ۳۰ روزه»).
+  payTerm    String?
+  /// فاز ۴ مهاجرت (sc-quote) — زمان تحویل («همان روز» | «فردا» | «۲ روز»).
+  delivTerm  String?
+  /// فاز ۴ مهاجرت (sheet-offer-status) — نشان خصوصی خریدار روی این پیشنهاد:
+  /// INTERESTED | CONTACTED | REVIEWED · null = بدون وضعیت. فقط خریدار می‌بیند.
+  status     String?
   createdAt  DateTime @default(now())
 
   buyer   Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)

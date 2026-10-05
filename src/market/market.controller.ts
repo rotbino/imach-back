@@ -10,6 +10,7 @@ import {
   Res,
   UseGuards,
 } from "@nestjs/common";
+import { randomUUID } from "node:crypto";
 import type { FastifyReply } from "fastify";
 import { CacheService, TTL } from "../common/cache/cache.module";
 import { env } from "../common/config/env";
@@ -31,9 +32,11 @@ import {
   FollowSupplierDto,
   InquiriesQueryDto,
   OfferBuyRequestDto,
+  QuoteContextQueryDto,
   RemoveFollowerDto,
   RequestQuoteDto,
   SendOfferDto,
+  SetOfferStatusDto,
   SupplyBoardQueryDto,
   UnfollowSupplierDto,
   UnwatchGoodDto,
@@ -265,6 +268,9 @@ export class MarketController {
     if (targets.size === 0) return { created: 0, networkAdded: 0, inquiries: [] };
 
     const note = body.note?.trim() || null;
+    // فاز ۴ مهاجرت — کلید گروه: همهٔ ردیف‌های این ارسال در یک کارت «پیشنهادها»
+    const rfqGroupId = randomUUID();
+    const deliveryCity = body.deliveryCity?.trim() || business.city || null;
     // ── تایم‌اوتِ تراکنش: پیش‌فرض پرایسما ۵ ثانیه است؛ از ایران هر create یک
     // رفت‌وبرگشت ~۲۰۰ms+ به Atlas دارد و تراکنشِ ۵ گیرنده مرتب کرش می‌کرد
     // (باگ واقعی که در تست E2E دیده شد — 500 روی استعلام). پنجره را ۳۰ثانیه کردیم.
@@ -282,6 +288,9 @@ export class MarketController {
                 note,
                 frequency: body.frequency ?? null,
                 delivery: body.delivery?.trim() || null,
+                deliveryCity,
+                targetPriceMinor: body.targetPriceMinor ?? null,
+                rfqGroupId,
               },
             })
           );
@@ -1033,6 +1042,8 @@ export class MarketController {
         score: 0, // پیشنهاد مستقیم — بدون امتیاز موتور
         isSpecial: false,
         note: body.note?.trim() || null,
+        payTerm: body.payTerm?.trim() || null,
+        delivTerm: body.delivTerm?.trim() || null,
       },
       include: OFFER_INCLUDE,
     });
@@ -1089,6 +1100,8 @@ export class MarketController {
         score: 0, // manual answer — no engine score
         isSpecial: false,
         note: body.note?.trim() || null,
+        payTerm: body.payTerm?.trim() || null,
+        delivTerm: body.delivTerm?.trim() || null,
       },
       include: OFFER_INCLUDE,
     });
@@ -1399,6 +1412,321 @@ export class MarketController {
     return {
       rows: rows.map((r) => ({ ...r, offer: offerKey.get(`${r.listingId}:${r.sellerId}`) ?? null })),
       answeredCount: rows.filter((r) => r.status === "ANSWERED").length,
+    };
+  }
+
+  /**
+   * GET /market/getMyRfqs (فاز ۴ مهاجرت · sc-offers) — استعلام‌های گروهی خریدار.
+   * هر «ارسال استعلام» (requestQuote) چند Inquiry می‌سازد که rfqGroupId‌شان
+   * یکی است؛ این‌جا یک کارت per گروه + پیشنهادهای رسیده برمی‌گردیم.
+   *   · ردیف‌های legacy (بدون rfqGroupId) → گروه تک‌ردیفی با id = inquiry.id
+   *   · پیشنهادِ سرد (offerBuyRequest، بدون استعلام) → گروه kind=COLD با
+   *     حجمِ BUY listing خود خریدار در همان کالا (اگر باشد)
+   * پیوند پیشنهاد↔استعلام: همان کلید listingId:sellerId + قید زمانی — پیشنهاد
+   * به newest استعلامی می‌چسبد که قبل از خودش ساخته شده (reRfq دوباره‌کاری نمی‌سازد).
+   */
+  @Get("getMyRfqs")
+  async getMyRfqs(
+    @Query() query: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+
+    const [inquiries, offers] = await Promise.all([
+      this.prisma.inquiry.findMany({
+        where: { buyerId: business.id },
+        include: {
+          listing: {
+            select: {
+              good: {
+                select: {
+                  id: true, nameFa: true, nameEn: true, unit: true,
+                  category: { select: { slug: true, nameFa: true } },
+                },
+              },
+            },
+          },
+          seller: { select: { id: true, slug: true, name: true, city: true, isVerified: true, phone: true } },
+        },
+        orderBy: { createdAt: "asc" },
+        take: 150,
+      }),
+      this.prisma.offer.findMany({
+        where: { buyerId: business.id },
+        include: {
+          seller: { select: { id: true, slug: true, name: true, city: true, isVerified: true, phone: true } },
+          listing: { select: { good: { select: { id: true, nameFa: true, nameEn: true, unit: true } } } },
+        },
+        orderBy: { createdAt: "asc" },
+        take: 400,
+      }),
+    ]);
+
+    // ── پیوند پیشنهاد→استعلام (کلید + قید زمانی) ──
+    const byKey = new Map<string, typeof inquiries>();
+    for (const inq of inquiries) {
+      const k = `${inq.listingId}:${inq.sellerId}`;
+      const list = byKey.get(k) ?? [];
+      list.push(inq);
+      byKey.set(k, list);
+    }
+    const offerInquiryId = new Map<string, string>();
+    for (const o of offers) {
+      const list = byKey.get(`${o.listingId}:${o.sellerId}`);
+      if (!list) continue;
+      let target: (typeof inquiries)[number] | null = null;
+      for (const inq of list) if (inq.createdAt <= o.createdAt) target = inq;
+      if (target) offerInquiryId.set(o.id, target.id);
+    }
+
+    // ── گروه‌بندی استعلام‌ها ──
+    type Group = {
+      id: string;
+      kind: "RFQ" | "COLD";
+      createdAt: Date;
+      volume: number | null;
+      frequency: string | null;
+      delivery: string | null;
+      deliveryCity: string | null;
+      targetPriceMinor: number | null;
+      note: string | null;
+      good: { id: string; nameFa: string; nameEn: string | null; unit: string } | null;
+      recipients: Array<{
+        inquiryId: string;
+        sellerId: string;
+        status: string;
+        seller: { id: string; slug: string; name: string; city: string | null; isVerified: boolean };
+      }>;
+      offers: Array<Record<string, unknown>>;
+      offerCount: number;
+      markedCount: number;
+      minPriceMinor: number | null;
+    };
+    const groups = new Map<string, Group>();
+    const groupOf = (inq: (typeof inquiries)[number]): Group => {
+      const id = inq.rfqGroupId ?? inq.id;
+      let g = groups.get(id);
+      if (!g) {
+        g = {
+          id,
+          kind: "RFQ",
+          createdAt: inq.createdAt,
+          volume: inq.volume,
+          frequency: inq.frequency,
+          delivery: inq.delivery,
+          deliveryCity: inq.deliveryCity,
+          targetPriceMinor: inq.targetPriceMinor,
+          note: inq.note,
+          good: inq.listing.good,
+          recipients: [],
+          offers: [],
+          offerCount: 0,
+          markedCount: 0,
+          minPriceMinor: null,
+        };
+        groups.set(id, g);
+      }
+      return g;
+    };
+    for (const inq of inquiries) {
+      const g = groupOf(inq);
+      g.createdAt = inq.createdAt > g.createdAt ? inq.createdAt : g.createdAt; // جدیدترین ردیف = زمان ارسال
+      g.recipients.push({ inquiryId: inq.id, sellerId: inq.sellerId, status: inq.status, seller: inq.seller });
+    }
+    const inquiryGroup = new Map<string, Group>();
+    for (const g of groups.values()) for (const r of g.recipients) inquiryGroup.set(r.inquiryId, g);
+
+    const shapeOffer = (o: (typeof offers)[number]) => ({
+      id: o.id,
+      sellerId: o.sellerId,
+      listingId: o.listingId,
+      seller: o.seller,
+      priceMinor: o.priceMinor,
+      currency: o.currency,
+      minOrder: o.minOrder,
+      payTerm: o.payTerm,
+      delivTerm: o.delivTerm,
+      note: o.note,
+      status: o.status,
+      createdAt: o.createdAt,
+    });
+
+    // ── پیشنهادهای سرد (بدون استعلام) — حجم از BUY listing خودم در همان کالا ──
+    const coldOffers = offers.filter((o) => !offerInquiryId.has(o.id));
+    let coldVolumes: Map<string, { volume: number | null; frequency: string | null }> | null = null;
+    if (coldOffers.length > 0) {
+      const coldGoodIds = [...new Set(coldOffers.map((o) => o.listing.good?.id).filter((x): x is string => !!x))];
+      const myBuyRows = coldGoodIds.length
+        ? await this.prisma.listing.findMany({
+            where: { businessId: business.id, goodId: { in: coldGoodIds }, isActive: true, mode: { in: ["BUY", "BOTH"] } },
+            select: { goodId: true, volume: true, frequency: true },
+            orderBy: { updatedAt: "desc" },
+          })
+        : [];
+      coldVolumes = new Map(myBuyRows.map((r) => [r.goodId, { volume: r.volume, frequency: r.frequency }]));
+    }
+
+    const now = Date.now();
+    let recentOfferCount = 0;
+    for (const o of offers) {
+      if (now - o.createdAt.getTime() < 72 * 3_600_000) recentOfferCount++;
+      const shaped = shapeOffer(o);
+      const g = offerInquiryId.get(o.id);
+      if (g) {
+        const target = inquiryGroup.get(g);
+        if (target) {
+          target.offers.push(shaped);
+          target.offerCount++;
+          if (o.status) target.markedCount++;
+          target.minPriceMinor =
+            target.minPriceMinor === null ? o.priceMinor : Math.min(target.minPriceMinor, o.priceMinor);
+          continue;
+        }
+      }
+      // سرد — گروه مستقل per پیشنهاد
+      const cg: Group = {
+        id: `c${o.id}`,
+        kind: "COLD",
+        createdAt: o.createdAt,
+        volume: coldVolumes?.get(o.listing.good?.id ?? "")?.volume ?? null,
+        frequency: coldVolumes?.get(o.listing.good?.id ?? "")?.frequency ?? null,
+        delivery: null,
+        deliveryCity: business.city,
+        targetPriceMinor: null,
+        note: null,
+        good: o.listing.good,
+        recipients: [],
+        offers: [shaped as unknown as Record<string, unknown>],
+        offerCount: 1,
+        markedCount: o.status ? 1 : 0,
+        minPriceMinor: o.priceMinor,
+      };
+      groups.set(cg.id, cg);
+    }
+
+    const list = [...groups.values()]
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
+      .map((g) => ({ ...g, offers: [...g.offers].sort((a, b) => (b as { createdAt: Date }).createdAt.getTime() - (a as { createdAt: Date }).createdAt.getTime()) }));
+
+    return { groups: list, recentOfferCount };
+  }
+
+  /**
+   * POST /market/setOfferStatus/:id (فاز ۴ مهاجرت · sheet-offer-status) —
+   * نشانِ خصوصی خریدار روی پیشنهاد: INTERESTED | CONTACTED | REVIEWED | NONE.
+   * «NONE» یا خالی = حذف نشان. فقط خریدارِ خود پیشنهاد مجاز است.
+   */
+  @Post("setOfferStatus/:id")
+  async setOfferStatus(
+    @Param("id") offerId: string,
+    @Body() body: SetOfferStatusDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(offerId)) throw AppError.notFound("Offer not found");
+    const offer = await this.prisma.offer.findUnique({ where: { id: offerId }, select: { id: true, buyerId: true } });
+    if (!offer) throw AppError.notFound("Offer not found");
+    await assertBusinessOwner(this.prisma, user, offer.buyerId, locale);
+    const status = !body.status || body.status === "NONE" ? null : body.status;
+    await this.prisma.offer.update({ where: { id: offer.id }, data: { status } });
+    this.invalidateBuyerSide(offer.buyerId);
+    return { ok: true, status };
+  }
+
+  /**
+   * GET /market/getQuoteContext (فاز ۴ مهاجرت · sc-quote) — زمینهٔ فرم «پاسخ با قیمت».
+   * id = Inquiry id (پاسخ مستقیم به «به من») یا «b»+BUY listing id
+   * (پاسخ به فرصت بازار / گوش‌به‌زنگ از مسیر offerBuyRequest).
+   * شامل: خریدار (نام/صنف/شهر/سابقه)، کالا، حجم، جزئیات استعلام،
+   * قیمت زندهٔ کاتالوگ خودم در همان کالا (پیش‌پر کردن فرم).
+   */
+  @Get("getQuoteContext")
+  async getQuoteContext(
+    @Query() query: QuoteContextQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const isBuyListing = query.id.startsWith("b");
+    const objId = query.id.slice(isBuyListing ? 1 : 0);
+    if (!isObjectId(objId)) throw AppError.notFound("Not found");
+
+    const myListingOf = async (goodId: string) =>
+      this.prisma.listing.findFirst({
+        where: { businessId: business.id, goodId, isActive: true, mode: { in: ["SELL", "BOTH"] } },
+        orderBy: { updatedAt: "desc" },
+        select: { id: true, priceMinor: true, currency: true, variantLabel: true, minOrder: true, updatedAt: true },
+      });
+
+    if (!isBuyListing) {
+      const inquiry = await this.prisma.inquiry.findUnique({
+        where: { id: objId },
+        include: {
+          buyer: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true, createdAt: true } },
+          listing: { select: { good: { select: { id: true, nameFa: true, nameEn: true, unit: true } } } },
+        },
+      });
+      if (!inquiry) throw AppError.notFound("Inquiry not found");
+      await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
+      const myListing = await myListingOf(inquiry.listing.good.id);
+      return {
+        kind: "INQUIRY" as const,
+        inquiryId: inquiry.id,
+        buyListingId: null,
+        buyer: { ...inquiry.buyer, memberSince: inquiry.buyer.createdAt },
+        good: inquiry.listing.good,
+        volume: inquiry.volume,
+        frequency: inquiry.frequency,
+        delivery: inquiry.delivery,
+        deliveryCity: inquiry.deliveryCity,
+        targetPriceMinor: inquiry.targetPriceMinor,
+        note: inquiry.note,
+        deadlineAt: new Date(inquiry.createdAt.getTime() + 3 * 86_400_000),
+        answered: inquiry.status === "ANSWERED",
+        watching: null,
+        myListing,
+      };
+    }
+
+    const need = await this.prisma.listing.findUnique({
+      where: { id: objId },
+      select: {
+        id: true, businessId: true, mode: true, volume: true, frequency: true, isActive: true,
+        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true, createdAt: true } },
+        good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
+      },
+    });
+    if (!need || need.isActive === false || need.mode === "SELL" || need.volume === null) {
+      throw AppError.notFound("Buy listing not found");
+    }
+    const myListing = await myListingOf(need.good.id);
+    // گوش‌به‌زنگ؟ (گیت معرف رفع شده؟) — بررسی نهایی در خود offerBuyRequest
+    const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
+    const watching = await this.prisma.follow.findUnique({
+      where: {
+        followerPageId_supplierPageId: {
+          followerPageId: mySellPageId,
+          supplierPageId: await ensurePage(this.prisma, need.businessId, "BUY"),
+        },
+      },
+      select: { id: true },
+    });
+    return {
+      kind: "BUY_LISTING" as const,
+      inquiryId: null,
+      buyListingId: need.id,
+      buyer: { ...need.business, memberSince: need.business.createdAt },
+      good: need.good,
+      volume: need.volume,
+      frequency: need.frequency,
+      delivery: null,
+      deliveryCity: need.business.city,
+      targetPriceMinor: null,
+      note: null,
+      deadlineAt: null,
+      watching: !!watching,
+      myListing,
     };
   }
 
@@ -1847,6 +2175,28 @@ export class MarketController {
       orderBy: { updatedAt: "desc" },
       take: 100,
     });
+
+    // فاز ۴ مهاجرت — آیا من همین کالا را می‌فروشم؟ و آیا قبلاً به این خریدار
+    // در همین کالا پیشنهاد داده‌ام؟ (بج «پاسخ دادی» در تب گوش‌به‌زنگ)
+    const needGoodIds = [...new Set(needs.map((n) => n.good.id))];
+    const myListings = needGoodIds.length
+      ? await this.prisma.listing.findMany({
+          where: { businessId: business.id, goodId: { in: needGoodIds }, isActive: true, mode: { in: ["SELL", "BOTH"] } },
+          select: { id: true, goodId: true },
+          orderBy: { updatedAt: "desc" },
+        })
+      : [];
+    const myGoodListing = new Map<string, string>(); // goodId → listingId (جدیدترین)
+    for (const l of myListings) if (!myGoodListing.has(l.goodId)) myGoodListing.set(l.goodId, l.id);
+    const myAnsweredOffers = myListings.length
+      ? await this.prisma.offer.findMany({
+          where: { sellerId: business.id, listingId: { in: myListings.map((l) => l.id) } },
+          select: { listingId: true, buyerId: true },
+          take: 500,
+        })
+      : [];
+    const answeredSet = new Set(myAnsweredOffers.map((o) => `${o.listingId}:${o.buyerId}`));
+
     return {
       buyers: buyerIds.length,
       needs: needs.map((n) => ({
@@ -1856,8 +2206,10 @@ export class MarketController {
         updatedAt: n.updatedAt,
         buyer: n.business,
         good: n.good,
-        // من همین کالا را می‌فروشم؟ → فرانت با کاتالوگ خودش تطبیق می‌دهد
+        // من همین کالا را می‌فروشم؟ → «مطابق کاتالوگ تو» + شناسه برای فرم پاسخ
         sellsSameGood: null,
+        myListingId: myGoodListing.get(n.good.id) ?? null,
+        answeredByMe: answeredSet.has(`${myGoodListing.get(n.good.id) ?? ""}:${n.business.id}`),
       })),
     };
   }
