@@ -1902,6 +1902,7 @@ export class MarketController {
         createdAt: true,
         viaRef: true,
         source: true,
+        custType: true,
         followerPage: {
           select: {
             business: {
@@ -1939,6 +1940,8 @@ export class MarketController {
       isVerified: r.followerPage.business.isVerified,
       followedAt: r.createdAt,
       viaRef: r.viaRef,
+      // فاز ۵ مهاجرت — نوع مشتری از دید فروشنده: PASSING | PARTNER | CONTRACT
+      custType: r.custType ?? "PASSING",
       // طرح ۸ (U60) — منبعِ رسیدن: ORGANIC | SHARED | PROMO (ردیف‌های
       // قدیمی از viaRef استنتاج می‌شوند) — برچسب ردیف + شمارندهٔ خلاصه
       source: r.source ?? (r.viaRef ? "SHARED" : "ORGANIC"),
@@ -2085,13 +2088,15 @@ export class MarketController {
     const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
     const edges = await this.prisma.follow.findMany({
       where: { supplierPageId: mySellPageId },
-      select: { source: true, viaRef: true, followerPage: { select: { business: { select: { id: true } } } } },
+      select: { source: true, viaRef: true, custType: true, followerPage: { select: { business: { select: { id: true } } } } },
       take: 500,
     });
     const sourceOf = new Map<string, string>();
+    const custTypeOf = new Map<string, string>();
     for (const e of edges) {
       const id = e.followerPage.business.id;
       if (!sourceOf.has(id)) sourceOf.set(id, e.source ?? (e.viaRef ? "SHARED" : "ORGANIC"));
+      if (!custTypeOf.has(id) && e.custType) custTypeOf.set(id, e.custType);
     }
 
     // ساخت: کالا → ذخیره‌کنندگان (یکتا) + شمارش‌ها
@@ -2100,6 +2105,8 @@ export class MarketController {
       source: string;
       since: Date;
       need: { volume: number | null; frequency: string | null } | null;
+      /** فاز ۵ — نوع مشتری از دید فروشنده (یال فالو)؛ تعیینش با شیت دنبال‌کنندگان */
+      custType?: string | null;
     };
     const byGood = new Map<string, SaverRow[]>();
     const push = (
@@ -2110,7 +2117,7 @@ export class MarketController {
     ) => {
       const list = byGood.get(goodId) ?? [];
       if (!list.some((r) => r.business.id === biz.id)) {
-        list.push({ business: biz, source: sourceOf.get(biz.id) ?? "ORGANIC", since, need });
+        list.push({ business: biz, source: sourceOf.get(biz.id) ?? "ORGANIC", since, need, custType: custTypeOf.get(biz.id) ?? null });
         byGood.set(goodId, list);
       }
     };

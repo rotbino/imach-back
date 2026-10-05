@@ -521,6 +521,11 @@ model Listing {
   /// Category attribute values: {attrKey: value} (weight, packaging …)
   attrs      Json?
 
+  /// فاز ۵ مهاجرت — پکیج‌بندی چندتاییِ این ردیف: [{label, qty, priceMinor?, stock?}]
+  /// («کیسهٔ ۱۰ کیلویی · ۸۹۵٬۰۰۰»). خالی = فقط قیمت پایه؛ قیمت هر بسته اختیاری و
+  /// اگر خالی باشد از قیمت پایه × نسبت تعدد واحد محاسبه می‌شود (pack-note Prototype).
+  packaging  Json?
+
   // ── buy side ──
   volume    Float?
   frequency String? // WEEKLY | MONTHLY | OCCASIONAL
@@ -670,6 +675,11 @@ model Follow {
   /// ردیف‌های قدیمی‌تر ORGANIC تلقی می‌شوند؛ viaRef=true و source خالی → SHARED.
   /// تحلیل «از کجا آمدند» (شیت دنبال‌کنندگان + خط خلاصهٔ عددی) از اینجا می‌سد.
   source         String?
+  /// فاز ۵ مهاجرت — نوع مشتری از دید فروشنده: PASSING(گذری) | PARTNER(همکار)
+  /// | CONTRACT(قراردادی). null = گذری. تعیین‌کننده‌اش فروشنده است (شیت
+  /// دنبال‌کنندگان / sheet-cust-type)؛ قیمت نهایی خریدار همین‌جا از آن می‌آید.
+  /// بر مدل جدا CustomerType ترجیح داده شد — همان الگوی source روی همان یال.
+  custType       String?
   createdAt      DateTime @default(now())
 
   followerPage Page @relation("pageFollower", fields: [followerPageId], references: [id], onDelete: Cascade)
@@ -862,4 +872,39 @@ model File {
   @@index([ownerId])
   @@index([relatedModel, relatedId])
   @@index([createdAt])
+}
+
+// ─── فاز ۵ مهاجرت — موتور قیمت‌گذاری: CustomerType × DiscountRule ──────────
+
+/// قاعدهٔ تخفیف فروشنده — سه سطح (خاص‌تر برنده): CATALOG(کل) › GROUP(دستهٔ
+/// شخصی کاتالوگ، refId=آیتم Business.customCategories) › ITEM(کالای مشخص،
+/// refId=listingId). هر کسب‌وکار حداکثر یک قاعده در هر (scope, refId).
+///
+/// custPct: {p: عدد, h: عدد, q: عدد} — درصد تخفیف مشتری به تفکیک نوع
+/// (گذری/همکار/قراردادی). سطح GROUP/ITEM فقط کلیدهای override را نگه می‌دارد
+/// (خالی = همان سطح بالاتر؛ گذریِ گروه همان کاتالوگ می‌ماند — الگوی Prototype).
+///
+/// tiers: [{from, to|null, pct}] — پله‌های تخفیف حجمی بر حجمِ «همان کالا» در
+/// سفارش؛ ردیف پایه (تا حداقل سفارش) ذخیره نمی‌شود — همیشه بدون تخفیف.
+///
+/// itemTri: {p|h|q: {kind: 'pct'|'amt'|'fin', value}} — فقط سطح ITEM: مبنای
+/// ورودی سه‌گانه (درصد/مبلغ/قیمت نهایی) برای بازنمایی دقیق فرم؛ سرور همیشه
+/// pct نتیجه‌شده را هم در custPct نگه می‌دارد تا محاسبهٔ قیمت یک‌منبع بماند.
+model DiscountRule {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  businessId String   @db.ObjectId
+  scope      String // CATALOG | GROUP | ITEM
+  /// GROUP → id آیتم customCategories (فرمت آزاد) · ITEM → listingId (ObjectId)
+  /// · CATALOG → "" —Plain String عمداً: دو قالب شناسه + سنتینل کاتالوگ
+  refId      String?
+  custPct    Json?
+  tiers      Json?
+  itemTri    Json?
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([businessId, scope, refId])
+  @@index([businessId, scope])
+  @@index([refId])
 }
