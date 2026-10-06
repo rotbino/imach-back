@@ -166,12 +166,32 @@ export class WatchGoodDto {
 
   @IsString()
   goodId: string;
+
+  /** فاز ۱۲ — تامین‌کنندهٔ مبدأ (اختیاری): وقتی خریدار کالا را از صفحهٔ
+   *  محصول/کاتالوگ یک فروشنده «دنبال می‌کند»، همان فروشنده به‌طور طبیعی
+   *  به لیست دنبال‌شده‌های قیمت همان کالا اضافه می‌شود (Follow خودکار). */
+  @IsOptional()
+  @IsString()
+  supplierId?: string;
 }
 
 /** POST /market/unwatchGood/:goodId */
 export class UnwatchGoodDto {
   @IsString()
   businessId: string;
+}
+
+/** POST /market/archiveWatchedGood — فاز ۱۲: آرشیو موقتِ ردیف دفتر خرید.
+ *  رصد و تاریخچه می‌ماند؛ فقط از لیست روزمره کنار می‌رود. archived=false = بازگردانی. */
+export class ArchiveWatchedGoodDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  goodId: string;
+
+  @IsBoolean()
+  archived: boolean;
 }
 
 /** POST /market/removeFollower — catalog owner removes a follower from «مشتریان من». */

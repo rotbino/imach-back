@@ -511,6 +511,9 @@ model WatchedGood {
   createdAt      DateTime  @default(now())
   /// آخرین اعلانِ ارسال‌شده — حداکثر یک اعلان قیمت در روز به‌ازای هر کالا
   lastNotifiedAt DateTime?
+  /// فاز ۱۲ — آرشیو موقت: کالا از دفترِ روزمره کنار می‌رود اما رصد و
+  /// تاریخچهٔ قیمت می‌ماند (watchedGood حذف نمی‌شود). null = ردیف عادی.
+  archivedAt     DateTime?
 
   business Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   good     Good     @relation(fields: [goodId], references: [id], onDelete: Cascade)

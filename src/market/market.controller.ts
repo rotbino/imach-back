@@ -27,6 +27,7 @@ import { NotificationsService } from "../notifications/notifications.service";
 import { PromosService } from "../promos/promos.service";
 import { MatchingService } from "./matching.service";
 import {
+  ArchiveWatchedGoodDto,
   BusinessIdQueryDto,
   FollowBuyerDto,
   FollowSupplierDto,
@@ -408,8 +409,14 @@ export class MarketController {
         select: { id: true },
       }),
       this.prisma.listing.findFirst({
-        where: { businessId: business.id, goodId: good.id, mode: { in: ["BUY", "BOTH"] }, isActive: true },
-        select: { volume: true, frequency: true, variantLabel: true },
+        // فاز ۱۲ — ردیف غیرفعال (آرشیوشده) هم حجم/دوره‌اش را نشان می‌دهد؛
+        // id/mode/مشخصات فروش برای «ویرایش نیاز خرید» (شیت ویرایش) برمی‌گردد
+        // تا ذخیرهٔ mode=BOTH سمت فروش را نزد.
+        where: { businessId: business.id, goodId: good.id, mode: { in: ["BUY", "BOTH"] } },
+        select: {
+          id: true, mode: true, volume: true, frequency: true, variantLabel: true,
+          priceMinor: true, currency: true, stock: true, minOrder: true,
+        },
       }),
     ]);
 
@@ -422,6 +429,19 @@ export class MarketController {
       volume: myBuy?.volume ?? null,
       frequency: myBuy?.frequency ?? null,
       variantLabel: myBuy?.variantLabel ?? null,
+      // فاز ۱۲ — شیت «ویرایش نیاز خرید»: ردیف فیزیکی + حالت واقعی +
+      // spec فروش (فقط وقتی BOTH است، تا ویرایش سمت فروش را نکند)
+      buyListingId: myBuy?.id ?? null,
+      buyMode: myBuy?.mode ?? null,
+      buySell:
+        myBuy && myBuy.mode === "BOTH" && myBuy.priceMinor !== null
+          ? {
+              priceMinor: myBuy.priceMinor,
+              currency: myBuy.currency,
+              stock: myBuy.stock,
+              minOrder: myBuy.minOrder,
+            }
+          : null,
       rows: listings.map((l) => {
         const log = l.priceLogs[0];
         return {
@@ -1201,7 +1221,11 @@ export class MarketController {
   // ═══ فاز ۵ — دنبال‌کردن قیمت (شکاف ۱) و لیست خرید (طرح ۰۸) ═══
 
   /** «دنبال کردن قیمت» — خریدار کالا را در لیست/تابلوی خودش می‌نشاند.
-   *  آیدی‌پاتنت: upsert؛ دنبال‌کردنِ دوباره بی‌ضرر است. */
+   *  آیدی‌پاتنت: upsert؛ دنبال‌کردنِ دوباره بی‌ضرر است.
+   *  فاز ۱۲ — supplierId مبدأ: «دنبال کردن کالا (آگهی فروش)» از کاتالوگ/صفحهٔ
+   *  محصول یک فروشنده یعنی همان فروشنده به‌طور طبیعی در لیست دنبال‌شده‌های
+   *  قیمتِ این کالا بنشیند → Follow خودکار (همان الگوی followSupplier) +
+   *  اعلان مشتریِ تازه به فروشنده. رصدِ دوباره آرشیو را هم برمی‌دارد. */
   @Post("watchGood")
   @HttpCode(HttpStatus.CREATED)
   async watchGood(
@@ -1210,17 +1234,95 @@ export class MarketController {
     @CurrentLocale() locale: Locale
   ) {
     if (!isObjectId(body.goodId)) throw AppError.notFound("Good not found");
-    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
     const good = await this.prisma.good.findUnique({ where: { id: body.goodId }, select: { id: true } });
     if (!good) throw AppError.notFound("Good not found");
     const wg = await this.prisma.watchedGood.upsert({
       where: { businessId_goodId: { businessId: body.businessId, goodId: body.goodId } },
       create: { businessId: body.businessId, goodId: body.goodId },
-      update: {},
+      // دوباره دنبال‌کردنِ کالای آرشیوشده = بازگشت به دفترِ روزمره
+      update: { archivedAt: null },
     });
+
+    // ── Follow خودکارِ تامین‌کنندهٔ مبدأ (فاز ۱۲ — شکاف A) ──
+    let followed = false;
+    if (body.supplierId && isObjectId(body.supplierId) && body.supplierId !== business.id) {
+      const supplier = await this.prisma.business.findUnique({
+        where: { id: body.supplierId },
+        select: { id: true, ownerId: true },
+      });
+      if (supplier) {
+        const followerPageId = await ensurePage(this.prisma, business.id, "BUY");
+        const supplierPageId = await ensurePage(this.prisma, supplier.id, "SELL");
+        const existed = await this.prisma.follow.findUnique({
+          where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
+          select: { id: true },
+        });
+        await this.prisma.follow.upsert({
+          where: { followerPageId_supplierPageId: { followerPageId, supplierPageId } },
+          create: { followerPageId, supplierPageId, source: "ORGANIC" },
+          update: {},
+        });
+        followed = true;
+        // فالوی تازه = مشتری جدید — صاحب کاتالوگ باید بداند (best-effort)
+        if (!existed && supplier.ownerId) {
+          await this.notifications
+            .push({
+              userId: supplier.ownerId,
+              bizId: supplier.id,
+              type: "FOLLOW_SUPPLIER",
+              actorId: business.id,
+              actorName: business.name,
+              actorSlug: business.slug,
+            })
+            .catch(() => false);
+        }
+      }
+    }
+
     this.cache.invalidateTag(`market:watch:${body.businessId}`);
     this.invalidateBuyerSide(body.businessId);
-    return { ok: true, watched: true, id: wg.id };
+    return { ok: true, watched: true, followed, id: wg.id };
+  }
+
+  /** فاز ۱۲ — آرشیو موقتِ ردیف دفتر خرید: «از دفترِ روزمره کنار می‌رود؛
+   *  رصد و تاریخچهٔ قیمت می‌ماند». BUY listing هم غیرفعال می‌شود تا از
+   *  لیست عمومی/جست‌وجو کنار برود؛ بازگردانی (archived=false) هر دو را برمی‌گرداند. */
+  @Post("archiveWatchedGood")
+  async archiveWatchedGood(
+    @Body() body: ArchiveWatchedGoodDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(body.goodId)) throw AppError.notFound("Good not found");
+    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const listing = await this.prisma.listing.findFirst({
+      where: { businessId: body.businessId, goodId: body.goodId, mode: { in: ["BUY", "BOTH"] } },
+      select: { id: true },
+    });
+    if (listing) {
+      await this.prisma.listing.update({
+        where: { id: listing.id },
+        data: { isActive: body.archived ? false : true },
+        select: { id: true },
+      });
+    }
+    if (body.archived) {
+      // نشانِ آرشیو فقط روی WatchedGood می‌نشیند (اگر هست)؛ BUY listingِ
+      // غیرفعالشده خودش از دفتر می‌افتد و بازگردانی‌اش از همین endpoint است.
+      await this.prisma.watchedGood.updateMany({
+        where: { businessId: body.businessId, goodId: body.goodId },
+        data: { archivedAt: new Date() },
+      });
+    } else {
+      await this.prisma.watchedGood.updateMany({
+        where: { businessId: body.businessId, goodId: body.goodId },
+        data: { archivedAt: null },
+      });
+    }
+    this.cache.invalidateTag(`market:watch:${body.businessId}`);
+    this.invalidateBuyerSide(body.businessId);
+    return { ok: true, archived: body.archived };
   }
 
   /** حذف از لیست خرید — «دنبال نکردن»؛ BUY listing مالک دست‌نخورده می‌ماند. */
@@ -1249,25 +1351,39 @@ export class MarketController {
   @Get("getWatchedGoods")
   async getWatchedGoods(
     @Query() query: BusinessIdQueryDto,
+    @Query("archived") archived: string | undefined,
     @CurrentUser() user: AuthUser,
     @CurrentLocale() locale: Locale
   ) {
     await assertBusinessOwner(this.prisma, user, query.businessId, locale);
 
-    const [buyListings, watched] = await Promise.all([
+    // فاز ۱۲ — نمای آرشیو: فقط ردیف‌های آرشیوشده (WatchedGood.archivedAt)،
+    // با حجم/دورهٔ listing غیرفعال‌شده. فیلتر آرشیو در JS انجام می‌شود —
+    // فیلتر null روی فیلدِ غایب در MongoDB (Prisma) مطابقت نمی‌دهد.
+    const archivedView = archived === "true";
+    const [buyListings, watchedAll] = await Promise.all([
       this.prisma.listing.findMany({
-        where: { businessId: query.businessId, mode: { in: ["BUY", "BOTH"] }, isActive: true },
+        where: {
+          businessId: query.businessId,
+          mode: { in: ["BUY", "BOTH"] },
+          ...(archivedView ? {} : { isActive: true }),
+        },
         select: { id: true, goodId: true, volume: true, frequency: true, variantLabel: true, createdAt: true },
         orderBy: { createdAt: "desc" },
       }),
       this.prisma.watchedGood.findMany({
         where: { businessId: query.businessId },
-        select: { goodId: true, createdAt: true, lastNotifiedAt: true },
+        select: { goodId: true, createdAt: true, lastNotifiedAt: true, archivedAt: true },
         orderBy: { createdAt: "desc" },
       }),
     ]);
+    const watched = archivedView
+      ? watchedAll.filter((w) => w.archivedAt)
+      : watchedAll.filter((w) => !w.archivedAt);
 
-    const goodIds = [...new Set([...buyListings.map((l) => l.goodId), ...watched.map((w) => w.goodId)])];
+    const goodIds = archivedView
+      ? [...new Set(watched.map((w) => w.goodId))]
+      : [...new Set([...buyListings.map((l) => l.goodId), ...watched.map((w) => w.goodId)])];
     if (goodIds.length === 0) return [];
 
     const [goods, supply, logs] = await Promise.all([
@@ -1348,6 +1464,7 @@ export class MarketController {
         watched: watch !== null,
         watchedAt: watch?.createdAt ?? null,
         lastNotifiedAt: watch?.lastNotifiedAt ?? null,
+        archivedAt: watch?.archivedAt ?? null,
         supplierCount: board.length,
         cheapest: cheapest
           ? {
