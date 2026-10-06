@@ -420,6 +420,10 @@ model Business {
   /// owner's signup country; every listing inherits it at write time.
   currency     String  @default("IRR") // ISO 4217
   phone        String?
+  /// فاز ۱۳ (بازخورد مالک) — معرفی کوتاه خود نوشتهٔ فروشنده؛ زیر نامش در
+  /// کاتالوگ عمومی دیده می‌شود («علی امینی / فروشنده انواع لوازم خانگی»).
+  /// ویترین اعتماد می‌سازد: خریدار عمده می‌خواهد بداند با چه کسی طرف است.
+  bio           String?
   isVerified   Boolean @default(false)
   isDemo       Boolean @default(false)
 

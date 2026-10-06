@@ -121,6 +121,13 @@ export class EditBusinessDto {
   @IsString()
   @MaxLength(60)
   defaultPayTerm?: string | null;
+
+  /** فاز ۱۳ (بازخورد مالک) — معرفی کوتاه فروشنده؛ زیر نامش در کاتالوگ عمومی.
+   *  null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(160)
+  bio?: string | null;
 }
 
 /**

@@ -43,6 +43,8 @@ const BUSINESS_SUMMARY_SELECT = {
   currency: true,
   isVerified: true,
   trade: true,
+  // فاز ۱۳ — معرفی کوتاه فروشنده (فرم ویرایش آن را می‌خواند)
+  bio: true,
   // فاز ۹ (شکاف ۶) — دستیارهای فعال؛ null = هر دو روشن
   enabledArms: true,
 } as const;

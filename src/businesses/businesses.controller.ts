@@ -317,6 +317,8 @@ export class BusinessesController {
             activityType: true,
             // فاز ۱۰ — صنف در نمای عمومی (لیست خرید عمومی خریدار را ویترین‌وار نشان می‌دهد)
             trade: true,
+            // فاز ۱۳ — معرفی کوتاه فروشنده در ویترین عمومی
+            bio: true,
             city: true,
             country: true,
             currency: true,
@@ -513,6 +515,8 @@ export class BusinessesController {
         ...(body.defaultPayTerm !== undefined
           ? { defaultPayTerm: body.defaultPayTerm ? body.defaultPayTerm.trim() : null }
           : {}),
+        // فاز ۱۳ — معرفی کوتاه فروشنده (زیر نامش در کاتالوگ عمومی)
+        ...(body.bio !== undefined ? { bio: body.bio ? body.bio.trim() : null } : {}),
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data
