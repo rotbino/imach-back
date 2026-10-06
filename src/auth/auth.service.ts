@@ -647,6 +647,30 @@ export class AuthService {
     return { ok: true };
   }
 
+  /**
+   * فاز ۱۰ (بازخورد مالک) — حذف حساب توسط خود کاربر، فقط با توکن خودش.
+   * اصلی‌ترین مورد: کاربر در گام ۲ ثبت‌نام می‌فهمد شماره را اشتباه وارد کرده
+   * و به صفحهٔ اول برمی‌گردد — حسابِ چند‌ثانیه‌ای + کسب‌وکار placeholder پاک
+   * می‌شود تا ثبت‌نام از اول و تمیز شروع شود.
+   *
+   * کاسکید: کسب‌وکارهای او (Listing/Page/Inquiry/Offer/WatchedGood/Wallet/
+   * Promo/Thread با حذف Business حذف می‌شوند) → سپس خودِ User
+   * (RefreshToken/Contact/Notification/File کاسکید). یال‌های دعوتِ کاربرانِ
+   * معرفی‌شده توسط او پیش از حذف صفر می‌شوند (referredById: NoAction).
+   */
+  async deleteOwnAccount(userId: string, reply: FastifyReply): Promise<{ ok: true }> {
+    await this.prisma.$transaction([
+      // کاربرانِ معرفی‌شده توسط من نباید به یال مرده اشاره کنند
+      this.prisma.user.updateMany({ where: { referredById: userId }, data: { referredById: null } }),
+      // کسب‌وکارهای من + همهٔ وابستگی‌هایشان (Listing/Page/…)
+      this.prisma.business.deleteMany({ where: { ownerId: userId } }),
+      // خود کاربر — RefreshToken/Contact/Notification/File کاسکید می‌شوند
+      this.prisma.user.delete({ where: { id: userId } }),
+    ]);
+    reply.clearCookie(REFRESH_COOKIE, { path: "/api/v1/auth" });
+    return { ok: true };
+  }
+
   async getMe(user: AuthUser) {
     const row = await this.prisma.user.findUnique({ where: { id: user.id } });
     if (!row) throw AppError.notFound("User not found");

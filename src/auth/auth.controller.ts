@@ -134,4 +134,20 @@ export class AuthController {
   ) {
     return this.authService.editProfile(user, body, locale);
   }
+
+  /**
+   * فاز ۱۰ (بازخورد مالک) — حذف حساب توسط خود کاربر، فقط با توکن خودش.
+   * مورد اصلی: بازگشت از گام ۲ ثبت‌نام به صفحهٔ اول (شمارهٔ اشتباه) —
+   * حسابِ تازه‌ساخته و کسب‌وکار placeholder پاک می‌شود تا همه‌چیز از اول
+   * شروع شود. برای حساب‌های واقعی هم درست کار می‌کند (کاسکید کامل).
+   */
+  @Post("deleteMe")
+  @HttpCode(200)
+  @UseGuards(JwtAuthGuard)
+  deleteMe(
+    @CurrentUser() user: AuthUser,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    return this.authService.deleteOwnAccount(user.id, reply);
+  }
 }

@@ -67,6 +67,52 @@ function invalidateBusiness(cache: CacheService, businessId: string, slug?: stri
   invalidateBusinessCache(businessId);
 }
 
+// ─── اصناف (Trade registry) — فاز ۱۰ (بازخورد مالک) ─────────────────────
+/** ۴ صنفِ هسته‌ایِ ثبت‌نام — ترتیبِ نمایش چیپ‌ها همین است (خواستهٔ مالک) */
+const CORE_TRADES = ["سوپرمارکت", "پخش مواد غذایی", "تولید پوشاک", "قنادی"] as const;
+
+/** نرمال‌سازی نام صنف برای یکتایی — trim + ي/ك عربی→فارسی + casefold */
+function normalizeTradeName(name: string): string {
+  return name
+    .trim()
+    .replace(/[ي]/g, "ی")
+    .replace(/[ك]/g, "ک")
+    .replace(/\u200c/g, " ") // نیم‌فاصله → فاصله (نویسه‌های مختلف یک املا)
+    .toLocaleLowerCase("fa");
+}
+
+/**
+ * resolveTrade — صنفِ واردشده را به رکورد Trade حل می‌کند:
+ * موجود (با هر املا/فاصله) → بازاستفاده از همان رکورد («ای‌دی مشترک»)؛
+ * جدید → ساخت رکورد تازه. increment فقط وقتی صادق است که کسب‌وکاری
+ * تازه به این صنف پیوند می‌خورد (ویرایشِ مکرر شمارنده را متورم نمی‌کند).
+ */
+async function resolveTrade(
+  prisma: PrismaService,
+  cache: CacheService,
+  rawName: string,
+  opts: { increment: boolean } = { increment: true }
+): Promise<{ id: string; name: string } | null> {
+  const trimmed = rawName.trim();
+  if (!trimmed) return null;
+  const wanted = normalizeTradeName(trimmed);
+  // جمعِ اصناف کوچک است؛ مطابقتِ نرمال‌شده در JS تا ي/ك/فاصله‌ها عیناً یکسان شوند
+  const all = await prisma.trade.findMany({ select: { id: true, name: true } });
+  const hit = all.find((t) => normalizeTradeName(t.name) === wanted);
+  if (hit) {
+    if (opts.increment) {
+      await prisma.trade
+        .update({ where: { id: hit.id }, data: { usageCount: { increment: 1 } } })
+        .catch(() => undefined);
+      cache.invalidateTag("trades:list");
+    }
+    return hit;
+  }
+  const created = await prisma.trade.create({ data: { name: trimmed, usageCount: 1 } });
+  cache.invalidateTag("trades:list");
+  return created;
+}
+
 /** Business = the seller AND buyer identity of a user. */
 @Controller("businesses")
 export class BusinessesController {
@@ -75,6 +121,59 @@ export class BusinessesController {
     private readonly cache: CacheService,
     private readonly files: FilesService
   ) {}
+
+  /**
+   * GET /businesses/getTrades — رجیستری اصناف برای فرم ثبت‌نام (فاز ۱۰).
+   * عمومی و کش‌شده (۲ دقیقه): ۴ صنفِ هسته‌ای با ترتیبِ خواستهٔ مالک،
+   * بعد اصنافِ پرمصرفِ جامعه. «سایر» در فرانت هست — اینجا نمی‌آید.
+   */
+  @Get("getTrades")
+  async getTrades() {
+    const { value } = await this.cache.wrap(
+      "trades:list",
+      { ttlMs: 120_000, tags: ["trades:list"] },
+      async () => {
+        const rows = await this.prisma.trade.findMany({
+          select: { id: true, name: true, usageCount: true, isCore: true },
+          orderBy: { usageCount: "desc" },
+          take: 60,
+        });
+        // هسته‌ای‌ها اول با ترتیبِ ثابت؛ سپس بقیه بر اساس مصرف
+        const core = CORE_TRADES.map((name) =>
+          rows.find((r) => normalizeTradeName(r.name) === normalizeTradeName(name))
+        )
+          .filter((r): r is { id: string; name: string; usageCount: number; isCore: boolean } => !!r)
+          .map((r) => ({ ...r, isCore: true }));
+        const rest = rows.filter((r) => !core.some((c) => c.id === r.id));
+        return [...core, ...rest].map((r) => ({
+          id: r.id,
+          name: r.name,
+          usageCount: r.usageCount,
+          isCore: !!r.isCore || core.some((c) => c.id === r.id),
+        }));
+      }
+    );
+    return value;
+  }
+
+  /**
+   * GET /businesses/searchTrades?q= — تایپ‌آهدِ ورودیِ هوشمندِ صنف (فاز ۱۰).
+   * عمومی؛ جستجوی Contains با نرمال‌سازی فارسی — تا ۶ نتیجه.
+   */
+  @Get("searchTrades")
+  async searchTrades(@Query("q") q: string) {
+    const needle = normalizeTradeName(q ?? "");
+    if (needle.length < 2) return [];
+    const rows = await this.prisma.trade.findMany({
+      select: { id: true, name: true, usageCount: true },
+      take: 400,
+    });
+    return rows
+      .filter((r) => normalizeTradeName(r.name).includes(needle))
+      .sort((a, b) => b.usageCount - a.usageCount)
+      .slice(0, 6)
+      .map((r) => ({ id: r.id, name: r.name, usageCount: r.usageCount }));
+  }
 
   @Get("getMyBusinesses")
   @UseGuards(JwtAuthGuard)
@@ -126,6 +225,8 @@ export class BusinessesController {
       select: { country: true, referredById: true, refArm: true },
     });
     const country = owner?.country ?? "IR";
+    // صنف — حل به رجیستری اصناف (بازاستفاده/ساخت) + پیوند tradeId (فاز ۱۰)
+    const tradeRow = body.trade?.trim() ? await resolveTrade(this.prisma, this.cache, body.trade) : null;
     const business = await this.prisma.business.create({
       data: {
         slug,
@@ -135,7 +236,8 @@ export class BusinessesController {
         country,
         currency: currencyOfCountry(country),
         phone: user.phone, // از ثبت‌نام می‌آید؛ دیگر پرسیده نمی‌شود
-        trade: body.trade?.trim() || null, // صنف — درگاه کپی از هم‌صنف‌ها
+        trade: tradeRow?.name ?? null, // صنف — درگاه کپی از هم‌صنف‌ها
+        tradeId: tradeRow?.id ?? null, // فاز ۱۰ — پیوند رجیستری اصناف
         // فاز ۹ (د۹) — نقشِ ثبت‌نام، پیش‌فرضِ دستیارها (بعداً از پروفایل تغییرپذیر)
         enabledArms:
           body.intent === "sell"
@@ -213,6 +315,8 @@ export class BusinessesController {
             slug: true,
             name: true,
             activityType: true,
+            // فاز ۱۰ — صنف در نمای عمومی (لیست خرید عمومی خریدار را ویترین‌وار نشان می‌دهد)
+            trade: true,
             city: true,
             country: true,
             currency: true,
@@ -372,6 +476,18 @@ export class BusinessesController {
     @CurrentLocale() locale: Locale
   ) {
     const business = await assertBusinessOwner(this.prisma, user, id, locale);
+    // صنف — حل به رجیستری؛ increment فقط وقتی صنفِ پیوندی عوض شود (فاز ۱۰)
+    let tradePatch: { trade: string | null; tradeId: string | null } | undefined;
+    if (body.trade !== undefined) {
+      if (!body.trade) {
+        tradePatch = { trade: null, tradeId: null };
+      } else {
+        const row = await resolveTrade(this.prisma, this.cache, body.trade, {
+          increment: business.tradeId === null || business.tradeId === undefined,
+        });
+        tradePatch = { trade: row?.name ?? null, tradeId: row?.id ?? null };
+      }
+    }
     const updated = await this.prisma.business.update({
       where: { id: business.id },
       data: {
@@ -379,7 +495,7 @@ export class BusinessesController {
         ...(body.city ? { city: body.city.trim(), province: provinceOf(body.city.trim()) } : {}),
         ...(body.activityType !== undefined ? { activityType: body.activityType } : {}),
         // صنف: null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر
-        ...(body.trade !== undefined ? { trade: body.trade ? body.trade.trim() : null } : {}),
+        ...(tradePatch ?? {}),
         // لوکیشن دقیق: null صریح = پاک کردن؛ نبودِ فیلد = بدون تغییر
         ...(body.lat !== undefined ? { lat: body.lat } : {}),
         ...(body.lng !== undefined ? { lng: body.lng } : {}),

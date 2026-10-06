@@ -366,6 +366,29 @@ model Product {
 
 // ─── Business (seller AND buyer identity) ────────────────────────────────────
 
+// ─── اصناف (Trade registry) — فاز ۱۰ (بازخورد مالک) ─────────────────────────
+// رجیستری اصنافِ کسب‌وکارها. ثبت‌نام فقط ۴ صنفِ هسته‌ای را چیپ نشان می‌دهد
+// (سوپرمارکت · پخش مواد غذایی · تولید پوشاک · قنادی)؛ «سایر» ورودیِ هوشمند را
+// باز می‌کند: تایپ → جستجوی زندهٔ اصنافِ موجود → انتخاب همان صنف (بازاستفاده،
+// پیوند به همان رکورد) یا ساخت صنفِ جدید. `name` یکتاست؛ یکتایی با نرمال‌سازی
+// فارسی (trim + ي→ی + ك→ک + casefold) در زمان نوشتن تضمین می‌شود تا دو کاربر
+// با یک املا به یک رکورد برسند («ای‌دی مشترک»).
+
+model Trade {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Canonical Persian label — unique; the «human ID» of the guild
+  name       String @unique
+  /// Popularity ordering — incremented when a business adopts this trade
+  usageCount Int    @default(1)
+  /// هستهٔ ثبت‌نام — ۴ چیپِ اولِ فرم همیشه این‌ها هستند (ترتیب در سرویس)
+  isCore     Boolean @default(false)
+  createdAt  DateTime @default(now())
+
+  businesses Business[]
+
+  @@index([usageCount])
+}
+
 // The 10 allowed activity types — validated at the API boundary
 // (class-validator @IsIn), stored as a plain string:
 // PRODUCER | WHOLESALER | RETAILER | DISTRIBUTOR | MERCHANT |
@@ -381,6 +404,12 @@ model Business {
   /// finds similar catalogs by trade instead of typing hundreds of items
   /// (خواسته‌ی کاربر: «اولین سوپرمارکت که کالاهاشو وارد کرد بقیه تیک بزنن»).
   trade        String?
+  /// فاز ۱۰ (بازخورد مالک) — پیوند رجیستری اصناف: صنفِ انتخابی کاربر به
+  /// رکورد Trade اشاره می‌کند (بازاستفاده از صنف موجود = «ای‌دی مشترک»).
+  /// رشتهٔ trade بالا برای سازگاری جستجوهای موجود (searchCatalogs و…)
+  /// همگام با نامِ Trade نگه داشته می‌شود.
+  tradeId      String?  @db.ObjectId
+  tradeRef     Trade?   @relation(fields: [tradeId], references: [id], onDelete: SetNull)
   /// Human catalog size — denormalized count of active listings, refreshed
   /// opportunistically. Keeps catalog-search fast at scale (no groupBy per hit).
   catalogCount Int     @default(0)
