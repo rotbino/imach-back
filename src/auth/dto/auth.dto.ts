@@ -24,6 +24,13 @@ export class RegisterUserDto {
   @MaxLength(40)
   lastName?: string;
 
+  /** نقش شخص در کسب‌وکار (FD-32 · M2) — «صاحب کسب‌وکار / مدیر فروش / …»؛
+   *  undefined = بدون تغییر (ویرایش فقط نام). */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  businessRole?: string;
+
   /** Legacy combined name — still accepted (deploy-window tolerance) and split server-side. */
   @IsOptional()
   @IsString()
@@ -106,6 +113,13 @@ export class QuickRegisterDto {
   @IsString()
   @MaxLength(2)
   country?: string;
+
+  /** UI language the user was seeing at signup (country→language, user-overridable).
+   *  Stored for future multilingual sessions — same rule as RegisterUserDto. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(8)
+  language?: string;
 
   @IsOptional()
   @IsString()

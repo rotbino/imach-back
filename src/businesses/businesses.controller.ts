@@ -661,6 +661,53 @@ export class BusinessesController {
   }
 
   /**
+   * M2 (اسکرین ۱۳ — شیت «کپی از کاتالوگ»): پیدا کردن کاتالوگ با شمارهٔ
+   * موبایل صاحبش (حکم مالک: «شمارهٔ دوستت را وارد کن و کاتالوگش بیاید»).
+   * فقط پرترین کسب‌وکارِ آن شماره برمی‌گردد؛ اگر کاربر نبود یا کاتالوگ
+   * خالی بود 404 می‌دهد. authed — شمارهٔ بقیه را مهمان جستجو نمی‌کند.
+   */
+  @Get("findCatalogByPhone")
+  @UseGuards(JwtAuthGuard)
+  async findCatalogByPhone(@Query("phone") phoneRaw: string) {
+    const phone = (phoneRaw ?? "").replace(/[^\d]/g, "");
+    if (phone.length < 10 || phone.length > 14) {
+      throw AppError.badRequest("شمارهٔ موبایل معتبر نیست", "INVALID_PHONE");
+    }
+    const user = await this.prisma.user.findUnique({
+      where: { phone },
+      select: { id: true, name: true, firstName: true, lastName: true },
+    });
+    if (!user) throw AppError.notFound("کاربری با این شماره پیدا نشد");
+    const biz = await this.prisma.business.findFirst({
+      where: { ownerId: user.id, catalogCount: { gt: 0 } },
+      orderBy: { catalogCount: "desc" },
+      select: {
+        id: true,
+        slug: true,
+        name: true,
+        city: true,
+        trade: true,
+        catalogCount: true,
+        owner: { select: { firstName: true, lastName: true, name: true } },
+      },
+    });
+    if (!biz) throw AppError.notFound("این شماره کاتالوگ فعالی ندارد");
+    const ownerName =
+      [biz.owner?.firstName, biz.owner?.lastName].filter(Boolean).join(" ") ||
+      biz.owner?.name ||
+      user.name;
+    return {
+      id: biz.id,
+      slug: biz.slug,
+      name: biz.name,
+      city: biz.city,
+      trade: biz.trade,
+      catalogCount: biz.catalogCount,
+      ownerName,
+    };
+  }
+
+  /**
    * کپی از کاتالوگ هم‌صنف‌ها — گام ۱: پیدا کردن کاتالوگ‌ها (خواسته‌ی کاربر:
    * «به‌جای تایپ صدها کالا، اولین سوپرمارکت که کالاهاشو وارد کرد بقیه تیک بزنن»).
    * جست‌وجو روی صنف و نام؛ مرتب‌سازی بر اساس ثروتِ کاتالوگ (catalogCount) تا

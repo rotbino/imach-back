@@ -63,6 +63,8 @@ export interface PublicUser {
   name: string;
   firstName: string | null;
   lastName: string | null;
+  /** نقش شخص در کسب‌وکار (FD-32 · M2) — null = هنوز انتخاب نشده */
+  businessRole: string | null;
   phone: string;
   role: string;
   country: string;
@@ -78,6 +80,7 @@ const toPublicUser = (u: {
   name: string;
   firstName: string | null;
   lastName: string | null;
+  businessRole: string | null;
   phone: string;
   role: string;
   country: string;
@@ -88,6 +91,7 @@ const toPublicUser = (u: {
   name: u.name,
   firstName: u.firstName,
   lastName: u.lastName,
+  businessRole: u.businessRole,
   phone: u.phone,
   role: u.role,
   country: u.country,
@@ -365,7 +369,7 @@ export class AuthService {
    *      رد می‌کند تا nobody hijack نکند — باید loginUser استفاده کند.
    */
   async quickRegisterUser(
-    body: { phone: string; country?: string; ref?: string },
+    body: { phone: string; country?: string; language?: string; ref?: string },
     reply: FastifyReply,
     locale: Locale
   ) {
@@ -380,7 +384,7 @@ export class AuthService {
 
     const existing = await this.prisma.user.findUnique({
       where: { phone },
-      select: { id: true, passwordSet: true, role: true, country: true, language: true, name: true, firstName: true, lastName: true },
+      select: { id: true, passwordSet: true, role: true, country: true, language: true, name: true, firstName: true, lastName: true, businessRole: true },
     });
     if (existing) {
       // اگر پسورد دارد → نمی‌توانیم «ثبت‌نام سریع» بکنیم، باید loginUser
@@ -396,6 +400,7 @@ export class AuthService {
         name: existing.name,
         firstName: existing.firstName,
         lastName: existing.lastName,
+        businessRole: existing.businessRole,
         phone,
         role: existing.role,
         country: existing.country,
@@ -418,6 +423,9 @@ export class AuthService {
     const placeholderName = `کاربر ${phone.slice(-4)}`;
     const randomPassword = randomBytes(48).toString("base64url");
     const bcrypt = await import("bcryptjs");
+    // زبان UI که کاربر در لحظهٔ ثبت‌نام دیده (کشور→زبان؛ قابل override توسط خود او).
+    // پیش‌فرض fa — همان قاعدهٔ registerUser. حکم مالک: انتخاب زبان کاربر محترم است.
+    const language = (body.language ?? "").trim().toLowerCase().slice(0, 8) || "fa";
     const user = await this.prisma.user.create({
       data: {
         name: placeholderName,
@@ -425,7 +433,7 @@ export class AuthService {
         passwordHash: await bcrypt.hash(randomPassword, 10),
         passwordSet: false,
         country,
-        language: "fa",
+        language,
       },
     });
 
@@ -559,6 +567,7 @@ export class AuthService {
       name: user.name,
       firstName: user.firstName,
       lastName: user.lastName,
+      businessRole: user.businessRole,
       phone: user.phone,
       role: user.role,
       country: user.country,
@@ -785,7 +794,7 @@ export class AuthService {
    */
   async editProfile(
     user: AuthUser,
-    body: { firstName?: string; lastName?: string },
+    body: { firstName?: string; lastName?: string; businessRole?: string },
     locale: Locale
   ) {
     const row = await this.prisma.user.findUnique({ where: { id: user.id }, select: { id: true, firstName: true, lastName: true } });
@@ -799,10 +808,13 @@ export class AuthService {
         "NAME_REQUIRED"
       );
     }
+    // نقش در کسب‌وکار (FD-32 · M2) — trim؛ رشتهٔ خالی = پاک‌کردن (null)
+    const businessRole =
+      body.businessRole === undefined ? undefined : body.businessRole.trim() || null;
     const fullName = `${firstName} ${lastName}`.trim();
     const updated = await this.prisma.user.update({
       where: { id: row.id },
-      data: { firstName, lastName, name: fullName },
+      data: { firstName, lastName, name: fullName, ...(businessRole !== undefined ? { businessRole } : {}) },
     });
     const publicUser = toPublicUser(updated);
     return { user: publicUser };

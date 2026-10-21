@@ -54,6 +54,11 @@ model User {
   /// فیلد را صریحاً false می‌گذارد.
   passwordSet     Boolean        @default(true)
   role            String         @default("MEMBER") // MEMBER | ADMIN
+  /// نقش شخص در کسب‌وکار (FD-32 · حکم مالک M2): «صاحب کسب‌وکار / مدیر فروش /
+  /// ویزیتور / …» — در ثبت‌نام (گام ۲) انتخاب می‌شود، در پیام‌ها و درخواست‌ها
+  /// دیده می‌شود. جدای از system-role است (role = سطح دسترسی).
+  /// null = هنوز انتخاب نشده (legacy / ثبت‌نام سریع قبل از گام ۲).
+  businessRole    String?
   country         String         @default("IR") // chosen at signup → default business currency + dial code
   /// UI language chosen at signup (BCP-47 base: fa/en/ar/…) — restored on
   /// future logins once the product goes multilingual.
