@@ -119,7 +119,7 @@ export class BulkSaveItemDto {
   volume?: number;
 
   @IsOptional()
-  @IsIn(["WEEKLY", "MONTHLY", "OCCASIONAL"])
+  @IsIn(["WEEKLY", "BIWEEKLY", "MONTHLY", "OCCASIONAL"])
   frequency?: string;
 
   /** آگهی مبدا برای کپی گالری عکس‌ها — وقتی کاربر از کاتالوگ همکار کپی

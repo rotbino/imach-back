@@ -37,6 +37,7 @@ import {
   RemoveFollowerDto,
   RequestQuoteDto,
   SendOfferDto,
+  SetLowStockDto,
   SetOfferStatusDto,
   SupplyBoardQueryDto,
   UnfollowSupplierDto,
@@ -1325,6 +1326,30 @@ export class MarketController {
     return { ok: true, archived: body.archived };
   }
 
+  /** M3 مهاجرت (سند ۰۸ §۷) — پرچم «در حال اتمام موجودی» (۲۰ج):
+   *  toggle روی WatchedGood.lowStock. کالایی که فقط با BUY listing در
+   *  لیست است (بدون ردیف WatchedGood) با upsert ردیف می‌گیرد تا پرچم
+   *  جا بگیرد؛ حذف پرچم (false) ردیف را حذف نمی‌کند — «حذف آیتم» همان
+   *  × آرامِ فرم است، ردیف در لیست خرید می‌ماند (سادگی همیشگی). */
+  @Post("setLowStock")
+  async setLowStock(
+    @Body() body: SetLowStockDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(body.goodId)) throw AppError.notFound("Good not found");
+    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const wg = await this.prisma.watchedGood.upsert({
+      where: { businessId_goodId: { businessId: body.businessId, goodId: body.goodId } },
+      create: { businessId: body.businessId, goodId: body.goodId, lowStock: body.lowStock },
+      update: { lowStock: body.lowStock },
+      select: { id: true, lowStock: true },
+    });
+    this.cache.invalidateTag(`market:watch:${body.businessId}`);
+    this.invalidateBuyerSide(body.businessId);
+    return { ok: true, lowStock: wg.lowStock };
+  }
+
   /** حذف از لیست خرید — «دنبال نکردن»؛ BUY listing مالک دست‌نخورده می‌ماند. */
   @Post("unwatchGood/:goodId")
   async unwatchGood(
@@ -1373,7 +1398,7 @@ export class MarketController {
       }),
       this.prisma.watchedGood.findMany({
         where: { businessId: query.businessId },
-        select: { goodId: true, createdAt: true, lastNotifiedAt: true, archivedAt: true },
+        select: { goodId: true, createdAt: true, lastNotifiedAt: true, archivedAt: true, lowStock: true },
         orderBy: { createdAt: "desc" },
       }),
     ]);
@@ -1465,6 +1490,8 @@ export class MarketController {
         watchedAt: watch?.createdAt ?? null,
         lastNotifiedAt: watch?.lastNotifiedAt ?? null,
         archivedAt: watch?.archivedAt ?? null,
+        // M3 — پرچم «در حال اتمام موجودی» (۲۰ج)؛ ردیفِ فقط-BUY = false
+        lowStock: watch?.lowStock ?? false,
         supplierCount: board.length,
         cheapest: cheapest
           ? {

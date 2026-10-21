@@ -23,7 +23,7 @@ import { t } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
-import { CreateBusinessDto, EditBusinessDto, CatalogCategoriesDto, CatalogSettingsDto, NotifPrefsDto, SetArmsDto } from "./dto/business.dto";
+import { CreateBusinessDto, EditBusinessDto, CatalogCategoriesDto, CatalogSettingsDto, NotifPrefsDto, SetArmsDto, SupplyTermsDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
@@ -202,6 +202,8 @@ export class BusinessesController {
         // M2 (G7) — تنظیمات کاتالوگ: دید قیمت بر اساس صنف + اعتبار قیمت
         priceVisibilityTrades: true,
         priceValidityDays: true,
+        // M3 مهاجرت (sheet-buycond) — شرایط درخواست تامین خریدار
+        supplyTerms: true,
         // لوکیشن دقیق فقط به صاحبش برمی‌گردد — endpoint عمومی هرگز
         lat: true,
         lng: true,
@@ -581,6 +583,43 @@ export class BusinessesController {
       where: { id: business.id },
       data,
       select: { id: true, slug: true, priceVisibilityTrades: true, priceValidityDays: true },
+    });
+    invalidateBusiness(this.cache, business.id, business.slug);
+    return updated;
+  }
+
+  /**
+   * PUT /businesses/supplyTerms/:id — M3 مهاجرت (سند ۰۸ §۷ — sheet-buycond):
+   * شرایط درخواست تامین خریدار — هر که از لینک لیست خرید پیشنهاد می‌دهد
+   * اول این‌ها را می‌خواند. متن آزاد فارسی (آیتم‌ها با «·» جدا)؛ خالی =
+   * بینندهٔ عمومی لینک «شرایط» را نمی‌بیند (نمای عمومی در M6).
+   * idempotent؛ trim و سقف ۲۰۰۰ نویسه سمت سرور.
+   */
+  @Put("supplyTerms/:id")
+  @UseGuards(JwtAuthGuard)
+  async setSupplyTerms(
+    @Param("id") id: string,
+    @Body() body: SupplyTermsDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, id, locale);
+    const terms =
+      body.supplyTerms === undefined
+        ? undefined
+        : body.supplyTerms?.trim()
+          ? body.supplyTerms.trim().slice(0, 2000)
+          : null;
+    if (terms === undefined) {
+      return this.prisma.business.findUnique({
+        where: { id: business.id },
+        select: { id: true, slug: true, supplyTerms: true },
+      });
+    }
+    const updated = await this.prisma.business.update({
+      where: { id: business.id },
+      data: { supplyTerms: terms },
+      select: { id: true, slug: true, supplyTerms: true },
     });
     invalidateBusiness(this.cache, business.id, business.slug);
     return updated;

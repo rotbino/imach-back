@@ -14,7 +14,7 @@ import {
 } from "class-validator";
 
 export const TRADE_MODES = ["SELL", "BUY", "BOTH"] as const;
-export const FREQUENCIES = ["WEEKLY", "MONTHLY", "OCCASIONAL"] as const;
+export const FREQUENCIES = ["WEEKLY", "BIWEEKLY", "MONTHLY", "OCCASIONAL"] as const;
 
 /** GET /goods/getGoods — reference catalog query (cached, cursor-paginated). */
 export class GetGoodsQueryDto {

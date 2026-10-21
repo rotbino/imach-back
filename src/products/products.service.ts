@@ -284,10 +284,21 @@ export class ProductsService {
 
     // اسکنر — بارکد کلیدِ دقیق است: یک ایندکس‌هیت، بدون فازِ جست‌وجوی متنی
     if (params.barcode) {
-      const hit = await this.prisma.product.findFirst({
-        where: { barcode: params.barcode, status: { not: "MERGED" } },
-        select: PRODUCT_SELECT,
-      });
+      // مقاوم‌سازی (M3 QA): ۶۷ محصولِ یتیم (good حذف‌شده) در دیتای آنلاین
+      // هست؛ findFirst با relation اجباری رویشان Inconsistent-result می‌دهد
+      // و اسکنر ۵۰۰ می‌خورد. یتیم = «پیدا نشد» — کاربر به جستجوی متنی هدایت
+      // می‌شود؛ داده دست‌نخورده می‌ماند (خط قرمز مالک).
+      const findBarcodeHit = async () => {
+        try {
+          return await this.prisma.product.findFirst({
+            where: { barcode: params.barcode, status: { not: "MERGED" } },
+            select: PRODUCT_SELECT,
+          });
+        } catch {
+          return null;
+        }
+      };
+      const hit = await findBarcodeHit();
       const items = hit ? await this.decoratePage([hit], params.businessId) : [];
       return { items, nextCursor: null, total: items.length, brands: [], categories: [] };
     }

@@ -225,3 +225,13 @@ export class CatalogSettingsDto {
   @Max(5)
   priceValidityDays?: number | null;
 }
+
+/** PUT /businesses/supplyTerms/:id — M3 مهاجرت (سند ۰۸ §۷ — sheet-buycond):
+ *  شرایط درخواست تامین خریدار. متن آزاد فارسی؛ آیتم‌ها با «·» جدا
+ *  می‌شوند. null/خالی = بینندهٔ عمومی لینک «شرایط» را نمی‌بیند (M6). */
+export class SupplyTermsDto {
+  @IsOptional()
+  @IsString()
+  @MaxLength(2000)
+  supplyTerms?: string | null;
+}

@@ -467,6 +467,12 @@ model Business {
   /// (متن آزاد: «نقدی» / «عندالتحویل» / …). همان قاعدهٔ hours.
   defaultPayTerm String?
 
+  /// M3 مهاجرت (سند ۰۸ §۷ — sheet-buycond) — شرایط درخواست تامین خریدار:
+  /// متن آزاد فارسی که تأمین‌کننده‌ها قبل از پیشنهاد می‌خوانند. خالی =
+  /// لینک «شرایط» در نمای عمومی لیست خرید (M6) دیده نمی‌شود.
+  /// آیتم‌ها با «·» جدا می‌شوند و ردیف‌به‌ردیف رندر می‌شوند.
+  supplyTerms    String?
+
   /// فاز ۸ (طرح ۱۴) — تنظیمات اعلانِ این کسب‌وکار. JSON ساده:
   /// { priceChange, suggestions, quoteReplies, push } — همه boolean.
   /// null/فیلد غایب = روشن (پیش‌فرض). نگاشت به انواع اعلان:
@@ -532,6 +538,10 @@ model WatchedGood {
   /// فاز ۱۲ — آرشیو موقت: کالا از دفترِ روزمره کنار می‌رود اما رصد و
   /// تاریخچهٔ قیمت می‌ماند (watchedGood حذف نمی‌شود). null = ردیف عادی.
   archivedAt     DateTime?
+  /// M3 مهاجرت (سند ۰۸ §۷) — «در حال اتمام موجودی»: یادآور کالاهایی که
+  /// موجودی‌شان رو به پایان است (۲۰ج). false = ردیف عادی لیست خرید.
+  /// صرفاً پرچم UI است؛ حجم/دورهٔ نیاز خرید همان Listing (BUY) می‌ماند.
+  lowStock       Boolean   @default(false)
 
   business Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
   good     Good     @relation(fields: [goodId], references: [id], onDelete: Cascade)

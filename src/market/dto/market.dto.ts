@@ -46,7 +46,7 @@ export class RequestQuoteDto {
   volume: number;
 
   @IsOptional()
-  @IsIn(["WEEKLY", "MONTHLY", "OCCASIONAL"])
+  @IsIn(["WEEKLY", "BIWEEKLY", "MONTHLY", "OCCASIONAL"])
   frequency?: string;
 
   /** انتظار تحویل — «فوری» | «این ماه» (متن آزاد کوتاه از فرم) */
@@ -192,6 +192,20 @@ export class ArchiveWatchedGoodDto {
 
   @IsBoolean()
   archived: boolean;
+}
+
+/** POST /market/setLowStock — M3 مهاجرت (سند ۰۸ §۷): پرچم «در حال اتمام
+ *  موجودی» روی ردیف لیست خرید (۲۰ج). اگر ردیف WatchedGood نبود (کالا فقط
+ *  با BUY listing در لیست است)، ساخته می‌شود تا پرچم جا بگیرد. */
+export class SetLowStockDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  goodId: string;
+
+  @IsBoolean()
+  lowStock: boolean;
 }
 
 /** POST /market/removeFollower — catalog owner removes a follower from «مشتریان من». */
