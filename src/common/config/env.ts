@@ -43,7 +43,8 @@ export const env = Object.freeze({
   NODE_ENV: process.env.NODE_ENV || "development",
   DATABASE_URL: required("DATABASE_URL", process.env.DATABASE_URL),
   JWT_SECRET: required("JWT_SECRET", process.env.JWT_SECRET, 16),
-  JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || "15m",
+  /** "never" = بدون انقضا (تصمیم مالک) — claim یعنی exp اصلاً امضا نمی‌شود. */
+  JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || "never",
   REFRESH_TOKEN_TTL_DAYS: num("REFRESH_TOKEN_TTL_DAYS", process.env.REFRESH_TOKEN_TTL_DAYS, 30),
   CORS_ORIGINS: process.env.CORS_ORIGINS || "*",
   SWAGGER_ENABLED: bool(process.env.SWAGGER_ENABLED, true),
@@ -64,8 +65,14 @@ export const env = Object.freeze({
 
 export const isProd = env.NODE_ENV === "production";
 
-/** "15m" | "7d" | "3600" → seconds (number, as @nestjs/jwt expects). */
-export function jwtExpiresInSeconds(spec = env.JWT_EXPIRES_IN): number {
+/**
+ * "never" → undefined — توکن بدون claim `exp` امضا می‌شود و هرگز منقضی نمی‌شود
+ * (تصمیم مالک: نشست بی‌انقضا تا زمانی که secret زنده است؛ ابطال فقط با
+ * تعویض JWT_SECRET).
+ * "15m" | "7d" | "3600" → ثانیه (عددی که @nestjs/jwt انتظار دارد).
+ */
+export function jwtExpiresInSeconds(spec = env.JWT_EXPIRES_IN): number | undefined {
+  if (!spec || spec.toLowerCase() === "never") return undefined;
   const match = /^(\d+)\s*(s|m|h|d)?$/i.exec(spec.trim());
   if (!match) return 900; // safe default: 15 min
   const value = Number(match[1]);

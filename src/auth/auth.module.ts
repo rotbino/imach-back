@@ -11,11 +11,15 @@ import { PushModule } from "../notifications/push.module";
 // PushModule برگِ سبک است (هیچ‌چیز را import نمی‌کند) — بدون چرخه وارد می‌شود
 // تا «مخاطب عضو شد» هم پوش بگیرد؛ خودِ ردیف اعلان همان‌طور مستقیم با prisma.
 
+// undefined = کلید expiresIn از signOptions حذف می‌شود → توکن بدون claim «exp»
+// و بدون انقضا (تصمیم مالک: JWT_EXPIRES_IN="never").
+const jwtExpiresIn = jwtExpiresInSeconds();
+
 @Module({
   imports: [
     JwtModule.register({
       secret: env.JWT_SECRET,
-      signOptions: { expiresIn: jwtExpiresInSeconds() },
+      signOptions: jwtExpiresIn === undefined ? {} : { expiresIn: jwtExpiresIn },
     }),
     PushModule,
   ],

@@ -136,9 +136,12 @@ export class AuthService {
 
   /** Issues a fresh access JWT + rotating refresh-token cookie pair. */
   private async issueSession(reply: FastifyReply, user: AuthUser): Promise<string> {
+    // JWT_EXPIRES_IN="never" (تصمیم مالک) → بدون expiresIn → بدون claim «exp»
+    // → توکن هرگز منقضی نمی‌شود. ابطال فقط با تعویض JWT_SECRET.
+    const expiresIn = jwtExpiresInSeconds();
     const accessToken = await this.jwt.signAsync(
       { id: user.id, phone: user.phone, role: user.role },
-      { expiresIn: jwtExpiresInSeconds() }
+      expiresIn === undefined ? {} : { expiresIn }
     );
 
     const raw = randomBytes(48).toString("base64url");
