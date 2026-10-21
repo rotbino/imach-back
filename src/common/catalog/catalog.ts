@@ -138,3 +138,21 @@ export const dialOfCountry = (code: string): string => DIAL_OF[code] ?? "98";
 export const isSupportedCountry = (code: string): boolean => code in COUNTRY_CURRENCY;
 
 export const currencyOfCountry = (code: string): string => COUNTRY_CURRENCY[code] ?? "IRR";
+
+// ── M2 (G7/FD-52) — اعتبار قیمت ──────────────────────────────────────────────
+
+/**
+ * بج «قیمت منقضی» — pricedAt + priceValidityDays گذشته باشد قیمت کهربایی
+ * نشان داده می‌شود (ولی حذف نمی‌شود؛ خریدار سراغ عدد می‌رود، فروشنده تمدید می‌کند).
+ *   pricedAt=null        → false  (ردیف هرگز قیمت‌گذاری‌شده علامت نشده — legacy)
+ *   priceValidityDays=null → false (کاتالوگ بدون محدودیت اعتبار — پیش‌فرض)
+ * رندر در خروجی‌های عمومی انجام می‌شود؛ سرور فقط این بول را می‌سازد.
+ */
+export function listingPriceExpired(
+  pricedAt: Date | string | null | undefined,
+  validityDays: number | null | undefined
+): boolean {
+  if (!pricedAt || !validityDays || validityDays <= 0) return false;
+  const expires = new Date(pricedAt).getTime() + validityDays * 24 * 3600 * 1000;
+  return expires < Date.now();
+}

@@ -436,6 +436,15 @@ model Business {
   /// این لایه «چیدمان ویترین» است نه «کالای مرجع»؛ هسته‌ی تطابق دست‌نخورده.
   customCategories Json?
 
+  // ── M2 مهاجرت (سند ۰۸ §۴.۲ — G7) — تنظیمات کاتالوگ ──
+  /// کدام اصناف قیمت کاتالوگ را می‌بینند — آرایه‌ای از نام صنف (string)؛
+  /// null/[] = همه می‌بینند. رجیستری Trade روی Atlas خالی است، پس تطبیق
+  /// فعلاً روی Business.trade (رشتهٔ خام) انجام می‌شود.
+  priceVisibilityTrades Json?
+  /// اعتبار قیمت به روز (۱..۵) — بعد از آن بج «قیمت منقضی» عمومی (FD-52).
+  /// null = هرگز منقضی نمی‌شود (رفتار پیش‌فرض/legacy).
+  priceValidityDays    Int?
+
   /// Precise geo point of the business — user-consented, optional, set from
   /// the catalog settings map (LocationPicker). Feeds the matcher's distance
   /// tiering later (city → province → exact point). Never rendered publicly
@@ -583,6 +592,23 @@ model Listing {
   /// اگر خالی باشد از قیمت پایه × نسبت تعدد واحد محاسبه می‌شود (pack-note Prototype).
   packaging Json?
 
+  // ── M2 مهاجرت (سند ۰۸ §۴.۲) — قرارداد واحد-قیمت + متن شخصی ──
+  /// C5 — تعداد واحد پایه در این ردیف («کیسهٔ ۵۰ کیلویی» → baseQty=50).
+  /// قیمت همچنان به Good.unit است؛ سرور pricePerBaseMinor را می‌سازد.
+  /// ورودی اختیاری — ردیف‌های legacy مقدار ندارند.
+  baseQty           Float?
+  /// C1 — قیمت هر واحد پایه (سرور: priceMinor ÷ baseQty، گرد به پایین).
+  /// مرتب‌سازی/مقایسهٔ نرمال بین بسته‌های مختلف؛ null = هنوز محاسبه نشده.
+  pricePerBaseMinor Int?
+  /// C6 — عنوان شخصی فروشنده برای این ردیفِ ویترینش؛ جدا از نام مرجع Good.
+  /// از این پس Product.label هرگز بازنویسی نمی‌شود — این فیلد جایگزین است.
+  title             String?
+  /// C2 — توضیح کوتاه فروشنده زیر ردیف («تحویل از انبار تهران»)
+  note              String?
+  /// G7 — لحظهٔ آخرین قیمت‌گذاری؛ مبنای بج «قیمت منقضی» در خروجی‌های عمومی
+  /// (اعتبار = pricedAt + Business.priceValidityDays). null = بی‌اعتبارِ مقدار.
+  pricedAt          DateTime?
+
   // ── buy side ──
   volume    Float?
   frequency String? // WEEKLY | MONTHLY | OCCASIONAL
@@ -625,6 +651,8 @@ model Listing {
   @@unique([businessId, goodId, variantKey])
   @@index([goodId, isActive, mode])
   @@index([businessId])
+  /// M2 — دفتر تأمین مرتب بر قیمت نرمال (C1) با پوشش ایندکس مرکب
+  @@index([goodId, isActive, mode, pricePerBaseMinor])
 }
 
 // ─── Interactions ────────────────────────────────────────────────────────────

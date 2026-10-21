@@ -12,6 +12,7 @@ import {
   ValidateNested,
   Matches,
   IsBoolean,
+  IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
 
@@ -199,4 +200,28 @@ export class CatalogCategoriesDto {
   @ValidateNested({ each: true })
   @Type(() => CatalogCategoryItemDto)
   categories: CatalogCategoryItemDto[];
+}
+
+// ── M2 مهاجرت (سند ۰۸ §۴.۲ — G7) — تنظیمات کاتالوگ ──
+
+/**
+ * PUT /businesses/catalogSettings/:id — اسکرین ۳۶: تنظیمات کاتالوگ.
+ *   • priceVisibilityTrades: آرایهٔ نام صنف‌هایی که قیمت می‌بینند؛
+ *     null صریح = پاک‌کردن (همه می‌بینند)؛ undefined = بدون تغییر.
+ *     [] هم مانند null رفتار می‌کند (کلی < ۱ صنف = همه).
+ *   • priceValidityDays: ۱..۵ روز اعتبار قیمت؛ null = هرگز منقضی نمی‌شود.
+ */
+export class CatalogSettingsDto {
+  @IsOptional()
+  @IsArray()
+  @ArrayMaxSize(50)
+  @IsString({ each: true })
+  @MaxLength(60, { each: true })
+  priceVisibilityTrades?: string[] | null;
+
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(5)
+  priceValidityDays?: number | null;
 }

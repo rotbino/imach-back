@@ -14,7 +14,7 @@ import { ProductsService, productIdentityParts } from "../products/products.serv
 import { BulkSaveDto } from "../products/dto/product.dto";
 import { refreshCatalogCount } from "../common/catalog/catalog-count";
 import { NotificationsService } from "../notifications/notifications.service";
-import { SaveListingDto, SetActiveDto } from "./dto/listing.dto";
+import { SaveListingDto, SetActiveDto, BulkPriceStockDto, type BulkPriceStockItemDto } from "./dto/listing.dto";
 
 /**
  * Same shape as getMyListings rows — every save path returns this so the
@@ -34,6 +34,12 @@ const LISTING_SELECT = {
   volume: true,
   frequency: true,
   updatedAt: true,
+  // ── M2 — فیلدهای v2 (قرارداد واحد-قیمت + متن شخصی + اعتبار قیمت) ──
+  baseQty: true,
+  pricePerBaseMinor: true,
+  title: true,
+  note: true,
+  pricedAt: true,
   // ── وضعیت + شاخص‌های مالک (فاز ۲) — ردیف غیرفعال و شمارش بازدید
   isActive: true,
   viewCount30: true,
@@ -248,35 +254,37 @@ export class ListingsController {
         throw AppError.badRequest(t(locale, "products.goodMismatch", "محصول با گروه کالا هم‌خوان نیست"), "PRODUCT_GOOD_MISMATCH");
       }
       productId = p.id;
-      // ── اگر کاربر عنوان جدید داده، label محصول را به‌روز کن (ولی searchText ثابت می‌ماند)
-      const newLabel = body.productLabel?.trim();
-      if (newLabel && newLabel !== p.label) {
-        await this.prisma.product.update({
-          where: { id: p.id },
-          data: { label: newLabel.slice(0, 120) },
-          select: { id: true },
-        });
-        productIdentity = { label: newLabel.slice(0, 120), searchText: p.searchText };
-      } else {
-        productIdentity = { label: p.label, searchText: p.searchText };
-      }
+      // ── M2 (C6): توقف بازنویسی Product.label ──
+      // محصولِ مشترک دیگر تغییر نمی‌کند — عنوان شخصی فروشنده در Listing.title
+      // ذخیره می‌شود (روی ردیف خودش). productLabelِ کلاینت‌های قدیمی نادیده
+      // گرفته می‌شود؛ شناسهٔ ماشین (searchText) همیشه ثابت می‌ماند.
+      productIdentity = { label: p.label, searchText: p.searchText };
     } else {
       const linked = await this.products.findOrCreateForListing(user, {
         goodId: body.goodId,
         brandId,
         brandName: body.brandName,
         attrs,
-        userLabel: body.productLabel,
+        userLabel: undefined, // M2 (C6): عنوان شخصی حالا در Listing.title است — Product.label مرجع هرگز بازنویسی نمی‌شود
         locale,
       });
       productId = linked?.id ?? null;
       productIdentity = linked ? { label: linked.label, searchText: linked.searchText } : null;
     }
 
+    // ── M2 — قرارداد واحد-قیمت (C1/C5) + متن شخصی (C6/C2) ──
+    // baseQty: تعداد واحد پایه در این ردیف؛ قیمت هر واحد پایه سرور می‌سازد
+    // (کلاینت هرگز pricePerBaseMinor نمی‌فرستد — منبع حقیقت سرور است).
+    const baseQty = body.baseQty !== undefined && body.baseQty > 0 ? body.baseQty : null;
+
     const data = {
       mode: body.mode,
       brandId, // empty input explicitly detaches the brand
       productId,
+      // M2 — متن‌های شخصی ردیف (undefined = دست‌نخورده؛ null صریح = پاک)
+      ...(body.title !== undefined ? { title: body.title?.trim() ? body.title.trim().slice(0, 120) : null } : {}),
+      ...(body.note !== undefined ? { note: body.note?.trim() ? body.note.trim().slice(0, 280) : null } : {}),
+      ...(baseQty !== null ? { baseQty } : {}),
       // فاز ۳ — دسته‌ی شخصی ویترین (undefined = دست‌نخورده در ویرایش‌های قدیمی)
       ...(body.catalogCategoryId !== undefined ? { catalogCategoryId } : {}),
       // آگهیِ متصل به محصولِ مشترک، کلید واریانتش را از خودِ محصول می‌گیرد —
@@ -309,19 +317,19 @@ export class ListingsController {
     };
     const holder = await this.prisma.listing.findUnique({
       where: unique,
-      select: { id: true, priceMinor: true },
+      select: { id: true, priceMinor: true, baseQty: true },
     });
 
     // ── کدام ردیفِ فیزیکی نوشته می‌شود؟ (خواسته‌ی کاربر: عکس بعد از ویرایش نباید بیفتد) ──
     // • listingId (دیالوگ ویرایش): همان ردیف — id/گالری/تاریخچه دست‌نخورده
     // • ردیفِ قبل از لایه‌ی محصول (کلید فرمت قدیمی) از کلاینتِ کهنه: همان ردیف (پل legacy)
     // • هیچ‌کدام: create تازه — upsert مسابقه‌ی هم‌زمان را هم می‌بَرد
-    let target: { id: string; priceMinor: number | null } | null = null;
+    let target: { id: string; priceMinor: number | null; baseQty: number | null } | null = null;
 
     if (body.listingId) {
       const row = await this.prisma.listing.findUnique({
         where: { id: body.listingId },
-        select: { id: true, businessId: true, goodId: true, priceMinor: true },
+        select: { id: true, businessId: true, goodId: true, priceMinor: true, baseQty: true },
       });
       if (!row || row.businessId !== business.id) {
         throw AppError.notFound(t(locale, "listing.notFound", "کالا یافت نشد"));
@@ -352,9 +360,28 @@ export class ListingsController {
           variantKey: legacyKey,
         },
         orderBy: { updatedAt: "desc" },
-        select: { id: true, priceMinor: true },
+        select: { id: true, priceMinor: true, baseQty: true },
       });
       if (legacy) target = legacy;
+    }
+
+    // ── M2 — قیمت نرمال + مهر زمانی قیمت‌گذاری (C1/C5/G7) ──
+    // pricePerBaseMinor همیشه بازمحاسبه می‌شود (idempotent و ارزان)؛ baseQty
+    // مؤثر = ورودی جدید یا مقدار موجود ردیف (ویرایش قیمتِ ردیفِ قدیمی بدون ارسال baseQty).
+    // pricedAt فقط وقتی قیمت واقعاً تغییر کرد (یا ردیف تازه قیمت گرفت) — ویرایش
+    // عنوان/موجودی اعتبار قیمت را تمدید نمی‌کند.
+    {
+      const nextMinor = body.mode !== "BUY" && body.sell ? body.sell.priceMinor : null;
+      const effectiveBaseQty = baseQty ?? target?.baseQty ?? holder?.baseQty ?? null;
+      if (nextMinor !== null && effectiveBaseQty && effectiveBaseQty > 0) {
+        (data as Prisma.ListingUncheckedCreateInput).pricePerBaseMinor = Math.floor(nextMinor / effectiveBaseQty);
+      } else if (nextMinor === null) {
+        (data as Prisma.ListingUncheckedCreateInput).pricePerBaseMinor = null;
+      }
+      const prevMinor = target ? target.priceMinor : (holder?.priceMinor ?? null);
+      if (nextMinor !== null && nextMinor !== prevMinor) {
+        (data as Prisma.ListingUncheckedCreateInput).pricedAt = new Date();
+      }
     }
 
     let listing;
@@ -364,7 +391,7 @@ export class ListingsController {
       } catch (e) {
         // کلید هویت بین چک و آپدیت اشغال شد (ریس نادر) — دوقلوها یکی می‌شوند
         if (!(e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002")) throw e;
-        const forkHolder = await this.prisma.listing.findUnique({ where: unique, select: { id: true, priceMinor: true } });
+        const forkHolder = await this.prisma.listing.findUnique({ where: unique, select: { id: true, priceMinor: true, baseQty: true } });
         if (!forkHolder) throw e;
         await this.convergeFork(target.id, forkHolder.id);
         target = forkHolder;
@@ -684,6 +711,82 @@ export class ListingsController {
       void refreshCatalogCount(this.prisma, business.id);
     }
     return { saved, failed, items: savedRows.map(({ sourceListingId, ...rest }) => rest) };
+  }
+
+  /**
+   * PUT /listings/bulkPriceStock — M2 (اسکرین ۳۳): تغییر گروهی قیمت/موجودی +
+   * تمدید سریع اعتبار قیمت‌ها. هر قلم سه حالت دارد:
+   *   • priceMinor مطلق (اولویت) یا pct درصدی (+۵ = +۵٪) — قانون FD-9
+   *   • stock مطلق (اختیاری، مستقل از قیمت)
+   *   • هیچ‌کدام = فقط «تمدید سریع» (pricedAt = الان)
+   * قیمت تغییرکرده → PriceLog + pricedAt تازه + pricePerBaseMinor بازمحاسبه
+   * (با baseQty موجود ردیف). اعلان دیده‌بان‌ها همان قواعد saveListing (حداکثر
+   * روزی یکی) — برای اجرای ساده، از مسیر اعلانِ price-change صرف‌نظر می‌شود
+   * و فقط PriceLog می‌نشیند؛ موج بعدی فاز M7 با score/اعلان یکجا وصل می‌شود.
+   */
+  @Put("bulkPriceStock")
+  async bulkPriceStock(@Body() body: BulkPriceStockDto, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    if (body.items.length === 0) return { updated: 0, failed: 0 };
+
+    // یک کوئری — ردیف‌های همین کسب‌وکار (مالکیت اینجا قفل می‌شود)
+    const ids = body.items.map((i) => i.listingId);
+    const rows = await this.prisma.listing.findMany({
+      where: { id: { in: ids }, businessId: business.id },
+      select: { id: true, priceMinor: true, stock: true, baseQty: true, isActive: true },
+    });
+    const rowMap = new Map(rows.map((r) => [r.id, r]));
+
+    let updated = 0;
+    let failed = 0;
+    const touched: { id: string; priceMinor: number | null; stock: number | null }[] = [];
+
+    for (const item of body.items as BulkPriceStockItemDto[]) {
+      const row = rowMap.get(item.listingId);
+      if (!row) {
+        failed++; // ردیف ناموجود یا متعلق به کسب‌وکار دیگری
+        continue;
+      }
+
+      // قیمت بعدی: مطلق > درصد > تغییرنکرده
+      let nextPrice = row.priceMinor;
+      if (item.priceMinor !== undefined && item.priceMinor !== null) nextPrice = Math.round(item.priceMinor);
+      else if (item.pct !== undefined && item.pct !== null && row.priceMinor !== null) {
+        nextPrice = Math.max(0, Math.round(row.priceMinor * (1 + item.pct / 100)));
+      }
+
+      const priceChanged = nextPrice !== row.priceMinor;
+      const renewOnly = item.priceMinor === undefined && item.pct === undefined && item.stock === undefined;
+
+      const data: Prisma.ListingUpdateInput = {};
+      if (item.stock !== undefined && item.stock !== null) data.stock = Math.round(item.stock);
+      if (priceChanged) {
+        data.priceMinor = nextPrice;
+        data.pricedAt = new Date(); // تمدید اعتبار فقط با قیمت تازه یا تمدید صریح
+      } else if (renewOnly) {
+        data.pricedAt = new Date(); // «تمدید سریع قیمت‌ها» — بدون تغییر عدد
+      }
+      if (nextPrice !== null && row.baseQty && row.baseQty > 0) {
+        data.pricePerBaseMinor = Math.floor(nextPrice / row.baseQty);
+      }
+
+      if (Object.keys(data).length > 0) {
+        // PriceLog برای هر تغییر واقعی قیمت — تاریخچهٔ روند کارت‌ها
+        if (priceChanged && row.priceMinor !== null && nextPrice !== null) {
+          await this.prisma.priceLog.create({
+            data: { listingId: row.id, oldMinor: row.priceMinor, newMinor: nextPrice },
+          });
+        }
+        await this.prisma.listing.update({ where: { id: row.id }, data, select: { id: true } });
+        updated++;
+        touched.push({ id: row.id, priceMinor: nextPrice, stock: (item.stock ?? row.stock) ?? null });
+      } else {
+        touched.push({ id: row.id, priceMinor: row.priceMinor, stock: row.stock });
+      }
+    }
+
+    if (updated > 0) this.invalidateFor(business.id, business.slug);
+    return { updated, failed, items: touched };
   }
 
   @Delete("deleteListing/:id")

@@ -12,6 +12,7 @@ import {
   UseGuards,
 } from "@nestjs/common";
 import type { FastifyReply } from "fastify";
+import { listingPriceExpired } from "../common/catalog/catalog";
 import { CacheService, TTL } from "../common/cache/cache.module";
 import { CurrentLocale, CurrentUser, makeSlug, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
@@ -22,7 +23,7 @@ import { t } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { ensurePage } from "../common/pages";
-import { CreateBusinessDto, EditBusinessDto, CatalogCategoriesDto, NotifPrefsDto, SetArmsDto } from "./dto/business.dto";
+import { CreateBusinessDto, EditBusinessDto, CatalogCategoriesDto, CatalogSettingsDto, NotifPrefsDto, SetArmsDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
 import { currencyOfCountry } from "../common/catalog/catalog";
 
@@ -44,6 +45,12 @@ const LISTING_SELECT = {
   updatedAt: true,
   viewCount30: true,
   viewCountTotal: true,
+  // M2 — متن شخصی ردیف + مهر قیمت‌گذاری (بج «منقضی» عمومی از آن ساخته می‌شود)
+  title: true,
+  note: true,
+  pricedAt: true,
+  baseQty: true,
+  pricePerBaseMinor: true,
   brand: { select: { id: true, name: true } },
   good: {
     select: {
@@ -192,6 +199,9 @@ export class BusinessesController {
         isVerified: true,
         // فاز ۳ — دسته‌های شخصی کاتالوگ: چيپ‌های ویترین مالک
         customCategories: true,
+        // M2 (G7) — تنظیمات کاتالوگ: دید قیمت بر اساس صنف + اعتبار قیمت
+        priceVisibilityTrades: true,
+        priceValidityDays: true,
         // لوکیشن دقیق فقط به صاحبش برمی‌گردد — endpoint عمومی هرگز
         lat: true,
         lng: true,
@@ -326,6 +336,8 @@ export class BusinessesController {
             isDemo: true,
             // فاز ۳ — دسته‌های شخصی کاتالوگ برای چيپ‌های ویترین عمومی
             customCategories: true,
+            // M2 (G7) — اعتبار قیمت کاتالوگ: بج «قیمت منقضی» از همین محاسبه می‌شود
+            priceValidityDays: true,
             // لوکیشن دقیق و آدرس — فقط مالک در ویترین خودش می‌بیند (برای ویرایش)
             lat: true,
             lng: true,
@@ -374,7 +386,13 @@ export class BusinessesController {
               }
             : business.owner,
           logo: logo ?? null,
-          listings: business.listings.map((l) => ({ ...l, gallery: galleries.get(l.id) ?? [] })),
+          listings: business.listings.map((l) => ({
+            ...l,
+            gallery: galleries.get(l.id) ?? [],
+            // M2 (G7/FD-52) — بج «قیمت منقضی»: pricedAt + priceValidityDays گذشته
+            // → کلاینت قیمت را کهربایی/خاموش نشان می‌دهد. null = هرگز منقضی نمی‌شود.
+            priceExpired: listingPriceExpired(l.pricedAt, business.priceValidityDays),
+          })),
         };
       }
     );
@@ -520,6 +538,51 @@ export class BusinessesController {
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data
+    return updated;
+  }
+
+  /**
+   * PUT /businesses/catalogSettings/:id — M2 (اسکرین ۳۶): تنظیمات کاتالوگ.
+   *   • دید قیمت بر اساس صنف — رجیستری Trade روی Atlas خالی است، پس فهرست
+   *     صنف‌ها از sheet-trade کلاینت می‌آید و به‌صورت نام (رشته) ذخیره می‌شود؛
+   *     تطبیق واقعی بیننده در M6 سمت سرور اعمال می‌شود (گیت قیمت).
+   *     [] و null هر دو = همه می‌بینند (رفتار پیش‌فرض).
+   *   • اعتبار قیمت ۱..۵ روز — پس از آن بج «قیمت منقضی» در ویترین عمومی.
+   * idempotent؛ کل کش ویترین همان لحظه نامعتبر می‌شود.
+   */
+  @Put("catalogSettings/:id")
+  @UseGuards(JwtAuthGuard)
+  async setCatalogSettings(
+    @Param("id") id: string,
+    @Body() body: CatalogSettingsDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, id, locale);
+    const data: { priceVisibilityTrades?: string[] | null; priceValidityDays?: number | null } = {};
+    if (body.priceVisibilityTrades !== undefined) {
+      const trades = body.priceVisibilityTrades
+        ?.map((s) => s.trim())
+        .filter(Boolean)
+        .slice(0, 50) ?? null;
+      // کمتر از ۱ صنف انتخابی = گیت خاموش (همه قیمت می‌بینند)
+      data.priceVisibilityTrades = trades && trades.length > 0 ? trades : null;
+    }
+    if (body.priceValidityDays !== undefined) {
+      data.priceValidityDays = body.priceValidityDays;
+    }
+    if (Object.keys(data).length === 0) {
+      return this.prisma.business.findUnique({
+        where: { id: business.id },
+        select: { id: true, slug: true, priceVisibilityTrades: true, priceValidityDays: true },
+      });
+    }
+    const updated = await this.prisma.business.update({
+      where: { id: business.id },
+      data,
+      select: { id: true, slug: true, priceVisibilityTrades: true, priceValidityDays: true },
+    });
+    invalidateBusiness(this.cache, business.id, business.slug);
     return updated;
   }
 
