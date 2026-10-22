@@ -199,6 +199,11 @@ model Unit {
   containsQty Int?
   /// true = count is fixed (CARTON24 always = 24) | false = user can override
   qtyIsFixed  Boolean @default(false)
+  /// مدل واحد (حکم مالک ۱۰۲۶): بسته‌بندی‌های ساختهٔ کاربران مثل برندها
+  /// عمومی‌اند — /units/ensure برای همه find-or-create می‌کند و بعداً
+  /// ادمین باغبانی‌اش می‌کند. Null = سید سیستمی.
+  creatorRole String? // USER | ADMIN | null (seed)
+  createdById String? @db.ObjectId
   isActive    Boolean @default(true)
 
   @@index([scope])

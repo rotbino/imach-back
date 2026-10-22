@@ -34,9 +34,11 @@ const LISTING_SELECT = {
   volume: true,
   frequency: true,
   updatedAt: true,
-  // ── M2 — فیلدهای v2 (قرارداد واحد-قیمت + متن شخصی + اعتبار قیمت) ──
+  // M2 — متن شخصی ردیف + مهر قیمت‌گذاری (بج «منقضی») + قرارداد واحد-قیمت
   baseQty: true,
   pricePerBaseMinor: true,
+  // مدل واحد (۱۰۲۶) — بستهٔ انتخابی: [{label, qty}]
+  packaging: true,
   title: true,
   note: true,
   pricedAt: true,
@@ -275,7 +277,10 @@ export class ListingsController {
     // ── M2 — قرارداد واحد-قیمت (C1/C5) + متن شخصی (C6/C2) ──
     // baseQty: تعداد واحد پایه در این ردیف؛ قیمت هر واحد پایه سرور می‌سازد
     // (کلاینت هرگز pricePerBaseMinor نمی‌فرستد — منبع حقیقت سرور است).
-    const baseQty = body.baseQty !== undefined && body.baseQty > 0 ? body.baseQty : null;
+    // مدل واحد (۱۰۲۶): undefined = بدون تغییر (ویرایش قدیمی)؛ null/۰ صریح =
+    // فله — قیمتِ خودِ واحد مصرف‌کننده، pricePerBaseMinor = priceMinor.
+    const baseQty =
+      body.baseQty !== undefined && body.baseQty !== null && body.baseQty > 0 ? body.baseQty : null;
 
     const data = {
       mode: body.mode,
@@ -284,7 +289,7 @@ export class ListingsController {
       // M2 — متن‌های شخصی ردیف (undefined = دست‌نخورده؛ null صریح = پاک)
       ...(body.title !== undefined ? { title: body.title?.trim() ? body.title.trim().slice(0, 120) : null } : {}),
       ...(body.note !== undefined ? { note: body.note?.trim() ? body.note.trim().slice(0, 280) : null } : {}),
-      ...(baseQty !== null ? { baseQty } : {}),
+      ...(body.baseQty !== undefined ? { baseQty } : {}),
       // فاز ۳ — دسته‌ی شخصی ویترین (undefined = دست‌نخورده در ویرایش‌های قدیمی)
       ...(body.catalogCategoryId !== undefined ? { catalogCategoryId } : {}),
       // آگهیِ متصل به محصولِ مشترک، کلید واریانتش را از خودِ محصول می‌گیرد —
@@ -367,21 +372,39 @@ export class ListingsController {
 
     // ── M2 — قیمت نرمال + مهر زمانی قیمت‌گذاری (C1/C5/G7) ──
     // pricePerBaseMinor همیشه بازمحاسبه می‌شود (idempotent و ارزان)؛ baseQty
-    // مؤثر = ورودی جدید یا مقدار موجود ردیف (ویرایش قیمتِ ردیفِ قدیمی بدون ارسال baseQty).
+    // مؤثر = ورودی جدید (حتی null=فله) یا مقدار موجود ردیف (ویرایش قیمتِ ردیفِ
+    // قدیمی بدون ارسال baseQty). فله = قیمتِ خودِ واحد پایه — برای مقایسه و
+    // تطبیق، همان قیمت روی هر دو فیلد می‌نشیند (هدف مالک ۱۰۲۶).
     // pricedAt فقط وقتی قیمت واقعاً تغییر کرد (یا ردیف تازه قیمت گرفت) — ویرایش
     // عنوان/موجودی اعتبار قیمت را تمدید نمی‌کند.
+    const effectiveBaseQty =
+      body.baseQty !== undefined ? baseQty : (target?.baseQty ?? holder?.baseQty ?? null);
     {
       const nextMinor = body.mode !== "BUY" && body.sell ? body.sell.priceMinor : null;
-      const effectiveBaseQty = baseQty ?? target?.baseQty ?? holder?.baseQty ?? null;
-      if (nextMinor !== null && effectiveBaseQty && effectiveBaseQty > 0) {
-        (data as Prisma.ListingUncheckedCreateInput).pricePerBaseMinor = Math.floor(nextMinor / effectiveBaseQty);
-      } else if (nextMinor === null) {
+      if (nextMinor !== null) {
+        (data as Prisma.ListingUncheckedCreateInput).pricePerBaseMinor =
+          effectiveBaseQty && effectiveBaseQty > 0
+            ? Math.floor(nextMinor / effectiveBaseQty)
+            : nextMinor; // فله — قیمتِ خودِ واحد مصرف‌کننده
+      } else {
         (data as Prisma.ListingUncheckedCreateInput).pricePerBaseMinor = null;
       }
       const prevMinor = target ? target.priceMinor : (holder?.priceMinor ?? null);
       if (nextMinor !== null && nextMinor !== prevMinor) {
         (data as Prisma.ListingUncheckedCreateInput).pricedAt = new Date();
       }
+    }
+
+    // ── مدل واحد (۱۰۲۶) — بستهٔ انتخابی این ردیف: «کیسهٔ ۵۰ کیلویی» ──
+    // نام در packaging[0].label می‌نشیند (طراحی فاز ۵) و Listing.title آزاد
+    // می‌ماند برای عنوان شخصی ویترین (M2/C6). undefined = بدون تغییر؛
+    // null/خالی صریح = فله (پاک‌کردن بسته در ویرایش).
+    if (body.packLabel !== undefined) {
+      const label = body.packLabel?.replace(/\s+/g, " ").trim().slice(0, 60) ?? "";
+      // آرایهٔ خالی = بدون بسته (فله) — همان «خالی» در قرارداد فاز ۵
+      (data as Prisma.ListingUncheckedCreateInput).packaging = label
+        ? [{ label, qty: effectiveBaseQty && effectiveBaseQty > 0 ? Math.round(effectiveBaseQty) : 1 }]
+        : [];
     }
 
     let listing;
@@ -631,6 +654,9 @@ export class ListingsController {
               minOrder: item.minOrder ?? (item.priceMinor ? 1 : null),
               volume: body.mode === "BOTH" ? item.volume ?? null : null,
               frequency: body.mode === "BOTH" ? item.frequency ?? "MONTHLY" : null,
+              // انتخابگر بسته نمی‌پرسد — ردیف فله است: قیمت واحد = خودِ قیمت
+              // (مدل ۱۰۲۶؛ بعد از ویرایش با بسته، سرور بازمحاسبه می‌کند)
+              pricePerBaseMinor: item.priceMinor ?? null,
             }),
       };
       const unique = { businessId_goodId_variantKey: { businessId: business.id, goodId: p.goodId, variantKey: p.searchText.slice(0, 60) } };
@@ -766,8 +792,10 @@ export class ListingsController {
       } else if (renewOnly) {
         data.pricedAt = new Date(); // «تمدید سریع قیمت‌ها» — بدون تغییر عدد
       }
-      if (nextPrice !== null && row.baseQty && row.baseQty > 0) {
-        data.pricePerBaseMinor = Math.floor(nextPrice / row.baseQty);
+      if (nextPrice !== null) {
+        // فله (بدون بسته): قیمتِ خودِ واحد پایه — pricePerBaseMinor = priceMinor
+        data.pricePerBaseMinor =
+          row.baseQty && row.baseQty > 0 ? Math.floor(nextPrice / row.baseQty) : nextPrice;
       }
 
       if (Object.keys(data).length > 0) {

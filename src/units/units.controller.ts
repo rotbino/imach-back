@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Post, Res, UseGuards } from "@nestjs/common";
+import { createHash } from "crypto";
 import type { FastifyReply } from "fastify";
 import { CacheService } from "../common/cache/cache.module";
 import { CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
@@ -39,6 +40,73 @@ export class UnitsController {
     );
     reply.header("x-cache", hit ? "HIT" : "MISS");
     return value as UnitDto[];
+  }
+
+  /**
+   * مدل واحد (حکم مالک ۱۰۲۶ — «یک‌بار برای همیشه»): بسته‌بندی‌های شخصی کاربر
+   * مثل برندها عمومی می‌شوند — find-or-create روی جدول Unit، تا کاربران بعدی
+   * «کارتن ۱۰۰ عددی» را از لیست انتخاب کنند نه اینکه دوباره بسازند.
+   *
+   * • هر فراخوانی idempotent است: نام + پایه + تعدادِ یکسان → همان ردیف.
+   * • پایه باید ریشه باشد (PIECE/KILOGRAM/…) — بسته‌بندیِ رویِ بسته‌بندی ممنوع.
+   * • qtyIsFixed=true: تعداد جزو هویت «کارتن ۱۰۰ عددی» است و ثابت می‌ماند.
+   */
+  @Post("ensure")
+  @UseGuards(JwtAuthGuard)
+  async ensure(
+    @Body() body: { nameFa: string; baseUnitKey: string; containsQty: number },
+    @CurrentUser() user: AuthUser,
+  ) {
+    const name = (body.nameFa ?? "").replace(/\s+/g, " ").trim().slice(0, 60);
+    if (name.length < 2) {
+      throw AppError.badRequest("نام بسته‌بندی را کامل بنویس — مثلاً «گونی ۷۰ کیلویی»", "BAD_NAME");
+    }
+    const qty = Number(body.containsQty);
+    if (!Number.isInteger(qty) || qty < 1 || qty > 1_000_000) {
+      throw AppError.badRequest("تعداد در بسته باید عددی بین ۱ تا یک میلیون باشد", "BAD_QTY");
+    }
+    const baseKey = (body.baseUnitKey ?? "").trim().toUpperCase();
+    const base = await this.prisma.unit.findUnique({ where: { key: baseKey } });
+    if (!base || !base.isActive) {
+      throw AppError.badRequest("واحد پایهٔ نامعتبر", "BAD_BASE_UNIT");
+    }
+    // پایه باید خودش ریشه باشد — زنجیرهٔ بسته‌بندی روی بسته‌بندی نه (مدل مالک:
+    // «کیسه بزرگ ۶۰ کیلویی» همان یک بسته با تعداد ۶۰ است، نه تودرتو)
+    if (base.baseUnitKey) {
+      throw AppError.badRequest("بسته‌بندی باید مستقیم روی واحد مصرف‌کننده باشد", "NESTED_UNIT");
+    }
+
+    // ۱) دوقلوی هم‌نام (نام + پایه + تعداد) → همان ردیف؛ سید و ساخت کاربر یکسان‌اند
+    const twin = await this.prisma.unit.findFirst({
+      where: { nameFa: name, baseUnitKey: base.key, containsQty: qty, isActive: true },
+    });
+    if (twin) return twin as UnitDto;
+
+    // ۲) کلید قطعی — هم‌زمانی و تکرار دوباره همان ثبت
+    const key = (
+      `UP_${base.key}_${qty}_` +
+      createHash("md5").update(`${name}|${base.key}|${qty}`).digest("hex").slice(0, 10)
+    ).toUpperCase();
+    const existing = await this.prisma.unit.findUnique({ where: { key } });
+    if (existing) return existing as UnitDto;
+
+    const created = await this.prisma.unit.create({
+      data: {
+        key,
+        nameFa: name,
+        // نام لاتین فعلاً همان فارسی است — باغبانی ادمین بعداً پرش می‌کند
+        nameEn: name,
+        baseUnitKey: base.key,
+        containsQty: qty,
+        qtyIsFixed: true,
+        scope: "wholesale",
+        creatorRole: "USER",
+        createdById: user.id,
+        isActive: true,
+      },
+    });
+    this.cache.invalidateTag("goods");
+    return created as UnitDto;
   }
 
   @Post("create")

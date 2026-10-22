@@ -75,12 +75,23 @@ export class SaveListingDto {
   note?: string | null;
 
   /** C5 — تعداد واحد پایه در این ردیف («کیسهٔ ۵۰ کیلویی» → 50).
-   *  سرور pricePerBaseMinor = priceMinor ÷ baseQty را می‌سازد. */
+   *  سرور pricePerBaseMinor = priceMinor ÷ baseQty را می‌سازد.
+   *  undefined = بدون تغییر؛ null/۰ صریح = فله (بدون بسته — قیمتِ خودِ واحد
+   *  مصرف‌کننده؛ pricePerBaseMinor = priceMinor). */
   @IsOptional()
   @IsNumber()
-  @Min(0.01)
+  @Min(0)
   @Max(1e9)
-  baseQty?: number;
+  baseQty?: number | null;
+
+  /** مدل واحد (حکم مالک ۱۰۲۶) — نام بستهٔ انتخابی این ردیف («کیسهٔ ۵۰ کیلویی»
+   *  / «کارتن ۶۰ عددی» / «گونی ۷۰ کیلویی»). با baseQty در Listing.packaging
+   *  ذخیره می‌شود تا کارت‌ها و ویرایش همان را نشان بدهند.
+   *  null صریح = فله/بدون بسته؛ undefined = بدون تغییر. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(60)
+  packLabel?: string | null;
 
 
   @IsOptional()

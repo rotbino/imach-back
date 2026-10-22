@@ -51,6 +51,8 @@ const LISTING_SELECT = {
   pricedAt: true,
   baseQty: true,
   pricePerBaseMinor: true,
+  // مدل واحد (۱۰۲۶) — بستهٔ انتخابی ردیف: [{label, qty}] برای کارت‌های عمومی
+  packaging: true,
   brand: { select: { id: true, name: true } },
   good: {
     select: {
