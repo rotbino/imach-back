@@ -714,6 +714,20 @@ model Inquiry {
   /// این کلید همهٔ ردیف‌های همان ارسال را در یک کارت «پیشنهادها» گروه می‌کند.
   /// ردیف‌های legacy مقدار ندارند → هر کدام گروه تک‌نفرهٔ خودشان هستند.
   rfqGroupId       String?
+  /// M4 — سبد کامل استعلام (snapshot): [{goodId, qty, listingId}]؛
+  /// listingId = آگهی فروشِ «همین فروشنده» برای آن قلم (null = ندارد).
+  /// سمت فروشنده فقط قلم‌های خودش سرو می‌شود (حریم سبد خریدار)؛
+  /// legacy null = تک‌قلمی که از listing.goodId + volume ساخته می‌شود.
+  items            Json?
+  /// M4 — مهلت پاسخ سرورمبنا (۱..۵ روز از ارسال)؛ null = بدون مهلت (legacy).
+  /// وضعیت EXPIRED «lazy» است: در خواندن مقایسه می‌شود، ستون نیست.
+  expiresAt        DateTime?
+  /// M4 — خریدار استعلام را بست («بستن استعلام» ۲۶) / بازکرد (restart).
+  stoppedAt        DateTime?
+  /// M4 — بستن نهایی: پذیرش پیشنهاد (۲۷) یا پایان مسیر؛ همراه resultText.
+  closedAt         DateTime?
+  /// M4 — متن نتیجهٔ گروه («پذیرفت: … — جمع X تومان»)؛ برای ردیف «پایان‌یافته».
+  resultText       String?
   status           String   @default("NEW") // NEW | ANSWERED | ARCHIVED
   isRead           Boolean  @default(false)
   createdAt        DateTime @default(now())
@@ -747,6 +761,18 @@ model Offer {
   /// فاز ۴ مهاجرت (sheet-offer-status) — نشان خصوصی خریدار روی این پیشنهاد:
   /// INTERESTED | CONTACTED | REVIEWED · null = بدون وضعیت. فقط خریدار می‌بیند.
   status     String?
+  /// M4 — پیوند مستقیم به گروه استعلام؛ جانشین هیوریستیک listing:seller+زمان
+  /// برای پیشنهادهای تازه (sendOffer از استعلام). سرد (offerBuyRequest) = null.
+  rfqGroupId String?
+  /// M4 — قیمت هر قلم، هم‌ترتیب با Inquiry.items گروه؛ null = «این قلم را
+  /// نمی‌دارد» (پیشنهاد ناقص). legacy null = تک‌قلمی [priceMinor].
+  prices     Json?
+  /// M4 — شرایط پرداخت ساختاریافته {chk: 0..99, days} — chk=0 یعنی تمام‌نقدی؛
+  /// هم‌زمان با payTerm متنی legacy ذخیره می‌شود (بازتاب زندهٔ فرم ۱۲).
+  pay        Json?
+  /// M4 — شرایط تحویل ساختاریافته {ship: bool, by: "seller"|"customer"}؛
+  /// ship=false یعنی تحویل حضوری.
+  dlv        Json?
   createdAt  DateTime @default(now())
 
   buyer   Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)

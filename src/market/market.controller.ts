@@ -27,6 +27,7 @@ import { NotificationsService } from "../notifications/notifications.service";
 import { PromosService } from "../promos/promos.service";
 import { MatchingService } from "./matching.service";
 import {
+  AcceptOfferDto,
   ArchiveWatchedGoodDto,
   BusinessIdQueryDto,
   FollowBuyerDto,
@@ -48,6 +49,12 @@ import {
 /** ObjectId hex guard — keeps invalid params away from Prisma. */
 const isObjectId = (v: string | undefined): v is string => /^[a-f\d]{24}$/i.test(v ?? "");
 
+/** M4 — whereٔ گروه استعلام: UUID = فقط rfqGroupId · ObjectId ۲۴hex = شامل
+ *  legacy (id خودِ استعلام تک‌ردیفی) هم. رشتهٔ دیگر = فقط rfqGroupId —
+ *  وگرنه Prisma روی id با «Malformed ObjectID» می‌ترکد. */
+const groupWhere = (g: string) =>
+  isObjectId(g) ? { OR: [{ rfqGroupId: g }, { id: g }] } : { rfqGroupId: g };
+
 /** رقم فارسی → لاتین — برای خواندن اندازه‌ی بسته از variantLabel */
 const FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
 function toLatinDigits(s: string): string {
@@ -68,6 +75,54 @@ function packFactor(variantLabel: string | null): number {
 /** قیمت نرمال‌شده بر واحد پایه (per کیلو/گرم/لیتر) — برای مقایسه‌ی منصفانه */
 const perBase = (s: { priceMinor: number | null; variantLabel: string | null }): number =>
   (s.priceMinor as number) / packFactor(s.variantLabel);
+
+// ═══ M4 — استعلام چندقلمی (FD-24) — ابزارهای مشترک ═══
+
+/** قلم استعلام — snapshot ذخیره‌شده در Inquiry.items */
+interface RfqItem {
+  goodId: string;
+  qty: number;
+  /** آگهی فروشِ «همین فروشنده» برای این قلم — null = ندارد */
+  listingId: string | null;
+}
+
+/** اقلام استعلام: JSON تازه یا legacy تک‌قلمی از listing/volume */
+function rfqItemsOf(row: {
+  items: unknown;
+  volume: number;
+  listingId: string;
+  listing: { goodId: string } | { good: { id: string } } | null;
+}): RfqItem[] {
+  const raw = row.items as unknown;
+  if (Array.isArray(raw) && raw.length > 0) {
+    return raw.map((x) => {
+      const it = x as { goodId: string; qty?: number; listingId?: string | null };
+      return { goodId: String(it.goodId), qty: Number(it.qty) || 1, listingId: it.listingId ? String(it.listingId) : null };
+    });
+  }
+  const good =
+    row.listing && "goodId" in row.listing
+      ? (row.listing as { goodId: string }).goodId
+      : row.listing?.good?.id;
+  return [{ goodId: good ?? "", qty: row.volume ?? 1, listingId: row.listingId }];
+}
+
+/** عدد → رقم فارسی با جداکنندهٔ هزارگان «٬» — برای resultText سروری */
+function faMoney(n: number): string {
+  const fa = "۰۱۲۳۴۵۶۷۸۹";
+  return Math.round(n)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, "٬")
+    .replace(/\d/g, (d) => fa[Number(d)]);
+}
+
+const clampInt = (v: number | undefined, min: number, max: number, dflt: number): number => {
+  const n = Number(v);
+  if (!Number.isFinite(n)) return dflt;
+  return Math.max(min, Math.min(max, Math.round(n)));
+};
+
+const DAY_MS = 86_400_000;
 
 const OFFER_INCLUDE = {
   listing: {
@@ -98,6 +153,8 @@ const INQUIRY_INCLUDE = {
       currency: true,
       /** فاز ۴ — برچسب واریانت برای کارت «مطابق کاتالوگ شما» (طرح ۰۶) */
       variantLabel: true,
+      /** M4 — برای legacy تک‌قلمی: goodId روی خود listing لازم است */
+      goodId: true,
       good: {
         select: {
           id: true,
@@ -215,6 +272,14 @@ export class MarketController {
    * حداکثر ۵ گیرنده در کل). Inquiry روی آگهیِ فروشِ همان تأمین‌کننده می‌نشیند —
    * پیشنهادِ قیمت را خودِ فروشنده بعداً با sendOffer می‌فرستد (پاسخ واقعی،
    * نه پاسخِ آنیِ موتور). پاسخ‌ها در «درخواست‌های من» خریدار می‌نشینند.
+   *
+   * M4 (FD-24) — استعلام چندقلمی:
+   *   · items[] می‌آید (۱..۸ قلم، مقدار هر قلم)؛ goodId+volume = میراث تک‌قلمی.
+   *   · گیرندگان چندقلمی = «اجتماع دارندگان قلم‌ها» (تیک قفلِ روشن در فرم ۲۵)؛
+   *     مرتب‌سازی: پوشش نزولی، بعد ارزان‌ترین قیمت صعودی؛ سقف ۱۵.
+   *   · سبد به‌عنوان snapshot روی هر ردیف می‌نشیند (items JSON) با رزولوشن
+   *     per-فروشنده: listingId هر قلم = آگهیِ «همین فروشنده» (null = ندارد).
+   *   · مهلت سرورمبنا: expiresDays ۱..۵ (پیش‌فرض ۳ — pills فرم ۲۵) → expiresAt.
    */
   @Post("requestQuote")
   @HttpCode(HttpStatus.CREATED)
@@ -224,75 +289,123 @@ export class MarketController {
     @CurrentLocale() locale: Locale
   ) {
     const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
-    const good = await this.prisma.good.findUnique({
-      where: { id: body.goodId },
+
+    // ── M4: سبد — چندقلمی (items[]) یا تک‌قلمی legacy (goodId+volume) ──
+    const multi = (body.items?.length ?? 0) > 0;
+    const basket: { goodId: string; qty: number }[] = multi
+      ? body.items!.map((it) => ({ goodId: it.goodId, qty: clampInt(it.qty, 1, 1e9, 1) }))
+      : body.goodId && body.volume
+        ? [{ goodId: body.goodId, qty: clampInt(body.volume, 1, 1e9, 1) }]
+        : [];
+    if (basket.length === 0) {
+      throw AppError.badRequest("اقلام استعلام را بفرست (items یا goodId+volume)", "EMPTY_BASKET");
+    }
+    if (new Set(basket.map((b) => b.goodId)).size !== basket.length) {
+      throw AppError.badRequest("قلم تکراری در استعلام", "DUP_ITEM");
+    }
+    const goods = await this.prisma.good.findMany({
+      where: { id: { in: basket.map((b) => b.goodId) } },
       select: { id: true, nameFa: true },
     });
-    if (!good) throw AppError.notFound("Good not found");
+    const goodMap = new Map(goods.map((g) => [g.id, g]));
+    if (goods.length !== basket.length) throw AppError.notFound("Good not found");
 
-    const hasSelection = (body.supplierIds?.length ?? 0) > 0;
-    if (!hasSelection && !body.includeNetwork) {
+    const hasSelection = !multi && (body.supplierIds?.length ?? 0) > 0;
+    if (!multi && !hasSelection && !body.includeNetwork) {
       throw AppError.badRequest("حداقل یک تأمین‌کننده انتخاب کنید یا شبکه iMach را روشن کنید", "NO_RECIPIENT");
     }
 
-    // رزولوشن گیرندگان: sellerId → آگهیِ فروشِ فعالِ همان کالا (ردیف تابلو)
-    const CAP = 5;
-    const targets = new Map<string, string>(); // sellerBusinessId → listingId
-    if (hasSelection) {
-      const rows = await this.prisma.listing.findMany({
-        where: {
-          goodId: good.id,
-          isActive: true,
-          mode: { in: ["SELL", "BOTH"] },
-          businessId: { in: [...new Set(body.supplierIds as string[])].filter((id) => id !== business.id) },
+    // ── رزولوشن گیرندگان: چندقلمی = اجتماع دارندگان (قفل) · تک‌قلمی = انتخابی ──
+    const CAP = multi ? 15 : 5;
+    const listingRows = await this.prisma.listing.findMany({
+      where: {
+        goodId: { in: basket.map((b) => b.goodId) },
+        isActive: true,
+        mode: { in: ["SELL", "BOTH"] },
+        businessId: {
+          not: business.id,
+          ...(hasSelection ? { in: [...new Set(body.supplierIds as string[])] } : {}),
         },
-        select: { id: true, businessId: true },
-        orderBy: { priceMinor: "asc" },
-      });
-      for (const r of rows) if (!targets.has(r.businessId)) targets.set(r.businessId, r.id);
+      },
+      select: { id: true, businessId: true, goodId: true, priceMinor: true },
+      orderBy: { priceMinor: "asc" },
+    });
+    // sellerId → (goodId → ارزان‌ترین آگهی)
+    const perSeller = new Map<string, Map<string, { listingId: string; price: number | null }>>();
+    for (const r of listingRows) {
+      let m = perSeller.get(r.businessId);
+      if (!m) {
+        m = new Map();
+        perSeller.set(r.businessId, m);
+      }
+      if (!m.has(r.goodId)) m.set(r.goodId, { listingId: r.id, price: r.priceMinor }); // مرتب asc ⇒ اولین = ارزان‌ترین
     }
 
-    // گسترش به شبکه iMach — بقیه ظرفیت با موتور تطبیق (امتیاز + جغرافیا)
-    if (body.includeNetwork && targets.size < CAP) {
+    // گسترش به شبکه iMach — فقط مسیر تک‌قلمی میراث (چندقلمی: اجتماع کامل است)
+    if (!multi && body.includeNetwork && perSeller.size < CAP) {
       const matches = await this.matching.suppliersForNeed(
         business.id,
         { city: business.city, province: business.province, country: business.country },
-        good.id,
-        body.volume,
+        basket[0].goodId,
+        basket[0].qty,
         CAP
       );
       for (const m of matches) {
-        if (targets.size >= CAP) break;
-        if (!targets.has(m.sellerId)) targets.set(m.sellerId, m.listingId);
+        if (perSeller.size >= CAP) break;
+        if (!perSeller.has(m.sellerId)) {
+          perSeller.set(m.sellerId, new Map([[basket[0].goodId, { listingId: m.listingId, price: null }]]));
+        }
       }
     }
 
-    if (targets.size === 0) return { created: 0, networkAdded: 0, inquiries: [] };
+    if (perSeller.size === 0) return { created: 0, groupId: null, inquiries: [] };
+
+    // M4 — مرتب‌سازی گیرندگان: پوشش نزولی، بعد ارزان‌ترینِ اولین قلم صعودی
+    const minPriceOf = (m: Map<string, { listingId: string; price: number | null }>): number => {
+      const prices = [...m.values()].map((v) => v.price).filter((p): p is number => p != null);
+      return prices.length ? Math.min(...prices) : Number.POSITIVE_INFINITY;
+    };
+    const sellers = [...perSeller.entries()]
+      .sort((a, b) => b[1].size - a[1].size || minPriceOf(a[1]) - minPriceOf(b[1]))
+      .slice(0, CAP);
 
     const note = body.note?.trim() || null;
     // فاز ۴ مهاجرت — کلید گروه: همهٔ ردیف‌های این ارسال در یک کارت «پیشنهادها»
     const rfqGroupId = randomUUID();
     const deliveryCity = body.deliveryCity?.trim() || business.city || null;
+    // M4 — مهلت سرورمبنا (۱..۵ روز؛ پیش‌فرض ۳)
+    const days = clampInt(body.expiresDays, 1, 5, 3);
+    const expiresAt = new Date(Date.now() + days * DAY_MS);
     // ── تایم‌اوتِ تراکنش: پیش‌فرض پرایسما ۵ ثانیه است؛ از ایران هر create یک
     // رفت‌وبرگشت ~۲۰۰ms+ به Atlas دارد و تراکنشِ ۵ گیرنده مرتب کرش می‌کرد
     // (باگ واقعی که در تست E2E دیده شد — 500 روی استعلام). پنجره را ۳۰ثانیه کردیم.
     const created = await this.prisma.$transaction(
       async (tx) => {
         const inquiries = [];
-        for (const [sellerId, listingId] of targets) {
+        for (const [sellerId, m] of sellers) {
+          // M4 — snapshot سبد با رزولوشن این فروشنده (حریم: قلم‌های بدون آگهی null)
+          const items = basket.map((b) => ({
+            goodId: b.goodId,
+            qty: b.qty,
+            listingId: m.get(b.goodId)?.listingId ?? null,
+          }));
+          const firstCovered = items.find((it) => it.listingId);
+          if (!firstCovered) continue; // ناممکن — دارنده حداقل یک قلم دارد
           inquiries.push(
             await tx.inquiry.create({
               data: {
                 buyerId: business.id,
                 sellerId,
-                listingId,
-                volume: body.volume,
+                listingId: firstCovered.listingId as string,
+                volume: basket[0].qty,
                 note,
                 frequency: body.frequency ?? null,
                 delivery: body.delivery?.trim() || null,
                 deliveryCity,
                 targetPriceMinor: body.targetPriceMinor ?? null,
                 rfqGroupId,
+                items,
+                expiresAt,
               },
             })
           );
@@ -305,12 +418,16 @@ export class MarketController {
     this.invalidateBuyerSide(business.id);
 
     // درخواست به هر فروشنده رسید — هر مالک یک اعلان (dedupe با pushMany)
-    const sellers = await this.prisma.business.findMany({
-      where: { id: { in: [...targets.keys()] }, ownerId: { not: null } },
+    const sellers2 = await this.prisma.business.findMany({
+      where: { id: { in: [...perSeller.keys()] }, ownerId: { not: null } },
       select: { id: true, ownerId: true },
     });
+    const firstGood = goodMap.get(basket[0].goodId);
+    const goodLabel = multi
+      ? `${firstGood?.nameFa ?? ""} +${basket.length - 1} قلم دیگر`
+      : (firstGood?.nameFa ?? "");
     await this.notifications.pushMany(
-      sellers.map((s) => ({
+      sellers2.map((s) => ({
         userId: s.ownerId as string,
         // فاز ۸ — گیتِ «درخواست‌ها و پاسخ‌های قیمت» از notifPrefs
         bizId: s.id,
@@ -318,13 +435,14 @@ export class MarketController {
         actorId: business.id,
         actorName: business.name,
         actorSlug: business.slug,
-        good: good.nameFa,
+        good: goodLabel,
       }))
     );
 
     const selectedSet = new Set(body.supplierIds ?? []);
     return {
       created: created.length,
+      groupId: rfqGroupId,
       networkAdded: created.filter((i) => !selectedSet.has(i.sellerId)).length,
       inquiries: created.map((i) => ({ id: i.id, sellerId: i.sellerId, status: i.status })),
     };
@@ -1091,7 +1209,18 @@ export class MarketController {
     return offer;
   }
 
-  /** Seller answers an inquiry with a concrete price → becomes an Offer for the buyer. */
+  /**
+   * Seller answers an inquiry with a concrete price → becomes an Offer for the buyer.
+   *
+   * M4 (FD-24) — چندقلمی:
+   *   · prices[] هم‌ترتیب با Inquiry.items؛ null = «این قلم را نمی‌دارد»
+   *     (پیشنهاد ناقص مجاز است). قلمِ بدون آگهیِ فروشنده باید null بماند (حریم).
+   *   · priceMinor (legacy) = اولین قیمت غیر-null — سازگاری رندرهای قدیمی.
+   *   · شرایط ساختاریافته pay {chk, days} / dlv {ship, by} ذخیره می‌شود و
+   *     متنِ معادل آن (payTerm/delivTerm) هم‌زمان ساخته می‌شود تا کلاینت‌های
+   *     قدیمی هم بخوانند — «یک زبان، دو سو» (بازتاب زندهٔ فرم ۱۲).
+   *   · مهلت: استعلامِ بسته/متوقف/منقضی پاسخ نمی‌گیرد (lazy EXPIRD در خواندن).
+   */
   @Post("sendOffer")
   async sendOffer(
     @Body() body: SendOfferDto,
@@ -1103,26 +1232,87 @@ export class MarketController {
       where: { id: body.inquiryId },
       include: {
         listing: {
-          select: { minOrder: true, priceMinor: true, currency: true, good: { select: { nameFa: true } } },
+          select: {
+            id: true,
+            goodId: true,
+            minOrder: true,
+            priceMinor: true,
+            currency: true,
+            good: { select: { nameFa: true } },
+          },
         },
       },
     });
     if (!inquiry) throw AppError.notFound("Inquiry not found");
     await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
 
+    // M4 — مهلت و چرخه: بعد از بستن/انقضا پاسخ معتبر نیست
+    if (inquiry.closedAt || inquiry.stoppedAt) {
+      throw AppError.badRequest("این استعلام بسته شده است", "RFQ_CLOSED");
+    }
+    if (inquiry.expiresAt && inquiry.expiresAt.getTime() < Date.now()) {
+      throw AppError.badRequest("مهلت این درخواست گذشته است", "RFQ_EXPIRED");
+    }
+
+    // M4 — اقلام + قیمت‌ها (هم‌ترتیب؛ null = ندارد)
+    const items = rfqItemsOf(inquiry);
+    let prices: Array<number | null> | null = null;
+    if (body.prices && body.prices.length > 0) {
+      if (body.prices.length !== items.length) {
+        throw AppError.badRequest("تعداد قیمت‌ها با اقلام استعلام نمی‌خواند", "PRICE_MISMATCH");
+      }
+      prices = body.prices.map((p, i) => {
+        if (p == null) return null;
+        if (!items[i].listingId) {
+          // حریم سبد خریدار — قلمی که فروشنده ندارد را نمی‌تواند قیمت بدهد
+          throw AppError.badRequest("قلمی که در کاتالوگ نداری را قیمت نده", "ITEM_NOT_MINE");
+        }
+        return clampInt(p, 1, 1e12, 1);
+      });
+      if (prices.every((p) => p == null)) {
+        throw AppError.badRequest("حداقل یک قیمت لازم است", "NO_PRICE");
+      }
+    }
+    const firstPrice = prices?.find((p): p is number => p != null) ?? body.priceMinor;
+    if (!firstPrice) throw AppError.badRequest("قیمت پیشنهادی لازم است", "NO_PRICE");
+
+    // M4 — شرایط ساختاریافته + متنِ هم‌گام (legacy)
+    const pay = body.pay
+      ? { chk: clampInt(body.pay.chk, 0, 99, 0), days: clampInt(body.pay.days, 1, 365, 30) }
+      : null;
+    const dlv = body.dlv
+      ? { ship: !!body.dlv.ship, by: body.dlv.by === "customer" ? "customer" : "seller" }
+      : null;
+    const payTerm =
+      pay
+        ? pay.chk > 0
+          ? `${100 - pay.chk}٪ نقدی + ${pay.chk}٪ چک (تا ${pay.days} روز)`
+          : "نقدی"
+        : body.payTerm?.trim() || null;
+    const delivTerm =
+      dlv
+        ? dlv.ship
+          ? `ارسال — حمل با ${dlv.by === "customer" ? "مشتری" : "فروشنده"}`
+          : "تحویل حضوری"
+        : body.delivTerm?.trim() || null;
+
     const offer = await this.prisma.offer.create({
       data: {
         buyerId: inquiry.buyerId,
         sellerId: inquiry.sellerId,
         listingId: inquiry.listingId,
-        priceMinor: body.priceMinor,
+        priceMinor: firstPrice,
         currency: inquiry.listing.currency ?? "IRR",
         minOrder: inquiry.listing.minOrder ?? 0,
         score: 0, // manual answer — no engine score
         isSpecial: false,
         note: body.note?.trim() || null,
-        payTerm: body.payTerm?.trim() || null,
-        delivTerm: body.delivTerm?.trim() || null,
+        payTerm,
+        delivTerm,
+        rfqGroupId: inquiry.rfqGroupId ?? null,
+        prices,
+        pay,
+        dlv,
       },
       include: OFFER_INCLUDE,
     });
@@ -1157,7 +1347,15 @@ export class MarketController {
     return offer;
   }
 
-  /** Inquiries received by a seller. */
+  /**
+   * Inquiries received by a seller (۱۱ — درخواست‌های قیمت).
+   * M4 — چندقلمی:
+   *   · items = فقط قلم‌هایی که «این فروشنده» دارد (حریم سبد خریدار) با
+   *     قیمت/بستهٔ آگهی خودش برای pre-fill فرم ۱۲ («کاتالوک تو: X»).
+   *   · itemsTotal = n کل قلم‌های استعلام (بج «k از n قلم»).
+   *   · daysLeft از expiresAt سروری؛ displayStatus: CLOSED | STOPPED |
+   *     EXPIRED (lazy) | ANSWERED | NEW | ARCHIVED.
+   */
   @Get("getInquiries")
   async getInquiries(
     @Query() query: InquiriesQueryDto,
@@ -1175,7 +1373,66 @@ export class MarketController {
       }),
       this.prisma.inquiry.count({ where: { sellerId: query.businessId, isRead: false } }),
     ]);
-    return { ...toPage(rows, cap), unreadCount: unread };
+
+    // ── M4 — شکل‌دهی چندقلمی + حریم سبد خریدار ──
+    const allItems = rows.map((r) => rfqItemsOf(r));
+    const goodIds = [...new Set(allItems.flat().map((it) => it.goodId))].filter(Boolean);
+    const myListingIds = [...new Set(allItems.flat().map((it) => it.listingId).filter((x): x is string => !!x))];
+    const [goods, myListings] = await Promise.all([
+      goodIds.length
+        ? this.prisma.good.findMany({
+            where: { id: { in: goodIds } },
+            select: { id: true, nameFa: true, nameEn: true, unit: true },
+          })
+        : [],
+      myListingIds.length
+        ? this.prisma.listing.findMany({
+            where: { id: { in: myListingIds } },
+            select: {
+              id: true, priceMinor: true, currency: true, variantLabel: true,
+              baseQty: true, packaging: true, pricePerBaseMinor: true, goodId: true,
+            },
+          })
+        : [],
+    ]);
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+    const listingById = new Map(myListings.map((l) => [l.id, l]));
+    const now = Date.now();
+
+    const shaped = rows.map((r, idx) => {
+      const items = allItems[idx];
+      const mine = items.filter((it) => it.listingId); // حریم: فقط قلم‌های خودم
+      return {
+        ...r,
+        items: mine.map((it) => {
+          const l = it.listingId ? listingById.get(it.listingId) : undefined;
+          return {
+            goodId: it.goodId,
+            qty: it.qty,
+            listingId: it.listingId,
+            listing: l
+              ? {
+                  id: l.id, priceMinor: l.priceMinor, currency: l.currency,
+                  variantLabel: l.variantLabel, baseQty: l.baseQty,
+                  packaging: l.packaging, pricePerBaseMinor: l.pricePerBaseMinor,
+                }
+              : null,
+            good: goodById.get(it.goodId) ?? null,
+          };
+        }),
+        itemsTotal: items.length,
+        myCover: mine.length,
+        daysLeft: r.expiresAt ? Math.max(0, Math.ceil((r.expiresAt.getTime() - now) / DAY_MS)) : null,
+        displayStatus: r.closedAt
+          ? "CLOSED"
+          : r.stoppedAt
+            ? "STOPPED"
+            : r.expiresAt && r.expiresAt.getTime() < now
+              ? "EXPIRED"
+              : r.status,
+      };
+    });
+    return { ...toPage(shaped, cap), unreadCount: unread };
   }
 
   @Post("markInquiryRead/:id")
@@ -1217,6 +1474,298 @@ export class MarketController {
     });
     this.cache.invalidateTag(`market:inq:${inquiry.sellerId}`);
     return { ok: true };
+  }
+
+  // ═══ M4 — چرخهٔ گروهی استعلام (۲۴/۲۶/۲۷) + پذیرش پیشنهاد ═══
+
+  /** گروه‌های استعلام خریدار را با مالکیت چک می‌کند — ردیف نمونه برمی‌گرداند.
+   *  گروه = rfqGroupId مشترک (UUID)؛ legacy = id خودِ استعلام تک‌ردیفی (ObjectId).
+   *  ⚠ نه isObjectId بگیر نه id خالی — groupWhere هر دو شکل را امن می‌پوشاند. */
+  private async rfqGroupOf(
+    businessId: string,
+    groupId: string,
+    locale: Locale,
+    user: AuthUser
+  ) {
+    const sample = await this.prisma.inquiry.findFirst({
+      where: groupWhere(groupId),
+      orderBy: { createdAt: "asc" },
+    });
+    if (!sample) throw AppError.notFound("RFQ not found");
+    await assertBusinessOwner(this.prisma, user, sample.buyerId, locale);
+    if (sample.buyerId !== businessId) {
+      // ردیف اول ممکن است مالِ خریدار دیگری باشد (id تصادفی) — چک دقیق‌تر
+      const mine = await this.prisma.inquiry.findFirst({
+        where: { buyerId: businessId, ...groupWhere(groupId) },
+      });
+      if (!mine) throw AppError.notFound("RFQ not found");
+      return { id: groupId, sample: mine };
+    }
+    return { id: sample.rfqGroupId ?? sample.id, sample };
+  }
+
+  /** M4 (N9) — خریدار استعلام باز را می‌بندد («بستن این استعلام» ۲۶) بدون پذیرش. */
+  @Post("stopRfq/:groupId")
+  async stopRfq(
+    @Param("groupId") groupId: string,
+    @Body() body: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const { id } = await this.rfqGroupOf(body.businessId, groupId, locale, user);
+    await this.prisma.inquiry.updateMany({
+      where: groupWhere(id),
+      data: { stoppedAt: new Date(), closedAt: null, resultText: null },
+    });
+    this.invalidateBuyerSide(body.businessId);
+    return { ok: true };
+  }
+
+  /** M4 (N9) — بازکردن استعلامِ متوقف‌شده (پذیرفته‌شده دوباره باز نمی‌شود). */
+  @Post("restartRfq/:groupId")
+  async restartRfq(
+    @Param("groupId") groupId: string,
+    @Body() body: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const { id, sample } = await this.rfqGroupOf(body.businessId, groupId, locale, user);
+    if (sample.closedAt) {
+      throw AppError.badRequest("استعلام پذیرفته‌شده دوباره باز نمی‌شود", "RFQ_ACCEPTED");
+    }
+    await this.prisma.inquiry.updateMany({
+      where: groupWhere(id),
+      data: { stoppedAt: null, closedAt: null, resultText: null },
+    });
+    this.invalidateBuyerSide(body.businessId);
+    return { ok: true };
+  }
+
+  /** M4 (N9) — بایگانی گروه: از فهرست خریدار می‌افتد؛ تاریخچه دست‌نخورده. */
+  @Post("archiveRfq/:groupId")
+  async archiveRfq(
+    @Param("groupId") groupId: string,
+    @Body() body: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const { id } = await this.rfqGroupOf(body.businessId, groupId, locale, user);
+    await this.prisma.inquiry.updateMany({
+      where: groupWhere(id),
+      data: { status: "ARCHIVED", isRead: true },
+    });
+    this.invalidateBuyerSide(body.businessId);
+    return { ok: true };
+  }
+
+  /** M4 (N9) — «تکرار درخواست»: کلون سبد با گیرندگانِ تازه (refresh اجتماع دارندگان)
+   *  + مهلت تازه (پیش‌فرض ۳ روز). سبد/یادداشت/قیمت هدف کپی می‌شوند. */
+  @Post("repeatRfq/:groupId")
+  @HttpCode(HttpStatus.CREATED)
+  async repeatRfq(
+    @Param("groupId") groupId: string,
+    @Body() body: BusinessIdQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const { sample } = await this.rfqGroupOf(body.businessId, groupId, locale, user);
+    const src = await this.prisma.inquiry.findFirst({
+      where: groupWhere(groupId),
+      include: { listing: { select: { goodId: true } } },
+      orderBy: { createdAt: "asc" },
+    });
+    if (!src) throw AppError.notFound("RFQ not found");
+    const basket = rfqItemsOf(src).map((it) => ({ goodId: it.goodId, qty: it.qty }));
+    if (basket.length === 0) throw AppError.badRequest("سبد خالی است", "EMPTY_BASKET");
+
+    // refresh دارندگان — همان رزولوشن requestQuote (اجتماع + مرتب پوشش)
+    const listingRows = await this.prisma.listing.findMany({
+      where: {
+        goodId: { in: basket.map((b) => b.goodId) },
+        isActive: true,
+        mode: { in: ["SELL", "BOTH"] },
+        businessId: { not: business.id },
+      },
+      select: { id: true, businessId: true, goodId: true, priceMinor: true },
+      orderBy: { priceMinor: "asc" },
+    });
+    const perSeller = new Map<string, Map<string, string>>();
+    for (const r of listingRows) {
+      let m = perSeller.get(r.businessId);
+      if (!m) {
+        m = new Map();
+        perSeller.set(r.businessId, m);
+      }
+      if (!m.has(r.goodId)) m.set(r.goodId, r.id);
+    }
+    if (perSeller.size === 0) {
+      throw AppError.badRequest("هیچ تأمین‌کننده‌ای این کالاها را ندارد", "NO_HOLDER");
+    }
+    const minCover = (m: Map<string, string>) => m.size;
+    const sellers = [...perSeller.entries()].sort((a, b) => minCover(b[1]) - minCover(a[1])).slice(0, 15);
+
+    const rfqGroupId = randomUUID();
+    const expiresAt = new Date(Date.now() + 3 * DAY_MS);
+    const created = await this.prisma.$transaction(
+      async (tx) => {
+        const rows = [];
+        for (const [sellerId, m] of sellers) {
+          const items = basket.map((b) => ({
+            goodId: b.goodId,
+            qty: b.qty,
+            listingId: m.get(b.goodId) ?? null,
+          }));
+          const firstCovered = items.find((it) => it.listingId);
+          if (!firstCovered) continue;
+          rows.push(
+            await tx.inquiry.create({
+              data: {
+                buyerId: business.id,
+                sellerId,
+                listingId: firstCovered.listingId as string,
+                volume: basket[0].qty,
+                note: src.note,
+                frequency: src.frequency,
+                delivery: src.delivery,
+                deliveryCity: src.deliveryCity,
+                targetPriceMinor: src.targetPriceMinor,
+                rfqGroupId,
+                items,
+                expiresAt,
+              },
+            })
+          );
+        }
+        return rows;
+      },
+      { timeout: 30_000, maxWait: 10_000 }
+    );
+
+    // اعلان به فروشنده‌های تازه
+    const owners = await this.prisma.business.findMany({
+      where: { id: { in: [...perSeller.keys()] }, ownerId: { not: null } },
+      select: { id: true, ownerId: true },
+    });
+    const firstGood = await this.prisma.good.findUnique({
+      where: { id: basket[0].goodId },
+      select: { nameFa: true },
+    });
+    const goodLabel =
+      basket.length > 1 ? `${firstGood?.nameFa ?? ""} +${basket.length - 1} قلم دیگر` : (firstGood?.nameFa ?? "");
+    await this.notifications.pushMany(
+      owners.map((s) => ({
+        userId: s.ownerId as string,
+        bizId: s.id,
+        type: "QUOTE" as const,
+        actorId: business.id,
+        actorName: business.name,
+        actorSlug: business.slug,
+        good: goodLabel,
+      }))
+    );
+
+    this.invalidateBuyerSide(business.id);
+    return { ok: true, groupId: rfqGroupId, created: created.length };
+  }
+
+  /**
+   * M4 — پذیرش پیشنهاد (۲۷): استعلام می‌بندد (همهٔ ردیف‌های گروه) +
+   * resultText («پذیرفت: فروشنده — جمع X تومان») + اعلان به فروشندهٔ برنده.
+   * سفارش‌سازی در M5 وصل می‌شود؛ items/total برای کال‌اوت «ثبت سفارش»
+   * برمی‌گردد (snapshot قلم‌های قیمت‌خورده — جنس همان offerOrderCreate).
+   */
+  @Post("acceptOffer/:id")
+  async acceptOffer(
+    @Param("id") offerId: string,
+    @Body() body: AcceptOfferDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(offerId)) throw AppError.notFound("Offer not found");
+    const offer = await this.prisma.offer.findUnique({
+      where: { id: offerId },
+      include: {
+        seller: { select: { id: true, name: true, slug: true, ownerId: true } },
+        listing: { select: { good: { select: { nameFa: true } } } },
+      },
+    });
+    if (!offer) throw AppError.notFound("Offer not found");
+    await assertBusinessOwner(this.prisma, user, offer.buyerId, locale);
+    if (offer.buyerId !== body.businessId) throw AppError.notFound("Offer not found");
+
+    // گروه استعلام این پیشنهاد — پیوند مستقیم یا هیوریستیک legacy
+    let groupId: string | null = offer.rfqGroupId;
+    if (!groupId) {
+      const legacy = await this.prisma.inquiry.findFirst({
+        where: {
+          listingId: offer.listingId,
+          sellerId: offer.sellerId,
+          buyerId: offer.buyerId,
+          createdAt: { lte: offer.createdAt },
+        },
+        orderBy: { createdAt: "desc" },
+        select: { rfqGroupId: true, id: true },
+      });
+      groupId = legacy?.rfqGroupId ?? legacy?.id ?? null;
+    }
+
+    // اقلام + جمع (قلم‌های قیمت‌خورده — جنس offerOrderCreate برای M5)
+    let items: Array<{ goodId: string; qty: number; priceMinor: number | null }> = [];
+    let totalMinor: number | null = null;
+    if (groupId) {
+      const inq = await this.prisma.inquiry.findFirst({
+        where: groupWhere(groupId),
+        include: { listing: { select: { goodId: true } } },
+        orderBy: { createdAt: "asc" },
+      });
+      if (inq) {
+        const rfqItems = rfqItemsOf(inq);
+        const prices = (Array.isArray(offer.prices) && (offer.prices as unknown[]).length
+          ? (offer.prices as Array<number | null>)
+          : [offer.priceMinor]
+        ).slice(0, rfqItems.length);
+        while (prices.length < rfqItems.length) prices.push(null);
+        items = rfqItems.map((it, i) => ({
+          goodId: it.goodId,
+          qty: it.qty,
+          priceMinor: prices[i],
+        }));
+        totalMinor = items.reduce((sum, it) => (it.priceMinor != null ? sum + it.priceMinor * it.qty : sum), 0);
+        if (rfqItems.length === 1 && items[0]?.priceMinor != null) totalMinor = items[0].priceMinor * items[0].qty;
+      }
+    }
+
+    const single = items.length <= 1;
+    const amount = single ? offer.priceMinor : (totalMinor ?? offer.priceMinor);
+    const resultText = `پذیرفت: ${offer.seller.name} — ${single ? faMoney(amount) : `جمع ${faMoney(amount)}`} ت`;
+
+    if (groupId) {
+      await this.prisma.inquiry.updateMany({
+        where: groupWhere(groupId),
+        data: { closedAt: new Date(), stoppedAt: null, resultText },
+      });
+    }
+
+    // اعلان به فروشندهٔ برنده — مهم‌ترین خبرِ اوست (FD-19)
+    if (offer.seller.ownerId) {
+      await this.notifications.push({
+        userId: offer.seller.ownerId,
+        bizId: offer.seller.id,
+        type: "OFFER",
+        actorId: offer.buyerId,
+        good: offer.listing.good.nameFa,
+      });
+    }
+
+    this.invalidateBuyerSide(offer.buyerId);
+    return {
+      ok: true,
+      resultText,
+      totalMinor: totalMinor ?? offer.priceMinor,
+      items: items.filter((it) => it.priceMinor != null),
+      groupId,
+    };
   }
 
   // ═══ فاز ۵ — دنبال‌کردن قیمت (شکاف ۱) و لیست خرید (طرح ۰۸) ═══
@@ -1561,13 +2110,16 @@ export class MarketController {
 
   /**
    * GET /market/getMyRfqs (فاز ۴ مهاجرت · sc-offers) — استعلام‌های گروهی خریدار.
-   * هر «ارسال استعلام» (requestQuote) چند Inquiry می‌سازد که rfqGroupId‌شان
-   * یکی است؛ این‌جا یک کارت per گروه + پیشنهادهای رسیده برمی‌گردیم.
-   *   · ردیف‌های legacy (بدون rfqGroupId) → گروه تک‌ردیفی با id = inquiry.id
-   *   · پیشنهادِ سرد (offerBuyRequest، بدون استعلام) → گروه kind=COLD با
-   *     حجمِ BUY listing خود خریدار در همان کالا (اگر باشد)
-   * پیوند پیشنهاد↔استعلام: همان کلید listingId:sellerId + قید زمانی — پیشنهاد
-   * به newest استعلامی می‌چسبد که قبل از خودش ساخته شده (reRfq دوباره‌کاری نمی‌سازد).
+   * M4 — چندقلمی (FD-24):
+   *   · گروه = rfqGroupId مشترک (legacy: id استعلام تک‌ردیفی؛ سرد: c+offerId).
+   *   · items = سبد کامل [{goodId, qty, good}] — بدون حریم (مالکِ سبد خودِ خریدار است).
+   *   · recipients با coverage «k از n قلم» (k = قلم‌هایی که آن فروشنده دارد).
+   *   · offers با prices[] (default [priceMinor]) + pay/dlv ساختاریافته +
+   *     cover/totalMinor محاسبه‌شده سمت سرور (مرتب‌سازی ۲۶: پوشش اول، بعد جمع).
+   *   · status lazy: CLOSED (closedAt) | STOPPED (stoppedAt) | EXPIRED
+   *     (expiresAt گذشته) | ARCHIVED (همهٔ ردیف‌ها آرشیو) | OPEN.
+   *   · پیوند پیشنهاد→گروه: rfqGroupId مستقیم؛ legacy با هیوریستیک
+   *     listing:seller + قید زمانی؛ سرد (offerBuyRequest) = گروه COLD.
    */
   @Get("getMyRfqs")
   async getMyRfqs(
@@ -1583,6 +2135,8 @@ export class MarketController {
         include: {
           listing: {
             select: {
+              id: true,
+              goodId: true,
               good: {
                 select: {
                   id: true, nameFa: true, nameEn: true, unit: true,
@@ -1594,7 +2148,7 @@ export class MarketController {
           seller: { select: { id: true, slug: true, name: true, city: true, isVerified: true, phone: true } },
         },
         orderBy: { createdAt: "asc" },
-        take: 150,
+        take: 200,
       }),
       this.prisma.offer.findMany({
         where: { buyerId: business.id },
@@ -1603,44 +2157,34 @@ export class MarketController {
           listing: { select: { good: { select: { id: true, nameFa: true, nameEn: true, unit: true } } } },
         },
         orderBy: { createdAt: "asc" },
-        take: 400,
+        take: 500,
       }),
     ]);
 
-    // ── پیوند پیشنهاد→استعلام (کلید + قید زمانی) ──
-    const byKey = new Map<string, typeof inquiries>();
-    for (const inq of inquiries) {
-      const k = `${inq.listingId}:${inq.sellerId}`;
-      const list = byKey.get(k) ?? [];
-      list.push(inq);
-      byKey.set(k, list);
-    }
-    const offerInquiryId = new Map<string, string>();
-    for (const o of offers) {
-      const list = byKey.get(`${o.listingId}:${o.sellerId}`);
-      if (!list) continue;
-      let target: (typeof inquiries)[number] | null = null;
-      for (const inq of list) if (inq.createdAt <= o.createdAt) target = inq;
-      if (target) offerInquiryId.set(o.id, target.id);
-    }
-
-    // ── گروه‌بندی استعلام‌ها ──
+    // ── گروه‌بندی استعلام‌ها (rfqGroupId · legacy: id) ──
     type Group = {
       id: string;
       kind: "RFQ" | "COLD";
       createdAt: Date;
+      items: RfqItem[];
       volume: number | null;
       frequency: string | null;
       delivery: string | null;
       deliveryCity: string | null;
       targetPriceMinor: number | null;
       note: string | null;
-      good: { id: string; nameFa: string; nameEn: string | null; unit: string } | null;
+      expiresAt: Date | null;
+      stoppedAt: Date | null;
+      closedAt: Date | null;
+      resultText: string | null;
+      archived: boolean;
       recipients: Array<{
         inquiryId: string;
         sellerId: string;
         status: string;
-        seller: { id: string; slug: string; name: string; city: string | null; isVerified: boolean };
+        coverage: number;
+        answered: boolean;
+        seller: { id: string; slug: string; name: string; city: string | null; isVerified: boolean; phone: string | null };
       }>;
       offers: Array<Record<string, unknown>>;
       offerCount: number;
@@ -1656,13 +2200,18 @@ export class MarketController {
           id,
           kind: "RFQ",
           createdAt: inq.createdAt,
+          items: rfqItemsOf(inq),
           volume: inq.volume,
           frequency: inq.frequency,
           delivery: inq.delivery,
           deliveryCity: inq.deliveryCity,
           targetPriceMinor: inq.targetPriceMinor,
           note: inq.note,
-          good: inq.listing.good,
+          expiresAt: inq.expiresAt,
+          stoppedAt: inq.stoppedAt,
+          closedAt: inq.closedAt,
+          resultText: inq.resultText,
+          archived: true,
           recipients: [],
           offers: [],
           offerCount: 0,
@@ -1676,72 +2225,124 @@ export class MarketController {
     for (const inq of inquiries) {
       const g = groupOf(inq);
       g.createdAt = inq.createdAt > g.createdAt ? inq.createdAt : g.createdAt; // جدیدترین ردیف = زمان ارسال
-      g.recipients.push({ inquiryId: inq.id, sellerId: inq.sellerId, status: inq.status, seller: inq.seller });
+      g.archived = g.archived && inq.status === "ARCHIVED"; // فقط اگر «همهٔ» ردیف‌ها آرشیو باشند
+      g.recipients.push({
+        inquiryId: inq.id,
+        sellerId: inq.sellerId,
+        status: inq.status,
+        coverage: rfqItemsOf(inq).filter((it) => it.listingId).length,
+        answered: inq.status === "ANSWERED",
+        seller: inq.seller,
+      });
     }
-    const inquiryGroup = new Map<string, Group>();
-    for (const g of groups.values()) for (const r of g.recipients) inquiryGroup.set(r.inquiryId, g);
 
-    const shapeOffer = (o: (typeof offers)[number]) => ({
-      id: o.id,
-      sellerId: o.sellerId,
-      listingId: o.listingId,
-      seller: o.seller,
-      priceMinor: o.priceMinor,
-      currency: o.currency,
-      minOrder: o.minOrder,
-      payTerm: o.payTerm,
-      delivTerm: o.delivTerm,
-      note: o.note,
-      status: o.status,
-      createdAt: o.createdAt,
-    });
-
-    // ── پیشنهادهای سرد (بدون استعلام) — حجم از BUY listing خودم در همان کالا ──
-    const coldOffers = offers.filter((o) => !offerInquiryId.has(o.id));
-    let coldVolumes: Map<string, { volume: number | null; frequency: string | null }> | null = null;
-    if (coldOffers.length > 0) {
-      const coldGoodIds = [...new Set(coldOffers.map((o) => o.listing.good?.id).filter((x): x is string => !!x))];
-      const myBuyRows = coldGoodIds.length
-        ? await this.prisma.listing.findMany({
-            where: { businessId: business.id, goodId: { in: coldGoodIds }, isActive: true, mode: { in: ["BUY", "BOTH"] } },
-            select: { goodId: true, volume: true, frequency: true },
-            orderBy: { updatedAt: "desc" },
-          })
-        : [];
-      coldVolumes = new Map(myBuyRows.map((r) => [r.goodId, { volume: r.volume, frequency: r.frequency }]));
+    // ── پیوند پیشنهاد→گروه: مستقیم · legacy هیوریستیک · سرد ──
+    const byKey = new Map<string, typeof inquiries>();
+    for (const inq of inquiries) {
+      const k = `${inq.listingId}:${inq.sellerId}`;
+      const list = byKey.get(k) ?? [];
+      list.push(inq);
+      byKey.set(k, list);
+    }
+    const offerGroup = new Map<string, Group>();
+    for (const o of offers) {
+      let g: Group | undefined = o.rfqGroupId ? groups.get(o.rfqGroupId) : undefined;
+      if (!g) {
+        // legacy — جدیدترین استعلام همان جفت که قبل از پیشنهاد ساخته شده
+        const list = byKey.get(`${o.listingId}:${o.sellerId}`);
+        if (list) {
+          let target: (typeof inquiries)[number] | null = null;
+          for (const inq of list) if (inq.createdAt <= o.createdAt) target = inq;
+          if (target) g = groups.get(target.rfqGroupId ?? target.id);
+        }
+      }
+      if (g) offerGroup.set(o.id, g);
     }
 
     const now = Date.now();
     let recentOfferCount = 0;
     for (const o of offers) {
       if (now - o.createdAt.getTime() < 72 * 3_600_000) recentOfferCount++;
-      const shaped = shapeOffer(o);
-      const g = offerInquiryId.get(o.id);
+      const g = offerGroup.get(o.id);
       if (g) {
-        const target = inquiryGroup.get(g);
-        if (target) {
-          target.offers.push(shaped);
-          target.offerCount++;
-          if (o.status) target.markedCount++;
-          target.minPriceMinor =
-            target.minPriceMinor === null ? o.priceMinor : Math.min(target.minPriceMinor, o.priceMinor);
-          continue;
-        }
+        const prices: Array<number | null> = (
+          Array.isArray(o.prices) && (o.prices as unknown[]).length
+            ? (o.prices as Array<number | null>)
+            : [o.priceMinor]
+        ).slice(0, g.items.length);
+        while (prices.length < g.items.length) prices.push(null);
+        const cover = prices.filter((p): p is number => p != null).length;
+        const totalMinor =
+          g.items.length > 1
+            ? g.items.reduce((sum, it, i) => (prices[i] != null ? sum + (prices[i] as number) * it.qty : sum), 0)
+            : (prices[0] ?? o.priceMinor) * (g.items[0]?.qty ?? 0);
+        g.offers.push({
+          id: o.id,
+          sellerId: o.sellerId,
+          listingId: o.listingId,
+          seller: o.seller,
+          priceMinor: o.priceMinor,
+          currency: o.currency,
+          minOrder: o.minOrder,
+          payTerm: o.payTerm,
+          delivTerm: o.delivTerm,
+          pay: o.pay,
+          dlv: o.dlv,
+          prices,
+          cover,
+          totalMinor,
+          note: o.note,
+          status: o.status,
+          createdAt: o.createdAt,
+        });
+        g.offerCount++;
+        if (o.status) g.markedCount++;
+        g.minPriceMinor =
+          g.minPriceMinor === null ? o.priceMinor : Math.min(g.minPriceMinor, o.priceMinor);
+        continue;
       }
-      // سرد — گروه مستقل per پیشنهاد
+
+      // سرد — گروه مستقل per پیشنهاد (حجمِ BUY listing خودم در همان کالا)
       const cg: Group = {
         id: `c${o.id}`,
         kind: "COLD",
         createdAt: o.createdAt,
-        volume: coldVolumes?.get(o.listing.good?.id ?? "")?.volume ?? null,
-        frequency: coldVolumes?.get(o.listing.good?.id ?? "")?.frequency ?? null,
+        items: o.listing.good
+          ? [{ goodId: o.listing.good.id, qty: 0, listingId: o.listingId }]
+          : [],
+        volume: null,
+        frequency: null,
         delivery: null,
         deliveryCity: business.city,
         targetPriceMinor: null,
         note: null,
-        good: o.listing.good,
+        expiresAt: null,
+        stoppedAt: null,
+        closedAt: null,
+        resultText: null,
+        archived: false,
         recipients: [],
-        offers: [shaped as unknown as Record<string, unknown>],
+        offers: [
+          {
+            id: o.id,
+            sellerId: o.sellerId,
+            listingId: o.listingId,
+            seller: o.seller,
+            priceMinor: o.priceMinor,
+            currency: o.currency,
+            minOrder: o.minOrder,
+            payTerm: o.payTerm,
+            delivTerm: o.delivTerm,
+            pay: o.pay,
+            dlv: o.dlv,
+            prices: [o.priceMinor],
+            cover: 1,
+            totalMinor: o.priceMinor,
+            note: o.note,
+            status: o.status,
+            createdAt: o.createdAt,
+          },
+        ],
         offerCount: 1,
         markedCount: o.status ? 1 : 0,
         minPriceMinor: o.priceMinor,
@@ -1749,9 +2350,79 @@ export class MarketController {
       groups.set(cg.id, cg);
     }
 
+    // ── حجم استعلام‌های سرد از BUY listing خودم ──
+    const coldGroups = [...groups.values()].filter((g) => g.kind === "COLD" && g.items[0]);
+    if (coldGroups.length > 0) {
+      const coldGoodIds = [...new Set(coldGroups.map((g) => g.items[0]!.goodId))];
+      const myBuyRows = await this.prisma.listing.findMany({
+        where: { businessId: business.id, goodId: { in: coldGoodIds }, isActive: true, mode: { in: ["BUY", "BOTH"] } },
+        select: { goodId: true, volume: true, frequency: true },
+        orderBy: { updatedAt: "desc" },
+      });
+      const vol = new Map(myBuyRows.map((r) => [r.goodId, r]));
+      for (const g of coldGroups) {
+        const v = vol.get(g.items[0]!.goodId);
+        if (v) {
+          g.volume = v.volume;
+          g.frequency = v.frequency;
+          if (g.items[0]) g.items[0].qty = v.volume ?? 0;
+        }
+      }
+    }
+
+    // ── اطلاعات کالا برای اقلام همهٔ گروه‌ها ──
+    const goodIds = [...new Set([...groups.values()].flatMap((g) => g.items.map((it) => it.goodId)))].filter(Boolean);
+    const goods = goodIds.length
+      ? await this.prisma.good.findMany({
+          where: { id: { in: goodIds } },
+          select: { id: true, nameFa: true, nameEn: true, unit: true, category: { select: { slug: true, nameFa: true } } },
+        })
+      : [];
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+
     const list = [...groups.values()]
+      .filter((g) => !g.archived) // آرشیو شده = از فهرست خریدار می‌افتد
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
-      .map((g) => ({ ...g, offers: [...g.offers].sort((a, b) => (b as { createdAt: Date }).createdAt.getTime() - (a as { createdAt: Date }).createdAt.getTime()) }));
+      .map((g) => {
+        const items = g.items.map((it) => ({
+          goodId: it.goodId,
+          qty: it.qty,
+          good: goodById.get(it.goodId) ?? null,
+        }));
+        const status =
+          g.closedAt ? "CLOSED"
+          : g.stoppedAt ? "STOPPED"
+          : g.expiresAt && g.expiresAt.getTime() < now ? "EXPIRED"
+          : g.kind === "COLD" ? "COLD"
+          : "OPEN";
+        const daysLeft = g.expiresAt ? Math.max(0, Math.ceil((g.expiresAt.getTime() - now) / DAY_MS)) : null;
+        return {
+          id: g.id,
+          kind: g.kind,
+          createdAt: g.createdAt,
+          items,
+          itemTitle: null, // فرانت از items می‌سازد («۲ قلمی» یا «نام · مقدار»)
+          volume: g.volume,
+          frequency: g.frequency,
+          delivery: g.delivery,
+          deliveryCity: g.deliveryCity,
+          targetPriceMinor: g.targetPriceMinor,
+          note: g.note,
+          expiresAt: g.expiresAt,
+          stoppedAt: g.stoppedAt,
+          closedAt: g.closedAt,
+          resultText: g.resultText,
+          status,
+          daysLeft,
+          recipients: g.recipients,
+          offers: [...g.offers].sort(
+            (a, b) => (b as { createdAt: Date }).createdAt.getTime() - (a as { createdAt: Date }).createdAt.getTime()
+          ),
+          offerCount: g.offerCount,
+          markedCount: g.markedCount,
+          minPriceMinor: g.minPriceMinor,
+        };
+      });
 
     return { groups: list, recentOfferCount };
   }
@@ -1808,12 +2479,49 @@ export class MarketController {
         where: { id: objId },
         include: {
           buyer: { select: { id: true, slug: true, name: true, city: true, isVerified: true, trade: true, createdAt: true } },
-          listing: { select: { good: { select: { id: true, nameFa: true, nameEn: true, unit: true } } } },
+          listing: { select: { goodId: true, good: { select: { id: true, nameFa: true, nameEn: true, unit: true } } } },
         },
       });
       if (!inquiry) throw AppError.notFound("Inquiry not found");
       await assertBusinessOwner(this.prisma, user, inquiry.sellerId, locale);
-      const myListing = await myListingOf(inquiry.listing.good.id);
+
+      // M4 — اقلام استعلام با آگهی/قیمتِ خودم برای هر قلم («کاتالوک تو: X»)
+      const rfqItems = rfqItemsOf(inquiry);
+      const myListingRows = await this.prisma.listing.findMany({
+        where: {
+          businessId: business.id,
+          goodId: { in: rfqItems.map((it) => it.goodId) },
+          isActive: true,
+          mode: { in: ["SELL", "BOTH"] },
+        },
+        select: { id: true, goodId: true, priceMinor: true, currency: true, variantLabel: true, minOrder: true, updatedAt: true },
+        orderBy: { updatedAt: "desc" },
+      });
+      const myByGood = new Map<string, (typeof myListingRows)[number]>();
+      for (const l of myListingRows) if (!myByGood.has(l.goodId)) myByGood.set(l.goodId, l);
+      const goodRows = await this.prisma.good.findMany({
+        where: { id: { in: rfqItems.map((it) => it.goodId) } },
+        select: { id: true, nameFa: true, nameEn: true, unit: true },
+      });
+      const goodById = new Map(goodRows.map((g) => [g.id, g]));
+      const myListing = myByGood.get(inquiry.listing.goodId) ?? null;
+      const items = rfqItems.map((it) => ({
+        goodId: it.goodId,
+        qty: it.qty,
+        mine: !!myByGood.has(it.goodId),
+        listing: myByGood.get(it.goodId)
+          ? {
+              id: myByGood.get(it.goodId)!.id,
+              priceMinor: myByGood.get(it.goodId)!.priceMinor,
+              currency: myByGood.get(it.goodId)!.currency,
+              variantLabel: myByGood.get(it.goodId)!.variantLabel,
+              minOrder: myByGood.get(it.goodId)!.minOrder,
+              updatedAt: myByGood.get(it.goodId)!.updatedAt,
+            }
+          : null,
+        good: goodById.get(it.goodId) ?? null,
+      }));
+
       return {
         kind: "INQUIRY" as const,
         inquiryId: inquiry.id,
@@ -1826,10 +2534,14 @@ export class MarketController {
         deliveryCity: inquiry.deliveryCity,
         targetPriceMinor: inquiry.targetPriceMinor,
         note: inquiry.note,
-        deadlineAt: new Date(inquiry.createdAt.getTime() + 3 * 86_400_000),
+        // M4 — مهلت سرورمبنا (پیش از M4: createdAt+۳ روز ساختگی)
+        deadlineAt: inquiry.expiresAt ?? new Date(inquiry.createdAt.getTime() + 3 * 86_400_000),
+        rfqClosed: !!(inquiry.closedAt || inquiry.stoppedAt),
         answered: inquiry.status === "ANSWERED",
         watching: null,
         myListing,
+        items,
+        itemsTotal: rfqItems.length,
       };
     }
 

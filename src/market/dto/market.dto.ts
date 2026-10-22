@@ -1,5 +1,18 @@
 import { Type } from "class-transformer";
-import { ArrayMaxSize, IsArray, IsBoolean, IsIn, IsInt, IsOptional, IsString, Max, MaxLength, Min } from "class-validator";
+import {
+  ArrayMaxSize,
+  IsArray,
+  IsBoolean,
+  IsIn,
+  IsInt,
+  IsObject,
+  IsOptional,
+  IsString,
+  Max,
+  MaxLength,
+  Min,
+  ValidateNested,
+} from "class-validator";
 
 /** GET /market/getInquiries | getFollows | getPriceBoard | getFollowers | getBuyRequests */
 export class BusinessIdQueryDto {
@@ -31,19 +44,57 @@ export class SupplyBoardQueryDto extends BusinessIdQueryDto {
  * POST /market/requestQuote — فرم درخواست قیمت از تابلوی تأمین (فاز ۶ · طرح ۱۲ · شکاف ۴).
  * جایگزینِ requestQuote/:listingId خودکارِ قدیمی است: گیرندگان این‌جا انتخابی‌اند.
  * فاز ۴ مهاجرت (sc-rfq): قیمت هدف + محل تحویل + گروه‌بندی ردیف‌ها با rfqGroupId.
+ *
+ * M4 — استعلام چندقلمی (FD-24): items[] می‌آید و goodId/volume تک‌قلمی میراث
+ * است (کلاینت قدیم). چندقلمی ⇒ گیرندگان = اجتماع دارندگان قلم‌ها (تیک قفل).
  */
-export class RequestQuoteDto {
-  @IsString()
-  businessId: string;
-
+export class RfqItemDto {
   @IsString()
   goodId: string;
 
+  /** مقدار خرید همان قلم (استپر فرم ۲۵) */
   @Type(() => Number)
   @IsInt()
   @Min(1)
   @Max(1e9)
-  volume: number;
+  qty: number;
+
+  /** واریانت هدف اختیاری (C4) — بهترین نرمال خالی */
+  @IsOptional()
+  @IsString()
+  listingId?: string;
+}
+
+export class RequestQuoteDto {
+  @IsString()
+  businessId: string;
+
+  /** M4 — سبد چندقلمی؛ خالی = مسیر تک‌قلمی legacy (goodId+volume) */
+  @IsOptional()
+  @IsArray()
+  @ArrayMaxSize(8)
+  @Type(() => RfqItemDto)
+  @IsObject({ each: true })
+  items?: RfqItemDto[];
+
+  @IsOptional()
+  @IsString()
+  goodId?: string;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(1)
+  @Max(1e9)
+  volume?: number;
+
+  /** M4 — مهلت پاسخ ۱..۵ روز (پیش‌فرض ۳ — pills فرم ۲۵) */
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(1)
+  @Max(5)
+  expiresDays?: number;
 
   @IsOptional()
   @IsIn(["WEEKLY", "BIWEEKLY", "MONTHLY", "OCCASIONAL"])
@@ -88,23 +139,45 @@ export class RequestQuoteDto {
 }
 
 /** POST /market/sendOffer — price in the smallest currency unit (integer).
- *  فاز ۴ مهاجرت (sc-quote): شرایط پرداخت + زمان تحویل از چیپ‌های فرم. */
+ *  فاز ۴ مهاجرت (sc-quote): شرایط پرداخت + زمان تحویل از چیپ‌های فرم.
+ *  M4 — چندقلمی: prices[] هم‌ترتیب با Inquiry.items (null = ندارد) +
+ *  شرایط ساختاریافته pay {chk, days} / dlv {ship, by} (سوییچ‌های فرم ۱۲). */
 export class SendOfferDto {
   @IsString()
   inquiryId: string;
 
+  /** قیمت قلم اول (legacy) — پیش‌فرض وقتی prices نیامده */
+  @IsOptional()
+  @Type(() => Number)
   @IsInt()
   @Min(1)
   @Max(1e12)
-  priceMinor: number;
+  priceMinor?: number;
 
-  /** شرایط پرداخت — «نقدی» | «عندالتحویل» | «چک ۳۰ روزه» */
+  /** M4 — قیمت هر قلم هم‌ترتیب با اقلام استعلام؛ null = این قلم را نمی‌دهد
+   *  (اعتبارسنجی ساختاری در کنترلر: طول/هم‌ترتیبی/قلمِ نداشتی) */
+  @IsOptional()
+  @IsArray()
+  @ArrayMaxSize(8)
+  prices?: Array<number | null>;
+
+  /** M4 — شرایط پرداخت: {chk: ۰..۹۹, days} — chk=0 یعنی تمام‌نقدی */
+  @IsOptional()
+  @IsObject()
+  pay?: { chk?: number; days?: number };
+
+  /** M4 — شرایط تحویل: {ship, by: "seller"|"customer"} — ship=false حضوری */
+  @IsOptional()
+  @IsObject()
+  dlv?: { ship?: boolean; by?: string };
+
+  /** شرایط پرداخت — «نقدی» | «عندالتحویل» | «چک ۳۰ روزه» (legacy متنی) */
   @IsOptional()
   @IsString()
   @MaxLength(30)
   payTerm?: string;
 
-  /** زمان تحویل — «همان روز» | «فردا» | «۲ روز» */
+  /** زمان تحویل — «همان روز» | «فردا» | «۲ روز» (legacy متنی) */
   @IsOptional()
   @IsString()
   @MaxLength(30)
@@ -114,6 +187,12 @@ export class SendOfferDto {
   @IsString()
   @MaxLength(300)
   note?: string;
+}
+
+/** POST /market/acceptOffer/:id — پذیرش پیشنهاد (۲۷): استعلام می‌بندد + نتیجه */
+export class AcceptOfferDto {
+  @IsString()
+  businessId: string;
 }
 
 /** POST /market/setOfferStatus/:id — نشان خصوصی خریدار روی پیشنهاد (sheet-offer-status).
