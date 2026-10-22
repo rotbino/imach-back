@@ -71,19 +71,36 @@ export class CreateGoodDto {
   @MaxLength(40, { each: true })
   aliases?: string[];
 
-  /** legacy fallback — the leaf's own unit wins when present (auto-prefill contract) */
+  /** M4-prep (وفاداری فرم ۱۳ به پروتوتایپ): واحد پایهٔ کالا — فقط وقتی فرم
+   *  بدون categoryId صریح می‌آید (سبد «سایر › جدید») معنای واقعی دارد؛ با دستهٔ
+   *  صریح، واحد برگِ مرجع مقدم است تا کالاهای یک برگ هم‌واحد بمانند.
+   *  مقادیر مجاز = کلیدهای سطح-بالای جدول Unit (baseUnitKey=null). */
   @IsOptional()
   @IsString()
-  @IsIn(["KILOGRAM", "TON", "CARTON", "SACK", "PIECE", "LITER", "BRANCH", "METER", "GRAM", "SERVICE"])
+  @IsIn([
+    "KILOGRAM", "GRAM", "TON", "METER", "SQUARE_METER", "CUBIC_METER",
+    "LITER", "MILLILITER", "WATT", "KWH", "SERVICE", "PIECE", "SET",
+    "CAN", "TIN", "BOTTLE", "JAR", "TUBE", "BAG", "SACK", "ROLL",
+    "REEL", "COIL", "BALE", "CRATE", "PALLET",
+  ])
   unit?: string;
 }
 
-/** GET /goods/getBrands — brand suggestions for the listing form. */
+/** GET /goods/getBrands — brand suggestions for the listing form.
+ * M4-prep: پارامتر limit برای شیت انتخاب برند فرم ثبت کالا (پیش‌فرض همان ۱۰
+ * برای استفاده‌های قدیمی؛ سقف ۶۰ — ۳,۷۶۹ برند واقعی فقط با جستجو/اسکرول معنی‌دار است). */
 export class GetBrandsQueryDto {
   @IsOptional()
   @IsString()
   @MaxLength(60)
   q?: string;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(1)
+  @Max(60)
+  limit?: number;
 }
 
 /** Sell-side spec — price in the SMALLEST currency unit (integer, exact). */

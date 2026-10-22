@@ -152,11 +152,12 @@ export class GoodsController {
     return value;
   }
 
-  /** Brand suggestions — for the optional brand field of the listing form. */
+  /** Brand suggestions — for the optional brand field of the listing form.
+   *  M4-prep: limit اختیاری (پیش‌فرض ۱۰) برای شیت انتخاب برند فرم ثبت کالا. */
   @Get("getBrands")
   async getBrands(@Query() query: GetBrandsQueryDto, @Res({ passthrough: true }) reply: FastifyReply) {
     const q = query.q?.trim();
-    const key = `goods:brands:${q ?? ""}`;
+    const key = `goods:brands:${q ?? ""}:${query.limit ?? 10}`;
     const { value, hit } = await this.cache.wrap(
       key,
       { ttlMs: 5 * 60_000, tags: ["goods"] },
@@ -165,7 +166,7 @@ export class GoodsController {
           where: q ? { searchText: { contains: normalizeFa(q) } } : {},
           select: { id: true, name: true },
           orderBy: { name: "asc" },
-          take: 10,
+          take: query.limit ?? 10,
         });
         return rows;
       }
@@ -272,6 +273,9 @@ export class GoodsController {
     @CurrentLocale() locale: Locale
   ) {
     let categoryId = body.categoryId;
+    // M4-prep: آیا فرم دستهٔ صریح داده؟ بدون دسته، کالا در سبد «سایر › جدید»
+    // می‌نشیند و واحد پایه را کاربر در فرم انتخاب کرده — واحد کاربر معتبر است.
+    const explicitCategory = !!categoryId;
 
     if (!categoryId) {
       // سبد موقت انواع کاربری: ریشه‌ی «سایر» + برگ «جدید» — find-or-create idempotent
@@ -336,9 +340,12 @@ export class GoodsController {
         nameEn: body.nameEn?.trim() || null,
         aliases,
         searchText,
-        // the leaf's unit IS the unit — the form prefills it, the backend
-        // trusts the leaf over the client so every good under a leaf agrees
-        unit: category.unit ?? body.unit ?? "PIECE",
+        // the leaf's unit IS the unit — با دستهٔ صریح برگ مقدم است (هم‌واحدی
+        // کالاهای یک برگ)؛ سبد «جدید» واحد ثابت عدد دارد، پس انتخاب کاربر
+        // (M4-prep — فرم ۱۳ پروتوتایپ: انتخاب واحد در ثبت کالای جدید) می‌نشیند.
+        unit: explicitCategory
+          ? category.unit ?? body.unit ?? "PIECE"
+          : body.unit ?? "PIECE",
         source: "USER",
         status: isAdmin ? "ACTIVE" : "PROVISIONAL",
         creatorRole: isAdmin ? "ADMIN" : "USER",
