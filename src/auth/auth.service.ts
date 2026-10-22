@@ -47,6 +47,10 @@ const BUSINESS_SUMMARY_SELECT = {
   bio: true,
   // فاز ۹ (شکاف ۶) — دستیارهای فعال؛ null = هر دو روشن
   enabledArms: true,
+  // فیکس‌بچ M3 — امتیاز ثبت‌نام (چیپ اپ‌بار) + پرچم مخفی‌کردن چیپ دسته‌ها
+  scoreSell: true,
+  scoreBuy: true,
+  catalogCategoriesHidden: true,
 } as const;
 
 /** فاز ۶ مهاجرت — ترجیحات نمایش کاربر (User.prefs) */
@@ -455,6 +459,10 @@ export class AuthService {
         currency: currencyOfCountry(country),
         phone: user.phone,
         ownerId: user.id,
+        // فیکس‌بچ M3 (دستور مالک): «خود ثبت‌نام ۵ امتیاز دارد» — هر دو بازو
+        // می‌گیرند تا چیپ امتیاز از روز اول صفر نباشد؛ موتور کامل در M7.
+        scoreSell: 5,
+        scoreBuy: 5,
         pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
       },
       include: { pages: { select: { id: true, type: true } } },

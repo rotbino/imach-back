@@ -204,6 +204,10 @@ export class BusinessesController {
         priceValidityDays: true,
         // M3 مهاجرت (sheet-buycond) — شرایط درخواست تامین خریدار
         supplyTerms: true,
+        // فیکس‌بچ M3 — امتیاز ثبت‌نام (چیپ اپ‌بار) + پرچم مخفی‌کردن چیپ دسته‌ها
+        scoreSell: true,
+        scoreBuy: true,
+        catalogCategoriesHidden: true,
         // لوکیشن دقیق فقط به صاحبش برمی‌گردد — endpoint عمومی هرگز
         lat: true,
         lng: true,
@@ -257,6 +261,10 @@ export class BusinessesController {
             : body.intent === "buy"
               ? { sell: false, buy: true }
               : null,
+        // فیکس‌بچ M3 (دستور مالک): «خود ثبت‌نام ۵ امتیاز دارد» — امتیاز به بازوهای
+        // فعالِ همان لحظهٔ تولد؛ دستیار دوم بعداً که روشن شود امتیازش از موتور M7 می‌آید.
+        scoreSell: body.intent === "buy" ? 0 : 5,
+        scoreBuy: body.intent === "sell" ? 0 : 5,
         ownerId: user.id,
         // هر کسب‌وکار با دو محیط خود متولد می‌شود: کاتالوگ فروش + میز خرید
         pages: { create: [{ type: "SELL" }, { type: "BUY" }] },
@@ -537,6 +545,10 @@ export class BusinessesController {
           : {}),
         // فاز ۱۳ — معرفی کوتاه فروشنده (زیر نامش در کاتالوگ عمومی)
         ...(body.bio !== undefined ? { bio: body.bio ? body.bio.trim() : null } : {}),
+        // فیکس‌بچ M3 — تیک عدم نمایش دسته‌بندی در کاتالوک خود فروشنده
+        ...(body.catalogCategoriesHidden !== undefined
+          ? { catalogCategoriesHidden: body.catalogCategoriesHidden }
+          : {}),
       },
     });
     invalidateBusiness(this.cache, updated.id, business.slug); // old slug tag + new data

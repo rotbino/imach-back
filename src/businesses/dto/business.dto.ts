@@ -129,6 +129,13 @@ export class EditBusinessDto {
   @IsString()
   @MaxLength(160)
   bio?: string | null;
+
+  /** فیکس‌بچ M3 (دستور مالک) — «تیک عدم نمایش دسته‌بندی»: ردیف چیپ دسته‌ها
+   *  در کاتالوک خود فروشنده مخفی می‌شود؛ دسته‌ها و پیوند آگهی‌ها دست‌نخورده می‌مانند.
+   *  نبودِ فیلد = بدون تغییر. */
+  @IsOptional()
+  @IsBoolean()
+  catalogCategoriesHidden?: boolean;
 }
 
 /**
