@@ -5,7 +5,7 @@ node_modules/
 dist/
 
 # environment — real keys live ONLY here, never in git
-.env
+
 .env.local
 .env.*.local
 
