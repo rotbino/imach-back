@@ -42,6 +42,8 @@ const LISTING_SELECT = {
   title: true,
   note: true,
   pricedAt: true,
+  // FD-9 — اعتبار قیمت همین ردیف (null = همان تنظیم کاتالوک)
+  priceValidDays: true,
   // ── وضعیت + شاخص‌های مالک (فاز ۲) — ردیف غیرفعال و شمارش بازدید
   isActive: true,
   viewCount30: true,
@@ -405,6 +407,12 @@ export class ListingsController {
       (data as Prisma.ListingUncheckedCreateInput).packaging = label
         ? [{ label, qty: effectiveBaseQty && effectiveBaseQty > 0 ? Math.round(effectiveBaseQty) : 1 }]
         : [];
+    }
+
+    // ── FD-9 — یادآوری آپدیت قیمتِ همین ردیف (۱..۵ روز) ──
+    // undefined = بدون تغییر؛ null صریح = برگشتن به تنظیم کاتالوگ.
+    if (body.priceValidDays !== undefined) {
+      (data as Prisma.ListingUncheckedCreateInput).priceValidDays = body.priceValidDays ?? null;
     }
 
     let listing;

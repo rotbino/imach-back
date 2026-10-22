@@ -153,17 +153,25 @@ export class GoodsController {
   }
 
   /** Brand suggestions — for the optional brand field of the listing form.
-   *  M4-prep: limit اختیاری (پیش‌فرض ۱۰) برای شیت انتخاب برند فرم ثبت کالا. */
+   *  M4-prep: limit اختیاری (پیش‌فرض ۱۰) برای شیت انتخاب برند فرم ثبت کالا.
+   *
+   *  فیکس مالک (۱۰۲۶-۲): فهرستِ بدونِ جستجو «فارسی‌اول» است — مرتب‌سازی name asc
+   *  حروف لاتین را اول می‌آورد و کاربر به‌جای نام برند، رشته‌هایی مثل
+   *  «1001 | ACTIC | AXE» می‌دید و آنها را کد فرض می‌کرد. بازهٔ یونیکد عربی/
+   *  فارسی (U+0600 به بالا — شامل ارقام فارسی) همهٔ نام‌های فارسی را می‌گیرد و
+   *  لاتین را حذف می‌کند؛ برند لاتین با جستجوی همان حروف پیدا می‌شود. */
   @Get("getBrands")
   async getBrands(@Query() query: GetBrandsQueryDto, @Res({ passthrough: true }) reply: FastifyReply) {
     const q = query.q?.trim();
-    const key = `goods:brands:${q ?? ""}:${query.limit ?? 10}`;
+    const key = `goods:brands:fa1:${q ?? ""}:${query.limit ?? 10}`;
     const { value, hit } = await this.cache.wrap(
       key,
       { ttlMs: 5 * 60_000, tags: ["goods"] },
       async () => {
         const rows = await this.prisma.brand.findMany({
-          where: q ? { searchText: { contains: normalizeFa(q) } } : {},
+          where: q
+            ? { searchText: { contains: normalizeFa(q) } }
+            : { name: { gte: "؀" } },
           select: { id: true, name: true },
           orderBy: { name: "asc" },
           take: query.limit ?? 10,

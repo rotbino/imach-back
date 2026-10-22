@@ -639,6 +639,10 @@ model Listing {
   /// G7 — لحظهٔ آخرین قیمت‌گذاری؛ مبنای بج «قیمت منقضی» در خروجی‌های عمومی
   /// (اعتبار = pricedAt + Business.priceValidityDays). null = بی‌اعتبارِ مقدار.
   pricedAt          DateTime?
+  /// FD-9 (حکم مالک ۱۰۲۶-۲) — اعتبار قیمتِ همین ردیف: ۱..۵ روز، پیش‌فرض ۳ از
+  /// فرم. null = همان تنظیم کاتالوگ (Business.priceValidityDays) اعمال می‌شود؛
+  /// مقدار صریح روی تنظیم کاتالوگ اولویت دارد (الگوی پروتوتایپ ۱۳/۱۴).
+  priceValidDays    Int?
 
   // ── buy side ──
   volume    Float?

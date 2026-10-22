@@ -49,6 +49,8 @@ const LISTING_SELECT = {
   title: true,
   note: true,
   pricedAt: true,
+  // FD-9 — اعتبار قیمتِ خودِ ردیف (بر تنظیم کاتالوگ اولویت دارد)
+  priceValidDays: true,
   baseQty: true,
   pricePerBaseMinor: true,
   // مدل واحد (۱۰۲۶) — بستهٔ انتخابی ردیف: [{label, qty}] برای کارت‌های عمومی
@@ -401,9 +403,13 @@ export class BusinessesController {
           listings: business.listings.map((l) => ({
             ...l,
             gallery: galleries.get(l.id) ?? [],
-            // M2 (G7/FD-52) — بج «قیمت منقضی»: pricedAt + priceValidityDays گذشته
+            // M2 (G7/FD-52) — بج «قیمت منقضی»: pricedAt + اعتبار (ردیف → کاتالوگ)
             // → کلاینت قیمت را کهربایی/خاموش نشان می‌دهد. null = هرگز منقضی نمی‌شود.
-            priceExpired: listingPriceExpired(l.pricedAt, business.priceValidityDays),
+            // FD-9: priceValidDays ردیف (از فرم ۱۳/۱۴) بر تنظیم کاتالوگ اولویت دارد.
+            priceExpired: listingPriceExpired(
+              l.pricedAt,
+              l.priceValidDays ?? business.priceValidityDays
+            ),
           })),
         };
       }

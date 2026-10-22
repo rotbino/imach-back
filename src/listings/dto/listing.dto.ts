@@ -93,6 +93,14 @@ export class SaveListingDto {
   @MaxLength(60)
   packLabel?: string | null;
 
+  /** FD-9 — یادآوری آپدیت قیمتِ همین ردیف (۱..۵ روز؛ فرم پیش‌فرض ۳ می‌فرستد).
+   *  null صریح = همان تنظیم کاتالوگ (Business.priceValidityDays)؛
+   *  undefined = بدون تغییر. مقدار ردیف بر تنظیم کاتالوگ اولویت دارد. */
+  @IsOptional()
+  @IsNumber()
+  @Min(1)
+  @Max(5)
+  priceValidDays?: number | null;
 
   @IsOptional()
   sell?: SellSpecDto;
