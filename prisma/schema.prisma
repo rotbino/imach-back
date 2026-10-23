@@ -70,6 +70,9 @@ model User {
   /// آینهٔ کوکی imach_theme/imach_arm رنگ‌ها برای رندر SSR می‌ماند — این
   /// فیلد همان انتخاب را بین دستگاه‌ها هم می‌برد (الزام مالک: سوییچ تم از پروفایل).
   prefs           Json?
+  /// M8 (سند ۰۸ §M8) — حضور زنده: آخرین ضربان (heartbeat ≤۱/۶۰s از شل)؛
+  /// آنلاین = lastSeenAt ≤ ۹۰ ثانیه قبل. null = هرگز ضربان نزده.
+  lastSeenAt      DateTime?
   businesses      Business[]
   refreshTokens   RefreshToken[]
   /// Basic-data rows this user registered (goods, brands, products) — the
@@ -1063,11 +1066,20 @@ model Thread {
   lastAt    DateTime @default(now())
   createdAt DateTime @default(now())
 
+  /// M8 (سند ۰۸ §M8 · FD-22 تصمیم ۸) — زمینهٔ گفتگو: سندی که گفتگو از دلِ
+  /// آن شروع شده (سفارش/پیشنهاد/پیشنهاد تامین/آگهی). null = گفتگوی آزاد.
+  contextType  String? // ORDER | OFFER | SUPPLY_PROPOSAL | LISTING
+  contextRefId String? @db.ObjectId
+  /// کلید یکتایی زمینه — "" گفتگوی آزادِ زوج؛ «TYPE:id» گفتگوی زمینه‌دار.
+  /// موتور Mongo‌ی پرایسما null را در compound-unique با فیلد غایب یکی
+  /// نمی‌گیرد (درس readAt صریح) — کلید غیرنالپذیر یکتایی را تضمین می‌کند.
+  contextKey   String   @default("")
+
   a        Business  @relation("threadA", fields: [aId], references: [id], onDelete: Cascade)
   b        Business  @relation("threadB", fields: [bId], references: [id], onDelete: Cascade)
   messages Message[]
 
-  @@unique([aId, bId])
+  @@unique([aId, bId, contextKey])
   @@index([aId, lastAt])
   @@index([bId, lastAt])
 }

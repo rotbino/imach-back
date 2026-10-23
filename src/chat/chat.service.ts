@@ -10,6 +10,13 @@ import { AppError } from "../common/errors/app-error";
  * ۱۰۰ پیام آخر صعودی + علامت‌خوردن خودکار به‌عنوان خوانده‌شده (رفتار
  * باز کردن چت). متن خالص + پیوست عکس از /files — هیچ منطق کسب‌وکار
  * (تطبیق/قیمت/درخواست) اینجا دخالت ندارد؛ چت سابقهٔ معامله است.
+ *
+ * M8 (سند ۰۸ §M8 · FD-22 تصمیم ۸) — زمینهٔ گفتگو: startThread با
+ * contextType/contextRefId (سفارش/پیشنهاد/پیشنهاد تامین/آگهی) گفتگوی
+ * جدا برای همان سند می‌سازد؛ getThread عنوان زندهٔ «دربارهٔ: …» را از
+ * خودِ سند استنتاج می‌کند (آیتم‌های فریزشده/نام کالا) — نه متن ثابت.
+ * + حضور (presence): heartbeat ≤۱/۶۰s نشان آنلاین طرف را در لیست و
+ * گفتگو تازه می‌کند (آستانهٔ آنلاین ۹۰s).
  */
 
 const OTHER_SELECT = {
@@ -25,6 +32,23 @@ const OTHER_SELECT = {
 
 /** سقف پیام‌های هر بار خواندن — چت‌های کاری بلند نمی‌شوند، سقف امنیتی است */
 const MSG_PAGE = 100;
+
+/** آستانهٔ آنلاین — ۹۰ ثانیه از آخرین ضربان (سند ۰۸ §M8) */
+const ONLINE_WINDOW_MS = 90_000;
+
+/** زمینه‌های مجاز گفتگو — سندهایی که چت از دلِ آن‌ها شروع می‌شود */
+const CONTEXT_TYPES = ["ORDER", "OFFER", "SUPPLY_PROPOSAL", "LISTING"] as const;
+type ContextType = (typeof CONTEXT_TYPES)[number];
+
+/** عدد → رقم فارسی (عناوین زمینه مثل «سفارش برنج و ۲ قلم دیگر») */
+const faDigits = (n: number): string => String(n).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[+d]);
+
+/** اقلام فریزشدهٔ سند — فقط شکل خوانده‌شده برای عنوان */
+interface FrozenItem {
+  name?: string;
+  goodId?: string;
+  [k: string]: unknown;
+}
 
 @Injectable()
 export class ChatService {
@@ -44,10 +68,56 @@ export class ChatService {
     return x < y ? [x, y] : [y, x];
   }
 
+  // ── حضور (presence) ─────────────────────────────────────────────
+
+  /**
+   * POST /chat/heartbeat — ضربان حضور؛ شل هر ≤۶۰s یک‌بار می‌زند.
+   * هر فعالیتِ صفحه‌ای همان ضربان را تازه می‌کند (رفت و برگشت اپ).
+   */
+  async heartbeat(userId: string) {
+    await this.prisma.user.update({
+      where: { id: userId },
+      data: { lastSeenAt: new Date() },
+    });
+    return { ok: true };
+  }
+
+  /** مپ آنلاین‌بودن کسب‌وکارهای مقابل — مالکشان ≤۹۰s ضربان زده باشد */
+  private async onlineByBiz(bizIds: string[]): Promise<Map<string, boolean>> {
+    if (!bizIds.length) return new Map();
+    const bizs = await this.prisma.business.findMany({
+      where: { id: { in: bizIds } },
+      select: { id: true, ownerId: true },
+    });
+    if (!bizs.length) return new Map();
+    // ownerId نالپذیر است (مالک حذف شده) — بدون مالک، حضور هم نیست
+    const ownerIds = bizs
+      .map((b) => b.ownerId)
+      .filter((id): id is string => !!id);
+    const owners = ownerIds.length
+      ? await this.prisma.user.findMany({
+          where: { id: { in: ownerIds } },
+          select: { id: true, lastSeenAt: true },
+        })
+      : [];
+    const now = Date.now();
+    const onlineByOwner = new Map(
+      owners.map((u) => [
+        u.id,
+        !!u.lastSeenAt && now - u.lastSeenAt.getTime() <= ONLINE_WINDOW_MS,
+      ])
+    );
+    return new Map(
+      bizs.map((b) => [b.id, b.ownerId ? (onlineByOwner.get(b.ownerId) ?? false) : false])
+    );
+  }
+
+  // ── لیست گفتگوها (۲۹) ────────────────────────────────────────────
+
   /**
    * GET /chat/getThreads — فهرست گفتگوهای من (هر دو طرف).
-   * هر ردیف: طرف مقابل (پروجکت‌شده) + آخرین پیام + شمارندهٔ نخواندهٔ من.
-   * side = کدام سمتِ من در گفتگوست (a|b) — برای تشخیص پیام‌های خودم.
+   * هر ردیف: طرف مقابل (پروجکت‌شده + نشان آنلاین M8) + آخرین پیام +
+   * شمارندهٔ نخواندهٔ من. side = کدام سمتِ من در گفتگوست (a|b).
    */
   async getThreads(userId: string) {
     const mine = await this.myBusinessIds(userId);
@@ -60,12 +130,15 @@ export class ChatService {
     });
     if (!threads.length) return { items: [], unreadTotal: 0 };
 
-    // طرف مقابل‌ها — یک fetch
+    // طرف مقابل‌ها — یک fetch + حضورشان — یک fetch
     const otherIds = threads.map((t) => (mine.includes(t.aId) ? t.bId : t.aId));
-    const others = await this.prisma.business.findMany({
-      where: { id: { in: otherIds } },
-      select: OTHER_SELECT,
-    });
+    const [others, onlineMap] = await Promise.all([
+      this.prisma.business.findMany({
+        where: { id: { in: otherIds } },
+        select: OTHER_SELECT,
+      }),
+      this.onlineByBiz(otherIds),
+    ]);
     const otherById = new Map(others.map((o) => [o.id, o]));
 
     // نخوانده‌های من به تفکیک گفتگو — پیام‌های طرف مقابل که هنوز نخوانده‌ام
@@ -90,7 +163,7 @@ export class ChatService {
         return {
           id: t.id,
           side: mySide,
-          other,
+          other: { ...other, online: onlineMap.get(otherId) ?? false },
           lastText: t.lastText,
           lastAt: t.lastAt,
           unread: unreadByThread.get(t.id) ?? 0,
@@ -101,12 +174,22 @@ export class ChatService {
     return { items, unreadTotal: items.reduce((s, i) => s + i.unread, 0) };
   }
 
+  // ── شروع گفتگو (۳۰ · FD-22 تصمیم ۸) ─────────────────────────────
+
   /**
    * POST /chat/startThread — یافتن یا ساخت گفتگو با یک کسب‌وکار.
    * businessId = کسب‌وکارِ خودم (معمولاً فعال) · withBusinessId = طرف مقابل.
    * گفتگو با خودم ممنوع (حساب‌بازی نیست، چت کاری است).
+   * M8: با contextType/contextRefId گفتگوی زمینه‌دارِ همان سند ساخته می‌شود —
+   * زوجِ سند باید همان دو طرف گفتگو باشد (اعتبارسنجی روی خودِ داده).
    */
-  async startThread(userId: string, businessId: string, withBusinessId: string) {
+  async startThread(
+    userId: string,
+    businessId: string,
+    withBusinessId: string,
+    contextType?: string,
+    contextRefId?: string
+  ) {
     const mine = await this.myBusinessIds(userId);
     if (!mine.includes(businessId)) {
       throw AppError.badRequest("این کسب‌وکار مال شما نیست", "BIZ_NOT_YOURS");
@@ -120,22 +203,197 @@ export class ChatService {
     });
     if (!other) throw AppError.badRequest("کسب‌وکار طرف مقابل پیدا نشد", "BIZ_NOT_FOUND");
 
-    const [aId, bId] = this.orderedPair(businessId, withBusinessId);
-    const existing = await this.prisma.thread.findUnique({ where: { aId_bId: { aId, bId } } });
-    if (existing) return { id: existing.id, other, created: false };
+    // زمینه — کلید غیرنالپذور «TYPE:id»؛ گفتگوی آزاد «» (قاعدهٔ یکتایی M8)
+    let contextKey = "";
+    if (contextType || contextRefId) {
+      if (!contextType || !CONTEXT_TYPES.includes(contextType as ContextType)) {
+        throw AppError.badRequest(
+          "زمینهٔ گفتگو باید ORDER، OFFER، SUPPLY_PROPOSAL یا LISTING باشد",
+          "BAD_CONTEXT_TYPE"
+        );
+      }
+      if (!contextRefId) {
+        throw AppError.badRequest("شناسهٔ سند زمینه لازم است", "BAD_CONTEXT_REF");
+      }
+      await this.assertContextPair(contextType as ContextType, contextRefId, businessId, withBusinessId);
+      contextKey = `${contextType}:${contextRefId}`;
+    }
 
-    const thread = await this.prisma.thread.create({ data: { aId, bId } });
-    return { id: thread.id, other, created: true };
+    const [aId, bId] = this.orderedPair(businessId, withBusinessId);
+    const existing = await this.prisma.thread.findUnique({
+      where: { aId_bId_contextKey: { aId, bId, contextKey } },
+    });
+    if (existing) {
+      return {
+        id: existing.id,
+        other,
+        created: false,
+        context: existing.contextType ? { type: existing.contextType, refId: existing.contextRefId ?? "" } : null,
+      };
+    }
+
+    // صریح‌نویسی contextKey (درس readAt) — رفتار پیش‌فرض به سند قدیمی نمی‌چسبد
+    const thread = await this.prisma.thread.create({
+      data: {
+        aId,
+        bId,
+        contextKey,
+        ...(contextKey ? { contextType, contextRefId } : {}),
+      },
+    });
+    return {
+      id: thread.id,
+      other,
+      created: true,
+      context: thread.contextType ? { type: thread.contextType, refId: thread.contextRefId ?? "" } : null,
+    };
   }
+
+  /** سند زمینه باید موجود باشد و دو طرفش همان زوج گفتگو باشد — استنتاج از داده */
+  private async assertContextPair(
+    type: ContextType,
+    refId: string,
+    businessId: string,
+    withBusinessId: string
+  ) {
+    const pair = new Set([businessId, withBusinessId]);
+    if (type === "ORDER") {
+      const o = await this.prisma.order.findUnique({
+        where: { id: refId },
+        select: { buyerId: true, sellerId: true },
+      });
+      if (!o) throw new AppError("CONTEXT_NOT_FOUND", "سند زمینه پیدا نشد", HttpStatus.NOT_FOUND);
+      if (!pair.has(o.buyerId) || !pair.has(o.sellerId)) {
+        throw new AppError(
+          "CONTEXT_MISMATCH",
+          "دو طرف این گفتگو طرف‌های سند زمینه نیستند",
+          HttpStatus.FORBIDDEN
+        );
+      }
+    } else if (type === "OFFER") {
+      const o = await this.prisma.offer.findUnique({
+        where: { id: refId },
+        select: { buyerId: true, sellerId: true },
+      });
+      if (!o) throw new AppError("CONTEXT_NOT_FOUND", "سند زمینه پیدا نشد", HttpStatus.NOT_FOUND);
+      if (!pair.has(o.buyerId) || !pair.has(o.sellerId)) {
+        throw new AppError(
+          "CONTEXT_MISMATCH",
+          "دو طرف این گفتگو طرف‌های سند زمینه نیستند",
+          HttpStatus.FORBIDDEN
+        );
+      }
+    } else if (type === "SUPPLY_PROPOSAL") {
+      const p = await this.prisma.supplyProposal.findUnique({
+        where: { id: refId },
+        select: { buyerId: true, supplierId: true },
+      });
+      if (!p) throw new AppError("CONTEXT_NOT_FOUND", "سند زمینه پیدا نشد", HttpStatus.NOT_FOUND);
+      if (!pair.has(p.buyerId) || !pair.has(p.supplierId)) {
+        throw new AppError(
+          "CONTEXT_MISMATCH",
+          "دو طرف این گفتگو طرف‌های سند زمینه نیستند",
+          HttpStatus.FORBIDDEN
+        );
+      }
+    } else {
+      // LISTING — فروشندهٔ آگهی باید یکی از دو طرف گفتگو باشد
+      const l = await this.prisma.listing.findUnique({
+        where: { id: refId },
+        select: { businessId: true },
+      });
+      if (!l) throw new AppError("CONTEXT_NOT_FOUND", "سند زمینه پیدا نشد", HttpStatus.NOT_FOUND);
+      if (!pair.has(l.businessId)) {
+        throw new AppError(
+          "CONTEXT_MISMATCH",
+          "فروشندهٔ این آگهی طرف این گفتگو نیست",
+          HttpStatus.FORBIDDEN
+        );
+      }
+    }
+  }
+
+  /** DTO زمینه — نوع + شناسه؛ عنوان فقط در getThread (استنتاج زنده) */
+  private contextDto(thread: { contextType: string | null; contextRefId: string | null }) {
+    return thread.contextType
+      ? { type: thread.contextType, refId: thread.contextRefId ?? "" }
+      : null;
+  }
+
+  /**
+   * عنوان زمینه — «دربارهٔ: سفارش برنج هاشمی» (FD-22). استنتاج زنده از
+   * خودِ سند: نام کالای اول + «و N قلم دیگر»؛ اگر سند حذف شده باشد null
+   * می‌گردد و نوار زمینه عقب می‌نشیند (منبع حقیقت خودِ داده است).
+   */
+  private async contextTitle(thread: {
+    contextType: string | null;
+    contextRefId: string | null;
+  }): Promise<string | null> {
+    if (!thread.contextType || !thread.contextRefId) return null;
+    const refId = thread.contextRefId;
+
+    if (thread.contextType === "ORDER") {
+      const o = await this.prisma.order.findUnique({
+        where: { id: refId },
+        select: { items: true, docNo: true },
+      });
+      if (!o) return null;
+      const items = Array.isArray(o.items) ? (o.items as FrozenItem[]) : [];
+      const first = items[0]?.name;
+      const rest = items.length > 1 ? ` و ${faDigits(items.length - 1)} قلم دیگر` : "";
+      if (first) return `سفارش ${first}${rest}`;
+      return o.docNo ? `سفارش ${faDigits(o.docNo)}` : "سفارش";
+    }
+
+    if (thread.contextType === "OFFER") {
+      const off = await this.prisma.offer.findUnique({
+        where: { id: refId },
+        select: { listing: { select: { good: { select: { nameFa: true } } } } },
+      });
+      return off ? `پیشنهاد ${off.listing.good.nameFa}` : null;
+    }
+
+    if (thread.contextType === "SUPPLY_PROPOSAL") {
+      const p = await this.prisma.supplyProposal.findUnique({
+        where: { id: refId },
+        select: { items: true },
+      });
+      if (!p) return null;
+      const items = Array.isArray(p.items)
+        ? (p.items as FrozenItem[]).filter((it) => it && typeof it.goodId === "string")
+        : [];
+      const goods = items.length
+        ? await this.prisma.good.findMany({
+            where: { id: { in: items.map((it) => it.goodId as string) } },
+            select: { id: true, nameFa: true },
+          })
+        : [];
+      // ترتیب اقلام سند منبع حقیقت است — نه ترتیبِ برگشتی کوئری
+      const nameById = new Map(goods.map((g) => [g.id, g.nameFa]));
+      const first = items[0] ? nameById.get(items[0].goodId as string) : undefined;
+      const rest = items.length > 1 ? ` و ${faDigits(items.length - 1)} قلم دیگر` : "";
+      return first ? `پیشنهاد تأمین ${first}${rest}` : "پیشنهاد تأمین";
+    }
+
+    // LISTING — عنوان شخصی فروشنده یا نام کالای مرجع
+    const l = await this.prisma.listing.findUnique({
+      where: { id: refId },
+      select: { title: true, good: { select: { nameFa: true } } },
+    });
+    return l ? l.title || l.good?.nameFa || null : null;
+  }
+
+  // ── گفتگو (۳۰) ──────────────────────────────────────────────────
 
   /**
    * GET /chat/getThread/:id — جزئیات گفتگو + ۱۰۰ پیام آخر (صعودی).
    * باز کردن گفتگو = خواندن: پیام‌های طرف مقابل same-call علامت می‌خورند
    * (رفتار باز کردن چت؛ شمارندهٔ بج همین‌جا صفر می‌شود).
+   * M8: زمینه (نوع + عنوان زنده) + نشان آنلاین طرف.
    */
   async getThread(userId: string, threadId: string) {
     const { thread, myBusinessId, otherId } = await this.assertMine(userId, threadId);
-    const [other, messages] = await Promise.all([
+    const [other, messages, onlineMap, contextTitle] = await Promise.all([
       this.prisma.business.findUnique({ where: { id: otherId }, select: OTHER_SELECT }),
       this.prisma.message.findMany({
         where: { threadId: thread.id },
@@ -143,6 +401,8 @@ export class ChatService {
         take: MSG_PAGE,
         include: { thread: false },
       }),
+      this.onlineByBiz([otherId]),
+      this.contextTitle(thread),
     ]);
     if (!other) throw new AppError("BIZ_NOT_FOUND", "کسب‌وکار طرف مقابل پیدا نشد", HttpStatus.NOT_FOUND);
 
@@ -164,7 +424,10 @@ export class ChatService {
 
     return {
       id: thread.id,
-      other,
+      other: { ...other, online: onlineMap.get(otherId) ?? false },
+      context: thread.contextType
+        ? { type: thread.contextType, refId: thread.contextRefId ?? "", title: contextTitle }
+        : null,
       messages: messages
         .slice()
         .reverse()
