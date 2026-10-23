@@ -277,6 +277,21 @@ export class BusinessesController {
     });
     invalidateBusiness(this.cache, business.id, business.slug);
 
+    // M7 — رویداد تولدِ امتیاز (حکم مالک M3: «خود ثبت‌نام ۵ امتیاز دارد تا صفر
+    // نباشد»): بازوهای فعالِ همان لحظه sc1/sb1 را می‌گیرند؛ موتور M7 با همین
+    // رویدادها انجام‌شدنش را قفل می‌کند و بقیهٔ آیتم‌ها از دادهٔ زنده استنتاج می‌شوند.
+    // دستیار دوم بعداً که روشن شود، آیتمِ خودش را از همان استنتاج می‌گیرد.
+    try {
+      await this.prisma.scoreEvent.createMany({
+        data: [
+          ...(body.intent === "buy" ? [] : [{ businessId: business.id, item: "sc1", refId: "signup" }]),
+          ...(body.intent === "sell" ? [] : [{ businessId: business.id, item: "sb1", refId: "signup" }]),
+        ],
+      });
+    } catch {
+      /* امتیاز هرگز جریان ثبت‌نام را نمی‌شکند — شمارندهٔ ۵ روی خود Business نشسته است */
+    }
+
     // ── Referral auto-follow ───────────────────────────────────────────────
     // The user signed up through someone's catalog / invite link; now that
     // they finally own pages, the two-way relationship is born:

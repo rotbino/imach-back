@@ -12,6 +12,8 @@ import { PushService } from "./push.service";
 ///  BUYER_NEED      — طرح ۸ (U63) — خریداری که گوش‌به‌زنگش هستم نیاز جدید ثبت کرد
 ///  ORDER           — M5 — رخدادهای چرخهٔ سفارش (ثبت/پذیرش/ارسال/تحویل/لغو/رد)
 ///  SUPPLY_PROPOSAL — M6 — پیشنهاد تامین (به خریدار: رسیده) / تایید آن (به فروشنده)
+///  SCORE           — M7 — امتیاز: عبور از آستانهٔ ۱۰۰ ⇐ «موتور شتاب‌دهنده فعال شد»
+///                     (رویدادِ یک‌بار در عمرِ هر بازو — رخدادِ سیستم، نه طرف مقابل)
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
   | "FOLLOW_BUYER"
@@ -21,7 +23,8 @@ export type NotificationType =
   | "PRICE_CHANGE"
   | "BUYER_NEED"
   | "ORDER"
-  | "SUPPLY_PROPOSAL";
+  | "SUPPLY_PROPOSAL"
+  | "SCORE";
 
 export interface NotificationInput {
   userId: string;
@@ -55,6 +58,8 @@ const PREF_KEY: Record<NotificationType, string | null> = {
   ORDER: null,
   /** M6 — پیشنهاد تامین درخواست/پاسخ‌گونه است؛ زیر همان کلید پاسخ‌ها */
   SUPPLY_PROPOSAL: "quoteReplies",
+  /** M7 — لحظهٔ رشد (۱۰۰ امتیاز) قابل‌خاموش‌کردن نیست؛ یک‌بار در عمر */
+  SCORE: null,
 };
 
 /**
@@ -103,6 +108,11 @@ const PUSH_VIEWS: Record<
     // url هم همین‌طور — خریدار → لیست خرید، فروشنده → دفتر مشتریان
     text: (n) => n.title ?? `پیشنهاد تامین از ${n.actorName ?? "تأمین‌کننده"}`,
     url: "/buy-list",
+  },
+  SCORE: {
+    // M7 — رخداد-محور: تیتر روی ردیف (عنوان لحظهٔ رشد) + مقصد صفحهٔ امتیاز
+    text: (n) => n.title ?? "امتیاز فعالیتت به ۱۰۰ رسید — موتور شتاب‌دهنده فعال شد",
+    url: "/home/score",
   },
 };
 

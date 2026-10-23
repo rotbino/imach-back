@@ -13,7 +13,6 @@ import {
 import { randomUUID } from "node:crypto";
 import type { FastifyReply } from "fastify";
 import { CacheService, TTL } from "../common/cache/cache.module";
-import { env } from "../common/config/env";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import type { Locale } from "../common/i18n/i18n";
@@ -25,6 +24,7 @@ import { ensurePage } from "../common/pages";
 import { proximity } from "../common/geo/cities";
 import { NotificationsService } from "../notifications/notifications.service";
 import { PromosService } from "../promos/promos.service";
+import { ScoreService } from "../score/score.service";
 import { MatchingService } from "./matching.service";
 import {
   AcceptOfferDto,
@@ -193,7 +193,8 @@ export class MarketController {
     private readonly cache: CacheService,
     private readonly matching: MatchingService,
     private readonly notifications: NotificationsService,
-    private readonly promos: PromosService
+    private readonly promos: PromosService,
+    private readonly score: ScoreService
   ) {}
 
   private invalidateBuyerSide(businessId: string): void {
@@ -202,34 +203,27 @@ export class MarketController {
     this.cache.invalidateTag(`market:sugg:${businessId}`);
   }
 
-  /** Members this owner personally brought in via referral links — the growth currency. */
-  private referralCountOf(ownerId: string | null): Promise<number> {
-    return this.prisma.user.count({ where: { referredById: ownerId ?? "__none__" } });
-  }
-
   /**
-   * The referral gate — buyer-follow and cold-offer stay locked until the
-   * seller has brought REFERRAL_TARGET members through their catalog link.
-   * 403 + REFERRAL_GATE; the UI renders the progress strip itself.
+   * M7 (§۴.۴) — گیتِ شبکهٔ باز جایگزینِ گیتِ ۱۰-معرف شد:
+   * موتور (پیشنهاد مستقیم به خریدارِ ناشناس) فقط برای فروشنده‌ای باز است
+   * که امتیاز فعالیت فروشش به آستانهٔ AppSetting network.openScore رسیده
+   * باشد. 403 + OPEN_SCORE_GATE؛ فرانت نوار پیشرفت را خودش می‌کشد.
+   * «گوش‌به‌زنگ» بودن (فالویِ SELL من روی BUY او) همچنان خودش دعوت است.
    */
-  private async assertReferralUnlocked(
-    business: { ownerId: string | null },
-    _locale: Locale
-  ): Promise<void> {
-    const count = await this.referralCountOf(business.ownerId);
-    if (count >= env.REFERRAL_TARGET) return;
-    throw new AppError(
-      "REFERRAL_GATE",
-      `برای فعال شدن این امکان، ${env.REFERRAL_TARGET} عضو با لینک کاتالوگتان بیاورید`,
-      HttpStatus.FORBIDDEN,
-      { count, required: env.REFERRAL_TARGET }
+  private assertNetworkOpen(businessId: string, arm: "sell" | "buy"): Promise<void> {
+    const armFa = arm === "sell" ? "فروش" : "خرید";
+    return this.score.assertArmOpen(
+      businessId,
+      arm,
+      `برای فعال شدن این امکان، امتیاز فعالیت ${armFa}ت را به آستانهٔ شبکهٔ باز برسان`
     );
   }
 
   /**
-   * وضعیت گیت رشد برای بازار خریدارها (بازوی فروش) — یک فراخوان برای همه‌ی
-   * عناصر صفحه: شمارنده‌ی معرف، کالاهای فروشی (گیت کاتالوگ خالی)، و فالو/
-   * پیشنهادهای قبلی من روی خریدارها.
+   * وضعیت گیتِ شبکهٔ باز (M7 §۴.۴) + زمینهٔ بازار فروش — یک فراخوان برای
+   * همهٔ عناصر صفحه: امتیاز دو بازو (گیت موتور تطبیق)، کالاهای فروشی
+   * (گیت کاتالوگ خالی)، و فالو/پیشنهادهای قبلی من روی خریدارها.
+   * (گیتِ ۱۰-معرفِ REFERRAL_TARGET بازنشسته شد؛ سند ۰۸ §M7.)
    */
   @Get("getMarketState")
   async getMarketState(
@@ -238,8 +232,8 @@ export class MarketController {
     @CurrentLocale() locale: Locale
   ) {
     const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const [count, sellListings, buyerEdges, myOffers] = await Promise.all([
-      this.referralCountOf(business.ownerId),
+    const [{ state }, sellListings, buyerEdges, myOffers] = await Promise.all([
+      this.score.syncBusiness(business.id),
       this.prisma.listing.findMany({
         where: { businessId: business.id, isActive: true, mode: { in: ["SELL", "BOTH"] } },
         select: { goodId: true },
@@ -257,9 +251,12 @@ export class MarketController {
         distinct: ["buyerId"],
       }),
     ]);
-    const required = env.REFERRAL_TARGET;
     return {
-      referral: { count, required, unlocked: count >= required },
+      open: {
+        required: state.required,
+        sell: { score: state.sell.score, unlocked: state.sell.open },
+        buy: { score: state.buy.score, unlocked: state.buy.open },
+      },
       sellCount: sellListings.length,
       sellGoodIds: [...new Set(sellListings.map((l) => l.goodId))],
       followedBuyerIds: buyerEdges.map((e) => e.supplierPage.businessId),
@@ -786,6 +783,20 @@ export class MarketController {
     @Res({ passthrough: true }) reply: FastifyReply
   ) {
     const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    // M7 (§۴.۴) — گیتِ شبکهٔ باز «پیش از کش» خوانده می‌شود تا تغییرِ آستانه از
+    // پنل ادمین بلافاصله اثر کند (کش فقط محاسبهٔ سنگینِ حالتِ باز را نگه می‌دارد).
+    const { state: lock } = await this.score.syncBusiness(business.id);
+    if (!lock.buy.open) {
+      reply.header("x-cache", "LOCKED");
+      return {
+        locked: true,
+        required: lock.required,
+        score: lock.buy.score,
+        betterPrices: [],
+        newSuppliers: [],
+        alternatives: [],
+      };
+    }
     const { value, hit } = await this.cache.wrap(
       `market:sugg:${query.businessId}`,
       { ttlMs: TTL.MINUTE, tags: [`market:sugg:${query.businessId}`] },
@@ -801,6 +812,19 @@ export class MarketController {
     province: string | null;
     country: string;
   }) {
+    // M7 (§۴.۴) — موتور تطبیق فقط برای خریدارِ ۱۰۰+ باز است؛ قفل ⇐ پاسخ
+    // سبکِ locked (فرانت کارت/نوار پیشرفت را می‌کشد) — محاسبهٔ سنگین نمی‌دود.
+    const { state: score } = await this.score.syncBusiness(business.id);
+    if (!score.buy.open) {
+      return {
+        locked: true,
+        required: score.required,
+        score: score.buy.score,
+        betterPrices: [],
+        newSuppliers: [],
+        alternatives: [],
+      };
+    }
     const buyerGeo = { city: business.city, province: business.province, country: business.country };
 
     // زمینه‌ی خریدار: کالاهای من + شبکه‌ام + سابقه‌ی استعلام
@@ -1161,7 +1185,9 @@ export class MarketController {
       select: { id: true },
     });
     if (!watching) {
-      await this.assertReferralUnlocked(business, locale);
+      // M7 (§۴.۴) — گیتِ شبکهٔ باز (جایگزین گیت ۱۰-معرف): پیشنهاد مستقیم به
+      // خریدارِ ناشناس، موتور است — فقط فروشندهٔ ۱۰۰+ آن را باز می‌بیند.
+      await this.assertNetworkOpen(business.id, "sell");
     }
 
     const myList = await this.prisma.listing.findFirst({

@@ -18,7 +18,7 @@ import { AppError } from "../common/errors/app-error";
  */
 
 /** کلیدهای مجاز برای نوشتن توسط ادمین */
-const WRITABLE_KEYS = ["payments.enabled", "currency.rates"] as const;
+const WRITABLE_KEYS = ["payments.enabled", "currency.rates", "network.openScore"] as const;
 
 /** ارزهای پشتیبانی‌شدهٔ نمایش (برچسب‌ها سمت کلاینت) — IRR لنگر است */
 export const SUPPORTED_CURRENCIES = [
@@ -60,6 +60,9 @@ const DEFAULTS: Record<string, unknown> = {
   "payments.enabled": true,
   "currency.base": "IRR",
   "currency.rates": DEFAULT_RATES,
+  /** M7 (§۴.۴) — آستانهٔ گیتِ شبکهٔ باز: موتور تطبیق (پیشنهادها/تبلیغ هدفمند)
+   *  فقط برای score≥آستانهٔ همان بازو فعال است؛ قابل تنظیم بدون دیپلوی. */
+  "network.openScore": 100,
 };
 
 @Injectable()
@@ -148,6 +151,9 @@ export class SettingsService {
       sanitized = value === true || value === "true";
     } else if (key === "currency.rates") {
       sanitized = this.sanitizeRates(value);
+    } else if (key === "network.openScore") {
+      const n = typeof value === "number" ? value : Number.parseInt(String(value ?? ""), 10);
+      sanitized = Number.isFinite(n) && n >= 0 && n <= 1000 ? Math.floor(n) : 100;
     }
     const row = await this.prisma.appSetting.upsert({
       where: { key },
@@ -162,5 +168,11 @@ export class SettingsService {
   async paymentsEnabled(): Promise<boolean> {
     const v = await this.readKey("payments.enabled");
     return v === true;
+  }
+
+  /** M7 — آستانهٔ شبکهٔ باز (گیت امتیاز موتور تطبیق؛ §۴.۴) */
+  async openScoreThreshold(): Promise<number> {
+    const v = await this.readKey("network.openScore");
+    return typeof v === "number" && Number.isFinite(v) && v >= 0 ? Math.floor(v) : 100;
   }
 }

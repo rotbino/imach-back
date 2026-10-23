@@ -763,17 +763,20 @@ export class ListingsController {
     const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
     if (body.items.length === 0) return { updated: 0, failed: 0 };
 
-    // یک کوئری — ردیف‌های همین کسب‌وکار (مالکیت اینجا قفل می‌شود)
+    // یک کوئری — ردیف‌های همین کسب‌وکار (مالکیت اینجا قفل می‌شود)؛
+    // M7: نام کالا هم لازم است — موج اعلانِ تغییر قیمت به دیده‌بان‌ها
     const ids = body.items.map((i) => i.listingId);
     const rows = await this.prisma.listing.findMany({
       where: { id: { in: ids }, businessId: business.id },
-      select: { id: true, priceMinor: true, stock: true, baseQty: true, isActive: true },
+      select: { id: true, priceMinor: true, stock: true, baseQty: true, isActive: true, good: { select: { nameFa: true } } },
     });
     const rowMap = new Map(rows.map((r) => [r.id, r]));
 
     let updated = 0;
     let failed = 0;
     const touched: { id: string; priceMinor: number | null; stock: number | null }[] = [];
+    // M7 — کالاهایی که قیمت‌شان واقعاً عوض شد (موج اعلان PRICE_CHANGE)
+    const changedGoodNames: string[] = [];
 
     for (const item of body.items as BulkPriceStockItemDto[]) {
       const row = rowMap.get(item.listingId);
@@ -812,6 +815,7 @@ export class ListingsController {
           await this.prisma.priceLog.create({
             data: { listingId: row.id, oldMinor: row.priceMinor, newMinor: nextPrice },
           });
+          if (row.good?.nameFa) changedGoodNames.push(row.good.nameFa);
         }
         await this.prisma.listing.update({ where: { id: row.id }, data, select: { id: true } });
         updated++;
@@ -822,6 +826,47 @@ export class ListingsController {
     }
 
     if (updated > 0) this.invalidateFor(business.id, business.slug);
+
+    // M7 — موج اعلانِ تغییر قیمت (کوتاه‌شده در سند listings M2، وصل شد در M7):
+    // هر ذخیره‌کنندهٔ کاتالوک یک اعلان رویداد-محور می‌گیرد — «اعلان = رویدادِ
+    // طرف مقابل». یک ردیف به‌ازای هر دیده‌بان (نه هر کالا)؛ تیتر جمعی.
+    if (changedGoodNames.length > 0) {
+      try {
+        const sellPage = await this.prisma.page.findUnique({
+          where: { businessId_type: { businessId: business.id, type: "SELL" } },
+          select: { id: true },
+        });
+        if (sellPage) {
+          const follows = await this.prisma.follow.findMany({
+            where: { supplierPageId: sellPage.id },
+            select: { followerPage: { select: { businessId: true, business: { select: { id: true, ownerId: true } } } } },
+            take: 500,
+          });
+          const seen = new Set<string>();
+          const rows4notifs = follows
+            .map((f) => f.followerPage.business)
+            .filter((b): b is { id: string; ownerId: string } => !!b && !!b.ownerId && !seen.has(b.ownerId) && seen.add(b.ownerId) !== undefined);
+          const n = changedGoodNames.length;
+          const goodSummary = n <= 2 ? changedGoodNames.join("، ") : `${changedGoodNames.slice(0, 2).join("، ")} و ${n - 2} کالای دیگر`;
+          await this.notifications.pushMany(
+            rows4notifs.map((b) => ({
+              userId: b.ownerId!,
+              bizId: b.id,
+              type: "PRICE_CHANGE" as const,
+              actorId: business.id,
+              actorName: business.name,
+              actorSlug: business.slug,
+              good: goodSummary,
+              title: `${business.name} قیمت ${n === 1 ? changedGoodNames[0] : n + " کالا"} را به‌روز کرد`,
+              url: `/c/${business.slug}`,
+            }))
+          );
+        }
+      } catch {
+        /* موج اعلان best-effort است — تغییر قیمت هرگز برایش نمی‌شکند */
+      }
+    }
+
     return { updated, failed, items: touched };
   }
 

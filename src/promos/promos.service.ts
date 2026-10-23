@@ -1,6 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { Prisma } from "@prisma/client";
 import { PrismaService } from "../common/prisma/prisma.module";
+import { SettingsService } from "../settings/settings.service";
 import { WalletService, PROMO_VIEW_MINOR, PROMO_FOLLOW_MINOR } from "../wallet/wallet.service";
 
 export const PROMO_INCLUDE = {
@@ -30,6 +31,7 @@ export class PromosService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly wallets: WalletService,
+    private readonly settings: SettingsService,
   ) {}
 
   /** ساخت کمپین — قفل بودجه از کیف در همان تراکنش (اتمیک) */
@@ -218,10 +220,26 @@ export class PromosService {
             })
           ).map((p) => p.businessId)
     );
+    // M7 (§۴.۴) — تبلیغ هدفمند هم موتور است: فقط تبلیغ‌کننده‌ای واجد است که
+    // امتیاز فعالیت فروشش به آستانهٔ شبکهٔ باز رسیده باشد (خوانش شمارندهٔ
+    // denormalized — با syncBusinessِ خودش زنده می‌ماند).
+    const required = await this.settings.openScoreThreshold();
+    const advertiserIds = [...new Set(promos.map((p) => p.businessId))];
+    const openAdvertisers = new Set(
+      advertiserIds.length === 0
+        ? []
+        : (
+            await this.prisma.business.findMany({
+              where: { id: { in: advertiserIds }, scoreSell: { gte: required } },
+              select: { id: true },
+            })
+          ).map((b) => b.id)
+    );
     const eligible = promos.filter(
       (p) =>
         p.budgetMinor - p.spentMinor >= PROMO_VIEW_MINOR &&
-        !savedSupplierBizIds.has(p.businessId)
+        !savedSupplierBizIds.has(p.businessId) &&
+        openAdvertisers.has(p.businessId)
     );
     // شمارش VIEW — بی‌صدا بودجه کم می‌شود؛ خطا جریان را نمی‌شکند
     for (const p of eligible.slice(0, 5)) {

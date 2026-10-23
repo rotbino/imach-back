@@ -550,6 +550,8 @@ model Business {
   threadsB     Thread[]      @relation("threadB")
   /// Brands owned by this business (for brand dashboard)
   ownedBrands  Brand[]       @relation("BrandOwner")
+  /// M7 — رویدادهای امتیازِ هر دو بازو (گزارش «کِی انجام شد»)
+  scoreEvents  ScoreEvent[]
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
 
@@ -1227,6 +1229,8 @@ model DiscountRule {
 //   currency.base    ("IRR") — ارز مرجع پایهٔ حسابداری (کیف پول/کمپین)
 //   currency.rates   ({CODE: baseMinorPerMajor}) — نرخ‌ها: چند minor ارز مرجع
 //                              برابر ۱ واحد اصلیِ آن ارز (rate.IRR = ۱۰ همیشه)
+//   network.openScore (int ≥ 0, پیش‌فرض 100) — M7: آستانهٔ گیتِ شبکهٔ باز
+//                              (موتور تطبیق فقط برای score≥آستانهٔ همان بازو)
 // مخزن است نه فایل env: تغییر از پنل ادمین بدون redeploy اعمال می‌شود.
 model AppSetting {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -1234,4 +1238,25 @@ model AppSetting {
   /// مقدار ساختاریافته — اعتبارسنجی در سرویس، نه اسکیما (کلیدهای متنوع)
   value     Json
   updatedAt DateTime @updatedAt
+}
+
+/// M7 — رویداد امتیاز: هر آیتم حداکثر یک‌بار به‌ازای هر کسب‌وکار رخ می‌دهد
+/// (یکتا [businessId, item])؛ refId پیوندِ اثبات است (مثلاً orderId برای
+/// sc7/sb7). سرویس Score رویدادها را «از روی دادهٔ زنده» بازسازی می‌کند —
+/// رویداد فقط «کِی/چرا» را ثبت می‌کند، نه منبع حقیقتِ انجام‌شدن؛ بنابراین
+/// تعمیر داده هرگز امتیازِ کاذب به جا نمی‌گذارد و شمارنده‌های denormalized
+/// روی Business با همان بازسازی زنده می‌مانند.
+model ScoreEvent {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  businessId String
+  /// sc1..sc9 (بازوی فروش) | sb1..sb9 (بازوی خرید) — متن‌ها در score-items.ts
+  item       String
+  /// پیوند اثبات: orderId (اولین سفارش بسته)، signup، … — اختیاری
+  refId      String?
+  createdAt  DateTime @default(now())
+
+  business Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@unique([businessId, item])
+  @@index([businessId, createdAt])
 }

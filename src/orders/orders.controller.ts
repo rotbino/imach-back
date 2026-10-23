@@ -18,6 +18,7 @@ import { assertBusinessOwner } from "../common/guards";
 import { ensurePage } from "../common/pages";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
 import { NotificationsService } from "../notifications/notifications.service";
+import { ScoreService } from "../score/score.service";
 import {
   AcceptOrderDto,
   BasketItemDto,
@@ -114,7 +115,8 @@ const ORDER_INCLUDE: Prisma.OrderInclude = {
 export class OrdersController {
   constructor(
     private readonly prisma: PrismaService,
-    private readonly notifications: NotificationsService
+    private readonly notifications: NotificationsService,
+    private readonly score: ScoreService
   ) {}
 
   // ═════════════════════════ ابزارهای مشترک ═════════════════════════
@@ -190,6 +192,8 @@ export class OrdersController {
           url: `/buy/orders/${o.id}`,
         });
       }
+      // M7 — بستنِ تنبل هم «سفارش بسته» است: sc7/sb7 همین‌جا می‌نشیند
+      await this.score.onOrderDelivered(o.id).catch(() => null);
     }
   }
 
@@ -752,7 +756,6 @@ export class OrdersController {
     const { order, side } = await this.loadOwnedOrder(id, body.businessId, user, locale);
     if (side !== "buyer") throw AppError.badRequest("تحویل را خریدار تأیید می‌کند", "BUYER_ONLY");
     if (order.status !== "SENT") throw AppError.badRequest("تأیید تحویل فقط پس از ارسال ممکن است", "NOT_SENT");
-    // M7 — اینجا اولین سفارشِ بستهٔ موفق رویداد امتیاز sc7/sb7 می‌سازد (یکتا به‌ازای refId)
     await this.transition(order.id, "DELIVERED", "buyer", {}, {
       userId: (order.seller as { ownerId: string | null }).ownerId,
       bizId: order.sellerId,
@@ -762,6 +765,9 @@ export class OrdersController {
       good: orderTitle(itemsOf(order.items)),
       url: `/sell/orders/${order.id}`,
     });
+    // M7 — اولین سفارشِ بستهٔ موفق: sc7 (فروشنده) + sb7 (خریدار)، یکتا به‌ازای
+    // refId=orderId؛ بازسازیِ زنده سنجاق می‌کند و اعلانِ «موتور فعال شد» همین‌جا شلیک می‌شود.
+    await this.score.onOrderDelivered(order.id).catch(() => null);
     return { ok: true, status: "DELIVERED" };
   }
 

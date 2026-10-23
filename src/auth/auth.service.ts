@@ -467,6 +467,15 @@ export class AuthService {
       },
       include: { pages: { select: { id: true, type: true } } },
     });
+    // M7 — رویداد تولدِ امتیازِ هر دو بازو (حکم مالک M3؛ الگوی createBusiness)
+    await this.prisma.scoreEvent
+      .createMany({
+        data: [
+          { businessId: business.id, item: "sc1", refId: "signup" },
+          { businessId: business.id, item: "sb1", refId: "signup" },
+        ],
+      })
+      .catch(() => null); /* امتیاز هرگز ثبت‌نام را نمی‌شکند */
     const mySellPageId = business.pages.find((p) => p.type === "SELL")?.id;
     const myBuyPageId = business.pages.find((p) => p.type === "BUY")?.id;
 
