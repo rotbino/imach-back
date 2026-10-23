@@ -143,6 +143,11 @@ model Notification {
   actorSlug String?
   /// Context label (good name for offer/quote rows)
   good      String?
+  /// M5 — تیتر رویداد («سفارش پذیرفته شد») — رخدادمحور نه type-محور؛
+  /// خوانده‌نشدهٔ notifs 17 همین را نشان می‌دهد. null = مشتق از type (legacy).
+  title     String?
+  /// M5 — مقصد لمس (لینک عمقی همان رخداد). null = مسیر پیش‌فرض نوع.
+  url       String?
   read      Boolean  @default(false)
   createdAt DateTime @default(now())
 
@@ -509,6 +514,14 @@ model Business {
   /// حداقل یک دستیار باید روشن بماند (اعتبارسنجی در setArms).
   enabledArms Json?
 
+  // ── M5 (سند ۰۸ §M5 · FD-37) — اسناد فروش ──
+  /// شمارهٔ مالیاتی فروشنده — روی فاکتور چاپ می‌شود (تنظیمات ۳۶).
+  invoiceTaxId String?
+  /// یادداشت ثابت فاکتور («کالا فروخته شده_return نمی‌شود» و…) — پانوشت چاپی.
+  invoiceNote String?
+  /// شمارندهٔ شمارهٔ سند ترتیبی — با هر پذیرش سفارش یک واحد بالا می‌رود (atomic).
+  invoiceSeq Int @default(0)
+
   ownerId String? @db.ObjectId
   owner   User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 
@@ -518,6 +531,10 @@ model Business {
   offersSent   Offer[]       @relation("seller")
   offersRecv   Offer[]       @relation("buyer")
   pages        Page[]
+  /// M5 — سفارش‌هایی که این کسب‌وکار فروخته (صف فروش ۰۹)
+  ordersSold Order[]        @relation("orderSeller")
+  /// M5 — سفارش‌هایی که این کسب‌وکار خریده (دفتر خرید ۲۸)
+  ordersBought Order[]      @relation("orderBuyer")
   /// فاز ۵ — کالاهایی که این خریدار قیمتشان را دنبال می‌کند (لیست خرید)
   watchedGoods WatchedGood[]
   /// طرح ۸ — کیف پول تومانی (هر کسب‌وکار حداکثر یکی)
@@ -728,6 +745,10 @@ model Inquiry {
   closedAt         DateTime?
   /// M4 — متن نتیجهٔ گروه («پذیرفت: … — جمع X تومان»)؛ برای ردیف «پایان‌یافته».
   resultText       String?
+  /// M5 — کدام پیشنهاد پذیرفته شد (پذیرش ⇒ تخصیص) — گارد قطعیِ «ثبت سفارش
+  /// با همین شرایط»: فقط پیشنهادِ برنده سفارش می‌شود. legacy null = از
+  /// resultText (نام فروشنده) حدس زده می‌شود. (الگوی rfqGroupId: رشتهٔ ساده)
+  acceptedOfferId  String?
   status           String   @default("NEW") // NEW | ANSWERED | ARCHIVED
   isRead           Boolean  @default(false)
   createdAt        DateTime @default(now())
@@ -781,6 +802,71 @@ model Offer {
 
   @@index([buyerId, createdAt])
   @@index([sellerId, createdAt])
+}
+
+// ─── M5 — سفارش‌ها (سند ۰۸ §M5 · FD-18/22/26/37) ────────────────────────────
+
+/// سفارش ثبت‌شدهٔ خریدار نزد فروشنده — تعهدِ دو طرف (پول بیرون از سیستم؛
+/// حکم مالک FD-22). اقلام snapshot فریز می‌شوند؛ قیمت کاتالوک بعداً عوض شود
+/// سفارش قدیمی خودش را نگه می‌دارد.
+///
+/// چرخه: NEW → ACCEPTED → SENT → DELIVERED | REJECTED (فقط در NEW) |
+/// CANCELLED (فقط تا قبل از SENT). هر گذار: history + اعلان به مقابل.
+/// SENT بدون تأیید خریدار ⇒ ۷ روز پس از ارسال «بستن تنبل» (در خواندن).
+model Order {
+  id      String @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId String @db.ObjectId
+  sellerId String @db.ObjectId
+
+  status String @default("NEW") // NEW | ACCEPTED | SENT | DELIVERED | REJECTED | CANCELLED
+
+  /// خاستگاه: CATALOG_BASKET (سبد کاتالوک ۳۱) | RFQ_OFFER (پیشنهاد پذیرفته‌شده ۲۷)
+  originType String
+  /// RFQ_OFFER ⇒ offerId پذیرفته‌شده (گارد یکتایی: هر پیشنهاد یک سفارش)
+  originId   String?
+
+  /// اقلام فریز — منبع حقیقتِ نمایش/چاپ:
+  /// [{listingId, goodId, name, pack, qty, unitPriceMinor, baseQty?}]
+  /// RFQ_OFFER: قلم‌های بی‌قیمت (پیشنهاد ناقص) نمی‌آیند (تصمیم ۲ FD-22).
+  items Json
+
+  /// جمع فریز (Σ qty×unitPriceMinor) — با پذیرشِ اصلاحی دوباره محاسبه می‌شود
+  totalMinor Int     @default(0)
+  currency   String  @default("IRR")
+
+  /// یادداشت خریدار (سبد: یادداشت سفارش · پیشنهاد: شرایط ترجمه‌شده)
+  note       String?
+  /// یادداشت فروشنده هنگام پذیرش («ارسال فردا صبح، راننده آقای محمدی»)
+  sellerNote String?
+
+  /// شرایط snapshot از پیشنهاد ({chk,days} / {ship,by}) — سبد: null
+  pay Json?
+  dlv Json?
+
+  /// شمارهٔ سند ترتیبی فروشنده — با پذیرش از Business.invoiceSeq تخصیص
+  /// می‌یابد (فیش/فاکتور ۴۰/۴۱ همین را چاپ می‌کنند). null = هنوز پذیرفته نشده.
+  docNo Int?
+
+  /// مهلت تأیید تحویل = لحظهٔ «ارسال شد» + ۷ روز (تصمیم ۱/۹ FD-22).
+  /// بگذرد و خریدار تأیید نکند ⇒ در اولین خواندن، سفارش بسته می‌شود (lazy).
+  deliverDeadline DateTime?
+
+  /// خط زمانی: [{st: "NEW"|"ACCEPTED"|…, at: ISO, by: "buyer"|"seller"|"system", note?}]
+  history Json?
+
+  /// بایگانی خریدار (۲۸) — ردیف از فهرست می‌افتد، تاریخچه می‌ماند
+  archivedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  buyer  Business @relation("orderBuyer", fields: [buyerId], references: [id], onDelete: Cascade)
+  seller Business @relation("orderSeller", fields: [sellerId], references: [id], onDelete: Cascade)
+
+  @@index([sellerId, status, createdAt])
+  @@index([buyerId, status, createdAt])
+  /// گارد یکتایی پیشنهاد→سفارش + واکشی مستقیم با originId
+  @@index([originType, originId])
 }
 
 // ─── Pages (isolated business contexts) ───────────────────────────────────

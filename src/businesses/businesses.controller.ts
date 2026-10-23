@@ -352,6 +352,9 @@ export class BusinessesController {
             customCategories: true,
             // M2 (G7) — اعتبار قیمت کاتالوگ: بج «قیمت منقضی» از همین محاسبه می‌شود
             priceValidityDays: true,
+            // M5 (FD-37) — اسناد فروش روی فاکتور چاپ می‌شوند (خریدار هم سند را می‌بیند)
+            invoiceTaxId: true,
+            invoiceNote: true,
             // لوکیشن دقیق و آدرس — فقط مالک در ویترین خودش می‌بیند (برای ویرایش)
             lat: true,
             lng: true,
@@ -556,6 +559,13 @@ export class BusinessesController {
         // فیکس‌بچ M3 — تیک عدم نمایش دسته‌بندی در کاتالوک خود فروشنده
         ...(body.catalogCategoriesHidden !== undefined
           ? { catalogCategoriesHidden: body.catalogCategoriesHidden }
+          : {}),
+        // M5 (FD-37) — اسناد فروش: شمارهٔ مالیاتی + یادداشت ثابت فاکتور (تنظیمات ۳۶)
+        ...(body.invoiceTaxId !== undefined
+          ? { invoiceTaxId: body.invoiceTaxId ? body.invoiceTaxId.trim() : null }
+          : {}),
+        ...(body.invoiceNote !== undefined
+          ? { invoiceNote: body.invoiceNote ? body.invoiceNote.trim() : null }
           : {}),
       },
     });

@@ -136,6 +136,18 @@ export class EditBusinessDto {
   @IsOptional()
   @IsBoolean()
   catalogCategoriesHidden?: boolean;
+
+  /** M5 (FD-37) — شمارهٔ مالیاتی فروشنده؛ روی فاکتور (۴۰) چاپ می‌شود. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(40)
+  invoiceTaxId?: string | null;
+
+  /** M5 (FD-37) — یادداشت ثابت فاکتور («کالا فروخته‌شده برگشت ندارد»)؛ پانوشت چاپی. */
+  @IsOptional()
+  @IsString()
+  @MaxLength(200)
+  invoiceNote?: string | null;
 }
 
 /**

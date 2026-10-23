@@ -10,6 +10,7 @@ import { ProductsModule } from "./products/products.module";
 import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
 import { MarketModule } from "./market/market.module";
+import { OrdersModule } from "./orders/orders.module";
 import { NotificationsModule } from "./notifications/notifications.module";
 import { ContactsModule } from "./contacts/contacts.module";
 import { AdminModule } from "./admin/admin.module";
@@ -37,6 +38,7 @@ import { SettingsModule } from "./settings/settings.module";
     BusinessesModule,
     ListingsModule,
     MarketModule,
+    OrdersModule,
     NotificationsModule,
     ContactsModule,
     FilesModule,

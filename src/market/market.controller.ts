@@ -1743,7 +1743,8 @@ export class MarketController {
     if (groupId) {
       await this.prisma.inquiry.updateMany({
         where: groupWhere(groupId),
-        data: { closedAt: new Date(), stoppedAt: null, resultText },
+        // M5 — پیشنهادِ برنده ثبت می‌شود: گارد قطعیِ «ثبت سفارش با همین شرایط»
+        data: { closedAt: new Date(), stoppedAt: null, resultText, acceptedOfferId: offer.id },
       });
     }
 

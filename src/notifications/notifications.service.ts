@@ -2,16 +2,15 @@ import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { PushService } from "./push.service";
 
-/**
- * انواع اعلان — MongoDB اِنام ندارد؛ در مرز API با type string می‌آید.
- *  FOLLOW_SUPPLIER — خریداری کاتالوگ (صفحه SELL) من را فالو کرد → مشتری جدید
- *  FOLLOW_BUYER    — تامین‌کننده‌ای میز خرید (صفحه BUY) مرا فالو کرد → «خودش آمد»
- *  OFFER           — پیشنهاد مستقیم روی درخواست خرید من نشست
- *  QUOTE           — موتور تطبیق، استعلام قیمت را به من رساند
- *  CONTACT_JOINED  — شماره‌ای از دفترچه‌ی من همین حالا عضو iMach شد
- *  PRICE_CHANGE    — فاز ۵ — کالایی که دنبال می‌کنم قیمتش عوض شد (شکاف ۲)
- *  BUYER_NEED      — طرح ۸ (U63) — خریداری که گوش‌به‌زنگش هستم نیاز جدید ثبت کرد
- */
+/// انواع اعلان — MongoDB اِنام ندارد؛ در مرز API با type string می‌آید.
+///  FOLLOW_SUPPLIER — خریداری کاتالوگ (صفحه SELL) من را فالو کرد → مشتری جدید
+///  FOLLOW_BUYER    — تامین‌کننده‌ای میز خرید (صفحه BUY) مرا فالو کرد → «خودش آمد»
+///  OFFER           — پیشنهاد مستقیم روی درخواست خرید من نشست
+///  QUOTE           — موتور تطبیق، استعلام قیمت را به من رساند
+///  CONTACT_JOINED  — شماره‌ای از دفترچه‌ی من همین حالا عضو iMach شد
+///  PRICE_CHANGE    — فاز ۵ — کالایی که دنبال می‌کنم قیمتش عوض شد (شکاف ۲)
+///  BUYER_NEED      — طرح ۸ (U63) — خریداری که گوش‌به‌زنگش هستم نیاز جدید ثبت کرد
+///  ORDER           — M5 — رخدادهای چرخهٔ سفارش (ثبت/پذیرش/ارسال/تحویل/لغو/رد)
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
   | "FOLLOW_BUYER"
@@ -19,7 +18,8 @@ export type NotificationType =
   | "QUOTE"
   | "CONTACT_JOINED"
   | "PRICE_CHANGE"
-  | "BUYER_NEED";
+  | "BUYER_NEED"
+  | "ORDER";
 
 export interface NotificationInput {
   userId: string;
@@ -34,6 +34,10 @@ export interface NotificationInput {
   actorName?: string | null;
   actorSlug?: string | null;
   good?: string | null;
+  /** M5 — تیتر رویداد (متن اصلی اعلان، نه مشتق‌شده از type): «سفارش پذیرفته شد» */
+  title?: string | null;
+  /** M5 — مقصد لمس/کلیک اعلان (لینک عمقی صفحهٔ همان رویداد) */
+  url?: string | null;
 }
 
 /** نگاشت نوع اعلان → کلیدِ تنظیم در notifPrefs — null یعنی قابل‌تنظیم نیست */
@@ -45,6 +49,8 @@ const PREF_KEY: Record<NotificationType, string | null> = {
   FOLLOW_BUYER: "suggestions",
   CONTACT_JOINED: "suggestions",
   BUYER_NEED: "quoteReplies",
+  /** M5 — رخداد سفارش هستهٔ کسب‌وکار است؛ قابل‌خاموش‌کردن نیست */
+  ORDER: null,
 };
 
 /**
@@ -83,6 +89,11 @@ const PUSH_VIEWS: Record<
     text: (n) => `${n.actorName ?? "خریداری"} اعلام نیاز کرد: «${n.good ?? "کالا"}»`,
     url: "/sell/requests",
   },
+  ORDER: {
+    // M5 — تیترِ خودِ رویداد روی ردیف ذخیره شده؛ پوش همان را می‌گوید
+    text: (n) => n.title ?? `سفارش «${n.good ?? "…"}»`,
+    url: "/orders",
+  },
 };
 
 /**
@@ -119,7 +130,8 @@ export class NotificationsService {
     if (inApp.length === 0) return;
 
     try {
-      // bizId صرفاً سوئیچ خواندنِ prefs است — روی ردیف اعلان ذخیره نمی‌شود
+      // bizId صرفاً سوئیچ خواندنِ prefs است — روی ردیف اعلان ذخیره نمی‌شود؛
+      // title/url (M5) ذخیره می‌شوند: تیتر رویداد + مقصد لمس.
       await this.prisma.notification.createMany({
         data: inApp.map(({ bizId: _bizId, ...rest }) => rest),
       });
@@ -132,7 +144,12 @@ export class NotificationsService {
         const view = PUSH_VIEWS[r.type];
         if (!view) return Promise.resolve();
         return this.pushService
-          .sendToUser(r.userId, { title: "iMach", body: view.text(r), url: view.url })
+          .sendToUser(r.userId, {
+            title: "iMach",
+            body: view.text(r),
+            // M5 — url رخداد (پیش‌فرض نوع، جایگزین إذا غایب)
+            url: r.url ?? view.url,
+          })
           .catch(() => {});
       })
     );
