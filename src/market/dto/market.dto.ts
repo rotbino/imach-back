@@ -296,6 +296,39 @@ export class RemoveFollowerDto {
   followerBusinessId: string;
 }
 
+/** POST /market/ackFollower — M6 (FD-44/45): فروشنده مشتری جدید را تایید می‌کند
+ *  (مهر ackAt؛ ردیف از بالای دفتر «جدید» می‌رود ولی مشتری می‌ماند). */
+export class AckFollowerDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyerId: string;
+}
+
+/** POST /market/setFollowerNote — M6 (دفتر مشتری ۰۸ب): یادداشت شخصی فروشنده روی مشتری. */
+export class SetFollowerNoteDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyerId: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(500)
+  note?: string | null;
+}
+
+/** GET /market/getCustomer — M6: نمای جزئیات مشتری (شناسنامه + سفارش‌ها + استعلام‌های او). */
+export class CustomerQueryDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyerId: string;
+}
+
 /**
  * POST /market/followBuyer — my SELL page follows a buyer's BUY desk:
  * «می‌خواهم تامین‌کننده‌ی این خریدار باشم». طرح ۸ (U63): «گوش به زنگ» — به محض نیاز جدید، درخواست در تب گوش‌به‌زنگ فروشنده می‌نشیند.

@@ -535,6 +535,10 @@ model Business {
   ordersSold Order[]        @relation("orderSeller")
   /// M5 — سفارش‌هایی که این کسب‌وکار خریده (دفتر خرید ۲۸)
   ordersBought Order[]      @relation("orderBuyer")
+  /// M6 — پیشنهادهای تامینِ دریافتی (سمت خریدار)
+  proposalsRecv SupplyProposal[] @relation("spBuyer")
+  /// M6 — پیشنهادهای تامینِ ارسالی (سمت تأمین‌کننده)
+  proposalsSent SupplyProposal[] @relation("spSupplier")
   /// فاز ۵ — کالاهایی که این خریدار قیمتشان را دنبال می‌کند (لیست خرید)
   watchedGoods WatchedGood[]
   /// طرح ۸ — کیف پول تومانی (هر کسب‌وکار حداکثر یکی)
@@ -912,6 +916,13 @@ model Follow {
   /// دنبال‌کنندگان / sheet-cust-type)؛ قیمت نهایی خریدار همین‌جا از آن می‌آید.
   /// بر مدل جدا CustomerType ترجیح داده شد — همان الگوی source روی همان یال.
   custType       String?
+  /// M6 (دفتر مشتری ۰۸ب) — یادداشت شخصی فروشنده روی این مشتری («تحویل صبح
+  /// زود، بازار روز»). متن آزاد ≤۵۰۰؛ فقط مالک فروشنده می‌بیند.
+  note           String?
+  /// M6 (FD-44/45) — لحظهٔ «تایید» مشتری جدید توسط فروشنده. null = هنوز
+  /// تایید نشده → ردیف با برچسب «جدید» بالای دفتر مشتری می‌ماند تا تکلیف
+  /// روشن شود (تایید یا حذف). حذفِ واقعی خودِ یال است (removeFollower).
+  ackAt          DateTime?
   createdAt      DateTime @default(now())
 
   followerPage Page @relation("pageFollower", fields: [followerPageId], references: [id], onDelete: Cascade)
@@ -919,6 +930,35 @@ model Follow {
 
   @@unique([followerPageId, supplierPageId])
   @@index([supplierPageId])
+}
+
+/// M6 — پیشنهاد تامین (FD-16/19/22/23): تأمین‌کننده از «نمای عمومی لیست
+/// خرید» خریدار قیمت می‌دهد. «ذخیره» نیست — پیشنهاد تامین؛ خریدار با تاییدش
+/// دو رابطهٔ Follow می‌سازد: کاتالوک فروشنده را ذخیره می‌کند (می‌آید به دفتر
+/// تأمین‌کنندگانش) و خریدار در دفتر مشتریانِ فروشنده می‌نشیند + فروشنده
+/// نیازهای خریدار را دیده‌بانی می‌کند.
+/// اقلام snapshot فریز می‌شوند (نام/بسته/قیمت/حداقل) — قیمت بعدی کاتالوگ
+/// رکورد تاریخی را بازنویسی نمی‌کند. [] = «فقط درخواست تامین‌کنندگی» (bare).
+model SupplyProposal {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId     String    @db.ObjectId
+  supplierId  String    @db.ObjectId
+  /// [{goodId, listingId?, name, pack?, priceMinor?, minOrder?, unit?}] — فریز در ارسال.
+  /// listingId = آگهی فروشِ خود تأمین‌کننده برای آن قلم (مچ‌شده یا همان‌لحظه ساخته‌شده).
+  items       Json?
+  /// یادداشت اختیاری برای خریدار («برنج امسالم — تحویل همان روز»)
+  note        String?
+  /// OPEN | ACCEPTED | DISMISSED — پذیرش/رد فقط خریدار؛ گارد ۷روزه روی OPEN.
+  status      String    @default("OPEN")
+  createdAt   DateTime  @default(now())
+  acceptedAt  DateTime?
+  dismissedAt DateTime?
+
+  buyer     Business @relation("spBuyer", fields: [buyerId], references: [id], onDelete: Cascade)
+  supplier  Business @relation("spSupplier", fields: [supplierId], references: [id], onDelete: Cascade)
+
+  @@index([buyerId, status, createdAt])
+  @@index([supplierId, createdAt])
 }
 
 /// Price history per listing → powers trends and "recently updated" badges.

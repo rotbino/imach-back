@@ -11,6 +11,7 @@ import { BusinessesModule } from "./businesses/businesses.module";
 import { ListingsModule } from "./listings/listings.module";
 import { MarketModule } from "./market/market.module";
 import { OrdersModule } from "./orders/orders.module";
+import { SupplyProposalsModule } from "./supply-proposals/supply-proposals.module";
 import { NotificationsModule } from "./notifications/notifications.module";
 import { ContactsModule } from "./contacts/contacts.module";
 import { AdminModule } from "./admin/admin.module";
@@ -39,6 +40,7 @@ import { SettingsModule } from "./settings/settings.module";
     ListingsModule,
     MarketModule,
     OrdersModule,
+    SupplyProposalsModule,
     NotificationsModule,
     ContactsModule,
     FilesModule,

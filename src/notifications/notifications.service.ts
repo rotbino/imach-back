@@ -11,6 +11,7 @@ import { PushService } from "./push.service";
 ///  PRICE_CHANGE    — فاز ۵ — کالایی که دنبال می‌کنم قیمتش عوض شد (شکاف ۲)
 ///  BUYER_NEED      — طرح ۸ (U63) — خریداری که گوش‌به‌زنگش هستم نیاز جدید ثبت کرد
 ///  ORDER           — M5 — رخدادهای چرخهٔ سفارش (ثبت/پذیرش/ارسال/تحویل/لغو/رد)
+///  SUPPLY_PROPOSAL — M6 — پیشنهاد تامین (به خریدار: رسیده) / تایید آن (به فروشنده)
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
   | "FOLLOW_BUYER"
@@ -19,7 +20,8 @@ export type NotificationType =
   | "CONTACT_JOINED"
   | "PRICE_CHANGE"
   | "BUYER_NEED"
-  | "ORDER";
+  | "ORDER"
+  | "SUPPLY_PROPOSAL";
 
 export interface NotificationInput {
   userId: string;
@@ -51,6 +53,8 @@ const PREF_KEY: Record<NotificationType, string | null> = {
   BUYER_NEED: "quoteReplies",
   /** M5 — رخداد سفارش هستهٔ کسب‌وکار است؛ قابل‌خاموش‌کردن نیست */
   ORDER: null,
+  /** M6 — پیشنهاد تامین درخواست/پاسخ‌گونه است؛ زیر همان کلید پاسخ‌ها */
+  SUPPLY_PROPOSAL: "quoteReplies",
 };
 
 /**
@@ -93,6 +97,12 @@ const PUSH_VIEWS: Record<
     // M5 — تیترِ خودِ رویداد روی ردیف ذخیره شده؛ پوش همان را می‌گوید
     text: (n) => n.title ?? `سفارش «${n.good ?? "…"}»`,
     url: "/orders",
+  },
+  SUPPLY_PROPOSAL: {
+    // M6 — رخداد-محور (الگوی ORDER): تیتر روی ردیف ذخیره می‌شود؛
+    // url هم همین‌طور — خریدار → لیست خرید، فروشنده → دفتر مشتریان
+    text: (n) => n.title ?? `پیشنهاد تامین از ${n.actorName ?? "تأمین‌کننده"}`,
+    url: "/buy-list",
   },
 };
 

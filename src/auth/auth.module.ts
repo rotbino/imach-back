@@ -4,6 +4,7 @@ import { env, jwtExpiresInSeconds } from "../common/config/env";
 import { AuthController } from "./auth.controller";
 import { AuthService } from "./auth.service";
 import { JwtAuthGuard } from "./jwt-auth.guard";
+import { OptionalJwtGuard } from "./optional-jwt.guard";
 import { PushModule } from "../notifications/push.module";
 
 // توجه: AuthModule عمداً NotificationsModule را import نمی‌کند —
@@ -24,7 +25,7 @@ const jwtExpiresIn = jwtExpiresInSeconds();
     PushModule,
   ],
   controllers: [AuthController],
-  providers: [AuthService, JwtAuthGuard],
-  exports: [JwtModule],
+  providers: [AuthService, JwtAuthGuard, OptionalJwtGuard],
+  exports: [JwtModule, JwtAuthGuard, OptionalJwtGuard],
 })
 export class AuthModule {}

@@ -28,8 +28,10 @@ import { PromosService } from "../promos/promos.service";
 import { MatchingService } from "./matching.service";
 import {
   AcceptOfferDto,
+  AckFollowerDto,
   ArchiveWatchedGoodDto,
   BusinessIdQueryDto,
+  CustomerQueryDto,
   FollowBuyerDto,
   FollowSupplierDto,
   InquiriesQueryDto,
@@ -38,6 +40,7 @@ import {
   RemoveFollowerDto,
   RequestQuoteDto,
   SendOfferDto,
+  SetFollowerNoteDto,
   SetLowStockDto,
   SetOfferStatusDto,
   SupplyBoardQueryDto,
@@ -2760,6 +2763,9 @@ export class MarketController {
         viaRef: true,
         source: true,
         custType: true,
+        // M6 (دفتر مشتری ۰۸) — یادداشت شخصی + مهر تاییدِ «مشتری جدید»
+        note: true,
+        ackAt: true,
         followerPage: {
           select: {
             business: {
@@ -2769,6 +2775,8 @@ export class MarketController {
                 name: true,
                 city: true,
                 isVerified: true,
+                // M6 — صنف مشتری برای فیلتر «صنف» دفتر مشتری (۰۸)
+                trade: true,
                 listings: {
                   where: { isActive: true, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
                   orderBy: { updatedAt: "desc" },
@@ -2789,14 +2797,42 @@ export class MarketController {
       take: 200,
     });
 
+    // M6 — آمار سبک هر مشتری: سفارش‌ها + استعلام‌هایش نزد من (دو groupBy — نه N+1)
+    const buyerIds = rows.map((r) => r.followerPage.business.id);
+    const [ordersByBuyer, inquiriesByBuyer] = buyerIds.length
+      ? await Promise.all([
+          this.prisma.order.groupBy({
+            by: ["buyerId"],
+            where: { sellerId: query.businessId, buyerId: { in: buyerIds } },
+            _count: { _all: true },
+          }),
+          this.prisma.inquiry.groupBy({
+            by: ["buyerId"],
+            where: { sellerId: query.businessId, buyerId: { in: buyerIds } },
+            _count: { _all: true },
+          }),
+        ])
+      : [[], []];
+    const orderCount = new Map(ordersByBuyer.map((g) => [g.buyerId, g._count._all]));
+    const inquiryCount = new Map(inquiriesByBuyer.map((g) => [g.buyerId, g._count._all]));
+
     const mapped = rows.map((r) => ({
       id: r.followerPage.business.id,
       slug: r.followerPage.business.slug,
       name: r.followerPage.business.name,
       city: r.followerPage.business.city,
       isVerified: r.followerPage.business.isVerified,
+      // M6 — صنف مشتری (فیلتر ۰۸)
+      trade: r.followerPage.business.trade,
       followedAt: r.createdAt,
       viaRef: r.viaRef,
+      // M6 — یادداشت شخصی + «جدید» تا تایید (FD-44/45)
+      note: r.note ?? null,
+      ackAt: r.ackAt ?? null,
+      isNew: !r.ackAt,
+      // M6 — آمار سبک هر مشتری نزد من
+      orderCount: orderCount.get(r.followerPage.business.id) ?? 0,
+      inquiryCount: inquiryCount.get(r.followerPage.business.id) ?? 0,
       // فاز ۵ مهاجرت — نوع مشتری از دید فروشنده: PASSING | PARTNER | CONTRACT
       custType: r.custType ?? "PASSING",
       // طرح ۸ (U60) — منبعِ رسیدن: ORGANIC | SHARED | PROMO (ردیف‌های
@@ -2815,8 +2851,9 @@ export class MarketController {
     };
 
     // active-request customers first (newest request wins), then the rest
-    // in follow order
+    // in follow order — M6: مشتری تاییدنشده (جدید) از همه بالاتر (FD-44/45)
     const sorted = mapped.sort((a, b) => {
+      if (a.isNew !== b.isNew) return a.isNew ? -1 : 1;
       const ra = a.latestRequest?.updatedAt?.getTime() ?? 0;
       const rb = b.latestRequest?.updatedAt?.getTime() ?? 0;
       if ((ra > 0) !== (rb > 0)) return rb > 0 ? 1 : -1;
@@ -2824,6 +2861,168 @@ export class MarketController {
       return b.followedAt.getTime() - a.followedAt.getTime();
     });
     return { rows: sorted, summary };
+  }
+
+  /**
+   * M6 (FD-44/45) — تایید مشتری جدید: مهر ackAt روی یال فالو. idempotent —
+   * تاییدِ دوباره همان مهر را نگه می‌دارد؛ ردیف از «جدید» می‌رود ولی مشتری می‌ماند.
+   */
+  @Post("ackFollower")
+  @HttpCode(200)
+  async ackFollower(
+    @Body() body: AckFollowerDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const pageId = await ensurePage(this.prisma, body.businessId, "SELL");
+    const buyerPageId = await ensurePage(this.prisma, body.buyerId, "BUY");
+    await this.prisma.follow.updateMany({
+      where: { followerPageId: buyerPageId, supplierPageId: pageId },
+      data: { ackAt: new Date() },
+    });
+    return { ok: true };
+  }
+
+  /**
+   * M6 (دفتر مشتری ۰۸ب) — یادداشت شخصی فروشنده روی مشتری. متن ≤۵۰۰؛
+   * null/خالی = پاک‌کردن یادداشت.
+   */
+  @Post("setFollowerNote")
+  @HttpCode(200)
+  async setFollowerNote(
+    @Body() body: SetFollowerNoteDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const pageId = await ensurePage(this.prisma, body.businessId, "SELL");
+    const buyerPageId = await ensurePage(this.prisma, body.buyerId, "BUY");
+    const note = body.note?.toString().trim() || null;
+    await this.prisma.follow.updateMany({
+      where: { followerPageId: buyerPageId, supplierPageId: pageId },
+      data: { note },
+    });
+    return { ok: true, note };
+  }
+
+  /**
+   * M6 (۰۸ب) — نمای جزئیات مشتری: شناسنامه (نام/صنف/شهر/نوع/از کِی/یادداشت)
+   * + ۲۰ سفارش و ۲۰ استعلام آخرِ همین مشتری نزد من + مسیر «لیست خرید او».
+   * یک فراخوانی = یک صفحه (جلوگیری از N+1 سمت کلاینت).
+   */
+  @Get("getCustomer")
+  async getCustomer(
+    @Query() query: CustomerQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const pageId = await ensurePage(this.prisma, query.businessId, "SELL");
+    const edge = await this.prisma.follow.findFirst({
+      where: { supplierPageId: pageId, followerPage: { businessId: query.buyerId, type: "BUY" } },
+      select: {
+        createdAt: true,
+        viaRef: true,
+        source: true,
+        custType: true,
+        note: true,
+        ackAt: true,
+        followerPage: {
+          select: {
+            business: {
+              select: {
+                id: true,
+                slug: true,
+                name: true,
+                city: true,
+                trade: true,
+                isVerified: true,
+                owner: { select: { name: true } },
+              },
+            },
+          },
+        },
+      },
+    });
+    if (!edge) throw AppError.notFound("Customer not found");
+
+    const [orders, inquiries] = await Promise.all([
+      this.prisma.order.findMany({
+        where: { sellerId: query.businessId, buyerId: query.buyerId },
+        orderBy: { createdAt: "desc" },
+        take: 20,
+        select: {
+          id: true,
+          docNo: true,
+          status: true,
+          createdAt: true,
+          history: true,
+          items: true,
+        },
+      }),
+      this.prisma.inquiry.findMany({
+        where: { sellerId: query.businessId, buyerId: query.buyerId },
+        orderBy: { createdAt: "desc" },
+        take: 20,
+        select: {
+          id: true,
+          status: true,
+          createdAt: true,
+          items: true,
+          listing: { select: { good: { select: { nameFa: true, nameEn: true } } } },
+        },
+      }),
+    ]);
+
+    // جمع اقلام فریزشدهٔ سفارش برای ردیف «جمع X تومان» (فرمت در فرانت)
+    const orderRows = orders.map((o) => {
+      const items = Array.isArray(o.items) ? (o.items as { lineTotalMinor?: number }[]) : [];
+      const totalMinor = items.reduce(
+        (s, it) => s + (typeof it.lineTotalMinor === "number" ? it.lineTotalMinor : 0),
+        0
+      );
+      return {
+        id: o.id,
+        docNo: o.docNo ?? null,
+        status: o.status,
+        createdAt: o.createdAt,
+        itemCount: items.length,
+        totalMinor,
+      };
+    });
+    const inquiryRows = inquiries.map((q) => {
+      const items = Array.isArray(q.items) ? (q.items as unknown[]) : [];
+      const firstName = q.listing?.good?.nameFa ?? null;
+      return {
+        id: q.id,
+        status: q.status,
+        createdAt: q.createdAt,
+        itemCount: items.length,
+        firstName,
+      };
+    });
+
+    return {
+      customer: {
+        id: edge.followerPage.business.id,
+        slug: edge.followerPage.business.slug,
+        name: edge.followerPage.business.name,
+        city: edge.followerPage.business.city,
+        trade: edge.followerPage.business.trade,
+        isVerified: edge.followerPage.business.isVerified,
+        ownerName: edge.followerPage.business.owner?.name ?? null,
+        followedAt: edge.createdAt,
+        viaRef: edge.viaRef,
+        source: edge.source ?? (edge.viaRef ? "SHARED" : "ORGANIC"),
+        custType: edge.custType ?? "PASSING",
+        note: edge.note ?? null,
+        ackAt: edge.ackAt ?? null,
+        isNew: !edge.ackAt,
+      },
+      orders: orderRows,
+      inquiries: inquiryRows,
+    };
   }
 
   /**

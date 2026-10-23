@@ -22,6 +22,7 @@ import type { Locale } from "../common/i18n/i18n";
 import { t } from "../common/i18n/i18n";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
+import { OptionalJwtGuard } from "../auth/optional-jwt.guard";
 import { ensurePage } from "../common/pages";
 import { CreateBusinessDto, EditBusinessDto, CatalogCategoriesDto, CatalogSettingsDto, NotifPrefsDto, SetArmsDto, SupplyTermsDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
@@ -327,7 +328,15 @@ export class BusinessesController {
    * viral loop (see getContact) — strangers must sign up to call.
    */
   @Get("getBusiness/:slug")
-  async getBusiness(@Param("slug") slug: string, @Res({ passthrough: true }) reply: FastifyReply) {
+  @UseGuards(OptionalJwtGuard)
+  async getBusiness(
+    @Param("slug") slug: string,
+    @CurrentUser() user: AuthUser | undefined,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    // کشِ عمومی ۶۰ثانیه‌ای فقط دادهٔ خام را نگه می‌دارد (با قیمت) — حذف قیمتِ
+    // هر بیننده «بعد از کش» و سرورمبنا انجام می‌شود (DoD M6: با devtools
+    // دورزدنی نیست؛ کش هرگز از سرور بیرون نمی‌رود).
     const { value, hit } = await this.cache.wrap(
       `business:profile:${slug}`,
       { ttlMs: 60_000, tags: [`business:slug:${slug}`] },
@@ -350,6 +359,8 @@ export class BusinessesController {
             isDemo: true,
             // فاز ۳ — دسته‌های شخصی کاتالوگ برای چيپ‌های ویترین عمومی
             customCategories: true,
+            // M6 (G7→گیت قیمت) — فقط برای تصمیم گیت خوانده می‌شود؛ هرگز برنمی‌گردد
+            priceVisibilityTrades: true,
             // M2 (G7) — اعتبار قیمت کاتالوگ: بج «قیمت منقضی» از همین محاسبه می‌شود
             priceValidityDays: true,
             // M5 (FD-37) — اسناد فروش روی فاکتور چاپ می‌شوند (خریدار هم سند را می‌بیند)
@@ -363,7 +374,10 @@ export class BusinessesController {
             // در عمده‌فروشی طرف مقابل می‌خواهد بداند با چه کسی طرف است.
             owner: { select: { id: true, name: true, firstName: true, lastName: true } },
             listings: {
-              where: { isActive: true },
+              // M6 — فیکس نشت: ویترین کاتالوک فقط ردیف‌های فروش را نشان می‌دهد؛
+              // آگهی‌های BUY (لیست خرید) از این پس از نمای کاتالوک حذف می‌شوند
+              // (نمای درست‌شان getBuyList است).
+              where: { isActive: true, mode: { in: ["SELL", "BOTH"] } },
               select: LISTING_SELECT,
               orderBy: { updatedAt: "desc" },
             },
@@ -419,8 +433,487 @@ export class BusinessesController {
     );
 
     if (!value) throw AppError.notFound("Business not found");
+
+    // ── M6 — گیت قیمت سرورمبنا (بعد از کش، قبل از پاسخ) ──
+    const viewer = await this.resolveViewerById(value.id, slug, user);
+    const visibility = Array.isArray(value.priceVisibilityTrades)
+      ? (value.priceVisibilityTrades as string[]).filter(
+          (s) => typeof s === "string" && s.trim()
+        )
+      : [];
+    const canSeePrices =
+      !visibility.length ||
+      viewer.kind === "owner" ||
+      viewer.kind === "customer" ||
+      viewer.mine.some(
+        (b) =>
+          b.trade &&
+          visibility.some((v) => normalizeTradeName(v) === normalizeTradeName(b.trade ?? ""))
+      );
+    const priceGated = !canSeePrices;
+
+    // پاسخ = کلونِ شخصیِ بیننده؛ آبجکتِ کش‌شده هرگز مستقیم برنمی‌گردد تا
+    // حذف قیمت/لوکیشنِ یک بیننده، کشِ بینندهٔ بعدی را خراب نکند.
+    const payload: Record<string, unknown> = structuredClone(value);
+    delete payload.priceVisibilityTrades; // آرایهٔ اصنافِ خصوصی — بیرون نمی‌رود
+
+    if (priceGated) {
+      payload.listings = (payload.listings as Record<string, unknown>[]).map((l) => ({
+        ...l,
+        priceMinor: null,
+        pricePerBaseMinor: null,
+        packaging: Array.isArray(l.packaging)
+          ? (l.packaging as Record<string, unknown>[]).map((p) => ({ ...p, priceMinor: null }))
+          : l.packaging,
+      }));
+    }
+    if (viewer.kind !== "owner") {
+      // حریم لوکیشن (M6): پین دقیق/آدرس فقط مالک — عمومی فقط شهر می‌بیند
+      delete payload.lat;
+      delete payload.lng;
+      delete payload.address;
+    }
+
     reply.header("x-cache", hit ? "HIT" : "MISS");
-    return value;
+    return {
+      ...payload,
+      priceGated,
+      viewer: {
+        kind: viewer.kind,
+        isCustomer: viewer.kind === "customer",
+        custType: viewer.kind === "customer" ? (viewer.custType ?? "PASSING") : null,
+      },
+    };
+  }
+
+  /**
+   * M6 — هویت بینندهٔ یک کسب‌وکار عمومی. گیت قیمت (FD-13/36) و بخش
+   * «در لیست خرید شما» (FD-23) سرورمبنا از همین حل می‌شود:
+   *   guest    — مهمان (بدون توکن)؛ در کاتالوک گیت‌شده قیمت نمی‌بیند
+   *   member  — عضو واردشده بدون رابطه
+   *   customer — مشتریِ ذخیره‌کرده (یال فالو BUY→SELL موجود؛ custType همراهش)
+   *   owner   — مالک (پیش‌نمایش؛ همه‌چیز می‌بیند + lat/lng/address)
+   */
+  private async resolveViewerById(
+    targetBusinessId: string,
+    slug: string,
+    user: AuthUser | undefined
+  ): Promise<{
+    kind: "guest" | "member" | "customer" | "owner";
+    mine: { id: string; slug: string; trade: string | null }[];
+    custType: string | null;
+  }> {
+    if (!user) return { kind: "guest", mine: [], custType: null };
+    const mine = await this.prisma.business.findMany({
+      where: { ownerId: user.id },
+      select: { id: true, slug: true, trade: true },
+      take: 10,
+    });
+    if (mine.some((b) => b.slug === slug)) return { kind: "owner", mine, custType: null };
+    if (mine.length) {
+      const edge = await this.prisma.follow.findFirst({
+        where: {
+          followerPage: { businessId: { in: mine.map((b) => b.id) }, type: "BUY" },
+          supplierPage: { businessId: targetBusinessId, type: "SELL" },
+        },
+        select: { custType: true },
+      });
+      if (edge) return { kind: "customer", mine, custType: edge.custType };
+    }
+    return { kind: "member", mine, custType: null };
+  }
+
+  /**
+   * M6 — زمینهٔ بینندهٔ کاتالوگ عمومی (۳۱) برای کلاینتِ واردشده:
+   * قیمت‌های گیت‌شده (فقط اگر واجد باشد) + تطبیق «در لیست خرید شما»
+   * (کالاهای این کاتالوک که در لیست خرید بیننده هست — FD-23/FD-25) +
+   * وضعیت مشتری (کارت مشتری / دکمه ذخیره).
+   */
+  @Get("getBusinessContext/:slug")
+  @UseGuards(JwtAuthGuard)
+  async getBusinessContext(@Param("slug") slug: string, @CurrentUser() user: AuthUser) {
+    const business = await this.prisma.business.findUnique({
+      where: { slug },
+      select: {
+        id: true,
+        slug: true,
+        priceVisibilityTrades: true,
+        listings: {
+          where: { isActive: true, mode: { in: ["SELL", "BOTH"] } },
+          select: { id: true, goodId: true, priceMinor: true, currency: true, pricePerBaseMinor: true },
+          take: 300,
+        },
+      },
+    });
+    if (!business) throw AppError.notFound("Business not found");
+
+    const viewer = await this.resolveViewerById(business.id, slug, user);
+    const visibility = Array.isArray(business.priceVisibilityTrades)
+      ? (business.priceVisibilityTrades as string[]).filter(
+          (s) => typeof s === "string" && s.trim()
+        )
+      : [];
+    const canSeePrices =
+      !visibility.length ||
+      viewer.kind === "owner" ||
+      viewer.kind === "customer" ||
+      viewer.mine.some(
+        (b) =>
+          b.trade &&
+          visibility.some((v) => normalizeTradeName(v) === normalizeTradeName(b.trade ?? ""))
+      );
+
+    // «در لیست خرید شما» — فقط برای مشتریِ ذخیره‌کرده (FD-23: مهمان تازه‌ورود /
+    // پیش‌نمایش فروشنده نمی‌بیند؛ عضوِ ذخیره‌نکرده هم اول «ذخیره» را می‌زند)
+    let inYourBuyList: { listingId: string; goodId: string }[] = [];
+    if (viewer.kind === "customer" && business.listings.length) {
+      const myIds = viewer.mine.map((b) => b.id);
+      const [buyListings, watched] = await Promise.all([
+        this.prisma.listing.findMany({
+          where: { businessId: { in: myIds }, isActive: true, mode: { in: ["BUY", "BOTH"] } },
+          select: { goodId: true },
+          take: 300,
+        }),
+        this.prisma.watchedGood.findMany({
+          where: { businessId: { in: myIds } },
+          select: { goodId: true },
+          take: 300,
+        }),
+      ]);
+      const myGoodIds = new Set([...buyListings.map((l) => l.goodId), ...watched.map((w) => w.goodId)]);
+      inYourBuyList = business.listings
+        .filter((l) => myGoodIds.has(l.goodId))
+        .map((l) => ({ listingId: l.id, goodId: l.goodId }));
+    }
+
+    const prices = canSeePrices
+      ? business.listings.map((l) => ({
+          listingId: l.id,
+          priceMinor: l.priceMinor,
+          currency: l.currency,
+          pricePerBaseMinor: l.pricePerBaseMinor,
+        }))
+      : [];
+
+    return {
+      kind: viewer.kind,
+      isCustomer: viewer.kind === "customer",
+      custType: viewer.kind === "customer" ? (viewer.custType ?? "PASSING") : null,
+      canSeePrices,
+      priceGated: !canSeePrices,
+      prices,
+      inYourBuyList,
+    };
+  }
+
+  /**
+   * M6 — نمای عمومی لیست خرید (اسکرین ۳۲): دو لیست («در حال استعلام» +
+   * «موردنیاز») + آمار + شرایط تامین خریدار. بخش عمومی کش‌شده؛ زمینهٔ
+   * بیننده (تطبیق کاتالوک خودم با goodId + پیشنهاد بازِ من) جداگانه و
+   * per-viewer محاسبه می‌شود (نقشهٔ راه M6).
+   *
+   * حریم: فقط نام کالا + شمار قلم از سبد استعلام عمومی می‌شود (نه مقدار/
+   * قیمت هدف)؛ بازوی خرید خاموش = لیست عمومی ندارد (۴۰۴).
+   */
+  @Get("getBuyList/:slug")
+  @UseGuards(OptionalJwtGuard)
+  async getBuyList(
+    @Param("slug") slug: string,
+    @CurrentUser() user: AuthUser | undefined,
+    @Res({ passthrough: true }) reply: FastifyReply
+  ) {
+    const { value: base, hit } = await this.cache.wrap(
+      `buylist:${slug}`,
+      { ttlMs: 60_000, tags: [`business:slug:${slug}`] },
+      async () => {
+        const buyer = await this.prisma.business.findUnique({
+          where: { slug },
+          select: {
+            id: true,
+            slug: true,
+            name: true,
+            trade: true,
+            city: true,
+            isVerified: true,
+            currency: true,
+            supplyTerms: true,
+            enabledArms: true,
+            owner: { select: { name: true } },
+          },
+        });
+        if (!buyer) return null;
+        const arms = (buyer.enabledArms ?? {}) as { buy?: boolean; sell?: boolean };
+        if (arms.buy === false) return null; // بازوی خرید خاموش — لیست عمومی ندارد
+
+        const [buyListings, watched, suppliersCount] = await Promise.all([
+          this.prisma.listing.findMany({
+            where: { businessId: buyer.id, isActive: true, mode: { in: ["BUY", "BOTH"] } },
+            orderBy: { updatedAt: "desc" },
+            take: 150,
+            select: {
+              goodId: true,
+              volume: true,
+              frequency: true,
+              variantLabel: true,
+              viewCount30: true,
+              good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
+            },
+          }),
+          this.prisma.watchedGood.findMany({
+            where: { businessId: buyer.id, archivedAt: null },
+            orderBy: { createdAt: "desc" },
+            take: 150,
+            select: { goodId: true, good: { select: { id: true, nameFa: true, nameEn: true, unit: true } } },
+          }),
+          this.prisma.follow.count({
+            where: { followerPage: { businessId: buyer.id, type: "BUY" } },
+          }),
+        ]);
+
+        // «کالاهای موردنیاز» — BUY listingها (حجم/دوره) + WatchedGoodهای
+        // تازه (بدون listing)؛ dedupe روی goodId — ردیف BUY برنده است
+        const neededMap = new Map<
+          string,
+          { goodId: string; name: string; nameEn: string | null; unit: string; volume: number | null; frequency: string | null; pack: string | null }
+        >();
+        for (const l of buyListings) {
+          neededMap.set(l.goodId, {
+            goodId: l.goodId,
+            name: l.good.nameFa,
+            nameEn: l.good.nameEn,
+            unit: l.good.unit,
+            volume: l.volume ?? null,
+            frequency: l.frequency ?? null,
+            pack: l.variantLabel ?? null,
+          });
+        }
+        for (const w of watched) {
+          if (!neededMap.has(w.goodId)) {
+            neededMap.set(w.goodId, {
+              goodId: w.goodId,
+              name: w.good.nameFa,
+              nameEn: w.good.nameEn,
+              unit: w.good.unit,
+              volume: null,
+              frequency: null,
+              pack: null,
+            });
+          }
+        }
+        const needed = [...neededMap.values()];
+        const views = buyListings.reduce((s, l) => s + (l.viewCount30 ?? 0), 0);
+
+        // «کالاهای در حال استعلام» — گروه‌های استعلامِ بازِ خریدار
+        const now = Date.now();
+        const inquiries = await this.prisma.inquiry.findMany({
+          where: { buyerId: buyer.id, status: { not: "ARCHIVED" } },
+          orderBy: { createdAt: "asc" },
+          take: 200,
+          select: {
+            id: true,
+            rfqGroupId: true,
+            items: true,
+            volume: true,
+            expiresAt: true,
+            stoppedAt: true,
+            closedAt: true,
+            createdAt: true,
+            listing: { select: { good: { select: { id: true, nameFa: true } } } },
+          },
+        });
+        const openRows = inquiries.filter(
+          (i) => !i.closedAt && !i.stoppedAt && (!i.expiresAt || i.expiresAt.getTime() > now)
+        );
+        const groups = new Map<
+          string,
+          { groupId: string; createdAt: Date; expiresAt: Date | null; goodIds: string[]; legacyGoodId: string | null }
+        >();
+        for (const r of openRows) {
+          const gid = r.rfqGroupId ?? r.id;
+          const items = Array.isArray(r.items) ? (r.items as { goodId?: string }[]) : [];
+          const goodIds = items.map((it) => it.goodId).filter((g): g is string => !!g);
+          const existing = groups.get(gid);
+          if (!existing) {
+            groups.set(gid, {
+              groupId: gid,
+              createdAt: r.createdAt,
+              expiresAt: r.expiresAt,
+              goodIds: goodIds.length ? goodIds : [r.listing?.good?.id ?? ""].filter(Boolean),
+              legacyGoodId: goodIds.length ? null : (r.listing?.good?.id ?? null),
+            });
+          } else {
+            if (r.createdAt > existing.createdAt) existing.createdAt = r.createdAt;
+            if (goodIds.length) existing.goodIds = goodIds; // سبد کامل از ردیف اصلی
+          }
+        }
+        const offersByGroup = new Map<string, number>();
+        const groupIds = [...groups.keys()].filter((g) => g !== "");
+        if (groupIds.length) {
+          const offers = await this.prisma.offer.findMany({
+            where: { buyerId: buyer.id, rfqGroupId: { in: groupIds } },
+            select: { rfqGroupId: true },
+            take: 500,
+          });
+          for (const o of offers) {
+            const key = o.rfqGroupId ?? "";
+            if (key) offersByGroup.set(key, (offersByGroup.get(key) ?? 0) + 1);
+          }
+        }
+        // نام کالاها از رجیستری Good — سبد عمومی فقط نام می‌دهد (نه مقدار)
+        const allGoodIds = new Set<string>();
+        for (const g of groups.values()) for (const gid of g.goodIds) allGoodIds.add(gid);
+        const goods = allGoodIds.size
+          ? await this.prisma.good.findMany({
+              where: { id: { in: [...allGoodIds] } },
+              select: { id: true, nameFa: true },
+            })
+          : [];
+        const goodName = new Map(goods.map((g) => [g.id, g.nameFa]));
+        const DAY = 86_400_000;
+        const inquiring = [...groups.values()]
+          .filter((g) => g.goodIds.length)
+          .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())
+          .slice(0, 12)
+          .map((g) => {
+            const names = g.goodIds.map((gid) => goodName.get(gid) ?? "…");
+            const daysLeft = g.expiresAt
+              ? Math.max(0, Math.ceil((g.expiresAt.getTime() - now) / DAY))
+              : null;
+            return {
+              groupId: g.groupId,
+              title: names[0] + (names.length > 1 ? ` +${names.length - 1} قلم` : ""),
+              itemNames: names.slice(0, 6),
+              daysLeft,
+              offerCount: offersByGroup.get(g.groupId) ?? 0,
+            };
+          });
+
+        return {
+          business: {
+            id: buyer.id,
+            slug: buyer.slug,
+            name: buyer.name,
+            ownerName: buyer.owner?.name ?? null,
+            trade: buyer.trade,
+            city: buyer.city,
+            isVerified: buyer.isVerified,
+          },
+          supplyTerms: buyer.supplyTerms ?? null,
+          stats: { goods: needed.length, suppliers: suppliersCount, views },
+          inquiring,
+          needed,
+        };
+      }
+    );
+
+    if (!base) throw AppError.notFound("Buy list not found");
+
+    // ── زمینهٔ بیننده (per-viewer) ──
+    let viewer: Record<string, unknown> | null = null;
+    if (user) {
+      const primaryMine = await this.prisma.business.findMany({
+        where: { ownerId: user.id },
+        select: { id: true, slug: true, enabledArms: true },
+        take: 10,
+      });
+      const isOwner = primaryMine.some((b) => b.slug === slug);
+      if (isOwner) {
+        viewer = { kind: "owner", isOwner: true, canPropose: false, matched: [], myOpenProposal: null, inMyBuyList: [] };
+      } else {
+        const myIds = primaryMine.map((b) => b.id);
+        const firstArms = (primaryMine[0]?.enabledArms ?? {}) as { sell?: boolean };
+        const canPropose = firstArms.sell !== false;
+        const neededGoodIds = (base.needed as { goodId: string }[]).map((n) => n.goodId);
+
+        const [mySellListings, myBuyListings, myWatched, openProposal] = await Promise.all([
+          neededGoodIds.length
+            ? this.prisma.listing.findMany({
+                where: {
+                  businessId: { in: myIds },
+                  isActive: true,
+                  mode: { in: ["SELL", "BOTH"] },
+                  goodId: { in: neededGoodIds },
+                },
+                orderBy: { updatedAt: "desc" },
+                select: {
+                  id: true,
+                  goodId: true,
+                  variantKey: true,
+                  variantLabel: true,
+                  priceMinor: true,
+                  minOrder: true,
+                  currency: true,
+                },
+              })
+            : Promise.resolve([]),
+          this.prisma.listing.findMany({
+            where: { businessId: { in: myIds }, isActive: true, mode: { in: ["BUY", "BOTH"] } },
+            select: { goodId: true },
+            take: 300,
+          }),
+          this.prisma.watchedGood.findMany({
+            where: { businessId: { in: myIds } },
+            select: { goodId: true },
+            take: 300,
+          }),
+          this.prisma.supplyProposal.findFirst({
+            where: {
+              supplierId: { in: myIds },
+              buyerId: base.business.id,
+              status: "OPEN",
+              createdAt: { gt: new Date(Date.now() - 7 * 86_400_000) },
+            },
+            select: { id: true, createdAt: true, items: true },
+          }),
+        ]);
+
+        // تطبیق goodId — به‌ازای هر کالای موردنیاز، جدیدترین آگهی قیمت‌دارِ من
+        const byGood = new Map<string, typeof mySellListings>();
+        for (const l of mySellListings) {
+          const list = byGood.get(l.goodId) ?? [];
+          list.push(l);
+          byGood.set(l.goodId, list);
+        }
+        const matched = [...byGood.entries()]
+          .map(([goodId, list]) => {
+            const priced = list.find((l) => l.priceMinor !== null && l.priceMinor !== undefined);
+            const chosen = priced ?? list[0];
+            return {
+              goodId,
+              listingId: chosen.id,
+              pack: chosen.variantLabel ?? null,
+              priceMinor: chosen.priceMinor,
+              minOrder: chosen.minOrder,
+              currency: chosen.currency,
+              exact: chosen.variantKey === "",
+            };
+          })
+          .slice(0, 60);
+
+        const myGoodIds = new Set([
+          ...myBuyListings.map((l) => l.goodId),
+          ...myWatched.map((w) => w.goodId),
+        ]);
+        const inMyBuyList = neededGoodIds.filter((g) => myGoodIds.has(g));
+
+        const itemsCount = Array.isArray(openProposal?.items)
+          ? (openProposal.items as unknown[]).length
+          : 0;
+        viewer = {
+          kind: "member",
+          isOwner: false,
+          canPropose,
+          matched,
+          myOpenProposal: openProposal
+            ? { id: openProposal.id, createdAt: openProposal.createdAt, itemCount: itemsCount }
+            : null,
+          inMyBuyList,
+        };
+      }
+    }
+
+    reply.header("x-cache", hit ? "HIT" : "MISS");
+    return { ...base, viewer };
   }
 
   /**
