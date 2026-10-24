@@ -14,6 +14,8 @@ import { PushService } from "./push.service";
 ///  SUPPLY_PROPOSAL — M6 — پیشنهاد تامین (به خریدار: رسیده) / تایید آن (به فروشنده)
 ///  SCORE           — M7 — امتیاز: عبور از آستانهٔ ۱۰۰ ⇐ «موتور شتاب‌دهنده فعال شد»
 ///                     (رویدادِ یک‌بار در عمرِ هر بازو — رخدادِ سیستم، نه طرف مقابل)
+///  AD_BUDGET_END   — M9 — تبلیغ به پایان رسید (بودجه تمام یا پایان مدت) +
+///                     باقیمانده به کیف برگشت — رخدادِ سیستم برای تبلیغ‌کننده
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
   | "FOLLOW_BUYER"
@@ -24,7 +26,8 @@ export type NotificationType =
   | "BUYER_NEED"
   | "ORDER"
   | "SUPPLY_PROPOSAL"
-  | "SCORE";
+  | "SCORE"
+  | "AD_BUDGET_END";
 
 export interface NotificationInput {
   userId: string;
@@ -60,6 +63,8 @@ const PREF_KEY: Record<NotificationType, string | null> = {
   SUPPLY_PROPOSAL: "quoteReplies",
   /** M7 — لحظهٔ رشد (۱۰۰ امتیاز) قابل‌خاموش‌کردن نیست؛ یک‌بار در عمر */
   SCORE: null,
+  /** M9 — پولِ تبلیغ هستهٔ دیده‌شدن است؛ قابل‌خاموش‌کردن نیست (یک‌بار در عمرِ هر تبلیغ) */
+  AD_BUDGET_END: null,
 };
 
 /**
@@ -113,6 +118,11 @@ const PUSH_VIEWS: Record<
     // M7 — رخداد-محور: تیتر روی ردیف (عنوان لحظهٔ رشد) + مقصد صفحهٔ امتیاز
     text: (n) => n.title ?? "امتیاز فعالیتت به ۱۰۰ رسید — موتور شتاب‌دهنده فعال شد",
     url: "/home/score",
+  },
+  AD_BUDGET_END: {
+    // M9 — رخداد-محور: تیترِ پایان (بودجه/مدت) روی ردیف + مقصد تبلیغ‌های من
+    text: (n) => n.title ?? "تبلیغ شما به پایان رسید",
+    url: "/sell/promo",
   },
 };
 

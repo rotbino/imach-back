@@ -548,6 +548,8 @@ model Business {
   wallet       Wallet?
   /// طرح ۸ — کمپین‌های «صف اول» این فروشنده
   promos       Promo[]
+  /// M9 — سفارش‌های نمایندگیِ ثبت‌شده روی این میز (repUserId مالک رکورد است)
+  repOrders    RepOrder[]   @relation("repOrders")
   /// فاز ۶ مهاجرت — گفتگوهای این کسب‌وکار (دو جهت رابطهٔ Thread)
   threadsA     Thread[]      @relation("threadA")
   threadsB     Thread[]      @relation("threadB")
@@ -1013,18 +1015,31 @@ model WalletTxn {
   @@index([walletId, createdAt])
 }
 
-/// کمپین «صف اول» — پرداخت به‌ازای نتیجه (U66): ۱٬۰۰۰ تومان هر نمایشِ
-/// هدفمند + ۵٬۰۰۰ تومان هر ذخیرهٔ حاصل. بدون مدت ۷روزه؛ بودجه که تمام
-/// شود نمایش می‌ایستد. صرفاً دیده‌شدن می‌خرد — رتبهٔ تطبیق مستقل می‌ماند.
+/// تبلیغ نوع‌دار (طرح ۸ + M9 · سند ۰۳ §۳.۴ — N7/P-3): دو نوع با قیمت‌گذاری
+/// رویدادمحور مشترک (VIEW=۱٬۰۰۰ / FOLLOW=۵٬۰۰۰ تومان — قفل‌شده):
+///  • CAMPAIGN — کمپین «فروش ویژه» با مدت ۳/۷/۱۴ روز: دیده‌شدن گسترده‌تر
+///    (کاتالوگ‌های ذخیره‌شده + تابلوی تأمین) + پایان مدت = توقف + REFUND
+///    باقیمانده (lazy در خواندن — الگوی بسته‌شدن ۷روزهٔ سفارش).
+///  • TARGETED — هدفمندِ جراحی‌وار، فقط یک جایگاه: SAVED_CATALOGS
+///    (کاتالوک‌های ذخیره‌شدهٔ خریدار) یا SUPPLY_BOARD (تابلوی تأمین همان کالا).
+/// رتبهٔ تطبیق هرگز پولی نیست — تبلیغ فقط دیده‌شدن می‌خرد.
 model Promo {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  businessId  String    @db.ObjectId // فروشندهٔ پرداخت‌کننده
-  listingId   String    @db.ObjectId // کالای هدف
-  budgetMinor Int // بودجهٔ تعهدی
-  spentMinor  Int       @default(0) // خرج‌شده (مشاهده + ذخیره)
-  isActive    Boolean   @default(true)
-  stoppedAt   DateTime? // توقف دستی یا خالی‌شدن بودجه
-  createdAt   DateTime  @default(now())
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  businessId    String    @db.ObjectId // فروشندهٔ پرداخت‌کننده
+  listingId     String    @db.ObjectId // کالای هدف
+  budgetMinor   Int // بودجهٔ تعهدی
+  spentMinor    Int       @default(0) // خرج‌شده (مشاهده + ذخیره)
+  isActive      Boolean   @default(true)
+  /// M9 (N7) — CAMPAIGN (فروش ویژه، مدت‌دار) | TARGETED (یک جایگاه جراحی‌وار)
+  type          String    @default("CAMPAIGN")
+  /// فقط TARGETED — جایگاه: SAVED_CATALOGS | SUPPLY_BOARD
+  placement     String?
+  /// فقط CAMPAIGN — مدت ۳/۷/۱۴ روز (P-3)، کنار بودجه
+  durationDays  Int?
+  /// فقط CAMPAIGN — createdAt + durationDays؛ پایان مدت = توقف + REFUND باقیمانده
+  endsAt        DateTime?
+  stoppedAt     DateTime? // توقف دستی، خالی‌شدن بودجه یا پایان مدت
+  createdAt     DateTime  @default(now())
 
   business Business     @relation(fields: [businessId], references: [id], onDelete: Cascade)
   listing  Listing      @relation("promoListing", fields: [listingId], references: [id], onDelete: Cascade)
@@ -1032,6 +1047,31 @@ model Promo {
 
   @@index([isActive])
   @@index([listingId, isActive])
+  @@index([isActive, type, placement])
+}
+
+/// G10 — سفارش نمایندهٔ فروش (M9 · سند ۰۸ §۴.۲ — FD-17): جدا از Order
+/// اصلی تا قواعد دوطرفهٔ سفارش شاملش نشود (design-audit §۹). چرخهٔ
+/// بازاریاب سنتی: NEW → SENT (لیست بیرون از سیستم رفت) → DELIVERED →
+/// SETTLED (پورسانت گرفته شد). پورسانت توافقی است — سیستم فقط ردیابی
+/// می‌کند؛ پول بیرون از سیستم جابه‌جا می‌شود.
+model RepOrder {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  repUserId      String    @db.ObjectId // کاربرِ نماینده (داشبورد چند-کسب‌وکاری)
+  businessId     String    @db.ObjectId // کسب‌وکار مبدأ — کدام میز
+  customerName   String // خریداری که نماینده سفارشش را گرفت
+  items          Json // [{name, pack?, qty, unitPriceMinor}] — آزاد، بی‌نیاز به Listing
+  totalMinor     Int // جمع qty × unitPrice
+  commissionPct  Float // پورسانت توافقی همین سفارش (٪) — ردیابی، نه تسویه درون‌سیستمی
+  status         String    @default("NEW") // NEW | SENT | DELIVERED | SETTLED
+  sharedVia      String? // WHATSAPP | SMS | CLIPBOARD — لیست چگونه بیرون رفت
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  business Business @relation("repOrders", fields: [businessId], references: [id], onDelete: Cascade)
+
+  @@index([repUserId, status, createdAt])
+  @@index([businessId, createdAt])
 }
 
 /// رویداد کمپین — هر خریدار به‌ازای هر کمپین و هر نوع، یکتا (U07):

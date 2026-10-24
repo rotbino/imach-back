@@ -1,18 +1,24 @@
 import { Body, Controller, Get, Param, Post, Query, UseGuards } from "@nestjs/common";
-import { IsInt, IsString, Min } from "class-validator";
+import { IsIn, IsInt, IsOptional, IsString, Min } from "class-validator";
 import { CurrentLocale, CurrentUser, type AuthUser } from "../common/decorators/auth.decorators";
 import { AppError } from "../common/errors/app-error";
 import type { Locale } from "../common/i18n/i18n";
 import { assertBusinessOwner } from "../common/guards";
 import { PrismaService } from "../common/prisma/prisma.module";
 import { JwtAuthGuard } from "../auth/jwt-auth.guard";
-import { PromosService } from "./promos.service";
+import { PromosService, type PromoPlacement, type PromoType } from "./promos.service";
 
 class CreatePromoDto {
   @IsString() businessId!: string;
   @IsString() listingId!: string;
   /** بودجه به تومان — سرور به minor ریال تبدیل می‌کند */
   @IsInt() @Min(50_000) budgetToman!: number;
+  /** M9 — نوع تبلیغ: کمپین فروش ویژه (مدت‌دار) یا هدفمند (جایگاه‌دار) */
+  @IsOptional() @IsIn(["CAMPAIGN", "TARGETED"]) type?: PromoType;
+  /** فقط CAMPAIGN — مدت ۳/۷/۱۴ روز (P-3) */
+  @IsOptional() @IsIn([3, 7, 14]) durationDays?: number;
+  /** فقط TARGETED — جایگاه جراحی‌وار */
+  @IsOptional() @IsIn(["SAVED_CATALOGS", "SUPPLY_BOARD"]) placement?: PromoPlacement;
 }
 
 class StopPromoDto {
@@ -24,10 +30,10 @@ class PromoQueryDto {
 }
 
 /**
- * طرح ۸ — کمپین «صف اول» (U05..U09). شفافیت آهنین:
- * نرخ‌ها (۱٬۰۰۰ ت نمایش / ۵٬۰۰۰ ت ذخیره) هم در شیت ساخت و هم در
- * گزارش نوشته می‌شوند؛ هدف‌گیری فقط غیرذخیره‌کنندگان است و رتبهٔ
- * تطبیق مستقل از پرداخت می‌ماند (برچسب ⭐ شفاف).
+ * طرح ۸ + M9 — تبلیغ نوع‌دار «صف اول» (U05..U09 · سند ۰۳ §۳.۴). شفافیت
+ * آهنین: نرخ‌ها (۱٬۰۰۰ ت نمایش / ۵٬۰۰۰ ت ذخیره) هم در شیت ساخت و هم در
+ * گزارش نوشته می‌شوند؛ هدف‌گیری فقط غیرذخیره‌کنندگان است و رتبهٔ تطبیق
+ * مستقل از پرداخت می‌ماند (برچسب ⭐ شفاف).
  */
 @Controller("promos")
 @UseGuards(JwtAuthGuard)
@@ -37,26 +43,31 @@ export class PromosController {
     private readonly promos: PromosService,
   ) {}
 
-  /** ساخت کمپین — بودجه از کیف قفل می‌شود؛ نمایش فوراً شروع می‌شود */
+  /** ساخت تبلیغ — بودجه از کیف قفل می‌شود؛ نمایش فوراً شروع می‌شود */
   @Post("create")
   async create(@Body() body: CreatePromoDto, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
     const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    const type: PromoType = body.type ?? "CAMPAIGN";
     try {
       const promo = await this.promos.create(
         business.id,
         body.listingId,
-        body.budgetToman * 10 // تومان → ریال
+        body.budgetToman * 10, // تومان → ریال
+        type,
+        { durationDays: body.durationDays, placement: body.placement }
       );
       return promo;
     } catch (e) {
       const code = e instanceof Error ? e.message : "PROMO_FAILED";
       const msg: Record<string, string> = {
         PROMO_LISTING_NOT_YOURS: "این کالا در کاتالوگ فروش شما نیست",
-        PROMO_LISTING_NOT_SELLING: "کالای غیرفعال یا غیرفروشی کمپین نمی‌شود",
-        PROMO_ALREADY_RUNNING: "برای این کالا کمپین فعالی دارید",
+        PROMO_LISTING_NOT_SELLING: "کالای غیرفعال یا غیرفروشی تبلیغ نمی‌شود",
+        PROMO_ALREADY_RUNNING: "برای این کالا تبلیغ فعالی دارید",
         PROMO_INSUFFICIENT_BALANCE: "موجودی کیف پول برای این بودجه کافی نیست",
+        PROMO_BAD_DURATION: "مدت کمپین باید ۳، ۷ یا ۱۴ روز باشد",
+        PROMO_BAD_PLACEMENT: "جایگاه تبلیغ هدفمند را انتخاب کنید",
       };
-      throw AppError.badRequest(msg[code] ?? "کمپین ساخته نشد", code);
+      throw AppError.badRequest(msg[code] ?? "تبلیغ ساخته نشد", code);
     }
   }
 
@@ -92,7 +103,7 @@ export class PromosController {
     }
   }
 
-  /** لیست کمپین‌های من + آمار فشرده */
+  /** لیست تبلیغ‌های من + آمار فشرده (نوع‌دار M9) */
   @Get("mine")
   async mine(@Query() query: PromoQueryDto, @CurrentUser() user: AuthUser, @CurrentLocale() locale: Locale) {
     const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
@@ -108,6 +119,10 @@ export class PromosController {
       remainingMinor: p.budgetMinor - p.spentMinor,
       isActive: p.isActive,
       eventCount: p._count.events,
+      type: p.type,
+      placement: p.placement,
+      durationDays: p.durationDays,
+      endsAt: p.endsAt,
       createdAt: p.createdAt,
       stoppedAt: p.stoppedAt,
     }));

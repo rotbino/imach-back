@@ -542,6 +542,14 @@ export class MarketController {
     const followedSet = new Set(followedPages.map((f) => f.supplierPage.businessId));
     const boughtSet = new Set(myInquirySellers.map((i) => i.sellerId));
 
+    // M9 — تبلیغ جایگاه SUPPLY_BOARD (طرح ۰۹ · sponsored که از فاز ۶ خالی
+    // مانده بود): ردیفِ فروشندهٔ تبلیغ‌کننده برچسب می‌گیرد + VIEW همان
+    // لحظه از بودجه‌اش کم می‌شود (best-effort — خطا تابلو را نمی‌شکند).
+    const boardPromo = await this.promos
+      .injectBoard(business.id, good.id)
+      .catch(() => null);
+    const sponsoredBizId = boardPromo?.businessId ?? null;
+
     return {
       good,
       watched: watch !== null,
@@ -579,7 +587,9 @@ export class MarketController {
               : null,
           followedByMe: followedSet.has(l.business.id),
           boughtFrom: boughtSet.has(l.business.id),
-          sponsored: false, // فلگ آینده — فعلاً خالی (طرح ۰۹: فقط ساختار UI)
+          // M9 — «معرفی iMach» فاز ۶ حالا زنده است: تبلیغ هدفمندِ جایگاه
+          // تابلوی تأمین + کمپین فروش ویژه (هر دو اینجا دیده می‌شوند)
+          sponsored: sponsoredBizId === l.business.id,
         };
       }),
     };
