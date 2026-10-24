@@ -15,55 +15,7 @@ import { BulkSaveDto } from "../products/dto/product.dto";
 import { refreshCatalogCount } from "../common/catalog/catalog-count";
 import { NotificationsService } from "../notifications/notifications.service";
 import { SaveListingDto, SetActiveDto, BulkPriceStockDto, type BulkPriceStockItemDto } from "./dto/listing.dto";
-
-/**
- * Same shape as getMyListings rows — every save path returns this so the
- * client cache never meets a half-shaped listing after a save.
- */
-const LISTING_SELECT = {
-  id: true,
-  mode: true,
-  variantKey: true,
-  variantLabel: true,
-  productId: true,
-  priceMinor: true,
-  currency: true,
-  attrs: true,
-  stock: true,
-  minOrder: true,
-  volume: true,
-  frequency: true,
-  updatedAt: true,
-  // M2 — متن شخصی ردیف + مهر قیمت‌گذاری (بج «منقضی») + قرارداد واحد-قیمت
-  baseQty: true,
-  pricePerBaseMinor: true,
-  // مدل واحد (۱۰۲۶) — بستهٔ انتخابی: [{label, qty}]
-  packaging: true,
-  title: true,
-  note: true,
-  pricedAt: true,
-  // FD-9 — اعتبار قیمت همین ردیف (null = همان تنظیم کاتالوک)
-  priceValidDays: true,
-  // ── وضعیت + شاخص‌های مالک (فاز ۲) — ردیف غیرفعال و شمارش بازدید
-  isActive: true,
-  viewCount30: true,
-  viewCountTotal: true,
-  // ── فاز ۳ — دسته‌ی شخصی کاتالوگ برای چيپ‌های ویترین
-  catalogCategoryId: true,
-  brand: { select: { id: true, name: true } },
-  good: {
-    select: {
-      id: true,
-      nameFa: true,
-      nameEn: true,
-      unit: true,
-      category: { select: { slug: true, nameFa: true, nameEn: true } },
-    },
-  },
-  // ── عکس مرجع محصول — وقتی آگهی گالری ندارد، این عکس نشان داده می‌شود
-  // (کاتالوگ فروش خالی از عکس، با عکس مرجع محصول پر می‌شود)
-  product: { select: { imageUrl: true } },
-} as const satisfies Prisma.ListingSelect;
+import { LISTING_SELECT } from "./listing-select";
 
 /** shallow {key: value} sanity cap for category attributes */
 function sanitizeAttrs(attrs: Record<string, string> | undefined): Record<string, string> | null {

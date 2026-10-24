@@ -26,48 +26,8 @@ import { OptionalJwtGuard } from "../auth/optional-jwt.guard";
 import { ensurePage } from "../common/pages";
 import { CreateBusinessDto, EditBusinessDto, CatalogCategoriesDto, CatalogSettingsDto, NotifPrefsDto, SetArmsDto, SupplyTermsDto } from "./dto/business.dto";
 import { FilesService } from "../files/files.service";
+import { PUBLIC_LISTING_SELECT as LISTING_SELECT } from "../listings/listing-select";
 import { currencyOfCountry } from "../common/catalog/catalog";
-
-const LISTING_SELECT = {
-  id: true,
-  mode: true,
-  // فاز ۲ — صفحه‌ی جزئیات کالای عمومی (طرح ۰۲) به واریانت و عکس مرجع نیاز دارد
-  variantLabel: true,
-  // فاز ۳ — دسته‌ی شخصی کاتالوگ برای چيپ‌های ویترین عمومی
-  catalogCategoryId: true,
-  priceMinor: true,
-  currency: true,
-  attrs: true,
-  stock: true,
-  minOrder: true,
-  volume: true,
-  frequency: true,
-  // فاز ۷ مهاجرت — کاتالوگ/کالای عمومی: «آخرین به‌روزرسانی» + بازدید پنجرهٔ ۳۰روزه
-  updatedAt: true,
-  viewCount30: true,
-  viewCountTotal: true,
-  // M2 — متن شخصی ردیف + مهر قیمت‌گذاری (بج «منقضی» عمومی از آن ساخته می‌شود)
-  title: true,
-  note: true,
-  pricedAt: true,
-  // FD-9 — اعتبار قیمتِ خودِ ردیف (بر تنظیم کاتالوگ اولویت دارد)
-  priceValidDays: true,
-  baseQty: true,
-  pricePerBaseMinor: true,
-  // مدل واحد (۱۰۲۶) — بستهٔ انتخابی ردیف: [{label, qty}] برای کارت‌های عمومی
-  packaging: true,
-  brand: { select: { id: true, name: true } },
-  good: {
-    select: {
-      id: true,
-      nameFa: true,
-      nameEn: true,
-      unit: true,
-      category: { select: { slug: true, nameFa: true, nameEn: true } },
-    },
-  },
-  product: { select: { imageUrl: true } },
-} as const;
 
 function invalidateBusiness(cache: CacheService, businessId: string, slug?: string): void {
   cache.invalidateTag(`business:${businessId}`);

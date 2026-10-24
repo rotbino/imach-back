@@ -30,3 +30,8 @@ backups/migration/
 
 # اسنپ‌شات‌های بک‌آپ/حذف داده — هرگز در گیت (قانون فاز ۵)
 scripts/backups/
+
+# M11 §۹: دادهٔ یک‌بارمصرف barcodeapp — روی دیسک می‌ماند، در گیت نه
+local-data/
+# لاک‌فایل واحد: package-lock.json (bun.lock حذف شد)
+bun.lock
