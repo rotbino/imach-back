@@ -30,12 +30,12 @@ datasource db {
 // ─── Auth ────────────────────────────────────────────────────────────────────
 
 model User {
-  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  id              String          @id @default(auto()) @map("_id") @db.ObjectId
   /// Unique international mobile identity: dial code + national number
   /// WITHOUT the leading trunk 0 — e.g. Iran 0912… → 98912….
   /// The dial comes from the signup country, so two countries can never
   /// collide on the same local number.
-  phone           String         @unique
+  phone           String          @unique
   /// Display full name — "firstName lastName". Kept in sync at write time so
   /// every existing reader (chat, notifications, vitrine) keeps working.
   name            String
@@ -52,17 +52,17 @@ model User {
   /// پیش‌فرض true: کاربران قدیمی (که همگی با registerUser ساخته شده‌اند) این
   /// فیلد را نداشتند — برای آن‌ها true در نظر می‌گیریم. فقط quickRegister این
   /// فیلد را صریحاً false می‌گذارد.
-  passwordSet     Boolean        @default(true)
-  role            String         @default("MEMBER") // MEMBER | ADMIN
+  passwordSet     Boolean         @default(true)
+  role            String          @default("MEMBER") // MEMBER | ADMIN
   /// نقش شخص در کسب‌وکار (FD-32 · حکم مالک M2): «صاحب کسب‌وکار / مدیر فروش /
   /// ویزیتور / …» — در ثبت‌نام (گام ۲) انتخاب می‌شود، در پیام‌ها و درخواست‌ها
   /// دیده می‌شود. جدای از system-role است (role = سطح دسترسی).
   /// null = هنوز انتخاب نشده (legacy / ثبت‌نام سریع قبل از گام ۲).
   businessRole    String?
-  country         String         @default("IR") // chosen at signup → default business currency + dial code
+  country         String          @default("IR") // chosen at signup → default business currency + dial code
   /// UI language chosen at signup (BCP-47 base: fa/en/ar/…) — restored on
   /// future logins once the product goes multilingual.
-  language        String         @default("fa")
+  language        String          @default("fa")
   /// فاز ۶ مهاجرت — ترجیحات نمایش کاربر (cross-device): تم روشن/تاریک،
   /// رنگ دلخواه هر arm، زبانِ صریحاً انتخاب‌شده. JSON ساده:
   /// { theme?: "light"|"dark", armBuyColor?: string, armSellColor?: string, lang?: string }
@@ -77,15 +77,15 @@ model User {
   refreshTokens   RefreshToken[]
   /// Basic-data rows this user registered (goods, brands, products) — the
   /// audit trail of who grew the catalog. Null creator = system/seed row.
-  createdGoods    Good[]         @relation("GoodCreator")
-  createdBrands   Brand[]        @relation("BrandCreator")
-  createdProducts Product[]      @relation("ProductCreator")
+  createdGoods    Good[]          @relation("GoodCreator")
+  createdBrands   Brand[]         @relation("BrandCreator")
+  createdProducts Product[]       @relation("ProductCreator")
   /// Attribution: the owner of the catalog / invite link this user signed up
   /// through (?ref={businessSlug}). The auto-follow fires later, when the
   /// referred user finally gets a Business (and therefore a BUY page).
-  referredBy      User?          @relation("Referrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
-  referredById    String?        @db.ObjectId
-  referrals       User[]         @relation("Referrals")
+  referredBy      User?           @relation("Referrals", fields: [referredById], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  referredById    String?         @db.ObjectId
+  referrals       User[]          @relation("Referrals")
   /// Which page of the referrer the invite came from: SELL = catalog link
   /// (referred becomes the referrer's CUSTOMER), BUY = purchase-desk link
   /// (referred becomes the referrer's SUPPLIER). Null = legacy sell default.
@@ -97,9 +97,11 @@ model User {
   /// In-app notification feed (bell) — follow / offer / quote / contact-joined
   notifications   Notification[]
   /// Files this user uploaded (avatar + anything else) — per-user usage rollup
-  files           File[]         @relation("FileOwner")
-  createdAt       DateTime       @default(now())
-  updatedAt       DateTime       @updatedAt
+  files           File[]          @relation("FileOwner")
+  /// M10 (N2) — نظراتی که این شخص روی کاتالوگ‌ها نوشته (نویسندهٔ نظر)
+  reviewsAuthored CatalogReview[] @relation("ReviewAuthor")
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
 
   @@index([referredById])
 }
@@ -283,6 +285,8 @@ model Good {
   products    Product[]
   /// فاز ۵ — خریدارهایی که قیمت این کالا را دنبال می‌کنند (شکاف ۱)
   watchers    WatchedGood[]
+  /// M10 (N6) — زنگوله‌های گوش-به-زنگ روی نیاز همین کالا
+  needAlerts  NeedAlert[]
 
   @@index([categoryId])
   @@index([searchText])
@@ -393,13 +397,13 @@ model Product {
 // با یک املا به یک رکورد برسند («ای‌دی مشترک»).
 
 model Trade {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
   /// Canonical Persian label — unique; the «human ID» of the guild
-  name       String @unique
+  name       String   @unique
   /// Popularity ordering — incremented when a business adopts this trade
-  usageCount Int    @default(1)
+  usageCount Int      @default(1)
   /// هستهٔ ثبت‌نام — ۴ چیپِ اولِ فرم همیشه این‌ها هستند (ترتیب در سرویس)
-  isCore     Boolean @default(false)
+  isCore     Boolean  @default(false)
   createdAt  DateTime @default(now())
 
   businesses Business[]
@@ -426,8 +430,8 @@ model Business {
   /// رکورد Trade اشاره می‌کند (بازاستفاده از صنف موجود = «ای‌دی مشترک»).
   /// رشتهٔ trade بالا برای سازگاری جستجوهای موجود (searchCatalogs و…)
   /// همگام با نامِ Trade نگه داشته می‌شود.
-  tradeId      String?  @db.ObjectId
-  tradeRef     Trade?   @relation(fields: [tradeId], references: [id], onDelete: SetNull)
+  tradeId      String? @db.ObjectId
+  tradeRef     Trade?  @relation(fields: [tradeId], references: [id], onDelete: SetNull)
   /// Human catalog size — denormalized count of active listings, refreshed
   /// opportunistically. Keeps catalog-search fast at scale (no groupBy per hit).
   catalogCount Int     @default(0)
@@ -441,7 +445,7 @@ model Business {
   /// فاز ۱۳ (بازخورد مالک) — معرفی کوتاه خود نوشتهٔ فروشنده؛ زیر نامش در
   /// کاتالوگ عمومی دیده می‌شود («علی امینی / فروشنده انواع لوازم خانگی»).
   /// ویترین اعتماد می‌سازد: خریدار عمده می‌خواهد بداند با چه کسی طرف است.
-  bio           String?
+  bio          String?
   isVerified   Boolean @default(false)
   isDemo       Boolean @default(false)
 
@@ -461,7 +465,7 @@ model Business {
   priceVisibilityTrades Json?
   /// اعتبار قیمت به روز (۱..۵) — بعد از آن بج «قیمت منقضی» عمومی (FD-52).
   /// null = هرگز منقضی نمی‌شود (رفتار پیش‌فرض/legacy).
-  priceValidityDays    Int?
+  priceValidityDays     Int?
 
   /// Precise geo point of the business — user-consented, optional, set from
   /// the catalog settings map (LocationPicker). Feeds the matcher's distance
@@ -484,14 +488,19 @@ model Business {
   /// متن آزاد فارسی که تأمین‌کننده‌ها قبل از پیشنهاد می‌خوانند. خالی =
   /// لینک «شرایط» در نمای عمومی لیست خرید (M6) دیده نمی‌شود.
   /// آیتم‌ها با «·» جدا می‌شوند و ردیف‌به‌ردیف رندر می‌شوند.
-  supplyTerms    String?
+  supplyTerms String?
 
   // ── دستور مالک (فیکس‌بچ M3) — امتیاز ثبت‌نام و مخفی‌کردن دسته‌ها ──
   /// «خود ثبت‌نام ۵ امتیاز دارد» — تا فاز M7 (موتور کامل امتیاز دوگانه با
   /// ۹ آیتم × ۱۰۰) همین دو شمارندهٔ denormalized پیش می‌روند؛ چیپ امتیاز
   /// اپ‌بار همین‌ها را می‌خواند (حلقهٔ پیشرفت = score/100).
-  scoreSell Int @default(0)
-  scoreBuy  Int @default(0)
+  scoreSell               Int     @default(0)
+  scoreBuy                Int     @default(0)
+  /// M10 (N2) — امتیاز کاتالوگ (denormalized): میانگین ستاره‌های CatalogReview
+  /// با هر upsert/پاسخ سرویس بازسازی می‌شود؛ هدر ویترین (13/31) و شیت نظرات
+  /// می‌خوانندش. 0/0 = هنوز نظری نیست (UI ستاره‌ها را نشان نمی‌دهد).
+  ratingAvg               Float   @default(0)
+  ratingCount             Int     @default(0)
   /// «تیک عدم نمایش دسته‌بندی» — فروشنده‌ای که به چیپ‌های دسته نیاز ندارد
   /// ردیف چیپ‌ها را در کاتالوگ خودش مخفی می‌کند؛ دسته‌ها سر جایشان می‌مانند
   /// (آگهی‌ها همچنان catalogCategoryId دارند و مدیریت دسته‌ها باز است).
@@ -521,44 +530,52 @@ model Business {
   /// شمارهٔ مالیاتی فروشنده — روی فاکتور چاپ می‌شود (تنظیمات ۳۶).
   invoiceTaxId String?
   /// یادداشت ثابت فاکتور («کالا فروخته شده_return نمی‌شود» و…) — پانوشت چاپی.
-  invoiceNote String?
+  invoiceNote  String?
   /// شمارندهٔ شمارهٔ سند ترتیبی — با هر پذیرش سفارش یک واحد بالا می‌رود (atomic).
-  invoiceSeq Int @default(0)
+  invoiceSeq   Int     @default(0)
 
   ownerId String? @db.ObjectId
   owner   User?   @relation(fields: [ownerId], references: [id], onDelete: SetNull)
 
-  listings     Listing[]     @relation("listings")
-  inquiriesIn  Inquiry[]     @relation("seller")
-  inquiriesOut Inquiry[]     @relation("buyer")
-  offersSent   Offer[]       @relation("seller")
-  offersRecv   Offer[]       @relation("buyer")
-  pages        Page[]
+  listings           Listing[]        @relation("listings")
+  inquiriesIn        Inquiry[]        @relation("seller")
+  inquiriesOut       Inquiry[]        @relation("buyer")
+  offersSent         Offer[]          @relation("seller")
+  offersRecv         Offer[]          @relation("buyer")
+  pages              Page[]
   /// M5 — سفارش‌هایی که این کسب‌وکار فروخته (صف فروش ۰۹)
-  ordersSold Order[]        @relation("orderSeller")
+  ordersSold         Order[]          @relation("orderSeller")
   /// M5 — سفارش‌هایی که این کسب‌وکار خریده (دفتر خرید ۲۸)
-  ordersBought Order[]      @relation("orderBuyer")
+  ordersBought       Order[]          @relation("orderBuyer")
   /// M6 — پیشنهادهای تامینِ دریافتی (سمت خریدار)
-  proposalsRecv SupplyProposal[] @relation("spBuyer")
+  proposalsRecv      SupplyProposal[] @relation("spBuyer")
   /// M6 — پیشنهادهای تامینِ ارسالی (سمت تأمین‌کننده)
-  proposalsSent SupplyProposal[] @relation("spSupplier")
+  proposalsSent      SupplyProposal[] @relation("spSupplier")
   /// فاز ۵ — کالاهایی که این خریدار قیمتشان را دنبال می‌کند (لیست خرید)
-  watchedGoods WatchedGood[]
+  watchedGoods       WatchedGood[]
   /// طرح ۸ — کیف پول تومانی (هر کسب‌وکار حداکثر یکی)
-  wallet       Wallet?
+  wallet             Wallet?
   /// طرح ۸ — کمپین‌های «صف اول» این فروشنده
-  promos       Promo[]
+  promos             Promo[]
   /// M9 — سفارش‌های نمایندگیِ ثبت‌شده روی این میز (repUserId مالک رکورد است)
-  repOrders    RepOrder[]   @relation("repOrders")
+  repOrders          RepOrder[]       @relation("repOrders")
   /// فاز ۶ مهاجرت — گفتگوهای این کسب‌وکار (دو جهت رابطهٔ Thread)
-  threadsA     Thread[]      @relation("threadA")
-  threadsB     Thread[]      @relation("threadB")
+  threadsA           Thread[]         @relation("threadA")
+  threadsB           Thread[]         @relation("threadB")
   /// Brands owned by this business (for brand dashboard)
-  ownedBrands  Brand[]       @relation("BrandOwner")
+  ownedBrands        Brand[]          @relation("BrandOwner")
   /// M7 — رویدادهای امتیازِ هر دو بازو (گزارش «کِی انجام شد»)
-  scoreEvents  ScoreEvent[]
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  scoreEvents        ScoreEvent[]
+  /// M10 (N2) — نظرات و امتیاز خریداران روی این کاتالوگ
+  catalogReviews     CatalogReview[]
+  /// M10 (N6) — زنگوله‌های فعال: نیاز خریدارانی که دنبالشان می‌کنم (سمت فروشنده)
+  needAlertsAsSeller NeedAlert[]      @relation("NeedAlertSeller")
+  /// M10 (N6) — یال‌هایی که دیگر فروشنده‌ها روی نیازهای من زده‌اند (سمت خریدار)
+  needAlertsAsBuyer  NeedAlert[]      @relation("NeedAlertBuyer")
+  /// M10 (N3) — پست‌های بازخورد/پرسش این کسب‌وکار در راهنمای دستیارها
+  feedbackPosts      FeedbackPost[]   @relation("FbAuthor")
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
 
   @@index([city])
   @@index([ownerId])
@@ -701,15 +718,17 @@ model Listing {
   /// (تاریخچه قیمت) می‌ماند. Upsert یک سطر حذف‌شده را دوباره زنده می‌کند.
   isActive Boolean @default(true)
 
-  business  Business   @relation("listings", fields: [businessId], references: [id], onDelete: Cascade)
-  good      Good       @relation(fields: [goodId], references: [id])
+  business  Business          @relation("listings", fields: [businessId], references: [id], onDelete: Cascade)
+  good      Good              @relation(fields: [goodId], references: [id])
   inquiries Inquiry[]
   offers    Offer[]
   priceLogs PriceLog[]
   /// طرح ۸ — کمپین‌های فعال/توقف‌شده روی همین کالا (فقط رابطه؛ خواندن از Promo)
-  promos    Promo[]    @relation("promoListing")
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
+  promos    Promo[]           @relation("promoListing")
+  /// M10 (N5) — خط زمانی رویدادهای غیر-بازدید همین آگهی (شیت «تاریخچهٔ رویدادها»)
+  eventLogs ListingEventLog[]
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
 
   @@unique([businessId, goodId, variantKey])
   @@index([goodId, isActive, mode])
@@ -722,10 +741,10 @@ model Listing {
 
 /// Buyer asked for a price on a seller's catalog listing.
 model Inquiry {
-  id               String   @id @default(auto()) @map("_id") @db.ObjectId
-  buyerId          String   @db.ObjectId
-  sellerId         String   @db.ObjectId
-  listingId        String   @db.ObjectId
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId          String    @db.ObjectId
+  sellerId         String    @db.ObjectId
+  listingId        String    @db.ObjectId
   volume           Float
   note             String?
   /// Purchase rhythm snapshot from the buyer's BUY listing
@@ -760,9 +779,9 @@ model Inquiry {
   /// با همین شرایط»: فقط پیشنهادِ برنده سفارش می‌شود. legacy null = از
   /// resultText (نام فروشنده) حدس زده می‌شود. (الگوی rfqGroupId: رشتهٔ ساده)
   acceptedOfferId  String?
-  status           String   @default("NEW") // NEW | ANSWERED | ARCHIVED
-  isRead           Boolean  @default(false)
-  createdAt        DateTime @default(now())
+  status           String    @default("NEW") // NEW | ANSWERED | ARCHIVED
+  isRead           Boolean   @default(false)
+  createdAt        DateTime  @default(now())
 
   buyer   Business @relation("buyer", fields: [buyerId], references: [id], onDelete: Cascade)
   seller  Business @relation("seller", fields: [sellerId], references: [id], onDelete: Cascade)
@@ -825,8 +844,8 @@ model Offer {
 /// CANCELLED (فقط تا قبل از SENT). هر گذار: history + اعلان به مقابل.
 /// SENT بدون تأیید خریدار ⇒ ۷ روز پس از ارسال «بستن تنبل» (در خواندن).
 model Order {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  buyerId String @db.ObjectId
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId  String @db.ObjectId
   sellerId String @db.ObjectId
 
   status String @default("NEW") // NEW | ACCEPTED | SENT | DELIVERED | REJECTED | CANCELLED
@@ -842,8 +861,8 @@ model Order {
   items Json
 
   /// جمع فریز (Σ qty×unitPriceMinor) — با پذیرشِ اصلاحی دوباره محاسبه می‌شود
-  totalMinor Int     @default(0)
-  currency   String  @default("IRR")
+  totalMinor Int    @default(0)
+  currency   String @default("IRR")
 
   /// یادداشت خریدار (سبد: یادداشت سفارش · پیشنهاد: شرایط ترجمه‌شده)
   note       String?
@@ -907,12 +926,12 @@ model Page {
 /// Price tracking — the BUY page of a business follows the SELL page of a
 /// supplier. A private subscription to price changes; no social layer.
 model Follow {
-  id             String   @id @default(auto()) @map("_id") @db.ObjectId
-  followerPageId String   @db.ObjectId // BUY page of the follower
-  supplierPageId String   @db.ObjectId // SELL page of the followed supplier
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  followerPageId String    @db.ObjectId // BUY page of the follower
+  supplierPageId String    @db.ObjectId // SELL page of the followed supplier
   /// True when the edge was born from a referral signup (?ref= auto-follow) —
   /// powers the «با لینک» badge and future reward attribution.
-  viaRef         Boolean  @default(false)
+  viaRef         Boolean   @default(false)
   /// طرح ۸ (U60) — منبعِ رسیدنِ این یال: ORGANIC (خودش در اپ پیدا کرد) |
   /// SHARED (از لینک اشتراکی/کاتالوگ/لیست) | PROMO (از نمایش پرومو).
   /// ردیف‌های قدیمی‌تر ORGANIC تلقی می‌شوند؛ viaRef=true و source خالی → SHARED.
@@ -930,7 +949,7 @@ model Follow {
   /// تایید نشده → ردیف با برچسب «جدید» بالای دفتر مشتری می‌ماند تا تکلیف
   /// روشن شود (تایید یا حذف). حذفِ واقعی خودِ یال است (removeFollower).
   ackAt          DateTime?
-  createdAt      DateTime @default(now())
+  createdAt      DateTime  @default(now())
 
   followerPage Page @relation("pageFollower", fields: [followerPageId], references: [id], onDelete: Cascade)
   supplierPage Page @relation("pageSupplier", fields: [supplierPageId], references: [id], onDelete: Cascade)
@@ -961,8 +980,8 @@ model SupplyProposal {
   acceptedAt  DateTime?
   dismissedAt DateTime?
 
-  buyer     Business @relation("spBuyer", fields: [buyerId], references: [id], onDelete: Cascade)
-  supplier  Business @relation("spSupplier", fields: [supplierId], references: [id], onDelete: Cascade)
+  buyer    Business @relation("spBuyer", fields: [buyerId], references: [id], onDelete: Cascade)
+  supplier Business @relation("spSupplier", fields: [supplierId], references: [id], onDelete: Cascade)
 
   @@index([buyerId, status, createdAt])
   @@index([supplierId, createdAt])
@@ -1024,22 +1043,22 @@ model WalletTxn {
 ///    (کاتالوک‌های ذخیره‌شدهٔ خریدار) یا SUPPLY_BOARD (تابلوی تأمین همان کالا).
 /// رتبهٔ تطبیق هرگز پولی نیست — تبلیغ فقط دیده‌شدن می‌خرد.
 model Promo {
-  id            String    @id @default(auto()) @map("_id") @db.ObjectId
-  businessId    String    @db.ObjectId // فروشندهٔ پرداخت‌کننده
-  listingId     String    @db.ObjectId // کالای هدف
-  budgetMinor   Int // بودجهٔ تعهدی
-  spentMinor    Int       @default(0) // خرج‌شده (مشاهده + ذخیره)
-  isActive      Boolean   @default(true)
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  businessId   String    @db.ObjectId // فروشندهٔ پرداخت‌کننده
+  listingId    String    @db.ObjectId // کالای هدف
+  budgetMinor  Int // بودجهٔ تعهدی
+  spentMinor   Int       @default(0) // خرج‌شده (مشاهده + ذخیره)
+  isActive     Boolean   @default(true)
   /// M9 (N7) — CAMPAIGN (فروش ویژه، مدت‌دار) | TARGETED (یک جایگاه جراحی‌وار)
-  type          String    @default("CAMPAIGN")
+  type         String    @default("CAMPAIGN")
   /// فقط TARGETED — جایگاه: SAVED_CATALOGS | SUPPLY_BOARD
-  placement     String?
+  placement    String?
   /// فقط CAMPAIGN — مدت ۳/۷/۱۴ روز (P-3)، کنار بودجه
-  durationDays  Int?
+  durationDays Int?
   /// فقط CAMPAIGN — createdAt + durationDays؛ پایان مدت = توقف + REFUND باقیمانده
-  endsAt        DateTime?
-  stoppedAt     DateTime? // توقف دستی، خالی‌شدن بودجه یا پایان مدت
-  createdAt     DateTime  @default(now())
+  endsAt       DateTime?
+  stoppedAt    DateTime? // توقف دستی، خالی‌شدن بودجه یا پایان مدت
+  createdAt    DateTime  @default(now())
 
   business Business     @relation(fields: [businessId], references: [id], onDelete: Cascade)
   listing  Listing      @relation("promoListing", fields: [listingId], references: [id], onDelete: Cascade)
@@ -1056,17 +1075,17 @@ model Promo {
 /// SETTLED (پورسانت گرفته شد). پورسانت توافقی است — سیستم فقط ردیابی
 /// می‌کند؛ پول بیرون از سیستم جابه‌جا می‌شود.
 model RepOrder {
-  id             String    @id @default(auto()) @map("_id") @db.ObjectId
-  repUserId      String    @db.ObjectId // کاربرِ نماینده (داشبورد چند-کسب‌وکاری)
-  businessId     String    @db.ObjectId // کسب‌وکار مبدأ — کدام میز
-  customerName   String // خریداری که نماینده سفارشش را گرفت
-  items          Json // [{name, pack?, qty, unitPriceMinor}] — آزاد، بی‌نیاز به Listing
-  totalMinor     Int // جمع qty × unitPrice
-  commissionPct  Float // پورسانت توافقی همین سفارش (٪) — ردیابی، نه تسویه درون‌سیستمی
-  status         String    @default("NEW") // NEW | SENT | DELIVERED | SETTLED
-  sharedVia      String? // WHATSAPP | SMS | CLIPBOARD — لیست چگونه بیرون رفت
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  repUserId     String   @db.ObjectId // کاربرِ نماینده (داشبورد چند-کسب‌وکاری)
+  businessId    String   @db.ObjectId // کسب‌وکار مبدأ — کدام میز
+  customerName  String // خریداری که نماینده سفارشش را گرفت
+  items         Json // [{name, pack?, qty, unitPriceMinor}] — آزاد، بی‌نیاز به Listing
+  totalMinor    Int // جمع qty × unitPrice
+  commissionPct Float // پورسانت توافقی همین سفارش (٪) — ردیابی، نه تسویه درون‌سیستمی
+  status        String   @default("NEW") // NEW | SENT | DELIVERED | SETTLED
+  sharedVia     String? // WHATSAPP | SMS | CLIPBOARD — لیست چگونه بیرون رفت
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
   business Business @relation("repOrders", fields: [businessId], references: [id], onDelete: Cascade)
 
@@ -1113,7 +1132,7 @@ model Thread {
   /// کلید یکتایی زمینه — "" گفتگوی آزادِ زوج؛ «TYPE:id» گفتگوی زمینه‌دار.
   /// موتور Mongo‌ی پرایسما null را در compound-unique با فیلد غایب یکی
   /// نمی‌گیرد (درس readAt صریح) — کلید غیرنالپذیر یکتایی را تضمین می‌کند.
-  contextKey   String   @default("")
+  contextKey   String  @default("")
 
   a        Business  @relation("threadA", fields: [aId], references: [id], onDelete: Cascade)
   b        Business  @relation("threadB", fields: [bId], references: [id], onDelete: Cascade)
@@ -1311,4 +1330,133 @@ model ScoreEvent {
 
   @@unique([businessId, item])
   @@index([businessId, createdAt])
+}
+
+// ─── M10 (سند ۰۳ §۴ · سند ۰۸ §M10) — محتوای اجتماعی و SEO عمومی ──────────────
+
+/// N2/S3 — نظر+امتیاز خریدار روی کاتالوگ فروشنده (شیت نظرات 31/37) + پاسخ
+/// عمومی فروشنده زیر همان نظر. هر خریدار به‌ازای هر کاتالوگ یک نظر (upsert
+/// سرویس‌سوی: نویسنده = شخص، هویت نمایش = کسب‌وکار فعال)؛ ثبت/پاسخ ⇒ بازسازی
+/// Business.ratingAvg/ratingCount.
+model CatalogReview {
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  /// فروشندهٔ هدف (کاتالوگی که نظر روی آن نشسته)
+  businessId       String    @db.ObjectId
+  business         Business  @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  /// نویسنده (شخص) — یکتایی (نویسنده × کاتالوگ) در سرویس کنترل می‌شود
+  authorUserId     String    @db.ObjectId
+  author           User      @relation("ReviewAuthor", fields: [authorUserId], references: [id])
+  /// کسب‌وکار نویسنده (هویت نمایش: نام + احراز) — snapshot هنگام ثبت
+  authorBusinessId String?   @db.ObjectId
+  /// 1..5 — ستاره‌سِلکت شیت
+  rating           Int
+  /// متن اختیاری (فقط ستاره هم مجاز)
+  text             String?
+  /// پاسخ عمومی فروشنده زیر همان نظر (فاز ۳۰ الگو)
+  reply            String?
+  repliedAt        DateTime?
+  createdAt        DateTime  @default(now())
+
+  @@unique([authorUserId, businessId])
+  @@index([businessId, createdAt])
+  @@index([businessId, rating])
+}
+
+/// N3 — پست کاربران دربارهٔ دستیارها (بازخورد/پرسش) در راهنمای دستیارها.
+/// لایک + پاسخ تورفته + پاسخ تیم آیمچ؛ likeCount denormalized (upsert بدون
+/// join) و یکتایی لایک هر کسب‌وکار با آرایهٔ likedBy کنترل می‌شود.
+model FeedbackPost {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  /// FEEDBACK | QUESTION
+  kind             String
+  /// BUY | SELL (میزبانی کدام دستیار)
+  arm              String
+  authorBusinessId String   @db.ObjectId
+  author           Business @relation("FbAuthor", fields: [authorBusinessId], references: [id], onDelete: Cascade)
+  text             String
+  likeCount        Int      @default(0)
+  /// کسب‌وکارهایی که لایک کرده‌اند (هر کدام یک‌بار) — کنترل یکتایی لایک
+  likedBy          String[] @default([])
+  /// [{team?:true, businessName, text, createdAt}] — تورفته؛ حجم کم، JSON کافی
+  replies          Json?
+  createdAt        DateTime @default(now())
+
+  @@index([kind, arm, createdAt])
+}
+
+/// N4 — نظرات ویترین عمومی (نوار «نظر خریداران» لندینگ + صفحهٔ سایر نظرات).
+/// مدل ثبت نظر عمومی (dlg-rvw) هم همین را با approved=false می‌سازد؛ نمایش
+/// فقط پس از تأیید ادمین (P-2).
+model Testimonial {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  business  String
+  /// نقش نمایشی («خریدار عمده مواد اولیه»…)
+  role      String
+  /// دکمهٔ کارت: کاتالوک (فروشنده) | لیست خرید (خریدار)
+  isBuyer   Boolean  @default(false)
+  /// چیپ قابلیت («تابلوی تأمین»…)
+  feature   String?
+  text      String
+  /// ⚠️ P-2: تأیید ادمین پیش از نمایش
+  approved  Boolean  @default(false)
+  /// ترتیب دستی ویترین
+  sortHint  Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([approved, sortHint])
+}
+
+/// N5 — خط زمانی تعامل با یک آگهی (شیت «تاریخچهٔ رویدادها» در نمای کالا).
+/// انواع: WATCH_ADD · COMPARE_ADD · INQUIRY · CHAT · CAMPAIGN_VIEW —
+/// VIEW روی همین جدول پرحجم نمی‌شود (شمارندهٔ viewCount30/Total)؛ فقط
+/// رویدادهای غیر-بازدید یا بازدیدِ تبلیغیِ شارژشونده ردیف می‌گیرند.
+model ListingEventLog {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  listingId       String   @db.ObjectId
+  listing         Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  type            String
+  /// null = سیستمی/عمومی
+  actorBusinessId String?  @db.ObjectId
+  /// snapshot نام برای جمله‌سازی («علی محمدی از … بازدید کرد»)
+  actorName       String?
+  createdAt       DateTime @default(now())
+
+  @@index([listingId, createdAt])
+  @@index([listingId, type, createdAt])
+}
+
+/// N6/D-2 — اشتراک فروشنده به نیاز خریدار برای یک کالا (زنگولهٔ لیست خرید
+/// عمومی 23). فعال‌شدنش یعنی: RFQهای این خریدار برای این کالا در تب
+/// «گوش به زنگ» میز استعلام فروشنده (11) دیده می‌شود + اعلان NEED.
+model NeedAlert {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  sellerBusinessId String   @db.ObjectId
+  seller           Business @relation("NeedAlertSeller", fields: [sellerBusinessId], references: [id], onDelete: Cascade)
+  buyerBusinessId  String   @db.ObjectId
+  buyer            Business @relation("NeedAlertBuyer", fields: [buyerBusinessId], references: [id], onDelete: Cascade)
+  goodId           String   @db.ObjectId
+  good             Good     @relation(fields: [goodId], references: [id], onDelete: Cascade)
+  createdAt        DateTime @default(now())
+
+  @@unique([sellerBusinessId, buyerBusinessId, goodId])
+  /// جریان: RFQ جدید → یال‌های فعال → اعلان NEED
+  @@index([buyerBusinessId, goodId])
+}
+
+/// N3-محتوا — فیلم‌های آموزشی راهنمای دستیارها (۴۰ خرید / ۴۱ فروش) —
+/// شیت پخش sheet-video. seed از محتوای راهنما؛ بارگذاری ویدیوی واقعی
+/// فاز محتوایی است، نه فاز داده.
+model VideoLesson {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  arm       String
+  title     String
+  durationS Int
+  posterUrl String
+  /// «در این فیلم می‌بینید» (۳ مورد)
+  bullets   String[]
+  sortHint  Int      @default(0)
+  isActive  Boolean  @default(true)
+
+  @@index([arm, sortHint])
 }

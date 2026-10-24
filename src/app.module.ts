@@ -23,6 +23,9 @@ import { ChatModule } from "./chat/chat.module";
 import { SettingsModule } from "./settings/settings.module";
 import { ScoreModule } from "./score/score.module";
 import { RepModule } from "./rep/rep.module";
+import { ReviewsModule } from "./reviews/reviews.module";
+import { FeedbackModule } from "./feedback/feedback.module";
+import { EventsModule } from "./events/events.module";
 
 /**
  * iMach API root — feature modules only; cross-cutting infra lives in
@@ -54,6 +57,9 @@ import { RepModule } from "./rep/rep.module";
     SettingsModule,
     ScoreModule,
     RepModule,
+    ReviewsModule,
+    FeedbackModule,
+    EventsModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })

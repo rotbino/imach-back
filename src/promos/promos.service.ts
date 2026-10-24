@@ -234,6 +234,7 @@ export class PromosService {
         budgetMinor: true,
         spentMinor: true,
         endsAt: true,
+        listingId: true,
       },
     });
     if (!promo || !promo.isActive) return false;
@@ -277,6 +278,27 @@ export class PromosService {
         await this.stopInternal(promoId, promo.businessId, 0, "پایان طبیعی بودجه");
       } else if (periodOut) {
         await this.stopInternal(promoId, promo.businessId, after.budgetMinor - after.spentMinor, "پایان مدت کمپین فروش ویژه");
+      }
+    }
+
+    // M10 (N5) — بازدیدِ شارژیِ تبلیغ ردیف تاریخچهٔ کالا هم می‌گیرد
+    // (الگوی سند ۰۳ §۴.۴: CAMPAIGN_VIEW شارژ می‌شود پس ثبت می‌شود)
+    if (type === "VIEW" && promo.listingId) {
+      try {
+        const viewer = await this.prisma.business.findUnique({
+          where: { id: viewerBusinessId },
+          select: { name: true },
+        });
+        await this.prisma.listingEventLog.create({
+          data: {
+            listingId: promo.listingId,
+            type: "CAMPAIGN_VIEW",
+            actorBusinessId: viewerBusinessId,
+            actorName: viewer?.name ?? null,
+          },
+        });
+      } catch {
+        /* best-effort — تاریخچه هرگز شارژ را نمی‌شکند */
       }
     }
     return true;

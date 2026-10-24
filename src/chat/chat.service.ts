@@ -241,6 +241,27 @@ export class ChatService {
         ...(contextKey ? { contextType, contextRefId } : {}),
       },
     });
+
+    // M10 (N5) — تاریخچهٔ رویداد کالا: گفتگوی زمینه‌دار با کالا
+    if (contextType === "LISTING" && contextRefId) {
+      const starter = await this.prisma.business.findUnique({
+        where: { id: businessId },
+        select: { name: true },
+      });
+      try {
+        await this.prisma.listingEventLog.create({
+          data: {
+            listingId: contextRefId,
+            type: "CHAT",
+            actorBusinessId: businessId,
+            actorName: starter?.name ?? null,
+          },
+        });
+      } catch {
+        /* best-effort — تاریخچه هرگز گفتگو را نمی‌شکند */
+      }
+    }
+
     return {
       id: thread.id,
       other,

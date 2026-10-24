@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   HttpCode,
   HttpStatus,
@@ -25,6 +26,7 @@ import { proximity } from "../common/geo/cities";
 import { NotificationsService } from "../notifications/notifications.service";
 import { PromosService } from "../promos/promos.service";
 import { ScoreService } from "../score/score.service";
+import { ListingEventsService } from "../events/listing-events.service";
 import { MatchingService } from "./matching.service";
 import {
   AcceptOfferDto,
@@ -35,6 +37,8 @@ import {
   FollowBuyerDto,
   FollowSupplierDto,
   InquiriesQueryDto,
+  NeedAlertDto,
+  NeedAlertQueryDto,
   OfferBuyRequestDto,
   QuoteContextQueryDto,
   RemoveFollowerDto,
@@ -47,6 +51,7 @@ import {
   UnfollowSupplierDto,
   UnwatchGoodDto,
   WatchGoodDto,
+  WatchedNeedsQueryDto,
 } from "./dto/market.dto";
 
 /** ObjectId hex guard — keeps invalid params away from Prisma. */
@@ -194,7 +199,8 @@ export class MarketController {
     private readonly matching: MatchingService,
     private readonly notifications: NotificationsService,
     private readonly promos: PromosService,
-    private readonly score: ScoreService
+    private readonly score: ScoreService,
+    private readonly listingEvents: ListingEventsService
   ) {}
 
   private invalidateBuyerSide(businessId: string): void {
@@ -436,8 +442,54 @@ export class MarketController {
         actorName: business.name,
         actorSlug: business.slug,
         good: goodLabel,
+        // M10 — مقصد لمس: میز استعلام فروشنده (گوش-به-زنگ + مستقیم)
+        url: "/sell/rfqs",
       }))
     );
+
+    // ── M10 (N6 · سند ۰۸ §M10) — گوش-به-زنگ: فروشنده‌هایی که زنگوله روی
+    // (این خریدار × همین اقلام) روشن کرده‌اند اما مستقیم گیرنده نشده‌اند →
+    // اعلان BUYER_NEED. گیرنده‌های مستقیم بالا خودشان QUOTE گرفتند (بدون دوبل).
+    try {
+      const alerts = await this.prisma.needAlert.findMany({
+        where: {
+          buyerBusinessId: business.id,
+          goodId: { in: basket.map((b) => b.goodId) },
+          sellerBusinessId: { notIn: [...perSeller.keys()] },
+        },
+        select: { sellerBusinessId: true },
+        take: 200,
+      });
+      const alertSellerIds = [...new Set(alerts.map((a) => a.sellerBusinessId))];
+      if (alertSellerIds.length > 0) {
+        const owners = await this.prisma.business.findMany({
+          where: { id: { in: alertSellerIds }, ownerId: { not: null } },
+          select: { id: true, ownerId: true },
+        });
+        await this.notifications.pushMany(
+          owners.map((s) => ({
+            userId: s.ownerId as string,
+            bizId: s.id,
+            type: "BUYER_NEED" as const,
+            actorId: business.id,
+            actorName: business.name,
+            actorSlug: business.slug,
+            good: goodLabel,
+            title: `استعلام تازهٔ ${business.name} — ${goodLabel} (گوش به زنگ شما بود)`,
+            url: "/sell/rfqs",
+          }))
+        );
+      }
+    } catch {
+      /* best-effort — اعلان هرگز استعلام را نمی‌شکند */
+    }
+
+    // ── M10 (N5) — تاریخچهٔ رویداد کالا: INQUIRY روی اقلامِ خودِ هر فروشنده
+    // (snapshot رزولوشن‌شدهٔ همان ردیف — حریم سبد خریدار حفظ می‌شود)
+    for (const inq of created) {
+      const items = (inq.items as { listingId: string | null }[] | null) ?? [];
+      await this.listingEvents.logInquiry(items, { businessId: business.id, name: business.name });
+    }
 
     const selectedSet = new Set(body.supplierIds ?? []);
     return {
@@ -1872,7 +1924,169 @@ export class MarketController {
 
     this.cache.invalidateTag(`market:watch:${body.businessId}`);
     this.invalidateBuyerSide(body.businessId);
+
+    // ── M10 (N5) — تاریخچهٔ رویداد کالا: خریدار این کالا را به لیست خریدش
+    // افزود — روی همهٔ آگهی‌های فروشِ فعال همان کالا (هر فروشنده ردیف خودش)
+    await this.listingEvents.logWatchOnGood(body.goodId, {
+      businessId: business.id,
+      name: business.name,
+    });
+
     return { ok: true, watched: true, followed, id: wg.id };
+  }
+
+  // ═══ M10 (N6 · سند ۰۸ §M10) — گوش-به-زنگ فروشنده (زنگولهٔ لیست خرید عمومی) ═══
+
+  /** روشن‌کردن زنگوله — upsert سه‌تایی (فروشنده × خریدار × کالا).
+   *  فعال‌شدنش یعنی: استعلام‌های این خریدار برای این کالا در تب «گوش به زنگ»
+   *  میز استعلام فروشنده (11) می‌آید + اعلان BUYER_NEED می‌گیرد. */
+  @Post("need-alerts")
+  @HttpCode(HttpStatus.CREATED)
+  async setNeedAlert(
+    @Body() body: NeedAlertDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!isObjectId(body.buyerBusinessId) || !isObjectId(body.goodId)) {
+      throw AppError.badRequest("خریدار یا کالا معتبر نیست", "NEED_ALERT_BAD_TARGET");
+    }
+    const business = await assertBusinessOwner(this.prisma, user, body.businessId, locale);
+    if (body.buyerBusinessId === business.id) {
+      throw AppError.badRequest("به نیاز خودتان زنگوله نمی‌خورد", "NEED_ALERT_SELF");
+    }
+    const [buyer, good] = await Promise.all([
+      this.prisma.business.findUnique({ where: { id: body.buyerBusinessId }, select: { id: true, slug: true } }),
+      this.prisma.good.findUnique({ where: { id: body.goodId }, select: { id: true, nameFa: true } }),
+    ]);
+    if (!buyer || !good) throw AppError.notFound("خریدار یا کالا پیدا نشد");
+    const row = await this.prisma.needAlert.upsert({
+      where: {
+        sellerBusinessId_buyerBusinessId_goodId: {
+          sellerBusinessId: business.id,
+          buyerBusinessId: buyer.id,
+          goodId: good.id,
+        },
+      },
+      create: { sellerBusinessId: business.id, buyerBusinessId: buyer.id, goodId: good.id },
+      update: {},
+    });
+    return { id: row.id, on: true, goodId: good.id };
+  }
+
+  /** خاموش‌کردن زنگوله — حذف یال سه‌تایی */
+  @Delete("need-alerts")
+  async unsetNeedAlert(
+    @Query() query: NeedAlertQueryDto,
+    @Query("goodId") goodId: string,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    if (!isObjectId(goodId)) throw AppError.badRequest("کالا معتبر نیست", "NEED_ALERT_BAD_GOOD");
+    await this.prisma.needAlert.deleteMany({
+      where: {
+        sellerBusinessId: business.id,
+        buyerBusinessId: query.buyerBusinessId,
+        goodId,
+      },
+    });
+    return { ok: true, on: false, goodId };
+  }
+
+  /** وضعیت زنگوله‌های من روی لیست خرید یک خریدار — ردیف‌های /buy/[slug] */
+  @Get("need-alerts")
+  async myNeedAlerts(
+    @Query() query: NeedAlertQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    const rows = await this.prisma.needAlert.findMany({
+      where: { sellerBusinessId: business.id, buyerBusinessId: query.buyerBusinessId },
+      select: { goodId: true, createdAt: true },
+    });
+    return { goodIds: rows.map((r) => r.goodId) };
+  }
+
+  /** تب «گوش به زنگ» میز استعلام فروشنده (11) — استعلام‌های جاری خریدارانی
+   *  که زنگوله‌شان را روشن کرده‌ام (برای همین اقلام). ردیف‌های مستقیم هم
+   *  می‌آیند — همان چیزی که فروشنده دنبالش بود، یک‌جا. */
+  @Get("watched-buyer-needs")
+  async watchedBuyerNeeds(
+    @Query() query: WatchedNeedsQueryDto,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
+    // یال‌های فعال من: خریدار × کالا
+    const alerts = await this.prisma.needAlert.findMany({
+      where: { sellerBusinessId: business.id },
+      select: { buyerBusinessId: true, goodId: true },
+      take: 500,
+    });
+    if (alerts.length === 0) return { items: [] };
+
+    // استعلام‌های منِ باز (NEW) که خریدارشان زنگوله‌خورش است
+    // NOTE: stoppedAt/closedAt در Prisma+Mongo با null-filter به ردیفِ
+    // «فیلدغایب» نمی‌چسبد (درس این فاز) — همان جریان getInquiries: خواندن
+    // بدون آن فیلترها + بازبینی lazy این‌جا.
+    const now = new Date();
+    const rows = (
+      await this.prisma.inquiry.findMany({
+        where: {
+          sellerId: business.id,
+          status: "NEW",
+          buyerId: { in: [...new Set(alerts.map((a) => a.buyerBusinessId))] },
+        },
+        include: { buyer: { select: { id: true, name: true, slug: true, city: true } } },
+        orderBy: { createdAt: "desc" },
+        take: 50,
+      })
+    ).filter(
+      // باز = بدون توقف/بسته و مهلتِ نگذشته (missing-field ↔ null در فیلتر
+      // پرایسما-مونگو نمی‌چسبد — بازبینی lazy مثل getInquiries)
+      (r) =>
+        r.stoppedAt === null &&
+        r.closedAt === null &&
+        (r.expiresAt === null || r.expiresAt.getTime() > now.getTime())
+    );
+
+    // فقط ردیف‌هایی که حداقل یکی از اقلامشان زنگوله‌خورش است
+    const alertPairs = new Set(alerts.map((a) => `${a.buyerBusinessId}:${a.goodId}`));
+    const goodIds = [
+      ...new Set(
+        rows.flatMap((r) => ((r.items as { goodId: string }[] | null) ?? []).map((it) => it.goodId))
+      ),
+    ];
+    const goods = goodIds.length
+      ? await this.prisma.good.findMany({
+          where: { id: { in: goodIds } },
+          select: { id: true, nameFa: true, nameEn: true, unit: true },
+        })
+      : [];
+    const goodById = new Map(goods.map((g) => [g.id, g]));
+
+    const items = rows
+      .map((r) => {
+        const basket = (r.items as { goodId: string; qty: number; listingId: string | null }[] | null) ?? [];
+        const watchedGoods = basket.filter((it) => alertPairs.has(`${r.buyerId}:${it.goodId}`));
+        if (watchedGoods.length === 0) return null;
+        return {
+          id: r.id,
+          buyer: r.buyer,
+          goods: basket.map((it) => goodById.get(it.goodId) ?? null),
+          itemsTotal: basket.length,
+          watchedCount: watchedGoods.length,
+          createdAt: r.createdAt,
+          expiresAt: r.expiresAt,
+          daysLeft: r.expiresAt
+            ? Math.max(0, Math.ceil((r.expiresAt.getTime() - now.getTime()) / DAY_MS))
+            : null,
+        };
+      })
+      .filter((x): x is NonNullable<typeof x> => x !== null);
+
+    return { items };
   }
 
   /** فاز ۱۲ — آرشیو موقتِ ردیف دفتر خرید: «از دفترِ روزمره کنار می‌رود؛
@@ -3253,27 +3467,36 @@ export class MarketController {
     @CurrentLocale() locale: Locale
   ) {
     const business = await assertBusinessOwner(this.prisma, user, query.businessId, locale);
-    const mySellPageId = await ensurePage(this.prisma, business.id, "SELL");
-    // خریدارهای گوش‌به‌زنگِ من
-    const edges = await this.prisma.follow.findMany({
-      where: { followerPageId: mySellPageId },
-      select: { supplierPage: { select: { businessId: true } } },
-      take: 200,
+    // M10 (N6 · Δ سند ۰۶) — منبع این خوراک از این پس NeedAlert است (زنگولهٔ
+    // ردیف‌های لیست خرید عمومی ۲۳)، نه فالو؛ یال دقیق‌تر: فروشنده×خریدار×کالا
+    const alerts = await this.prisma.needAlert.findMany({
+      where: { sellerBusinessId: business.id },
+      select: { buyerBusinessId: true, goodId: true },
+      take: 500,
     });
-    const buyerIds = [...new Set(edges.map((e) => e.supplierPage.businessId))];
+    const watchedPairs = new Set(alerts.map((a) => `${a.buyerBusinessId}:${a.goodId}`));
+    const buyerIds = [...new Set(alerts.map((a) => a.buyerBusinessId))];
     if (buyerIds.length === 0) return { needs: [], buyers: 0 };
 
-    // نیازهای فعالِ این خریدارها (BUY listing با حجم)
-    const needs = await this.prisma.listing.findMany({
-      where: { businessId: { in: buyerIds }, isActive: true, mode: { in: ["BUY", "BOTH"] }, volume: { not: null } },
-      select: {
-        id: true, volume: true, frequency: true, updatedAt: true,
-        business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
-        good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
-      },
-      orderBy: { updatedAt: "desc" },
-      take: 100,
-    });
+    // نیازهای فعالِ این خریدارها (BUY listing با حجم) — فقط زوج‌های زنگوله‌خورش
+    const needs = (
+      await this.prisma.listing.findMany({
+        where: {
+          businessId: { in: buyerIds },
+          goodId: { in: [...new Set(alerts.map((a) => a.goodId))] },
+          isActive: true,
+          mode: { in: ["BUY", "BOTH"] },
+          volume: { not: null },
+        },
+        select: {
+          id: true, volume: true, frequency: true, updatedAt: true,
+          business: { select: { id: true, slug: true, name: true, city: true, isVerified: true } },
+          good: { select: { id: true, nameFa: true, nameEn: true, unit: true } },
+        },
+        orderBy: { updatedAt: "desc" },
+        take: 100,
+      })
+    ).filter((n) => watchedPairs.has(`${n.business.id}:${n.good.id}`));
 
     // فاز ۴ مهاجرت — آیا من همین کالا را می‌فروشم؟ و آیا قبلاً به این خریدار
     // در همین کالا پیشنهاد داده‌ام؟ (بج «پاسخ دادی» در تب گوش‌به‌زنگ)
@@ -3306,7 +3529,8 @@ export class MarketController {
         buyer: n.business,
         good: n.good,
         // من همین کالا را می‌فروشم؟ → «مطابق کاتالوگ تو» + شناسه برای فرم پاسخ
-        sellsSameGood: null,
+        // M10 — واقعی شد (قبلاً null بود): من همین کالا را می‌فروشم؟
+        sellsSameGood: myGoodListing.has(n.good.id),
         myListingId: myGoodListing.get(n.good.id) ?? null,
         answeredByMe: answeredSet.has(`${myGoodListing.get(n.good.id) ?? ""}:${n.business.id}`),
       })),

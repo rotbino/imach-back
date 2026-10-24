@@ -379,3 +379,32 @@ export class OfferBuyRequestDto {
   @MaxLength(300)
   note?: string;
 }
+
+/**
+ * M10 (N6/D-2 · سند ۰۸ §M10) — زنگولهٔ گوش-به-زنگ فروشنده روی نیاز خریدار
+ * (ردیف‌های لیست خرید عمومی 23). POST = روشن‌کردن (upsert سه‌تایی) ·
+ * DELETE = خاموش‌کردن · GET = وضعیت زنگوله‌ها برای یک خریدار.
+ */
+export class NeedAlertDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyerBusinessId: string;
+
+  @IsString()
+  goodId: string;
+}
+
+export class NeedAlertQueryDto {
+  @IsString()
+  businessId: string;
+
+  @IsString()
+  buyerBusinessId: string;
+}
+
+export class WatchedNeedsQueryDto {
+  @IsString()
+  businessId: string;
+}

@@ -16,6 +16,8 @@ import { PushService } from "./push.service";
 ///                     (رویدادِ یک‌بار در عمرِ هر بازو — رخدادِ سیستم، نه طرف مقابل)
 ///  AD_BUDGET_END   — M9 — تبلیغ به پایان رسید (بودجه تمام یا پایان مدت) +
 ///                     باقیمانده به کیف برگشت — رخدادِ سیستم برای تبلیغ‌کننده
+///  REVIEW          — M10 — خریدار به کاتالوگ من امتیاز/نظر داد (لایهٔ اعتماد)
+///  REVIEW_REPLY     — M10 — فروشنده به نظر من پاسخ داد (گفتگوی نظر)
 export type NotificationType =
   | "FOLLOW_SUPPLIER"
   | "FOLLOW_BUYER"
@@ -27,7 +29,9 @@ export type NotificationType =
   | "ORDER"
   | "SUPPLY_PROPOSAL"
   | "SCORE"
-  | "AD_BUDGET_END";
+  | "AD_BUDGET_END"
+  | "REVIEW"
+  | "REVIEW_REPLY";
 
 export interface NotificationInput {
   userId: string;
@@ -65,6 +69,10 @@ const PREF_KEY: Record<NotificationType, string | null> = {
   SCORE: null,
   /** M9 — پولِ تبلیغ هستهٔ دیده‌شدن است؛ قابل‌خاموش‌کردن نیست (یک‌بار در عمرِ هر تبلیغ) */
   AD_BUDGET_END: null,
+  /** M10 — نظر تازه = معرفی/اعتماد تازه (خوشهٔ پیشنهادها) */
+  REVIEW: "suggestions",
+  /** M10 — پاسخ به نظرِ خودم = گفتگوی من — قابل‌خاموش‌کردن نیست */
+  REVIEW_REPLY: null,
 };
 
 /**
@@ -89,7 +97,7 @@ const PUSH_VIEWS: Record<
   },
   QUOTE: {
     text: (n) => `درخواست قیمت برای «${n.good ?? "کالا"}»`,
-    url: "/sell/requests",
+    url: "/sell/rfqs",
   },
   CONTACT_JOINED: {
     text: (n) => `${n.actorName ?? "کسی"} عضو iMach شد`,
@@ -101,7 +109,7 @@ const PUSH_VIEWS: Record<
   },
   BUYER_NEED: {
     text: (n) => `${n.actorName ?? "خریداری"} اعلام نیاز کرد: «${n.good ?? "کالا"}»`,
-    url: "/sell/requests",
+    url: "/sell/rfqs",
   },
   ORDER: {
     // M5 — تیترِ خودِ رویداد روی ردیف ذخیره شده؛ پوش همان را می‌گوید
@@ -123,6 +131,16 @@ const PUSH_VIEWS: Record<
     // M9 — رخداد-محور: تیترِ پایان (بودجه/مدت) روی ردیف + مقصد تبلیغ‌های من
     text: (n) => n.title ?? "تبلیغ شما به پایان رسید",
     url: "/sell/promo",
+  },
+  REVIEW: {
+    // M10 — رخداد-محور: تیتر روی ردیف (نویسنده + ستاره) + مقصد ویترین عمومی
+    text: (n) => n.title ?? `${n.actorName ?? "خریداری"} به کاتالوگ شما نظر داد`,
+    url: "/c",
+  },
+  REVIEW_REPLY: {
+    // M10 — رخداد-محور: تیتر روی ردیف + مقصد ویترین همان فروشنده
+    text: (n) => n.title ?? `فروشنده به نظر شما پاسخ داد`,
+    url: "/c",
   },
 };
 

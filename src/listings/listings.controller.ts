@@ -916,4 +916,50 @@ export class ListingsController {
     }
     return this.prisma.listing.findUnique({ where: { id: listing.id }, select: LISTING_SELECT });
   }
+  // ═══ M10 (N5 · سند ۰۸ §M10) — شیت «تاریخچهٔ رویدادها» کالا (۰۳-الگو) ═══
+
+  /**
+   * GET /listings/:id/events — خط زمانی تعامل با یک آگهی (فروشنده/مالک):
+   * WATCH_ADD · INQUIRY · CHAT · CAMPAIGN_VIEW (VIEW = شمارنده، نه ردیف).
+   * فیلتر بازه: ?days=7|30 (پیش‌فرض همه) + شمارش کل هر نوع.
+   */
+  @Get(":id/events")
+  async listingEvents(
+    @Param("id") id: string,
+    @Query("days") days: string | undefined,
+    @CurrentUser() user: AuthUser,
+    @CurrentLocale() locale: Locale
+  ) {
+    if (!/^[0-9a-fA-F]{24}$/.test(id)) throw AppError.notFound("Listing not found");
+    const listing = await this.prisma.listing.findUnique({
+      where: { id },
+      select: { id: true, businessId: true, viewCount30: true, viewCountTotal: true },
+    });
+    if (!listing) throw AppError.notFound("Listing not found");
+    await assertBusinessOwner(this.prisma, user, listing.businessId, locale);
+
+    const dayNum = days === "7" || days === "30" ? Number(days) : null;
+    const since = dayNum ? new Date(Date.now() - dayNum * 86_400_000) : null;
+    const where = {
+      listingId: id,
+      ...(since ? { createdAt: { gte: since } } : {}),
+    };
+    const [items, counts] = await Promise.all([
+      this.prisma.listingEventLog.findMany({ where, orderBy: { createdAt: "desc" }, take: 200 }),
+      this.prisma.listingEventLog.groupBy({
+        by: ["type"],
+        where: { listingId: id },
+        _count: { _all: true },
+      }),
+    ]);
+    const countMap: Record<string, number> = {};
+    for (const c of counts) countMap[c.type] = c._count._all;
+    return {
+      viewCount30: listing.viewCount30,
+      viewCountTotal: listing.viewCountTotal,
+      counts: countMap,
+      days: dayNum,
+      items,
+    };
+  }
 }

@@ -378,6 +378,9 @@ export class BusinessesController {
             priceVisibilityTrades: true,
             // M2 (G7) — اعتبار قیمت کاتالوگ: بج «قیمت منقضی» از همین محاسبه می‌شود
             priceValidityDays: true,
+            // M10 (N2) — امتیاز کاتالوگ (میانگین ستاره + تعداد) در هدر ویترین
+            ratingAvg: true,
+            ratingCount: true,
             // M5 (FD-37) — اسناد فروش روی فاکتور چاپ می‌شوند (خریدار هم سند را می‌بیند)
             invoiceTaxId: true,
             invoiceNote: true,
