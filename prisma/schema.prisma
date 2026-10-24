@@ -609,6 +609,11 @@ model WatchedGood {
 
   @@unique([businessId, goodId])
   @@index([goodId])
+  /// M11 §پرفورمنس — فید لیست خرید (۲۰) و «در حال اتمام موجودی» (۲۰ج):
+  /// برابری روی سه فیلد + مرتب‌سازی createdAt از خودِ ایندکس (پیش از این
+  /// SORTِ حافظه‌ای روی ایندکس یکتای businessId+goodId اجرا می‌شد —
+  /// اثبات‌شده با scripts/m11-explain.mjs).
+  @@index([businessId, lowStock, archivedAt, createdAt])
 }
 
 // ─── PushSubscription (Web Push — VAPID) ─────────────────────────────────────
